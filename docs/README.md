@@ -13,6 +13,11 @@ Deep (human-written) notes first, then generated indexes.
 - `dr_fetus.md` — homing missile battery, boss ammo dump
 - `bosses.md` — maggot artillery, scripted Hell choreography, FinalBoss teardown
 - `gsmb_menu.md` — 136-method screen fleet: the Show pattern, selection, loading
+- `rendering.md` — D3D-shaped API on OpenGL + Mojoshader, layers, lightmaps
+- `flash_anim.md` — the .am vector-animation runtime behind every sprite
+- `editor_input_data.md` — level editor, cheat-code input, files/registry, UI, SQL portal backend
+- `actors_meta.md` — animals AI, HUD, replay tape+shelf, cutscenes, chapters
+- `core_types.md` — math, scene graph, particles, players/profiles
 - `world_tiles.md` — TileLevel grid/swept collision + SMBPalette hazards
 - `audio_online.md` — TAudio cue model + Steam/leaderboard stack
 
