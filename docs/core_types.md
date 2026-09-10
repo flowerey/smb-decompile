@@ -1,41 +1,39 @@
-# Core types, scene, particles, players
+# Core types, scene graph, particles, players
 
-## Math (`Vector2.c`, `Matrix4x4.c`, `FPUVector`)
+## Math: vectors and matrices with full operator sets
 
-Full operator suites (`+ - * /`, `+=`…, `==/!=`, `[]`, float casts) as
-free functions with mangled-suffix twins (`__005be140` etc. — overloads
-Ghidra couldn't separate; see the rename rule in the main README).
-Everything positional is a `Vector2` (player `+0xa0`, shots, grid probes);
-`Matrix4x4` carries the camera/world transforms (`Get2DPos/Scale/Skew`,
-`operator*` compose). `FPUVector`, `Plane`, `Bounding{Box,Square,Circle,
-Volume3D}`, `MultiPointBoundsCheck` serve collision queries.
+`Vector2` and `Matrix4x4` come with complete arithmetic (add/subtract/
+multiply/divide, in-place variants, comparisons, indexing, float casts).
+(The tree shows near-duplicate "twins" with address suffixes — those are
+overloads Ghidra couldn't separate, renamed apart during recovery; see
+the main README.) Practically everything positional is a `Vector2` — the
+player's location, projectile slots, grid probes — and matrices carry
+the camera and world transforms. Smaller helpers (`FPUVector`, planes,
+bounding boxes/circles/squares/volumes) serve collision queries.
 
-## Scene graph + camera
+## Scene graph and camera
 
-`SceneObject2D/3D`, `TSceneObjectManager`, `RenderLayer(s)`,
-`ReimplmentThisSprite`, `Sprite`, `Texture` family (`Tile/IndexTexture`,
-`TexturePackage`, `TilePalette`), `Model/ModelLoader`,
-`VertexBuffer/Stream/Declaration`, `IndexBuffer`, `Cursor3D`.
-`Camera.c`: `SetupCamera`, `SetOrthoProjection`, `SetCameraMatricies`,
-`ScreenToWorld/WorldToScreen`, per-frame `Update` (driven by
-`GetCameraFocus` overrides).
+Scene objects (2D and 3D) managed by a scene manager, render layers,
+sprites, textures (tiled, indexed, packaged, paletted), models with
+their loader, vertex/index buffers, and a 3D cursor. `Camera` sets up an
+orthographic projection, converts screen↔world both ways, and follows
+whatever each boss or level reports as the focus point each frame.
 
-## Particle emitters (one shape, many looks)
+## Particles: one family, many looks
 
-`ParticleEmitter` (base, 2 methods) with `RibbonEmitter`, `SmokeEmitter`,
-`SparkEmitter`, `QuakeEmitter`, `FontEmitter`/`TextEmitterFont`,
-`Blood` via `BloodyTiles` (`AddBloodyTile`), `TileLevelLightMap` flashes
-(`ScreenFlashManager`), `GooBall`/`SprintMeatBoy` trails. Character code
-spawns them through `MeatBoyCharactor__AddEffect(kind, tintA, tintB)` —
-kinds 2/3 are the wall impact/kick bursts from the AlienHominid doc.
+A two-method `ParticleEmitter` base with ribbon, smoke, spark, quake,
+font, and text variants — plus blood tiles, screen flashes, and
+character-trail effects. Gameplay code never touches these directly:
+characters spawn effects through `AddEffect(kind, tintA, tintB)`, where
+kinds 2 and 3 are the wall-impact and wall-kick bursts from the
+AlienHominid writeup.
 
-## Players and profiles
+## Players, profiles, and saves
 
-`TPlayer.c` (`IsValid`, `GetProfile`, `GetJoystick`, `IsPlayerID`),
-`Players.c`, `UserProfile.c` / `UnixUserProfile.c` (18 methods: saves —
-see `ReadSaveGames`/`WriteEntryToLeaderboard` in game-logic),
-`TWindow.c`, `UserAlert.c` (interrupt message boxes),
-`Achievements.c`/`Leaderboards.c` tables, `GameRegistry.c` tunables.
-Console-platform leftovers (`Trophies`…) are stubs on this build.
+Tiny player descriptors (valid? which profile? which controller? which
+id?), user profiles with 18 methods covering saves (see the save/load
+and leaderboard functions in game-logic), the window object, interrupt
+message boxes, achievement/leaderboard tables, and the settings
+registry. Console-platform leftovers are stubs in this build.
 
 *See also: `rendering.md` (scene), `flash_anim.md` (sprites), `audio_online.md` (profiles/saves).*

@@ -1,45 +1,43 @@
-# GSMBMenu — the screen fleet (136 methods, 9852 lines)
+# GSMBMenu — 25 screens run through one object
 
-`src/game/classes/GSMBMenu.c`. Not one system but ~25 screens run through
-one object: Title, Start, Pause (+ReplayPause), Chapter, World, Character,
-Leaderboard, Settings, HowToPlay, Controls, Credits, Replay, Internets,
-Stats, Upsell, ChapterEnd, BossDefeat/Unlock, MoveOn, plus popups and the
-loading screen. Don't read it front to back — read the *pattern*, then one
-screen.
+`src/game/classes/GSMBMenu.c` (9,852 lines, 136 methods) looks
+intimidating, but it isn't one system — it's about 25 screens sharing one
+object: title, start, pause (plus a replay variant), chapter and world
+maps, character select, leaderboards, settings, how-to-play, controls,
+credits, replay browser, internet levels, statistics, upsell, chapter-end,
+boss-defeat/unlock notices, and popups. Don't read it front to back.
+Learn the one pattern every screen follows, then read a single screen.
 
-## The Show pattern (every screen, e.g. `ShowPauseMenu` @ 004cea00)
+## The Show pattern (e.g. `ShowPauseMenu` @ 004cea00)
 
-1. Stamp mode id (`+0xd04 = 0x11` for pause).
-2. `FlashLibraryInstance__Reset` the screen's clips.
-3. Wire input: `Joystick__AddButtonCallback` / `AddPOVCallback` with that
-   screen's `Click*` / `Increment*` / `Decrement*` handlers.
-4. `RenderLayers__InsertLayerBefore(self, SMBCutSceneManager)` + restore
-   saved slider/cursor values (`+0x908/+0x918`, `+0x928/+0x938`… pairs).
+Showing any screen does the same four things:
 
-`Hide*` reverses it (`RemoveControls`, layer removal). `TransitionIn*/Out*`
-pairs animate the swap and end in `GSuperMeatBoy__SwitchGameMode` (see
-gsuper_meatboy.md for the state table).
+1. Stamp the screen's mode id (pause writes `0x11` to `+0xd04`).
+2. Restart the screen's animations.
+3. Wire up input: joystick buttons and direction-pad get that screen's
+   click / move-up / move-down handlers.
+4. Insert the menu into the render-layer list and restore saved slider
+   and cursor positions.
 
-## Per-frame (`Update`)
+Hiding reverses it (unwire input, remove the layer). Animated transitions
+(`TransitionIn*`/`TransitionOut*`) end by calling the game's
+`SwitchGameMode` (see its state table in the game-object doc).
 
-Polls clip playback (`IsPlaying` ×10), cutscenes, chapter/world-menu music
-and loading status (`CheckChapterLoadingStatus`,
-`ValidateAndLoadChapter`), level-portal and popup updates. Boss-intro and
-char-select gates live here too.
+## Selecting things
 
-## Selection model
+Level select is cursor movement (`MoveTo{Right,Left,Up,Down}Level`),
+confirm (`EnterSelectedLevel/Chapter`), and character select
+(`MoveTo{Next,Prev}Char`, `SelectCharacter`). Every options screen uses
+the same triplet: move-selection / confirm / back. Replays go through
+load/validate/select helpers plus an "is a replay playing?" query the
+game object consults.
 
-`MoveTo{Right,Left,Up,Down}Level`, `SetSelectedLevel`,
-`EnterSelectedLevel/Chapter`, `MoveTo{Next,Prev}Char`, `SelectCharacter`;
-replays via `LoadReplayFromManager` / `IsInReplayMode` / `GetCurrReplayInfo`;
-options via `Increment*/Decrement*/Click*` triplets per screen
-(Title, Pause, ReplayPause, Help share the shape).
+## Loading levels (and surviving the real world)
 
-## Loading path
-
-`LoadChapterMenu` → `GetChapterFileData` → `ValidateAndLoadChapter` →
-`LoadSelectedLevel`; internet levels through `LoadInternetsChapter/Levels`
-+ `GetLevelDataByIndex`. Sign-in/storage robustness:
-`ProcessDisconnect/ProcessStorageChange/ResetForSignout/ResetForPurchase`.
+`LoadChapterMenu` → fetch chapter data → `ValidateAndLoadChapter` →
+`LoadSelectedLevel`, with a parallel internet-levels path. Console-era
+robustness is everywhere: lost sign-in, pulled storage, dropped
+connection, and post-purchase states each have dedicated reset paths so
+the menu never strands the player.
 
 *See also: `gsuper_meatboy.md` (state table), `editor_input_data.md` (widgets/input).*

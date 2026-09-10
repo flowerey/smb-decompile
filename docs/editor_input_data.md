@@ -1,58 +1,48 @@
-# Editor, input, files, UI, portal backend
+# Editor, input, files, UI, and the level-sharing backend
 
-## SMBEditor — modal level editor (`SMBEditor.c`, 34 methods)
+## The level editor is eight editors in one
 
-One mode per asset class, switched by `SwitchEditorMode`:
-`SetTo{Tile,Camera,Paralax,SetPiece,Animation,Obstacle,Lighting,Animal}Mode`.
-`Update`/`Render`/`RenderSetPieceInfo`/`SetMouseOverText` drive the canvas;
-`EditSetPieces`, `AddToSelectedPieces`, `ResizeLevel`/`SetLevelSize`;
-`NewLevel/LoadLevel/SaveLevel/QuickSaveLevel` plus crash-safe
-`InitiateTmpSave/OpenTmpFile/DeleteTmpSave`; publishing via
-`PromptLevelUploadForm` → `SMBLevelPortal` (SQL-backed, see below).
-`TileLevel::PlaceTile/PlaceSetPiece/RemoveSetPiece` are its paint engine.
+`SMBEditor.c` (34 methods) is modal: tiles, camera, parallax, set
+pieces, animations, obstacles, lighting, and animals each get a mode
+with its own tools, switched by `SwitchEditorMode`. Around the canvas
+sits project management — new/load/save/quick-save, crash-safe
+temporary saves, level resizing — and publishing, which hands off to an
+upload form backed by the level-sharing database below. Painting itself
+runs through the tile grid's place/remove calls (see the world doc).
 
-## Input — callbacks + cheat codes
+## Input is callbacks plus a cheat-code registry
 
-- `TInput.c`: `Update` pump, `JoystickPluggedIn` events,
-  `Register/UnregisterCode` + `HasCodeBeenEntered` (**cheat-code
-  registry**: `tagCheatCode` structs matched against the input stream),
-  `AllowCallbacks` master switch.
-- `TKeyboard.c` / `Joystick.c` / `TMouse.c`: `AddKey/Button/POV/AnyKey`
-  callbacks with `Backup/RestoreCallbacks` (menus swap bindings in and
-  out — cf. the GSMBMenu Show pattern), `Lock/UnLock`, exclusive state.
-  Menus, gameplay and replays all consume input through these queues, and
-  the packed per-frame record they produce is what the replay system
-  stores (see meatboy_charactor.md).
+The input pump (`TInput`) tracks controllers being plugged in, gates all
+callbacks behind one master switch, and maintains a registry of cheat
+codes (`tagCheatCode` structs matched against the button stream, with
+register/unregister and "has this code been entered?" queries).
+Keyboards, controllers, and mice each offer per-button/key callbacks
+with save/restore, so menus can swap bindings in and out — that
+swap is half of every menu's Show pattern (see the menu doc). The packed
+per-frame input these queues produce is exactly what the replay system
+records.
 
-## Files, config, registry
+## Files, config, and the settings registry
 
-- `FilePackage.c`: pak archives (`GetFileFromPackage`, `Read`) — game
-  data ships packed; `File.c` is the raw handle layer.
-- `PropertiesFile.c`: the text config format both physics tunables and
-  levels use — `ReadBlock`/`ParseData`, `FindPropertyBlock/Variable`,
-  `GetNumPropertyBlocksByName`, `operator[]` lookup. (This is what the
-  giant `MeatBoyCharactor` ctor parses.)
-- `GameRegistry.c`: process-wide key-value store (`GetVariable`, `Flush`
-  to disk) — engine tunables in, `TEngine` reads them at startup.
-- `ResourcePool.c` / `BaseResource.c` (`Release` refcounts), `TMemory.c`
-  (aligned alloc — cf. the `malloc`+align idiom in `ExplodeString`).
+- **Packed data** (`FilePackage` + raw `File` handles): game data ships
+  in archives, read through package queries.
+- **Text configs** (`PropertiesFile`): the block/variable format behind
+  both physics tuning and levels — this is what the giant character
+  constructor parses to give each character its feel.
+- **Settings registry** (`GameRegistry`): a process-wide key-value store
+  flushed to disk; the engine reads a dozen tunables from it at startup.
+- **Resources** (`ResourcePool`/`BaseResource` with refcounted release;
+  `TMemory` aligned allocation).
 
-## UI widgets (`UIForm.c` + family)
+## UI widgets and the level-sharing backend
 
-`UIForm` (container: `Add/RemoveFormElement`, `CalculateFormArea`,
-`Activate/DeActivate`, `Update/Render/Close`) with `UIButton`/`UILabel`/
-`UITextField`/`UIDropDown`/`UIScrollBar`/`UIFrame`/`UIMessageBox`,
-each with a `*Style` struct. Menus compose screens from these (the
-`GSMBMenu` Show pattern resets their Flash clips and wires input).
-
-## Portal backend (`SQLDatabase.c` + `SMBLevelPortal*.c`)
-
-`SQLDatabase`: **queued, reconnecting** MySQL client (`AddQueuedQuery`,
-`ExecuteQuery`, `PopQueuedQuery`, `Reconnect`, `ChooseDatabase`,
-`GetLastAutoIncrementID`, `WaitForQuery`) — level sharing never blocks
-the frame thread. `SMBLevelPortal(Interface).c`: upload/download flows
-with SQL string building (see the `INSERT INTO smb_editor_leveldata`
-construction), `UploadPortalLevel`, chapter/chapter-info queries;
-`EditorFormChapterUpload.c` is the in-editor frontend.
+Menus are composed from a widget family — forms (containers with
+add/remove, area calculation, activate/deactivate), buttons, labels,
+text fields, dropdowns, scrollbars, frames, message boxes, each with a
+style struct. Behind the portal (level-sharing) UI sits `SQLDatabase`: a
+**queued, auto-reconnecting** MySQL client, so sharing a level never
+blocks the frame thread, with upload/download flows that build their SQL
+by hand (you can read the literal `INSERT INTO smb_editor_leveldata`
+construction in the portal code).
 
 *See also: `gsmb_menu.md` (menu wiring), `world_tiles.md` (paint engine), `meatboy_charactor.md` (tunable loading).*

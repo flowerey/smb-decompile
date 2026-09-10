@@ -1,44 +1,41 @@
-# TEngine — frame loop and subsystem startup
+# TEngine — the frame loop and everything it starts
 
-`src/game/classes/TEngine.c` (1199 lines, 12 methods). Built once in `main`
-(`TEngine::TEngine` + `TEngine::Run`); owns window, graphics, audio, input,
-resource pools, file packages.
-
-## The loop (the whole game in 8 lines)
+`src/game/classes/TEngine.c` (12 methods). The program builds one engine
+in `main` and then just runs it. The entire game loop is eight lines:
 
 ```c
-TEngine__Run:  do {
-                 if (!RunSDLEventQueue()) return;  // SDL quit => exit
-                 EngineRun(self);
-               } while (!quit_flag);               // self+0x30 + 8
+do {
+  if (!RunSDLEventQueue()) return;   // window-close / quit event => exit
+  EngineRun(self);
+} while (!quit_flag);
 ```
 
-`EngineRun` @ 005842a0, per frame: device-reset check → timestamp bookkeeping
-(`+0x14/0x18/0x20`, `dwActualFrameElapsedTime`, forced `0x10` under reset) →
-`Update(self)` (game logic) → unless the load thread runs: acquire device,
-`BeginScene`, `RenderLayers__Render` (if `AllowRender`), global `Render`,
-margins, `EndScene`/`Present`, frame-time accounting, `ReleaseDevice`,
-`__frameCounter++`.
+Each trip through `EngineRun` (@ 005842a0): if the graphics device was
+lost, reset it and skip the frame; otherwise stamp timing bookkeeping,
+run game logic (`Update`), and — unless a background level-load is
+running — draw: acquire device, begin scene, render all layers (if
+rendering is allowed), render, draw screen margins, end scene, present,
+release device, bump the frame counter. Frame-time accounting includes a
+forced 16ms value while a device reset is in flight.
 
-`Update` @ 00583f70 / `Render` @ 005841f0 dispatch into the loaded
-game/editor (`LoadGame/UnloadGame`, `LoadEditor/UnloadEditor` split the two
-worlds). `ResetTimer`, `WaitForStartupLogos` (logo gate before `main`
-proceeds).
+`Update`/`Render` fan out to whichever world is loaded — game or editor,
+each with its own load/unload pair. `ResetTimer` and `WaitForStartupLogos`
+gate the early moments (the game waits for logo screens before proceeding).
 
-## Startup (ctor @ 005828e0)
+## Startup builds the world bottom-up
 
-Registry (`GameRegistry`, flushed), `TWindow`, `TGraphics` (+ graphics
-settings, aspect, pixel stages), `TAudio`, `TInput`, scene-object manager,
-resource pools/creators, screen margins, file packages (`FilePackage`),
-`ExplodeStringData`. Tunables come from `GameRegistry__GetVariable` (12
-reads) — engine config lives in the registry, same as character physics
-living in data files (see base-class doc).
+The constructor creates, roughly in order: the settings registry (saved
+to disk on exit), window, graphics (plus display settings, aspect-ratio
+handling, shader stages), audio, input, the scene-object manager,
+resource pools, screen margins, and the packed-data file readers. Numeric
+tuning comes from a dozen registry reads — same philosophy as the
+characters, whose physics lives in data files rather than code (see the
+base-character doc).
 
-## Where to go next
+## Technical appendix
 
-- Rendering: `TGraphics` (1961 lines), `OpenGLGraphics` (GL proc-loader),
-  `RenderLayers`, `TileLevelLightMap`.
-- Audio: `TAudio` (1751 lines).
-- Input: `TInput`, `TKeyboard`, `Joystick`, `TMouse`.
+`Run` 005844a0 (called from `main`), `EngineRun` 005842a0, constructor
+005828e0, destructor 00583e20. Quit flag at engine `+0x30 + 8`; frame
+timestamps at `+0x14/0x18/0x20`; render-time and frame-counter globals.
 
 *See also: `gsuper_meatboy.md` (game object), `rendering.md` (frame order), `audio_online.md` (subsystems).*

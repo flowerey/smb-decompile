@@ -1,91 +1,108 @@
-# MeatBoyCharactor — base-class bible
+# MeatBoyCharactor — the base every character is built on
 
-Every playable character (Meat Boy, Bandage Girl, Alien Hominid id 27,
-Meat Ninja id 7, Ogmo, Jill, Tim, …) inherits this subobject: subclass
-bodies are literally `MeatBoyCharactor` + tail fields (AlienHominid's shots
-live at `+0xab8`, i.e. base size is ~`0xab0`). If you understand this file,
-every character file becomes readable. Source: `src/game/classes/MeatBoyCharactor.c`
-(~40 methods, 4232 lines).
+Every playable character — Meat Boy, Bandage Girl, Alien Hominid, Meat
+Ninja, Ogmo, Jill, Tim, and twenty more — contains this object as its
+core. Subclass bodies are literally this base plus extra fields tacked on
+the end (AlienHominid's shot rack, for example, starts where the base
+ends around `+0xab0`). Learn this file and every character file becomes
+readable. Source: `src/game/classes/MeatBoyCharactor.c` (~40 methods).
 
-## Virtual interface (observed vtable use)
+## The character state machine
 
-The engine drives characters through vtable slots; subclass overrides seen
-in the wild: `Update`, `Render`, `RenderClones`, `RenderShots`, `Death`,
-`Reset`, `Jump`, `WallJump`, `WallHit`, `RecordSpecial`, `ProcessSpecial`,
-`AddShot`, `CreateClones`, ctors/dtors, `Clone`. Base provides defaults for
-all of them (e.g. base `RecordSpecial`/`ProcessSpecial` are near-empty;
-shooters override).
+A single integer (`+0x7d4`, changed through `SetState`) says what the
+character is doing. The meaning of each value was recovered from how the
+code reacts to it:
 
-## State machine (`+0x7d4`, set via `SetState`)
+- **0** — normal running around.
+- **6** — wall-slide jump; **9** — bouncing off a wall.
+- **7, 8** — airborne sub-states used inside the update.
+- **0xb / 0xc** — sliding down the left / right wall.
+- **0xe** — brief cleanup state that drops the current input.
+- **0x10** — death animation: plays the death clip to the end, unfreezes
+  the HUD timer, then back to normal.
+- **10** — parked/inactive (also used for replay standbys).
 
-| id | meaning (inferred from use) |
-|---|---|
-| 0 | normal / running |
-| 6 | wallslide-jump (set by `Jump`/`WallJump`) |
-| 7, 8 | airborne sub-states (written in `Update`) |
-| 9 | wall-hit (set by `WallHit`) |
-| 10 | inactive / parked (clones in replay standby use `0x10`…) |
-| 0xb / 0xc | wallslide left / right (set around `TileCollision`) |
-| 0xe | input-clear transient (clears `+0x7e0`) |
-| 0x10 | death-anim-then-reset (plays clip at anim `+0x5c0` until it ends, unfreezes HUD timer, back to 0) |
-| 0xf | referenced in guards |
+Changing state also picks a random animation variant for the new state
+and stamps a "state changed" flag (`+0x7db` bit 3). A few one-byte flag
+fields (`+0x7d8/0x7d9/0x7db`) carry facing direction, wall contact, and
+replay bookkeeping as individual bits.
 
-`SetState` also rolls a random anim variant (`anim+0x30` count → `anim+0x58`,
-mirrored to `+0xa4c`, `+0xa50 = 0`) and stamps `+0x7db |= 8` (state-changed).
-Flags: `+0x7d8/0x7d9/0x7db` bitfields (facing bit `0x40`, wall bits, replay
-bits — see replay section), `+0x7da` low 3 bits from replay frames.
+## What happens each frame (`Update`)
 
-## Update pipeline (`Update` @ 00477070, ~1090 lines)
+Roughly a thousand lines, but the shape is simple:
 
-1. Lock (`+0x880` critical section), clear transient bit, palette flags on.
-2. `0x7db` high bit → vtab `+0x68` hook (per-class pre-step).
-3. Facing/flag roll (`0x7d9` bit 7 ← old bit 6).
-4. State dispatch: `0xe` → drop input record; `0x10` → death-anim gate
-   (above); else full update: input → `DoMovement` target select →
-   `Apply2DPhysics(dt)` → `TileLevel__TileCollision` → wallslide attach
-   (`0xb`/`0xc`) → anim/sfx/effects (`RenderEffects`, `GetGroundSplat`,
-   blood via `BloodyTiles`), replay bookkeeping.
+1. Lock the character, clear transient flags, turn on level palette flags.
+2. Run a per-class pre-step hook (a virtual call — subclasses plug in here).
+3. Handle the special states: `0xe` drops input; `0x10` waits out the death
+   animation, then resets to normal.
+4. Otherwise run the full update: read input, pick a movement target
+   (`DoMovement` just selects between the grounded and airborne aim
+   points), integrate physics (`Apply2DPhysics`), collide against the tile
+   grid, attach to walls (states `0xb`/`0xc`), update animations, spawn
+   dust/blood effects, and do replay bookkeeping.
 
-`DoMovement` itself is trivial: movement target `+0x80c` = `+0x8ac`
-(grounded?) or `+0x8a8` (air) selected by `+0x7d8 & 0x40`.
-`Jump` (overridden by FlyWrench/Machinarium/Ogmo/TheKid): gate, sfx pick
-(`anim+0x240` count → `anim+0x268`, `+0xa4c/a50`), state 6, snapshot
-`+0xbc = +0x8b0`, `+0x804 = +0xa4`.
+Jumping (`Jump`, overridden by a few characters) gates on wall state,
+picks a random jump sound, enters state 6, and snapshots the pose.
+Death runs the base death sequence; subclasses add their own touch after
+(see AlienHominid clearing its blaster flag).
 
-## Replay / ghosts (the money section)
+## Replays and ghosts (the most interesting part)
 
-- `Clone(src, index)`: `+0xa40 = 1` (**proves** `+0xa40` is the isClone
-  flag), `+0xa90 = index`, **shares** replay ptr (`+0xa38`) and anim lib
-  (`+0xf8`), bulk-copies physics block `+0x8a8–0x9fc` (Vector2-wise).
-- `SwitchToReplayMode` (called from `GSuperMeatBoy__ShowCurrentReplay`,
-  boss resets): palette to replay mode, every clone gets the shared replay
-  ptr and is parked in state `0x10`.
-- `ProcessReplayFrame` (called first in every subclass `Update`): skipped
-  unless replay-driven (`+0xa40 == 1`, not states `0xe`/`0x10`). Fetches
-  keyframe `GetReplayFrame(replay, charIndex, &a44, &a48)` and either
-  **teleports** (snap distance² ≥ `10000.0f`) or **lerps**
-  (`(a44−1)/duration`, duration packed in frame word 1 bits 5–8). A new
-  frame unpacks bitfields: stateId = `word0>>2 & 0x1f`, `+0x7da` low bits =
-  `word0>>15 & 7`, flag bits from bytes 1–3 (byte 3 bit `0x40` = special —
-  the bit AlienHominid's `RecordSpecial`/`ProcessSpecial` round-trips).
-  Missing frame at the live index ends the replay (`ActivateEnd`).
+A finished run can be stored and played back as a "ghost" racing
+alongside you. Three pieces make this work:
 
-## Physics / tuning fields (base region)
+- **Recording.** Each frame, the packed input (buttons, state id, special
+  flag — see the bit layout below) is appended to the replay stream
+  (`SMBReplay::RegisterInput`).
+- **Cloning.** `Clone` builds a ghost copy: it is marked as a clone
+  (`+0xa40 = 1`, which is how we *proved* what that flag means), given an
+  index (`+0xa90`), handed the shared replay and animation library, and
+  gets the whole physics tuning block (`+0x8a8–0x9fc`) copied over.
+- **Playback.** `ProcessReplayFrame` runs first in every subclass update
+  for clone objects. It fetches the keyframe for this character and frame,
+  then either **teleports** (if the ghost is more than ~100 units away —
+  distance-squared ≥ `10000.0f`) or **smoothly interpolates** toward the
+  recorded position. When the tape runs out at the live index, the replay
+  ends (`ActivateEnd`).
 
-`+0xa0` pos, `+0xb8` vel, `+0xc0` prev/target, `+0x868` render pos,
-`+0x818` collision info, `+0x880` lock, `+0x8a8–0x9fc` tunables + vectors
-(copied wholesale by `Clone`), `+0xa38` replay, `+0xa44/0xa48` replay
-cursors, `+0xa4c/0xa50` anim/sfx pick, `+0xa54` char id, `+0xa90` clone
-index, `+0x7e0` input record ptr, `+0x7f0` clone array, `+0xf8` anim lib.
-The giant ctor (`MeatBoyCharactor` @ 0047b350) loads per-character physics
-from data files (`File__Read*`, properties) — that is where speeds/jumps
-live; subclass ctors only add anim path + id + tail init.
+The keyframe is a tightly packed bitfield, decoded bit by bit in
+`ProcessReplayFrame`: the state id lives in 5 bits of the first word,
+facing and button flags in single bits of bytes 1–3 (byte 3, bit `0x40`
+is the special button — the exact bit AlienHominid's record/playback
+pair round-trips), a few flag bits go to `+0x7da`, and the recorded
+position plus a duration used for interpolation follow. `SwitchToReplayMode`
+(parks every clone in state `0x10` with the shared tape; called when you
+watch a replay or reset certain bosses) and `SwitchToRegularMode` flip
+between the two worlds.
 
-## Subclass contract (checklist for reading any character file)
+## Tuning lives in data files, not code
 
-1. Tail layout after `+0xab0` + total alloc in `GSMBCharactor` factory.
+The giant constructor reads per-character physics (speeds, jump heights,
+timings) out of data files through the properties reader — that is where
+a character's "feel" comes from. Subclass constructors only add their
+animation path, character id, and extra-field initialization.
+
+## Technical appendix
+
+Replay-relevant base fields: position (`+0xa0`), velocity (`+0xb8`),
+render position (`+0x868`), collision scratch (`+0x818`), input record
+(`+0x7e0`), clone list (`+0x7f0`), animation library (`+0xf8`), replay
+object (`+0xa38`), replay cursors (`+0xa44/0xa48`), animation/sound picks
+(`+0xa4c/0xa50`), character id (`+0xa54`), clone index (`+0xa90`),
+`sfx` slots, physics tunables (`+0x8a8–0x9fc`).
+
+Virtual interface (called through the vtable; subclass override sets
+observed in the wild): `Update`, `Render`, `RenderClones`, `RenderShots`,
+`Death`, `Reset`, `Jump`, `WallJump`, `WallHit`, `RecordSpecial`,
+`ProcessSpecial`, `AddShot`, `CreateClones`, constructors/destructors,
+`Clone`. Slots confirmed against AlienHominid's vtable: `+0x50` Update,
+`+0x68` Initialize, `+0x88` SpecialPress, `+0xb0` WallJump gate.
+
+## Checklist for reading any character file
+
+1. Tail layout after `+0xab0` + total size in the `GSMBCharactor` factory.
 2. Which virtuals it overrides (shooters: special/clips/shots).
-3. `+0xa40` gating (owner vs clone duties).
-4. `Update` prologue order: replay frame → anim push → flag watchdog → base.
+3. Owner-vs-clone gating on `+0xa40`.
+4. `Update` prologue order: replay frame → animation push → flag watchdog → base.
 
-*See also: `alien_hominid.md` (+ verified rewrite), `characters.md` (roster), `flash_anim.md` (anim runtime).*
+*See also: `alien_hominid.md` (+ verified rewrite), `characters.md` (roster), `flash_anim.md` (animation runtime).*

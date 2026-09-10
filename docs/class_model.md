@@ -1,13 +1,42 @@
-# Class model — recovered from RTTI + vtables + symtab
+# Class model — the real C++ design, recovered from the binary
 
-The binary keeps full Itanium RTTI (131 typeinfos: 21 roots, 101 single,
-9 multiple inheritance) and 133 vtables, and is not stripped (2,724 of
-4,894 tree functions carry real `Class::method(args)` symbols).
-`recovered/*.h` (131 headers) declares every RTTI class: real bases,
-vtable-ordered virtuals with real signatures, non-virtuals from the
-symtab, factory sizes, and audited fields where known. NOT compiled.
+The binary was never stripped, so alongside the code it keeps the
+compiler's own description of the class design: 131 type-information
+records (21 base classes, 101 single-inheritance, 9 multiple-inheritance)
+and 133 virtual-function tables. By decoding those structures directly
+out of the file — and cross-checking 2,724 of the 4,894 tree functions whose symbol table
+entries still carry their real `Class::method(arguments)` signatures —
+this folder reconstructs the actual object model:
 
-## How it was read
+- **`recovered/*.h`** (131 headers): real base classes, virtual methods
+  in vtable order with real signatures, non-virtual members from the
+  symbol table, factory sizes, and audited field layouts where known.
+- **`docs/misfiled.md`**: 114 methods Ghidra filed in the wrong file
+  (it missed the implicit `this` parameter on small accessors and
+  forwarders, scattering them into generic engine files). Now indexed
+  under their true classes.
+
+## How the decoding works
+
+A typeinfo record's first pointer says which flavor it is (offset past
+the ABI tables): plain class, single-inheritance (base pointer right
+after the name), or multiple-inheritance (base count, then base
+pointers). Each vtable starts with bookkeeping followed by the function
+pointers in declaration order — resolved through the symbol table and
+demangled. Return types come from Ghidra's analysis by address
+(`/* ? */` where unrecovered); local variable names and comments are
+gone for good (no debug info survived — only symbols and type records).
+
+The headline result: `SceneObject → SceneObject2D → MeatBoyCharactor →
+{all 25 characters}`, plus gems like `GSuperMeatBoy : RenderLayerObject,
+Game` and `Sprite : RenderLayerObject, SceneObject2D` (multiple
+inheritance). AlienHominid's 30 vtable slots independently confirm the
+call slots observed in decompiled bodies (`+0x50` Update, `+0x68`
+Initialize, `+0x88` SpecialPress, `+0xb0` WallJump gate).
+
+Nothing here is compiled — it is a reading aid, and it says so on every
+page.
+## Byte-level method (for reproducers)
 
 - Typeinfo kind by vtable pointer (`+16` past the ABI tables: single / si / vmi);
   si base at +16, vmi count at +20, base pointers from +24.

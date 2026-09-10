@@ -1,47 +1,48 @@
-# GSuperMeatBoy — the game object
+# GSuperMeatBoy — the object that *is* the running game
 
-`src/game/classes/GSuperMeatBoy.c` (2072 lines, ~40 methods). Single global
-instance (`SuperMeatBoy`, also `SMBCharactor`/`SMBMenu`/`SMBHUD` siblings).
-Owns: current `TileLevel` (`+0x40`), player char (`+0x48`), chapter/level
-flow, game-state machine, replays entry, pause, resource teardown.
+There is one global game object (`SuperMeatBoy`, with sibling globals for
+the character roster, menu, and HUD). It owns the current level, the
+player character, and the chapter/level flow, and its `SwitchGameMode`
+is the single funnel every screen change passes through.
+Source: `src/game/classes/GSuperMeatBoy.c` (~43 methods).
 
-## Game-state machine (`SwitchGameMode`, `SMB_GameState` arg)
+## One function switches every screen
 
-| state | meaning |
+`SwitchGameMode` takes the destination state and does the right teardown
+and setup. The states, recovered from the dispatch code:
+
+| state | where you end up |
 |---|---|
-| 0 | in-game (`ShowGame`) |
-| 3 | intro (`GMeatHUD__ShowIntro`) |
+| 0 | playing the level (`ShowGame`) |
+| 3 | intro card (`GMeatHUD__ShowIntro`) |
 | 9 | chapter map |
-| 10 | world map (+ full level teardown: boss destroy, tile level delete, char destroy, lightmaps) |
-| 0xc | pause animations (`AnimationManager__PauseAnimations(0)`) |
-| 0xd | (sibling branch, animations-adjacent) |
+| 10 | world map — plus full level teardown (boss destroyed, tile level deleted, character destroyed, lightmaps dropped) |
+| 0xc | pause (world animations frozen) |
+| 0xd | adjacent animation state |
 
-Mode 0 also flips `Engine+0x2c` (1 = gameplay, 0 = replay) by
-`IsInReplayMode`, then dispatches the mode jump table. Called from ~25
-sites (menu transitions, level loads, chapter-end, replay exits).
+Mode 0 additionally flips an engine flag between gameplay and replay
+depending on whether the menu is in replay mode, then jumps through the
+mode table. Around 25 call sites feed it — menu transitions, level
+loads, chapter-end cutscenes, replay exits.
 
-## Per-frame (`Update` @ 00516690)
+## Frame by frame
 
-Dispatches `UpdateAnimals` + subsystem updates by current mode; render
-(`Render` @ 005126b0) draws level/actors/HUD layers. `BeatLevel` (00515a70)
-handles completion (unlocks, times, leaderboard push, chapter-end
-detection); `ShowCurrentReplay` (005154d0) drives
-`MeatBoyCharactor__SwitchToReplayMode` (see base-class doc).
+`Update` dispatches per-mode updates (including ambient animals);
+`Render` draws level, actors, and HUD layers. Finishing a level runs
+`BeatLevel`: unlocks, best times, leaderboard submission, and chapter-end
+detection. `ShowCurrentReplay` hands the characters to replay mode (see
+the base-character doc). Level bookkeeping — `SetCurrentLevel`,
+`LoadNextLevel`, warp zones, deferred character swaps (loading the next
+character asynchronously so the frame doesn't hitch), pausing, freezing,
+and full resource teardown — all lives here.
 
-## Flow helpers
+## Technical appendix
 
-`SetCurrentLevel` / `LoadNextLevel` / `ActivateWarpZone` /
-`DeferLoadCharactor`+`LoadDeferredCharactor` (async char swap),
-`Show/Hide{Game,ChapterMap,WorldMap,TitleMenu,StartMenu,IntroPlayer}`,
-`ShowPauseMenu`, `Freeze`, `DestroyGameResources` (full teardown for
-mode switches), `MarkAllLevelsVisible/Invisible`, `SetTilePalette`,
-`PlaceBossLayer`, `GetCameraFocus`.
-
-## Reading guide
-
-Start at `GSuperMeatBoy` ctor @ 00514290 (what it news up), then
-`Initialize` @ 00516f50/60, then `Update` @ 00516690 with the state table
-above. Level data itself lives in `TileLevel`/`SMBChapter`/`GSMBChapterData`;
-menus in `GSMBMenu` (9852 lines — the biggest file in the tree).
+Key addresses: `SwitchGameMode` 005162a0, `Update` 00516690, `Render`
+005126b0, `BeatLevel` 00515a70, `ShowCurrentReplay` 005154d0,
+constructor 00514290, `Initialize` 00516f50/60. Current level at
+`+0x40`, player at `+0x48`, replay flag at engine `+0x2c`. Level data
+itself lives in `TileLevel`/`SMBChapter`/`GSMBChapterData`; screens in
+`GSMBMenu` (the biggest file in the tree at 9,852 lines, 136 methods).
 
 *See also: `gsmb_menu.md` (screens), `tengine.md` (frame loop), `actors_meta.md` (replays/chapters).*

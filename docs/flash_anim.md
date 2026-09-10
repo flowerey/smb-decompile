@@ -1,35 +1,36 @@
-# Flash animation system — how every character moves
+# Flash animation — how everything on screen moves
 
-All 2D animation (characters, menus, bosses, particles' sprites) plays
-through this vector-animation runtime, loaded from `.am` files
-(`/Animations/ah.am`, `meatboyanim.am`, …). Three layers:
+Nearly all 2D animation — characters, menus, bosses, particle sprites —
+plays through a vector-animation runtime loaded from `.am` files (such as
+`/Animations/ah.am` or `meatboyanim.am`). It has three layers:
 
-## Library (`FlashAnimationLibrary.c`)
+## 1. The library: named animations on demand
 
-Loaded once per character set (`MeatBoyCharactor` ctor builds one from the
-`.am` path). Serves named assets: `GetMovieClip` ("shoot", "bullet",
-"bulletbreak", "meatpoof", "float"… — the names behind every ability doc),
-`GetTextField`, symbol/texture access (`GetSymbolTexture`,
-`GetLibraryEntry`), clip index/name mapping, `Enable/DisableFlags`
-(visibility/solo bits, used by `RenderClones` to spotlight one clone),
-`IsDotIndex/GetDotIndex` (frame markers).
+One library object is loaded per character set and serves assets **by
+name**: `GetMovieClip("shoot")`, `("bullet")`, `("meatpoof")`,
+`("float")`… — these exact names are the animation sets behind every
+ability doc in this folder. It also serves text fields and symbol
+textures, maps between clip names and indexes, and toggles visibility
+flags (the clone renderer uses these to spotlight one ghost at a time).
 
-## Instances (`FlashLibraryInstance.c`)
+## 2. Instances: playheads with transport controls
 
-Playhead objects bound to clips: `GotoAndPlay/GotoAndStop`, `IsPlaying`
-(the predicate behind every "anim finished" transition, e.g. AlienHominid's
-`specialActive` watchdog and shot state 1→2), `Reset`, `Render`
-(vtab `+0x10`, fed via clip slots `+0x30` x / `+0x34` y / `+0x58` frame —
-see alien_hominid.md), bounds queries (`GetInstanceBounds`,
-`IsBoundsTouchingInstance`).
+A clip becomes visible through an instance object: go to a frame and
+play, go to a frame and stop, ask "are you still playing?", reset,
+render. Two facts about instances explain half the character code:
 
-## Content (`FlashMovieClip`, `FlashSymbol`, `FlashTextField`,
-`FlashEditableTextField`, `FlashLibraryEntry/Instance`, `FlashTimeline`,
-`FlashLayer`, `FlashSoundLibrary`, `AnimationManager`)
+- "Is the animation finished?" (`IsPlaying`) is the predicate behind
+  every animation-gated transition — AlienHominid's special flag clears
+  when the shoot clip ends; spent shots retire when the break clip ends.
+- Rendering a clip means pinning its x/y/frame slots and advancing one
+  frame — the `+0x30/+0x34/+0x58` idiom repeated across every Render
+  function.
 
-Timelines, layers, keyframes, sound triggers; `AnimationManager`
-(`PauseAnimations`) freezes the world for pause/mode switches.
-`GSMBCutSceneManager` sequences clips for intros/outros/boss cinematics
-(see cutscene doc when written — entry: `PlayCutScene`, `CancelCutScene`).
+## 3. Content: timelines, layers, sounds
+
+`FlashMovieClip`, symbols, text fields (editable ones too), library
+entries, timelines, layers, and a sound library. `AnimationManager`
+freezes the world for pause and mode switches, and the cutscene manager
+sequences clips for intros, outros, and boss cinematics.
 
 *See also: `alien_hominid.md` (clip slots in practice), `rendering.md` (draw path).*

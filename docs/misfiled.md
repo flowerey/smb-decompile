@@ -1,4 +1,13 @@
-# Misfiled methods — true class vs tree location
+# Misfiled methods — indexed under their true classes
+
+Decompilers find functions but don't always find their `this` pointer.
+On ~114 small methods (one-line accessors, input forwarders, tile
+predicates) Ghidra analyzed the object parameter as an ordinary argument
+and filed the function into a generic engine file instead of its class.
+Every row below was verified two ways: the symbol table's demangled name
+gives the true class, and the body only makes sense with that class
+(e.g. `SpecialPress` at 0x461910 does shot-rack math on `+0xab8` —
+unmistakably AlienHominid — but lives in `core_05.c`).
 
 | addr | real class :: method | filed as | file |
 |---|---|---|---|

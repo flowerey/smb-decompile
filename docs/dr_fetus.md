@@ -1,39 +1,35 @@
-# Dr Fetus — homing missile battery (and the Final Boss's ammo dump)
+# Dr Fetus — homing missiles, and the Final Boss's ammo dump
 
-`src/game/classes/DrFetus.c` (1742 lines, 21 methods, char id 4, giant
-`0x14c0` payload). Playable-bonus version of the end boss: same homing
-missiles, player-aimed. The richest shooter in the roster — and wired
-directly into `FinalBoss`, which borrows both his missiles and his
-position helpers (see bosses doc).
+Dr Fetus (character id 4, `DrFetus.c`, 1742 lines, 21 methods) is the
+heaviest shooter in the roster — his extra state alone is `0x14c0` bytes
+(starting past the shared base, 10 missile slots at 256 bytes each:
+`0xac0 + 10·0x100 = 0x14c0`, exactly the factory allocation). Each
+missile is a full steering sub-object rather than AlienHominid's flat
+record, because these missiles **home**: every frame each live missile
+turns toward its target character (found via `getChar`) using an
+angle computation, flies with real 2D physics, and dies on the first
+solid tile — arming, heading, position and frame living inside the slot.
 
-## Missile system (10 slots, stride 0x100)
+The supporting cast does what you'd expect: `AddShot` arms the first
+free slot at the player, `ShootOnlyUpdate` fans the missile update across
+every clone, `ResetShots`/`RenderShots`/`RenderClones`/`Render` handle
+cleanup and drawing with the `shoot`/`missile`/`explosion` animations.
+`CanDie` unconditionally returns "no" — boss-form Fetus can't die through
+the normal path; his death is scripted elsewhere.
 
-Slot bases `0xac0, 0xbc0, … 0x13c0` (`0xac0 + 10·0x100 = 0x14c0` = alloc
-size — the slots *are* the tail). Each slot is a 256-byte steering
-sub-object (`+0x9c` armed, `+0xd8` heading, `+0xa4` counter, `+0xa8`
-position), not AlienHominid's flat 16-byte records.
+## Borrowed by the Final Boss
 
-- `AddShot` — first-free-slot arming at player pos (`+0xa8`), facing by
-  `+0x7d8` bit 0, state 0.
-- `UpdateShots` — per live missile: bearing to `getChar(SuperMeatBoy, 1)`
-  via `atan2` (+ π/2-style offset `0x5bf768`), `Apply2DPhysics(dt)`,
-  tile probe at slot `+0xb68`; solid → state 1, frame 0. I.e. **homing**:
-  they steer toward player 2 / the target char every frame and die on
-  walls.
-- `ShootOnlyUpdate` — fans `UpdateShots` across every clone in the manager
-  (`+0xa38` count, `+0x7f0` array).
-- `ResetShots`, `RenderShots`, `RenderClones`, `Render` — the usual
-  shooter chorus over `shoot`/`missile`/`explosion` clips.
-- `IsBoundsHittingShot(Bounds*)` — any live missile touching bounds?
-  Called by **`FinalBoss__IsCollidingWithBounds`**: the end boss reuses
-  Fetus's live missiles for its own hit tests.
-- `GetClonePosition` — first clone's `+0xa0`, called by
-  **`FinalBoss__Update`** for targeting.
+Two helpers exist for someone else's benefit: `IsBoundsHittingShot`
+("is any live missile touching this box?") is called from
+`FinalBoss__IsCollidingWithBounds`, and `GetClonePosition` (first clone's
+position) from `FinalBoss__Update`. The end boss aims and hit-tests with
+Fetus's live missiles rather than keeping its own.
 
-## Boss wiring
+## Technical appendix
 
-`CanDie` returns constant `0` — boss-form Fetus cannot die by the normal
-path (death is scripted elsewhere). `ProcessSpecial`/`RecordSpecial` follow
-the standard edge protocol (see base-class doc).
+Slot bases `0xac0, 0xbc0, … 0x13c0`; per-slot steering state includes armed
+flag (`+0x9c` within the slot), heading (`+0xd8`), counters and position
+(`+0xa4/+0xa8`). `ProcessSpecial`/`RecordSpecial` follow the standard
+edge protocol from the base-class doc.
 
 *See also: `bosses.md` (FinalBoss borrows), `characters.md` (roster).*
