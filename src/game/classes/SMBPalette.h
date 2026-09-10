@@ -1,0 +1,61 @@
+#pragma once
+/* Index for src/game/classes/SMBPalette.c — see .c for bodies */
+#include "ghidra_types.h"
+#include "game_types.h"
+
+/* SMBPalette__AddSetPieceToBuffer @ 004da480 */
+/* SMBPalette__AddSetPieceToBuffer__004da490 @ 004da490 */
+/* SMBPalette__RenderSetPieceStream @ 004da7f0 */
+/* SMBPalette__RenderSetPieceStream__004da800 @ 004da800 */
+/* SMBPalette__RenderTile @ 004daab0 */
+/* SMBPalette__RenderTile__004daac0 @ 004daac0 */
+/* SMBPalette__GetSetPieceProps @ 004dad10 */
+/* SMBPalette__GetSetPieceProps__004dad20 @ 004dad20 */
+/* SMBPalette__RenderTileStream @ 004daea0 */
+/* SMBPalette__RenderTileStream__004daeb0 @ 004daeb0 */
+/* SMBPalette__AddTileToBuffer @ 004db260 */
+/* SMBPalette__AddTileToBuffer__004db270 @ 004db270 */
+/* SMBPalette__RenderSetPiece @ 004dee10 */
+/* SMBPalette__IsRegisteredBreakyBlock @ 004e00e0 */
+/* SMBPalette__SpawnDemonSpawn @ 004e06d0 */
+/* SMBPalette__DemonBulletCollision @ 004e0d60 */
+/* SMBPalette__UpdateDemonSpawn @ 004e0df0 */
+/* SMBPalette__RenderDemonSpawn @ 004e1130 */
+/* SMBPalette__SpecialRender @ 004e1280 */
+/* SMBPalette__SpecialRender__004e1290 @ 004e1290 */
+/* SMBPalette__CreateSMBLaserStream @ 004e2050 */
+/* SMBPalette__PortalCollision @ 004e25a0 */
+/* SMBPalette__InitializeObstacleArrays @ 004e2950 */
+/* SMBPalette__DestroyObstacleArrays @ 004e45e0 */
+/* SMBPalette__ResetObstacleArrays @ 004e4f60 */
+/* SMBPalette__IsBossPosID @ 004e56c0 */
+/* SMBPalette__ActivateEnd @ 004e57c0 */
+/* SMBPalette__GetCollisionMask @ 004e59c0 */
+/* SMBPalette__MarkCollisionOnBlock @ 004e60a0 */
+/* SMBPalette__CollisionResponse @ 004e61c0 */
+/* SMBPalette__CollisionResponse__004e61d0 @ 004e61d0 */
+/* SMBPalette__PlatformWallJump @ 004e9380 */
+/* SMBPalette__PlatformDeath @ 004ea4d0 */
+/* SMBPalette__PlatformCollision @ 004eafa0 */
+/* SMBPalette__ObstacleCollision @ 004eb7e0 */
+/* SMBPalette__Update @ 004ec850 */
+/* SMBPalette__GetInLevelTransition @ 004f07e0 */
+/* SMBPalette__GetOutLevelTransition @ 004f0840 */
+/* SMBPalette__MarkCollision @ 004f0880 */
+/* SMBPalette__ResetObstacles @ 004f11c0 */
+/* SMBPalette__BreakyCollide @ 004f1eb0 */
+/* SMBPalette__MarkBlockAsNotCollideable @ 004f2260 */
+/* SMBPalette__MarkCollisionOnBlock__004f23d0 @ 004f23d0 */
+/* SMBPalette__SetReplayIndex @ 004f2450 */
+/* SMBPalette__UnSetReplayIndex @ 004f2460 */
+/* SMBPalette__ReplayUpdate @ 004f2470 */
+/* SMBPalette__SetToReplayMode @ 004f2510 */
+/* SMBPalette__SetToNormalMode @ 004f2920 */
+/* SMBPalette__EnableFlags @ 004f2930 */
+/* SMBPalette__DisableFlags @ 004f2940 */
+/* SMBPalette__ApplyTredmillForce @ 004f2950 */
+/* SMBPalette__Activate @ 004f2a40 */
+/* SMBPalette__SMBPalette @ 004f2c80 */
+/* SMBPalette__SMBPalette__004f3c80 @ 004f3c80 */
+/* SMBPalette__SMBPalette__004f3ca0 @ 004f3ca0 */
+/* SMBPalette__FindAnimatedObstacles @ 004f7e40 */

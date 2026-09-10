@@ -1,0 +1,16 @@
+# Project C formatting (clang-format 22). LLVM base, 2-space indent to match
+# the tree, 100-col limit for Ghidra's wide expressions.
+BasedOnStyle: LLVM
+Language: Cpp
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+ColumnLimit: 100
+AlignAfterOpenBracket: Align
+BinPackArguments: true
+BinPackParameters: true
+AllowAllParametersOfDeclarationOnNextLine: true
+BraceWrapping:
+  AfterFunction: false
+SortIncludes: false
+ReflowComments: false
