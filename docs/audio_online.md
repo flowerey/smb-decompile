@@ -38,3 +38,5 @@ Three layers, bottom to top:
 Failure-tolerant by design: every online path has an offline/message-box
 twin (`Game_CreateMessage/DisableMessage/ForceCloseMessage`,
 `CloseDueToConnectionLoss`).
+
+*See also: `tengine.md` (startup), `editor_input_data.md` (UI/widgets for menus).*

@@ -1,6 +1,6 @@
 # Meat Ninja — N+ homage with death-burst charges
 
-`src/game/classes/MeatNinja.c` (707 lines, 15 methods, char id 7). Same
+`src/game/classes/MeatNinja.c` (707 lines, 16 methods, char id 7). Same
 shooter *template* as Alien Hominid (per-slot state machine, shared-clip
 clones, edge-triggered special) but a different weapon: timed explosions
 instead of projectiles — and a `CanDie` override that spends death itself
@@ -46,3 +46,5 @@ AlienHominid (10 gravity shots) vs Meat Ninja (3 timed bombs): identical
 slot molecule, identical clone-sharing (`+0xa40` gate, shared clip
 pointers), identical edge-triggered special wiring, different payload.
 Any new shooter file can be read by diffing against these two.
+
+*See also: `alien_hominid.md` (template twin), `characters.md` (roster).*

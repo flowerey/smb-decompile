@@ -28,3 +28,5 @@ Deep (human-written) notes first, then generated indexes.
 - `modules/` — per-area overviews: file lists, hub functions, class census:
   `runtime`, `platform`, `vendor`, `engine`, `game-classes`,
   `game-logic`, `external`
+
+Infrastructure note: `src/globals.c` holds dummy definitions for every extern (no functions, so it appears in no function index).

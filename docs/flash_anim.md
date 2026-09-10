@@ -31,3 +31,5 @@ Timelines, layers, keyframes, sound triggers; `AnimationManager`
 (`PauseAnimations`) freezes the world for pause/mode switches.
 `GSMBCutSceneManager` sequences clips for intros/outros/boss cinematics
 (see cutscene doc when written — entry: `PlayCutScene`, `CancelCutScene`).
+
+*See also: `alien_hominid.md` (clip slots in practice), `rendering.md` (draw path).*

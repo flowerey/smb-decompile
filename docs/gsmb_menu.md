@@ -41,3 +41,5 @@ options via `Increment*/Decrement*/Click*` triplets per screen
 `LoadSelectedLevel`; internet levels through `LoadInternetsChapter/Levels`
 + `GetLevelDataByIndex`. Sign-in/storage robustness:
 `ProcessDisconnect/ProcessStorageChange/ResetForSignout/ResetForPurchase`.
+
+*See also: `gsuper_meatboy.md` (state table), `editor_input_data.md` (widgets/input).*

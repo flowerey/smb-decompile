@@ -40,3 +40,5 @@ living in data files (see base-class doc).
   `RenderLayers`, `TileLevelLightMap`.
 - Audio: `TAudio` (1751 lines).
 - Input: `TInput`, `TKeyboard`, `Joystick`, `TMouse`.
+
+*See also: `gsuper_meatboy.md` (game object), `rendering.md` (frame order), `audio_online.md` (subsystems).*

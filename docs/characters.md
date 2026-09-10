@@ -28,8 +28,8 @@ bigger carries character-specific state.
 
 TofuBoy (0x14), PotatoBoy (0x19), MeatboyEnding (0x1a), Brownie (5),
 BandageGirl (6), MeatBoy8Bit (1), MeatBoy4Color (2), MeatBoy4Bit (3),
-FlyWrench (0x10), Machinarium (0x15), TheKid (0x16), HeadCrab (0x17),
-Runman (0xc), SprintMeatBoy (0x1c), VVVVVV (0x13).
+FlyWrench (0x10, 0xaa0), Machinarium (0x15), TheKid (0x16), HeadCrab (0x17),
+Runman (0xc), SprintMeatBoy (0x1c, 0xaa0), VVVVVV (0x13).
 
 ## How to read a new character (5-minute recipe)
 
@@ -38,3 +38,5 @@ Runman (0xc), SprintMeatBoy (0x1c), VVVVVV (0x13).
 3. `ProcessSpecial`/`AddShot`-shaped methods → trigger wiring.
 4. `Update` prologue → what it simulates per frame.
 5. `CanDie`/`Jump` overrides → where it breaks base rules.
+
+*See also: `alien_hominid.md`, `meat_ninja.md`, `dr_fetus.md`, `meatboy_charactor.md`.*

@@ -37,3 +37,5 @@ see `ReadSaveGames`/`WriteEntryToLeaderboard` in game-logic),
 `TWindow.c`, `UserAlert.c` (interrupt message boxes),
 `Achievements.c`/`Leaderboards.c` tables, `GameRegistry.c` tunables.
 Console-platform leftovers (`Trophies`…) are stubs on this build.
+
+*See also: `rendering.md` (scene), `flash_anim.md` (sprites), `audio_online.md` (profiles/saves).*

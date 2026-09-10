@@ -1,6 +1,6 @@
 # Dr Fetus — homing missile battery (and the Final Boss's ammo dump)
 
-`src/game/classes/DrFetus.c` (1742 lines, 20 methods, char id 4, giant
+`src/game/classes/DrFetus.c` (1742 lines, 21 methods, char id 4, giant
 `0x14c0` payload). Playable-bonus version of the end boss: same homing
 missiles, player-aimed. The richest shooter in the roster — and wired
 directly into `FinalBoss`, which borrows both his missiles and his
@@ -35,3 +35,5 @@ position), not AlienHominid's flat 16-byte records.
 `CanDie` returns constant `0` — boss-form Fetus cannot die by the normal
 path (death is scripted elsewhere). `ProcessSpecial`/`RecordSpecial` follow
 the standard edge protocol (see base-class doc).
+
+*See also: `bosses.md` (FinalBoss borrows), `characters.md` (roster).*

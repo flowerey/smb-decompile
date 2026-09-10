@@ -79,3 +79,5 @@ design — Alien Hominid keeps his ray gun.)*
   slot addresses factor into `shots[i]`.
 - `gcc -fsyntax-only` (project flags): original file 673 error lines,
   rewrite **0 errors**.
+
+*See also: `meatboy_charactor.md` (base), `meat_ninja.md` (sister shooter), `characters.md` (roster).*

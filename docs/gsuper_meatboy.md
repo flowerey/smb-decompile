@@ -43,3 +43,5 @@ Start at `GSuperMeatBoy` ctor @ 00514290 (what it news up), then
 `Initialize` @ 00516f50/60, then `Update` @ 00516690 with the state table
 above. Level data itself lives in `TileLevel`/`SMBChapter`/`GSMBChapterData`;
 menus in `GSMBMenu` (9852 lines — the biggest file in the tree).
+
+*See also: `gsmb_menu.md` (screens), `tengine.md` (frame loop), `actors_meta.md` (replays/chapters).*

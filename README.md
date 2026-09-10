@@ -34,12 +34,13 @@ tests/                   recompilable leaf demo (adler32 vs zlib)
 4. Identifiers are C-ified: `this` -> `self`, `param_N` -> `argN`,
    `undefined4` -> `uint32_t`, etc. String literals are untouched.
 
-## Deep dives (human-quality rewrites + notes)
+## Deep dives (human-written; index at `docs/README.md`)
 
-- `docs/alien_hominid.md` + `src/game/classes/AlienHominid_documented.c` —
-  guest character id 27 fully recovered: 10-shot blaster layout, struct,
-  per-function behaviour, replay wiring. Rewrite compiles with **0 errors**
-  (original: 673 error lines); offsets byte-audited.
+Characters: `alien_hominid` (+ verified rewrite), `meatboy_charactor`
+(base bible), `meat_ninja`, `dr_fetus`, `characters` (25-roster census).
+Game: `gsuper_meatboy`, `gsmb_menu`, `tengine`. Enemies: `bosses`.
+World: `world_tiles`. Media/online: `rendering`, `flash_anim`,
+`audio_online`. Systems: `editor_input_data`, `actors_meta`, `core_types`.
 
 ## Build status (honest)
 - `make check` compiles per-file (`gcc -Iinclude -w -fcommon -std=gnu11`).

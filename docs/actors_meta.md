@@ -40,3 +40,5 @@ end-of-level + replay HUDs, unlock screens (`RenderUnlocks`,
   music crossfades per chapter/level/menu, unlock checks
   (`IsNextLevelUnlocked`, `VerifyChapterFileData`), lives/game-over
   screens, `GSMBChapterData.c` = the serializable chapter payload.
+
+*See also: `world_tiles.md` (collision), `gsuper_meatboy.md` (replay entry), `meatboy_charactor.md` (ghost protocol).*

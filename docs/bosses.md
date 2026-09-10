@@ -24,7 +24,7 @@ The fight is a literal table in `FillAttackSequenceArray` (`+0x450`):
 1, 2, 4, 3, 0, 1, 4, 3, 0, 0, 4   (+0x48c = cursor reset)
 ```
 
-`DetermineNextAction` walks it; `SpawnMeatBoys` (!), `RenderAttack` /
+`DetermineNextAction` walks it (the same table is re-stamped in `Reset`/`ResetAttacks`, so the script restarts clean every phase); `SpawnMeatBoys` (!), `RenderAttack` /
 `IsTouchingAttack` / `ResetAttack(s)` execute; `IncrementHurtState` tracks
 phases. To rebalance the boss, this 11-entry array is the whole design.
 
@@ -42,3 +42,5 @@ on borrowed systems: `IsCollidingWithBounds` →
 FactoryBoss (10), ForestBoss (11), HospitalBoss (12: +`ChangeAction`) —
 arena dressing over the shared interface; read any single one in minutes
 once the interface above is familiar.
+
+*See also: `dr_fetus.md` (missile battery), `world_tiles.md` (arenas), `actors_meta.md` (critters).*

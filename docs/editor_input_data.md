@@ -54,3 +54,5 @@ the frame thread. `SMBLevelPortal(Interface).c`: upload/download flows
 with SQL string building (see the `INSERT INTO smb_editor_leveldata`
 construction), `UploadPortalLevel`, chapter/chapter-info queries;
 `EditorFormChapterUpload.c` is the in-editor frontend.
+
+*See also: `gsmb_menu.md` (menu wiring), `world_tiles.md` (paint engine), `meatboy_charactor.md` (tunable loading).*

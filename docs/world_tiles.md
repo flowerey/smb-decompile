@@ -39,3 +39,5 @@ One method family per hazard/toy, each with update + render + collision:
 - Render batching: `RenderTile(Stream)`, `RenderSetPiece(Stream)`,
   `AddTileToBuffer`, `SpecialRender`, `GetCollisionMask`,
   `CollisionResponse`, boss-position ids (`IsBossPosID`).
+
+*See also: `actors_meta.md` (animals collide here), `editor_input_data.md` (editor paints here), `rendering.md` (lightmaps).*

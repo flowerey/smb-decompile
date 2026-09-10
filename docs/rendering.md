@@ -31,3 +31,5 @@ forced `0x10` under device reset.
   `SwitchGameMode`). Baked 2D shadows from level geometry.
 - `Camera.c` (10) + `GetCameraFocus` overrides per boss/level: what the
   viewport follows.
+
+*See also: `tengine.md` (frame order), `flash_anim.md` (content), `world_tiles.md` (lightmaps).*

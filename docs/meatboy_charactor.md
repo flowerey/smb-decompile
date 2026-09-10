@@ -87,3 +87,5 @@ live; subclass ctors only add anim path + id + tail init.
 2. Which virtuals it overrides (shooters: special/clips/shots).
 3. `+0xa40` gating (owner vs clone duties).
 4. `Update` prologue order: replay frame → anim push → flag watchdog → base.
+
+*See also: `alien_hominid.md` (+ verified rewrite), `characters.md` (roster), `flash_anim.md` (anim runtime).*
