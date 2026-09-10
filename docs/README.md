@@ -13,6 +13,8 @@ Deep (human-written) notes first, then generated indexes.
 - `dr_fetus.md` — homing missile battery, boss ammo dump
 - `bosses.md` — maggot artillery, scripted Hell choreography, FinalBoss teardown
 - `gsmb_menu.md` — 136-method screen fleet: the Show pattern, selection, loading
+- `world_tiles.md` — TileLevel grid/swept collision + SMBPalette hazards
+- `audio_online.md` — TAudio cue model + Steam/leaderboard stack
 
 ## Generated
 
