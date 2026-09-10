@@ -10,6 +10,9 @@ Deep (human-written) notes first, then generated indexes.
 - `gsuper_meatboy.md` — game object: state machine, level flow, replays entry
 - `tengine.md` — frame loop, EngineRun, subsystem startup
 - `characters.md` — 25-character census: shooters vs abilities vs reskins
+- `dr_fetus.md` — homing missile battery, boss ammo dump
+- `bosses.md` — maggot artillery, scripted Hell choreography, FinalBoss teardown
+- `gsmb_menu.md` — 136-method screen fleet: the Show pattern, selection, loading
 
 ## Generated
 
