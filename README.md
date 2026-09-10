@@ -16,6 +16,7 @@ src/engine/core_*.c      generic engine/util (12 chunks)
 src/game/classes/*.c     ONE FILE PER CLASS (e.g. GSMBMenu, GSuperMeatBoy)
 src/game/logic/game_*.c  unclassified game fns
 src/external/stubs.c     EXTERNAL-block stubs (halt_baddata)
+src/reconstructed/       semantic reconstruction (AlienHominid first; src/ untouched)
 docs/index.md            per-function file map
 tests/                   recompilable leaf demo (adler32 vs zlib)
 ```

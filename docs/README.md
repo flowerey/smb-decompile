@@ -21,6 +21,7 @@ Deep (human-written) notes first, then generated indexes.
 - `class_model.md` — RTTI inheritance forest (131 classes) + vtable layouts
 - `misfiled.md` — 114 methods Ghidra filed in the wrong file
 - `../recovered/` — 131 C++ headers: real bases, vtable-ordered virtuals, real signatures
+- `../src/reconstructed/` — semantic reconstruction (behavior-identical readable code; originals untouched)
 - `world_tiles.md` — TileLevel grid/swept collision + SMBPalette hazards
 - `audio_online.md` — TAudio cue model + Steam/leaderboard stack
 
