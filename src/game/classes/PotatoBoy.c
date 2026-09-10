@@ -74,9 +74,9 @@ void __thiscall PotatoBoy__PotatoBoy__00465b40(PotatoBoy *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FormatResourcePath("/Animations/potatoboy.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,0x19);
+
+  uVar1 = FormatResourcePath("/Animations/potatoboy.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 0x19);
   *(uint8_t ***)self = &PTR__PotatoBoy_005bf4b0;
   *(uint32_t *)(self + 0xa54) = 0x19;
   return;
@@ -91,12 +91,12 @@ void __thiscall PotatoBoy__PotatoBoy__00465b40(PotatoBoy *self)
  */
 /* PotatoBoy__PotatoBoy__00465b40(MeatBoyCharactor*, int) */
 
-void __thiscall PotatoBoy__PotatoBoy__00465b40(PotatoBoy *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall PotatoBoy__PotatoBoy__00465b40(PotatoBoy *self, MeatBoyCharactor *arg1, int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__PotatoBoy_005bf4b0;
-                    /* try { // try from 00465b71 to 00465b75 has its CatchHandler @ 00465b89 */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 00465b71 to 00465b75 has its CatchHandler @ 00465b89 */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   return;
 }

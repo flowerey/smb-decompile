@@ -26,96 +26,104 @@ void __thiscall GMeatHUD__Render(GMeatHUD *self)
   int iVar1;
   float *pfVar2;
   long lVar3;
-  AutoLockSection aAStack_28 [12];
+  AutoLockSection aAStack_28[12];
   float local_1c;
-  
-  AutoLockSection__AutoLockSection(aAStack_28,(CriticalSection *)hudUpdate);
-  if (bShowHud == 0) goto LAB_0047e3a8;
-                    /* try { // try from 0047e344 to 0047e352 has its CatchHandler @ 0047e78f */
+
+  AutoLockSection__AutoLockSection(aAStack_28, (CriticalSection *)hudUpdate);
+  if (bShowHud == 0)
+    goto LAB_0047e3a8;
+  /* try { // try from 0047e344 to 0047e352 has its CatchHandler @ 0047e78f */
   TAudio__DisableDirectionalAudio(Audio);
   RegisterAudioPosition((FPUVector *)0xffffffff);
   iVar1 = *(int *)(self + 0x420);
   if (iVar1 == 5) {
     *(uint32_t *)(self + 0x420) = 6;
-LAB_0047e40a:
+  LAB_0047e40a:
     GSMBMenu__RenderTitleScreenForIntro(SMBMenu);
-LAB_0047e416:
+  LAB_0047e416:
     if (pIntroInstancePart1 != 0) {
       iVar1 = *(int *)(self + 0x420);
-      if (iVar1 != 0xb) goto LAB_0047e382;
-LAB_0047e433:
+      if (iVar1 != 0xb)
+        goto LAB_0047e382;
+    LAB_0047e433:
       if ((1 < *(int *)(SuperMeatBoy + 0x294)) || (*(int *)(SuperMeatBoy + 0x3a0) == 1))
-      goto LAB_0047e3a8;
+        goto LAB_0047e3a8;
       TGraphics__ResetPixelStages(Graphics);
       TGraphics__ResetTexCoordGen(Graphics);
-      Camera__SetOrthoProjection
-                (*(Camera **)(SuperMeatBoy + 0x38),_DAT_005c0c9c /* R:240.0f */,DAT_005c0c98 /* R:-240.0f */,DAT_005c0c94 /* R:-426.5f */,
-                 DAT_005c0c90 /* R:426.5f */,DAT_005c07a4 /* R:-1.0f */,DAT_005be894 /* R:1.0f */);
-      Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38),2);
+      Camera__SetOrthoProjection(*(Camera **)(SuperMeatBoy + 0x38), _DAT_005c0c9c /* R:240.0f */,
+                                 DAT_005c0c98 /* R:-240.0f */, DAT_005c0c94 /* R:-426.5f */,
+                                 DAT_005c0c90 /* R:426.5f */, DAT_005c07a4 /* R:-1.0f */,
+                                 DAT_005be894 /* R:1.0f */);
+      Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38), 2);
       (**(code **)(*pTimerHudCurrLevel + 0x10))();
-      FlashTextField__SetText(pHudTimerField,(double)*(float *)(self + 0x418),&DAT_005c07c4 /* R:5.184804318001823e-44f */);
+      FlashTextField__SetText(pHudTimerField, (double)*(float *)(self + 0x418),
+                              &DAT_005c07c4 /* R:5.184804318001823e-44f */);
       (**(code **)(*pTimerHudInstance + 0x10))();
       goto LAB_0047e4fc;
     }
     *(uint32_t *)(self + 0x420) = 1;
-  }
-  else {
-    if (iVar1 == 1) goto LAB_0047e416;
-    if (iVar1 == 6) goto LAB_0047e40a;
-    if (iVar1 == 0xb) goto LAB_0047e433;
-LAB_0047e382:
+  } else {
+    if (iVar1 == 1)
+      goto LAB_0047e416;
+    if (iVar1 == 6)
+      goto LAB_0047e40a;
+    if (iVar1 == 0xb)
+      goto LAB_0047e433;
+  LAB_0047e382:
     if ((iVar1 == 9) || (iVar1 == 7)) {
-      if (1 < *(int *)(SuperMeatBoy + 0x294)) goto LAB_0047e3a8;
+      if (1 < *(int *)(SuperMeatBoy + 0x294))
+        goto LAB_0047e3a8;
       TGraphics__ResetPixelStages(Graphics);
       TGraphics__ResetTexCoordGen(Graphics);
-      Camera__SetOrthoProjection
-                (*(Camera **)(SuperMeatBoy + 0x38),_DAT_005c0c9c /* R:240.0f */,DAT_005c0c98 /* R:-240.0f */,DAT_005c0c94 /* R:-426.5f */,
-                 DAT_005c0c90 /* R:426.5f */,DAT_005c07a4 /* R:-1.0f */,DAT_005be894 /* R:1.0f */);
-      Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38),2);
+      Camera__SetOrthoProjection(*(Camera **)(SuperMeatBoy + 0x38), _DAT_005c0c9c /* R:240.0f */,
+                                 DAT_005c0c98 /* R:-240.0f */, DAT_005c0c94 /* R:-426.5f */,
+                                 DAT_005c0c90 /* R:426.5f */, DAT_005c07a4 /* R:-1.0f */,
+                                 DAT_005be894 /* R:1.0f */);
+      Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38), 2);
       (**(code **)(*pLevelComplete + 0x10))();
-      pfVar2 = (float *)GSMBChapterData__GetCurrentLevelData(SMBChapterData,0xffffffff,0xb);
-      lVar3 = SMBChapter__GetLevelInfo((SMBChapter *)(SuperMeatBoy + 0x90),0xffffffff,0xb,0);
+      pfVar2 = (float *)GSMBChapterData__GetCurrentLevelData(SMBChapterData, 0xffffffff, 0xb);
+      lVar3 = SMBChapter__GetLevelInfo((SMBChapter *)(SuperMeatBoy + 0x90), 0xffffffff, 0xb, 0);
       if ((SMBCurrLevelData[4] & 1) != 0) {
         (**(code **)(*pBandageGet + 0x10))();
       }
       if (*pfVar2 <= *(float *)(lVar3 + 0x40) && *(float *)(lVar3 + 0x40) != *pfVar2) {
         (**(code **)(*pGradeA + 0x10))();
       }
-LAB_0047e4fc:
+    LAB_0047e4fc:
       iVar1 = *(int *)(self + 0x420);
     }
     if (iVar1 == 0xd) {
       TGraphics__ResetPixelStages(Graphics);
       TGraphics__ResetTexCoordGen(Graphics);
-      SwitchOutMenuButtons(pHudLib,pReplayHud);
-      Camera__SetOrthoProjection
-                (*(Camera **)(SuperMeatBoy + 0x38),_DAT_005c0c9c /* R:240.0f */,DAT_005c0c98 /* R:-240.0f */,DAT_005c0c94 /* R:-426.5f */,
-                 DAT_005c0c90 /* R:426.5f */,DAT_005c07a4 /* R:-1.0f */,DAT_005be894 /* R:1.0f */);
-      Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38),2);
-      FlashTextField__SetText
-                (*(wchar_t **)(self + 0x4a0),(double)*(float *)(self + 0x418),&DAT_005c07c4 /* R:5.184804318001823e-44f */);
+      SwitchOutMenuButtons(pHudLib, pReplayHud);
+      Camera__SetOrthoProjection(*(Camera **)(SuperMeatBoy + 0x38), _DAT_005c0c9c /* R:240.0f */,
+                                 DAT_005c0c98 /* R:-240.0f */, DAT_005c0c94 /* R:-426.5f */,
+                                 DAT_005c0c90 /* R:426.5f */, DAT_005c07a4 /* R:-1.0f */,
+                                 DAT_005be894 /* R:1.0f */);
+      Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38), 2);
+      FlashTextField__SetText(*(wchar_t **)(self + 0x4a0), (double)*(float *)(self + 0x418),
+                              &DAT_005c07c4 /* R:5.184804318001823e-44f */);
       iVar1 = GSMBMenu__IsInReplayMode(SMBMenu);
       if (iVar1 == 0) {
-        lVar3 = SMBChapter__GetLevelInfo((SMBChapter *)(SuperMeatBoy + 0x90),0xffffffff,0xb,0);
-        FlashTextField__SetText
-                  (*(wchar_t **)(self + 0x498),(double)*(float *)(lVar3 + 0x40),&DAT_005c07c4 /* R:5.184804318001823e-44f */);
+        lVar3 = SMBChapter__GetLevelInfo((SMBChapter *)(SuperMeatBoy + 0x90), 0xffffffff, 0xb, 0);
+        FlashTextField__SetText(*(wchar_t **)(self + 0x498), (double)*(float *)(lVar3 + 0x40),
+                                &DAT_005c07c4 /* R:5.184804318001823e-44f */);
       }
       local_1c = 0.0;
-      iVar1 = SMBLevelPortal__GetCurrentRating(SuperMeatBoyPortal,&local_1c);
+      iVar1 = SMBLevelPortal__GetCurrentRating(SuperMeatBoyPortal, &local_1c);
       if (iVar1 == 0) {
-        FlashLibraryInstance__GotoAndStop(pRatingStars,7);
-      }
-      else {
+        FlashLibraryInstance__GotoAndStop(pRatingStars, 7);
+      } else {
         lVar3 = (long)local_1c;
         if (local_1c < (float)lVar3) {
           lVar3 = lVar3 + -1;
         }
-        FlashLibraryInstance__GotoAndStop(pRatingStars,(int)lVar3 + 1);
+        FlashLibraryInstance__GotoAndStop(pRatingStars, (int)lVar3 + 1);
       }
       (**(code **)(*(long *)pReplayHud + 0x10))();
     }
   }
-                    /* try { // try from 0047e3dc to 0047e78c has its CatchHandler @ 0047e78f */
+  /* try { // try from 0047e3dc to 0047e78c has its CatchHandler @ 0047e78f */
   TAudio__EnableDirectionalAudio(Audio);
   RegisterAudioPosition((FPUVector *)0x0);
   GSMBInstructions__Render(SMBInstructions);
@@ -136,7 +144,7 @@ LAB_0047e3a8:
 void GMeatHUD__RestoreMessageBoxFunctions(void)
 
 {
-  RegisterMessageBoxRenderUpdate(SMBMessageRender,SMBMessageUpdate);
+  RegisterMessageBoxRenderUpdate(SMBMessageRender, SMBMessageUpdate);
   return;
 }
 
@@ -149,19 +157,19 @@ void GMeatHUD__RestoreMessageBoxFunctions(void)
  */
 /* GMeatHUD__RenderUnlocks(void (*)(void*, int, int)) */
 
-void __thiscall GMeatHUD__RenderUnlocks(GMeatHUD *self,_func_void_void_ptr_int_int *arg1)
+void __thiscall GMeatHUD__RenderUnlocks(GMeatHUD *self, _func_void_void_ptr_int_int *arg1)
 
 {
   if (*(short *)(self + 0x450) != 0) {
     *(_func_void_void_ptr_int_int **)(self + 0x488) = arg1;
     *(uint32_t *)(self + 0x490) = 1;
     uPreUnlockVolume = GLOBALMUSICVOLUME;
-    TAudio__SetMusicVolume(Audio,0);
+    TAudio__SetMusicVolume(Audio, 0);
     return;
   }
-                    /* WARNING: Could not recover jumptable at 0x0047ef99. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (*arg1)((void *)0x0,1,0);
+  /* WARNING: Could not recover jumptable at 0x0047ef99. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (*arg1)((void *)0x0, 1, 0);
   return;
 }
 
@@ -190,7 +198,7 @@ void __thiscall GMeatHUD__ResetTimer(GMeatHUD *self)
  */
 /* GMeatHUD__FreezeTimer(int) */
 
-void __thiscall GMeatHUD__FreezeTimer(GMeatHUD *self,int arg1)
+void __thiscall GMeatHUD__FreezeTimer(GMeatHUD *self, int arg1)
 
 {
   *(int *)(self + 0x41c) = arg1;
@@ -214,34 +222,31 @@ void GMeatHUD__SetInGameHudLevelName(void)
   uint64_t uVar3;
   uint local_10;
   uint local_c;
-  
+
   iVar1 = GSMBMenu__IsInReplayMode(SMBMenu);
   if (iVar1 == 0) {
     iVar1 = GSMBMenu__IsOnBossLevel(SMBMenu);
     if (iVar1 == 0) {
       if (*(int *)(SuperMeatBoy + 0x290) == 9) {
         uVar3 = SMBLevelPortal__GetSingleLoadedLevelName(SuperMeatBoyPortal);
-        FlashTextField__SetText((char *)pHudLevelText,uVar3);
-      }
-      else {
-        pcVar2 = (char *)SMBChapter__GetLevelInfo
-                                   ((SMBChapter *)(SuperMeatBoy + 0x90),0xffffffff,0xb,0);
-        GSMBMenu__ExtractChapterAndLevelFromSelectedLevel
-                  (SMBMenu,(int *)&local_c,(int *)&local_10,pcVar2);
+        FlashTextField__SetText((char *)pHudLevelText, uVar3);
+      } else {
+        pcVar2 = (char *)SMBChapter__GetLevelInfo((SMBChapter *)(SuperMeatBoy + 0x90), 0xffffffff,
+                                                  0xb, 0);
+        GSMBMenu__ExtractChapterAndLevelFromSelectedLevel(SMBMenu, (int *)&local_c,
+                                                          (int *)&local_10, pcVar2);
         if (local_c == 9) {
-          FlashTextField__SetText((char *)pHudLevelText,"I-%i: %s",(ulong)local_10,pcVar2 + 0x20);
-        }
-        else {
-          FlashTextField__SetText
-                    ((char *)pHudLevelText,"%i-%i: %s",(ulong)local_c,(ulong)local_10,pcVar2 + 0x20)
-          ;
+          FlashTextField__SetText((char *)pHudLevelText, "I-%i: %s", (ulong)local_10,
+                                  pcVar2 + 0x20);
+        } else {
+          FlashTextField__SetText((char *)pHudLevelText, "%i-%i: %s", (ulong)local_c,
+                                  (ulong)local_10, pcVar2 + 0x20);
         }
       }
     }
-  }
-  else {
+  } else {
     uVar3 = GetLocalizedText(0x32);
-    FlashTextField__SetText(pHudLevelText,uVar3);
+    FlashTextField__SetText(pHudLevelText, uVar3);
   }
   FlashLibraryInstance__Reset(pTimerHudCurrLevel);
   return;
@@ -260,7 +265,7 @@ void __thiscall GMeatHUD__ShowInGameHud(GMeatHUD *self)
 
 {
   long lVar1;
-  
+
   lVar1 = SuperMeatBoy;
   *(uint32_t *)(self + 0x420) = 0xb;
   if (*(int *)(lVar1 + 0x3a4) != 0) {
@@ -365,7 +370,7 @@ void GMeatHUD__KillIntro(void)
 
 {
   FlashAnimationLibrary *pFVar1;
-  
+
   if (pIntroInstancePart2 != (long *)0x0) {
     (**(code **)(*pIntroInstancePart2 + 8))();
   }
@@ -437,18 +442,19 @@ void __thiscall GMeatHUD__Update(GMeatHUD *self)
   uint32_t local_50;
   uint32_t local_4c;
   uint32_t local_48;
-  AutoLockSection local_38 [16];
-  uint8_t *local_28 [2];
-  
-  AutoLockSection__AutoLockSection(local_38,(CriticalSection *)hudUpdate);
-  if (*(int *)(self + 0x490) != 1) goto LAB_0047f315;
-                    /* try { // try from 0047f3d5 to 0047f412 has its CatchHandler @ 0047f974 */
+  AutoLockSection local_38[16];
+  uint8_t *local_28[2];
+
+  AutoLockSection__AutoLockSection(local_38, (CriticalSection *)hudUpdate);
+  if (*(int *)(self + 0x490) != 1)
+    goto LAB_0047f315;
+  /* try { // try from 0047f3d5 to 0047f412 has its CatchHandler @ 0047f974 */
   if ((*(long *)(self + 0x480) == 0) ||
-     (iVar5 = GSMBCutSceneManager__IsRendering(SMBCutSceneManager), iVar5 != 0)) {
-LAB_0047f6a0:
-    if (*(short *)(self + 0x450) == 0) goto LAB_0047f315;
-  }
-  else {
+      (iVar5 = GSMBCutSceneManager__IsRendering(SMBCutSceneManager), iVar5 != 0)) {
+  LAB_0047f6a0:
+    if (*(short *)(self + 0x450) == 0)
+      goto LAB_0047f315;
+  } else {
     if (*(long **)(self + 0x480) != (long *)0x0) {
       (**(code **)(**(long **)(self + 0x480) + 8))();
     }
@@ -460,37 +466,33 @@ LAB_0047f6a0:
     }
     *(uint64_t *)(self + 0x478) = 0;
     if (*(short *)(self + 0x450) == 0) {
-                    /* try { // try from 0047f685 to 0047f8ec has its CatchHandler @ 0047f974 */
-      TAudio__SetMusicVolume(Audio,uPreUnlockVolume);
+      /* try { // try from 0047f685 to 0047f8ec has its CatchHandler @ 0047f974 */
+      TAudio__SetMusicVolume(Audio, uPreUnlockVolume);
       *(uint32_t *)(self + 0x490) = 0;
-      (**(code **)(self + 0x488))(0,0,0);
+      (**(code **)(self + 0x488))(0, 0, 0);
       goto LAB_0047f6a0;
     }
   }
   if (**(int **)(self + 0x460) == 0x12) {
-    uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0(pTimerLib,"meatninja");
+    uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0(pTimerLib, "meatninja");
     pFVar7 = pTimerLib;
     *(uint64_t *)(self + 0x480) = uVar8;
-    pwVar9 = (wchar_t *)FlashAnimationLibrary__GetTextField(pFVar7,"unlock");
+    pwVar9 = (wchar_t *)FlashAnimationLibrary__GetTextField(pFVar7, "unlock");
     if (pwVar9 != (wchar_t *)0x0) {
-      iVar5 = GetRandomINT(0,0x7d);
+      iVar5 = GetRandomINT(0, 0x7d);
       if (iVar5 < 0x19) {
         uVar8 = GetLocalizedText(0x127);
-      }
-      else if (iVar5 < 0x32) {
+      } else if (iVar5 < 0x32) {
         uVar8 = GetLocalizedText(0x128);
-      }
-      else if (iVar5 < 0x4b) {
+      } else if (iVar5 < 0x4b) {
         uVar8 = GetLocalizedText(0x129);
-      }
-      else if (iVar5 < 100) {
+      } else if (iVar5 < 100) {
         uVar8 = GetLocalizedText(0x12a);
-      }
-      else {
-                    /* try { // try from 0047f926 to 0047f939 has its CatchHandler @ 0047f974 */
+      } else {
+        /* try { // try from 0047f926 to 0047f939 has its CatchHandler @ 0047f974 */
         uVar8 = GetLocalizedText(299);
       }
-      FlashTextField__SetText(pwVar9,uVar8);
+      FlashTextField__SetText(pwVar9, uVar8);
     }
     local_78 = *(long *)(self + 0x480);
     local_70 = (code *)0x0;
@@ -506,7 +508,7 @@ LAB_0047f6a0:
     if (*(short *)(self + 0x450) != 1) {
       local_70 = SMBUnlockFinished;
     }
-    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_88);
+    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_88);
     uVar12 = *(ushort *)(self + 0x450);
     if (1 < uVar12) {
       lVar11 = 0;
@@ -526,8 +528,7 @@ LAB_0047f6a0:
         if (*puVar3 == 0) {
           *puVar3 = 0xffff;
           uVar14 = *(ushort *)(self + 0x452);
-        }
-        else {
+        } else {
           uVar13 = *puVar3 - 1;
           if (uVar13 < 0xfffe) {
             *puVar3 = uVar13;
@@ -543,47 +544,43 @@ LAB_0047f6a0:
       sVar4 = uVar12 - 1;
     }
     *(short *)(self + 0x450) = sVar4;
-  }
-  else if (*(long *)(self + 0x478) == 0) {
+  } else if (*(long *)(self + 0x478) == 0) {
     local_28[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 0047f46e to 0047f47f has its CatchHandler @ 0047f979 */
-    pcVar6 = (char *)FormatResourcePath(*(uint64_t *)
-                                         (pUnlockProps + (long)**(int **)(self + 0x460) * 0x10),
-                                        local_28);
+    /* try { // try from 0047f46e to 0047f47f has its CatchHandler @ 0047f979 */
+    pcVar6 = (char *)FormatResourcePath(
+        *(uint64_t *)(pUnlockProps + (long)**(int **)(self + 0x460) * 0x10), local_28);
     pFVar7 = operator_new(0xb0);
-                    /* try { // try from 0047f489 to 0047f48d has its CatchHandler @ 0047f94d */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar7,pcVar6);
+    /* try { // try from 0047f489 to 0047f48d has its CatchHandler @ 0047f94d */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar7, pcVar6);
     *(FlashAnimationLibrary **)(self + 0x478) = pFVar7;
-                    /* try { // try from 0047f49d to 0047f5d5 has its CatchHandler @ 0047f979 */
-    uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar7,"cvunlock");
+    /* try { // try from 0047f49d to 0047f5d5 has its CatchHandler @ 0047f979 */
+    uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar7, "cvunlock");
     *(uint64_t *)(self + 0x480) = uVar8;
-    pwVar9 = (wchar_t *)
-             FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 0x478),"unlock")
-    ;
+    pwVar9 = (wchar_t *)FlashAnimationLibrary__GetTextField(
+        *(FlashAnimationLibrary **)(self + 0x478), "unlock");
     if (pwVar9 != (wchar_t *)0x0) {
       uVar8 = GetLocalizedText(*(uint *)(pUnlockProps + (long)**(int **)(self + 0x460) * 0x10 + 8));
       uVar10 = GetLocalizedText(0x5d);
-      FlashTextField__SetText(pwVar9,uVar10,uVar8);
+      FlashTextField__SetText(pwVar9, uVar10, uVar8);
     }
-    pwVar9 = (wchar_t *)
-             FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 0x478),"info");
+    pwVar9 = (wchar_t *)FlashAnimationLibrary__GetTextField(
+        *(FlashAnimationLibrary **)(self + 0x478), "info");
     if ((pwVar9 != (wchar_t *)0x0) &&
-       (*(uint *)(pUnlockProps + (long)**(int **)(self + 0x460) * 0x10 + 0xc) != 0xffffffff)) {
-      uVar8 = GetLocalizedText(*(uint *)(pUnlockProps + (long)**(int **)(self + 0x460) * 0x10 + 0xc)
-                              );
+        (*(uint *)(pUnlockProps + (long)**(int **)(self + 0x460) * 0x10 + 0xc) != 0xffffffff)) {
+      uVar8 =
+          GetLocalizedText(*(uint *)(pUnlockProps + (long)**(int **)(self + 0x460) * 0x10 + 0xc));
       uVar10 = GetLocalizedText(0x5e);
-      FlashTextField__SetText(pwVar9,uVar10,uVar8);
+      FlashTextField__SetText(pwVar9, uVar10, uVar8);
     }
     if (*(long *)(self + 0x480) == 0) {
       pFVar7 = *(FlashAnimationLibrary **)(self + 0x478);
       if (pFVar7 != (FlashAnimationLibrary *)0x0) {
-                    /* try { // try from 0047f904 to 0047f908 has its CatchHandler @ 0047f979 */
+        /* try { // try from 0047f904 to 0047f908 has its CatchHandler @ 0047f979 */
         FlashAnimationLibrary__FlashAnimationLibrary(pFVar7);
         operator_delete(pFVar7);
       }
       *(uint64_t *)(self + 0x478) = 0;
-    }
-    else {
+    } else {
       local_70 = (code *)0x0;
       local_68 = 0;
       local_58 = 0;
@@ -598,7 +595,7 @@ LAB_0047f6a0:
         local_70 = SMBUnlockFinished;
       }
       local_78 = *(long *)(self + 0x480);
-      GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_88);
+      GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_88);
     }
     uVar12 = *(ushort *)(self + 0x450);
     if (1 < uVar12) {
@@ -619,8 +616,7 @@ LAB_0047f6a0:
         if (*puVar3 == 0) {
           *puVar3 = 0xffff;
           uVar14 = *(ushort *)(self + 0x452);
-        }
-        else {
+        } else {
           uVar13 = *puVar3 - 1;
           if (uVar13 < 0xfffe) {
             *puVar3 = uVar13;
@@ -636,8 +632,7 @@ LAB_0047f6a0:
       sVar4 = uVar12 - 1;
     }
     *(short *)(self + 0x450) = sVar4;
-    if ((allocator *)(local_28[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_28[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_28[0] + -8);
       iVar5 = *piVar1;
@@ -652,11 +647,11 @@ LAB_0047f315:
   if (*(int *)(self + 0x41c) == 0) {
     *(float *)(self + 0x418) = *(float *)(self + 0x418) + *(float *)(Engine + 0x38);
   }
-                    /* try { // try from 0047f352 to 0047f381 has its CatchHandler @ 0047f974 */
+  /* try { // try from 0047f352 to 0047f381 has its CatchHandler @ 0047f974 */
   if ((((*(int *)(self + 0x420) == 1) || (*(int *)(self + 0x420) == 6)) &&
-      (pIntroInstancePart1 != (FlashLibraryInstance *)0x0)) &&
-     ((iVar5 = FlashLibraryInstance__IsPlaying(pIntroInstancePart1), iVar5 == 0 &&
-      (*(int *)(self + 0x420) != 1)))) {
+       (pIntroInstancePart1 != (FlashLibraryInstance *)0x0)) &&
+      ((iVar5 = FlashLibraryInstance__IsPlaying(pIntroInstancePart1),
+        iVar5 == 0 && (*(int *)(self + 0x420) != 1)))) {
     KillIntro();
     *(uint32_t *)(self + 0x420) = 1;
   }
@@ -688,7 +683,7 @@ void GMeatHUD__PlayIntroPart2(void)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   if (*(int *)(SuperMeatBoy + 0x3a4) == 0) {
     local_38 = 0;
     local_28 = 0;
@@ -701,7 +696,7 @@ void GMeatHUD__PlayIntroPart2(void)
     local_48 = pIntroInstancePart2;
     local_40 = SMBIntroFinished;
     local_30 = SkipSMBIntro;
-    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_58);
+    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_58);
   }
   return;
 }
@@ -715,7 +710,7 @@ void GMeatHUD__PlayIntroPart2(void)
  */
 /* GMeatHUD__AddUnlockScreen(tagUnlockScreen) */
 
-void __thiscall GMeatHUD__AddUnlockScreen(GMeatHUD *self,uint32_t arg2)
+void __thiscall GMeatHUD__AddUnlockScreen(GMeatHUD *self, uint32_t arg2)
 
 {
   void *pvVar1;
@@ -728,7 +723,7 @@ void __thiscall GMeatHUD__AddUnlockScreen(GMeatHUD *self,uint32_t arg2)
   ushort uVar8;
   ulong uVar9;
   uint64_t *puVar10;
-  
+
   if (*(int *)(self + 0x470) == -0x5eef3582) {
     uVar2 = *(ushort *)(self + 0x450);
     if (*(ushort *)(self + 0x452) <= uVar2) {
@@ -748,7 +743,7 @@ void __thiscall GMeatHUD__AddUnlockScreen(GMeatHUD *self,uint32_t arg2)
           if (uVar6 < uVar9 || uVar6 - uVar9 == 0) {
             uVar9 = uVar6;
           }
-          memcpy(pvVar3,pvVar1,uVar9);
+          memcpy(pvVar3, pvVar1, uVar9);
           free(*(void **)((long)pvVar1 + -8));
         }
       }
@@ -761,40 +756,41 @@ void __thiscall GMeatHUD__AddUnlockScreen(GMeatHUD *self,uint32_t arg2)
         uVar6 = (ulong)uVar8 * 2;
         pvVar5 = malloc(uVar9 + 0x10 + uVar6);
         if (pvVar5 != (void *)0x0) {
-          pvVar3 = (void *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9)
-          ;
+          pvVar3 =
+              (void *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
           *(void **)((long)pvVar3 + -8) = pvVar5;
           *(ulong *)((long)pvVar3 + -0x10) = uVar6;
           uVar9 = *(ulong *)((long)pvVar1 + -0x10);
           if (uVar6 <= *(ulong *)((long)pvVar1 + -0x10)) {
             uVar9 = uVar6;
           }
-          memcpy(pvVar3,pvVar1,uVar9);
+          memcpy(pvVar3, pvVar1, uVar9);
           free(*(void **)((long)pvVar1 + -8));
           uVar8 = *(ushort *)(self + 0x452);
         }
         uVar2 = *(ushort *)(self + 0x450);
         *(void **)(self + 0x468) = pvVar3;
-        if (uVar8 <= uVar2) goto LAB_0047fad7;
-        while( true ) {
+        if (uVar8 <= uVar2)
+          goto LAB_0047fad7;
+        while (true) {
           uVar6 = (ulong)uVar2;
           uVar2 = uVar2 + 1;
           *(uint16_t *)((long)pvVar3 + uVar6 * 2) = 0xffff;
-          if (uVar8 <= uVar2) break;
+          if (uVar8 <= uVar2)
+            break;
           pvVar3 = *(void **)(self + 0x468);
         }
       }
       uVar2 = *(ushort *)(self + 0x450);
     }
-  }
-  else {
+  } else {
     uVar6 = (ulong)(byte)self[0x454];
     *(uint32_t *)(self + 0x458) = 0;
     pvVar3 = malloc(uVar6 + 0x24);
     puVar10 = (uint64_t *)0x0;
     if (pvVar3 != (void *)0x0) {
-      puVar10 = (uint64_t *)
-                ((long)pvVar3 + 0x10U + (uVar6 - ((long)pvVar3 + 0x10U) % uVar6) % uVar6);
+      puVar10 =
+          (uint64_t *)((long)pvVar3 + 0x10U + (uVar6 - ((long)pvVar3 + 0x10U) % uVar6) % uVar6);
       puVar10[-2] = 0x14;
       puVar10[-1] = pvVar3;
     }
@@ -816,7 +812,8 @@ LAB_0047fad7:
     while (uVar8 != 0xffff) {
       puVar4 = puVar4 + 1;
       sVar7 = sVar7 + 1;
-      if (sVar7 == *(short *)(self + 0x452)) goto LAB_0047fae0;
+      if (sVar7 == *(short *)(self + 0x452))
+        goto LAB_0047fae0;
       uVar8 = *puVar4;
     }
     *puVar4 = uVar2;
@@ -841,7 +838,7 @@ void __thiscall GMeatHUD__ShowReplayHUD(GMeatHUD *self)
 
 {
   int iVar1;
-  
+
   *(uint32_t *)(self + 0x420) = 0xd;
   iVar1 = System_IsTrialMode();
   if (iVar1 == 1) {
@@ -902,7 +899,7 @@ void GMeatHUD__PlayStartIntro(void)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   local_38 = 0;
   local_28 = 0;
   local_20 = 0;
@@ -914,7 +911,7 @@ void GMeatHUD__PlayStartIntro(void)
   local_48 = pIntroInstancePart1;
   local_40 = SMBIntro1Finished;
   local_30 = SkipSMBIntro;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_58);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_58);
   return;
 }
 
@@ -946,9 +943,9 @@ void __thiscall GMeatHUD__GMeatHUD__004800a0(GMeatHUD *self)
 
 {
   FlashAnimationLibrary *pFVar1;
-  
+
   *(uint8_t ***)self = &PTR__GMeatHUD_005c0b30;
-                    /* try { // try from 0047fe30 to 0047ffc6 has its CatchHandler @ 00480072 */
+  /* try { // try from 0047fe30 to 0047ffc6 has its CatchHandler @ 00480072 */
   KillIntro();
   if (pTimerHudCurrLevel != (long *)0x0) {
     (**(code **)(*pTimerHudCurrLevel + 8))();
@@ -1011,10 +1008,10 @@ void __thiscall GMeatHUD__GMeatHUD__004800a0(GMeatHUD *self)
     operator_delete(pFVar1);
   }
   *(uint64_t *)(self + 0x478) = 0;
-  TResourceCreator__RemoveResourceCreationFunction
-            ((TResourceCreator *)ResourceCreator,CreateHudResources,(void *)0x0);
-  TResourceCreator__RemoveResourceDestroyFunction
-            ((TResourceCreator *)ResourceCreator,DestroyHudResources,(void *)0x0);
+  TResourceCreator__RemoveResourceCreationFunction((TResourceCreator *)ResourceCreator,
+                                                   CreateHudResources, (void *)0x0);
+  TResourceCreator__RemoveResourceDestroyFunction((TResourceCreator *)ResourceCreator,
+                                                  DestroyHudResources, (void *)0x0);
   SMBHUD = 0;
   if (*(int *)(self + 0x470) == -0x5eef3582) {
     *(uint32_t *)(self + 0x470) = 0;
@@ -1028,7 +1025,7 @@ void __thiscall GMeatHUD__GMeatHUD__004800a0(GMeatHUD *self)
     *(uint64_t *)(self + 0x460) = 0;
     *(uint64_t *)(self + 0x468) = 0;
   }
-                    /* try { // try from 0047ffe5 to 0047ffe9 has its CatchHandler @ 00480091 */
+  /* try { // try from 0047ffe5 to 0047ffe9 has its CatchHandler @ 00480091 */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x428));
   RenderLayer__RenderLayer__005988e0((RenderLayer *)self);
   return;
@@ -1087,17 +1084,17 @@ void __thiscall GMeatHUD__GMeatHUD__004800c0(GMeatHUD *self)
   uint32_t local_90;
   uint32_t local_8c;
   uint32_t local_88;
-  uint8_t *local_78 [2];
-  uint8_t *local_68 [2];
-  uint8_t *local_58 [2];
-  uint8_t *local_48 [3];
-  
+  uint8_t *local_78[2];
+  uint8_t *local_68[2];
+  uint8_t *local_58[2];
+  uint8_t *local_48[3];
+
   RenderLayer__RenderLayer__00597d50((RenderLayer *)self);
   *(uint8_t ***)self = &PTR__GMeatHUD_005c0b30;
   *(uint32_t *)(self + 0x418) = 0;
   *(uint32_t *)(self + 0x41c) = 1;
   *(uint32_t *)(self + 0x420) = 5;
-                    /* try { // try from 0048010e to 00480112 has its CatchHandler @ 00480d3f */
+  /* try { // try from 0048010e to 00480112 has its CatchHandler @ 00480d3f */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x428));
   *(uint16_t *)(self + 0x452) = 0;
   *(uint16_t *)(self + 0x450) = 0;
@@ -1115,121 +1112,122 @@ void __thiscall GMeatHUD__GMeatHUD__004800c0(GMeatHUD *self)
   local_68[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
   local_58[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
   local_48[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 004801cb to 004801e9 has its CatchHandler @ 00480d4c */
-  pcVar3 = (char *)FormatResourcePath("/Intro/save.am",local_78);
+  /* try { // try from 004801cb to 004801e9 has its CatchHandler @ 00480d4c */
+  pcVar3 = (char *)FormatResourcePath("/Intro/save.am", local_78);
   pFVar4 = operator_new(0xb0);
-                    /* try { // try from 004801f3 to 004801f7 has its CatchHandler @ 00480ce0 */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4,pcVar3);
+  /* try { // try from 004801f3 to 004801f7 has its CatchHandler @ 00480ce0 */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4, pcVar3);
   pSaveGameScreenLib = pFVar4;
-                    /* try { // try from 00480211 to 0048024b has its CatchHandler @ 00480d4c */
-  pSaveGameScreen = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,0);
-  pcVar3 = (char *)FormatResourcePath("/Intro/intro1.am",local_68);
+  /* try { // try from 00480211 to 0048024b has its CatchHandler @ 00480d4c */
+  pSaveGameScreen = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 0);
+  pcVar3 = (char *)FormatResourcePath("/Intro/intro1.am", local_68);
   pFVar4 = operator_new(0xb0);
-                    /* try { // try from 00480255 to 00480259 has its CatchHandler @ 00480d7f */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4,pcVar3);
+  /* try { // try from 00480255 to 00480259 has its CatchHandler @ 00480d7f */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4, pcVar3);
   pIntroLibPart1 = pFVar4;
-                    /* try { // try from 0048026e to 0048029b has its CatchHandler @ 00480d4c */
-  pIntroInstancePart1 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,0);
-  pcVar3 = (char *)FormatResourcePath("/Intro/intro2.am",local_58);
+  /* try { // try from 0048026e to 0048029b has its CatchHandler @ 00480d4c */
+  pIntroInstancePart1 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 0);
+  pcVar3 = (char *)FormatResourcePath("/Intro/intro2.am", local_58);
   pFVar4 = operator_new(0xb0);
-                    /* try { // try from 004802a5 to 004802a9 has its CatchHandler @ 00480d67 */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4,pcVar3);
+  /* try { // try from 004802a5 to 004802a9 has its CatchHandler @ 00480d67 */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4, pcVar3);
   pIntroLibPart2 = pFVar4;
-                    /* try { // try from 004802b6 to 00480623 has its CatchHandler @ 00480d4c */
-  pIntroInstancePart2 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,0);
-  iVar2 = GetRandomINT(0,4);
+  /* try { // try from 004802b6 to 00480623 has its CatchHandler @ 00480d4c */
+  pIntroInstancePart2 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 0);
+  iVar2 = GetRandomINT(0, 4);
   if (iVar2 == 0) {
-                    /* try { // try from 00480b98 to 00480c1a has its CatchHandler @ 00480d4c */
-    pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pSaveGameScreenLib,"saveinfo");
-    if (pwVar5 == (wchar_t *)0x0) goto LAB_00480324;
+    /* try { // try from 00480b98 to 00480c1a has its CatchHandler @ 00480d4c */
+    pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pSaveGameScreenLib, "saveinfo");
+    if (pwVar5 == (wchar_t *)0x0)
+      goto LAB_00480324;
     uVar6 = GetLocalizedText(0xf1);
-  }
-  else if (iVar2 == 1) {
-    pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pSaveGameScreenLib,"saveinfo");
-    if (pwVar5 == (wchar_t *)0x0) goto LAB_00480324;
+  } else if (iVar2 == 1) {
+    pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pSaveGameScreenLib, "saveinfo");
+    if (pwVar5 == (wchar_t *)0x0)
+      goto LAB_00480324;
     uVar6 = GetLocalizedText(0xf2);
-  }
-  else if (iVar2 == 2) {
-    pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pSaveGameScreenLib,"saveinfo");
-    if (pwVar5 == (wchar_t *)0x0) goto LAB_00480324;
+  } else if (iVar2 == 2) {
+    pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pSaveGameScreenLib, "saveinfo");
+    if (pwVar5 == (wchar_t *)0x0)
+      goto LAB_00480324;
     uVar6 = GetLocalizedText(0xf3);
-  }
-  else if (iVar2 == 3) {
-    pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pSaveGameScreenLib,"saveinfo");
-    if (pwVar5 == (wchar_t *)0x0) goto LAB_00480324;
+  } else if (iVar2 == 3) {
+    pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pSaveGameScreenLib, "saveinfo");
+    if (pwVar5 == (wchar_t *)0x0)
+      goto LAB_00480324;
     uVar6 = GetLocalizedText(0xf4);
-  }
-  else {
-    pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pSaveGameScreenLib,"saveinfo");
-    if (pwVar5 == (wchar_t *)0x0) goto LAB_00480324;
+  } else {
+    pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pSaveGameScreenLib, "saveinfo");
+    if (pwVar5 == (wchar_t *)0x0)
+      goto LAB_00480324;
     uVar6 = GetLocalizedText(0xf5);
   }
-  FlashTextField__SetText(pwVar5,uVar6);
+  FlashTextField__SetText(pwVar5, uVar6);
 LAB_00480324:
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"a");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "a");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x6d);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"b");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "b");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x6e);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"c");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "c");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x6f);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"d");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "d");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x70);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"e");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "e");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x71);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"f");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "f");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x72);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"g");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "g");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x73);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"h");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "h");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x74);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"i");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "i");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x75);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"j");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "j");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x76);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"k");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "k");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x77);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"l");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "l");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x78);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2,"m");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pIntroLibPart2, "m");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x79);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
   if (*(int *)(SuperMeatBoy + 0x3a4) == 0) {
     TEngine__WaitForStartupLogos();
@@ -1244,110 +1242,111 @@ LAB_00480324:
     local_b8 = pSaveGameScreen;
     local_90 = 1;
     local_b0 = SMBAutoSaveFinished;
-    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_c8);
+    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_c8);
   }
-                    /* try { // try from 00480638 to 00480677 has its CatchHandler @ 00480d44 */
-  TResourceCreator__AddResourceCreationFunction
-            ((TResourceCreator *)ResourceCreator,CreateHudResources,(void *)0x0);
-  TResourceCreator__AddResourceDestroyFunction
-            ((TResourceCreator *)ResourceCreator,DestroyHudResources,(void *)0x0);
-  pcVar3 = (char *)FormatResourcePath("/HUD/popup.am",local_48);
+  /* try { // try from 00480638 to 00480677 has its CatchHandler @ 00480d44 */
+  TResourceCreator__AddResourceCreationFunction((TResourceCreator *)ResourceCreator,
+                                                CreateHudResources, (void *)0x0);
+  TResourceCreator__AddResourceDestroyFunction((TResourceCreator *)ResourceCreator,
+                                               DestroyHudResources, (void *)0x0);
+  pcVar3 = (char *)FormatResourcePath("/HUD/popup.am", local_48);
   pFVar4 = operator_new(0xb0);
-                    /* try { // try from 00480681 to 00480685 has its CatchHandler @ 00480da2 */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4,pcVar3);
+  /* try { // try from 00480681 to 00480685 has its CatchHandler @ 00480da2 */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4, pcVar3);
   pFVar4[0x8c] = (FlashAnimationLibrary)0x1;
   pMessageBoxLib = pFVar4;
-                    /* try { // try from 0048069c to 004807a7 has its CatchHandler @ 00480d44 */
-  pMessageBoxPopup = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,"popupidle");
-  pMessageBoxTransIn = FlashAnimationLibrary__GetMovieClip__005731d0(pMessageBoxLib,"popupin");
-  pMessageBoxTransOut = FlashAnimationLibrary__GetMovieClip__005731d0(pMessageBoxLib,"popupout");
-  pMessageBoxPage = FlashAnimationLibrary__GetMovieClip__005731d0(pMessageBoxLib,"page");
-  plVar7 = (long *)FlashAnimationLibrary__GetMovieClip__005731d0(pMessageBoxLib,"page");
-  pFVar8 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(pMessageBoxLib,(int)plVar7[4]);
-  iMessageOkButton = FlashAnimationLibrary__GetClipIndex(pMessageBoxLib,"buttona");
-  pMessageOkButton = FlashMovieClip__FindInstance(pFVar8,iMessageOkButton,0,(int *)0x0,0);
-  iMessageCancelButton = FlashAnimationLibrary__GetClipIndex(pMessageBoxLib,"buttonb");
-  pMessageCancelButton = FlashMovieClip__FindInstance(pFVar8,iMessageCancelButton,0,(int *)0x0,0);
+  /* try { // try from 0048069c to 004807a7 has its CatchHandler @ 00480d44 */
+  pMessageBoxPopup = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, "popupidle");
+  pMessageBoxTransIn = FlashAnimationLibrary__GetMovieClip__005731d0(pMessageBoxLib, "popupin");
+  pMessageBoxTransOut = FlashAnimationLibrary__GetMovieClip__005731d0(pMessageBoxLib, "popupout");
+  pMessageBoxPage = FlashAnimationLibrary__GetMovieClip__005731d0(pMessageBoxLib, "page");
+  plVar7 = (long *)FlashAnimationLibrary__GetMovieClip__005731d0(pMessageBoxLib, "page");
+  pFVar8 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(pMessageBoxLib, (int)plVar7[4]);
+  iMessageOkButton = FlashAnimationLibrary__GetClipIndex(pMessageBoxLib, "buttona");
+  pMessageOkButton = FlashMovieClip__FindInstance(pFVar8, iMessageOkButton, 0, (int *)0x0, 0);
+  iMessageCancelButton = FlashAnimationLibrary__GetClipIndex(pMessageBoxLib, "buttonb");
+  pMessageCancelButton =
+      FlashMovieClip__FindInstance(pFVar8, iMessageCancelButton, 0, (int *)0x0, 0);
   (**(code **)(*plVar7 + 8))(plVar7);
-  RegisterMessageBoxRenderUpdate(SMBMessageRender,SMBMessageUpdate);
-  pcVar3 = (char *)FormatResourcePath("/HUD/timerhud.am",local_78);
+  RegisterMessageBoxRenderUpdate(SMBMessageRender, SMBMessageUpdate);
+  pcVar3 = (char *)FormatResourcePath("/HUD/timerhud.am", local_78);
   pFVar4 = operator_new(0xb0);
-                    /* try { // try from 004807b1 to 004807b5 has its CatchHandler @ 00480daf */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4,pcVar3);
+  /* try { // try from 004807b1 to 004807b5 has its CatchHandler @ 00480daf */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4, pcVar3);
   pTimerLib = pFVar4;
-                    /* try { // try from 004807c5 to 00480841 has its CatchHandler @ 00480d44 */
-  pTimerHudInstance = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,"timerhud1");
-  pTimerHudCurrLevel = FlashAnimationLibrary__GetMovieClip__005731d0(pTimerLib,"leveltext");
-  pHudLevelText = FlashAnimationLibrary__GetTextField(pTimerLib,"levelname");
-  pHudTimerField = (wchar_t *)FlashAnimationLibrary__GetTextField(pTimerLib,"time");
-  FlashTextField__SetText(pHudTimerField,&DAT_005c07dc /* R:6.726232628759122e-44f */);
-  pcVar3 = (char *)FormatResourcePath("/HUD/meathuds.am",local_48);
+  /* try { // try from 004807c5 to 00480841 has its CatchHandler @ 00480d44 */
+  pTimerHudInstance = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, "timerhud1");
+  pTimerHudCurrLevel = FlashAnimationLibrary__GetMovieClip__005731d0(pTimerLib, "leveltext");
+  pHudLevelText = FlashAnimationLibrary__GetTextField(pTimerLib, "levelname");
+  pHudTimerField = (wchar_t *)FlashAnimationLibrary__GetTextField(pTimerLib, "time");
+  FlashTextField__SetText(pHudTimerField, &DAT_005c07dc /* R:6.726232628759122e-44f */);
+  pcVar3 = (char *)FormatResourcePath("/HUD/meathuds.am", local_48);
   pFVar4 = operator_new(0xb0);
-                    /* try { // try from 0048084b to 0048084f has its CatchHandler @ 00480db2 */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4,pcVar3);
+  /* try { // try from 0048084b to 0048084f has its CatchHandler @ 00480db2 */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4, pcVar3);
   pHudLib = pFVar4;
-                    /* try { // try from 0048085f to 00480b19 has its CatchHandler @ 00480d44 */
-  pReplayHudNormal = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,"replayhud_xbox");
-  pReplayHudDemo = FlashAnimationLibrary__GetMovieClip__005731d0(pHudLib,"replayhuddemo");
-  pReplayHudInternets = FlashAnimationLibrary__GetMovieClip__005731d0(pHudLib,"portalhud");
-  pFVar8 = (FlashMovieClip *)
-           FlashAnimationLibrary__GetLibraryEntry(pHudLib,*(int *)(pReplayHudInternets + 0x20));
-  iVar2 = FlashAnimationLibrary__GetClipIndex(pHudLib,"fun");
-  pRatingStars = FlashMovieClip__FindInstance(pFVar8,iVar2,0,(int *)0x0,0);
-  FlashAnimationLibrary__SetTextFieldText((char *)pHudLib,"skip","Skip Vote");
-  pReplayViewer = FlashAnimationLibrary__GetMovieClip__005731d0(pHudLib,"replayviewer");
-  pBandageGet = FlashAnimationLibrary__GetMovieClip__005731d0(pHudLib,"bandageget");
-  pGradeA = FlashAnimationLibrary__GetMovieClip__005731d0(pHudLib,"gradea");
-  pLevelComplete = FlashAnimationLibrary__GetMovieClip__005731d0(pHudLib,"lvlcomplete");
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pHudLib,"next");
+  /* try { // try from 0048085f to 00480b19 has its CatchHandler @ 00480d44 */
+  pReplayHudNormal = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, "replayhud_xbox");
+  pReplayHudDemo = FlashAnimationLibrary__GetMovieClip__005731d0(pHudLib, "replayhuddemo");
+  pReplayHudInternets = FlashAnimationLibrary__GetMovieClip__005731d0(pHudLib, "portalhud");
+  pFVar8 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(
+      pHudLib, *(int *)(pReplayHudInternets + 0x20));
+  iVar2 = FlashAnimationLibrary__GetClipIndex(pHudLib, "fun");
+  pRatingStars = FlashMovieClip__FindInstance(pFVar8, iVar2, 0, (int *)0x0, 0);
+  FlashAnimationLibrary__SetTextFieldText((char *)pHudLib, "skip", "Skip Vote");
+  pReplayViewer = FlashAnimationLibrary__GetMovieClip__005731d0(pHudLib, "replayviewer");
+  pBandageGet = FlashAnimationLibrary__GetMovieClip__005731d0(pHudLib, "bandageget");
+  pGradeA = FlashAnimationLibrary__GetMovieClip__005731d0(pHudLib, "gradea");
+  pLevelComplete = FlashAnimationLibrary__GetMovieClip__005731d0(pHudLib, "lvlcomplete");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pHudLib, "next");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x30);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pHudLib,"back");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pHudLib, "back");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x50);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pHudLib,"replay");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pHudLib, "replay");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x32);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pHudLib,"save");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pHudLib, "save");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0x31);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pHudLib,"restart");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pHudLib, "restart");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(0xc4);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pHudLib,"back2");
+  pwVar5 = (wchar_t *)FlashAnimationLibrary__GetTextField(pHudLib, "back2");
   if (pwVar5 != (wchar_t *)0x0) {
     uVar6 = GetLocalizedText(10);
-    FlashTextField__SetText(pwVar5,uVar6);
+    FlashTextField__SetText(pwVar5, uVar6);
   }
-  uVar6 = FlashAnimationLibrary__GetTextField(pHudLib,"time");
+  uVar6 = FlashAnimationLibrary__GetTextField(pHudLib, "time");
   pFVar4 = pHudLib;
   *(uint64_t *)(self + 0x4a0) = uVar6;
-  uVar6 = FlashAnimationLibrary__GetTextField(pFVar4,"par");
+  uVar6 = FlashAnimationLibrary__GetTextField(pFVar4, "par");
   pFVar4 = pHudLib;
   *(uint64_t *)(self + 0x498) = uVar6;
-  uVar6 = FlashAnimationLibrary__GetTextField(pFVar4,"bandageget");
+  uVar6 = FlashAnimationLibrary__GetTextField(pFVar4, "bandageget");
   pFVar4 = pHudLib;
   *(uint64_t *)(self + 0x4b0) = uVar6;
-  lVar9 = FlashAnimationLibrary__GetTextField(pFVar4,"levelcompletetext");
+  lVar9 = FlashAnimationLibrary__GetTextField(pFVar4, "levelcompletetext");
   *(long *)(self + 0x4a8) = lVar9;
   if (*(long *)(self + 0x4b0) != 0) {
     uVar6 = GetLocalizedText(0x126);
-    FlashTextField__SetText(*(wchar_t **)(self + 0x4b0),uVar6);
+    FlashTextField__SetText(*(wchar_t **)(self + 0x4b0), uVar6);
     lVar9 = *(long *)(self + 0x4a8);
   }
   if (lVar9 != 0) {
     uVar6 = GetLocalizedText(0x10);
-    FlashTextField__SetText(*(wchar_t **)(self + 0x4a8),uVar6);
+    FlashTextField__SetText(*(wchar_t **)(self + 0x4a8), uVar6);
   }
   SMBHUD = self;
   if ((allocator *)(local_48[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {

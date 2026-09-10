@@ -18,7 +18,7 @@
  */
 /* TInput__Update(int) */
 
-void __thiscall TInput__Update(TInput *self,int arg1)
+void __thiscall TInput__Update(TInput *self, int arg1)
 
 {
   int *piVar1;
@@ -30,19 +30,19 @@ void __thiscall TInput__Update(TInput *self,int arg1)
   ulong uVar7;
   ulong uVar8;
   uint *puVar9;
-  
+
   iptUpdateDevices(arg1);
   if (*(short *)(self + 0x30) != 0) {
     uVar7 = 0;
-    while( true ) {
+    while (true) {
       uVar8 = uVar7 & 0xffff;
       lVar6 = *(long *)(*(long *)(self + 0x40) + uVar8 * 8);
       iVar2 = *(int *)(lVar6 + 0x50);
-      if (iVar2 == 0) break;
+      if (iVar2 == 0)
+        break;
       if (*(int *)(lVar6 + 4) == 0) {
         iVar3 = 0;
-      }
-      else {
+      } else {
         lVar5 = 0;
         do {
           if (lVar5 == (ulong)(iVar2 - 1) << 3) {
@@ -63,7 +63,7 @@ void __thiscall TInput__Update(TInput *self,int arg1)
         } while (*piVar1 != 0);
       }
       puVar9 = (uint *)(lVar6 + (long)iVar3 * 8);
-LAB_0058a6eb:
+    LAB_0058a6eb:
       if (1 < iVar3) {
         *(int *)(lVar6 + 0x58) = *(int *)(lVar6 + 0x58) + *(int *)(Engine + 4);
         lVar6 = *(long *)(*(long *)(self + 0x40) + uVar8 * 8);
@@ -86,8 +86,7 @@ LAB_0058a6eb:
           uVar4 = *puVar9;
           lVar6 = TPlayer__GetJoystick((TPlayer *)Players__Player);
           iVar2 = *(int *)(lVar6 + 0x2c + (ulong)uVar4 * 0xc);
-        }
-        else {
+        } else {
           iVar2 = *(int *)(Keyboard + 0x10 + (ulong)*puVar9 * 0xc);
         }
         if (iVar2 == 1) {
@@ -96,7 +95,7 @@ LAB_0058a6eb:
       }
       uVar4 = (int)uVar7 + 1;
       uVar7 = (ulong)uVar4;
-      if ((int)(uint)*(ushort *)(self + 0x30) <= (int)uVar4) {
+      if ((int)(uint) * (ushort *)(self + 0x30) <= (int)uVar4) {
         return;
       }
     }
@@ -117,8 +116,8 @@ void __thiscall TInput__JoystickPluggedIn(TInput *self)
 
 {
   if (*(code **)self != (code *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x0058a818. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+    /* WARNING: Could not recover jumptable at 0x0058a818. Too many branches */
+    /* WARNING: Treating indirect jump as call */
     (**(code **)self)();
     return;
   }
@@ -134,13 +133,13 @@ void __thiscall TInput__JoystickPluggedIn(TInput *self)
  */
 /* TInput__HasCodeBeenEntered(tagCheatCode*) */
 
-uint64_t __thiscall TInput__HasCodeBeenEntered(TInput *self,tagCheatCode *arg1)
+uint64_t __thiscall TInput__HasCodeBeenEntered(TInput *self, tagCheatCode *arg1)
 
 {
   long lVar1;
   uint64_t uVar2;
   long lVar3;
-  
+
   uVar2 = 1;
   if ((*(int *)(arg1 + 0x50) != 0) && (uVar2 = 0, *(int *)(arg1 + 4) != 0)) {
     lVar3 = 0;
@@ -165,7 +164,7 @@ uint64_t __thiscall TInput__HasCodeBeenEntered(TInput *self,tagCheatCode *arg1)
  */
 /* TInput__RegisterCode(tagCheatCode*) */
 
-void __thiscall TInput__RegisterCode(TInput *self,tagCheatCode *arg1)
+void __thiscall TInput__RegisterCode(TInput *self, tagCheatCode *arg1)
 
 {
   tagCheatCode *ptVar1;
@@ -181,16 +180,16 @@ void __thiscall TInput__RegisterCode(TInput *self,tagCheatCode *arg1)
   ulong uVar11;
   long lVar12;
   ushort *puVar13;
-  
+
   uVar4 = *(ushort *)(self + 0x30);
   if (uVar4 != 0) {
     plVar9 = *(long **)(self + 0x40);
     uVar3 = 0;
     ptVar1 = (tagCheatCode *)*plVar9;
-    while( true ) {
+    while (true) {
       if (ptVar1 == arg1) {
         if (((*(int *)(self + 0x38) == 1) && (*(ushort *)(self + 0x32) != 0)) &&
-           (uVar3 != **(ushort **)(self + 0x48))) {
+            (uVar3 != **(ushort **)(self + 0x48))) {
           lVar12 = 0;
           do {
             if (lVar12 == (ulong)(*(ushort *)(self + 0x32) - 1) * 2) {
@@ -202,7 +201,8 @@ void __thiscall TInput__RegisterCode(TInput *self,tagCheatCode *arg1)
         return;
       }
       uVar3 = uVar3 + 1;
-      if (uVar3 == uVar4) break;
+      if (uVar3 == uVar4)
+        break;
       plVar9 = plVar9 + 1;
       ptVar1 = (tagCheatCode *)*plVar9;
     }
@@ -217,8 +217,8 @@ void __thiscall TInput__RegisterCode(TInput *self,tagCheatCode *arg1)
       uVar8 = (ulong)uVar4 * 8;
       pvVar7 = malloc(uVar11 + 0x10 + uVar8);
       if (pvVar7 != (void *)0x0) {
-        pvVar6 = (void *)((long)pvVar7 + 0x10U + (uVar11 - ((long)pvVar7 + 0x10U) % uVar11) % uVar11
-                         );
+        pvVar6 =
+            (void *)((long)pvVar7 + 0x10U + (uVar11 - ((long)pvVar7 + 0x10U) % uVar11) % uVar11);
         *(ulong *)((long)pvVar6 + -0x10) = uVar8;
         *(void **)((long)pvVar6 + -8) = pvVar7;
         if (pvVar2 != (void *)0x0) {
@@ -226,7 +226,7 @@ void __thiscall TInput__RegisterCode(TInput *self,tagCheatCode *arg1)
           if (uVar8 < uVar11 || uVar8 - uVar11 == 0) {
             uVar11 = uVar8;
           }
-          memcpy(pvVar6,pvVar2,uVar11);
+          memcpy(pvVar6, pvVar2, uVar11);
           free(*(void **)((long)pvVar2 + -8));
         }
       }
@@ -239,40 +239,41 @@ void __thiscall TInput__RegisterCode(TInput *self,tagCheatCode *arg1)
         uVar8 = (ulong)uVar3 * 2;
         pvVar7 = malloc(uVar11 + 0x10 + uVar8);
         if (pvVar7 != (void *)0x0) {
-          pvVar6 = (void *)((long)pvVar7 + 0x10U +
-                           (uVar11 - ((long)pvVar7 + 0x10U) % uVar11) % uVar11);
+          pvVar6 =
+              (void *)((long)pvVar7 + 0x10U + (uVar11 - ((long)pvVar7 + 0x10U) % uVar11) % uVar11);
           *(void **)((long)pvVar6 + -8) = pvVar7;
           *(ulong *)((long)pvVar6 + -0x10) = uVar8;
           uVar11 = *(ulong *)((long)pvVar2 + -0x10);
           if (uVar8 <= *(ulong *)((long)pvVar2 + -0x10)) {
             uVar11 = uVar8;
           }
-          memcpy(pvVar6,pvVar2,uVar11);
+          memcpy(pvVar6, pvVar2, uVar11);
           free(*(void **)((long)pvVar2 + -8));
           uVar3 = *(ushort *)(self + 0x32);
         }
         uVar4 = *(ushort *)(self + 0x30);
         *(void **)(self + 0x48) = pvVar6;
-        if (uVar3 <= uVar4) goto LAB_0058a95e;
-        while( true ) {
+        if (uVar3 <= uVar4)
+          goto LAB_0058a95e;
+        while (true) {
           uVar8 = (ulong)uVar4;
           uVar4 = uVar4 + 1;
           *(uint16_t *)((long)pvVar6 + uVar8 * 2) = 0xffff;
-          if (uVar3 <= uVar4) break;
+          if (uVar3 <= uVar4)
+            break;
           pvVar6 = *(void **)(self + 0x48);
         }
       }
       uVar4 = *(ushort *)(self + 0x30);
     }
-  }
-  else {
+  } else {
     uVar8 = (ulong)(byte)self[0x34];
     *(uint32_t *)(self + 0x38) = 0;
     pvVar6 = malloc(uVar8 + 0x38);
     puVar10 = (uint64_t *)0x0;
     if (pvVar6 != (void *)0x0) {
-      puVar10 = (uint64_t *)
-                ((uVar8 - ((long)pvVar6 + 0x10U) % uVar8) % uVar8 + (long)pvVar6 + 0x10U);
+      puVar10 =
+          (uint64_t *)((uVar8 - ((long)pvVar6 + 0x10U) % uVar8) % uVar8 + (long)pvVar6 + 0x10U);
       puVar10[-2] = 0x28;
       puVar10[-1] = pvVar6;
     }
@@ -295,7 +296,8 @@ LAB_0058a95e:
     uVar3 = *puVar13;
     while (uVar3 != 0xffff) {
       puVar13 = puVar13 + 1;
-      if (sVar5 == *(short *)(self + 0x32)) goto LAB_0058a968;
+      if (sVar5 == *(short *)(self + 0x32))
+        goto LAB_0058a968;
       sVar5 = sVar5 + 1;
       uVar3 = *puVar13;
     }
@@ -317,7 +319,7 @@ LAB_0058a968:
  */
 /* TInput__UnregisterCode(tagCheatCode*) */
 
-void __thiscall TInput__UnregisterCode(TInput *self,tagCheatCode *arg1)
+void __thiscall TInput__UnregisterCode(TInput *self, tagCheatCode *arg1)
 
 {
   uint64_t *puVar1;
@@ -331,7 +333,7 @@ void __thiscall TInput__UnregisterCode(TInput *self,tagCheatCode *arg1)
   uint uVar9;
   long *plVar10;
   ushort uVar11;
-  
+
   uVar9 = *(uint *)(arg1 + 0x50);
   if (uVar9 != 0) {
     lVar6 = 0;
@@ -350,8 +352,7 @@ void __thiscall TInput__UnregisterCode(TInput *self,tagCheatCode *arg1)
   if ((tagCheatCode *)*plVar10 == arg1) {
     uVar9 = 1;
     uVar5 = 0;
-  }
-  else {
+  } else {
     do {
       uVar11 = uVar11 + 1;
       if (uVar11 == uVar7) {
@@ -365,13 +366,14 @@ void __thiscall TInput__UnregisterCode(TInput *self,tagCheatCode *arg1)
   if ((uVar9 < uVar7) && ((int)uVar5 < (int)(uVar7 - 1))) {
     lVar6 = (long)(int)uVar5 << 3;
     uVar9 = uVar5;
-    while( true ) {
+    while (true) {
       puVar1 = (uint64_t *)((long)plVar10 + lVar6);
       lVar6 = lVar6 + 8;
       uVar9 = uVar9 + 1;
       *puVar1 = *(uint64_t *)((long)plVar10 + lVar6);
       uVar7 = *(ushort *)(self + 0x30);
-      if ((int)(uVar7 - 1) <= (int)uVar9) break;
+      if ((int)(uVar7 - 1) <= (int)uVar9)
+        break;
       plVar10 = *(long **)(self + 0x40);
     }
   }
@@ -385,14 +387,16 @@ void __thiscall TInput__UnregisterCode(TInput *self,tagCheatCode *arg1)
   }
   uVar7 = 0;
   do {
-    while( true ) {
+    while (true) {
       puVar2 = (ushort *)(*(long *)(self + 0x48) + (ulong)uVar7 * 2);
       uVar3 = *puVar2;
-      if (uVar5 != uVar3) break;
+      if (uVar5 != uVar3)
+        break;
       *puVar2 = 0xffff;
       uVar11 = *(ushort *)(self + 0x32);
       uVar7 = uVar7 + 1;
-      if (uVar11 <= uVar7) goto LAB_0058aca6;
+      if (uVar11 <= uVar7)
+        goto LAB_0058aca6;
     }
     if ((uVar5 < uVar3) && ((ushort)(uVar3 - 1) < 0xfffe)) {
       *puVar2 = uVar3 - 1;
@@ -418,7 +422,7 @@ LAB_0058aca6:
  */
 /* TInput__AllowCallbacks(int) */
 
-void __thiscall TInput__AllowCallbacks(TInput *self,int arg1)
+void __thiscall TInput__AllowCallbacks(TInput *self, int arg1)
 
 {
   _Input_Callbacks_Allowed = arg1;
@@ -439,10 +443,10 @@ void __thiscall TInput__TInput(TInput *self)
 {
   TKeyboard *pTVar1;
   TMouse *pTVar2;
-  
+
   pTVar2 = Mouse;
   if (Mouse != (TMouse *)0x0) {
-                    /* try { // try from 0058acf8 to 0058ad25 has its CatchHandler @ 0058ad9f */
+    /* try { // try from 0058acf8 to 0058ad25 has its CatchHandler @ 0058ad9f */
     TMouse__TMouse__005959d0(Mouse);
     operator_delete(pTVar2);
   }
@@ -485,7 +489,7 @@ void __thiscall TInput__TInput__0058adc0(TInput *self)
   TMouse *this_00;
   TKeyboard *this_01;
   bool bVar1;
-  
+
   *(uint64_t *)self = 0;
   CriticalSection__CriticalSection((CriticalSection *)(self + 8));
   bVar1 = Input != (TInput *)0x0;
@@ -498,17 +502,17 @@ void __thiscall TInput__TInput__0058adc0(TInput *self)
   self[0x34] = (TInput)0x4;
   *(uint32_t *)(self + 0x38) = 0;
   if (bVar1) {
-                    /* try { // try from 0058ae1f to 0058ae39 has its CatchHandler @ 0058ae61 */
+    /* try { // try from 0058ae1f to 0058ae39 has its CatchHandler @ 0058ae61 */
     Error__ThrowFatalError("The input module is already loaded");
   }
   Input = self;
   iptCreateDevices();
   this_00 = operator_new(0x68);
-                    /* try { // try from 0058ae40 to 0058ae44 has its CatchHandler @ 0058ae8b */
+  /* try { // try from 0058ae40 to 0058ae44 has its CatchHandler @ 0058ae8b */
   TMouse__TMouse(this_00);
-                    /* try { // try from 0058ae4a to 0058ae4e has its CatchHandler @ 0058ae61 */
+  /* try { // try from 0058ae4a to 0058ae4e has its CatchHandler @ 0058ae61 */
   this_01 = operator_new(0x2c20);
-                    /* try { // try from 0058ae55 to 0058ae59 has its CatchHandler @ 0058ae74 */
+  /* try { // try from 0058ae55 to 0058ae59 has its CatchHandler @ 0058ae74 */
   TKeyboard__TKeyboard(this_01);
   return;
 }

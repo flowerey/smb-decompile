@@ -22,14 +22,14 @@ void __thiscall SyncEvent__SyncEvent(SyncEvent *self)
 
 {
   int iVar1;
-  
+
   *(uint32_t *)self = 0;
   *(uint32_t *)(self + 0x60) = 0;
-  iVar1 = pthread_mutex_init((pthread_mutex_t *)(self + 8),(pthread_mutexattr_t *)0x0);
+  iVar1 = pthread_mutex_init((pthread_mutex_t *)(self + 8), (pthread_mutexattr_t *)0x0);
   if (iVar1 != 0) {
     return;
   }
-  iVar1 = pthread_cond_init((pthread_cond_t *)(self + 0x30),(pthread_condattr_t *)0x0);
+  iVar1 = pthread_cond_init((pthread_cond_t *)(self + 0x30), (pthread_condattr_t *)0x0);
   if (iVar1 == 0) {
     *(uint32_t *)self = 1;
     return;
@@ -71,7 +71,7 @@ void __thiscall SyncEvent__Wait(SyncEvent *self)
 
 {
   pthread_mutex_t *__mutex;
-  
+
   if (*(int *)self == 0) {
     return;
   }
@@ -79,7 +79,7 @@ void __thiscall SyncEvent__Wait(SyncEvent *self)
   pthread_mutex_lock(__mutex);
   if (*(int *)(self + 0x60) == 0) {
     do {
-      pthread_cond_wait((pthread_cond_t *)(self + 0x30),__mutex);
+      pthread_cond_wait((pthread_cond_t *)(self + 0x30), __mutex);
     } while (*(int *)(self + 0x60) == 0);
   }
   pthread_mutex_unlock(__mutex);
@@ -99,7 +99,7 @@ uint32_t __thiscall SyncEvent__CheckStatus(SyncEvent *self)
 
 {
   uint32_t uVar1;
-  
+
   uVar1 = 1;
   if (*(int *)self != 0) {
     pthread_mutex_lock((pthread_mutex_t *)(self + 8));

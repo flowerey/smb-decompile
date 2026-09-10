@@ -46,7 +46,7 @@ uint64_t __thiscall ScreenFlashManager__Render(ScreenFlashManager *self)
   Camera *this_00;
   float fVar3;
   float fVar4;
-  
+
   if (*(int *)(self + 0x18) == 1) {
     if (*(float *)self <= 0.0) {
       fVar3 = *(float *)(self + 0x14) - fOneFrameTimeStep / *(float *)(self + 4);
@@ -54,8 +54,7 @@ uint64_t __thiscall ScreenFlashManager__Render(ScreenFlashManager *self)
       if (fVar3 <= 0.0) {
         return 0;
       }
-    }
-    else {
+    } else {
       fVar3 = *(float *)self - fOneFrameTimeStep;
       *(uint32_t *)(self + 0x14) = 0x3f800000;
       *(float *)self = fVar3;
@@ -65,8 +64,7 @@ uint64_t __thiscall ScreenFlashManager__Render(ScreenFlashManager *self)
     this_00 = *(Camera **)(SuperMeatBoy + 0x38);
     fVar4 = DAT_005c07a4 /* R:-1.0f */;
     fVar3 = DAT_005be894 /* R:1.0f */;
-  }
-  else {
+  } else {
     TGraphics__ResetTexCoordGen(Graphics);
     TGraphics__ResetPixelStages(Graphics);
     lVar1 = SuperMeatBoy;
@@ -78,16 +76,16 @@ uint64_t __thiscall ScreenFlashManager__Render(ScreenFlashManager *self)
     *(float *)(self + 0x14) = fOneFrameTimeStep / *(float *)(self + 4) + *(float *)(self + 0x14);
     this_00 = *(Camera **)(lVar1 + 0x38);
   }
-  Camera__SetOrthoProjection(this_00,fVar3,fVar4,fVar4,fVar3,fVar4,fVar3);
-  Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38),2);
-  pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,0);
+  Camera__SetOrthoProjection(this_00, fVar3, fVar4, fVar4, fVar3, fVar4, fVar3);
+  Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38), 2);
+  pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 0);
   Matrix4x4__Identity(pMVar2);
-  TGraphics__AddPixelStage(Graphics,1,0,0,0,0,1,0xffffffff);
-  TGraphics__SetPixelColorConstant(Graphics,0,self + 8);
-  TGraphics__SetRenderState(Graphics,'\a',0);
-  TGraphics__SetRenderState(Graphics,'\x05',4);
-  TGraphics__SetRenderState(Graphics,'\x06',5);
-  TGraphics__Draw(Graphics,CGR__pSingleQuadStream,(IndexBuffer *)0x0);
+  TGraphics__AddPixelStage(Graphics, 1, 0, 0, 0, 0, 1, 0xffffffff);
+  TGraphics__SetPixelColorConstant(Graphics, 0, self + 8);
+  TGraphics__SetRenderState(Graphics, '\a', 0);
+  TGraphics__SetRenderState(Graphics, '\x05', 4);
+  TGraphics__SetRenderState(Graphics, '\x06', 5);
+  TGraphics__Draw(Graphics, CGR__pSingleQuadStream, (IndexBuffer *)0x0);
   return 1;
 }
 
@@ -100,13 +98,12 @@ uint64_t __thiscall ScreenFlashManager__Render(ScreenFlashManager *self)
  */
 /* ScreenFlashManager__SetFlash(float, float, ColorTemplate<float> const&) */
 
-void __thiscall
-ScreenFlashManager__SetFlash
-          (ScreenFlashManager *self,float arg1,float arg2,ColorTemplate *arg3)
+void __thiscall ScreenFlashManager__SetFlash(ScreenFlashManager *self, float arg1, float arg2,
+                                             ColorTemplate *arg3)
 
 {
   uint64_t uVar1;
-  
+
   *(float *)self = arg1;
   *(float *)(self + 4) = arg2;
   *(uint64_t *)(self + 8) = *(uint64_t *)arg3;
@@ -126,12 +123,12 @@ ScreenFlashManager__SetFlash
  */
 /* ScreenFlashManager__SetFade(float, ColorTemplate<float> const&) */
 
-void __thiscall
-ScreenFlashManager__SetFade(ScreenFlashManager *self,float arg1,ColorTemplate *arg2)
+void __thiscall ScreenFlashManager__SetFade(ScreenFlashManager *self, float arg1,
+                                            ColorTemplate *arg2)
 
 {
   uint64_t uVar1;
-  
+
   *(float *)(self + 4) = arg1;
   *(uint64_t *)(self + 8) = *(uint64_t *)arg2;
   uVar1 = *(uint64_t *)(arg2 + 8);

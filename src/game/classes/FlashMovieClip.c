@@ -51,11 +51,11 @@ void __thiscall FlashMovieClip__FlashMovieClip__00571470(FlashMovieClip *self)
  */
 /* FlashMovieClip__GetBounds(float, Vector2&, Vector2&) */
 
-void __thiscall
-FlashMovieClip__GetBounds(FlashMovieClip *self,float arg1,Vector2 *arg2,Vector2 *arg3)
+void __thiscall FlashMovieClip__GetBounds(FlashMovieClip *self, float arg1, Vector2 *arg2,
+                                          Vector2 *arg3)
 
 {
-  FlashTimeline__GetBounds((FlashTimeline *)(self + 0x18),arg1,arg2,arg3);
+  FlashTimeline__GetBounds((FlashTimeline *)(self + 0x18), arg1, arg2, arg3);
   return;
 }
 
@@ -107,8 +107,8 @@ uint32_t __thiscall FlashMovieClip__IsPlaying(FlashMovieClip *self)
  */
 /* FlashMovieClip__FindInstance(int, int, int*, int) */
 
-long __thiscall
-FlashMovieClip__FindInstance(FlashMovieClip *self,int arg1,int arg2,int *arg3,int arg4)
+long __thiscall FlashMovieClip__FindInstance(FlashMovieClip *self, int arg1, int arg2, int *arg3,
+                                             int arg4)
 
 {
   int iVar1;
@@ -121,7 +121,7 @@ FlashMovieClip__FindInstance(FlashMovieClip *self,int arg1,int arg2,int *arg3,in
   int iVar8;
   long lVar9;
   long lVar10;
-  
+
   lVar4 = 0;
   iVar6 = arg2;
   if (0 < *(int *)(self + 0x2c)) {
@@ -138,20 +138,22 @@ FlashMovieClip__FindInstance(FlashMovieClip *self,int arg1,int arg2,int *arg3,in
             lVar4 = lVar3 + (long)arg2 * 0xa0;
             iVar8 = *(int *)(lVar4 + 0x20);
             if ((iVar6 <= arg2) && (iVar8 == arg1)) {
-LAB_00575045:
+            LAB_00575045:
               iVar6 = iVar6 + 1;
               goto LAB_00575028;
             }
             lVar3 = lVar3 + ((long)arg2 * 5 + 5) * 0x20;
             iVar7 = arg2;
-            while( true ) {
+            while (true) {
               lVar4 = lVar3;
               iVar7 = iVar7 + 1;
               iVar6 = iVar6 + (uint)(iVar8 == arg1);
-              if (iVar7 == iVar2) break;
+              if (iVar7 == iVar2)
+                break;
               iVar8 = *(int *)(lVar4 + 0x20);
               lVar3 = lVar4 + 0xa0;
-              if ((iVar6 <= arg2) && (iVar8 == arg1)) goto LAB_00575045;
+              if ((iVar6 <= arg2) && (iVar8 == arg1))
+                goto LAB_00575045;
             }
           }
           lVar5 = lVar5 + 0x28;

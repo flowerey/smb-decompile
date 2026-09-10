@@ -23,7 +23,7 @@ void __thiscall UIButton__UIButton__005a2320(UIButton *self)
 {
   *(uint8_t ***)self = &PTR__UIButton_005dd8d0;
   if (*(long **)(self + 0x50) != (long *)0x0) {
-                    /* try { // try from 005a21a7 to 005a21a9 has its CatchHandler @ 005a21b3 */
+    /* try { // try from 005a21a7 to 005a21a9 has its CatchHandler @ 005a21b3 */
     (**(code **)(**(long **)(self + 0x50) + 8))();
   }
   *(uint8_t ***)self = &PTR__UIFormElement_005dd830;
@@ -58,7 +58,7 @@ void __thiscall UIButton__ClickOn(UIButton *self)
 
 {
   UIButton *pUVar1;
-  
+
   if (*(code **)(self + 0x40) != (code *)0x0) {
     pUVar1 = *(UIButton **)(self + 0x48);
     if (*(UIButton **)(self + 0x48) == (UIButton *)0x0) {
@@ -115,8 +115,8 @@ void __thiscall UIButton__Activate(UIButton *self)
 
 {
   *(uint32_t *)(self + 0x38) = 1;
-                    /* WARNING: Could not recover jumptable at 0x005a22b2. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x005a22b2. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(**(long **)(self + 0x50) + 0x40))();
   return;
 }
@@ -134,8 +134,8 @@ void __thiscall UIButton__DeActivate(UIButton *self)
 
 {
   *(uint32_t *)(self + 0x38) = 0;
-                    /* WARNING: Could not recover jumptable at 0x005a22d2. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x005a22d2. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(**(long **)(self + 0x50) + 0x48))();
   return;
 }
@@ -154,7 +154,7 @@ void __thiscall UIButton__UIButton__005a2320(UIButton *self)
 {
   *(uint8_t ***)self = &PTR__UIButton_005dd8d0;
   if (*(long **)(self + 0x50) != (long *)0x0) {
-                    /* try { // try from 005a2337 to 005a2339 has its CatchHandler @ 005a234a */
+    /* try { // try from 005a2337 to 005a2339 has its CatchHandler @ 005a234a */
     (**(code **)(**(long **)(self + 0x50) + 8))();
   }
   *(uint8_t ***)self = &PTR__UIFormElement_005dd830;
@@ -175,43 +175,43 @@ void __thiscall UIButton__Render(UIButton *self)
 
 {
   Matrix4x4 *pMVar1;
-  uint8_t local_38 [8];
+  uint8_t local_38[8];
   float local_30;
   float local_2c;
   float local_28;
   float local_24;
   float local_18;
   float local_14;
-  
+
   if (*(int *)(self + 0x38) != 0) {
     local_28 = *(float *)(self + 0x20) / (float)*(ushort *)(Window + 8);
     local_28 = local_28 + local_28;
     local_24 = *(float *)(self + 0x24) / (float)*(ushort *)(Window + 10);
     local_24 = local_24 + local_24;
-    pMVar1 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,0);
-    Matrix4x4__Transformation2DRot
-              (pMVar1,(Vector2 *)(self + 0x28),(float *)0x0,(Vector2 *)&local_28);
-    TGraphics__PushMatrix(Graphics,0);
-    (**(code **)(**(long **)(self + 0x50) + 0x58))(*(long **)(self + 0x50),local_38);
+    pMVar1 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 0);
+    Matrix4x4__Transformation2DRot(pMVar1, (Vector2 *)(self + 0x28), (float *)0x0,
+                                   (Vector2 *)&local_28);
+    TGraphics__PushMatrix(Graphics, 0);
+    (**(code **)(**(long **)(self + 0x50) + 0x58))(*(long **)(self + 0x50), local_38);
     local_30 = (*(float *)(self + 100) + local_30) / (float)*(ushort *)(Window + 8);
     local_2c = (*(float *)(self + 0x68) + local_2c) / (float)*(ushort *)(Window + 10);
     TGraphics__ResetPixelStages(Graphics);
     TGraphics__ResetTexCoordGen(Graphics);
-    TGraphics__SetRenderState(Graphics,'\x05',4);
-    TGraphics__SetRenderState(Graphics,'\x06',5);
-    TGraphics__AddPixelStage(Graphics,1,0,0,0,0,1,0xffffffff);
-    TGraphics__SetPixelColorConstant
-              (Graphics,0,(long)*(int *)(self + 0x60) * 0x10 + *(long *)(self + 0x58));
-    TGraphics__SetPerspectiveProjectionMode(Graphics,0);
-    pMVar1 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,3);
-    Matrix4x4__ConvertToOrthoMatrix
-              (pMVar1,DAT_005be894 /* R:1.0f */,DAT_005c07a4 /* R:-1.0f */,DAT_005c07a4 /* R:-1.0f */,DAT_005be894 /* R:1.0f */,DAT_005c07a4 /* R:-1.0f */,DAT_005be894 /* R:1.0f */)
-    ;
+    TGraphics__SetRenderState(Graphics, '\x05', 4);
+    TGraphics__SetRenderState(Graphics, '\x06', 5);
+    TGraphics__AddPixelStage(Graphics, 1, 0, 0, 0, 0, 1, 0xffffffff);
+    TGraphics__SetPixelColorConstant(Graphics, 0,
+                                     (long)*(int *)(self + 0x60) * 0x10 + *(long *)(self + 0x58));
+    TGraphics__SetPerspectiveProjectionMode(Graphics, 0);
+    pMVar1 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 3);
+    Matrix4x4__ConvertToOrthoMatrix(pMVar1, DAT_005be894 /* R:1.0f */, DAT_005c07a4 /* R:-1.0f */,
+                                    DAT_005c07a4 /* R:-1.0f */, DAT_005be894 /* R:1.0f */,
+                                    DAT_005c07a4 /* R:-1.0f */, DAT_005be894 /* R:1.0f */);
     local_18 = local_30;
     local_14 = local_2c;
-    pMVar1 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,0);
-    Matrix4x4__ConvertToScalingMatrix(pMVar1,(Vector2 *)&local_18);
-    TGraphics__Draw(Graphics,CGR__pSingleQuadStream,(IndexBuffer *)0x0);
+    pMVar1 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 0);
+    Matrix4x4__ConvertToScalingMatrix(pMVar1, (Vector2 *)&local_18);
+    TGraphics__Draw(Graphics, CGR__pSingleQuadStream, (IndexBuffer *)0x0);
     (**(code **)(**(long **)(self + 0x50) + 0x18))();
     TGraphics__PopMatrix(Graphics);
   }
@@ -227,12 +227,12 @@ void __thiscall UIButton__Render(UIButton *self)
  */
 /* UIButton__UIButton__005a2560(UIButtonCreation const*) */
 
-void __thiscall UIButton__UIButton__005a2560(UIButton *self,UIButtonCreation *arg1)
+void __thiscall UIButton__UIButton__005a2560(UIButton *self, UIButtonCreation *arg1)
 
 {
   long lVar1;
   UILabel *this_00;
-  
+
   *(uint32_t *)(self + 8) = 0;
   *(uint64_t *)(self + 0x10) = 0;
   *(uint64_t *)(self + 0x18) = 0;
@@ -253,12 +253,12 @@ void __thiscall UIButton__UIButton__005a2560(UIButton *self,UIButtonCreation *ar
   if (*(long *)(lVar1 + 0x30) == 0) {
     *(uint64_t *)(lVar1 + 0x30) = _DEFAULT_UI_FONT;
   }
-                    /* try { // try from 005a25fb to 005a25ff has its CatchHandler @ 005a263d */
+  /* try { // try from 005a25fb to 005a25ff has its CatchHandler @ 005a263d */
   this_00 = operator_new(0x50);
-                    /* try { // try from 005a2609 to 005a260d has its CatchHandler @ 005a264c */
-  UILabel__UILabel__005a5270(this_00,(UILabelCreation *)arg1);
+  /* try { // try from 005a2609 to 005a260d has its CatchHandler @ 005a264c */
+  UILabel__UILabel__005a5270(this_00, (UILabelCreation *)arg1);
   *(UILabel **)(self + 0x50) = this_00;
-                    /* try { // try from 005a2617 to 005a261b has its CatchHandler @ 005a263d */
-  UILabel__setAlign(this_00,0);
+  /* try { // try from 005a2617 to 005a261b has its CatchHandler @ 005a263d */
+  UILabel__setAlign(this_00, 0);
   return;
 }

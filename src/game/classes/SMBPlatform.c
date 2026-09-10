@@ -18,11 +18,11 @@
  */
 /* SMBPlatform__SMBPlatform(int) */
 
-void __thiscall SMBPlatform__SMBPlatform(SMBPlatform *self,int arg1)
+void __thiscall SMBPlatform__SMBPlatform(SMBPlatform *self, int arg1)
 
 {
   ushort uVar1;
-  
+
   *(uint32_t *)(self + 8) = 0;
   self[10] = (SMBPlatform)0x0;
   uVar1 = *(ushort *)(self + 10);
@@ -35,7 +35,7 @@ void __thiscall SMBPlatform__SMBPlatform(SMBPlatform *self,int arg1)
   *(uint32_t *)(self + 0xc) = *(uint32_t *)(self + 8);
   *(uint32_t *)(self + 0x10) = *(uint32_t *)(self + 8);
   if (arg1 != 0) {
-    *(ushort *)(self + 10) = CONCAT11(3,(byte)*(ushort *)(self + 10) & 0x3f);
+    *(ushort *)(self + 10) = CONCAT11(3, (byte) * (ushort *)(self + 10) & 0x3f);
     *(ushort *)(self + 0xe) = *(ushort *)(self + 0xe) & 0x3f | 0x380;
     *(ushort *)(self + 0x12) = *(ushort *)(self + 0x12) & 0x3f | 0x340;
     return;

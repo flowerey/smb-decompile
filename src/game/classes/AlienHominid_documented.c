@@ -50,46 +50,46 @@
 
 /* fOneFrameTimeStep holds a float; globals.h keeps it untyped. */
 #define fOneFrameTimeStep (*(float *)&fOneFrameTimeStep)
-#define MB_U64(c, off)   (*(uint64_t *)((uint8_t *)(c) + (off)))
+#define MB_U64(c, off) (*(uint64_t *)((uint8_t *)(c) + (off)))
 
-#define AH_CHAR_ID      0x1b
-#define AH_ALLOC_SIZE   0xb58
-#define AH_ANIM_PATH    "/Animations/ah.am"
-#define AH_MAX_SHOTS    10
-#define AH_GRAVITY      500.0f   /* DAT_005be5e0, rodata float32 */
+#define AH_CHAR_ID 0x1b
+#define AH_ALLOC_SIZE 0xb58
+#define AH_ANIM_PATH "/Animations/ah.am"
+#define AH_MAX_SHOTS 10
+#define AH_GRAVITY 500.0f /* DAT_005be5e0, rodata float32 */
 
 typedef enum { SHOT_FLYING = 0, SHOT_BREAKING = 1, SHOT_SPENT = 2 } ShotState;
 
 typedef struct {
-  uint32_t state;   /* +0x0 */
-  float    x;       /* +0x4 */
-  float    y;       /* +0x8 */
-  uint32_t frame;   /* +0xc */
-} AHShot;           /* sizeof == 0x10 */
+  uint32_t state; /* +0x0 */
+  float x;        /* +0x4 */
+  float y;        /* +0x8 */
+  uint32_t frame; /* +0xc */
+} AHShot;         /* sizeof == 0x10 */
 
 typedef struct {
-  uint8_t  base[0xab0];
-  uint32_t specialActive;    /* +0xab0 */
-  uint32_t specialAnimFrame; /* +0xab4 */
-  AHShot   shots[AH_MAX_SHOTS]; /* +0xab8 */
-} AlienHominidBody;          /* sizeof == 0xb58 */
+  uint8_t base[0xab0];
+  uint32_t specialActive;     /* +0xab0 */
+  uint32_t specialAnimFrame;  /* +0xab4 */
+  AHShot shots[AH_MAX_SHOTS]; /* +0xab8 */
+} AlienHominidBody;           /* sizeof == 0xb58 */
 
 /* Base-class field accessors (raw offsets; see layout note above). */
-#define MB_U32(c, off)   (*(uint32_t *)((uint8_t *)(c) + (off)))
-#define MB_I32(c, off)   (*(int32_t *)((uint8_t *)(c) + (off)))
-#define MB_F32(c, off)   (*(float *)((uint8_t *)(c) + (off)))
-#define MB_PTR(c, off)   (*(void **)((uint8_t *)(c) + (off)))
-#define MB_U8(c, off)    (*((uint8_t *)(c) + (off)))
-#define MB_STATE(c)      MB_I32(c, 0x7d4)
-#define MB_FLAGS0(c)     MB_U8(c, 0x7d8)
-#define MB_FLAGS1(c)     MB_U8(c, 0x7d9)
-#define MB_FLAGS2(c)     MB_U8(c, 0x7db)
-#define MB_CLONES(c)     ((MeatBoyCharactor **)(*(void **)((uint8_t *)(c) + 0x7f0)))
-#define MB_POS(c)        ((Vector2 *)((uint8_t *)(c) + 0xa0))
-#define MB_IS_CLONE(c)   MB_I32(c, 0xa40)
-#define CLIP_X(cl)       (*(uint32_t *)((uint8_t *)(cl) + 0x30))
-#define CLIP_Y(cl)       (*(uint32_t *)((uint8_t *)(cl) + 0x34))
-#define CLIP_FRAME(cl)   (*(uint32_t *)((uint8_t *)(cl) + 0x58))
+#define MB_U32(c, off) (*(uint32_t *)((uint8_t *)(c) + (off)))
+#define MB_I32(c, off) (*(int32_t *)((uint8_t *)(c) + (off)))
+#define MB_F32(c, off) (*(float *)((uint8_t *)(c) + (off)))
+#define MB_PTR(c, off) (*(void **)((uint8_t *)(c) + (off)))
+#define MB_U8(c, off) (*((uint8_t *)(c) + (off)))
+#define MB_STATE(c) MB_I32(c, 0x7d4)
+#define MB_FLAGS0(c) MB_U8(c, 0x7d8)
+#define MB_FLAGS1(c) MB_U8(c, 0x7d9)
+#define MB_FLAGS2(c) MB_U8(c, 0x7db)
+#define MB_CLONES(c) ((MeatBoyCharactor **)(*(void **)((uint8_t *)(c) + 0x7f0)))
+#define MB_POS(c) ((Vector2 *)((uint8_t *)(c) + 0xa0))
+#define MB_IS_CLONE(c) MB_I32(c, 0xa40)
+#define CLIP_X(cl) (*(uint32_t *)((uint8_t *)(cl) + 0x30))
+#define CLIP_Y(cl) (*(uint32_t *)((uint8_t *)(cl) + 0x34))
+#define CLIP_FRAME(cl) (*(uint32_t *)((uint8_t *)(cl) + 0x58))
 #define CLIP_RELEASE(cl) ((**(code **)(*(void **)(cl) + 8))())
 #define CLIP_ADVANCE(cl) ((**(code **)(*(void **)(cl) + 0x10))(cl))
 
@@ -103,13 +103,12 @@ extern void MeatBoyCharactor__CreateClones(MeatBoyCharactor *c);
 extern void MeatBoyCharactor__Clone(MeatBoyCharactor *c, MeatBoyCharactor *src, int n);
 extern void MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *c, ...);
 extern void MeatBoyCharactor__Render(MeatBoyCharactor *c);
-extern void MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *c, int kind,
-                                                 void *tintA, void *tintB);
+extern void MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *c, int kind, void *tintA,
+                                                  void *tintB);
 extern void MeatBoyCharactor__MeatBoyCharactor__00476510(MeatBoyCharactor *c);
-extern void MeatBoyCharFoundation__Render(MeatBoyCharFoundation *f,
-                                          MeatBoyCharactor *c,
+extern void MeatBoyCharFoundation__Render(MeatBoyCharFoundation *f, MeatBoyCharactor *c,
                                           FlashLibraryInstance *clip);
-extern int  FlashLibraryInstance__IsPlaying(FlashLibraryInstance *cl);
+extern int FlashLibraryInstance__IsPlaying(FlashLibraryInstance *cl);
 extern void *FlashAnimationLibrary__GetMovieClip__005731d0(FlashAnimationLibrary *lib,
                                                            const char *name);
 extern void FlashAnimationLibrary__EnableFlags(FlashAnimationLibrary *lib, int f);
@@ -125,15 +124,14 @@ extern char *TileLevel__GetGridBlockFromPos(TileLevel *lvl, float *pos, int laye
  * input record (replay recording path). Bit 6 of input byte 3 carries it;
  * 0xbf mask clears the bit first so playback sees exactly one value.
  */
-void __thiscall AlienHominid__RecordSpecial(AlienHominid *self)
-{
+void __thiscall AlienHominid__RecordSpecial(AlienHominid *self) {
   uint8_t *input;
 
   input = (uint8_t *)MB_PTR(self, 0x7e0);
   if (input != 0) {
     AlienHominidBody *h = (AlienHominidBody *)self;
     *(uint8_t *)(input + 3) =
-      (uint8_t)(*(uint8_t *)(input + 3) & 0xbf | (uint8_t)((h->specialActive & 1) << 6));
+        (uint8_t)(*(uint8_t *)(input + 3) & 0xbf | (uint8_t)((h->specialActive & 1) << 6));
   }
   return;
 }
@@ -141,16 +139,14 @@ void __thiscall AlienHominid__RecordSpecial(AlienHominid *self)
 /* ======================================================================
  * Reset @ 00461300 — base reset, plus our flag (Death relies on this too).
  */
-void __thiscall AlienHominid__Reset(AlienHominid *self)
-{
+void __thiscall AlienHominid__Reset(AlienHominid *self) {
   ((AlienHominidBody *)self)->specialActive = 0;
   MeatBoyCharactor__Reset((MeatBoyCharactor *)self);
   return;
 }
 
 /* Advance one live shot: gravity, then stick on first solid tile. */
-static void ah_update_shot(AlienHominidBody *h, TileLevel *lvl, AHShot *s)
-{
+static void ah_update_shot(AlienHominidBody *h, TileLevel *lvl, AHShot *s) {
   if (s->state != SHOT_FLYING)
     return;
   s->y -= AH_GRAVITY * fOneFrameTimeStep;
@@ -165,18 +161,17 @@ static void ah_update_shot(AlienHominidBody *h, TileLevel *lvl, AHShot *s)
  * (Original unrolls the loop 10x and `return`s out of the last block when
  * the 10th shot lands — a no-op quirk since nothing follows it.)
  */
-void __thiscall AlienHominid__Update(AlienHominid *self)
-{
+void __thiscall AlienHominid__Update(AlienHominid *self) {
   AlienHominidBody *h = (AlienHominidBody *)self;
   TileLevel *lvl;
   int i;
 
-  MB_U32(self, 0x8a8) = MB_U32(self, 0x8ac);          /* anim-state sync */
+  MB_U32(self, 0x8a8) = MB_U32(self, 0x8ac); /* anim-state sync */
   MeatBoyCharactor__ProcessReplayFrame((MeatBoyCharactor *)self);
   CLIP_FRAME(MB_PTR(self, 0xa98)) = h->specialAnimFrame; /* push frame into shoot clip */
   if ((int)h->specialActive == 1 &&
       !FlashLibraryInstance__IsPlaying((FlashLibraryInstance *)MB_PTR(self, 0xa98)))
-    h->specialActive = 0;                             /* shoot anim over */
+    h->specialActive = 0; /* shoot anim over */
   MeatBoyCharactor__Update((MeatBoyCharactor *)self);
 
   lvl = *(TileLevel **)((uint8_t *)SuperMeatBoy + 0x40);
@@ -188,8 +183,7 @@ void __thiscall AlienHominid__Update(AlienHominid *self)
 /* ======================================================================
  * Death @ 004617d0 — base death, then drop the special flag.
  */
-void __thiscall AlienHominid__Death(AlienHominid *self)
-{
+void __thiscall AlienHominid__Death(AlienHominid *self) {
   MeatBoyCharactor__Death((MeatBoyCharactor *)self);
   ((AlienHominidBody *)self)->specialActive = 0;
   return;
@@ -205,16 +199,12 @@ void __thiscall AlienHominid__Death(AlienHominid *self)
 /* ======================================================================
  * CreateClones @ 00461810 — grab the three clips, then base clone setup.
  */
-void __thiscall AlienHominid__CreateClones(AlienHominid *self)
-{
+void __thiscall AlienHominid__CreateClones(AlienHominid *self) {
   FlashAnimationLibrary *lib = (FlashAnimationLibrary *)MB_PTR(self, 0xf8);
 
-  MB_PTR(self, 0xa98) =
-    FlashAnimationLibrary__GetMovieClip__005731d0(lib, "shoot");
-  MB_PTR(self, 0xaa0) =
-    FlashAnimationLibrary__GetMovieClip__005731d0(lib, "bullet");
-  MB_PTR(self, 0xaa8) =
-    FlashAnimationLibrary__GetMovieClip__005731d0(lib, "bulletbreak");
+  MB_PTR(self, 0xa98) = FlashAnimationLibrary__GetMovieClip__005731d0(lib, "shoot");
+  MB_PTR(self, 0xaa0) = FlashAnimationLibrary__GetMovieClip__005731d0(lib, "bullet");
+  MB_PTR(self, 0xaa8) = FlashAnimationLibrary__GetMovieClip__005731d0(lib, "bulletbreak");
   MeatBoyCharactor__CreateClones((MeatBoyCharactor *)self);
   return;
 }
@@ -224,9 +214,8 @@ void __thiscall AlienHominid__CreateClones(AlienHominid *self)
  * (clones, +0xa40 != 0, skip: they don't own them), then base dtor.
  * @ 004618f0 (deleting dtor) — dtor + operator_delete.
  */
-void __thiscall AlienHominid__dtor(AlienHominid *self)
-{
-  MB_PTR(self, 0) = &PTR__AlienHominid_005be4f0;      /* restore vtable */
+void __thiscall AlienHominid__dtor(AlienHominid *self) {
+  MB_PTR(self, 0) = &PTR__AlienHominid_005be4f0; /* restore vtable */
   if (MB_I32(self, 0xa40) == 0) {
     FlashLibraryInstance *shoot = (FlashLibraryInstance *)MB_PTR(self, 0xa98);
     FlashLibraryInstance *bullet = (FlashLibraryInstance *)MB_PTR(self, 0xaa0);
@@ -242,8 +231,7 @@ void __thiscall AlienHominid__dtor(AlienHominid *self)
   return;
 }
 
-void __thiscall AlienHominid__dtor_delete(AlienHominid *self)
-{
+void __thiscall AlienHominid__dtor_delete(AlienHominid *self) {
   AlienHominid__dtor(self);
   operator_delete(self);
   return;
@@ -254,9 +242,7 @@ void __thiscall AlienHominid__dtor_delete(AlienHominid *self)
  * Render, RenderShots and RenderClones (the latter passes clone slots).
  * Returns nothing; slot->frame always re-synced from the clip.
  */
-static void ah_render_shot(FlashLibraryInstance *fly, FlashLibraryInstance *brk,
-                           AHShot *s)
-{
+static void ah_render_shot(FlashLibraryInstance *fly, FlashLibraryInstance *brk, AHShot *s) {
   FlashLibraryInstance *clip;
 
   if (s->state == SHOT_SPENT)
@@ -279,8 +265,7 @@ static void ah_render_shot(FlashLibraryInstance *fly, FlashLibraryInstance *brk,
  * 10 shots via ah_render_shot. The EnableFlags/DisableFlags toggle tracks
  * whether clone i is the "current" one (manager +0x3c vs clone +0xa90).
  */
-void __thiscall AlienHominid__RenderClones(AlienHominid *self)
-{
+void __thiscall AlienHominid__RenderClones(AlienHominid *self) {
   FlashAnimationLibrary *lib = (FlashAnimationLibrary *)MB_PTR(self, 0xf8);
   void *clonemgr = MB_PTR(self, 0xa38);
   MeatBoyCharactor **clones = MB_CLONES(self);
@@ -305,8 +290,7 @@ void __thiscall AlienHominid__RenderClones(AlienHominid *self)
         MeatBoyCharFoundation__Render((MeatBoyCharFoundation *)MB_PTR(self, 0xf8), c,
                                       (FlashLibraryInstance *)MB_PTR(self, 0xa98));
         ch->specialAnimFrame = CLIP_FRAME(MB_PTR(self, 0xa98));
-      }
-      else {
+      } else {
         MeatBoyCharFoundation__Render((MeatBoyCharFoundation *)MB_PTR(self, 0xf8), c, 0);
       }
       for (j = 0; j < AH_MAX_SHOTS; j++)
@@ -320,20 +304,18 @@ void __thiscall AlienHominid__RenderClones(AlienHominid *self)
 /* ======================================================================
  * Render @ 00462190 — shoot-anim body (or base render), then own shots.
  */
-void __thiscall AlienHominid__Render(AlienHominid *self)
-{
+void __thiscall AlienHominid__Render(AlienHominid *self) {
   AlienHominidBody *h = (AlienHominidBody *)self;
   int i;
 
   if ((int)h->specialActive == 1) {
-    (**(code **)(*(void **)self + 0x50))();            /* vtab +0x50 pre-step */
+    (**(code **)(*(void **)self + 0x50))(); /* vtab +0x50 pre-step */
     CLIP_FRAME(MB_PTR(self, 0xa98)) = h->specialAnimFrame;
     MeatBoyCharFoundation__Render((MeatBoyCharFoundation *)MB_PTR(self, 0xf8),
                                   (MeatBoyCharactor *)self,
                                   (FlashLibraryInstance *)MB_PTR(self, 0xa98));
     h->specialAnimFrame = CLIP_FRAME(MB_PTR(self, 0xa98));
-  }
-  else {
+  } else {
     MeatBoyCharactor__Render((MeatBoyCharactor *)self);
   }
   for (i = 0; i < AH_MAX_SHOTS; i++)
@@ -348,8 +330,7 @@ void __thiscall AlienHominid__Render(AlienHominid *self)
  * first spent shot at the player position (slot search identical to
  * AddShot). specialAnimFrame is always cleared.
  */
-static int ah_first_spent(AlienHominidBody *h)
-{
+static int ah_first_spent(AlienHominidBody *h) {
   int i;
 
   for (i = 0; i < AH_MAX_SHOTS; i++)
@@ -358,19 +339,18 @@ static int ah_first_spent(AlienHominidBody *h)
   return -1;
 }
 
-void __thiscall AlienHominid__ProcessSpecial(AlienHominid *self)
-{
+void __thiscall AlienHominid__ProcessSpecial(AlienHominid *self) {
   AlienHominidBody *h = (AlienHominidBody *)self;
   uint32_t was = h->specialActive;
   int slot;
 
   h->specialActive = (uint32_t)(*(uint8_t *)((long *)MB_PTR(self, 0x7e0) + 3) >> 6 & 1);
   if (was != 0 || h->specialActive != 1)
-    return;                                           /* edge-triggered */
+    return; /* edge-triggered */
   slot = ah_first_spent(h);
   if (slot >= 0) {
     Vector2__operator_assign((Vector2 *)&h->shots[slot].x, MB_POS(self));
-    h->shots[slot].state = SHOT_FLYING;               /* == flag slot = 0 */
+    h->shots[slot].state = SHOT_FLYING; /* == flag slot = 0 */
   }
   h->specialAnimFrame = 0;
   return;
@@ -381,14 +361,12 @@ void __thiscall AlienHominid__ProcessSpecial(AlienHominid *self)
  * 0x1b, vtable install, all shots spent, special clear.
  * AlienHominid @ 00462960 (clone ctor) — base Clone + share owner's clips.
  */
-void __thiscall AlienHominid__ctor(AlienHominid *self)
-{
+void __thiscall AlienHominid__ctor(AlienHominid *self) {
   AlienHominidBody *h = (AlienHominidBody *)self;
   uint64_t anim = FormatResourcePath(AH_ANIM_PATH, &strCharPath);
   int i;
 
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, anim,
-                                              AH_CHAR_ID);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, anim, AH_CHAR_ID);
   MB_PTR(self, 0) = &PTR__AlienHominid_005be4f0;
   for (i = 0; i < AH_MAX_SHOTS; i++)
     h->shots[i].state = SHOT_SPENT;
@@ -397,10 +375,7 @@ void __thiscall AlienHominid__ctor(AlienHominid *self)
   return;
 }
 
-void __thiscall AlienHominid__ctor_clone(AlienHominid *self,
-                                         MeatBoyCharactor *arg1,
-                                         int arg2)
-{
+void __thiscall AlienHominid__ctor_clone(AlienHominid *self, MeatBoyCharactor *arg1, int arg2) {
   AlienHominidBody *h = (AlienHominidBody *)self;
   int i;
 
@@ -410,7 +385,7 @@ void __thiscall AlienHominid__ctor_clone(AlienHominid *self,
     h->shots[i].state = SHOT_SPENT;
   MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   h->specialActive = 0;
-  MB_PTR(self, 0xa98) = MB_PTR(arg1, 0xa98);           /* share clips */
+  MB_PTR(self, 0xa98) = MB_PTR(arg1, 0xa98); /* share clips */
   MB_PTR(self, 0xaa0) = MB_PTR(arg1, 0xaa0);
   MB_PTR(self, 0xaa8) = MB_PTR(arg1, 0xaa8);
   return;
@@ -420,8 +395,7 @@ void __thiscall AlienHominid__ctor_clone(AlienHominid *self,
  * AddShot @ 00462a60 — fire: re-arm first spent slot at player pos.
  * Silently drops the input if all 10 are busy (slot-9-in-use early-out).
  */
-void __thiscall AlienHominid__AddShot(AlienHominid *self)
-{
+void __thiscall AlienHominid__AddShot(AlienHominid *self) {
   AlienHominidBody *h = (AlienHominidBody *)self;
   int slot = ah_first_spent(h);
 
@@ -435,8 +409,7 @@ void __thiscall AlienHominid__AddShot(AlienHominid *self)
 /* ======================================================================
  * RenderShots @ 00462b90 — own 10 shots (same helper as Render).
  */
-void __thiscall AlienHominid__RenderShots(AlienHominid *self)
-{
+void __thiscall AlienHominid__RenderShots(AlienHominid *self) {
   AlienHominidBody *h = (AlienHominidBody *)self;
   int i;
 
@@ -489,15 +462,14 @@ void __thiscall AlienHominid__WallJump(AlienHominid *self)
     return;
   }
   MB_U32(self, 0xbc) = MB_U32(self, 0x8b4);
-  MB_F32(self, 0xb8) =
-       MB_F32(self, 0x808) * MB_F32(self, 0x8b8) + MB_F32(self, 0xb8);
+  MB_F32(self, 0xb8) = MB_F32(self, 0x808) * MB_F32(self, 0x8b8) + MB_F32(self, 0xb8);
   if (MB_I32(self, 0x7d4) != 6) {
     lVar2 = (long)MB_PTR(self, 0xf8);
     MB_U8(self, 0x7db) = (uint8_t)((byte)MB_U8(self, 0x7db) | 8);
     uVar5 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x240);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x268) = uVar5;
     MB_U32(self, 0xa4c) = uVar5;
@@ -513,20 +485,21 @@ void __thiscall AlienHominid__WallJump(AlienHominid *self)
     uStack_34 = 0x3f800000;
     uStack_28 = 0xbf800000;
     uStack_24 = 0x3f800000;
-    if (((uint8_t)AVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((uint8_t)AVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar6 = &uStack_38;
     puVar8 = &uStack_28;
-  }
-  else {
+  } else {
     AVar7 = MB_U8(self, 0x7d9);
     uStack_58 = 0x3f800000;
     uStack_54 = 0x3f800000;
     uStack_48 = 0x3f800000;
     uStack_44 = 0x3f800000;
-    if (((uint8_t)AVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((uint8_t)AVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar8 = &uStack_48;
   }
-  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,3,puVar8,puVar6);
+  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 3, puVar8, puVar6);
   AVar3 = MB_U8(self, 0x7d8);
   AVar7 = MB_U8(self, 0x7d9);
 LAB_00474591:
@@ -535,7 +508,7 @@ LAB_00474591:
   return;
 }
 
-void __thiscall AlienHominid__WallHit(AlienHominid *self,int arg2)
+void __thiscall AlienHominid__WallHit(AlienHominid *self, int arg2)
 
 {
   uint8_t AVar1;
@@ -554,45 +527,45 @@ void __thiscall AlienHominid__WallHit(AlienHominid *self,int arg2)
 
   AVar1 = MB_U8(self, 0x7d8);
   if (((uint8_t)AVar1 & 4) == 0) {
-    if (MB_I32(self, 0x7d4) == 9) goto LAB_0047440b;
+    if (MB_I32(self, 0x7d4) == 9)
+      goto LAB_0047440b;
     if (arg2 == 4) {
       uStack_48 = 0x3f800000;
       uStack_44 = 0x3f800000;
       uStack_58 = 0x3f800000;
       uStack_54 = 0x3f800000;
       if (((byte)MB_U8(self, 0x7d9) & 0x40) == 0) {
-        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,2,&uStack_58,&uStack_48);
+        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 2, &uStack_58, &uStack_48);
         iVar4 = MB_I32(self, 0x7d4);
         goto LAB_004743cd;
       }
-    }
-    else {
+    } else {
       uStack_28 = 0xbf800000;
       uStack_24 = 0x3f800000;
       uStack_38 = 0xbf800000;
       uStack_34 = 0x3f800000;
       if (((byte)MB_U8(self, 0x7d9) & 0x40) == 0) {
-        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,2,&uStack_38,&uStack_28);
+        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 2, &uStack_38, &uStack_28);
         goto LAB_004743c7;
       }
     }
-LAB_004743d2:
+  LAB_004743d2:
     lVar3 = (long)MB_PTR(self, 0xf8);
     MB_U8(self, 0x7db) = (uint8_t)((byte)MB_U8(self, 0x7db) | 8);
     uVar5 = 0;
     uVar2 = *(ushort *)(lVar3 + 0x348);
     if (uVar2 != 0) {
-      uVar5 = GetRandomINT(0,uVar2 - 1);
+      uVar5 = GetRandomINT(0, uVar2 - 1);
     }
     *(uint32_t *)(lVar3 + 0x370) = uVar5;
     MB_U32(self, 0xa4c) = uVar5;
     MB_U32(self, 0xa50) = 0;
-  }
-  else {
-LAB_004743c7:
+  } else {
+  LAB_004743c7:
     iVar4 = MB_I32(self, 0x7d4);
-LAB_004743cd:
-    if (iVar4 != 9) goto LAB_004743d2;
+  LAB_004743cd:
+    if (iVar4 != 9)
+      goto LAB_004743d2;
   }
   AVar1 = MB_U8(self, 0x7d8);
 LAB_0047440b:

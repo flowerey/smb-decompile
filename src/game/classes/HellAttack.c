@@ -18,17 +18,16 @@
  */
 /* HellBoss__HellAttack_FillAttacks(char const*, int, FlashAnimationLibrary*) */
 
-void __thiscall
-HellBoss__HellAttack_FillAttacks
-          (HellAttack *self,char *arg1,int arg2,FlashAnimationLibrary *arg3)
+void __thiscall HellBoss__HellAttack_FillAttacks(HellAttack *self, char *arg1, int arg2,
+                                                 FlashAnimationLibrary *arg3)
 
 {
   uint64_t uVar1;
   int iVar2;
   HellAttack *pHVar3;
   int iVar4;
-  char local_58 [40];
-  
+  char local_58[40];
+
   iVar4 = 1;
   *(uint32_t *)(self + 4) = 0;
   *(int *)self = arg2;
@@ -38,8 +37,8 @@ HellBoss__HellAttack_FillAttacks
       pHVar3 = self + (long)(iVar4 + -1) * 0x28 + 0x10;
       do {
         iVar2 = iVar2 + 1;
-        Sprint("%s%iv%i",local_58,arg1,iVar2,iVar4);
-        uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(arg3,local_58);
+        Sprint("%s%iv%i", local_58, arg1, iVar2, iVar4);
+        uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(arg3, local_58);
         *(uint64_t *)pHVar3 = uVar1;
         pHVar3 = pHVar3 + 8;
       } while (iVar2 != arg2);

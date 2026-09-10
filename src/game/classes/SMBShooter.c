@@ -18,7 +18,7 @@
  */
 /* SMBShooter__AddShot(tagBulletType) */
 
-void __thiscall SMBShooter__AddShot(SMBShooter *self,uint arg2)
+void __thiscall SMBShooter__AddShot(SMBShooter *self, uint arg2)
 
 {
   long lVar1;
@@ -32,55 +32,46 @@ void __thiscall SMBShooter__AddShot(SMBShooter *self,uint arg2)
   float local_10c;
   uint32_t local_108;
   uint32_t local_104;
-  Vector2 local_f8 [16];
+  Vector2 local_f8[16];
   float local_e8;
   float local_e4;
-  Vector2 local_d8 [16];
+  Vector2 local_d8[16];
   float local_c8;
   float local_c4;
-  Vector2 local_b8 [16];
+  Vector2 local_b8[16];
   float local_a8;
   float local_a4;
-  Vector2 local_98 [16];
+  Vector2 local_98[16];
   float local_88;
   float local_84;
-  Vector2 local_78 [16];
+  Vector2 local_78[16];
   float local_68;
   float local_64;
-  Vector2 local_58 [16];
-  Vector2 local_48 [24];
-  
+  Vector2 local_58[16];
+  Vector2 local_48[24];
+
   bVar6 = arg2 == 3;
   iVar5 = 0;
   do {
     if (*(int *)(self + 0x120) == 2) {
       iVar3 = 0;
-    }
-    else if (*(int *)(self + 0x240) == 2) {
+    } else if (*(int *)(self + 0x240) == 2) {
       iVar3 = 1;
-    }
-    else if (*(int *)(self + 0x360) == 2) {
+    } else if (*(int *)(self + 0x360) == 2) {
       iVar3 = 2;
-    }
-    else if (*(int *)(self + 0x480) == 2) {
+    } else if (*(int *)(self + 0x480) == 2) {
       iVar3 = 3;
-    }
-    else if (*(int *)(self + 0x5a0) == 2) {
+    } else if (*(int *)(self + 0x5a0) == 2) {
       iVar3 = 4;
-    }
-    else if (*(int *)(self + 0x6c0) == 2) {
+    } else if (*(int *)(self + 0x6c0) == 2) {
       iVar3 = 5;
-    }
-    else if (*(int *)(self + 0x7e0) == 2) {
+    } else if (*(int *)(self + 0x7e0) == 2) {
       iVar3 = 6;
-    }
-    else if (*(int *)(self + 0x900) == 2) {
+    } else if (*(int *)(self + 0x900) == 2) {
       iVar3 = 7;
-    }
-    else if (*(int *)(self + 0xa20) == 2) {
+    } else if (*(int *)(self + 0xa20) == 2) {
       iVar3 = 8;
-    }
-    else {
+    } else {
       if (*(int *)(self + 0xb40) != 2) {
         return;
       }
@@ -96,59 +87,57 @@ void __thiscall SMBShooter__AddShot(SMBShooter *self,uint arg2)
     local_108 = *(uint32_t *)(lVar1 + 0x24);
     local_104 = *(uint32_t *)(lVar1 + 0x28);
     if (arg2 == 2) {
-      sincosf(DAT_005c1408 /* R:1.5707963705062866f */ + *(float *)(lVar1 + 0x3c),&local_10c,&local_110);
+      sincosf(DAT_005c1408 /* R:1.5707963705062866f */ + *(float *)(lVar1 + 0x3c), &local_10c,
+              &local_110);
       local_e8 = local_110;
       local_e4 = local_10c;
-      Vector2__operator_mul__005be200(local_d8,DAT_005be894 /* R:1.0f */);
-      Vector2__operator_assign(local_f8,local_d8);
-    }
-    else if (arg2 < 2) {
-      sincosf(*(float *)(lVar1 + 0x3c),&local_10c,&local_110);
+      Vector2__operator_mul__005be200(local_d8, DAT_005be894 /* R:1.0f */);
+      Vector2__operator_assign(local_f8, local_d8);
+    } else if (arg2 < 2) {
+      sincosf(*(float *)(lVar1 + 0x3c), &local_10c, &local_110);
       local_c8 = local_110;
       local_c4 = local_10c;
-      Vector2__operator_mul__005be200(local_b8,DAT_005be894 /* R:1.0f */);
-      Vector2__operator_assign(local_f8,local_b8);
-    }
-    else if (arg2 == 4) {
-      sincosf(*(float *)(lVar1 + 0x3c),&local_10c,&local_110);
+      Vector2__operator_mul__005be200(local_b8, DAT_005be894 /* R:1.0f */);
+      Vector2__operator_assign(local_f8, local_b8);
+    } else if (arg2 == 4) {
+      sincosf(*(float *)(lVar1 + 0x3c), &local_10c, &local_110);
       local_a8 = local_110;
       local_a4 = local_10c;
-      Vector2__operator_mul__005be200(local_98,DAT_005be894 /* R:1.0f */);
-      Vector2__operator_assign(local_f8,local_98);
-    }
-    else if (arg2 == 5) {
-      sincosf(DAT_005c1408 /* R:1.5707963705062866f */ + *(float *)(lVar1 + 0x3c),&local_10c,&local_110);
+      Vector2__operator_mul__005be200(local_98, DAT_005be894 /* R:1.0f */);
+      Vector2__operator_assign(local_f8, local_98);
+    } else if (arg2 == 5) {
+      sincosf(DAT_005c1408 /* R:1.5707963705062866f */ + *(float *)(lVar1 + 0x3c), &local_10c,
+              &local_110);
       local_88 = local_110;
       local_84 = local_10c;
-      Vector2__operator_mul__005be200(local_78,DAT_005be894 /* R:1.0f */);
-      Vector2__operator_assign(local_f8,local_78);
-    }
-    else if (bVar6) {
+      Vector2__operator_mul__005be200(local_78, DAT_005be894 /* R:1.0f */);
+      Vector2__operator_assign(local_f8, local_78);
+    } else if (bVar6) {
       __x = (float)iVar5 * DAT_005c1408 /* R:1.5707963705062866f */ + *(float *)(lVar1 + 0x3c);
-      sincosf(__x,&local_10c,&local_110);
+      sincosf(__x, &local_10c, &local_110);
       local_68 = local_110;
       local_64 = local_10c;
-      Vector2__operator_mul__005be200(local_58,DAT_005be894 /* R:1.0f */);
-      Vector2__operator_assign(local_f8,local_58);
+      Vector2__operator_mul__005be200(local_58, DAT_005be894 /* R:1.0f */);
+      Vector2__operator_assign(local_f8, local_58);
       *(uint32_t *)(self + lVar4 + 0xc4) = 1;
       *(float *)(self + lVar4 + 0x100) = __x - fVar2;
     }
-    Vector2__operator_mul__005be200(local_48,DAT_005c13fc /* R:20.0f */);
-    Vector2__operator_plus_assign((Vector2 *)&local_108,local_48);
+    Vector2__operator_mul__005be200(local_48, DAT_005c13fc /* R:20.0f */);
+    Vector2__operator_plus_assign((Vector2 *)&local_108, local_48);
     if (arg2 == 2) {
-      Vector2__operator_mul_assign__005be220(local_f8,DAT_005c07bc /* R:400.0f */);
+      Vector2__operator_mul_assign__005be220(local_f8, DAT_005c07bc /* R:400.0f */);
       goto LAB_004e0378;
     }
     if (arg2 < 2 || bVar6) {
-      Vector2__operator_mul_assign__005be220(local_f8,DAT_005c72cc /* R:360.0f */);
-    }
-    else {
+      Vector2__operator_mul_assign__005be220(local_f8, DAT_005c72cc /* R:360.0f */);
+    } else {
       if (arg2 == 4) {
-        Vector2__operator_mul_assign__005be220(local_f8,(float)*(int *)(*(long *)self + 0x58) + DAT_005c07bc /* R:400.0f */);
-LAB_004e0378:
+        Vector2__operator_mul_assign__005be220(local_f8, (float)*(int *)(*(long *)self + 0x58) +
+                                                             DAT_005c07bc /* R:400.0f */);
+      LAB_004e0378:
         *(uint32_t *)(self + lVar4 + 0xc4) = 1;
-        Vector2__operator_assign((Vector2 *)(self + lVar4 + 200),(Vector2 *)&local_108);
-        Vector2__operator_assign((Vector2 *)(self + lVar4 + 0xe0),local_f8);
+        Vector2__operator_assign((Vector2 *)(self + lVar4 + 200), (Vector2 *)&local_108);
+        Vector2__operator_assign((Vector2 *)(self + lVar4 + 0xe0), local_f8);
         *(uint32_t *)(self + lVar4 + 0xbc) = 0;
         *(uint32_t *)(self + lVar4 + 0xb8) = 0;
         *(uint32_t *)(self + lVar4 + 0x124) = 0;
@@ -156,13 +145,13 @@ LAB_004e0378:
         return;
       }
       if (arg2 == 5) {
-        Vector2__operator_mul_assign__005be220(local_f8,DAT_005be890 /* R:200.0f */);
+        Vector2__operator_mul_assign__005be220(local_f8, DAT_005be890 /* R:200.0f */);
         goto LAB_004e0378;
       }
     }
     *(uint32_t *)(self + lVar4 + 0xc4) = 1;
-    Vector2__operator_assign((Vector2 *)(self + lVar4 + 200),(Vector2 *)&local_108);
-    Vector2__operator_assign((Vector2 *)(self + lVar4 + 0xe0),local_f8);
+    Vector2__operator_assign((Vector2 *)(self + lVar4 + 200), (Vector2 *)&local_108);
+    Vector2__operator_assign((Vector2 *)(self + lVar4 + 0xe0), local_f8);
     *(uint32_t *)(self + lVar4 + 0xbc) = 0;
     *(uint32_t *)(self + lVar4 + 0xb8) = 0;
     *(uint32_t *)(self + lVar4 + 0x124) = 0;
@@ -174,7 +163,7 @@ LAB_004e0378:
       return;
     }
     iVar5 = iVar5 + 1;
-  } while( true );
+  } while (true);
 }
 
 /* ======================================================================
@@ -190,7 +179,7 @@ void __thiscall SMBShooter__SMBShooter(SMBShooter *self)
 
 {
   uint64_t uVar1;
-  
+
   *(uint64_t *)self = 0;
   *(uint32_t *)(self + 8) = 0x3f800000;
   *(uint32_t *)(self + 0xc) = 0;
@@ -203,7 +192,7 @@ void __thiscall SMBShooter__SMBShooter(SMBShooter *self)
   *(uint64_t *)(self + 0x70) = 0;
   *(uint32_t *)(self + 0x78) = 1;
   *(uint8_t ***)(self + 0x28) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 004ff4dc to 004ff4e0 has its CatchHandler @ 005003ad */
+  /* try { // try from 004ff4dc to 004ff4e0 has its CatchHandler @ 005003ad */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x80));
   uVar1 = vDefaultStart2D;
   *(uint32_t *)(self + 0xa8) = 0;
@@ -242,7 +231,7 @@ void __thiscall SMBShooter__SMBShooter(SMBShooter *self)
   *(uint64_t *)(self + 400) = 0;
   *(uint32_t *)(self + 0x198) = 1;
   *(uint8_t ***)(self + 0x148) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 004ff65b to 004ff65f has its CatchHandler @ 00500431 */
+  /* try { // try from 004ff65b to 004ff65f has its CatchHandler @ 00500431 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x1a0));
   uVar1 = vDefaultStart2D;
   *(uint32_t *)(self + 0x1c8) = 0;
@@ -281,7 +270,7 @@ void __thiscall SMBShooter__SMBShooter(SMBShooter *self)
   *(uint64_t *)(self + 0x2b0) = 0;
   *(uint32_t *)(self + 0x2b8) = 1;
   *(uint8_t ***)(self + 0x268) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 004ff7da to 004ff7de has its CatchHandler @ 0050042a */
+  /* try { // try from 004ff7da to 004ff7de has its CatchHandler @ 0050042a */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x2c0));
   uVar1 = vDefaultStart2D;
   *(uint32_t *)(self + 0x2e8) = 0;
@@ -320,7 +309,7 @@ void __thiscall SMBShooter__SMBShooter(SMBShooter *self)
   *(uint64_t *)(self + 0x3d0) = 0;
   *(uint32_t *)(self + 0x3d8) = 1;
   *(uint8_t ***)(self + 0x388) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 004ff959 to 004ff95d has its CatchHandler @ 00500423 */
+  /* try { // try from 004ff959 to 004ff95d has its CatchHandler @ 00500423 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x3e0));
   uVar1 = vDefaultStart2D;
   *(uint32_t *)(self + 0x408) = 0;
@@ -359,7 +348,7 @@ void __thiscall SMBShooter__SMBShooter(SMBShooter *self)
   *(uint64_t *)(self + 0x4f0) = 0;
   *(uint32_t *)(self + 0x4f8) = 1;
   *(uint8_t ***)(self + 0x4a8) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 004ffad8 to 004ffadc has its CatchHandler @ 0050041c */
+  /* try { // try from 004ffad8 to 004ffadc has its CatchHandler @ 0050041c */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x500));
   uVar1 = vDefaultStart2D;
   *(uint32_t *)(self + 0x528) = 0;
@@ -398,7 +387,7 @@ void __thiscall SMBShooter__SMBShooter(SMBShooter *self)
   *(uint64_t *)(self + 0x610) = 0;
   *(uint32_t *)(self + 0x618) = 1;
   *(uint8_t ***)(self + 0x5c8) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 004ffc57 to 004ffc5b has its CatchHandler @ 00500415 */
+  /* try { // try from 004ffc57 to 004ffc5b has its CatchHandler @ 00500415 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x620));
   uVar1 = vDefaultStart2D;
   *(uint32_t *)(self + 0x648) = 0;
@@ -437,7 +426,7 @@ void __thiscall SMBShooter__SMBShooter(SMBShooter *self)
   *(uint64_t *)(self + 0x730) = 0;
   *(uint32_t *)(self + 0x738) = 1;
   *(uint8_t ***)(self + 0x6e8) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 004ffdd6 to 004ffdda has its CatchHandler @ 0050040e */
+  /* try { // try from 004ffdd6 to 004ffdda has its CatchHandler @ 0050040e */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x740));
   uVar1 = vDefaultStart2D;
   *(uint32_t *)(self + 0x768) = 0;
@@ -476,7 +465,7 @@ void __thiscall SMBShooter__SMBShooter(SMBShooter *self)
   *(uint64_t *)(self + 0x850) = 0;
   *(uint32_t *)(self + 0x858) = 1;
   *(uint8_t ***)(self + 0x808) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 004fff55 to 004fff59 has its CatchHandler @ 00500407 */
+  /* try { // try from 004fff55 to 004fff59 has its CatchHandler @ 00500407 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x860));
   uVar1 = vDefaultStart2D;
   *(uint32_t *)(self + 0x888) = 0;
@@ -515,7 +504,7 @@ void __thiscall SMBShooter__SMBShooter(SMBShooter *self)
   *(uint64_t *)(self + 0x970) = 0;
   *(uint32_t *)(self + 0x978) = 1;
   *(uint8_t ***)(self + 0x928) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 005000d4 to 005000d8 has its CatchHandler @ 00500400 */
+  /* try { // try from 005000d4 to 005000d8 has its CatchHandler @ 00500400 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x980));
   uVar1 = vDefaultStart2D;
   *(uint32_t *)(self + 0x9a8) = 0;
@@ -554,7 +543,7 @@ void __thiscall SMBShooter__SMBShooter(SMBShooter *self)
   *(uint64_t *)(self + 0xa90) = 0;
   *(uint32_t *)(self + 0xa98) = 1;
   *(uint8_t ***)(self + 0xa48) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 00500253 to 00500257 has its CatchHandler @ 005003fc */
+  /* try { // try from 00500253 to 00500257 has its CatchHandler @ 005003fc */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0xaa0));
   uVar1 = vDefaultStart2D;
   *(uint32_t *)(self + 0xac8) = 0;
@@ -606,7 +595,7 @@ void __thiscall SMBShooter__SMBShooter__00500440(SMBShooter *self)
 
 {
   SceneObject2D *this_00;
-  
+
   if (self != (SMBShooter *)0xffffffffffffffd8) {
     this_00 = (SceneObject2D *)(self + 0xb68);
     do {

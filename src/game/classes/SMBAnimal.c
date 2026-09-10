@@ -72,11 +72,11 @@ void __thiscall SMBAnimal__SMBAnimal__004868d0(SMBAnimal *self)
   uint32_t local_34;
   uint32_t local_28;
   uint32_t local_24;
-  
+
   *(uint64_t *)(self + 0x48) = 0;
   *(uint32_t *)(self + 0x50) = 1;
   *(uint8_t ***)self = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 004868f3 to 004868f7 has its CatchHandler @ 00486d7d */
+  /* try { // try from 004868f3 to 004868f7 has its CatchHandler @ 00486d7d */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x58));
   uVar2 = vDefaultStart2D;
   *(uint32_t *)(self + 0x80) = 0;
@@ -137,8 +137,8 @@ void __thiscall SMBAnimal__SMBAnimal__004868d0(SMBAnimal *self)
   *(uint32_t *)(self + 0x224) = 0;
   local_48 = 0x3f800000;
   local_44 = 0x3f800000;
-                    /* try { // try from 00486b48 to 00486b4c has its CatchHandler @ 00486d78 */
-  Vector2__operator_assign((Vector2 *)(self + 0xd0),(Vector2 *)&local_48);
+  /* try { // try from 00486b48 to 00486b4c has its CatchHandler @ 00486d78 */
+  Vector2__operator_assign((Vector2 *)(self + 0xd0), (Vector2 *)&local_48);
   local_38 = 0;
   local_34 = 0;
   local_28 = 0x41100000;
@@ -150,24 +150,23 @@ void __thiscall SMBAnimal__SMBAnimal__004868d0(SMBAnimal *self)
     *(uint64_t *)(this_00 + -0x10) = 0x94;
     *(void **)(this_00 + -8) = pvVar5;
   }
-                    /* try { // try from 00486baa to 00486bae has its CatchHandler @ 00486d52 */
-  BoundingSquare__BoundingSquare(this_00,(Vector2 *)&local_38,0.0,(Vector2 *)&local_28);
+  /* try { // try from 00486baa to 00486bae has its CatchHandler @ 00486d52 */
+  BoundingSquare__BoundingSquare(this_00, (Vector2 *)&local_38, 0.0, (Vector2 *)&local_28);
   *(BoundingSquare **)(self + 0x48) = this_00;
-  local_58 = CONCAT31(local_58._1_3_,0x11);
+  local_58 = CONCAT31(local_58._1_3_, 0x11);
   *(uint32_t *)(self + 0x160) = 0x41200000;
   local_50 = 0;
   local_4c = 0;
   *(uint32_t *)(self + 0x15c) = local_58;
-                    /* try { // try from 00486bf0 to 00486d4c has its CatchHandler @ 00486d78 */
-  Vector2__operator_assign((Vector2 *)(self + 0x164),(Vector2 *)&local_50);
+  /* try { // try from 00486bf0 to 00486d4c has its CatchHandler @ 00486d78 */
+  Vector2__operator_assign((Vector2 *)(self + 0x164), (Vector2 *)&local_50);
   if (*(int *)(self + 0x214) == 0x11) {
     *(uint32_t *)(self + 0x118) = 0x47742400;
-  }
-  else {
-    iVar3 = GetRandomINT(100,200);
+  } else {
+    iVar3 = GetRandomINT(100, 200);
     *(float *)(self + 0x118) = (float)iVar3 * (float)iVar3;
     if (*(int *)(self + 0x214) != 0x11) {
-      iVar3 = GetRandomINT(0x96,0xfa);
+      iVar3 = GetRandomINT(0x96, 0xfa);
       *(float *)(self + 0x110) = (float)iVar3;
       if (*(int *)(self + 0x214) - 6U < 2) {
         *(float *)(self + 0x110) = (float)iVar3 * DAT_005be6e8 /* R:0.25f */;
@@ -175,9 +174,9 @@ void __thiscall SMBAnimal__SMBAnimal__004868d0(SMBAnimal *self)
       goto LAB_00486c67;
     }
   }
-  iVar3 = GetRandomINT(0x14,0x19);
+  iVar3 = GetRandomINT(0x14, 0x19);
   *(uint *)(self + 0x110) = (uint)(float)iVar3 ^ DAT_005be6f0 /* R:u32=2147483648 */;
-  iVar3 = GetRandomINT(200,0xfa);
+  iVar3 = GetRandomINT(200, 0xfa);
   *(float *)(self + 0x114) = (float)iVar3;
 LAB_00486c67:
   if (*(int *)(self + 0x218) != 0) {
@@ -185,7 +184,7 @@ LAB_00486c67:
     lVar6 = (long)*(int *)(self + 0x214) * 0x370 + 0x50 + *(long *)(self + 0x230);
     uVar1 = *(ushort *)(lVar6 + 0x28);
     if (uVar1 != 0) {
-      uVar4 = GetRandomINT(0,uVar1 - 1);
+      uVar4 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar6 + 0x50) = uVar4;
     *(uint32_t *)(self + 0x220) = 0;
@@ -206,7 +205,7 @@ LAB_00486c67:
  */
 /* SMBAnimal__CanJumpOver(GRIDBLOCK*) */
 
-bool __thiscall SMBAnimal__CanJumpOver(SMBAnimal *self,GRIDBLOCK *arg1)
+bool __thiscall SMBAnimal__CanJumpOver(SMBAnimal *self, GRIDBLOCK *arg1)
 
 {
   uint32_t uVar1;
@@ -215,18 +214,17 @@ bool __thiscall SMBAnimal__CanJumpOver(SMBAnimal *self,GRIDBLOCK *arg1)
   bool bVar4;
   char local_28;
   int local_10;
-  int local_c [3];
-  
+  int local_c[3];
+
   bVar4 = false;
   if (arg1 != (GRIDBLOCK *)0x0) {
-    TileLevel__GetGridCoordsFromBlock
-              (*(TileLevel **)(SuperMeatBoy + 0x40),arg1,&local_10,local_c);
-    puVar2 = (uint32_t *)
-             TileLevel__GetGridBlock(*(TileLevel **)(SuperMeatBoy + 0x40),local_10,local_c[0] + 2,0)
-    ;
+    TileLevel__GetGridCoordsFromBlock(*(TileLevel **)(SuperMeatBoy + 0x40), arg1, &local_10,
+                                      local_c);
+    puVar2 = (uint32_t *)TileLevel__GetGridBlock(*(TileLevel **)(SuperMeatBoy + 0x40), local_10,
+                                                 local_c[0] + 2, 0);
     uVar1 = *puVar2;
-    pcVar3 = (char *)TileLevel__GetGridBlock
-                               (*(TileLevel **)(SuperMeatBoy + 0x40),local_10,local_c[0] + 3,0);
+    pcVar3 = (char *)TileLevel__GetGridBlock(*(TileLevel **)(SuperMeatBoy + 0x40), local_10,
+                                             local_c[0] + 3, 0);
     bVar4 = true;
     if (*pcVar3 != '\0') {
       local_28 = (char)uVar1;
@@ -250,10 +248,10 @@ bool __thiscall SMBAnimal__CanJumpDown(SMBAnimal *self)
 {
   bool bVar1;
   int iVar2;
-  
+
   bVar1 = true;
   if ((*(int *)(self + 0x210) != 0) && (bVar1 = false, *(int *)(self + 0x210) == 1)) {
-    iVar2 = GetRandomINT(0,500);
+    iVar2 = GetRandomINT(0, 500);
     return iVar2 == 0x96;
   }
   return bVar1;
@@ -273,15 +271,15 @@ float __thiscall SMBAnimal__GetHorzSpeed(SMBAnimal *self)
 {
   int iVar1;
   float fVar2;
-  
+
   if (*(int *)(self + 0x214) == 0x11) {
-    iVar1 = GetRandomINT(0x14,0x19);
+    iVar1 = GetRandomINT(0x14, 0x19);
     *(uint *)(self + 0x110) = (uint)(float)iVar1 ^ DAT_005be6f0 /* R:u32=2147483648 */;
-    iVar1 = GetRandomINT(200,0xfa);
+    iVar1 = GetRandomINT(200, 0xfa);
     *(float *)(self + 0x114) = (float)iVar1;
     return *(float *)(self + 0x110);
   }
-  iVar1 = GetRandomINT(0x96,0xfa);
+  iVar1 = GetRandomINT(0x96, 0xfa);
   fVar2 = (float)iVar1;
   *(float *)(self + 0x110) = fVar2;
   if (1 < *(int *)(self + 0x214) - 6U) {
@@ -306,9 +304,9 @@ float __thiscall SMBAnimal__GetSafeDistance(SMBAnimal *self)
 {
   int iVar1;
   float fVar2;
-  
+
   if (*(int *)(self + 0x214) != 0x11) {
-    iVar1 = GetRandomINT(100,200);
+    iVar1 = GetRandomINT(100, 200);
     fVar2 = (float)iVar1 * (float)iVar1;
     *(float *)(self + 0x118) = fVar2;
     return fVar2;
@@ -356,26 +354,25 @@ uint32_t __thiscall SMBAnimal__GetAnimalAIState(SMBAnimal *self)
  */
 /* SMBAnimal__SetState(tagSMBAnimalState) */
 
-void __thiscall SMBAnimal__SetState(SMBAnimal *self,int arg2)
+void __thiscall SMBAnimal__SetState(SMBAnimal *self, int arg2)
 
 {
   ushort uVar1;
   uint32_t uVar2;
   long lVar3;
-  
+
   if (*(int *)(self + 0x218) != arg2) {
-    lVar3 = (long)*(int *)(self + 0x214) * 0x370 + 0x50 + (long)arg2 * 0x58 +
-            *(long *)(self + 0x230);
+    lVar3 =
+        (long)*(int *)(self + 0x214) * 0x370 + 0x50 + (long)arg2 * 0x58 + *(long *)(self + 0x230);
     uVar2 = 0;
     uVar1 = *(ushort *)(lVar3 + 0x28);
     if (uVar1 != 0) {
-      uVar2 = GetRandomINT(0,uVar1 - 1);
+      uVar2 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar3 + 0x50) = uVar2;
     *(uint32_t *)(self + 0x220) = 0;
-    uVar2 = *(uint32_t *)
-             ((long)*(int *)(self + 0x214) * 0x370 + (long)arg2 * 0x58 + *(long *)(self + 0x230)
-             + 0xa0);
+    uVar2 = *(uint32_t *)((long)*(int *)(self + 0x214) * 0x370 + (long)arg2 * 0x58 +
+                          *(long *)(self + 0x230) + 0xa0);
     *(int *)(self + 0x218) = arg2;
     *(uint32_t *)(self + 0x228) = 1;
     *(uint32_t *)(self + 0x21c) = uVar2;
@@ -405,21 +402,18 @@ void __thiscall SMBAnimal__Update(SMBAnimal *self)
   uint32_t local_48;
   uint32_t local_44;
   uint32_t local_20;
-  
-  uVar3 = IsPointWithinBoundingSquare
-                    ((BoundingSquare *)(*(long *)(SuperMeatBoy + 0x38) + 0x140),
-                     (Vector2 *)(self + 0xa0));
+
+  uVar3 = IsPointWithinBoundingSquare((BoundingSquare *)(*(long *)(SuperMeatBoy + 0x38) + 0x140),
+                                      (Vector2 *)(self + 0xa0));
   *(uint32_t *)(self + 0x50) = uVar3;
   lVar2 = SuperMeatBoy;
   if (*(int *)(self + 0x210) != 3) {
     uVar1 = *(uint *)(self + 0x214);
     if (uVar1 < 4) {
       SMBAnimalGroundCritterUpdate(self);
-    }
-    else if (uVar1 - 4 < 4) {
+    } else if (uVar1 - 4 < 4) {
       SMBAnimalAirCritterUpdate(self);
-    }
-    else if (uVar1 - 0xc < 4) {
+    } else if (uVar1 - 0xc < 4) {
       *(uint32_t *)(self + 0x98) = 0x3f800000;
       local_20 = 1;
       local_68 = 0;
@@ -428,27 +422,21 @@ void __thiscall SMBAnimal__Update(SMBAnimal *self)
       local_50 = 0;
       local_48 = 0;
       local_44 = 0;
-      TileLevel__TileCollision
-                (*(TileLevel **)(lVar2 + 0x40),(SceneObject2D *)self,(TileCollisionInfo *)&local_68)
-      ;
-      Apply2DPhysics((SceneObject2D *)self,fOneFrameTimeStep);
-    }
-    else if (uVar1 - 8 < 4) {
+      TileLevel__TileCollision(*(TileLevel **)(lVar2 + 0x40), (SceneObject2D *)self,
+                               (TileCollisionInfo *)&local_68);
+      Apply2DPhysics((SceneObject2D *)self, fOneFrameTimeStep);
+    } else if (uVar1 - 8 < 4) {
       SMBAnimalGroundEnemyUpdate(self);
-    }
-    else if (uVar1 == 0x10) {
+    } else if (uVar1 == 0x10) {
       SMBBossGroundCritterUpdate(self);
-    }
-    else if (uVar1 == 0x11) {
+    } else if (uVar1 == 0x11) {
       SMBChargerUpdate(self);
-    }
-    else if (uVar1 == 0x12) {
+    } else if (uVar1 == 0x12) {
       SMBBooUpdate(self);
-    }
-    else if (uVar1 == 0x13) {
+    } else if (uVar1 == 0x13) {
       SMBHellBossBoyUpdate(self);
     }
-    Vector2__operator_assign((Vector2 *)(self + 0x164),(Vector2 *)(self + 0xa0));
+    Vector2__operator_assign((Vector2 *)(self + 0x164), (Vector2 *)(self + 0xa0));
     *(float *)(self + 0x11c) = *(float *)(self + 0x11c) + fOneFrameTimeStep;
   }
   return;
@@ -463,11 +451,11 @@ void __thiscall SMBAnimal__Update(SMBAnimal *self)
  */
 /* SMBAnimal__SetAIState(tagSMBAnimalAIState) */
 
-void __thiscall SMBAnimal__SetAIState(SMBAnimal *self,int arg2)
+void __thiscall SMBAnimal__SetAIState(SMBAnimal *self, int arg2)
 
 {
   int iVar1;
-  
+
   if (*(int *)(self + 0x210) != arg2) {
     *(int *)(self + 0x210) = arg2;
     *(uint32_t *)(self + 0x11c) = 0;
@@ -476,7 +464,7 @@ void __thiscall SMBAnimal__SetAIState(SMBAnimal *self,int arg2)
       return;
     }
     if (arg2 == 2) {
-      iVar1 = GetRandomINT(3,5);
+      iVar1 = GetRandomINT(3, 5);
       *(float *)(self + 0x120) = (float)iVar1;
       return;
     }
@@ -494,10 +482,10 @@ void __thiscall SMBAnimal__SetAIState(SMBAnimal *self,int arg2)
  */
 /* SMBAnimal__SetWayPoint(int, Vector2 const&) */
 
-void __thiscall SMBAnimal__SetWayPoint(SMBAnimal *self,int arg1,Vector2 *arg2)
+void __thiscall SMBAnimal__SetWayPoint(SMBAnimal *self, int arg1, Vector2 *arg2)
 
 {
-  Vector2__operator_assign((Vector2 *)(self + (long)arg1 * 8 + 0x124),arg2);
+  Vector2__operator_assign((Vector2 *)(self + (long)arg1 * 8 + 0x124), arg2);
   return;
 }
 
@@ -525,22 +513,21 @@ void __thiscall SMBAnimal__Reset(SMBAnimal *self)
   byte bVar10;
   uint32_t local_28;
   uint32_t local_24;
-  
+
   bVar10 = 0;
   *(uint32_t *)(self + 0x16c) = 0xffffffff;
   if (*(int *)(self + 0x214) - 8U < 4) {
     local_28 = 0;
     local_24 = 0;
-    Vector2__operator_assign((Vector2 *)(self + 0xb8),(Vector2 *)&local_28);
-  }
-  else {
-    Vector2__operator_assign((Vector2 *)(self + 0xb8),(Vector2 *)(self + 0x108));
+    Vector2__operator_assign((Vector2 *)(self + 0xb8), (Vector2 *)&local_28);
+  } else {
+    Vector2__operator_assign((Vector2 *)(self + 0xb8), (Vector2 *)(self + 0x108));
   }
   *(uint32_t *)(self + 0x110) = *(uint32_t *)(self + 0x108);
-  Vector2__operator_assign((Vector2 *)(self + 0xa0),(Vector2 *)(self + 0xf8));
+  Vector2__operator_assign((Vector2 *)(self + 0xa0), (Vector2 *)(self + 0xf8));
   *(uint32_t *)(self + 0xd8) = 0;
-  Vector2__operator_assign((Vector2 *)(self + 0xa8),(Vector2 *)(self + 0xf8));
-  Vector2__operator_assign((Vector2 *)(self + 0x14c),(Vector2 *)(self + 0x100));
+  Vector2__operator_assign((Vector2 *)(self + 0xa8), (Vector2 *)(self + 0xf8));
+  Vector2__operator_assign((Vector2 *)(self + 0x14c), (Vector2 *)(self + 0x100));
   pSVar8 = self + 0x170;
   uVar6 = 0x50;
   bVar9 = ((ulong)pSVar8 & 1) != 0;
@@ -622,23 +609,21 @@ void __thiscall SMBAnimal__Reset(SMBAnimal *self)
       uVar2 = 0;
       uVar1 = *(ushort *)(lVar7 + 0x1d58);
       if (uVar1 != 0) {
-        uVar2 = GetRandomINT(0,uVar1 - 1);
+        uVar2 = GetRandomINT(0, uVar1 - 1);
       }
       *(uint32_t *)(lVar7 + 0x1d80) = uVar2;
       *(uint32_t *)(self + 0x220) = 0;
-      uVar2 = *(uint32_t *)
-               ((long)*(int *)(self + 0x214) * 0x370 + *(long *)(self + 0x230) + 0x200);
+      uVar2 = *(uint32_t *)((long)*(int *)(self + 0x214) * 0x370 + *(long *)(self + 0x230) + 0x200);
       *(uint32_t *)(self + 0x218) = 4;
       *(uint32_t *)(self + 0x228) = 1;
       *(uint32_t *)(self + 0x21c) = uVar2;
     }
-  }
-  else if (*(int *)(self + 0x218) != 0) {
+  } else if (*(int *)(self + 0x218) != 0) {
     uVar2 = 0;
     lVar7 = (long)*(int *)(self + 0x214) * 0x370 + 0x50 + *(long *)(self + 0x230);
     uVar1 = *(ushort *)(lVar7 + 0x28);
     if (uVar1 != 0) {
-      uVar2 = GetRandomINT(0,uVar1 - 1);
+      uVar2 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar7 + 0x50) = uVar2;
     *(uint32_t *)(self + 0x220) = 0;

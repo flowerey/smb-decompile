@@ -18,7 +18,7 @@
  */
 /* RaptureBoss__GetPosition() */
 
-RaptureBoss * __thiscall RaptureBoss__GetPosition(RaptureBoss *self)
+RaptureBoss *__thiscall RaptureBoss__GetPosition(RaptureBoss *self)
 
 {
   *(uint32_t *)self = 0;
@@ -35,18 +35,18 @@ RaptureBoss * __thiscall RaptureBoss__GetPosition(RaptureBoss *self)
  */
 /* RaptureBoss__GetCameraFocus(FPUVector*) */
 
-void __thiscall RaptureBoss__GetCameraFocus(RaptureBoss *self,FPUVector *arg1)
+void __thiscall RaptureBoss__GetCameraFocus(RaptureBoss *self, FPUVector *arg1)
 
 {
   uint32_t uVar1;
   MeatBoyCharactor *pMVar2;
   uint32_t *puVar3;
   long lVar4;
-  
-  pMVar2 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy,1);
+
+  pMVar2 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   puVar3 = (uint32_t *)MeatBoyCharactor__getRenderPos(pMVar2);
   *(uint32_t *)arg1 = *puVar3;
-  pMVar2 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy,1);
+  pMVar2 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   lVar4 = MeatBoyCharactor__getRenderPos(pMVar2);
   uVar1 = *(uint32_t *)(lVar4 + 4);
   *(uint32_t *)(arg1 + 8) = 0;
@@ -67,13 +67,13 @@ void __thiscall RaptureBoss__OnDeath(RaptureBoss *self)
 
 {
   MeatBoyCharactor *this_00;
-  
+
   if ((char)self[0x1db] < '\0') {
     return;
   }
-  ScreenFlashManager__SetFade
-            ((ScreenFlashManager *)&ScreenFlash,DAT_005bff40 /* R:6.199999809265137f */,(ColorTemplate *)::cWhite);
-  this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy,1);
+  ScreenFlashManager__SetFade((ScreenFlashManager *)&ScreenFlash,
+                              DAT_005bff40 /* R:6.199999809265137f */, (ColorTemplate *)::cWhite);
+  this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   MeatBoyCharactor__RemoveControls(this_00);
   self[0x1db] = (RaptureBoss)((byte)self[0x1db] | 0x80);
   return;
@@ -100,7 +100,7 @@ void __thiscall RaptureBoss__Reset(RaptureBoss *self)
   uint32_t local_44;
   uint32_t local_38;
   uint32_t local_34;
-  
+
   iVar4 = 0;
   do {
     iVar3 = 0;
@@ -111,7 +111,7 @@ void __thiscall RaptureBoss__Reset(RaptureBoss *self)
     *(uint32_t *)(self + lVar1 + 0x27c) = 1;
     local_38 = 0;
     local_34 = 0xc47a0000;
-    Vector2__operator_assign((Vector2 *)(self + lVar1 + 0x280),(Vector2 *)&local_38);
+    Vector2__operator_assign((Vector2 *)(self + lVar1 + 0x280), (Vector2 *)&local_38);
     self[lVar1 + 0x387] = (RaptureBoss)((byte)self[lVar1 + 0x387] & 0x80);
     *(uint32_t *)(self + lVar1 + 0x388) = 0;
     do {
@@ -119,7 +119,7 @@ void __thiscall RaptureBoss__Reset(RaptureBoss *self)
       iVar3 = iVar3 + 1;
       local_48 = 0;
       local_44 = 0xc47a0000;
-      Vector2__operator_assign((Vector2 *)(self + lVar2 * 8 + lVar1 + 0x2dc),(Vector2 *)&local_48);
+      Vector2__operator_assign((Vector2 *)(self + lVar2 * 8 + lVar1 + 0x2dc), (Vector2 *)&local_48);
     } while (iVar3 != 0x15);
     iVar4 = iVar4 + 1;
   } while (iVar4 != 3);
@@ -140,7 +140,7 @@ void __thiscall RaptureBoss__Reset(RaptureBoss *self)
   self[0x6e7] = (RaptureBoss)((byte)self[0x6e7] | 0x80);
   SMBBoss__Reset((SMBBoss *)self);
   self[0x1db] = (RaptureBoss)((byte)self[0x1db] & 0x3f);
-  this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy,1);
+  this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   MeatBoyCharactor__RestoreControls(this_00);
   return;
 }
@@ -158,10 +158,10 @@ void __thiscall RaptureBoss__RaptureBoss__00483ed0(RaptureBoss *self)
 
 {
   SceneObject2D *this_00;
-  
+
   *(uint8_t ***)self = &PTR__RaptureBoss_005c1390;
   if (*(long **)(self + 0x170) != (long *)0x0) {
-                    /* try { // try from 00483d73 to 00483e4d has its CatchHandler @ 00483e86 */
+    /* try { // try from 00483d73 to 00483e4d has its CatchHandler @ 00483e86 */
     (**(code **)(**(long **)(self + 0x170) + 8))();
   }
   if (*(long **)(self + 0x178) != (long *)0x0) {
@@ -203,7 +203,7 @@ void __thiscall RaptureBoss__RaptureBoss__00483ed0(RaptureBoss *self)
   this_00 = (SceneObject2D *)(self + 0x6f0);
   do {
     this_00 = this_00 + -0x1b0;
-                    /* try { // try from 00483e6a to 00483e6e has its CatchHandler @ 00483eb0 */
+    /* try { // try from 00483e6a to 00483e6e has its CatchHandler @ 00483eb0 */
     SceneObject2D__SceneObject2D__0059b220(this_00);
   } while ((SceneObject2D *)(self + 0x1e0) != this_00);
   SMBBoss__SMBBoss__0048d920((SMBBoss *)self);
@@ -249,19 +249,19 @@ void __thiscall RaptureBoss__RaptureBoss__00483ef0(RaptureBoss *self)
   MeatBoyCharactor *this_01;
   int iVar6;
   int iVar7;
-  char local_78 [32];
-  uint8_t *local_58 [2];
+  char local_78[32];
+  uint8_t *local_58[2];
   uint32_t local_48;
   uint32_t local_44;
   uint32_t local_38;
   uint32_t local_34;
-  
+
   SMBBoss__SMBBoss__0048d980((SMBBoss *)self);
   *(uint8_t ***)self = &PTR__RaptureBoss_005c1390;
   *(uint64_t *)(self + 0x228) = 0;
   *(uint32_t *)(self + 0x230) = 1;
   *(uint8_t ***)(self + 0x1e0) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 00483f3a to 00483f3e has its CatchHandler @ 00484612 */
+  /* try { // try from 00483f3a to 00483f3e has its CatchHandler @ 00484612 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x238));
   uVar4 = vDefaultStart2D;
   *(uint32_t *)(self + 0x260) = 0;
@@ -292,7 +292,7 @@ void __thiscall RaptureBoss__RaptureBoss__00483ef0(RaptureBoss *self)
   *(uint64_t *)(self + 0x3d8) = 0;
   *(uint32_t *)(self + 0x3e0) = 1;
   *(uint8_t ***)(self + 0x390) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 00484068 to 0048406c has its CatchHandler @ 004846ea */
+  /* try { // try from 00484068 to 0048406c has its CatchHandler @ 004846ea */
   CriticalSection__CriticalSection((CriticalSection *)(self + 1000));
   uVar4 = vDefaultStart2D;
   *(uint32_t *)(self + 0x410) = 0;
@@ -323,7 +323,7 @@ void __thiscall RaptureBoss__RaptureBoss__00483ef0(RaptureBoss *self)
   *(uint64_t *)(self + 0x588) = 0;
   *(uint32_t *)(self + 0x590) = 1;
   *(uint8_t ***)(self + 0x540) = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 00484196 to 0048419a has its CatchHandler @ 004846e3 */
+  /* try { // try from 00484196 to 0048419a has its CatchHandler @ 004846e3 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x598));
   uVar4 = vDefaultStart2D;
   *(uint32_t *)(self + 0x5c0) = 0;
@@ -352,47 +352,58 @@ void __thiscall RaptureBoss__RaptureBoss__00483ef0(RaptureBoss *self)
   *(uint32_t *)(self + 0x62c) = 0;
   *(uint32_t *)(self + 0x630) = 0;
   local_58[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 004842a9 to 004842ba has its CatchHandler @ 004846de */
-  pcVar3 = (char *)FormatResourcePath("/Bosses/boss5.am",local_58);
+  /* try { // try from 004842a9 to 004842ba has its CatchHandler @ 004846de */
+  pcVar3 = (char *)FormatResourcePath("/Bosses/boss5.am", local_58);
   this_00 = operator_new(0xb0);
-                    /* try { // try from 004842c4 to 004842c8 has its CatchHandler @ 004846a9 */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_00,pcVar3);
+  /* try { // try from 004842c4 to 004842c8 has its CatchHandler @ 004846a9 */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_00, pcVar3);
   *(FlashAnimationLibrary **)(self + 0x20) = this_00;
-                    /* try { // try from 004842db to 004845f2 has its CatchHandler @ 004846de */
-  Sprint("maggotbody%i",local_78,0);
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),local_78);
+  /* try { // try from 004842db to 004845f2 has its CatchHandler @ 004846de */
+  Sprint("maggotbody%i", local_78, 0);
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        local_78);
   *(uint64_t *)(self + 0x170) = uVar4;
-  Sprint("maggotbody%i",local_78,1);
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),local_78);
+  Sprint("maggotbody%i", local_78, 1);
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        local_78);
   *(uint64_t *)(self + 0x178) = uVar4;
-  Sprint("maggotbody%i",local_78,2);
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),local_78);
+  Sprint("maggotbody%i", local_78, 2);
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        local_78);
   *(uint64_t *)(self + 0x180) = uVar4;
-  Sprint("maggotbody%i",local_78,3);
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),local_78);
+  Sprint("maggotbody%i", local_78, 3);
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        local_78);
   *(uint64_t *)(self + 0x188) = uVar4;
-  Sprint("maggotbody%i",local_78,4);
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),local_78);
+  Sprint("maggotbody%i", local_78, 4);
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        local_78);
   *(uint64_t *)(self + 400) = uVar4;
-  Sprint("maggotbody%i",local_78,5);
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),local_78);
+  Sprint("maggotbody%i", local_78, 5);
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        local_78);
   *(uint64_t *)(self + 0x198) = uVar4;
-  Sprint("maggotbody%i",local_78,6);
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),local_78);
+  Sprint("maggotbody%i", local_78, 6);
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        local_78);
   *(uint64_t *)(self + 0x1a0) = uVar4;
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),"attack1");
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "attack1");
   *(uint64_t *)(self + 0x1b8) = uVar4;
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    (*(FlashAnimationLibrary **)(self + 0x20),"enterground");
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "enterground");
   *(uint64_t *)(self + 0x1c0) = uVar4;
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),"burst");
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "burst");
   *(uint64_t *)(self + 0x1a8) = uVar4;
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),"burst12");
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "burst12");
   *(uint64_t *)(self + 0x1b0) = uVar4;
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    (*(FlashAnimationLibrary **)(self + 0x20),"maggotbullet");
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "maggotbullet");
   *(uint64_t *)(self + 0x1d0) = uVar4;
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),"death");
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "death");
   *(uint64_t *)(self + 0x1c8) = uVar4;
   iVar7 = 0;
   do {
@@ -403,14 +414,15 @@ void __thiscall RaptureBoss__RaptureBoss__00483ef0(RaptureBoss *self)
     *(uint32_t *)(self + lVar5 + 0x27c) = 1;
     local_38 = 0;
     local_34 = 0xc47a0000;
-    Vector2__operator_assign((Vector2 *)(self + lVar5 + 0x280),(Vector2 *)&local_38);
+    Vector2__operator_assign((Vector2 *)(self + lVar5 + 0x280), (Vector2 *)&local_38);
     self[lVar5 + 0x387] = (RaptureBoss)((byte)self[lVar5 + 0x387] & 0x80);
     *(uint32_t *)(self + lVar5 + 0x388) = 0;
     iVar6 = 0;
     do {
       local_48 = 0;
       local_44 = 0xc47a0000;
-      Vector2__operator_assign((Vector2 *)(self + (long)iVar6 * 8 + lVar5 + 0x2dc),(Vector2 *)&local_48);
+      Vector2__operator_assign((Vector2 *)(self + (long)iVar6 * 8 + lVar5 + 0x2dc),
+                               (Vector2 *)&local_48);
       iVar6 = iVar6 + 1;
     } while (iVar6 != 0x15);
     iVar7 = iVar7 + 1;
@@ -432,7 +444,7 @@ void __thiscall RaptureBoss__RaptureBoss__00483ef0(RaptureBoss *self)
   self[0x6e7] = (RaptureBoss)((byte)self[0x6e7] | 0x80);
   SMBBoss__Reset((SMBBoss *)self);
   self[0x1db] = (RaptureBoss)((byte)self[0x1db] & 0x3f);
-  this_01 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy,1);
+  this_01 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   MeatBoyCharactor__RestoreControls(this_01);
   pGVar2 = SuperMeatBoy;
   *(uint32_t *)(self + 0x16c) = 3;
@@ -461,18 +473,17 @@ void __thiscall RaptureBoss__RaptureBoss__00483ef0(RaptureBoss *self)
  */
 /* RaptureBoss__AddMaggotEffect(FlashLibraryInstance*, Vector2 const&) */
 
-void __thiscall
-RaptureBoss__AddMaggotEffect(RaptureBoss *self,FlashLibraryInstance *arg1,Vector2 *arg2)
+void __thiscall RaptureBoss__AddMaggotEffect(RaptureBoss *self, FlashLibraryInstance *arg1,
+                                             Vector2 *arg2)
 
 {
   int iVar1;
   long lVar2;
   RaptureBoss *pRVar3;
-  
+
   if (*(long *)(self + 0x6f0) == 0) {
     iVar1 = 0;
-  }
-  else {
+  } else {
     pRVar3 = self + 0x708;
     iVar1 = 1;
     while (*(long *)pRVar3 != 0) {
@@ -485,7 +496,7 @@ RaptureBoss__AddMaggotEffect(RaptureBoss *self,FlashLibraryInstance *arg1,Vector
   }
   lVar2 = (long)iVar1 * 0x18;
   *(FlashLibraryInstance **)(self + lVar2 + 0x6f0) = arg1;
-  Vector2__operator_assign((Vector2 *)(self + lVar2 + 0x6f8),arg2);
+  Vector2__operator_assign((Vector2 *)(self + lVar2 + 0x6f8), arg2);
   *(uint32_t *)(self + lVar2 + 0x700) = 0;
   return;
 }
@@ -505,7 +516,7 @@ void __thiscall RaptureBoss__RenderMaggotEffects(RaptureBoss *self)
   int iVar1;
   RaptureBoss *pRVar2;
   int iVar3;
-  
+
   iVar3 = 0x14;
   pRVar2 = self + 0x6f0;
   do {
@@ -536,7 +547,7 @@ void __thiscall RaptureBoss__RenderMaggotEffects(RaptureBoss *self)
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 /* RaptureBoss__UpdateMaggot(RaptureBoss__Maggot) */
 
-void __thiscall RaptureBoss__UpdateMaggot(RaptureBoss *self,Maggot *arg1)
+void __thiscall RaptureBoss__UpdateMaggot(RaptureBoss *self, Maggot *arg1)
 
 {
   GSuperMeatBoy *this_00;
@@ -551,19 +562,19 @@ void __thiscall RaptureBoss__UpdateMaggot(RaptureBoss *self,Maggot *arg1)
   double dVar9;
   double local_98;
   double local_90;
-  Bounds local_88 [4];
+  Bounds local_88[4];
   uint32_t local_84;
   uint32_t local_80;
   uint32_t local_7c;
   uint32_t local_78;
   uint32_t local_74;
-  Vector2 local_68 [16];
-  Vector2 local_58 [16];
+  Vector2 local_68[16];
+  Vector2 local_58[16];
   uint32_t local_48;
   uint32_t local_44;
   uint32_t local_38;
   uint32_t local_34;
-  
+
   fVar7 = fOneFrameTimeStep;
   iVar2 = *(int *)(arg1 + 0xf8);
   fVar8 = *(float *)(arg1 + 0x1a8) - fOneFrameTimeStep;
@@ -571,14 +582,14 @@ void __thiscall RaptureBoss__UpdateMaggot(RaptureBoss *self,Maggot *arg1)
   this_00 = SuperMeatBoy;
   if (iVar2 == 0) {
     iVar2 = 0;
-    GetRandomINT(0,100);
+    GetRandomINT(0, 100);
     *(ushort *)(arg1 + 0x1a4) = *(ushort *)(arg1 + 0x1a4) & 0xf000;
     *(uint *)(arg1 + 0x1a4) = *(uint *)(arg1 + 0x1a4) & 0xff000fff;
     *(uint32_t *)(arg1 + 0xf8) = 0;
     *(uint32_t *)(arg1 + 0x9c) = 1;
     local_38 = 0;
     local_34 = 0xc47a0000;
-    Vector2__operator_assign((Vector2 *)(arg1 + 0xa0),(Vector2 *)&local_38);
+    Vector2__operator_assign((Vector2 *)(arg1 + 0xa0), (Vector2 *)&local_38);
     arg1[0x1a7] = (Maggot)((byte)arg1[0x1a7] & 0x80);
     *(uint32_t *)(arg1 + 0x1a8) = 0;
     do {
@@ -586,19 +597,18 @@ void __thiscall RaptureBoss__UpdateMaggot(RaptureBoss *self,Maggot *arg1)
       iVar2 = iVar2 + 1;
       local_48 = 0;
       local_44 = 0xc47a0000;
-      Vector2__operator_assign((Vector2 *)(arg1 + lVar4 * 8 + 0xfc),(Vector2 *)&local_48);
+      Vector2__operator_assign((Vector2 *)(arg1 + lVar4 * 8 + 0xfc), (Vector2 *)&local_48);
     } while (iVar2 != 0x15);
     if ((char)arg1[0x1a7] < '\0') {
-      iVar2 = GetRandomINT(0x5dc,0x708);
+      iVar2 = GetRandomINT(0x5dc, 0x708);
       *(float *)(arg1 + 0x1a8) = (float)iVar2 * DAT_005c01d0 /* R:0.0010000000474974513f */;
-    }
-    else {
-      iVar2 = GetRandomINT(500,0x4b0);
+    } else {
+      iVar2 = GetRandomINT(500, 0x4b0);
       *(float *)(arg1 + 0x1a8) = (float)iVar2 * DAT_005c01d0 /* R:0.0010000000474974513f */;
     }
     *(uint32_t *)(arg1 + 0xf8) = 3;
-    iVar2 = GetRandomINT(0xffffffe2,0x1e);
-    lVar4 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+    iVar2 = GetRandomINT(0xffffffe2, 0x1e);
+    lVar4 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
     fVar7 = (float)iVar2 + *(float *)(lVar4 + 0xa0);
     *(float *)(arg1 + 0xa0) = fVar7;
     *(uint32_t *)(arg1 + 0xa4) = *(uint32_t *)(self + 0x2c);
@@ -616,17 +626,18 @@ void __thiscall RaptureBoss__UpdateMaggot(RaptureBoss *self,Maggot *arg1)
     *(uint32_t *)(arg1 + 0x1ac) = 0;
     *(float *)(arg1 + 0xa0) = fVar7;
     *(uint *)(arg1 + 0x1a4) = *(uint *)(arg1 + 0x1a4) & 0xff000fff | 0x1000;
-  }
-  else {
+  } else {
     if (iVar2 == 3) {
       if (0.0 <= fVar8) {
         return;
       }
-      iVar2 = GetRandomINT(0,100);
+      iVar2 = GetRandomINT(0, 100);
       if ((((((0x32 < iVar2) && (iVar2 = *(int *)(self + 0x2d8), iVar2 != 1)) && (iVar2 != 10)) &&
-           (((iVar2 != 0xc && (iVar2 = *(int *)(self + 0x488), iVar2 != 10)) &&
-            ((iVar2 != 1 && ((iVar2 != 0xc && (iVar2 = *(int *)(self + 0x638), iVar2 != 10))))))))
-          && (iVar2 != 1)) && (iVar2 != 0xc)) {
+            (((iVar2 != 0xc && (iVar2 = *(int *)(self + 0x488), iVar2 != 10)) &&
+              ((iVar2 != 1 &&
+                ((iVar2 != 0xc && (iVar2 = *(int *)(self + 0x638), iVar2 != 10)))))))) &&
+           (iVar2 != 1)) &&
+          (iVar2 != 0xc)) {
         *(uint32_t *)(arg1 + 0xf8) = 1;
         return;
       }
@@ -635,14 +646,13 @@ void __thiscall RaptureBoss__UpdateMaggot(RaptureBoss *self,Maggot *arg1)
     }
     if (iVar2 == 8) {
       *(float *)(arg1 + 0xa4) = DAT_005c13fc /* R:20.0f */ + *(float *)(self + 0x2c);
-      lVar4 = GSuperMeatBoy__getChar(this_00,1);
+      lVar4 = GSuperMeatBoy__getChar(this_00, 1);
       fVar7 = *(float *)(arg1 + 0xa0);
       if (fVar7 < *(float *)(lVar4 + 0xa0)) {
         fVar7 = fVar7 - DAT_005c1400 /* R:100.0f */;
         *(uint32_t *)(arg1 + 0xb8) = 0x43fa0000;
         *(float *)(arg1 + 0xa0) = fVar7;
-      }
-      else {
+      } else {
         fVar7 = fVar7 + DAT_005c1400 /* R:100.0f */;
         *(uint32_t *)(arg1 + 0xb8) = 0xc3fa0000;
         *(float *)(arg1 + 0xa0) = fVar7;
@@ -654,40 +664,33 @@ void __thiscall RaptureBoss__UpdateMaggot(RaptureBoss *self,Maggot *arg1)
         fVar7 = *(float *)(self + 0x88);
       }
       *(float *)(arg1 + 0xa0) = fVar7;
-      Apply2DPhysics((SceneObject2D *)arg1,fOneFrameTimeStep);
-      Vector2__operator_assign((Vector2 *)
-                         (arg1 +
-                         (long)((short)(*(short *)(arg1 + 0x1a4) << 4) >> 4) * 8 + 0xfc),
-                         (Vector2 *)(arg1 + 0xa0));
+      Apply2DPhysics((SceneObject2D *)arg1, fOneFrameTimeStep);
+      Vector2__operator_assign(
+          (Vector2 *)(arg1 + (long)((short)(*(short *)(arg1 + 0x1a4) << 4) >> 4) * 8 + 0xfc),
+          (Vector2 *)(arg1 + 0xa0));
       *(uint32_t *)(arg1 + 0xf8) = 7;
-    }
-    else if (iVar2 == 7) {
-      Apply2DPhysics((SceneObject2D *)arg1,fVar7);
-      Vector2__operator_assign((Vector2 *)
-                         (arg1 +
-                         (long)((short)(*(short *)(arg1 + 0x1a4) << 4) >> 4) * 8 + 0xfc),
-                         (Vector2 *)(arg1 + 0xa0));
+    } else if (iVar2 == 7) {
+      Apply2DPhysics((SceneObject2D *)arg1, fVar7);
+      Vector2__operator_assign(
+          (Vector2 *)(arg1 + (long)((short)(*(short *)(arg1 + 0x1a4) << 4) >> 4) * 8 + 0xfc),
+          (Vector2 *)(arg1 + 0xa0));
       fVar7 = *(float *)(arg1 + 0xa0);
       if ((*(float *)(self + 0xa8) <= fVar7 && fVar7 != *(float *)(self + 0xa8)) ||
-         (fVar7 < *(float *)(self + 0x88))) {
+          (fVar7 < *(float *)(self + 0x88))) {
         *(uint32_t *)(arg1 + 0xf8) = 9;
       }
-    }
-    else if (iVar2 == 9) {
+    } else if (iVar2 == 9) {
       *(float *)(arg1 + 0xf0) = *(float *)(arg1 + 0xf0) - DAT_005c01c4 /* R:1000.0f */;
-      Apply2DPhysics((SceneObject2D *)arg1,fVar7);
-      Vector2__operator_assign((Vector2 *)
-                         (arg1 +
-                         (long)((short)(*(short *)(arg1 + 0x1a4) << 4) >> 4) * 8 + 0xfc),
-                         (Vector2 *)(arg1 + 0xa0));
-    }
-    else if (iVar2 == 10) {
+      Apply2DPhysics((SceneObject2D *)arg1, fVar7);
+      Vector2__operator_assign(
+          (Vector2 *)(arg1 + (long)((short)(*(short *)(arg1 + 0x1a4) << 4) >> 4) * 8 + 0xfc),
+          (Vector2 *)(arg1 + 0xa0));
+    } else if (iVar2 == 10) {
       *(uint32_t *)(arg1 + 0xbc) = 0x447a0000;
-      Apply2DPhysics((SceneObject2D *)arg1,fVar7);
-      Vector2__operator_assign((Vector2 *)
-                         (arg1 +
-                         (long)((short)(*(short *)(arg1 + 0x1a4) << 4) >> 4) * 8 + 0xfc),
-                         (Vector2 *)(arg1 + 0xa0));
+      Apply2DPhysics((SceneObject2D *)arg1, fVar7);
+      Vector2__operator_assign(
+          (Vector2 *)(arg1 + (long)((short)(*(short *)(arg1 + 0x1a4) << 4) >> 4) * 8 + 0xfc),
+          (Vector2 *)(arg1 + 0xa0));
       *(uint32_t *)(arg1 + 0xf8) = 0xb;
       if ((*(uint *)(self + 0x1d8) & 0x3fffffff) != 0) {
         local_74 = *(uint32_t *)(self + 0xcc);
@@ -699,20 +702,20 @@ void __thiscall RaptureBoss__UpdateMaggot(RaptureBoss *self,Maggot *arg1)
           iVar3 = 1;
           if (*(int *)(self + 0x8d0) == 0) {
             iVar3 = 0;
-          }
-          else {
+          } else {
             while (*(int *)pRVar6 != 0) {
               iVar3 = iVar3 + 1;
               pRVar6 = pRVar6 + 0x1c;
-              if (iVar3 == 0x1e) goto LAB_00484c00;
+              if (iVar3 == 0x1e)
+                goto LAB_00484c00;
             }
           }
           pRVar6 = self + (long)iVar3 * 0x1c + 0x8d0;
-          sincos((double)fVar7,&local_90,&local_98);
+          sincos((double)fVar7, &local_90, &local_98);
           dVar9 = _DAT_005c1410 /* R:0.0f */ * local_98;
           *(float *)(pRVar6 + 0x10) = (float)(local_90 * _DAT_005c1410 /* R:0.0f */);
           *(float *)(pRVar6 + 0xc) = (float)dVar9;
-          Vector2__operator_assign((Vector2 *)(pRVar6 + 4),(Vector2 *)&local_78);
+          Vector2__operator_assign((Vector2 *)(pRVar6 + 4), (Vector2 *)&local_78);
           *(uint32_t *)pRVar6 = 1;
           iVar2 = iVar2 + -1;
           *(uint32_t *)(pRVar6 + 0x18) = 0;
@@ -720,36 +723,35 @@ void __thiscall RaptureBoss__UpdateMaggot(RaptureBoss *self,Maggot *arg1)
           fVar7 = fVar7 + DAT_005c1404 /* R:0.6283185482025146f */;
         } while (iVar2 != 0);
       }
-    }
-    else {
+    } else {
       if (1 < iVar2 - 0xbU) {
         return;
       }
-      lVar4 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
-      Vector2__operator_minus__005be180(local_68,(Vector2 *)(lVar4 + 0xa0));
+      lVar4 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
+      Vector2__operator_minus__005be180(local_68, (Vector2 *)(lVar4 + 0xa0));
       fVar7 = (float)Vector2__Length(local_68);
       if (DAT_005bf760 /* R:0.0f */ < fVar7) {
-        Vector2__operator_div_assign__005be2c0(local_68,fVar7);
+        Vector2__operator_div_assign__005be2c0(local_68, fVar7);
       }
-      Vector2__operator_mul__005be200(local_58,DAT_005be5e0 /* R:500.0f */);
-      Vector2__operator_assign((Vector2 *)(arg1 + 0xec),local_58);
+      Vector2__operator_mul__005be200(local_58, DAT_005be5e0 /* R:500.0f */);
+      Vector2__operator_assign((Vector2 *)(arg1 + 0xec), local_58);
       *(float *)(arg1 + 0xf0) = *(float *)(arg1 + 0xf0) - DAT_005c01c4 /* R:1000.0f */;
-      Apply2DPhysics((SceneObject2D *)arg1,fOneFrameTimeStep);
-      Vector2__operator_assign((Vector2 *)
-                         (arg1 +
-                         (long)((short)(*(short *)(arg1 + 0x1a4) << 4) >> 4) * 8 + 0xfc),
-                         (Vector2 *)(arg1 + 0xa0));
+      Apply2DPhysics((SceneObject2D *)arg1, fOneFrameTimeStep);
+      Vector2__operator_assign(
+          (Vector2 *)(arg1 + (long)((short)(*(short *)(arg1 + 0x1a4) << 4) >> 4) * 8 + 0xfc),
+          (Vector2 *)(arg1 + 0xa0));
       local_84 = 0x41a00000;
       local_80 = 0;
       local_7c = 0;
       local_88[0] = (Bounds)0x11;
-      Vector2__operator_assign((Vector2 *)&local_80,(Vector2 *)(arg1 + 0xa0));
+      Vector2__operator_assign((Vector2 *)&local_80, (Vector2 *)(arg1 + 0xa0));
       if ((*(int *)(arg1 + 0xf8) == 0xb) &&
-         (((fVar7 = *(float *)(arg1 + 0xa0), fVar7 < *(float *)(self + 0x88) ||
-           (*(float *)(self + 0xa8) <= fVar7 && fVar7 != *(float *)(self + 0xa8))) &&
-          (iVar2 = SMBPalette__ObstacleCollision
-                             (GSuperMeatBoy__pLevelPalette,(SceneObject2D *)arg1,local_88),
-          iVar2 == 1)))) {
+          (((fVar7 = *(float *)(arg1 + 0xa0),
+             fVar7 < *(float *)(self + 0x88) ||
+                 (*(float *)(self + 0xa8) <= fVar7 && fVar7 != *(float *)(self + 0xa8))) &&
+            (iVar2 = SMBPalette__ObstacleCollision(GSuperMeatBoy__pLevelPalette,
+                                                   (SceneObject2D *)arg1, local_88),
+             iVar2 == 1)))) {
         *(uint32_t *)(arg1 + 0xf8) = 5;
         *(uint32_t *)(arg1 + 0x1ac) = 0;
         uVar5 = *(uint *)(self + 0x1d8) + 1 & 0x3fffffff;
@@ -759,11 +761,10 @@ void __thiscall RaptureBoss__UpdateMaggot(RaptureBoss *self,Maggot *arg1)
         }
       }
     }
-LAB_00484c00:
-    uVar1 = (short)((((short)((uint)*(uint32_t *)(arg1 + 0x1a4) >> 8) >> 4) + 1) * 0x10) >> 4;
-    *(ushort *)(arg1 + 0x1a4) =
-         *(ushort *)(arg1 + 0x1a4) & 0xf000 |
-         (short)(*(ushort *)(arg1 + 0x1a4) * 0x10 + 0x10) >> 4 & 0xfffU;
+  LAB_00484c00:
+    uVar1 = (short)((((short)((uint) * (uint32_t *)(arg1 + 0x1a4) >> 8) >> 4) + 1) * 0x10) >> 4;
+    *(ushort *)(arg1 + 0x1a4) = *(ushort *)(arg1 + 0x1a4) & 0xf000 |
+                                (short)(*(ushort *)(arg1 + 0x1a4) * 0x10 + 0x10) >> 4 & 0xfffU;
     uVar5 = *(uint *)(arg1 + 0x1a4);
     *(uint *)(arg1 + 0x1a4) = uVar5 & 0xff000fff | (uVar1 & 0xfff) << 0xc;
     if (0x15 < (uVar1 & 0xfff)) {
@@ -794,8 +795,8 @@ void __thiscall RaptureBoss__Update(RaptureBoss *self)
   long lVar3;
   int iVar4;
   RaptureBoss *pRVar5;
-  Vector2 aVStack_38 [24];
-  
+  Vector2 aVStack_38[24];
+
   RVar1 = self[0x1db];
   if (((byte)RVar1 & 0x40) == 0) {
     if ((char)RVar1 < '\0') {
@@ -812,30 +813,30 @@ void __thiscall RaptureBoss__Update(RaptureBoss *self)
         if (*(int *)(SuperMeatBoy + 0x3a4) != 0) {
           return;
         }
-        SMBChapter__PlayBossOutro((SMBChapter *)(SuperMeatBoy + 0x90),SMBRaptureBossOutroFinished,0)
-        ;
+        SMBChapter__PlayBossOutro((SMBChapter *)(SuperMeatBoy + 0x90), SMBRaptureBossOutroFinished,
+                                  0);
         return;
       }
     }
     if (*(int *)(self + 0x2d8) != 6) {
-      UpdateMaggot(self,(Maggot *)(self + 0x1e0));
+      UpdateMaggot(self, (Maggot *)(self + 0x1e0));
     }
     if (*(int *)(self + 0x488) != 6) {
-      UpdateMaggot(self,(Maggot *)(self + 0x390));
+      UpdateMaggot(self, (Maggot *)(self + 0x390));
     }
     if (*(int *)(self + 0x638) != 6) {
-      UpdateMaggot(self,(Maggot *)(self + 0x540));
+      UpdateMaggot(self, (Maggot *)(self + 0x540));
     }
     pRVar5 = self + 0x8d0;
     iVar4 = 0;
     do {
       while (*(int *)pRVar5 == 1) {
-        Vector2__operator_mul__005be200(aVStack_38,fOneFrameTimeStep);
-        Vector2__operator_plus_assign((Vector2 *)(self + (long)iVar4 * 0x1c + 0x8d4),aVStack_38);
-        iVar2 = TileLevel__IsPositionWithinGrid
-                          (*(TileLevel **)(SuperMeatBoy + 0x40),
-                           (Vector2 *)(self + (long)iVar4 * 0x1c + 0x8d4));
-        if (iVar2 != 0) break;
+        Vector2__operator_mul__005be200(aVStack_38, fOneFrameTimeStep);
+        Vector2__operator_plus_assign((Vector2 *)(self + (long)iVar4 * 0x1c + 0x8d4), aVStack_38);
+        iVar2 = TileLevel__IsPositionWithinGrid(*(TileLevel **)(SuperMeatBoy + 0x40),
+                                                (Vector2 *)(self + (long)iVar4 * 0x1c + 0x8d4));
+        if (iVar2 != 0)
+          break;
         iVar4 = iVar4 + 1;
         *(int *)pRVar5 = 0;
         pRVar5 = pRVar5 + 0x1c;
@@ -860,7 +861,7 @@ void __thiscall RaptureBoss__Update(RaptureBoss *self)
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 /* RaptureBoss__ShootMaggots(Vector2 const&) */
 
-void __thiscall RaptureBoss__ShootMaggots(RaptureBoss *self,Vector2 *arg1)
+void __thiscall RaptureBoss__ShootMaggots(RaptureBoss *self, Vector2 *arg1)
 
 {
   int iVar1;
@@ -869,8 +870,8 @@ void __thiscall RaptureBoss__ShootMaggots(RaptureBoss *self,Vector2 *arg1)
   float fVar4;
   double dVar5;
   double local_38;
-  double local_30 [2];
-  
+  double local_30[2];
+
   fVar4 = 0.0;
   iVar3 = 6;
   do {
@@ -878,8 +879,7 @@ void __thiscall RaptureBoss__ShootMaggots(RaptureBoss *self,Vector2 *arg1)
     iVar1 = 1;
     if (*(int *)(self + 0x8d0) == 0) {
       iVar1 = 0;
-    }
-    else {
+    } else {
       while (*(int *)pRVar2 != 0) {
         iVar1 = iVar1 + 1;
         pRVar2 = pRVar2 + 0x1c;
@@ -889,11 +889,11 @@ void __thiscall RaptureBoss__ShootMaggots(RaptureBoss *self,Vector2 *arg1)
       }
     }
     pRVar2 = self + (long)iVar1 * 0x1c + 0x8d0;
-    sincos((double)fVar4,local_30,&local_38);
+    sincos((double)fVar4, local_30, &local_38);
     dVar5 = _DAT_005c1410 /* R:0.0f */ * local_38;
     *(float *)(pRVar2 + 0x10) = (float)(local_30[0] * _DAT_005c1410 /* R:0.0f */);
     *(float *)(pRVar2 + 0xc) = (float)dVar5;
-    Vector2__operator_assign((Vector2 *)(pRVar2 + 4),arg1);
+    Vector2__operator_assign((Vector2 *)(pRVar2 + 4), arg1);
     *(uint32_t *)pRVar2 = 1;
     iVar3 = iVar3 + -1;
     *(uint32_t *)(pRVar2 + 0x18) = 0;
@@ -918,17 +918,16 @@ void __thiscall RaptureBoss__UpdateMaggotShots(RaptureBoss *self)
   int iVar1;
   int iVar2;
   RaptureBoss *pRVar3;
-  Vector2 aVStack_38 [24];
-  
+  Vector2 aVStack_38[24];
+
   pRVar3 = self + 0x8d0;
   iVar2 = 0;
   do {
     if (*(int *)pRVar3 == 1) {
-      Vector2__operator_mul__005be200(aVStack_38,fOneFrameTimeStep);
-      Vector2__operator_plus_assign((Vector2 *)(self + (long)iVar2 * 0x1c + 0x8d4),aVStack_38);
-      iVar1 = TileLevel__IsPositionWithinGrid
-                        (*(TileLevel **)(SuperMeatBoy + 0x40),
-                         (Vector2 *)(self + (long)iVar2 * 0x1c + 0x8d4));
+      Vector2__operator_mul__005be200(aVStack_38, fOneFrameTimeStep);
+      Vector2__operator_plus_assign((Vector2 *)(self + (long)iVar2 * 0x1c + 0x8d4), aVStack_38);
+      iVar1 = TileLevel__IsPositionWithinGrid(*(TileLevel **)(SuperMeatBoy + 0x40),
+                                              (Vector2 *)(self + (long)iVar2 * 0x1c + 0x8d4));
       if (iVar1 == 0) {
         *(int *)pRVar3 = 0;
       }
@@ -948,17 +947,17 @@ void __thiscall RaptureBoss__UpdateMaggotShots(RaptureBoss *self)
  */
 /* RaptureBoss__MaggotBulletCollision(Bounds const*) */
 
-uint64_t __thiscall RaptureBoss__MaggotBulletCollision(RaptureBoss *self,Bounds *arg1)
+uint64_t __thiscall RaptureBoss__MaggotBulletCollision(RaptureBoss *self, Bounds *arg1)
 
 {
   int iVar1;
   int iVar2;
   RaptureBoss *pRVar3;
-  Bounds local_38 [4];
+  Bounds local_38[4];
   uint32_t local_34;
   uint32_t local_30;
   uint32_t local_2c;
-  
+
   pRVar3 = self + 0x8d0;
   iVar2 = 0;
   local_34 = 0x41200000;
@@ -967,8 +966,9 @@ uint64_t __thiscall RaptureBoss__MaggotBulletCollision(RaptureBoss *self,Bounds 
   local_38[0] = (Bounds)0x11;
   do {
     if (*(int *)pRVar3 == 1) {
-      Vector2__operator_assign((Vector2 *)&local_30,(Vector2 *)(self + (long)iVar2 * 0x1c + 0x8d4));
-      iVar1 = IsBoundsTouchingBounds(local_38,arg1);
+      Vector2__operator_assign((Vector2 *)&local_30,
+                               (Vector2 *)(self + (long)iVar2 * 0x1c + 0x8d4));
+      iVar1 = IsBoundsTouchingBounds(local_38, arg1);
       if (iVar1 == 1) {
         return 1;
       }
@@ -992,7 +992,7 @@ void __thiscall RaptureBoss__RenderMaggotShots(RaptureBoss *self)
 
 {
   RaptureBoss *pRVar1;
-  
+
   pRVar1 = self + 0x8e8;
   do {
     while (*(int *)(pRVar1 + -0x18) != 1) {
@@ -1008,8 +1008,7 @@ void __thiscall RaptureBoss__RenderMaggotShots(RaptureBoss *self)
     *(uint32_t *)(*(long *)(self + 0x1d0) + 0x4c) = *(uint32_t *)(pRVar1 + -4);
     if (*(float *)(pRVar1 + -4) <= DAT_005c1408 /* R:1.5707963705062866f */) {
       *(uint32_t *)(*(long *)(self + 0x1d0) + 0x44) = 0x3f800000;
-    }
-    else {
+    } else {
       *(uint32_t *)(*(long *)(self + 0x1d0) + 0x44) = 0xbf800000;
     }
     (**(code **)(**(long **)(self + 0x1d0) + 0x10))();
@@ -1029,7 +1028,7 @@ void __thiscall RaptureBoss__RenderMaggotShots(RaptureBoss *self)
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 /* RaptureBoss__RenderMaggot(RaptureBoss__Maggot) */
 
-void __thiscall RaptureBoss__RenderMaggot(RaptureBoss *self,Maggot *arg1)
+void __thiscall RaptureBoss__RenderMaggot(RaptureBoss *self, Maggot *arg1)
 
 {
   bool bVar1;
@@ -1053,7 +1052,7 @@ void __thiscall RaptureBoss__RenderMaggot(RaptureBoss *self,Maggot *arg1)
   uint32_t local_54;
   uint32_t local_48;
   uint32_t local_44;
-  
+
   iVar7 = *(int *)(arg1 + 0xf8);
   if ((((iVar7 - 10U < 3) || (iVar7 == 5)) || (iVar7 == 7)) || ((iVar7 == 8 || (iVar7 == 9)))) {
     iVar11 = 6;
@@ -1065,10 +1064,9 @@ void __thiscall RaptureBoss__RenderMaggot(RaptureBoss *self,Maggot *arg1)
     }
     lVar8 = 0;
     iVar4 = 0;
-LAB_00485520:
+  LAB_00485520:
     do {
-      if (*(uint *)(pBallIndices + lVar8 + 0x18) <= (uint)((*(int *)(arg1 + 0x1a4) << 8) >> 0x14)
-         ) {
+      if (*(uint *)(pBallIndices + lVar8 + 0x18) <= (uint)((*(int *)(arg1 + 0x1a4) << 8) >> 0x14)) {
         iVar5 = iVar7 - *(uint *)(pBallIndices + lVar8 + 0x18);
         iVar6 = iVar5 + 0x15;
         if (-1 < iVar5) {
@@ -1077,22 +1075,23 @@ LAB_00485520:
         lVar12 = (long)iVar6;
         if ((*(float *)(self + 0x2c) <= *(float *)(arg1 + lVar12 * 8 + 0x100) &&
              *(float *)(arg1 + lVar12 * 8 + 0x100) != *(float *)(self + 0x2c)) ||
-           (*(int *)(arg1 + 0xf8) == 5)) {
+            (*(int *)(arg1 + 0xf8) == 5)) {
           iVar4 = iVar4 + 1;
           *(uint32_t *)(*(long *)(self + lVar8 * 2 + 0x1a0) + 0x30) =
-               *(uint32_t *)(arg1 + (lVar12 + 0x1e) * 8 + 0xc);
+              *(uint32_t *)(arg1 + (lVar12 + 0x1e) * 8 + 0xc);
           *(uint32_t *)(*(long *)(self + lVar8 * 2 + 0x1a0) + 0x34) =
-               *(uint32_t *)(arg1 + (lVar12 + 0x1e) * 8 + 0x10);
+              *(uint32_t *)(arg1 + (lVar12 + 0x1e) * 8 + 0x10);
           if (iVar11 == 0) {
             if (0.0 < *(float *)(arg1 + 0xb8)) {
               local_78 = 0xbf800000;
               local_74 = 0x3f800000;
-              Vector2__operator_assign((Vector2 *)(*(long *)(self + 0x170) + 0x40),(Vector2 *)&local_78);
-            }
-            else {
+              Vector2__operator_assign((Vector2 *)(*(long *)(self + 0x170) + 0x40),
+                                       (Vector2 *)&local_78);
+            } else {
               local_68 = 0x3f800000;
               local_64 = 0x3f800000;
-              Vector2__operator_assign((Vector2 *)(*(long *)(self + 0x170) + 0x40),(Vector2 *)&local_68);
+              Vector2__operator_assign((Vector2 *)(*(long *)(self + 0x170) + 0x40),
+                                       (Vector2 *)&local_68);
             }
           }
           if (*(int *)(arg1 + 0xf8) == 5) {
@@ -1100,27 +1099,28 @@ LAB_00485520:
             if (iVar6 == iVar11) {
               fVar13 = *(float *)(arg1 + 0x1a8) - fOneFrameTimeStep;
               *(float *)(arg1 + 0x1a8) = fVar13;
-              if (0.0 <= fVar13) goto LAB_00485658;
+              if (0.0 <= fVar13)
+                goto LAB_00485658;
               if (*(long *)(self + 0x6f0) == 0) {
                 iVar6 = 0;
-LAB_004857fc:
+              LAB_004857fc:
                 lVar9 = (long)iVar6 * 0x18;
                 *(uint64_t *)(self + lVar9 + 0x6f0) = *(uint64_t *)(self + 0x1c8);
                 Vector2__operator_assign((Vector2 *)(self + lVar9 + 0x6f8),
-                                   (Vector2 *)(arg1 + lVar12 * 8 + 0xfc));
+                                         (Vector2 *)(arg1 + lVar12 * 8 + 0xfc));
                 *(uint32_t *)(self + lVar9 + 0x700) = 0;
-              }
-              else {
+              } else {
                 pRVar10 = self + 0x708;
                 iVar6 = 1;
                 do {
-                  if (*(long *)pRVar10 == 0) goto LAB_004857fc;
+                  if (*(long *)pRVar10 == 0)
+                    goto LAB_004857fc;
                   iVar6 = iVar6 + 1;
                   pRVar10 = pRVar10 + 0x18;
                 } while (iVar6 != 0x14);
               }
-              SMBCamera__ScreenShake
-                        (*(SMBCamera **)(SuperMeatBoy + 0x38),_DAT_005bff44 /* R:5.0f */,DAT_005be894 /* R:1.0f */);
+              SMBCamera__ScreenShake(*(SMBCamera **)(SuperMeatBoy + 0x38),
+                                     _DAT_005bff44 /* R:5.0f */, DAT_005be894 /* R:1.0f */);
               *(uint32_t *)(arg1 + 0x1a8) = 0x3ecccccd;
               bVar2 = true;
               iVar6 = (int)((char)((char)arg1[0x1a7] * '\x02') >> 1);
@@ -1128,17 +1128,18 @@ LAB_004857fc:
             if (iVar11 < iVar6) {
               lVar8 = lVar8 + -4;
               iVar11 = iVar11 + -1;
-              if (lVar8 == -0x1c) break;
+              if (lVar8 == -0x1c)
+                break;
               goto LAB_00485520;
             }
           }
-LAB_00485658:
+        LAB_00485658:
           (**(code **)(**(long **)(self + lVar8 * 2 + 0x1a0) + 0x10))();
-        }
-        else if (iVar11 == 0) {
+        } else if (iVar11 == 0) {
           bVar1 = true;
           bVar3 = true;
-          if (bVar2) goto LAB_00485685;
+          if (bVar2)
+            goto LAB_00485685;
           goto LAB_00485581;
         }
       }
@@ -1148,12 +1149,12 @@ LAB_00485658:
     bVar1 = false;
     bVar3 = false;
     if (bVar2) {
-LAB_00485685:
+    LAB_00485685:
       bVar1 = bVar3;
       arg1[0x1a7] =
-           (Maggot)((byte)arg1[0x1a7] & 0x80 | (byte)((char)arg1[0x1a7] * '\x02' + 2U) >> 1);
+          (Maggot)((byte)arg1[0x1a7] & 0x80 | (byte)((char)arg1[0x1a7] * '\x02' + 2U) >> 1);
     }
-LAB_00485581:
+  LAB_00485581:
     if ((iVar4 == 0) && (*(int *)(arg1 + 0xf8) == 0xc)) {
       *(uint32_t *)(arg1 + 0xf8) = 0;
     }
@@ -1162,29 +1163,30 @@ LAB_00485581:
       local_58 = *(uint32_t *)(arg1 + 0xa0);
       if (*(long *)(self + 0x6f0) == 0) {
         iVar7 = 0;
-LAB_00485968:
+      LAB_00485968:
         lVar8 = (long)iVar7 * 0x18;
         *(uint64_t *)(self + lVar8 + 0x6f0) = *(uint64_t *)(self + 0x1c0);
-        Vector2__operator_assign((Vector2 *)(self + lVar8 + 0x6f8),(Vector2 *)&local_58);
+        Vector2__operator_assign((Vector2 *)(self + lVar8 + 0x6f8), (Vector2 *)&local_58);
         *(uint32_t *)(self + lVar8 + 0x700) = 0;
-      }
-      else {
+      } else {
         pRVar10 = self + 0x708;
         iVar7 = 1;
         do {
-          if (*(long *)pRVar10 == 0) goto LAB_00485968;
+          if (*(long *)pRVar10 == 0)
+            goto LAB_00485968;
           iVar7 = iVar7 + 1;
           pRVar10 = pRVar10 + 0x18;
         } while (iVar7 != 0x14);
       }
-      SMBCamera__ScreenShake(*(SMBCamera **)(SuperMeatBoy + 0x38),_DAT_005bff44 /* R:5.0f */,DAT_005be894 /* R:1.0f */);
+      SMBCamera__ScreenShake(*(SMBCamera **)(SuperMeatBoy + 0x38), _DAT_005bff44 /* R:5.0f */,
+                             DAT_005be894 /* R:1.0f */);
       *(uint32_t *)(arg1 + 0xf8) = 0xc;
-LAB_00485934:
-      SMBCamera__ScreenShake(*(SMBCamera **)(SuperMeatBoy + 0x38),_DAT_005bff44 /* R:5.0f */,DAT_005be894 /* R:1.0f */);
+    LAB_00485934:
+      SMBCamera__ScreenShake(*(SMBCamera **)(SuperMeatBoy + 0x38), _DAT_005bff44 /* R:5.0f */,
+                             DAT_005be894 /* R:1.0f */);
       return;
     }
-  }
-  else if (iVar7 == 4) {
+  } else if (iVar7 == 4) {
     *(uint32_t *)(*(long *)(self + 0x1b8) + 0x58) = *(uint32_t *)(arg1 + 0x1ac);
     *(uint32_t *)(*(long *)(self + 0x1b8) + 0x30) = *(uint32_t *)(arg1 + 0xa0);
     *(uint32_t *)(*(long *)(self + 0x1b8) + 0x34) = *(uint32_t *)(arg1 + 0xa4);
@@ -1195,8 +1197,7 @@ LAB_00485934:
     if (iVar7 == 0) {
       *(uint32_t *)(arg1 + 0xf8) = 0;
     }
-  }
-  else if (iVar7 == 1) {
+  } else if (iVar7 == 1) {
     *(uint32_t *)(*(long *)(self + 0x1a8) + 0x58) = *(uint32_t *)(arg1 + 0x1ac);
     *(uint32_t *)(*(long *)(self + 0x1a8) + 0x30) = *(uint32_t *)(arg1 + 0xa0);
     *(uint32_t *)(*(long *)(self + 0x1a8) + 0x34) = *(uint32_t *)(arg1 + 0xa4);
@@ -1209,26 +1210,25 @@ LAB_00485934:
       local_48 = *(uint32_t *)(arg1 + 0xa0);
       if (*(long *)(self + 0x6f0) == 0) {
         iVar7 = 0;
-LAB_00485a74:
+      LAB_00485a74:
         lVar8 = (long)iVar7 * 0x18;
         *(uint64_t *)(self + lVar8 + 0x6f0) = *(uint64_t *)(self + 0x1b0);
-        Vector2__operator_assign((Vector2 *)(self + lVar8 + 0x6f8),(Vector2 *)&local_48);
+        Vector2__operator_assign((Vector2 *)(self + lVar8 + 0x6f8), (Vector2 *)&local_48);
         *(uint32_t *)(self + lVar8 + 0x700) = 0;
-      }
-      else {
+      } else {
         pRVar10 = self + 0x708;
         iVar7 = 1;
         do {
-          if (*(long *)pRVar10 == 0) goto LAB_00485a74;
+          if (*(long *)pRVar10 == 0)
+            goto LAB_00485a74;
           iVar7 = iVar7 + 1;
           pRVar10 = pRVar10 + 0x18;
         } while (iVar7 != 0x14);
       }
       if (((*(uint *)(self + 0x1d8) & 0x3fffffff) == 0) ||
-         (iVar7 = GetRandomINT(0,100), iVar7 < 0x32)) {
+          (iVar7 = GetRandomINT(0, 100), iVar7 < 0x32)) {
         *(uint32_t *)(arg1 + 0xf8) = 10;
-      }
-      else {
+      } else {
         *(uint32_t *)(arg1 + 0xf8) = 8;
       }
       goto LAB_00485934;
@@ -1252,20 +1252,20 @@ void __thiscall RaptureBoss__Render(RaptureBoss *self)
   int iVar1;
   RaptureBoss *pRVar2;
   int iVar3;
-  
+
   if (((byte)self[0x1db] & 0x40) != 0) {
     return;
   }
   RegisterAudioPosition((FPUVector *)0xffffffff);
   TAudio__DisableDirectionalAudio(Audio);
   if (*(int *)(self + 0x2d8) != 6) {
-    RenderMaggot(self,(Maggot *)(self + 0x1e0));
+    RenderMaggot(self, (Maggot *)(self + 0x1e0));
   }
   if (*(int *)(self + 0x488) != 6) {
-    RenderMaggot(self,(Maggot *)(self + 0x390));
+    RenderMaggot(self, (Maggot *)(self + 0x390));
   }
   if (*(int *)(self + 0x638) != 6) {
-    RenderMaggot(self,(Maggot *)(self + 0x540));
+    RenderMaggot(self, (Maggot *)(self + 0x540));
   }
   pRVar2 = self + 0x6f0;
   iVar3 = 0x14;
@@ -1299,7 +1299,7 @@ void __thiscall RaptureBoss__Render(RaptureBoss *self)
  */
 /* RaptureBoss__ResetMaggot(RaptureBoss__Maggot) */
 
-void __thiscall RaptureBoss__ResetMaggot(RaptureBoss *self,Maggot *arg1)
+void __thiscall RaptureBoss__ResetMaggot(RaptureBoss *self, Maggot *arg1)
 
 {
   long lVar1;
@@ -1308,7 +1308,7 @@ void __thiscall RaptureBoss__ResetMaggot(RaptureBoss *self,Maggot *arg1)
   uint32_t local_34;
   uint32_t local_28;
   uint32_t local_24;
-  
+
   iVar2 = 0;
   *(ushort *)(arg1 + 0x1a4) = *(ushort *)(arg1 + 0x1a4) & 0xf000;
   *(uint32_t *)(arg1 + 0xf8) = 0;
@@ -1316,7 +1316,7 @@ void __thiscall RaptureBoss__ResetMaggot(RaptureBoss *self,Maggot *arg1)
   *(uint32_t *)(arg1 + 0x9c) = 1;
   local_38 = 0;
   local_34 = 0xc47a0000;
-  Vector2__operator_assign((Vector2 *)(arg1 + 0xa0),(Vector2 *)&local_38);
+  Vector2__operator_assign((Vector2 *)(arg1 + 0xa0), (Vector2 *)&local_38);
   arg1[0x1a7] = (Maggot)((byte)arg1[0x1a7] & 0x80);
   *(uint32_t *)(arg1 + 0x1a8) = 0;
   do {
@@ -1324,7 +1324,7 @@ void __thiscall RaptureBoss__ResetMaggot(RaptureBoss *self,Maggot *arg1)
     iVar2 = iVar2 + 1;
     local_28 = 0;
     local_24 = 0xc47a0000;
-    Vector2__operator_assign((Vector2 *)(arg1 + lVar1 * 8 + 0xfc),(Vector2 *)&local_28);
+    Vector2__operator_assign((Vector2 *)(arg1 + lVar1 * 8 + 0xfc), (Vector2 *)&local_28);
   } while (iVar2 != 0x15);
   return;
 }
@@ -1349,7 +1349,7 @@ void __thiscall RaptureBoss__ResetMaggots(RaptureBoss *self)
   uint32_t local_44;
   uint32_t local_38;
   uint32_t local_34;
-  
+
   iVar4 = 0;
   do {
     iVar3 = 0;
@@ -1360,7 +1360,7 @@ void __thiscall RaptureBoss__ResetMaggots(RaptureBoss *self)
     *(uint32_t *)(self + lVar1 + 0x27c) = 1;
     local_48 = 0;
     local_44 = 0xc47a0000;
-    Vector2__operator_assign((Vector2 *)(self + lVar1 + 0x280),(Vector2 *)&local_48);
+    Vector2__operator_assign((Vector2 *)(self + lVar1 + 0x280), (Vector2 *)&local_48);
     self[lVar1 + 0x387] = (RaptureBoss)((byte)self[lVar1 + 0x387] & 0x80);
     *(uint32_t *)(self + lVar1 + 0x388) = 0;
     do {
@@ -1368,7 +1368,7 @@ void __thiscall RaptureBoss__ResetMaggots(RaptureBoss *self)
       iVar3 = iVar3 + 1;
       local_38 = 0;
       local_34 = 0xc47a0000;
-      Vector2__operator_assign((Vector2 *)(self + lVar2 * 8 + lVar1 + 0x2dc),(Vector2 *)&local_38);
+      Vector2__operator_assign((Vector2 *)(self + lVar2 * 8 + lVar1 + 0x2dc), (Vector2 *)&local_38);
     } while (iVar3 != 0x15);
     iVar4 = iVar4 + 1;
   } while (iVar4 != 3);
@@ -1396,22 +1396,21 @@ void __thiscall RaptureBoss__ResetMaggots(RaptureBoss *self)
  */
 /* RaptureBoss__IsBoundsTouchingMaggot(RaptureBoss__Maggot, Bounds const*) */
 
-bool __thiscall
-RaptureBoss__IsBoundsTouchingMaggot(RaptureBoss *self,Maggot *arg1,Bounds *arg2)
+bool __thiscall RaptureBoss__IsBoundsTouchingMaggot(RaptureBoss *self, Maggot *arg1, Bounds *arg2)
 
 {
   int iVar1;
   int iVar2;
   long lVar3;
   int iVar4;
-  
+
   iVar4 = *(int *)(arg1 + 0xf8);
   if (iVar4 == 4) {
     *(uint32_t *)(*(long *)(self + 0x1b8) + 0x58) = *(uint32_t *)(arg1 + 0x1ac);
     *(uint32_t *)(*(long *)(self + 0x1b8) + 0x30) = *(uint32_t *)(arg1 + 0xa0);
     *(uint32_t *)(*(long *)(self + 0x1b8) + 0x34) = *(uint32_t *)(arg1 + 0xa4);
-    iVar4 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660
-                      (*(FlashLibraryInstance **)(self + 0x1b8),arg2);
+    iVar4 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660(
+        *(FlashLibraryInstance **)(self + 0x1b8), arg2);
     return iVar4 == 1;
   }
   if ((iVar4 - 10U < 3) || (iVar4 == 7)) {
@@ -1428,12 +1427,10 @@ RaptureBoss__IsBoundsTouchingMaggot(RaptureBoss *self,Maggot *arg1,Bounds *arg2)
       lVar3 = (long)iVar2 + 0x1e;
       if (*(float *)(self + 0x2c) <= *(float *)(arg1 + lVar3 * 8 + 0x10) &&
           *(float *)(arg1 + lVar3 * 8 + 0x10) != *(float *)(self + 0x2c)) {
-        *(uint32_t *)(*(long *)(self + 0x1a0) + 0x30) = *(uint32_t *)(arg1 + lVar3 * 8 + 0xc)
-        ;
-        *(uint32_t *)(*(long *)(self + 0x1a0) + 0x34) =
-             *(uint32_t *)(arg1 + lVar3 * 8 + 0x10);
-        iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660
-                          (*(FlashLibraryInstance **)(self + 0x1a0),arg2);
+        *(uint32_t *)(*(long *)(self + 0x1a0) + 0x30) = *(uint32_t *)(arg1 + lVar3 * 8 + 0xc);
+        *(uint32_t *)(*(long *)(self + 0x1a0) + 0x34) = *(uint32_t *)(arg1 + lVar3 * 8 + 0x10);
+        iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660(
+            *(FlashLibraryInstance **)(self + 0x1a0), arg2);
         if (iVar1 == 1) {
           return true;
         }
@@ -1448,12 +1445,10 @@ RaptureBoss__IsBoundsTouchingMaggot(RaptureBoss *self,Maggot *arg1,Bounds *arg2)
       lVar3 = (long)iVar2 + 0x1e;
       if (*(float *)(self + 0x2c) <= *(float *)(arg1 + lVar3 * 8 + 0x10) &&
           *(float *)(arg1 + lVar3 * 8 + 0x10) != *(float *)(self + 0x2c)) {
-        *(uint32_t *)(*(long *)(self + 0x198) + 0x30) = *(uint32_t *)(arg1 + lVar3 * 8 + 0xc)
-        ;
-        *(uint32_t *)(*(long *)(self + 0x198) + 0x34) =
-             *(uint32_t *)(arg1 + lVar3 * 8 + 0x10);
-        iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660
-                          (*(FlashLibraryInstance **)(self + 0x198),arg2);
+        *(uint32_t *)(*(long *)(self + 0x198) + 0x30) = *(uint32_t *)(arg1 + lVar3 * 8 + 0xc);
+        *(uint32_t *)(*(long *)(self + 0x198) + 0x34) = *(uint32_t *)(arg1 + lVar3 * 8 + 0x10);
+        iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660(
+            *(FlashLibraryInstance **)(self + 0x198), arg2);
         if (iVar1 == 1) {
           return true;
         }
@@ -1470,8 +1465,8 @@ RaptureBoss__IsBoundsTouchingMaggot(RaptureBoss *self,Maggot *arg1,Bounds *arg2)
           *(float *)(arg1 + lVar3 * 8 + 0x10) != *(float *)(self + 0x2c)) {
         *(uint32_t *)(*(long *)(self + 400) + 0x30) = *(uint32_t *)(arg1 + lVar3 * 8 + 0xc);
         *(uint32_t *)(*(long *)(self + 400) + 0x34) = *(uint32_t *)(arg1 + lVar3 * 8 + 0x10);
-        iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660
-                          (*(FlashLibraryInstance **)(self + 400),arg2);
+        iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660(
+            *(FlashLibraryInstance **)(self + 400), arg2);
         if (iVar1 == 1) {
           return true;
         }
@@ -1486,12 +1481,10 @@ RaptureBoss__IsBoundsTouchingMaggot(RaptureBoss *self,Maggot *arg1,Bounds *arg2)
       lVar3 = (long)iVar2 + 0x1e;
       if (*(float *)(self + 0x2c) <= *(float *)(arg1 + lVar3 * 8 + 0x10) &&
           *(float *)(arg1 + lVar3 * 8 + 0x10) != *(float *)(self + 0x2c)) {
-        *(uint32_t *)(*(long *)(self + 0x188) + 0x30) = *(uint32_t *)(arg1 + lVar3 * 8 + 0xc)
-        ;
-        *(uint32_t *)(*(long *)(self + 0x188) + 0x34) =
-             *(uint32_t *)(arg1 + lVar3 * 8 + 0x10);
-        iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660
-                          (*(FlashLibraryInstance **)(self + 0x188),arg2);
+        *(uint32_t *)(*(long *)(self + 0x188) + 0x30) = *(uint32_t *)(arg1 + lVar3 * 8 + 0xc);
+        *(uint32_t *)(*(long *)(self + 0x188) + 0x34) = *(uint32_t *)(arg1 + lVar3 * 8 + 0x10);
+        iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660(
+            *(FlashLibraryInstance **)(self + 0x188), arg2);
         if (iVar1 == 1) {
           return true;
         }
@@ -1506,12 +1499,10 @@ RaptureBoss__IsBoundsTouchingMaggot(RaptureBoss *self,Maggot *arg1,Bounds *arg2)
       lVar3 = (long)iVar2 + 0x1e;
       if (*(float *)(self + 0x2c) <= *(float *)(arg1 + lVar3 * 8 + 0x10) &&
           *(float *)(arg1 + lVar3 * 8 + 0x10) != *(float *)(self + 0x2c)) {
-        *(uint32_t *)(*(long *)(self + 0x180) + 0x30) = *(uint32_t *)(arg1 + lVar3 * 8 + 0xc)
-        ;
-        *(uint32_t *)(*(long *)(self + 0x180) + 0x34) =
-             *(uint32_t *)(arg1 + lVar3 * 8 + 0x10);
-        iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660
-                          (*(FlashLibraryInstance **)(self + 0x180),arg2);
+        *(uint32_t *)(*(long *)(self + 0x180) + 0x30) = *(uint32_t *)(arg1 + lVar3 * 8 + 0xc);
+        *(uint32_t *)(*(long *)(self + 0x180) + 0x34) = *(uint32_t *)(arg1 + lVar3 * 8 + 0x10);
+        iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660(
+            *(FlashLibraryInstance **)(self + 0x180), arg2);
         if (iVar1 == 1) {
           return true;
         }
@@ -1526,12 +1517,10 @@ RaptureBoss__IsBoundsTouchingMaggot(RaptureBoss *self,Maggot *arg1,Bounds *arg2)
       lVar3 = (long)iVar1 + 0x1e;
       if (*(float *)(self + 0x2c) <= *(float *)(arg1 + lVar3 * 8 + 0x10) &&
           *(float *)(arg1 + lVar3 * 8 + 0x10) != *(float *)(self + 0x2c)) {
-        *(uint32_t *)(*(long *)(self + 0x178) + 0x30) = *(uint32_t *)(arg1 + lVar3 * 8 + 0xc)
-        ;
-        *(uint32_t *)(*(long *)(self + 0x178) + 0x34) =
-             *(uint32_t *)(arg1 + lVar3 * 8 + 0x10);
-        iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660
-                          (*(FlashLibraryInstance **)(self + 0x178),arg2);
+        *(uint32_t *)(*(long *)(self + 0x178) + 0x30) = *(uint32_t *)(arg1 + lVar3 * 8 + 0xc);
+        *(uint32_t *)(*(long *)(self + 0x178) + 0x34) = *(uint32_t *)(arg1 + lVar3 * 8 + 0x10);
+        iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660(
+            *(FlashLibraryInstance **)(self + 0x178), arg2);
         if (iVar1 == 1) {
           return true;
         }
@@ -1546,8 +1535,8 @@ RaptureBoss__IsBoundsTouchingMaggot(RaptureBoss *self,Maggot *arg1,Bounds *arg2)
         *(float *)(arg1 + lVar3 * 8 + 0x10) != *(float *)(self + 0x2c)) {
       *(uint32_t *)(*(long *)(self + 0x170) + 0x30) = *(uint32_t *)(arg1 + lVar3 * 8 + 0xc);
       *(uint32_t *)(*(long *)(self + 0x170) + 0x34) = *(uint32_t *)(arg1 + lVar3 * 8 + 0x10);
-      iVar4 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660
-                        (*(FlashLibraryInstance **)(self + 0x170),arg2);
+      iVar4 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660(
+          *(FlashLibraryInstance **)(self + 0x170), arg2);
       if (iVar4 == 1) {
         return true;
       }
@@ -1565,18 +1554,18 @@ RaptureBoss__IsBoundsTouchingMaggot(RaptureBoss *self,Maggot *arg1,Bounds *arg2)
  */
 /* RaptureBoss__MaggotCollisionCheck(Bounds const*) */
 
-bool __thiscall RaptureBoss__MaggotCollisionCheck(RaptureBoss *self,Bounds *arg1)
+bool __thiscall RaptureBoss__MaggotCollisionCheck(RaptureBoss *self, Bounds *arg1)
 
 {
   int iVar1;
   bool bVar2;
-  
+
   bVar2 = true;
-  iVar1 = IsBoundsTouchingMaggot(self,(Maggot *)(self + 0x1e0),arg1);
+  iVar1 = IsBoundsTouchingMaggot(self, (Maggot *)(self + 0x1e0), arg1);
   if (iVar1 != 1) {
-    iVar1 = IsBoundsTouchingMaggot(self,(Maggot *)(self + 0x390),arg1);
+    iVar1 = IsBoundsTouchingMaggot(self, (Maggot *)(self + 0x390), arg1);
     if (iVar1 != 1) {
-      iVar1 = IsBoundsTouchingMaggot(self,(Maggot *)(self + 0x540),arg1);
+      iVar1 = IsBoundsTouchingMaggot(self, (Maggot *)(self + 0x540), arg1);
       bVar2 = iVar1 == 1;
     }
   }
@@ -1592,21 +1581,21 @@ bool __thiscall RaptureBoss__MaggotCollisionCheck(RaptureBoss *self,Bounds *arg1
  */
 /* RaptureBoss__IsCollidingWithBounds(Bounds const*) */
 
-uint64_t __thiscall RaptureBoss__IsCollidingWithBounds(RaptureBoss *self,Bounds *arg1)
+uint64_t __thiscall RaptureBoss__IsCollidingWithBounds(RaptureBoss *self, Bounds *arg1)
 
 {
   int iVar1;
   int iVar2;
   RaptureBoss *pRVar3;
-  Bounds local_38 [4];
+  Bounds local_38[4];
   uint32_t local_34;
   uint32_t local_30;
   uint32_t local_2c;
-  
-  iVar1 = IsBoundsTouchingMaggot(self,(Maggot *)(self + 0x1e0),arg1);
+
+  iVar1 = IsBoundsTouchingMaggot(self, (Maggot *)(self + 0x1e0), arg1);
   if (((iVar1 != 1) &&
-      (iVar1 = IsBoundsTouchingMaggot(self,(Maggot *)(self + 0x390),arg1), iVar1 != 1)) &&
-     (iVar1 = IsBoundsTouchingMaggot(self,(Maggot *)(self + 0x540),arg1), iVar1 != 1)) {
+       (iVar1 = IsBoundsTouchingMaggot(self, (Maggot *)(self + 0x390), arg1), iVar1 != 1)) &&
+      (iVar1 = IsBoundsTouchingMaggot(self, (Maggot *)(self + 0x540), arg1), iVar1 != 1)) {
     local_34 = 0x41200000;
     local_30 = 0;
     pRVar3 = self + 0x8d0;
@@ -1615,8 +1604,9 @@ uint64_t __thiscall RaptureBoss__IsCollidingWithBounds(RaptureBoss *self,Bounds 
     iVar1 = 0;
     do {
       if (*(int *)pRVar3 == 1) {
-        Vector2__operator_assign((Vector2 *)&local_30,(Vector2 *)(self + (long)iVar1 * 0x1c + 0x8d4));
-        iVar2 = IsBoundsTouchingBounds(local_38,arg1);
+        Vector2__operator_assign((Vector2 *)&local_30,
+                                 (Vector2 *)(self + (long)iVar1 * 0x1c + 0x8d4));
+        iVar2 = IsBoundsTouchingBounds(local_38, arg1);
         if (iVar2 == 1) {
           return 1;
         }

@@ -35,7 +35,7 @@ void __thiscall IndexTexture__IndexTexture__005a0fc0(IndexTexture *self)
  */
 /* IndexTexture__IndexTexture__005a0fc0(Texture*, char const*) */
 
-void __thiscall IndexTexture__IndexTexture__005a0fc0(IndexTexture *self,Texture *arg1,char *arg2)
+void __thiscall IndexTexture__IndexTexture__005a0fc0(IndexTexture *self, Texture *arg1, char *arg2)
 
 {
   void *pvVar1;
@@ -51,9 +51,9 @@ void __thiscall IndexTexture__IndexTexture__005a0fc0(IndexTexture *self,Texture 
   uint32_t local_58;
   uint32_t local_54;
   uint8_t *local_50;
-  File local_48 [4];
+  File local_48[4];
   uint local_44;
-  
+
   *(Texture **)(self + 0x10) = arg1;
   local_78 = 2;
   local_70 = 0;
@@ -66,14 +66,13 @@ void __thiscall IndexTexture__IndexTexture__005a0fc0(IndexTexture *self,Texture 
   local_50 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
   local_80 = &DAT_005c328c /* R:u32=1811964530 */;
   local_88 = arg2;
-  File__File(local_48,(tagFileCreation *)&local_88);
-                    /* try { // try from 005a1042 to 005a1116 has its CatchHandler @ 005a114f */
-  File__ReadVariable(local_48,self + 0xc,4);
+  File__File(local_48, (tagFileCreation *)&local_88);
+  /* try { // try from 005a1042 to 005a1116 has its CatchHandler @ 005a114f */
+  File__ReadVariable(local_48, self + 0xc, 4);
   if (*(int *)(self + 0xc) == 0x49583031) {
     local_44 = (uint)(((ulong)local_44 - 4) / 0x14);
     *(uint *)(self + 8) = local_44;
-  }
-  else {
+  } else {
     *(uint32_t *)(self + 0xc) = 0;
     File__Reset(local_48);
     local_44 = local_44 / 0x14;
@@ -84,11 +83,11 @@ void __thiscall IndexTexture__IndexTexture__005a0fc0(IndexTexture *self,Texture 
   if (0 < *(int *)(self + 8)) {
     iVar2 = 0;
     do {
-      File__ReadVariable(local_48,pvVar1,4);
-      File__ReadVariable(local_48,(void *)((long)pvVar1 + 4),4);
-      File__ReadVariable(local_48,(void *)((long)pvVar1 + 8),4);
-      File__ReadVariable(local_48,(void *)((long)pvVar1 + 0xc),4);
-      File__ReadVariable(local_48,(void *)((long)pvVar1 + 0x10),4);
+      File__ReadVariable(local_48, pvVar1, 4);
+      File__ReadVariable(local_48, (void *)((long)pvVar1 + 4), 4);
+      File__ReadVariable(local_48, (void *)((long)pvVar1 + 8), 4);
+      File__ReadVariable(local_48, (void *)((long)pvVar1 + 0xc), 4);
+      File__ReadVariable(local_48, (void *)((long)pvVar1 + 0x10), 4);
       iVar2 = iVar2 + 1;
       pvVar1 = (void *)((long)pvVar1 + 0x14);
     } while (iVar2 < *(int *)(self + 8));
@@ -114,7 +113,7 @@ void __thiscall IndexTexture__IndexTexture__005a1170(IndexTexture *self)
     operator_delete__(*(void **)self);
   }
   if (*(BaseResource **)(self + 0x10) != (BaseResource *)0x0) {
-    BaseResource__Release(*(BaseResource **)(self + 0x10),0);
+    BaseResource__Release(*(BaseResource **)(self + 0x10), 0);
     return;
   }
   return;
@@ -130,8 +129,7 @@ void __thiscall IndexTexture__IndexTexture__005a1170(IndexTexture *self)
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 /* IndexTexture__SetTexture(unsigned char, int, int) */
 
-uint32_t __thiscall
-IndexTexture__SetTexture(IndexTexture *self,uchar arg1,int arg2,int arg3)
+uint32_t __thiscall IndexTexture__SetTexture(IndexTexture *self, uchar arg1, int arg2, int arg3)
 
 {
   long lVar1;
@@ -143,10 +141,10 @@ IndexTexture__SetTexture(IndexTexture *self,uchar arg1,int arg2,int arg3)
   float *pfVar7;
   float fVar8;
   float fVar9;
-  Matrix4x4 local_138 [12];
+  Matrix4x4 local_138[12];
   float local_12c;
   float local_11c;
-  Matrix4x4 local_f8 [64];
+  Matrix4x4 local_f8[64];
   uint32_t local_b8;
   uint32_t local_b4;
   float local_a8;
@@ -165,19 +163,19 @@ IndexTexture__SetTexture(IndexTexture *self,uchar arg1,int arg2,int arg3)
   float local_44;
   float local_38;
   float local_34;
-  float local_2c [3];
-  
+  float local_2c[3];
+
   iVar5 = *(int *)(self + 8) + -1;
   if (arg2 < *(int *)(self + 8)) {
     iVar5 = arg2;
   }
   TGraphics__ResetTexCoordGen(Graphics);
-  uVar2 = TGraphics__SetTexture(Graphics,arg1,*(Texture **)(self + 0x10));
+  uVar2 = TGraphics__SetTexture(Graphics, arg1, *(Texture **)(self + 0x10));
   lVar6 = (long)iVar5 * 0x14;
-  TGraphics__AddTextureCoordGen(Graphics,0,2,8,0xffffffff);
+  TGraphics__AddTextureCoordGen(Graphics, 0, 2, 8, 0xffffffff);
   local_b8 = 0xbf000000;
   local_b4 = 0xbf000000;
-  Matrix4x4__Transformation2DRot(local_138,(Vector2 *)0x0,(float *)0x0,(Vector2 *)&local_b8);
+  Matrix4x4__Transformation2DRot(local_138, (Vector2 *)0x0, (float *)0x0, (Vector2 *)&local_b8);
   fVar8 = DAT_005be6e4 /* R:0.5f */;
   lVar3 = *(long *)self + lVar6;
   local_2c[0] = *(float *)(lVar3 + 0x10);
@@ -194,41 +192,40 @@ IndexTexture__SetTexture(IndexTexture *self,uchar arg1,int arg2,int arg3)
         local_a4 = *(float *)(lVar3 + 0xc) - (fVar8 + fVar8);
         local_98 = local_a8 * DAT_005be6e4 /* R:0.5f */;
         local_94 = local_a4 * DAT_005be6e4 /* R:0.5f */;
-        Matrix4x4__Transformation2DRot(local_f8,(Vector2 *)&local_a8,local_2c,(Vector2 *)&local_98);
-      }
-      else {
+        Matrix4x4__Transformation2DRot(local_f8, (Vector2 *)&local_a8, local_2c,
+                                       (Vector2 *)&local_98);
+      } else {
         local_84 = *(float *)(lVar3 + 8) - (fVar9 + fVar9);
         local_88 = *(float *)(lVar3 + 0xc) - (fVar8 + fVar8);
         local_78 = local_84 * DAT_005be6e4 /* R:0.5f */;
         local_74 = local_88 * DAT_005be6e4 /* R:0.5f */;
-        Matrix4x4__Transformation2DRot(local_f8,(Vector2 *)&local_88,local_2c,(Vector2 *)&local_78);
+        Matrix4x4__Transformation2DRot(local_f8, (Vector2 *)&local_88, local_2c,
+                                       (Vector2 *)&local_78);
       }
-      Matrix4x4__Multiply(local_138,local_138,local_f8);
+      Matrix4x4__Multiply(local_138, local_138, local_f8);
       local_12c = *(float *)(lVar6 + *(long *)self) + local_12c + fVar9;
       local_11c = ((float *)(lVar6 + *(long *)self))[1] + local_11c + fVar8;
-    }
-    else {
+    } else {
       local_68 = DAT_005be894 /* R:1.0f */ / (float)*(ushort *)(*(long *)(self + 0x10) + 0xc);
       local_58 = local_68 * DAT_005be6e4 /* R:0.5f */;
       local_64 = local_68;
       local_54 = local_58;
-      Matrix4x4__Transformation2DRot(local_f8,(Vector2 *)&local_68,local_2c,(Vector2 *)&local_58);
-      Matrix4x4__Multiply(local_138,local_138,local_f8);
+      Matrix4x4__Transformation2DRot(local_f8, (Vector2 *)&local_68, local_2c,
+                                     (Vector2 *)&local_58);
+      Matrix4x4__Multiply(local_138, local_138, local_f8);
       pfVar7 = (float *)(lVar6 + *(long *)self);
       local_12c = *pfVar7 + local_12c + pfVar7[2] * fVar8;
       local_11c = pfVar7[1] + local_11c + fVar8 * pfVar7[3];
     }
-  }
-  else {
+  } else {
     lVar1 = *(long *)(self + 0x10);
-    SetTexture(unsigned_char,int,int)::fPixelOffset = 0x40000000;
+    SetTexture(unsigned_char, int, int)::fPixelOffset = 0x40000000;
     if (local_2c[0] == DAT_005bf760 /* R:0.0f */) {
       local_38 = *(float *)(lVar3 + 8);
       local_48 = local_38 - DAT_005c0068 /* R:2.0f */ / (float)*(ushort *)(lVar1 + 0xc);
       local_34 = *(float *)(lVar3 + 0xc);
       local_44 = local_34 - DAT_005c0068 /* R:2.0f */ / (float)*(ushort *)(lVar1 + 0x10);
-    }
-    else {
+    } else {
       local_38 = *(float *)(lVar3 + 8);
       local_44 = local_38 - DAT_005c0068 /* R:2.0f */ / (float)*(ushort *)(lVar1 + 0xc);
       local_34 = *(float *)(lVar3 + 0xc);
@@ -236,13 +233,13 @@ IndexTexture__SetTexture(IndexTexture *self,uchar arg1,int arg2,int arg3)
     }
     local_34 = local_34 * DAT_005be6e4 /* R:0.5f */;
     local_38 = DAT_005be6e4 /* R:0.5f */ * local_38;
-    Matrix4x4__Transformation2DRot(local_f8,(Vector2 *)&local_48,local_2c,(Vector2 *)&local_38);
-    Matrix4x4__Multiply(local_138,local_138,local_f8);
+    Matrix4x4__Transformation2DRot(local_f8, (Vector2 *)&local_48, local_2c, (Vector2 *)&local_38);
+    Matrix4x4__Multiply(local_138, local_138, local_f8);
     local_12c = local_12c + *(float *)(lVar6 + *(long *)self);
     local_11c = local_11c + ((float *)(lVar6 + *(long *)self))[1];
   }
   uVar4 = Matrix4x4__TexCoordinateMatrix(local_138);
-  TGraphics__SetTextCoordMatrix(Graphics,8,uVar4);
+  TGraphics__SetTextCoordMatrix(Graphics, 8, uVar4);
   return uVar2;
 }
 
@@ -255,24 +252,24 @@ IndexTexture__SetTexture(IndexTexture *self,uchar arg1,int arg2,int arg3)
  */
 /* IndexTexture__GetTextureCoords(int, Vector2*) */
 
-void __thiscall IndexTexture__GetTextureCoords(IndexTexture *self,int arg1,Vector2 *arg2)
+void __thiscall IndexTexture__GetTextureCoords(IndexTexture *self, int arg1, Vector2 *arg2)
 
 {
   long lVar1;
   long lVar2;
   int iVar3;
   float *pfVar4;
-  Matrix4x4 aMStack_118 [12];
+  Matrix4x4 aMStack_118[12];
   float local_10c;
   float local_fc;
-  Matrix4x4 local_d8 [64];
+  Matrix4x4 local_d8[64];
   uint32_t local_98;
   uint32_t local_94;
   float local_88;
   float local_84;
   float local_78;
   float local_74;
-  Vector2 local_68 [16];
+  Vector2 local_68[16];
   uint32_t local_58;
   uint32_t local_54;
   uint32_t local_48;
@@ -282,16 +279,16 @@ void __thiscall IndexTexture__GetTextureCoords(IndexTexture *self,int arg1,Vecto
   uint32_t local_28;
   uint32_t local_24;
   float local_1c;
-  
+
   local_98 = 0xbf000000;
   local_94 = 0xbf000000;
   iVar3 = *(int *)(self + 8) + -1;
   if (arg1 < *(int *)(self + 8)) {
     iVar3 = arg1;
   }
-  Matrix4x4__Transformation2DRot(aMStack_118,(Vector2 *)0x0,(float *)0x0,(Vector2 *)&local_98);
+  Matrix4x4__Transformation2DRot(aMStack_118, (Vector2 *)0x0, (float *)0x0, (Vector2 *)&local_98);
   lVar1 = *(long *)(self + 0x10);
-  GetTextureCoords(int,Vector2*)::fPixelOffset = 0x40000000;
+  GetTextureCoords(int, Vector2 *)::fPixelOffset = 0x40000000;
   lVar2 = *(long *)self + (long)iVar3 * 0x14;
   local_1c = *(float *)(lVar2 + 0x10);
   if (local_1c == DAT_005bf760 /* R:0.0f */) {
@@ -299,8 +296,7 @@ void __thiscall IndexTexture__GetTextureCoords(IndexTexture *self,int arg1,Vecto
     local_88 = local_78 - DAT_005c0068 /* R:2.0f */ / (float)*(ushort *)(lVar1 + 0xc);
     local_74 = *(float *)(lVar2 + 0xc);
     local_84 = local_74 - DAT_005c0068 /* R:2.0f */ / (float)*(ushort *)(lVar1 + 0x10);
-  }
-  else {
+  } else {
     local_78 = *(float *)(lVar2 + 8);
     local_84 = local_78 - DAT_005c0068 /* R:2.0f */ / (float)*(ushort *)(lVar1 + 0xc);
     local_74 = *(float *)(lVar2 + 0xc);
@@ -308,27 +304,27 @@ void __thiscall IndexTexture__GetTextureCoords(IndexTexture *self,int arg1,Vecto
   }
   local_74 = local_74 * DAT_005be6e4 /* R:0.5f */;
   local_78 = DAT_005be6e4 /* R:0.5f */ * local_78;
-  Matrix4x4__Transformation2DRot(local_d8,(Vector2 *)&local_88,&local_1c,(Vector2 *)&local_78);
-  Matrix4x4__Multiply(aMStack_118,aMStack_118,local_d8);
+  Matrix4x4__Transformation2DRot(local_d8, (Vector2 *)&local_88, &local_1c, (Vector2 *)&local_78);
+  Matrix4x4__Multiply(aMStack_118, aMStack_118, local_d8);
   pfVar4 = (float *)((long)iVar3 * 0x14 + *(long *)self);
   local_10c = local_10c + *pfVar4;
   local_58 = 0;
   local_fc = local_fc + pfVar4[1];
   local_54 = 0;
-  Vector2__operator_assign(local_68,(Vector2 *)&local_58);
-  Matrix4x4__TransformVector2(arg2,local_68,aMStack_118,1);
+  Vector2__operator_assign(local_68, (Vector2 *)&local_58);
+  Matrix4x4__TransformVector2(arg2, local_68, aMStack_118, 1);
   local_48 = 0x3f800000;
   local_44 = 0;
-  Vector2__operator_assign(local_68,(Vector2 *)&local_48);
-  Matrix4x4__TransformVector2(arg2 + 8,local_68,aMStack_118,1);
+  Vector2__operator_assign(local_68, (Vector2 *)&local_48);
+  Matrix4x4__TransformVector2(arg2 + 8, local_68, aMStack_118, 1);
   local_38 = 0;
   local_34 = 0x3f800000;
-  Vector2__operator_assign(local_68,(Vector2 *)&local_38);
-  Matrix4x4__TransformVector2(arg2 + 0x10,local_68,aMStack_118,1);
+  Vector2__operator_assign(local_68, (Vector2 *)&local_38);
+  Matrix4x4__TransformVector2(arg2 + 0x10, local_68, aMStack_118, 1);
   local_28 = 0x3f800000;
   local_24 = 0x3f800000;
-  Vector2__operator_assign(local_68,(Vector2 *)&local_28);
-  Matrix4x4__TransformVector2(arg2 + 0x18,local_68,aMStack_118,1);
+  Vector2__operator_assign(local_68, (Vector2 *)&local_28);
+  Matrix4x4__TransformVector2(arg2 + 0x18, local_68, aMStack_118, 1);
   return;
 }
 
@@ -341,13 +337,13 @@ void __thiscall IndexTexture__GetTextureCoords(IndexTexture *self,int arg1,Vecto
  */
 /* IndexTexture__GetTextureWAndH(int, float&, float&) */
 
-void __thiscall
-IndexTexture__GetTextureWAndH(IndexTexture *self,int arg1,float *arg2,float *arg3)
+void __thiscall IndexTexture__GetTextureWAndH(IndexTexture *self, int arg1, float *arg2,
+                                              float *arg3)
 
 {
   long lVar1;
   long lVar2;
-  
+
   if (*(int *)(self + 8) <= arg1) {
     arg1 = *(int *)(self + 8) + -1;
   }

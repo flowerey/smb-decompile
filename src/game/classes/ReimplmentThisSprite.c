@@ -18,7 +18,7 @@
  */
 /* ReimplmentThisSprite__DeSerialize(void const*) */
 
-void __thiscall ReimplmentThisSprite__DeSerialize(ReimplmentThisSprite *self,void *arg1)
+void __thiscall ReimplmentThisSprite__DeSerialize(ReimplmentThisSprite *self, void *arg1)
 
 {
   ReimplmentThisSprite RVar1;
@@ -29,7 +29,7 @@ void __thiscall ReimplmentThisSprite__DeSerialize(ReimplmentThisSprite *self,voi
   long lVar6;
   ReimplmentThisSprite *pRVar7;
   bool bVar8;
-  
+
   if (arg1 != (void *)0x0) {
     pRVar7 = self + 0x80;
     if (arg1 != pRVar7) {
@@ -63,8 +63,7 @@ void __thiscall ReimplmentThisSprite__DeSerialize(ReimplmentThisSprite *self,voi
       }
       if ((uVar4 & 4) == 0) {
         lVar6 = 0;
-      }
-      else {
+      } else {
         *(uint32_t *)pRVar7 = *(uint32_t *)arg1;
         lVar6 = 4;
       }
@@ -92,7 +91,7 @@ void __thiscall ReimplmentThisSprite__DeSerialize(ReimplmentThisSprite *self,voi
  */
 /* ReimplmentThisSprite__Serialize(void*) */
 
-uint64_t __thiscall ReimplmentThisSprite__Serialize(ReimplmentThisSprite *self,void *arg1)
+uint64_t __thiscall ReimplmentThisSprite__Serialize(ReimplmentThisSprite *self, void *arg1)
 
 {
   uint16_t uVar1;
@@ -102,7 +101,7 @@ uint64_t __thiscall ReimplmentThisSprite__Serialize(ReimplmentThisSprite *self,v
   long lVar5;
   ReimplmentThisSprite *pRVar6;
   bool bVar7;
-  
+
   if ((arg1 != (void *)0x0) && (pRVar6 = self + 0x80, arg1 != pRVar6)) {
     uVar3 = 0xa0;
     bVar7 = ((ulong)arg1 & 1) != 0;
@@ -133,8 +132,7 @@ uint64_t __thiscall ReimplmentThisSprite__Serialize(ReimplmentThisSprite *self,v
     }
     if ((uVar3 & 4) == 0) {
       lVar5 = 0;
-    }
-    else {
+    } else {
       *(uint32_t *)arg1 = *(uint32_t *)pRVar6;
       lVar5 = 4;
     }
@@ -198,11 +196,11 @@ void __thiscall ReimplmentThisSprite__ReimplmentThisSprite__005979d0(ReimplmentT
 
 {
   uint64_t uVar1;
-  
+
   *(uint64_t *)(self + 0x48) = 0;
   *(uint32_t *)(self + 0x50) = 1;
   *(uint8_t ***)self = &PTR__SceneObject3D_005dd410;
-                    /* try { // try from 005979f2 to 005979f6 has its CatchHandler @ 00597b94 */
+  /* try { // try from 005979f2 to 005979f6 has its CatchHandler @ 00597b94 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x58));
   uVar1 = vDefaultStart3D;
   *(uint32_t *)(self + 0x80) = 0;
@@ -244,7 +242,7 @@ void __thiscall ReimplmentThisSprite__ReimplmentThisSprite__005979d0(ReimplmentT
   *(uint32_t *)(self + 0x114) = 0;
   *(uint32_t *)(self + 0x118) = 0;
   *(uint32_t *)(self + 0x11c) = 0;
-                    /* try { // try from 00597b82 to 00597b86 has its CatchHandler @ 00597ba3 */
+  /* try { // try from 00597b82 to 00597b86 has its CatchHandler @ 00597ba3 */
   TGraphics__GPUState_GPUState((GPUState *)(self + 0x120));
   *(uint8_t ***)self = &PTR__ReimplmentThisSprite_005dd270;
   return;
@@ -264,7 +262,7 @@ void __thiscall ReimplmentThisSprite__RenderSprite(ReimplmentThisSprite *self)
 {
   float fVar1;
   TGraphics *this_00;
-  Matrix4x4 local_78 [64];
+  Matrix4x4 local_78[64];
   uint32_t local_38;
   uint32_t local_34;
   uint32_t local_30;
@@ -273,23 +271,23 @@ void __thiscall ReimplmentThisSprite__RenderSprite(ReimplmentThisSprite *self)
   float local_24;
   uint32_t local_20;
   uint32_t local_1c;
-  
+
   local_38 = 0;
   local_34 = 0;
   local_30 = 0;
   local_2c = 0;
-  Matrix4x4__TransformVector3((FPUVector *)&local_38,(FPUVector *)(self + 0xa0),local_78,1);
+  Matrix4x4__TransformVector3((FPUVector *)&local_38, (FPUVector *)(self + 0xa0), local_78, 1);
   fVar1 = *(float *)(self + 0xd4);
   local_24 = (float)TWindow__getAspectRatio(Window);
   local_24 = local_24 * fVar1;
   local_28 = *(uint32_t *)(self + 0xd0);
   local_1c = 0;
   local_20 = 0x3f800000;
-  Matrix4x4__Transformation3D
-            (local_78,(FPUVector *)&local_28,(TQuaternion *)0x0,(FPUVector *)&local_38);
+  Matrix4x4__Transformation3D(local_78, (FPUVector *)&local_28, (TQuaternion *)0x0,
+                              (FPUVector *)&local_38);
   this_00 = Graphics;
   *(uint64_t *)(self + 0x4c8) = *(uint64_t *)(Graphics + 0xaa0);
-  TGraphics__SetActiveGPUBlock(this_00,(GPUState *)(self + 0x120));
-  TGraphics__SetActiveGPUBlock(Graphics,(GPUState *)0x0);
+  TGraphics__SetActiveGPUBlock(this_00, (GPUState *)(self + 0x120));
+  TGraphics__SetActiveGPUBlock(Graphics, (GPUState *)0x0);
   return;
 }

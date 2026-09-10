@@ -39,20 +39,20 @@ void __thiscall Camera__SetupCamera(Camera *self)
   double dVar1;
   uint local_28;
   uint local_24;
-  
-  Matrix4x4__ConvertToPerspectiveMatrix
-            ((Matrix4x4 *)self,*(float *)(self + 0x130),*(float *)(self + 0x134),
-             *(float *)(self + 0x138),*(float *)(self + 0x13c));
-  Matrix4x4__ConvertToLookAtMatrix
-            ((Matrix4x4 *)(self + 0x40),(FPUVector *)(self + 0x100),(FPUVector *)(self + 0x110),
-             (FPUVector *)(self + 0x120));
-  Matrix4x4__Multiply((Matrix4x4 *)(self + 0x80),(Matrix4x4 *)(self + 0x40),(Matrix4x4 *)self);
+
+  Matrix4x4__ConvertToPerspectiveMatrix((Matrix4x4 *)self, *(float *)(self + 0x130),
+                                        *(float *)(self + 0x134), *(float *)(self + 0x138),
+                                        *(float *)(self + 0x13c));
+  Matrix4x4__ConvertToLookAtMatrix((Matrix4x4 *)(self + 0x40), (FPUVector *)(self + 0x100),
+                                   (FPUVector *)(self + 0x110), (FPUVector *)(self + 0x120));
+  Matrix4x4__Multiply((Matrix4x4 *)(self + 0x80), (Matrix4x4 *)(self + 0x40), (Matrix4x4 *)self);
   dVar1 = tan((double)(DAT_005be6e4 /* R:0.5f */ * *(float *)(self + 0x130)));
-  local_24 = (uint)(float)(dVar1 * (double)*(float *)(self + 0x108)) & DAT_005be880 /* R:u32=2147483647 */;
+  local_24 =
+      (uint)(float)(dVar1 * (double)*(float *)(self + 0x108)) & DAT_005be880 /* R:u32=2147483647 */;
   local_28 = (uint)(*(float *)(self + 0x134) * (float)(dVar1 * (double)*(float *)(self + 0x108))) &
              DAT_005be880 /* R:u32=2147483647 */;
-  BoundingSquare__Change
-            ((BoundingSquare *)(self + 0x140),(Vector2 *)&local_28,0.0,(Vector2 *)(self + 0x100));
+  BoundingSquare__Change((BoundingSquare *)(self + 0x140), (Vector2 *)&local_28, 0.0,
+                         (Vector2 *)(self + 0x100));
   *(uint32_t *)(self + 0x1d4) = 0;
   return;
 }
@@ -67,9 +67,8 @@ void __thiscall Camera__SetupCamera(Camera *self)
 /* Camera__Camera__00581800(FPUVector const&, FPUVector const&, float, float, float, float, FPUVector const&)
     */
 
-void __thiscall
-Camera__Camera__00581800(Camera *self,FPUVector *arg1,FPUVector *arg2,float arg3,float arg4,
-              float arg5,float arg6,FPUVector *arg7)
+void __thiscall Camera__Camera__00581800(Camera *self, FPUVector *arg1, FPUVector *arg2, float arg3,
+                                         float arg4, float arg5, float arg6, FPUVector *arg7)
 
 {
   uint64_t uVar1;
@@ -77,7 +76,7 @@ Camera__Camera__00581800(Camera *self,FPUVector *arg1,FPUVector *arg2,float arg3
   uint32_t local_24;
   uint32_t local_18;
   uint32_t local_14;
-  
+
   *(uint64_t *)(self + 0x100) = *(uint64_t *)arg1;
   *(uint64_t *)(self + 0x108) = *(uint64_t *)(arg1 + 8);
   *(uint64_t *)(self + 0x110) = *(uint64_t *)arg2;
@@ -93,8 +92,8 @@ Camera__Camera__00581800(Camera *self,FPUVector *arg1,FPUVector *arg2,float arg3
   local_18 = 0x3f000000;
   local_24 = 0;
   local_14 = 0x3f000000;
-  BoundingSquare__BoundingSquare
-            ((BoundingSquare *)(self + 0x140),(Vector2 *)&local_28,0.0,(Vector2 *)&local_18);
+  BoundingSquare__BoundingSquare((BoundingSquare *)(self + 0x140), (Vector2 *)&local_28, 0.0,
+                                 (Vector2 *)&local_18);
   *(uint32_t *)(self + 0x1d4) = 1;
   *(uint32_t *)(self + 0x1d8) = 1;
   SetupCamera(self);
@@ -121,7 +120,7 @@ void __thiscall Camera__Camera__00581800(Camera *self)
   uint32_t local_24;
   uint32_t local_18;
   uint32_t local_14;
-  
+
   lVar3 = Window;
   *(uint32_t *)(self + 0x124) = 0x3f800000;
   *(uint32_t *)(self + 0x100) = 0;
@@ -145,8 +144,8 @@ void __thiscall Camera__Camera__00581800(Camera *self)
   local_18 = 0x3f000000;
   local_14 = 0x3f000000;
   *(float *)(self + 0x134) = (float)uVar1 / (float)uVar2;
-  BoundingSquare__BoundingSquare
-            ((BoundingSquare *)(self + 0x140),(Vector2 *)&local_28,0.0,(Vector2 *)&local_18);
+  BoundingSquare__BoundingSquare((BoundingSquare *)(self + 0x140), (Vector2 *)&local_28, 0.0,
+                                 (Vector2 *)&local_18);
   *(uint32_t *)(self + 0x1d4) = 1;
   *(uint32_t *)(self + 0x1d8) = 1;
   SetupCamera(self);
@@ -182,20 +181,20 @@ void __thiscall Camera__Update(Camera *self)
  */
 /* Camera__ScreenToWorld(FPUVector*, Vector2 const*, float) const */
 
-FPUVector * __thiscall
-Camera__ScreenToWorld(Camera *self,FPUVector *arg1,Vector2 *arg2,float arg3)
+FPUVector *__thiscall Camera__ScreenToWorld(Camera *self, FPUVector *arg1, Vector2 *arg2,
+                                            float arg3)
 
 {
   float fVar1;
   float fVar2;
   float fVar3;
   double dVar4;
-  
+
   dVar4 = tan((double)(DAT_005be6e4 /* R:0.5f */ * *(float *)(self + 0x130)));
   fVar3 = (float)(dVar4 * (double)(*(float *)(self + 0x108) - arg3));
-  *(float *)arg1 =
-       *(float *)(self + 0x134) * *(float *)arg2 * (float)(DAT_005be6f0 /* R:u32=2147483648 */ ^ (uint)fVar3) +
-       *(float *)(self + 0x100);
+  *(float *)arg1 = *(float *)(self + 0x134) * *(float *)arg2 *
+                       (float)(DAT_005be6f0 /* R:u32=2147483648 */ ^ (uint)fVar3) +
+                   *(float *)(self + 0x100);
   fVar1 = *(float *)(arg2 + 4);
   fVar2 = *(float *)(self + 0x104);
   *(float *)(arg1 + 8) = arg3;
@@ -212,19 +211,19 @@ Camera__ScreenToWorld(Camera *self,FPUVector *arg1,Vector2 *arg2,float arg3)
  */
 /* Camera__WorldToScreen(Vector2*, FPUVector const*) const */
 
-Vector2 * __thiscall Camera__WorldToScreen(Camera *self,Vector2 *arg1,FPUVector *arg2)
+Vector2 *__thiscall Camera__WorldToScreen(Camera *self, Vector2 *arg1, FPUVector *arg2)
 
 {
   uint32_t local_18;
   uint32_t local_14;
   uint32_t local_10;
   uint32_t local_c;
-  
+
   local_18 = 0;
   local_14 = 0;
   local_10 = 0;
   local_c = 0;
-  Matrix4x4__TransformVector3((FPUVector *)&local_18,arg2,(Matrix4x4 *)(self + 0x80),1);
+  Matrix4x4__TransformVector3((FPUVector *)&local_18, arg2, (Matrix4x4 *)(self + 0x80), 1);
   *(uint32_t *)arg1 = local_18;
   *(uint32_t *)(arg1 + 4) = local_14;
   return arg1;
@@ -239,16 +238,18 @@ Vector2 * __thiscall Camera__WorldToScreen(Camera *self,Vector2 *arg1,FPUVector 
  */
 /* Camera__GetSceneWidthAndHeight(float&, float&) */
 
-void __thiscall Camera__GetSceneWidthAndHeight(Camera *self,float *arg1,float *arg2)
+void __thiscall Camera__GetSceneWidthAndHeight(Camera *self, float *arg1, float *arg2)
 
 {
   float fVar1;
   double dVar2;
-  
+
   dVar2 = tan((double)(DAT_005be6e4 /* R:0.5f */ * *(float *)(self + 0x130)));
-  fVar1 = (float)((uint)(float)(dVar2 * (double)*(float *)(self + 0x108)) & DAT_005be880 /* R:u32=2147483647 */);
-  *arg1 = (float)((uint)(*(float *)(self + 0x134) *
-                           (float)(dVar2 * (double)*(float *)(self + 0x108))) & DAT_005be880 /* R:u32=2147483647 */);
+  fVar1 = (float)((uint)(float)(dVar2 * (double)*(float *)(self + 0x108)) &
+                  DAT_005be880 /* R:u32=2147483647 */);
+  *arg1 =
+      (float)((uint)(*(float *)(self + 0x134) * (float)(dVar2 * (double)*(float *)(self + 0x108))) &
+              DAT_005be880 /* R:u32=2147483647 */);
   *arg2 = fVar1;
   return;
 }
@@ -262,27 +263,27 @@ void __thiscall Camera__GetSceneWidthAndHeight(Camera *self,float *arg1,float *a
  */
 /* Camera__SetCameraMatricies(tagCameraType) */
 
-void __thiscall Camera__SetCameraMatricies(Camera *self,int arg2)
+void __thiscall Camera__SetCameraMatricies(Camera *self, int arg2)
 
 {
   int iVar1;
   Matrix4x4 *pMVar2;
-  
+
   iVar1 = *(int *)(self + 0x1d8);
   if ((arg2 != 0) && (arg2 != iVar1)) {
     *(int *)(self + 0x1d8) = arg2;
     iVar1 = arg2;
   }
   if (iVar1 != 1) {
-    TGraphics__SetMatrix(Graphics,3,self + 0xc0);
-    TGraphics__SetPerspectiveProjectionMode(Graphics,0);
-    pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,2);
+    TGraphics__SetMatrix(Graphics, 3, self + 0xc0);
+    TGraphics__SetPerspectiveProjectionMode(Graphics, 0);
+    pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 2);
     Matrix4x4__Identity(pMVar2);
     return;
   }
-  TGraphics__SetMatrix(Graphics,3,self);
-  TGraphics__SetMatrix(Graphics,2,self + 0x40);
-  TGraphics__SetPerspectiveProjectionMode(Graphics,1);
+  TGraphics__SetMatrix(Graphics, 3, self);
+  TGraphics__SetMatrix(Graphics, 2, self + 0x40);
+  TGraphics__SetPerspectiveProjectionMode(Graphics, 1);
   return;
 }
 
@@ -295,14 +296,11 @@ void __thiscall Camera__SetCameraMatricies(Camera *self,int arg2)
  */
 /* Camera__SetOrthoProjection(float, float, float, float, float, float) */
 
-void __thiscall
-Camera__SetOrthoProjection
-          (Camera *self,float arg1,float arg2,float arg3,float arg4,float arg5,
-          float arg6)
+void __thiscall Camera__SetOrthoProjection(Camera *self, float arg1, float arg2, float arg3,
+                                           float arg4, float arg5, float arg6)
 
 {
   *(uint32_t *)(self + 0x1d8) = 2;
-  Matrix4x4__ConvertToOrthoMatrix
-            ((Matrix4x4 *)(self + 0xc0),arg1,arg2,arg3,arg4,arg5,arg6);
+  Matrix4x4__ConvertToOrthoMatrix((Matrix4x4 *)(self + 0xc0), arg1, arg2, arg3, arg4, arg5, arg6);
   return;
 }

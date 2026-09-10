@@ -50,7 +50,7 @@ void __thiscall BoundingVolume3D__BoundingVolume3D__0057d940(BoundingVolume3D *s
   long lVar1;
   ushort uVar2;
   ushort uVar3;
-  
+
   uVar2 = *(ushort *)(self + 0x30);
   if (uVar2 != 0) {
     uVar3 = 0;
@@ -90,7 +90,7 @@ void __thiscall BoundingVolume3D__BoundingVolume3D__0057d940(BoundingVolume3D *s
  */
 /* BoundingVolume3D__AddBounds(Bounds*) */
 
-void __thiscall BoundingVolume3D__AddBounds(BoundingVolume3D *self,Bounds *arg1)
+void __thiscall BoundingVolume3D__AddBounds(BoundingVolume3D *self, Bounds *arg1)
 
 {
   void *pvVar1;
@@ -103,7 +103,7 @@ void __thiscall BoundingVolume3D__AddBounds(BoundingVolume3D *self,Bounds *arg1)
   ushort uVar8;
   ulong uVar9;
   uint64_t *puVar10;
-  
+
   if (*(int *)(self + 0x50) == -0x5eef3582) {
     uVar2 = *(ushort *)(self + 0x30);
     if (*(ushort *)(self + 0x32) <= uVar2) {
@@ -123,7 +123,7 @@ void __thiscall BoundingVolume3D__AddBounds(BoundingVolume3D *self,Bounds *arg1)
           if (uVar6 < uVar9 || uVar6 - uVar9 == 0) {
             uVar9 = uVar6;
           }
-          memcpy(pvVar3,pvVar1,uVar9);
+          memcpy(pvVar3, pvVar1, uVar9);
           free(*(void **)((long)pvVar1 + -8));
         }
       }
@@ -136,40 +136,41 @@ void __thiscall BoundingVolume3D__AddBounds(BoundingVolume3D *self,Bounds *arg1)
         uVar6 = (ulong)uVar8 * 2;
         pvVar5 = malloc(uVar9 + 0x10 + uVar6);
         if (pvVar5 != (void *)0x0) {
-          pvVar3 = (void *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9)
-          ;
+          pvVar3 =
+              (void *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
           *(void **)((long)pvVar3 + -8) = pvVar5;
           *(ulong *)((long)pvVar3 + -0x10) = uVar6;
           uVar9 = *(ulong *)((long)pvVar1 + -0x10);
           if (uVar6 <= *(ulong *)((long)pvVar1 + -0x10)) {
             uVar9 = uVar6;
           }
-          memcpy(pvVar3,pvVar1,uVar9);
+          memcpy(pvVar3, pvVar1, uVar9);
           free(*(void **)((long)pvVar1 + -8));
           uVar8 = *(ushort *)(self + 0x32);
         }
         uVar2 = *(ushort *)(self + 0x30);
         *(void **)(self + 0x48) = pvVar3;
-        if (uVar8 <= uVar2) goto LAB_0057dac1;
-        while( true ) {
+        if (uVar8 <= uVar2)
+          goto LAB_0057dac1;
+        while (true) {
           uVar6 = (ulong)uVar2;
           uVar2 = uVar2 + 1;
           *(uint16_t *)((long)pvVar3 + uVar6 * 2) = 0xffff;
-          if (uVar8 <= uVar2) break;
+          if (uVar8 <= uVar2)
+            break;
           pvVar3 = *(void **)(self + 0x48);
         }
       }
       uVar2 = *(ushort *)(self + 0x30);
     }
-  }
-  else {
+  } else {
     uVar6 = (ulong)(byte)self[0x34];
     *(uint32_t *)(self + 0x38) = 0;
     pvVar3 = malloc(uVar6 + 0x38);
     puVar10 = (uint64_t *)0x0;
     if (pvVar3 != (void *)0x0) {
-      puVar10 = (uint64_t *)
-                ((long)pvVar3 + 0x10U + (uVar6 - ((long)pvVar3 + 0x10U) % uVar6) % uVar6);
+      puVar10 =
+          (uint64_t *)((long)pvVar3 + 0x10U + (uVar6 - ((long)pvVar3 + 0x10U) % uVar6) % uVar6);
       puVar10[-2] = 0x28;
       puVar10[-1] = pvVar3;
     }
@@ -193,7 +194,8 @@ LAB_0057dac1:
     while (uVar8 != 0xffff) {
       puVar4 = puVar4 + 1;
       sVar7 = sVar7 + 1;
-      if (sVar7 == *(short *)(self + 0x32)) goto LAB_0057dac7;
+      if (sVar7 == *(short *)(self + 0x32))
+        goto LAB_0057dac7;
       uVar8 = *puVar4;
     }
     *puVar4 = uVar2;
@@ -214,15 +216,14 @@ LAB_0057dac7:
  */
 /* BoundingVolume3D__Change(FPUVector const&, TQuaternion const&, FPUVector const&) */
 
-void __thiscall
-BoundingVolume3D__Change
-          (BoundingVolume3D *self,FPUVector *arg1,TQuaternion *arg2,FPUVector *arg3)
+void __thiscall BoundingVolume3D__Change(BoundingVolume3D *self, FPUVector *arg1, TQuaternion *arg2,
+                                         FPUVector *arg3)
 
 {
   byte *pbVar1;
   ushort uVar2;
   ushort uVar3;
-  
+
   uVar2 = *(ushort *)(self + 0x30);
   if (uVar2 != 0) {
     uVar3 = 0;
@@ -237,8 +238,8 @@ BoundingVolume3D__Change
         *(uint32_t *)(pbVar1 + 8) = *(uint32_t *)(arg1 + 4);
         *(uint32_t *)(pbVar1 + 0xc) = *(uint32_t *)(arg1 + 8);
         *(uint32_t *)(pbVar1 + 0x10) = *(uint32_t *)(arg1 + 0xc);
-        Matrix4x4__Transformation3D((Matrix4x4 *)(pbVar1 + 0x24),(FPUVector *)0x0,arg2,arg3);
-        Matrix4x4__operator_assign((Matrix4x4 *)(pbVar1 + 100),(Matrix4x4 *)(pbVar1 + 0x24));
+        Matrix4x4__Transformation3D((Matrix4x4 *)(pbVar1 + 0x24), (FPUVector *)0x0, arg2, arg3);
+        Matrix4x4__operator_assign((Matrix4x4 *)(pbVar1 + 100), (Matrix4x4 *)(pbVar1 + 0x24));
         uVar2 = *(ushort *)(self + 0x30);
         if (uVar2 <= uVar3) {
           return;
@@ -259,22 +260,21 @@ BoundingVolume3D__Change
  */
 /* BoundingVolume3D__Update(FPUVector const&, TQuaternion const&, FPUVector const&) */
 
-void __thiscall
-BoundingVolume3D__Update
-          (BoundingVolume3D *self,FPUVector *arg1,TQuaternion *arg2,FPUVector *arg3)
+void __thiscall BoundingVolume3D__Update(BoundingVolume3D *self, FPUVector *arg1, TQuaternion *arg2,
+                                         FPUVector *arg3)
 
 {
   BoundingBox *this_00;
   ushort uVar1;
   ushort uVar2;
-  
+
   uVar1 = *(ushort *)(self + 0x30);
   if (uVar1 != 0) {
     uVar2 = 0;
     do {
       while (this_00 = *(BoundingBox **)(*(long *)(self + 0x40) + (ulong)uVar2 * 8),
-            ((byte)*this_00 & 0xf) == 2) {
-        BoundingBox__Update(this_00,arg1,arg2,arg3);
+             ((byte)*this_00 & 0xf) == 2) {
+        BoundingBox__Update(this_00, arg1, arg2, arg3);
         uVar1 = *(ushort *)(self + 0x30);
         uVar2 = uVar2 + 1;
         if (uVar1 <= uVar2) {

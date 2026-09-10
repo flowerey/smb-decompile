@@ -25,7 +25,7 @@ void __thiscall SMBChapter__PlayChapterMusic__00491ea0(SMBChapter *self)
   int iVar2;
   TAudioCue *this_00;
   TAudioInstance *this_01;
-  
+
   uVar1 = *(uint *)(self + 0x204);
   if (uVar1 < 2) {
     if (uVar1 == 0) {
@@ -37,8 +37,7 @@ void __thiscall SMBChapter__PlayChapterMusic__00491ea0(SMBChapter *self)
           goto LAB_0048f214;
         }
       }
-    }
-    else if (*(long *)(self + 0x20) != 0) {
+    } else if (*(long *)(self + 0x20) != 0) {
       this_01 = (TAudioInstance *)(self + 0x48);
       iVar2 = TAudioInstance__IsPlaying(this_01);
       if (iVar2 == 0) {
@@ -46,8 +45,7 @@ void __thiscall SMBChapter__PlayChapterMusic__00491ea0(SMBChapter *self)
         goto LAB_0048f214;
       }
     }
-  }
-  else if (uVar1 == 10) {
+  } else if (uVar1 == 10) {
     if (*(long *)(self + 0x40) != 0) {
       this_01 = (TAudioInstance *)(self + 0x98);
       iVar2 = TAudioInstance__IsPlaying(this_01);
@@ -56,14 +54,13 @@ void __thiscall SMBChapter__PlayChapterMusic__00491ea0(SMBChapter *self)
         goto LAB_0048f214;
       }
     }
-  }
-  else if (*(long *)(self + 0x28) != 0) {
+  } else if (*(long *)(self + 0x28) != 0) {
     this_01 = (TAudioInstance *)(self + 0x70);
     iVar2 = TAudioInstance__IsPlaying(this_01);
     if (iVar2 == 0) {
       this_00 = *(TAudioCue **)(self + 0x28);
-LAB_0048f214:
-      TAudioCue__Play(this_00,GLOBALMUSICVOLUME,0,this_01);
+    LAB_0048f214:
+      TAudioCue__Play(this_00, GLOBALMUSICVOLUME, 0, this_01);
       return;
     }
   }
@@ -79,13 +76,13 @@ LAB_0048f214:
  */
 /* SMBChapter__GetLevelInfoArray(tagChapterLevelType) */
 
-SMBChapter * __thiscall SMBChapter__GetLevelInfoArray(SMBChapter *self,int arg2)
+SMBChapter *__thiscall SMBChapter__GetLevelInfoArray(SMBChapter *self, int arg2)
 
 {
   if (arg2 == 0xb) {
     arg2 = *(int *)(self + 0x204);
   }
-  switch(arg2) {
+  switch (arg2) {
   default:
     return self + 0x110;
   case 1:
@@ -118,7 +115,7 @@ SMBChapter * __thiscall SMBChapter__GetLevelInfoArray(SMBChapter *self,int arg2)
  */
 /* SMBChapter__GetChapterFile(tagChapterName) */
 
-uint64_t __thiscall SMBChapter__GetChapterFile(uint64_t arg1,int arg2)
+uint64_t __thiscall SMBChapter__GetChapterFile(uint64_t arg1, int arg2)
 
 {
   return *(uint64_t *)(GetChapterFile(tagChapterName)::pChapterFiles + (long)(arg2 + -1) * 8);
@@ -133,18 +130,18 @@ uint64_t __thiscall SMBChapter__GetChapterFile(uint64_t arg1,int arg2)
  */
 /* SMBChapter__LoadInternetsChapterMusic(int) */
 
-void __thiscall SMBChapter__LoadInternetsChapterMusic(SMBChapter *self,int arg1)
+void __thiscall SMBChapter__LoadInternetsChapterMusic(SMBChapter *self, int arg1)
 
 {
   TAudioCue *this_00;
   int iVar1;
   uint64_t uVar2;
   int iVar3;
-  uint32_t local_38 [2];
+  uint32_t local_38[2];
   uint64_t local_30;
   uint32_t local_28;
   uint32_t local_24;
-  
+
   this_00 = *(TAudioCue **)(self + 0x18);
   iVar1 = 0xd;
   if (arg1 < 0xe) {
@@ -187,7 +184,7 @@ void __thiscall SMBChapter__UnloadChapter(SMBChapter *self)
   long lVar5;
   TAudioCue *pTVar6;
   uint uVar7;
-  
+
   *(uint16_t *)(self + 0x138) = 0;
   if ((*(int *)(self + 0x140) == 1) && (uVar1 = *(ushort *)(self + 0x13a), uVar1 != 0)) {
     lVar4 = 0;
@@ -208,20 +205,22 @@ void __thiscall SMBChapter__UnloadChapter(SMBChapter *self)
   if (*(short *)(self + 0x1d8) != 0) {
     uVar7 = 0;
     do {
-      while( true ) {
+      while (true) {
         lVar4 = (ulong)(uVar7 & 0xffff) * 0xb8 + *(long *)(self + 0x1e8);
         *(uint16_t *)(lVar4 + 0x90) = 0;
-        if ((*(int *)(lVar4 + 0x98) != 1) || (uVar1 = *(ushort *)(lVar4 + 0x92), uVar1 == 0)) break;
+        if ((*(int *)(lVar4 + 0x98) != 1) || (uVar1 = *(ushort *)(lVar4 + 0x92), uVar1 == 0))
+          break;
         lVar5 = 0;
         do {
           *(uint16_t *)(*(long *)(lVar4 + 0xa8) + lVar5) = 0xffff;
           lVar5 = lVar5 + 2;
         } while (lVar5 != (ulong)(uVar1 - 1 & 0xffff) * 2 + 2);
         uVar7 = uVar7 + 1;
-        if ((int)(uint)*(ushort *)(self + 0x1d8) <= (int)uVar7) goto LAB_0048fc21;
+        if ((int)(uint) * (ushort *)(self + 0x1d8) <= (int)uVar7)
+          goto LAB_0048fc21;
       }
       uVar7 = uVar7 + 1;
-    } while ((int)uVar7 < (int)(uint)*(ushort *)(self + 0x1d8));
+    } while ((int)uVar7 < (int)(uint) * (ushort *)(self + 0x1d8));
   }
 LAB_0048fc21:
   *(uint16_t *)(self + 0x1d8) = 0;
@@ -239,10 +238,9 @@ LAB_0048fc21:
   TAudioInstance__Stop((TAudioInstance *)(self + 0xc0));
   TAudioInstance__Stop((TAudioInstance *)(self + 0xe8));
   if (*(int *)(self + 0x2e0) == 1) {
-LAB_0048fca2:
+  LAB_0048fca2:
     pTVar6 = *(TAudioCue **)(self + 0x18);
-  }
-  else if (*(uint *)(self + 0x204) < 2) {
+  } else if (*(uint *)(self + 0x204) < 2) {
     if (*(long *)(self + 0x18) == 0) {
       *(uint32_t *)(self + 0x2e0) = uVar3;
       *(uint16_t *)(self + 0x2e4) = uVar2;
@@ -250,8 +248,7 @@ LAB_0048fca2:
     }
     TAudioInstance__Stop((TAudioInstance *)(self + 0x48));
     pTVar6 = *(TAudioCue **)(self + 0x18);
-  }
-  else {
+  } else {
     if (*(uint *)(self + 0x204) != 10) {
       if (*(long *)(self + 0x28) != 0) {
         TAudioInstance__Stop((TAudioInstance *)(self + 0x70));
@@ -323,7 +320,7 @@ LAB_0048fcca:
 /* WARNING: Removing unreachable block (ram,0x00491d03) */
 /* SMBChapter__LoadChapter(tagChapterName) */
 
-void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
+void __thiscall SMBChapter__LoadChapter(SMBChapter *self, int arg2)
 
 {
   int *piVar1;
@@ -359,18 +356,18 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
   byte bVar29;
   int local_15c;
   int local_130;
-  uint32_t local_128 [2];
+  uint32_t local_128[2];
   long local_120;
   uint32_t local_118;
   uint32_t local_114;
-  PropertyVariable *local_108 [2];
-  uint8_t *local_f8 [2];
-  PropertyBlock *local_e8 [2];
-  PropertyVariable *local_d8 [2];
-  PropertyVariable *local_c8 [2];
-  PropertyVariable *local_b8 [2];
-  PropertyVariable *local_a8 [2];
-  long local_98 [2];
+  PropertyVariable *local_108[2];
+  uint8_t *local_f8[2];
+  PropertyBlock *local_e8[2];
+  PropertyVariable *local_d8[2];
+  PropertyVariable *local_c8[2];
+  PropertyVariable *local_b8[2];
+  PropertyVariable *local_a8[2];
+  long local_98[2];
   PropertyBlock *local_88;
   PropertyVariable *local_80;
   PropertyVariable *local_78;
@@ -379,77 +376,75 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
   PropertyVariable *local_60;
   PropertyVariable *local_58;
   PropertyBlock *local_50;
-  allocator local_45 [2];
-  allocator local_43 [2];
-  allocator local_41 [2];
-  allocator local_3f [2];
-  allocator local_3d [2];
-  allocator local_3b [11];
-  
+  allocator local_45[2];
+  allocator local_43[2];
+  allocator local_41[2];
+  allocator local_3f[2];
+  allocator local_3d[2];
+  allocator local_3b[11];
+
   bVar29 = 0;
   if (arg2 == 9) {
     this_00 = operator_new(0x50);
-                    /* try { // try from 00491c59 to 00491c5d has its CatchHandler @ 00491cad */
-    PropertiesFile__PropertiesFile__005975b0(this_00,"Levels/Internets.chapter",0);
-  }
-  else {
+    /* try { // try from 00491c59 to 00491c5d has its CatchHandler @ 00491cad */
+    PropertiesFile__PropertiesFile__005975b0(this_00, "Levels/Internets.chapter", 0);
+  } else {
     pcVar11 = *(char **)(GetChapterFile(tagChapterName)::pChapterFiles + (long)(arg2 + -1) * 8);
     this_00 = operator_new(0x50);
-                    /* try { // try from 0048fee5 to 0048fee9 has its CatchHandler @ 00491cee */
-    PropertiesFile__PropertiesFile__005975b0(this_00,pcVar11,0);
+    /* try { // try from 0048fee5 to 0048fee9 has its CatchHandler @ 00491cee */
+    PropertiesFile__PropertiesFile__005975b0(this_00, pcVar11, 0);
   }
   UnloadChapter(self);
-  PropertiesFile__FindPropertyBlock(this_00,&local_88,"chapter",0);
+  PropertiesFile__FindPropertyBlock(this_00, &local_88, "chapter", 0);
   if (local_88 != (PropertyBlock *)0x0) {
-    PropertiesFile__FindPropertyVariable(this_00,local_a8,local_88,"music");
-    PropertiesFile__FindPropertyVariable(this_00,&local_60,local_88,"altmusic");
-    PropertiesFile__FindPropertyVariable(this_00,local_108,local_88,"warptrans");
-    PropertiesFile__FindPropertyVariable(this_00,local_b8,local_88,"warpmusic");
-    PropertiesFile__FindPropertyVariable(this_00,local_c8,local_88,"menunormalmusic");
-    PropertiesFile__FindPropertyVariable(this_00,local_d8,local_88,"menuretromusic");
-    PropertiesFile__FindPropertyVariable(this_00,&local_80,local_88,"intro");
-    PropertiesFile__FindPropertyVariable(this_00,&local_78,local_88,"bossmusic");
-    PropertiesFile__FindPropertyVariable(this_00,&local_70,local_88,"bossintro");
-    PropertiesFile__FindPropertyVariable(this_00,&local_68,local_88,"bossoutro");
-    PropertiesFile__FindPropertyVariable(this_00,&local_58,local_88,"overridechar");
+    PropertiesFile__FindPropertyVariable(this_00, local_a8, local_88, "music");
+    PropertiesFile__FindPropertyVariable(this_00, &local_60, local_88, "altmusic");
+    PropertiesFile__FindPropertyVariable(this_00, local_108, local_88, "warptrans");
+    PropertiesFile__FindPropertyVariable(this_00, local_b8, local_88, "warpmusic");
+    PropertiesFile__FindPropertyVariable(this_00, local_c8, local_88, "menunormalmusic");
+    PropertiesFile__FindPropertyVariable(this_00, local_d8, local_88, "menuretromusic");
+    PropertiesFile__FindPropertyVariable(this_00, &local_80, local_88, "intro");
+    PropertiesFile__FindPropertyVariable(this_00, &local_78, local_88, "bossmusic");
+    PropertiesFile__FindPropertyVariable(this_00, &local_70, local_88, "bossintro");
+    PropertiesFile__FindPropertyVariable(this_00, &local_68, local_88, "bossoutro");
+    PropertiesFile__FindPropertyVariable(this_00, &local_58, local_88, "overridechar");
     if (local_58 == (PropertyVariable *)0x0) {
       *(uint32_t *)(self + 0x2f0) = 0xffffffff;
-    }
-    else {
+    } else {
       iVar7 = StringToInt((PropertyBlock *)(local_58 + 0x20));
       *(int *)(self + 0x2f0) = iVar7 + -1;
     }
     pSVar2 = self + 0x298;
     local_f8[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 004900ae to 004901fc has its CatchHandler @ 00491cf0 */
-    std__string_assign((char *)pSVar2,0x5c1ca6);
+    /* try { // try from 004900ae to 004901fc has its CatchHandler @ 00491cf0 */
+    std__string_assign((char *)pSVar2, 0x5c1ca6);
     strlen((char *)(local_80 + 0x20));
-    std__string_append((char *)pSVar2,(ulong)(local_80 + 0x20));
-    pcVar11 = (char *)FormatResourcePath(*(uint64_t *)(self + 0x298),local_f8);
+    std__string_append((char *)pSVar2, (ulong)(local_80 + 0x20));
+    pcVar11 = (char *)FormatResourcePath(*(uint64_t *)(self + 0x298), local_f8);
     strlen(pcVar11);
-    std__string_assign((char *)pSVar2,(ulong)pcVar11);
+    std__string_assign((char *)pSVar2, (ulong)pcVar11);
     pSVar2 = self + 0x2b0;
-    std__string_assign((char *)pSVar2,0x5c1ca6);
+    std__string_assign((char *)pSVar2, 0x5c1ca6);
     strlen((char *)(local_70 + 0x20));
-    std__string_append((char *)pSVar2,(ulong)(local_70 + 0x20));
-    pcVar11 = (char *)FormatResourcePath(*(uint64_t *)(self + 0x2b0),local_f8);
+    std__string_append((char *)pSVar2, (ulong)(local_70 + 0x20));
+    pcVar11 = (char *)FormatResourcePath(*(uint64_t *)(self + 0x2b0), local_f8);
     strlen(pcVar11);
-    std__string_assign((char *)pSVar2,(ulong)pcVar11);
+    std__string_assign((char *)pSVar2, (ulong)pcVar11);
     pSVar2 = self + 0x2c8;
-    std__string_assign((char *)pSVar2,0x5c1ca6);
+    std__string_assign((char *)pSVar2, 0x5c1ca6);
     strlen((char *)(local_68 + 0x20));
-    std__string_append((char *)pSVar2,(ulong)(local_68 + 0x20));
-    pcVar11 = (char *)FormatResourcePath(*(uint64_t *)(self + 0x2c8),local_f8);
+    std__string_append((char *)pSVar2, (ulong)(local_68 + 0x20));
+    pcVar11 = (char *)FormatResourcePath(*(uint64_t *)(self + 0x2c8), local_f8);
     strlen(pcVar11);
-    std__string_assign((char *)pSVar2,(ulong)pcVar11);
+    std__string_assign((char *)pSVar2, (ulong)pcVar11);
     pPVar26 = local_a8[0];
     *(uint64_t *)(self + 0x18) = 0;
-    std__string_string((string *)local_98,"audio/",local_45);
+    std__string_string((string *)local_98, "audio/", local_45);
     if (pPVar26 != (PropertyVariable *)0x0) {
       __s = (PropertyBlock *)(pPVar26 + 0x20);
       strlen((char *)__s);
-                    /* try { // try from 0049021c to 00490258 has its CatchHandler @ 00491d87 */
-      std__string_append((char *)local_98,(ulong)__s);
+      /* try { // try from 0049021c to 00490258 has its CatchHandler @ 00491d87 */
+      std__string_append((char *)local_98, (ulong)__s);
       local_118 = 0;
       local_114 = 0;
       local_128[0] = 5;
@@ -457,8 +452,7 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
       uVar12 = TAudioCue__Create((TAudioCueCreation *)local_128);
       *(uint64_t *)(self + 0x18) = uVar12;
     }
-    if ((allocator *)(local_98[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_98[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_98[0] + -8);
       iVar7 = *piVar1;
@@ -470,13 +464,13 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
     }
     pPVar26 = local_b8[0];
     *(uint64_t *)(self + 0x28) = 0;
-                    /* try { // try from 0049029b to 0049029f has its CatchHandler @ 00491cf0 */
-    std__string_string((string *)local_98,"audio/",local_43);
+    /* try { // try from 0049029b to 0049029f has its CatchHandler @ 00491cf0 */
+    std__string_string((string *)local_98, "audio/", local_43);
     if (pPVar26 != (PropertyVariable *)0x0) {
       pPVar26 = pPVar26 + 0x20;
       strlen((char *)pPVar26);
-                    /* try { // try from 004902bf to 004902fb has its CatchHandler @ 00491d3c */
-      std__string_append((char *)local_98,(ulong)pPVar26);
+      /* try { // try from 004902bf to 004902fb has its CatchHandler @ 00491d3c */
+      std__string_append((char *)local_98, (ulong)pPVar26);
       local_118 = 0;
       local_114 = 0;
       local_128[0] = 5;
@@ -484,8 +478,7 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
       uVar12 = TAudioCue__Create((TAudioCueCreation *)local_128);
       *(uint64_t *)(self + 0x28) = uVar12;
     }
-    if ((allocator *)(local_98[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_98[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_98[0] + -8);
       iVar7 = *piVar1;
@@ -497,13 +490,13 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
     }
     pPVar26 = local_c8[0];
     *(uint64_t *)(self + 0x30) = 0;
-                    /* try { // try from 0049033e to 00490342 has its CatchHandler @ 00491cf0 */
-    std__string_string((string *)local_98,"audio/",local_41);
+    /* try { // try from 0049033e to 00490342 has its CatchHandler @ 00491cf0 */
+    std__string_string((string *)local_98, "audio/", local_41);
     if (pPVar26 != (PropertyVariable *)0x0) {
       pPVar26 = pPVar26 + 0x20;
       strlen((char *)pPVar26);
-                    /* try { // try from 00490362 to 0049039e has its CatchHandler @ 00491e80 */
-      std__string_append((char *)local_98,(ulong)pPVar26);
+      /* try { // try from 00490362 to 0049039e has its CatchHandler @ 00491e80 */
+      std__string_append((char *)local_98, (ulong)pPVar26);
       local_118 = 0;
       local_114 = 0;
       local_128[0] = 5;
@@ -511,8 +504,7 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
       uVar12 = TAudioCue__Create((TAudioCueCreation *)local_128);
       *(uint64_t *)(self + 0x30) = uVar12;
     }
-    if ((allocator *)(local_98[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_98[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_98[0] + -8);
       iVar7 = *piVar1;
@@ -525,13 +517,13 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
     pPVar26 = local_d8[0];
     if (arg2 != 9) {
       *(uint64_t *)(self + 0x38) = 0;
-                    /* try { // try from 004903ec to 004903f0 has its CatchHandler @ 00491cf0 */
-      std__string_string((string *)local_98,"audio/",local_3f);
+      /* try { // try from 004903ec to 004903f0 has its CatchHandler @ 00491cf0 */
+      std__string_string((string *)local_98, "audio/", local_3f);
       if (pPVar26 != (PropertyVariable *)0x0) {
         pPVar26 = pPVar26 + 0x20;
         strlen((char *)pPVar26);
-                    /* try { // try from 00490410 to 0049044c has its CatchHandler @ 00491e40 */
-        std__string_append((char *)local_98,(ulong)pPVar26);
+        /* try { // try from 00490410 to 0049044c has its CatchHandler @ 00491e40 */
+        std__string_append((char *)local_98, (ulong)pPVar26);
         local_118 = 0;
         local_114 = 0;
         local_128[0] = 5;
@@ -539,8 +531,7 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
         uVar12 = TAudioCue__Create((TAudioCueCreation *)local_128);
         *(uint64_t *)(self + 0x38) = uVar12;
       }
-      if ((allocator *)(local_98[0] + -0x18) !=
-          (allocator *)&std__string_Rep_S_empty_rep_storage) {
+      if ((allocator *)(local_98[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
         LOCK();
         piVar1 = (int *)(local_98[0] + -8);
         iVar7 = *piVar1;
@@ -552,12 +543,12 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
       }
     }
     *(uint64_t *)(self + 0x40) = 0;
-                    /* try { // try from 0049048f to 00490493 has its CatchHandler @ 00491cf0 */
-    std__string_string((string *)local_98,"audio/",local_3d);
+    /* try { // try from 0049048f to 00490493 has its CatchHandler @ 00491cf0 */
+    std__string_string((string *)local_98, "audio/", local_3d);
     if (local_78 != (PropertyVariable *)0x0) {
       strlen((char *)(local_78 + 0x20));
-                    /* try { // try from 004904b3 to 004904ef has its CatchHandler @ 00491e00 */
-      std__string_append((char *)local_98,(ulong)(local_78 + 0x20));
+      /* try { // try from 004904b3 to 004904ef has its CatchHandler @ 00491e00 */
+      std__string_append((char *)local_98, (ulong)(local_78 + 0x20));
       local_118 = 0;
       local_114 = 0;
       local_128[0] = 5;
@@ -565,8 +556,7 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
       uVar12 = TAudioCue__Create((TAudioCueCreation *)local_128);
       *(uint64_t *)(self + 0x40) = uVar12;
     }
-    if ((allocator *)(local_98[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_98[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_98[0] + -8);
       iVar7 = *piVar1;
@@ -578,13 +568,13 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
     }
     pPVar26 = local_60;
     *(uint64_t *)(self + 0x20) = 0;
-                    /* try { // try from 00490532 to 00490536 has its CatchHandler @ 00491cf0 */
-    std__string_string((string *)local_98,"audio/",local_3b);
+    /* try { // try from 00490532 to 00490536 has its CatchHandler @ 00491cf0 */
+    std__string_string((string *)local_98, "audio/", local_3b);
     if (pPVar26 != (PropertyVariable *)0x0) {
       pPVar26 = pPVar26 + 0x20;
       strlen((char *)pPVar26);
-                    /* try { // try from 00490556 to 00490592 has its CatchHandler @ 00491dc2 */
-      std__string_append((char *)local_98,(ulong)pPVar26);
+      /* try { // try from 00490556 to 00490592 has its CatchHandler @ 00491dc2 */
+      std__string_append((char *)local_98, (ulong)pPVar26);
       local_118 = 0;
       local_114 = 0;
       local_128[0] = 5;
@@ -592,8 +582,7 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
       uVar12 = TAudioCue__Create((TAudioCueCreation *)local_128);
       *(uint64_t *)(self + 0x20) = uVar12;
     }
-    if ((allocator *)(local_98[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_98[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_98[0] + -8);
       iVar7 = *piVar1;
@@ -605,16 +594,15 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
     }
     if (local_108[0] != (PropertyVariable *)0x0) {
       pSVar2 = self + 0x280;
-                    /* try { // try from 004905cf to 0049061d has its CatchHandler @ 00491cf0 */
-      std__string_assign((char *)pSVar2,0x5c1cae);
+      /* try { // try from 004905cf to 0049061d has its CatchHandler @ 00491cf0 */
+      std__string_assign((char *)pSVar2, 0x5c1cae);
       strlen((char *)(local_108[0] + 0x20));
-      std__string_append((char *)pSVar2,(ulong)(local_108[0] + 0x20));
-      pcVar11 = (char *)FormatResourcePath(*(uint64_t *)(self + 0x280),local_f8);
+      std__string_append((char *)pSVar2, (ulong)(local_108[0] + 0x20));
+      pcVar11 = (char *)FormatResourcePath(*(uint64_t *)(self + 0x280), local_f8);
       strlen(pcVar11);
-      std__string_assign((char *)pSVar2,(ulong)pcVar11);
+      std__string_assign((char *)pSVar2, (ulong)pcVar11);
     }
-    if ((allocator *)(local_f8[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_f8[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_f8[0] + -8);
       iVar7 = *piVar1;
@@ -625,29 +613,30 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
       }
     }
   }
-  uVar8 = PropertiesFile__GetNumPropertyBlocksByName(this_00,"normlevel");
+  uVar8 = PropertiesFile__GetNumPropertyBlocksByName(this_00, "normlevel");
   *(uint32_t *)(self + 4) = uVar8;
-  uVar8 = PropertiesFile__GetNumPropertyBlocksByName(this_00,"altlevel");
+  uVar8 = PropertiesFile__GetNumPropertyBlocksByName(this_00, "altlevel");
   *(uint32_t *)(self + 8) = uVar8;
-  uVar8 = PropertiesFile__GetNumPropertyBlocksByName(this_00,"warp");
+  uVar8 = PropertiesFile__GetNumPropertyBlocksByName(this_00, "warp");
   *(uint32_t *)(self + 0xc) = uVar8;
   local_50 = (PropertyBlock *)0x0;
   *(int *)(self + 0x10) = *(int *)(self + 4) + *(int *)(self + 8);
-  PropertiesFile__FindPropertyBlock(this_00,&local_50,"bosslevel",0);
+  PropertiesFile__FindPropertyBlock(this_00, &local_50, "bosslevel", 0);
   if ((local_50 == (PropertyBlock *)0x0) ||
-     (iVar7 = LoadBossDataFromBlock(local_50,(BossLevelInfo *)(self + 0x208),this_00), iVar7 == 0))
-  {
+      (iVar7 = LoadBossDataFromBlock(local_50, (BossLevelInfo *)(self + 0x208), this_00),
+       iVar7 == 0)) {
     *(uint32_t *)(self + 0x26c) = 0;
   }
   local_e8[0] = (PropertyBlock *)0x0;
   if (0 < *(int *)(self + 4)) {
     iVar25 = 0;
     iVar7 = 0;
-    while (iVar7 = PropertiesFile__FindPropertyBlock(this_00,local_e8,"normlevel",iVar7),
-          local_e8[0] != (PropertyBlock *)0x0) {
+    while (iVar7 = PropertiesFile__FindPropertyBlock(this_00, local_e8, "normlevel", iVar7),
+           local_e8[0] != (PropertyBlock *)0x0) {
       if (*(int *)(self + 0x158) == -0x5eef3582) {
         uVar4 = *(ushort *)(self + 0x138);
-        if (uVar4 < *(ushort *)(self + 0x13a)) goto LAB_004907ba;
+        if (uVar4 < *(ushort *)(self + 0x13a))
+          goto LAB_004907ba;
         uVar4 = *(ushort *)(self + 0x13a) + *(short *)(self + 0x144);
         uVar17 = (ulong)(byte)self[0x13c];
         pvVar15 = (void *)0x0;
@@ -657,7 +646,7 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
         pvVar14 = malloc(uVar17 + 0x10 + uVar23);
         if (pvVar14 != (void *)0x0) {
           pvVar15 = (void *)((long)pvVar14 + 0x10U +
-                            (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
+                             (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
           *(ulong *)((long)pvVar15 + -0x10) = uVar23;
           *(void **)((long)pvVar15 + -8) = pvVar14;
           if (pvVar18 != (void *)0x0) {
@@ -665,7 +654,7 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
             if (uVar23 <= *(ulong *)((long)pvVar18 + -0x10)) {
               uVar17 = uVar23;
             }
-            memcpy(pvVar15,pvVar18,uVar17);
+            memcpy(pvVar15, pvVar18, uVar17);
             free(*(void **)((long)pvVar18 + -8));
           }
         }
@@ -679,39 +668,40 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
           pvVar14 = malloc(uVar17 + 0x10 + uVar23);
           if (pvVar14 != (void *)0x0) {
             pvVar15 = (void *)((long)pvVar14 + 0x10U +
-                              (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
+                               (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
             *(ulong *)((long)pvVar15 + -0x10) = uVar23;
             *(void **)((long)pvVar15 + -8) = pvVar14;
             uVar17 = *(ulong *)((long)pvVar18 + -0x10);
             if (uVar23 <= *(ulong *)((long)pvVar18 + -0x10)) {
               uVar17 = uVar23;
             }
-            memcpy(pvVar15,pvVar18,uVar17);
+            memcpy(pvVar15, pvVar18, uVar17);
             free(*(void **)((long)pvVar18 + -8));
             uVar19 = *(ushort *)(self + 0x13a);
           }
           uVar4 = *(ushort *)(self + 0x138);
           *(void **)(self + 0x150) = pvVar15;
-          if (uVar19 <= uVar4) goto LAB_004907ba;
-          while( true ) {
+          if (uVar19 <= uVar4)
+            goto LAB_004907ba;
+          while (true) {
             uVar23 = (ulong)uVar4;
             uVar4 = uVar4 + 1;
             *(uint16_t *)((long)pvVar15 + uVar23 * 2) = 0xffff;
-            if (uVar19 <= uVar4) break;
+            if (uVar19 <= uVar4)
+              break;
             pvVar15 = *(void **)(self + 0x150);
           }
         }
         iVar9 = *(int *)(self + 0x140);
         uVar4 = *(ushort *)(self + 0x138);
-      }
-      else {
+      } else {
         uVar23 = (ulong)(byte)self[0x13c];
         *(uint32_t *)(self + 0x140) = 0;
         pvVar15 = malloc(uVar23 + 0x1a0);
         puVar13 = (uint64_t *)0x0;
         if (pvVar15 != (void *)0x0) {
-          puVar13 = (uint64_t *)
-                    ((uVar23 - ((long)pvVar15 + 0x10U) % uVar23) % uVar23 + (long)pvVar15 + 0x10U);
+          puVar13 = (uint64_t *)((uVar23 - ((long)pvVar15 + 0x10U) % uVar23) % uVar23 +
+                                 (long)pvVar15 + 0x10U);
           puVar13[-2] = 400;
           puVar13[-1] = pvVar15;
         }
@@ -753,7 +743,7 @@ void __thiscall SMBChapter__LoadChapter(SMBChapter *self,int arg2)
         uVar4 = 0;
         *(uint32_t *)(self + 0x158) = 0xa110ca7e;
         *(uint16_t *)(self + 0x144) = 5;
-LAB_004907ba:
+      LAB_004907ba:
         iVar9 = *(int *)(self + 0x140);
       }
       if ((iVar9 == 1) && (*(short *)(self + 0x13a) != 0)) {
@@ -762,18 +752,19 @@ LAB_004907ba:
         uVar19 = *puVar20;
         while (uVar19 != 0xffff) {
           puVar20 = puVar20 + 1;
-          if (sVar5 == *(short *)(self + 0x13a)) goto LAB_004907c7;
+          if (sVar5 == *(short *)(self + 0x13a))
+            goto LAB_004907c7;
           sVar5 = sVar5 + 1;
           uVar19 = *puVar20;
         }
         *puVar20 = uVar4;
         uVar4 = *(ushort *)(self + 0x138);
       }
-LAB_004907c7:
+    LAB_004907c7:
       uVar23 = 0x50;
       *(ushort *)(self + 0x138) = uVar4 + 1;
-      puVar13 = (uint64_t *)
-                (((ulong)(ushort)(uVar4 + 1) * 5 + -5) * 0x10 + *(long *)(self + 0x148));
+      puVar13 =
+          (uint64_t *)(((ulong)(ushort)(uVar4 + 1) * 5 + -5) * 0x10 + *(long *)(self + 0x148));
       bVar28 = ((ulong)puVar13 & 1) != 0;
       if (bVar28) {
         *(uint8_t *)puVar13 = 0;
@@ -805,26 +796,28 @@ LAB_004907c7:
       if (bVar28) {
         *(uint8_t *)puVar13 = 0;
       }
-      pLVar22 = (LevelInfo *)
-                (((ulong)*(ushort *)(self + 0x138) * 5 + -5) * 0x10 + *(long *)(self + 0x148));
+      pLVar22 = (LevelInfo *)(((ulong) * (ushort *)(self + 0x138) * 5 + -5) * 0x10 +
+                              *(long *)(self + 0x148));
       if (pLVar22 != (LevelInfo *)0x0) {
         *(uint32_t *)(pLVar22 + 0x40) = 0;
         *(uint32_t *)(pLVar22 + 0x44) = 0xffffffff;
         *(uint32_t *)(pLVar22 + 0x48) = 0xffffffff;
         *(uint32_t *)(pLVar22 + 0x4c) = 0;
       }
-      iVar9 = LoadLevelDataFromBlock(local_e8[0],pLVar22,this_00);
-      if ((iVar9 == 0) || (iVar25 = iVar25 + 1, *(int *)(self + 4) <= iVar25)) break;
+      iVar9 = LoadLevelDataFromBlock(local_e8[0], pLVar22, this_00);
+      if ((iVar9 == 0) || (iVar25 = iVar25 + 1, *(int *)(self + 4) <= iVar25))
+        break;
     }
   }
   if (0 < *(int *)(self + 8)) {
     iVar25 = 0;
     iVar7 = 0;
-    while (iVar7 = PropertiesFile__FindPropertyBlock(this_00,local_e8,"altlevel",iVar7),
-          local_e8[0] != (PropertyBlock *)0x0) {
+    while (iVar7 = PropertiesFile__FindPropertyBlock(this_00, local_e8, "altlevel", iVar7),
+           local_e8[0] != (PropertyBlock *)0x0) {
       if (*(int *)(self + 0x1a8) == -0x5eef3582) {
         uVar4 = *(ushort *)(self + 0x188);
-        if (uVar4 < *(ushort *)(self + 0x18a)) goto LAB_00490c22;
+        if (uVar4 < *(ushort *)(self + 0x18a))
+          goto LAB_00490c22;
         uVar4 = *(ushort *)(self + 0x18a) + *(short *)(self + 0x194);
         uVar17 = (ulong)(byte)self[0x18c];
         pvVar15 = (void *)0x0;
@@ -834,7 +827,7 @@ LAB_004907c7:
         pvVar14 = malloc(uVar17 + 0x10 + uVar23);
         if (pvVar14 != (void *)0x0) {
           pvVar15 = (void *)((long)pvVar14 + 0x10U +
-                            (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
+                             (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
           *(ulong *)((long)pvVar15 + -0x10) = uVar23;
           *(void **)((long)pvVar15 + -8) = pvVar14;
           if (pvVar18 != (void *)0x0) {
@@ -842,7 +835,7 @@ LAB_004907c7:
             if (uVar23 <= *(ulong *)((long)pvVar18 + -0x10)) {
               uVar17 = uVar23;
             }
-            memcpy(pvVar15,pvVar18,uVar17);
+            memcpy(pvVar15, pvVar18, uVar17);
             free(*(void **)((long)pvVar18 + -8));
           }
         }
@@ -856,39 +849,40 @@ LAB_004907c7:
           pvVar14 = malloc(uVar17 + 0x10 + uVar23);
           if (pvVar14 != (void *)0x0) {
             pvVar15 = (void *)((long)pvVar14 + 0x10U +
-                              (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
+                               (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
             *(ulong *)((long)pvVar15 + -0x10) = uVar23;
             *(void **)((long)pvVar15 + -8) = pvVar14;
             uVar17 = *(ulong *)((long)pvVar18 + -0x10);
             if (uVar23 <= *(ulong *)((long)pvVar18 + -0x10)) {
               uVar17 = uVar23;
             }
-            memcpy(pvVar15,pvVar18,uVar17);
+            memcpy(pvVar15, pvVar18, uVar17);
             free(*(void **)((long)pvVar18 + -8));
             uVar19 = *(ushort *)(self + 0x18a);
           }
           uVar4 = *(ushort *)(self + 0x188);
           *(void **)(self + 0x1a0) = pvVar15;
-          if (uVar19 <= uVar4) goto LAB_00490c22;
-          while( true ) {
+          if (uVar19 <= uVar4)
+            goto LAB_00490c22;
+          while (true) {
             uVar23 = (ulong)uVar4;
             uVar4 = uVar4 + 1;
             *(uint16_t *)((long)pvVar15 + uVar23 * 2) = 0xffff;
-            if (uVar19 <= uVar4) break;
+            if (uVar19 <= uVar4)
+              break;
             pvVar15 = *(void **)(self + 0x1a0);
           }
         }
         iVar9 = *(int *)(self + 400);
         uVar4 = *(ushort *)(self + 0x188);
-      }
-      else {
+      } else {
         uVar23 = (ulong)(byte)self[0x18c];
         *(uint32_t *)(self + 400) = 0;
         pvVar15 = malloc(uVar23 + 0x1a0);
         puVar13 = (uint64_t *)0x0;
         if (pvVar15 != (void *)0x0) {
-          puVar13 = (uint64_t *)
-                    ((uVar23 - ((long)pvVar15 + 0x10U) % uVar23) % uVar23 + (long)pvVar15 + 0x10U);
+          puVar13 = (uint64_t *)((uVar23 - ((long)pvVar15 + 0x10U) % uVar23) % uVar23 +
+                                 (long)pvVar15 + 0x10U);
           puVar13[-2] = 400;
           puVar13[-1] = pvVar15;
         }
@@ -930,7 +924,7 @@ LAB_004907c7:
         uVar4 = 0;
         *(uint32_t *)(self + 0x1a8) = 0xa110ca7e;
         *(uint16_t *)(self + 0x194) = 5;
-LAB_00490c22:
+      LAB_00490c22:
         iVar9 = *(int *)(self + 400);
       }
       if ((iVar9 == 1) && (*(short *)(self + 0x18a) != 0)) {
@@ -940,39 +934,41 @@ LAB_00490c22:
         while (uVar19 != 0xffff) {
           puVar20 = puVar20 + 1;
           sVar5 = sVar5 + 1;
-          if (sVar5 == *(short *)(self + 0x18a)) goto LAB_00490c2f;
+          if (sVar5 == *(short *)(self + 0x18a))
+            goto LAB_00490c2f;
           uVar19 = *puVar20;
         }
         *puVar20 = uVar4;
         uVar4 = *(ushort *)(self + 0x188);
       }
-LAB_00490c2f:
+    LAB_00490c2f:
       uVar23 = 0x50;
       bVar28 = false;
       iVar9 = 0x50;
       *(ushort *)(self + 0x188) = uVar4 + 1;
-      puVar13 = (uint64_t *)
-                (((ulong)(ushort)(uVar4 + 1) * 5 + -5) * 0x10 + *(long *)(self + 0x198));
+      puVar13 =
+          (uint64_t *)(((ulong)(ushort)(uVar4 + 1) * 5 + -5) * 0x10 + *(long *)(self + 0x198));
       if (((ulong)puVar13 & 1) == 0) {
         puVar24 = puVar13;
         bVar3 = false;
-        if (((ulong)puVar13 & 2) == 0) goto LAB_00490c66;
-LAB_00490f64:
+        if (((ulong)puVar13 & 2) == 0)
+          goto LAB_00490c66;
+      LAB_00490f64:
         bVar28 = bVar3;
         *(uint16_t *)puVar24 = 0;
         puVar24 = (uint64_t *)((long)puVar24 + 2);
         uVar16 = iVar9 - 2;
         uVar23 = (ulong)uVar16;
-      }
-      else {
+      } else {
         puVar24 = (uint64_t *)((long)puVar13 + 1);
         *(uint8_t *)puVar13 = 0;
         uVar23 = 0x4f;
         bVar28 = true;
         iVar9 = 0x4f;
         bVar3 = true;
-        if (((ulong)puVar24 & 2) != 0) goto LAB_00490f64;
-LAB_00490c66:
+        if (((ulong)puVar24 & 2) != 0)
+          goto LAB_00490f64;
+      LAB_00490c66:
         uVar16 = (uint)uVar23;
       }
       if (((ulong)puVar24 & 4) != 0) {
@@ -995,26 +991,28 @@ LAB_00490c66:
       if (bVar28) {
         *(uint8_t *)puVar24 = 0;
       }
-      pLVar22 = (LevelInfo *)
-                (((ulong)*(ushort *)(self + 0x188) * 5 + -5) * 0x10 + *(long *)(self + 0x198));
+      pLVar22 = (LevelInfo *)(((ulong) * (ushort *)(self + 0x188) * 5 + -5) * 0x10 +
+                              *(long *)(self + 0x198));
       if (pLVar22 != (LevelInfo *)0x0) {
         *(uint32_t *)(pLVar22 + 0x40) = 0;
         *(uint32_t *)(pLVar22 + 0x44) = 0xffffffff;
         *(uint32_t *)(pLVar22 + 0x48) = 0xffffffff;
         *(uint32_t *)(pLVar22 + 0x4c) = 0;
       }
-      iVar9 = LoadLevelDataFromBlock(local_e8[0],pLVar22,this_00);
-      if ((iVar9 == 0) || (iVar25 = iVar25 + 1, *(int *)(self + 8) <= iVar25)) break;
+      iVar9 = LoadLevelDataFromBlock(local_e8[0], pLVar22, this_00);
+      if ((iVar9 == 0) || (iVar25 = iVar25 + 1, *(int *)(self + 8) <= iVar25))
+        break;
     }
   }
   iVar7 = *(int *)(self + 0xc);
   if (0 < iVar7) {
     iVar25 = 0;
     do {
-      uVar16 = (uint)*(ushort *)(self + 0x1d8);
+      uVar16 = (uint) * (ushort *)(self + 0x1d8);
       if ((int)uVar16 <= iVar25) {
         if (*(int *)(self + 0x1f8) == -0x5eef3582) {
-          if (*(ushort *)(self + 0x1d8) < *(ushort *)(self + 0x1da)) goto LAB_0049107a;
+          if (*(ushort *)(self + 0x1d8) < *(ushort *)(self + 0x1da))
+            goto LAB_0049107a;
           uVar4 = *(ushort *)(self + 0x1da) + *(short *)(self + 0x1e4);
           uVar23 = (ulong)(byte)self[0x1dc];
           pvVar15 = (void *)0x0;
@@ -1024,7 +1022,7 @@ LAB_00490c66:
           pvVar14 = malloc(uVar23 + 0x10 + uVar17);
           if (pvVar14 != (void *)0x0) {
             pvVar15 = (void *)((long)pvVar14 + 0x10U +
-                              (uVar23 - ((long)pvVar14 + 0x10U) % uVar23) % uVar23);
+                               (uVar23 - ((long)pvVar14 + 0x10U) % uVar23) % uVar23);
             *(ulong *)((long)pvVar15 + -0x10) = uVar17;
             *(void **)((long)pvVar15 + -8) = pvVar14;
             if (pvVar18 != (void *)0x0) {
@@ -1032,7 +1030,7 @@ LAB_00490c66:
               if (uVar17 <= *(ulong *)((long)pvVar18 + -0x10)) {
                 uVar23 = uVar17;
               }
-              memcpy(pvVar15,pvVar18,uVar23);
+              memcpy(pvVar15, pvVar18, uVar23);
               free(*(void **)((long)pvVar18 + -8));
             }
           }
@@ -1046,40 +1044,40 @@ LAB_00490c66:
             pvVar14 = malloc(uVar17 + 0x10 + uVar23);
             if (pvVar14 != (void *)0x0) {
               pvVar15 = (void *)((long)pvVar14 + 0x10U +
-                                (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
+                                 (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
               *(ulong *)((long)pvVar15 + -0x10) = uVar23;
               *(void **)((long)pvVar15 + -8) = pvVar14;
               uVar17 = *(ulong *)((long)pvVar18 + -0x10);
               if (uVar23 <= *(ulong *)((long)pvVar18 + -0x10)) {
                 uVar17 = uVar23;
               }
-              memcpy(pvVar15,pvVar18,uVar17);
+              memcpy(pvVar15, pvVar18, uVar17);
               free(*(void **)((long)pvVar18 + -8));
               uVar4 = *(ushort *)(self + 0x1da);
             }
-            uVar16 = (uint)*(ushort *)(self + 0x1d8);
+            uVar16 = (uint) * (ushort *)(self + 0x1d8);
             *(void **)(self + 0x1f0) = pvVar15;
-            if (uVar4 <= *(ushort *)(self + 0x1d8)) goto LAB_0049107a;
-            while( true ) {
+            if (uVar4 <= *(ushort *)(self + 0x1d8))
+              goto LAB_0049107a;
+            while (true) {
               uVar10 = uVar16 & 0xffff;
               uVar16 = uVar16 + 1;
               *(uint16_t *)((long)pvVar15 + (ulong)uVar10 * 2) = 0xffff;
-              if (uVar4 <= (ushort)uVar16) break;
+              if (uVar4 <= (ushort)uVar16)
+                break;
               pvVar15 = *(void **)(self + 0x1f0);
             }
           }
           iVar7 = *(int *)(self + 0x1e0);
-          uVar16 = (uint)*(ushort *)(self + 0x1d8);
-        }
-        else {
+          uVar16 = (uint) * (ushort *)(self + 0x1d8);
+        } else {
           uVar23 = (ulong)(byte)self[0x1dc];
           *(uint32_t *)(self + 0x1e0) = 0;
           pvVar15 = malloc(uVar23 + 0x3a8);
           puVar13 = (uint64_t *)0x0;
           if (pvVar15 != (void *)0x0) {
-            puVar13 = (uint64_t *)
-                      ((long)pvVar15 + 0x10U + (uVar23 - ((long)pvVar15 + 0x10U) % uVar23) % uVar23)
-            ;
+            puVar13 = (uint64_t *)((long)pvVar15 + 0x10U +
+                                   (uVar23 - ((long)pvVar15 + 0x10U) % uVar23) % uVar23);
             puVar13[-2] = 0x398;
             puVar13[-1] = pvVar15;
           }
@@ -1090,23 +1088,24 @@ LAB_00490c66:
           if (((ulong)puVar13 & 1) == 0) {
             puVar24 = puVar13;
             bVar3 = false;
-            if (((ulong)puVar13 & 2) == 0) goto LAB_00491019;
-LAB_00491c85:
+            if (((ulong)puVar13 & 2) == 0)
+              goto LAB_00491019;
+          LAB_00491c85:
             bVar28 = bVar3;
             *(uint16_t *)puVar24 = 0;
             puVar24 = (uint64_t *)((long)puVar24 + 2);
             uVar16 = iVar7 - 2;
             uVar23 = (ulong)uVar16;
-          }
-          else {
+          } else {
             puVar24 = (uint64_t *)((long)puVar13 + 1);
             *(uint8_t *)puVar13 = 0;
             uVar23 = 0x397;
             bVar28 = true;
             iVar7 = 0x397;
             bVar3 = true;
-            if (((ulong)puVar24 & 2) != 0) goto LAB_00491c85;
-LAB_00491019:
+            if (((ulong)puVar24 & 2) != 0)
+              goto LAB_00491c85;
+          LAB_00491019:
             uVar16 = (uint)uVar23;
           }
           if (((ulong)puVar24 & 4) != 0) {
@@ -1134,7 +1133,7 @@ LAB_00491019:
           uVar16 = 0;
           *(uint32_t *)(self + 0x1f8) = 0xa110ca7e;
           *(uint16_t *)(self + 0x1e4) = 5;
-LAB_0049107a:
+        LAB_0049107a:
           iVar7 = *(int *)(self + 0x1e0);
         }
         if ((iVar7 == 1) && (*(short *)(self + 0x1da) != 0)) {
@@ -1143,18 +1142,18 @@ LAB_0049107a:
           sVar5 = *psVar21;
           while (sVar5 != -1) {
             psVar21 = psVar21 + 1;
-            if (sVar6 == *(short *)(self + 0x1da)) goto LAB_00491087;
+            if (sVar6 == *(short *)(self + 0x1da))
+              goto LAB_00491087;
             sVar6 = sVar6 + 1;
             sVar5 = *psVar21;
           }
           *psVar21 = (short)uVar16;
-          uVar16 = (uint)*(ushort *)(self + 0x1d8);
+          uVar16 = (uint) * (ushort *)(self + 0x1d8);
         }
-LAB_00491087:
+      LAB_00491087:
         uVar23 = 0xb8;
         *(short *)(self + 0x1d8) = (short)(uVar16 + 1);
-        puVar13 = (uint64_t *)
-                  (((ulong)(uVar16 + 1 & 0xffff) - 1) * 0xb8 + *(long *)(self + 0x1e8));
+        puVar13 = (uint64_t *)(((ulong)(uVar16 + 1 & 0xffff) - 1) * 0xb8 + *(long *)(self + 0x1e8));
         bVar28 = ((ulong)puVar13 & 1) != 0;
         if (bVar28) {
           *(uint8_t *)puVar13 = 0;
@@ -1186,7 +1185,7 @@ LAB_00491087:
         if (bVar28) {
           *(uint8_t *)puVar13 = 0;
         }
-        lVar27 = ((ulong)*(ushort *)(self + 0x1d8) - 1) * 0xb8 + *(long *)(self + 0x1e8);
+        lVar27 = ((ulong) * (ushort *)(self + 0x1d8) - 1) * 0xb8 + *(long *)(self + 0x1e8);
         if (lVar27 != 0) {
           CriticalSection__CriticalSection((CriticalSection *)(lVar27 + 0x68));
           *(uint16_t *)(lVar27 + 0x92) = 0;
@@ -1207,22 +1206,23 @@ LAB_00491087:
       local_130 = 0;
       do {
         local_58 = (PropertyVariable *)0x0;
-        local_130 = PropertiesFile__FindPropertyBlock
-                              (this_00,(PropertyBlock **)&local_58,"warp",local_130);
-        PropertiesFile__FindPropertyVariable(this_00,&local_60,(PropertyBlock *)local_58,"intro");
-        PropertiesFile__FindPropertyVariable(this_00,local_d8,(PropertyBlock *)local_58,"char");
-        PropertiesFile__FindPropertyVariable(this_00,local_c8,(PropertyBlock *)local_58,"id");
-        PropertiesFile__FindPropertyVariable(this_00,local_b8,(PropertyBlock *)local_58,"name");
+        local_130 = PropertiesFile__FindPropertyBlock(this_00, (PropertyBlock **)&local_58, "warp",
+                                                      local_130);
+        PropertiesFile__FindPropertyVariable(this_00, &local_60, (PropertyBlock *)local_58,
+                                             "intro");
+        PropertiesFile__FindPropertyVariable(this_00, local_d8, (PropertyBlock *)local_58, "char");
+        PropertiesFile__FindPropertyVariable(this_00, local_c8, (PropertyBlock *)local_58, "id");
+        PropertiesFile__FindPropertyVariable(this_00, local_b8, (PropertyBlock *)local_58, "name");
         if (((local_60 == (PropertyVariable *)0x0) || (local_d8[0] == (PropertyVariable *)0x0)) ||
-           (local_c8[0] == (PropertyVariable *)0x0)) {
+            (local_c8[0] == (PropertyVariable *)0x0)) {
           Error__ThrowFatalError("Invalid Warpzone in chapter file");
         }
         iVar7 = StringToInt(local_c8[0] + 0x20);
-        if ((int)(uint)*(ushort *)(self + 0x1d8) < iVar7) {
+        if ((int)(uint) * (ushort *)(self + 0x1d8) < iVar7) {
           Error__ThrowFatalError("Invalid Warpzone ID");
         }
-        pPVar26 = (PropertyVariable *)
-                  ((ulong)(iVar7 - 1U & 0xffff) * 0xb8 + *(long *)(self + 0x1e8));
+        pPVar26 =
+            (PropertyVariable *)((ulong)(iVar7 - 1U & 0xffff) * 0xb8 + *(long *)(self + 0x1e8));
         *(int *)(pPVar26 + 0x20) = iVar7 + -1;
         *(uint64_t *)(pPVar26 + 0x30) = 0;
         *(uint64_t *)(pPVar26 + 0x28) = 0;
@@ -1247,8 +1247,7 @@ LAB_00491087:
             *(uint32_t *)(pPVar26 + 0x48) = 0x70726157;
             pPVar26[0x4c] = (PropertyVariable)0x0;
           }
-        }
-        else if (local_b8[0] + 0x20 != pPVar26 + 0x48) {
+        } else if (local_b8[0] + 0x20 != pPVar26 + 0x48) {
           *(uint64_t *)(pPVar26 + 0x48) = *(uint64_t *)(local_b8[0] + 0x20);
           *(uint64_t *)(pPVar26 + 0x50) = *(uint64_t *)(local_b8[0] + 0x28);
           *(uint64_t *)(pPVar26 + 0x58) = *(uint64_t *)(local_b8[0] + 0x30);
@@ -1256,10 +1255,10 @@ LAB_00491087:
         }
         iVar25 = 0;
         local_a8[0] = (PropertyVariable *)0x0;
-        Sprint("warp%ilevel",local_128,iVar7);
-        while (iVar25 = PropertiesFile__FindPropertyBlock
-                                  (this_00,(PropertyBlock **)local_a8,(char *)local_128,iVar25),
-              local_a8[0] != (PropertyVariable *)0x0) {
+        Sprint("warp%ilevel", local_128, iVar7);
+        while (iVar25 = PropertiesFile__FindPropertyBlock(this_00, (PropertyBlock **)local_a8,
+                                                          (char *)local_128, iVar25),
+               local_a8[0] != (PropertyVariable *)0x0) {
           if (*(int *)(pPVar26 + 0xb0) == -0x5eef3582) {
             uVar4 = *(ushort *)(pPVar26 + 0x90);
             if (*(ushort *)(pPVar26 + 0x92) <= uVar4) {
@@ -1272,7 +1271,7 @@ LAB_00491087:
               pvVar15 = (void *)0x0;
               if (pvVar14 != (void *)0x0) {
                 pvVar15 = (void *)((long)pvVar14 + 0x10U +
-                                  (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
+                                   (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
                 *(ulong *)((long)pvVar15 + -0x10) = uVar23;
                 *(void **)((long)pvVar15 + -8) = pvVar14;
                 if (pvVar18 != (void *)0x0) {
@@ -1280,7 +1279,7 @@ LAB_00491087:
                   if (uVar23 <= *(ulong *)((long)pvVar18 + -0x10)) {
                     uVar17 = uVar23;
                   }
-                  memcpy(pvVar15,pvVar18,uVar17);
+                  memcpy(pvVar15, pvVar18, uVar17);
                   free(*(void **)((long)pvVar18 + -8));
                 }
               }
@@ -1294,40 +1293,40 @@ LAB_00491087:
                 pvVar18 = (void *)0x0;
                 if (pvVar14 != (void *)0x0) {
                   pvVar18 = (void *)((long)pvVar14 + 0x10U +
-                                    (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
+                                     (uVar17 - ((long)pvVar14 + 0x10U) % uVar17) % uVar17);
                   *(void **)((long)pvVar18 + -8) = pvVar14;
                   *(ulong *)((long)pvVar18 + -0x10) = uVar23;
                   uVar17 = *(ulong *)((long)pvVar15 + -0x10);
                   if (uVar23 <= *(ulong *)((long)pvVar15 + -0x10)) {
                     uVar17 = uVar23;
                   }
-                  memcpy(pvVar18,pvVar15,uVar17);
+                  memcpy(pvVar18, pvVar15, uVar17);
                   free(*(void **)((long)pvVar15 + -8));
                   uVar19 = *(ushort *)(pPVar26 + 0x92);
                 }
                 uVar4 = *(ushort *)(pPVar26 + 0x90);
                 *(void **)(pPVar26 + 0xa8) = pvVar18;
-                if (uVar19 <= uVar4) goto LAB_004916fe;
-                while( true ) {
+                if (uVar19 <= uVar4)
+                  goto LAB_004916fe;
+                while (true) {
                   uVar23 = (ulong)uVar4;
                   uVar4 = uVar4 + 1;
                   *(uint16_t *)((long)pvVar18 + uVar23 * 2) = 0xffff;
-                  if (uVar19 <= uVar4) break;
+                  if (uVar19 <= uVar4)
+                    break;
                   pvVar18 = *(void **)(pPVar26 + 0xa8);
                 }
               }
               uVar4 = *(ushort *)(pPVar26 + 0x90);
             }
-          }
-          else {
+          } else {
             uVar23 = (ulong)(byte)pPVar26[0x94];
             *(uint32_t *)(pPVar26 + 0x98) = 0;
             pvVar15 = malloc(uVar23 + 0x1a0);
             puVar13 = (uint64_t *)0x0;
             if (pvVar15 != (void *)0x0) {
-              puVar13 = (uint64_t *)
-                        ((uVar23 - ((long)pvVar15 + 0x10U) % uVar23) % uVar23 +
-                        (long)pvVar15 + 0x10U);
+              puVar13 = (uint64_t *)((uVar23 - ((long)pvVar15 + 0x10U) % uVar23) % uVar23 +
+                                     (long)pvVar15 + 0x10U);
               puVar13[-2] = 400;
               puVar13[-1] = pvVar15;
             }
@@ -1338,23 +1337,24 @@ LAB_00491087:
             if (((ulong)puVar13 & 1) == 0) {
               puVar24 = puVar13;
               bVar3 = false;
-              if (((ulong)puVar13 & 2) == 0) goto LAB_00491694;
-LAB_00491b58:
+              if (((ulong)puVar13 & 2) == 0)
+                goto LAB_00491694;
+            LAB_00491b58:
               bVar28 = bVar3;
               *(uint16_t *)puVar24 = 0;
               puVar24 = (uint64_t *)((long)puVar24 + 2);
               uVar16 = iVar7 - 2;
               uVar23 = (ulong)uVar16;
-            }
-            else {
+            } else {
               puVar24 = (uint64_t *)((long)puVar13 + 1);
               *(uint8_t *)puVar13 = 0;
               uVar23 = 399;
               bVar28 = true;
               iVar7 = 399;
               bVar3 = true;
-              if (((ulong)puVar24 & 2) != 0) goto LAB_00491b58;
-LAB_00491694:
+              if (((ulong)puVar24 & 2) != 0)
+                goto LAB_00491b58;
+            LAB_00491694:
               uVar16 = (uint)uVar23;
             }
             if (((ulong)puVar24 & 4) != 0) {
@@ -1383,7 +1383,7 @@ LAB_00491694:
             *(uint32_t *)(pPVar26 + 0xb0) = 0xa110ca7e;
             *(uint16_t *)(pPVar26 + 0x9c) = 5;
           }
-LAB_004916fe:
+        LAB_004916fe:
           if ((*(int *)(pPVar26 + 0x98) == 1) && (*(short *)(pPVar26 + 0x92) != 0)) {
             puVar20 = *(ushort **)(pPVar26 + 0xa8);
             sVar5 = 0;
@@ -1391,39 +1391,41 @@ LAB_004916fe:
             while (uVar19 != 0xffff) {
               puVar20 = puVar20 + 1;
               sVar5 = sVar5 + 1;
-              if (sVar5 == *(short *)(pPVar26 + 0x92)) goto LAB_0049170d;
+              if (sVar5 == *(short *)(pPVar26 + 0x92))
+                goto LAB_0049170d;
               uVar19 = *puVar20;
             }
             *puVar20 = uVar4;
             uVar4 = *(ushort *)(pPVar26 + 0x90);
           }
-LAB_0049170d:
+        LAB_0049170d:
           uVar23 = 0x50;
           bVar28 = false;
           iVar7 = 0x50;
           *(ushort *)(pPVar26 + 0x90) = uVar4 + 1;
-          puVar13 = (uint64_t *)
-                    (((ulong)(ushort)(uVar4 + 1) * 5 + -5) * 0x10 + *(long *)(pPVar26 + 0xa0));
+          puVar13 = (uint64_t *)(((ulong)(ushort)(uVar4 + 1) * 5 + -5) * 0x10 +
+                                 *(long *)(pPVar26 + 0xa0));
           if (((ulong)puVar13 & 1) == 0) {
             puVar24 = puVar13;
             bVar3 = false;
-            if (((ulong)puVar13 & 2) == 0) goto LAB_00491747;
-LAB_00491a98:
+            if (((ulong)puVar13 & 2) == 0)
+              goto LAB_00491747;
+          LAB_00491a98:
             bVar28 = bVar3;
             *(uint16_t *)puVar24 = 0;
             puVar24 = (uint64_t *)((long)puVar24 + 2);
             uVar16 = iVar7 - 2;
             uVar23 = (ulong)uVar16;
-          }
-          else {
+          } else {
             puVar24 = (uint64_t *)((long)puVar13 + 1);
             *(uint8_t *)puVar13 = 0;
             uVar23 = 0x4f;
             bVar28 = true;
             iVar7 = 0x4f;
             bVar3 = true;
-            if (((ulong)puVar24 & 2) != 0) goto LAB_00491a98;
-LAB_00491747:
+            if (((ulong)puVar24 & 2) != 0)
+              goto LAB_00491a98;
+          LAB_00491747:
             uVar16 = (uint)uVar23;
           }
           if (((ulong)puVar24 & 4) != 0) {
@@ -1446,19 +1448,18 @@ LAB_00491747:
           if (bVar28) {
             *(uint8_t *)puVar24 = 0;
           }
-          pLVar22 = (LevelInfo *)
-                    (((ulong)*(ushort *)(pPVar26 + 0x90) * 5 + -5) * 0x10 +
-                    *(long *)(pPVar26 + 0xa0));
+          pLVar22 = (LevelInfo *)(((ulong) * (ushort *)(pPVar26 + 0x90) * 5 + -5) * 0x10 +
+                                  *(long *)(pPVar26 + 0xa0));
           if (pLVar22 != (LevelInfo *)0x0) {
             *(uint32_t *)(pLVar22 + 0x40) = 0;
             *(uint32_t *)(pLVar22 + 0x44) = 0xffffffff;
             *(uint32_t *)(pLVar22 + 0x48) = 0xffffffff;
             *(uint32_t *)(pLVar22 + 0x4c) = 0;
           }
-          iVar7 = LoadLevelDataFromBlock((PropertyBlock *)local_a8[0],pLVar22,this_00);
-          if ((iVar7 == 0) ||
-             (*(int *)(self + 0x10) = *(int *)(self + 0x10) + 1,
-             local_a8[0] == (PropertyVariable *)0x0)) break;
+          iVar7 = LoadLevelDataFromBlock((PropertyBlock *)local_a8[0], pLVar22, this_00);
+          if ((iVar7 == 0) || (*(int *)(self + 0x10) = *(int *)(self + 0x10) + 1,
+                               local_a8[0] == (PropertyVariable *)0x0))
+            break;
         }
         local_15c = local_15c + 1;
       } while (local_15c < *(int *)(self + 0xc));
@@ -1468,7 +1469,7 @@ LAB_00491747:
     PropertiesFile__PropertiesFile(this_00);
     operator_delete(this_00);
   }
-  GSMBChapterData__LoadData(SMBChapterData,arg2);
+  GSMBChapterData__LoadData(SMBChapterData, arg2);
   *(int *)(self + 0x200) = arg2;
   return;
 }
@@ -1486,7 +1487,7 @@ void __thiscall SMBChapter__PlayChapterMusic__00491ea0(SMBChapter *self)
 
 {
   int iVar1;
-  
+
   if (*(short *)(self + 0x2e4) != 1) {
     iVar1 = GSMBMenu__IsInReplayMode(SMBMenu);
     if (iVar1 != 1) {
@@ -1515,8 +1516,7 @@ void __thiscall SMBChapter__StopChapterMusic(SMBChapter *self)
         TAudioInstance__Stop((TAudioInstance *)(self + 0x48));
         return;
       }
-    }
-    else {
+    } else {
       if (*(uint *)(self + 0x204) == 10) {
         TAudioInstance__Stop((TAudioInstance *)(self + 0x98));
         return;
@@ -1543,21 +1543,20 @@ void __thiscall SMBChapter__PlayChapterMenuMusic(SMBChapter *self)
 
 {
   TAudioCue *this_00;
-  
+
   this_00 = *(TAudioCue **)(self + 0x30);
   if ((*(int *)(self + 0x204) == 10) || (*(int *)(self + 0x204) == 0)) {
     if (this_00 != (TAudioCue *)0x0) {
-      TAudioCue__Play(this_00,GLOBALMUSICVOLUME,0,(TAudioInstance *)(self + 0xc0));
+      TAudioCue__Play(this_00, GLOBALMUSICVOLUME, 0, (TAudioInstance *)(self + 0xc0));
       if (*(TAudioCue **)(self + 0x38) != (TAudioCue *)0x0) {
-        TAudioCue__Play(*(TAudioCue **)(self + 0x38),0,0,(TAudioInstance *)(self + 0xe8));
+        TAudioCue__Play(*(TAudioCue **)(self + 0x38), 0, 0, (TAudioInstance *)(self + 0xe8));
         return;
       }
     }
-  }
-  else if (this_00 != (TAudioCue *)0x0) {
-    TAudioCue__Play(this_00,0,0,(TAudioInstance *)(self + 0xc0));
+  } else if (this_00 != (TAudioCue *)0x0) {
+    TAudioCue__Play(this_00, 0, 0, (TAudioInstance *)(self + 0xc0));
     if (*(TAudioCue **)(self + 0x38) != (TAudioCue *)0x0) {
-      TAudioCue__Play(*(TAudioCue **)(self + 0x38),GLOBALMUSICVOLUME,0,
+      TAudioCue__Play(*(TAudioCue **)(self + 0x38), GLOBALMUSICVOLUME, 0,
                       (TAudioInstance *)(self + 0xe8));
       return;
     }
@@ -1579,14 +1578,13 @@ void __thiscall SMBChapter__ResetChapterMusic(SMBChapter *self)
 {
   if ((*(int *)(self + 0x204) == 10) || (*(int *)(self + 0x204) == 0)) {
     if (*(long *)(self + 0x30) != 0) {
-      TAudioInstance__SetVolume((TAudioInstance *)(self + 0xc0),GLOBALMUSICVOLUME);
-      TAudioInstance__SetVolume((TAudioInstance *)(self + 0xe8),0);
+      TAudioInstance__SetVolume((TAudioInstance *)(self + 0xc0), GLOBALMUSICVOLUME);
+      TAudioInstance__SetVolume((TAudioInstance *)(self + 0xe8), 0);
       return;
     }
-  }
-  else if (*(long *)(self + 0x30) != 0) {
-    TAudioInstance__SetVolume((TAudioInstance *)(self + 0xc0),0);
-    TAudioInstance__SetVolume((TAudioInstance *)(self + 0xe8),GLOBALMUSICVOLUME);
+  } else if (*(long *)(self + 0x30) != 0) {
+    TAudioInstance__SetVolume((TAudioInstance *)(self + 0xc0), 0);
+    TAudioInstance__SetVolume((TAudioInstance *)(self + 0xe8), GLOBALMUSICVOLUME);
     return;
   }
   return;
@@ -1625,27 +1623,26 @@ void __thiscall SMBChapter__CrossFadeChapterMusic(SMBChapter *self)
 
 {
   AudioEffectBase *pAVar1;
-  uint32_t local_38 [2];
+  uint32_t local_38[2];
   SMBChapter *local_30;
   SMBChapter *local_28;
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   local_38[0] = 1;
   local_1c = 0;
   if (*(int *)(self + 0x204) == 0) {
     local_30 = self + 0xc0;
     local_28 = self + 0xe8;
-  }
-  else {
+  } else {
     local_30 = self + 0xe8;
     local_28 = self + 0xc0;
   }
   local_18 = 0x3f800000;
   local_20 = GLOBALMUSICVOLUME;
   pAVar1 = (AudioEffectBase *)AudioEffectFade__Create((AudioEffectFadeCreation *)local_38);
-  TAudio__ManageEffect(Audio,pAVar1);
+  TAudio__ManageEffect(Audio, pAVar1);
   return;
 }
 
@@ -1662,7 +1659,7 @@ void __thiscall SMBChapter__StartReplayCurrentLevel(SMBChapter *self)
 
 {
   int iVar1;
-  
+
   *(uint16_t *)(self + 0x14) = 1;
   iVar1 = 0;
   if (1 < iCurrentLevel) {
@@ -1701,7 +1698,7 @@ void __thiscall SMBChapter__Reset(SMBChapter *self)
 
 {
   iCurrentLevel = 0;
-  GSMBChapterData__SetCurrentLevel(SMBChapterData,0);
+  GSMBChapterData__SetCurrentLevel(SMBChapterData, 0);
   *(uint32_t *)self = iCurrentLevel;
   return;
 }
@@ -1721,20 +1718,19 @@ uint64_t __thiscall SMBChapter__LoadCurrentLevel(SMBChapter *self)
   long lVar1;
   long local_38;
   uchar *local_30;
-  uint local_28 [6];
-  
+  uint local_28[6];
+
   lVar1 = GetLevelInfoArray();
   local_38 = 0;
   local_30 = (uchar *)0x0;
   local_28[0] = 0;
   if (*(int *)(self + 0x200) == 9) {
-    GSMBMenu__GetLevelDataByIndex(SMBMenu,iCurrentLevel,&local_30,local_28);
-  }
-  else {
+    GSMBMenu__GetLevelDataByIndex(SMBMenu, iCurrentLevel, &local_30, local_28);
+  } else {
     local_38 = (ulong)(iCurrentLevel & 0xffff) * 0x50 + *(long *)(lVar1 + 0x38);
   }
-  SMBEditor__LoadLevel(SuperMeatBoyEditor,(TileLevelLoad *)&local_38);
-  GSMBChapterData__SetCurrentLevel(SMBChapterData,*(int *)self);
+  SMBEditor__LoadLevel(SuperMeatBoyEditor, (TileLevelLoad *)&local_38);
+  GSMBChapterData__SetCurrentLevel(SMBChapterData, *(int *)self);
   return 0;
 }
 
@@ -1753,19 +1749,18 @@ void __thiscall SMBChapter__LoadBossLevel(SMBChapter *self)
   SMBChapter *local_28;
   uint64_t local_20;
   uint32_t local_18;
-  
+
   *(uint32_t *)(self + 0x26c) = 1;
   local_20 = 0;
   local_18 = 0;
   if (*(short *)(self + 0x2e6) == 0) {
     local_28 = self + 0x208;
-  }
-  else {
+  } else {
     local_28 = self + 0x228;
   }
   *(uint32_t *)(self + 0x204) = 10;
   CreateSMBBoss(0xffffffff);
-  SMBEditor__LoadLevel(SuperMeatBoyEditor,(TileLevelLoad *)&local_28);
+  SMBEditor__LoadLevel(SuperMeatBoyEditor, (TileLevelLoad *)&local_28);
   return;
 }
 
@@ -1778,7 +1773,7 @@ void __thiscall SMBChapter__LoadBossLevel(SMBChapter *self)
  */
 /* SMBChapter__SetLevelType(tagChapterLevelType) */
 
-void __thiscall SMBChapter__SetLevelType(SMBChapter *self,uint32_t arg2)
+void __thiscall SMBChapter__SetLevelType(SMBChapter *self, uint32_t arg2)
 
 {
   *(uint32_t *)(self + 0x204) = arg2;
@@ -1795,7 +1790,7 @@ void __thiscall SMBChapter__SetLevelType(SMBChapter *self,uint32_t arg2)
  */
 /* SMBChapter__SetCurrentLevel(int) */
 
-void __thiscall SMBChapter__SetCurrentLevel(SMBChapter *self,int arg1)
+void __thiscall SMBChapter__SetCurrentLevel(SMBChapter *self, int arg1)
 
 {
   *(int *)self = arg1;
@@ -1814,27 +1809,27 @@ void __thiscall SMBChapter__SetCurrentLevel(SMBChapter *self,int arg1)
 uint __thiscall SMBChapter__GetNumberOfLevels(SMBChapter *self)
 
 {
-  switch(*(uint32_t *)(self + 0x204)) {
+  switch (*(uint32_t *)(self + 0x204)) {
   default:
     return *(uint *)(self + 4);
   case 1:
     return *(uint *)(self + 8);
   case 2:
-    return (uint)*(ushort *)(*(long *)(self + 0x1e8) + 0x90);
+    return (uint) * (ushort *)(*(long *)(self + 0x1e8) + 0x90);
   case 3:
-    return (uint)*(ushort *)(*(long *)(self + 0x1e8) + 0x148);
+    return (uint) * (ushort *)(*(long *)(self + 0x1e8) + 0x148);
   case 4:
-    return (uint)*(ushort *)(*(long *)(self + 0x1e8) + 0x200);
+    return (uint) * (ushort *)(*(long *)(self + 0x1e8) + 0x200);
   case 5:
-    return (uint)*(ushort *)(*(long *)(self + 0x1e8) + 0x2b8);
+    return (uint) * (ushort *)(*(long *)(self + 0x1e8) + 0x2b8);
   case 6:
-    return (uint)*(ushort *)(*(long *)(self + 0x1e8) + 0x370);
+    return (uint) * (ushort *)(*(long *)(self + 0x1e8) + 0x370);
   case 7:
-    return (uint)*(ushort *)(*(long *)(self + 0x1e8) + 0x428);
+    return (uint) * (ushort *)(*(long *)(self + 0x1e8) + 0x428);
   case 8:
-    return (uint)*(ushort *)(*(long *)(self + 0x1e8) + 0x4e0);
+    return (uint) * (ushort *)(*(long *)(self + 0x1e8) + 0x4e0);
   case 9:
-    return (uint)*(ushort *)(*(long *)(self + 0x1e8) + 0x598);
+    return (uint) * (ushort *)(*(long *)(self + 0x1e8) + 0x598);
   }
 }
 
@@ -1864,7 +1859,7 @@ uint32_t __thiscall SMBChapter__GetTotalNumberOfLevels(SMBChapter *self)
 /* WARNING: Removing unreachable block (ram,0x004927fe) */
 /* SMBChapter__ActivateWarpZoneFromMenu(int) */
 
-void __thiscall SMBChapter__ActivateWarpZoneFromMenu(SMBChapter *self,int arg1)
+void __thiscall SMBChapter__ActivateWarpZoneFromMenu(SMBChapter *self, int arg1)
 
 {
   int *piVar1;
@@ -1885,10 +1880,10 @@ void __thiscall SMBChapter__ActivateWarpZoneFromMenu(SMBChapter *self,int arg1)
   uint32_t local_60;
   uint32_t local_5c;
   uint32_t local_58;
-  long local_48 [2];
+  long local_48[2];
   uint8_t *local_38;
-  allocator local_2b [11];
-  
+  allocator local_2b[11];
+
   lVar6 = (ulong)(ushort)arg1 * 0xb8 + *(long *)(self + 0x1e8);
   *(uint16_t *)(self + 0x16) = 1;
   GSMBChapterData__ResetWarpZoneBandages(SMBChapterData);
@@ -1901,9 +1896,9 @@ void __thiscall SMBChapter__ActivateWarpZoneFromMenu(SMBChapter *self,int arg1)
     }
     lVar6 = (ulong)(iVar2 - 1U & 0xffff) * 0xb8 + *(long *)(self + 0x1e8);
     *(long *)(self + 0x2e8) = lVar6;
-    if (lVar6 == 0) goto LAB_00492553;
-  }
-  else {
+    if (lVar6 == 0)
+      goto LAB_00492553;
+  } else {
     *(long *)(self + 0x2e8) = lVar6;
   }
   bVar7 = *(int *)(lVar6 + 0x20) == GLITCH_WARP_INDEX;
@@ -1912,62 +1907,62 @@ void __thiscall SMBChapter__ActivateWarpZoneFromMenu(SMBChapter *self,int arg1)
   if (*(short *)(self + 0x16) == 0) {
     if (!bVar7) {
       SMBCurrLevelData._4_4_ = SMBCurrLevelData._4_4_ | 8;
-      GSMBChapterData__SaveLevelData(SMBChapterData,(SMBLevelData *)SMBCurrLevelData);
+      GSMBChapterData__SaveLevelData(SMBChapterData, (SMBLevelData *)SMBCurrLevelData);
       goto LAB_004923f1;
     }
     GSMBChapterData__UnlockGlitchLevel(SMBChapterData);
     SMBCurrLevelData._0_4_ = *(uint32_t *)(SMBHUD + 0x418);
-    GSMBChapterData__SaveLevelData(SMBChapterData,(SMBLevelData *)SMBCurrLevelData);
-    if (*(int *)(SuperMeatBoy + 0x2c) == 0) goto LAB_00492570;
-LAB_00492405:
+    GSMBChapterData__SaveLevelData(SMBChapterData, (SMBLevelData *)SMBCurrLevelData);
+    if (*(int *)(SuperMeatBoy + 0x2c) == 0)
+      goto LAB_00492570;
+  LAB_00492405:
     if (bVar7) {
       pFVar4 = *(FlashAnimationLibrary **)(self + 0x288);
-LAB_0049272f:
-      local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,4);
+    LAB_0049272f:
+      local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 4);
       *(uint64_t *)(self + 0x290) = local_88;
-    }
-    else {
+    } else {
       pFVar4 = *(FlashAnimationLibrary **)(self + 0x288);
       if (*(int *)(*(long *)(self + 0x2e8) + 0x20) == 1) {
-LAB_00492674:
-        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,2);
+      LAB_00492674:
+        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 2);
         *(uint64_t *)(self + 0x290) = local_88;
-      }
-      else {
-LAB_00492426:
-        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,0);
+      } else {
+      LAB_00492426:
+        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 0);
         *(uint64_t *)(self + 0x290) = local_88;
       }
     }
-  }
-  else {
-LAB_004923f1:
-    if (*(int *)(SuperMeatBoy + 0x2c) != 0) goto LAB_00492405;
-LAB_00492570:
+  } else {
+  LAB_004923f1:
+    if (*(int *)(SuperMeatBoy + 0x2c) != 0)
+      goto LAB_00492405;
+  LAB_00492570:
     if (bVar7) {
-      lVar6 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+      lVar6 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
       pFVar4 = *(FlashAnimationLibrary **)(self + 0x288);
       if (*(int *)(lVar6 + 0xa54) != 0) {
-        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,5);
+        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 5);
         *(uint64_t *)(self + 0x290) = local_88;
         goto LAB_00492434;
       }
       goto LAB_0049272f;
     }
     if (*(int *)(*(long *)(self + 0x2e8) + 0x20) == 1) {
-      lVar6 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+      lVar6 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
       pFVar4 = *(FlashAnimationLibrary **)(self + 0x288);
       if (*(int *)(lVar6 + 0xa54) != 0) {
-        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,3);
+        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 3);
         *(uint64_t *)(self + 0x290) = local_88;
         goto LAB_00492434;
       }
       goto LAB_00492674;
     }
-    lVar6 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+    lVar6 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
     pFVar4 = *(FlashAnimationLibrary **)(self + 0x288);
-    if (*(int *)(lVar6 + 0xa54) == 0) goto LAB_00492426;
-    local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,1);
+    if (*(int *)(lVar6 + 0xa54) == 0)
+      goto LAB_00492426;
+    local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 1);
     *(uint64_t *)(self + 0x290) = local_88;
   }
 LAB_00492434:
@@ -1981,21 +1976,21 @@ LAB_00492434:
   local_60 = 1;
   local_58 = 0;
   local_78 = self;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_98);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_98);
   if (*(uint8_t **)(self + 0x2e8) != &DAT_005c1d05 /* R:"none" */) {
-    std__string_string((string *)local_48,"/LevelPalettes/",local_2b);
+    std__string_string((string *)local_48, "/LevelPalettes/", local_2b);
     pcVar3 = *(char **)(self + 0x2e8);
     strlen(pcVar3);
-                    /* try { // try from 004924d6 to 004924da has its CatchHandler @ 004927f9 */
-    std__string_append((char *)local_48,(ulong)pcVar3);
+    /* try { // try from 004924d6 to 004924da has its CatchHandler @ 004927f9 */
+    std__string_append((char *)local_48, (ulong)pcVar3);
     local_38 = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 004924ee to 004924ff has its CatchHandler @ 004927e9 */
-    pcVar3 = (char *)FormatResourcePath(local_48[0],&local_38);
+    /* try { // try from 004924ee to 004924ff has its CatchHandler @ 004927e9 */
+    pcVar3 = (char *)FormatResourcePath(local_48[0], &local_38);
     pFVar4 = operator_new(0xb0);
-                    /* try { // try from 00492509 to 0049250d has its CatchHandler @ 004927c2 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4,pcVar3);
+    /* try { // try from 00492509 to 0049250d has its CatchHandler @ 004927c2 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4, pcVar3);
     *(FlashAnimationLibrary **)(*(long *)(self + 0x2e8) + 0x28) = pFVar4;
-                    /* try { // try from 00492519 to 0049251d has its CatchHandler @ 004927e9 */
+    /* try { // try from 00492519 to 0049251d has its CatchHandler @ 004927e9 */
     Loader__WaitAll();
     if ((allocator *)(local_38 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
@@ -2007,8 +2002,7 @@ LAB_00492434:
         std__string_Rep_M_destroy((allocator *)(local_38 + -0x18));
       }
     }
-    if ((allocator *)(local_48[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_48[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_48[0] + -8);
       iVar2 = *piVar1;
@@ -2023,13 +2017,13 @@ LAB_00492434:
   if (!bVar7) {
     local_38 = (uint8_t *)0xe00000001;
     pUVar5 = (UserProfile *)TPlayer__GetProfile((TPlayer *)Players__Player);
-    iVar2 = Achievements__AwardAchievement(pUVar5,(AchievementAward *)&local_38);
+    iVar2 = Achievements__AwardAchievement(pUVar5, (AchievementAward *)&local_38);
     if (iVar2 == 0) {
-      GSMBMenu__ShowAchievementUpsell(SMBMenu,1);
+      GSMBMenu__ShowAchievementUpsell(SMBMenu, 1);
     }
   }
 LAB_00492553:
-  GSuperMeatBoy__Freeze(SuperMeatBoy,1);
+  GSuperMeatBoy__Freeze(SuperMeatBoy, 1);
   return;
 }
 
@@ -2044,7 +2038,7 @@ LAB_00492553:
 /* WARNING: Removing unreachable block (ram,0x00492cce) */
 /* SMBChapter__ActivateWarpZone(SMBChapter__WarpZone, int) */
 
-void __thiscall SMBChapter__ActivateWarpZone(SMBChapter *self,WarpZone *arg1,int arg2)
+void __thiscall SMBChapter__ActivateWarpZone(SMBChapter *self, WarpZone *arg1, int arg2)
 
 {
   int *piVar1;
@@ -2065,30 +2059,29 @@ void __thiscall SMBChapter__ActivateWarpZone(SMBChapter *self,WarpZone *arg1,int
   uint32_t local_60;
   uint32_t local_5c;
   uint32_t local_58;
-  long local_48 [2];
+  long local_48[2];
   uint8_t *local_38;
-  allocator local_2b [11];
-  
+  allocator local_2b[11];
+
   GSMBChapterData__ResetWarpZoneBandages(SMBChapterData);
   if (arg1 == (WarpZone *)0x0) {
     if (arg2 == 0) {
       lVar5 = GetLevelInfoArray(self);
-      iVar2 = *(int *)((ulong)(iCurrentLevel - 1U & 0xffff) * 0x50 + *(long *)(lVar5 + 0x38) + 0x44)
-      ;
+      iVar2 =
+          *(int *)((ulong)(iCurrentLevel - 1U & 0xffff) * 0x50 + *(long *)(lVar5 + 0x38) + 0x44);
       if (iVar2 == -1) {
         *(uint64_t *)(self + 0x2e8) = 0;
         goto LAB_004929ee;
       }
       arg1 = (WarpZone *)((ulong)(ushort)((short)iVar2 - 1) * 0xb8 + *(long *)(self + 0x1e8));
       *(WarpZone **)(self + 0x2e8) = arg1;
-    }
-    else {
+    } else {
       arg1 = (WarpZone *)((ulong)(GLITCH_WARP_INDEX & 0xffff) * 0xb8 + *(long *)(self + 0x1e8));
       *(WarpZone **)(self + 0x2e8) = arg1;
     }
-    if (arg1 == (WarpZone *)0x0) goto LAB_004929ee;
-  }
-  else {
+    if (arg1 == (WarpZone *)0x0)
+      goto LAB_004929ee;
+  } else {
     *(WarpZone **)(self + 0x2e8) = arg1;
   }
   bVar7 = *(uint *)(arg1 + 0x20) == GLITCH_WARP_INDEX;
@@ -2097,62 +2090,62 @@ void __thiscall SMBChapter__ActivateWarpZone(SMBChapter *self,WarpZone *arg1,int
   if (*(short *)(self + 0x16) == 0) {
     if (!bVar7) {
       SMBCurrLevelData._4_4_ = SMBCurrLevelData._4_4_ | 8;
-      GSMBChapterData__SaveLevelData(SMBChapterData,(SMBLevelData *)SMBCurrLevelData);
+      GSMBChapterData__SaveLevelData(SMBChapterData, (SMBLevelData *)SMBCurrLevelData);
       goto LAB_0049288e;
     }
     GSMBChapterData__UnlockGlitchLevel(SMBChapterData);
     SMBCurrLevelData._0_4_ = *(uint32_t *)(SMBHUD + 0x418);
-    GSMBChapterData__SaveLevelData(SMBChapterData,(SMBLevelData *)SMBCurrLevelData);
-    if (*(int *)(SuperMeatBoy + 0x2c) == 0) goto LAB_00492a10;
-LAB_004928a0:
+    GSMBChapterData__SaveLevelData(SMBChapterData, (SMBLevelData *)SMBCurrLevelData);
+    if (*(int *)(SuperMeatBoy + 0x2c) == 0)
+      goto LAB_00492a10;
+  LAB_004928a0:
     if (bVar7) {
       pFVar4 = *(FlashAnimationLibrary **)(self + 0x288);
-LAB_00492bcf:
-      local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,4);
+    LAB_00492bcf:
+      local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 4);
       *(uint64_t *)(self + 0x290) = local_88;
-    }
-    else {
+    } else {
       pFVar4 = *(FlashAnimationLibrary **)(self + 0x288);
       if (*(int *)(*(long *)(self + 0x2e8) + 0x20) == 1) {
-LAB_00492b0c:
-        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,2);
+      LAB_00492b0c:
+        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 2);
         *(uint64_t *)(self + 0x290) = local_88;
-      }
-      else {
-LAB_004928c1:
-        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,0);
+      } else {
+      LAB_004928c1:
+        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 0);
         *(uint64_t *)(self + 0x290) = local_88;
       }
     }
-  }
-  else {
-LAB_0049288e:
-    if (*(int *)(SuperMeatBoy + 0x2c) != 0) goto LAB_004928a0;
-LAB_00492a10:
+  } else {
+  LAB_0049288e:
+    if (*(int *)(SuperMeatBoy + 0x2c) != 0)
+      goto LAB_004928a0;
+  LAB_00492a10:
     if (bVar7) {
-      lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+      lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
       pFVar4 = *(FlashAnimationLibrary **)(self + 0x288);
       if (*(int *)(lVar5 + 0xa54) != 0) {
-        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,5);
+        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 5);
         *(uint64_t *)(self + 0x290) = local_88;
         goto LAB_004928cf;
       }
       goto LAB_00492bcf;
     }
     if (*(int *)(*(long *)(self + 0x2e8) + 0x20) == 1) {
-      lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+      lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
       pFVar4 = *(FlashAnimationLibrary **)(self + 0x288);
       if (*(int *)(lVar5 + 0xa54) != 0) {
-        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,3);
+        local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 3);
         *(uint64_t *)(self + 0x290) = local_88;
         goto LAB_004928cf;
       }
       goto LAB_00492b0c;
     }
-    lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+    lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
     pFVar4 = *(FlashAnimationLibrary **)(self + 0x288);
-    if (*(int *)(lVar5 + 0xa54) == 0) goto LAB_004928c1;
-    local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,1);
+    if (*(int *)(lVar5 + 0xa54) == 0)
+      goto LAB_004928c1;
+    local_88 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, 1);
     *(uint64_t *)(self + 0x290) = local_88;
   }
 LAB_004928cf:
@@ -2166,21 +2159,21 @@ LAB_004928cf:
   local_60 = 1;
   local_58 = 0;
   local_78 = self;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_98);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_98);
   if (*(uint8_t **)(self + 0x2e8) != &DAT_005c1d05 /* R:"none" */) {
-    std__string_string((string *)local_48,"/LevelPalettes/",local_2b);
+    std__string_string((string *)local_48, "/LevelPalettes/", local_2b);
     pcVar3 = *(char **)(self + 0x2e8);
     strlen(pcVar3);
-                    /* try { // try from 00492971 to 00492975 has its CatchHandler @ 00492cc9 */
-    std__string_append((char *)local_48,(ulong)pcVar3);
+    /* try { // try from 00492971 to 00492975 has its CatchHandler @ 00492cc9 */
+    std__string_append((char *)local_48, (ulong)pcVar3);
     local_38 = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 00492989 to 0049299a has its CatchHandler @ 00492cb9 */
-    pcVar3 = (char *)FormatResourcePath(local_48[0],&local_38);
+    /* try { // try from 00492989 to 0049299a has its CatchHandler @ 00492cb9 */
+    pcVar3 = (char *)FormatResourcePath(local_48[0], &local_38);
     pFVar4 = operator_new(0xb0);
-                    /* try { // try from 004929a4 to 004929a8 has its CatchHandler @ 00492c92 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4,pcVar3);
+    /* try { // try from 004929a4 to 004929a8 has its CatchHandler @ 00492c92 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4, pcVar3);
     *(FlashAnimationLibrary **)(*(long *)(self + 0x2e8) + 0x28) = pFVar4;
-                    /* try { // try from 004929b4 to 004929b8 has its CatchHandler @ 00492cb9 */
+    /* try { // try from 004929b4 to 004929b8 has its CatchHandler @ 00492cb9 */
     Loader__WaitAll();
     if ((allocator *)(local_38 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
@@ -2192,8 +2185,7 @@ LAB_004928cf:
         std__string_Rep_M_destroy((allocator *)(local_38 + -0x18));
       }
     }
-    if ((allocator *)(local_48[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_48[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_48[0] + -8);
       iVar2 = *piVar1;
@@ -2208,13 +2200,13 @@ LAB_004928cf:
   if (!bVar7) {
     local_38 = (uint8_t *)0xe00000001;
     pUVar6 = (UserProfile *)TPlayer__GetProfile((TPlayer *)Players__Player);
-    iVar2 = Achievements__AwardAchievement(pUVar6,(AchievementAward *)&local_38);
+    iVar2 = Achievements__AwardAchievement(pUVar6, (AchievementAward *)&local_38);
     if (iVar2 == 0) {
-      GSMBMenu__ShowAchievementUpsell(SMBMenu,1);
+      GSMBMenu__ShowAchievementUpsell(SMBMenu, 1);
     }
   }
 LAB_004929ee:
-  GSuperMeatBoy__Freeze(SuperMeatBoy,1);
+  GSuperMeatBoy__Freeze(SuperMeatBoy, 1);
   return;
 }
 
@@ -2232,12 +2224,12 @@ void __thiscall SMBChapter__LoadWarpLibrary(SMBChapter *self)
 {
   char *pcVar1;
   FlashAnimationLibrary *this_00;
-  
+
   if (*(long *)(self + 0x288) == 0) {
     pcVar1 = *(char **)(self + 0x280);
     this_00 = operator_new(0xb0);
-                    /* try { // try from 00492d32 to 00492d36 has its CatchHandler @ 00492d40 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_00,pcVar1);
+    /* try { // try from 00492d32 to 00492d36 has its CatchHandler @ 00492d40 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_00, pcVar1);
     *(FlashAnimationLibrary **)(self + 0x288) = this_00;
   }
   return;
@@ -2252,12 +2244,11 @@ void __thiscall SMBChapter__LoadWarpLibrary(SMBChapter *self)
  */
 /* SMBChapter__AllowCharSelect(tagSuperMeatBoyCharactor&) */
 
-uint64_t __thiscall
-SMBChapter__AllowCharSelect(SMBChapter *self,tagSuperMeatBoyCharactor *arg1)
+uint64_t __thiscall SMBChapter__AllowCharSelect(SMBChapter *self, tagSuperMeatBoyCharactor *arg1)
 
 {
   int iVar1;
-  
+
   iVar1 = *(int *)(self + 0x200);
   if (iVar1 == 9) {
     *(uint32_t *)arg1 = 0;
@@ -2299,17 +2290,15 @@ void __thiscall SMBChapter__FinishedWarpOutro(SMBChapter *self)
 {
   GSMBChapterData *pGVar1;
   long lVar2;
-  
+
   if (*(int *)(self + 0x2e0) != 1) {
     if (*(uint *)(self + 0x204) < 2) {
       if (*(long *)(self + 0x18) != 0) {
         TAudioInstance__Stop((TAudioInstance *)(self + 0x48));
       }
-    }
-    else if (*(uint *)(self + 0x204) == 10) {
+    } else if (*(uint *)(self + 0x204) == 10) {
       TAudioInstance__Stop((TAudioInstance *)(self + 0x98));
-    }
-    else if (*(long *)(self + 0x28) != 0) {
+    } else if (*(long *)(self + 0x28) != 0) {
       TAudioInstance__Stop((TAudioInstance *)(self + 0x70));
     }
   }
@@ -2323,10 +2312,10 @@ void __thiscall SMBChapter__FinishedWarpOutro(SMBChapter *self)
   *(uint32_t *)(self + 0x204) = *(uint32_t *)(self + 0x270);
   GSMBChapterData__SetLevelType(pGVar1);
   *(int *)self = *(int *)(self + 0x274);
-  GSMBMenu__SetSelectedLevel(SMBMenu,*(int *)(self + 0x274),1);
+  GSMBMenu__SetSelectedLevel(SMBMenu, *(int *)(self + 0x274), 1);
   GSuperMeatBoy__SwitchGameMode(SuperMeatBoy);
   *(uint16_t *)(self + 0x16) = 0;
-  GSuperMeatBoy__Freeze(SuperMeatBoy,0);
+  GSuperMeatBoy__Freeze(SuperMeatBoy, 0);
   return;
 }
 
@@ -2360,8 +2349,8 @@ void __thiscall SMBChapter__LoadWarpZone(SMBChapter *self)
   uint32_t local_50;
   uint32_t local_4c;
   uint32_t local_48;
-  char local_38 [40];
-  
+  char local_38[40];
+
   iVar3 = iCurrentLevel;
   if (*(short *)(self + 0x16) != 1) {
     iVar3 = iCurrentLevel + -1;
@@ -2373,7 +2362,7 @@ void __thiscall SMBChapter__LoadWarpZone(SMBChapter *self)
   lVar4 = *(long *)(self + 0x2e8);
   if (lVar4 != 0) {
     if (*(int *)(lVar4 + 0x24) != 0) {
-      GSuperMeatBoy__DeferLoadCharactor(SuperMeatBoy,*(int *)(lVar4 + 0x24) + -1);
+      GSuperMeatBoy__DeferLoadCharactor(SuperMeatBoy, *(int *)(lVar4 + 0x24) + -1);
       lVar4 = *(long *)(self + 0x2e8);
     }
     if (*(long **)(lVar4 + 0x30) != (long *)0x0) {
@@ -2390,11 +2379,9 @@ void __thiscall SMBChapter__LoadWarpZone(SMBChapter *self)
         if (*(long *)(self + 0x18) != 0) {
           TAudioInstance__Stop((TAudioInstance *)(self + 0x48));
         }
-      }
-      else if (*(uint *)(self + 0x204) == 10) {
+      } else if (*(uint *)(self + 0x204) == 10) {
         TAudioInstance__Stop((TAudioInstance *)(self + 0x98));
-      }
-      else if (*(long *)(self + 0x28) != 0) {
+      } else if (*(long *)(self + 0x28) != 0) {
         TAudioInstance__Stop((TAudioInstance *)(self + 0x70));
       }
     }
@@ -2408,11 +2395,11 @@ void __thiscall SMBChapter__LoadWarpZone(SMBChapter *self)
       }
     }
     iCurrentLevel = 0;
-    GSMBChapterData__SetCurrentLevel(SMBChapterData,0);
+    GSMBChapterData__SetCurrentLevel(SMBChapterData, 0);
     *(int *)self = iCurrentLevel;
-    GSuperMeatBoy__SetCurrentLevel(SuperMeatBoy,(TileLevel *)0x0);
+    GSuperMeatBoy__SetCurrentLevel(SuperMeatBoy, (TileLevel *)0x0);
     GSuperMeatBoy__SwitchGameMode(SuperMeatBoy);
-    GSuperMeatBoy__Freeze(SuperMeatBoy,0);
+    GSuperMeatBoy__Freeze(SuperMeatBoy, 0);
     if (*(int *)(self + 0x204) != 3) {
       lVar4 = *(long *)(self + 0x2e8);
       if (*(long **)(lVar4 + 0x40) != (long *)0x0) {
@@ -2423,10 +2410,10 @@ void __thiscall SMBChapter__LoadWarpZone(SMBChapter *self)
       *(uint64_t *)(lVar4 + 0x40) = 0;
       *(uint64_t *)(*(long *)(self + 0x2e8) + 0x38) = *(uint64_t *)(lVar2 + 0x108);
       if (*(long *)(*(long *)(self + 0x2e8) + 0x38) != 0) {
-        Sprint(&DAT_005c1d0a /* R:"life%i-%i" */,local_38,iCurrentLevel,3);
+        Sprint(&DAT_005c1d0a /* R:"life%i-%i" */, local_38, iCurrentLevel, 3);
         lVar4 = *(long *)(self + 0x2e8);
-        uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0
-                          (*(FlashAnimationLibrary **)(lVar4 + 0x38),local_38);
+        uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(
+            *(FlashAnimationLibrary **)(lVar4 + 0x38), local_38);
         *(uint64_t *)(lVar4 + 0x40) = uVar5;
         if (*(long *)(*(long *)(self + 0x2e8) + 0x40) != 0) {
           local_48 = 1;
@@ -2440,8 +2427,8 @@ void __thiscall SMBChapter__LoadWarpZone(SMBChapter *self)
           local_80 = 1;
           local_70 = SMBLivesScreenFinished;
           local_68 = self;
-          GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_88);
-          GSuperMeatBoy__Freeze(SuperMeatBoy,1);
+          GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_88);
+          GSuperMeatBoy__Freeze(SuperMeatBoy, 1);
         }
       }
     }
@@ -2481,16 +2468,16 @@ void __thiscall SMBChapter__PlayWarpIntro(SMBChapter *self)
   uint32_t local_90;
   uint32_t local_8c;
   uint32_t local_88;
-  long local_78 [2];
+  long local_78[2];
   uint32_t local_68;
   long local_58;
   uchar *local_50;
-  uint local_48 [4];
-  uint32_t local_38 [2];
+  uint local_48[4];
+  uint32_t local_38[2];
   uint64_t local_30;
   uint8_t *local_28;
-  allocator local_1c [12];
-  
+  allocator local_1c[12];
+
   if (*(long **)(self + 0x290) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0x290) + 8))();
   }
@@ -2506,7 +2493,8 @@ void __thiscall SMBChapter__PlayWarpIntro(SMBChapter *self)
     LoadWarpZone(self);
     return;
   }
-  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(puVar3 + 0x28),0);
+  uVar5 =
+      FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(puVar3 + 0x28), 0);
   *(uint64_t *)(puVar3 + 0x30) = uVar5;
   local_98 = 0;
   local_8c = 1;
@@ -2519,17 +2507,15 @@ void __thiscall SMBChapter__PlayWarpIntro(SMBChapter *self)
   local_a0 = SMBWarpIntroSkip;
   local_90 = 1;
   local_a8 = self;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_c8);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_c8);
   if (*(int *)(self + 0x2e0) != 1) {
     if (*(uint *)(self + 0x204) < 2) {
       if (*(long *)(self + 0x18) != 0) {
         TAudioInstance__Stop((TAudioInstance *)(self + 0x48));
       }
-    }
-    else if (*(uint *)(self + 0x204) == 10) {
+    } else if (*(uint *)(self + 0x204) == 10) {
       TAudioInstance__Stop((TAudioInstance *)(self + 0x98));
-    }
-    else if (*(long *)(self + 0x28) != 0) {
+    } else if (*(long *)(self + 0x28) != 0) {
       TAudioInstance__Stop((TAudioInstance *)(self + 0x70));
     }
   }
@@ -2541,11 +2527,10 @@ void __thiscall SMBChapter__PlayWarpIntro(SMBChapter *self)
     local_58 = 0;
     local_50 = (uchar *)0x0;
     local_48[0] = 0;
-                    /* try { // try from 00493454 to 0049349e has its CatchHandler @ 004935f2 */
-    GSMBMenu__GetLevelDataByIndex(SMBMenu,0,&local_50,local_48);
+    /* try { // try from 00493454 to 0049349e has its CatchHandler @ 004935f2 */
+    GSMBMenu__GetLevelDataByIndex(SMBMenu, 0, &local_50, local_48);
     if ((local_48[0] == 0) || (local_50 == (uchar *)0x0)) {
-      if ((allocator *)(local_28 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-      {
+      if ((allocator *)(local_28 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
         LOCK();
         piVar1 = (int *)(local_28 + -8);
         iVar2 = *piVar1;
@@ -2557,23 +2542,22 @@ void __thiscall SMBChapter__PlayWarpIntro(SMBChapter *self)
       }
       goto LAB_004933fa;
     }
-    TileLevel__GetPaletteFromLevelFile((TileLevelLoad *)&local_58,(string *)&local_28);
-    SMBPaletteBackgroundLoader__Load((char *)(SuperMeatBoy + 0x3b0),(int)local_28);
-  }
-  else {
-                    /* try { // try from 00493339 to 0049333d has its CatchHandler @ 004935d7 */
-    std__string_string((string *)&local_58,"Levels/",local_1c);
-    __s = (char *)GetLevelInfo(self,0,0xb);
+    TileLevel__GetPaletteFromLevelFile((TileLevelLoad *)&local_58, (string *)&local_28);
+    SMBPaletteBackgroundLoader__Load((char *)(SuperMeatBoy + 0x3b0), (int)local_28);
+  } else {
+    /* try { // try from 00493339 to 0049333d has its CatchHandler @ 004935d7 */
+    std__string_string((string *)&local_58, "Levels/", local_1c);
+    __s = (char *)GetLevelInfo(self, 0, 0xb);
     strlen(__s);
-                    /* try { // try from 00493361 to 00493377 has its CatchHandler @ 0049359d */
-    std__string_append((char *)&local_58,(ulong)__s);
-    std__string_append((char *)&local_58,0x5c1d1c);
+    /* try { // try from 00493361 to 00493377 has its CatchHandler @ 0049359d */
+    std__string_append((char *)&local_58, (ulong)__s);
+    std__string_append((char *)&local_58, 0x5c1d1c);
     local_78[1] = 0;
     local_68 = 0;
     local_78[0] = local_58;
-                    /* try { // try from 004933a6 to 004933c7 has its CatchHandler @ 004935ca */
-    TileLevel__GetPaletteFromLevelFile((TileLevelLoad *)local_78,(string *)&local_28);
-    SMBPaletteBackgroundLoader__Load((char *)(SuperMeatBoy + 0x3b0),(int)local_28);
+    /* try { // try from 004933a6 to 004933c7 has its CatchHandler @ 004935ca */
+    TileLevel__GetPaletteFromLevelFile((TileLevelLoad *)local_78, (string *)&local_28);
+    SMBPaletteBackgroundLoader__Load((char *)(SuperMeatBoy + 0x3b0), (int)local_28);
     if ((allocator *)(local_58 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_58 + -8);
@@ -2614,7 +2598,7 @@ void __thiscall SMBChapter__ExitWarpZone(SMBChapter *self)
 
 {
   long lVar1;
-  
+
   lVar1 = *(long *)(self + 0x2e8);
   if (*(long **)(lVar1 + 0x40) != (long *)0x0) {
     (**(code **)(**(long **)(lVar1 + 0x40) + 8))();
@@ -2633,7 +2617,7 @@ void __thiscall SMBChapter__ExitWarpZone(SMBChapter *self)
  */
 /* SMBChapter__ShowLivesScreen(int) */
 
-void __thiscall SMBChapter__ShowLivesScreen(SMBChapter *self,int arg1)
+void __thiscall SMBChapter__ShowLivesScreen(SMBChapter *self, int arg1)
 
 {
   long lVar1;
@@ -2650,8 +2634,8 @@ void __thiscall SMBChapter__ShowLivesScreen(SMBChapter *self,int arg1)
   uint32_t local_50;
   uint32_t local_4c;
   uint32_t local_48;
-  char local_38 [40];
-  
+  char local_38[40];
+
   lVar2 = *(long *)(self + 0x2e8);
   if (*(long **)(lVar2 + 0x40) != (long *)0x0) {
     (**(code **)(**(long **)(lVar2 + 0x40) + 8))();
@@ -2661,9 +2645,10 @@ void __thiscall SMBChapter__ShowLivesScreen(SMBChapter *self,int arg1)
   *(uint64_t *)(lVar2 + 0x40) = 0;
   *(uint64_t *)(*(long *)(self + 0x2e8) + 0x38) = *(uint64_t *)(lVar1 + 0x108);
   if (*(long *)(*(long *)(self + 0x2e8) + 0x38) != 0) {
-    Sprint(&DAT_005c1d0a /* R:"life%i-%i" */,local_38,iCurrentLevel,3 - arg1);
+    Sprint(&DAT_005c1d0a /* R:"life%i-%i" */, local_38, iCurrentLevel, 3 - arg1);
     lVar2 = *(long *)(self + 0x2e8);
-    uVar3 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(lVar2 + 0x38),local_38);
+    uVar3 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(lVar2 + 0x38),
+                                                          local_38);
     *(uint64_t *)(lVar2 + 0x40) = uVar3;
     if (*(long *)(*(long *)(self + 0x2e8) + 0x40) != 0) {
       local_48 = 1;
@@ -2677,8 +2662,8 @@ void __thiscall SMBChapter__ShowLivesScreen(SMBChapter *self,int arg1)
       local_80 = 1;
       local_70 = SMBLivesScreenFinished;
       local_68 = self;
-      GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_88);
-      GSuperMeatBoy__Freeze(SuperMeatBoy,1);
+      GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_88);
+      GSuperMeatBoy__Freeze(SuperMeatBoy, 1);
     }
   }
   return;
@@ -2711,7 +2696,7 @@ void __thiscall SMBChapter__ShowGameOverScreen(SMBChapter *self)
   uint32_t local_30;
   uint32_t local_2c;
   uint32_t local_28;
-  
+
   lVar2 = *(long *)(self + 0x2e8);
   if (*(long **)(lVar2 + 0x40) != (long *)0x0) {
     (**(code **)(**(long **)(lVar2 + 0x40) + 8))();
@@ -2723,10 +2708,10 @@ void __thiscall SMBChapter__ShowGameOverScreen(SMBChapter *self)
     lVar2 = *(long *)(self + 0x2e8);
     this_01 = *(FlashAnimationLibrary **)(lVar2 + 0x38);
   }
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(this_01,"gameover");
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(this_01, "gameover");
   this_00 = SuperMeatBoy;
   *(uint64_t *)(lVar2 + 0x40) = uVar1;
-  GSuperMeatBoy__Freeze(this_00,1);
+  GSuperMeatBoy__Freeze(this_00, 1);
   if (*(long *)(*(long *)(self + 0x2e8) + 0x40) != 0) {
     local_28 = 1;
     local_58 = *(uint64_t *)(*(long *)(self + 0x2e8) + 0x40);
@@ -2739,8 +2724,8 @@ void __thiscall SMBChapter__ShowGameOverScreen(SMBChapter *self)
     local_40 = SMBWarpOutroSkip;
     local_30 = 1;
     local_48 = self;
-    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_68);
-    GSMBMenu__LoadChapterMenu(SMBMenu,*(uint32_t *)(self + 0x200));
+    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_68);
+    GSMBMenu__LoadChapterMenu(SMBMenu, *(uint32_t *)(self + 0x200));
     Loader__WaitAll();
     DisableLoadingRenderThread();
     return;
@@ -2777,10 +2762,10 @@ void __thiscall SMBChapter__PlayWarpOutro(SMBChapter *self)
   uint32_t local_50;
   uint32_t local_4c;
   uint32_t local_48;
-  char local_38 [16];
+  char local_38[16];
   uint32_t local_28;
   uint32_t local_24;
-  
+
   lVar3 = *(long *)(self + 0x2e8);
   if (*(long **)(lVar3 + 0x40) != (long *)0x0) {
     (**(code **)(**(long **)(lVar3 + 0x40) + 8))();
@@ -2793,21 +2778,23 @@ void __thiscall SMBChapter__PlayWarpOutro(SMBChapter *self)
   *(uint64_t *)(lVar3 + 0x40) = 0;
   iVar5 = 0;
   while (lVar3 = *(long *)(self + 0x2e8), *(long *)(lVar3 + 0x40) == 0) {
-    while( true ) {
+    while (true) {
       iVar5 = iVar5 + 1;
-      uVar1 = GetRandomINT(1,0x14);
-      Sprint("outro%i",local_38,uVar1);
+      uVar1 = GetRandomINT(1, 0x14);
+      Sprint("outro%i", local_38, uVar1);
       lVar3 = *(long *)(self + 0x2e8);
-      uVar2 = FlashAnimationLibrary__GetMovieClip__005731d0
-                        (*(FlashAnimationLibrary **)(lVar3 + 0x38),local_38);
+      uVar2 = FlashAnimationLibrary__GetMovieClip__005731d0(
+          *(FlashAnimationLibrary **)(lVar3 + 0x38), local_38);
       *(uint64_t *)(lVar3 + 0x40) = uVar2;
-      if (iVar5 != 0x14) break;
+      if (iVar5 != 0x14)
+        break;
       lVar3 = *(long *)(self + 0x2e8);
-      uVar2 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(lVar3 + 0x38),"outro")
-      ;
+      uVar2 = FlashAnimationLibrary__GetMovieClip__005731d0(
+          *(FlashAnimationLibrary **)(lVar3 + 0x38), "outro");
       *(uint64_t *)(lVar3 + 0x40) = uVar2;
       lVar3 = *(long *)(self + 0x2e8);
-      if (*(long *)(lVar3 + 0x40) != 0) goto LAB_00493960;
+      if (*(long *)(lVar3 + 0x40) != 0)
+        goto LAB_00493960;
     }
   }
 LAB_00493960:
@@ -2817,12 +2804,10 @@ LAB_00493960:
         TAudioInstance__Stop((TAudioInstance *)(self + 0x48));
         lVar3 = *(long *)(self + 0x2e8);
       }
-    }
-    else if (*(uint *)(self + 0x204) == 10) {
+    } else if (*(uint *)(self + 0x204) == 10) {
       TAudioInstance__Stop((TAudioInstance *)(self + 0x98));
       lVar3 = *(long *)(self + 0x2e8);
-    }
-    else if (*(long *)(self + 0x28) != 0) {
+    } else if (*(long *)(self + 0x28) != 0) {
       TAudioInstance__Stop((TAudioInstance *)(self + 0x70));
       lVar3 = *(long *)(self + 0x2e8);
     }
@@ -2838,53 +2823,58 @@ LAB_00493960:
   local_60 = SMBWarpOutroSkip;
   local_50 = 1;
   local_68 = self;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_88);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_88);
   if (*(int *)(*(long *)(self + 0x2e8) + 0x20) == 1) {
-    switch(*(uint32_t *)(*(long *)(self + 0x2e8) + 0x24)) {
+    switch (*(uint32_t *)(*(long *)(self + 0x2e8) + 0x24)) {
     case 0xc:
-      iVar5 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,0xb);
-      if (iVar5 != 0) goto switchD_00493a43_caseD_d;
-      GSMBChapterData__UnlockCharacter(SMBChapterData,0xb);
-      GMeatHUD__AddUnlockScreen(SMBHUD,5);
+      iVar5 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData, 0xb);
+      if (iVar5 != 0)
+        goto switchD_00493a43_caseD_d;
+      GSMBChapterData__UnlockCharacter(SMBChapterData, 0xb);
+      GMeatHUD__AddUnlockScreen(SMBHUD, 5);
       local_24 = 0x1d;
       break;
     default:
       goto switchD_00493a43_caseD_d;
     case 0x11:
-      iVar5 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,0x10);
-      if (iVar5 != 0) goto switchD_00493a43_caseD_d;
-      GSMBChapterData__UnlockCharacter(SMBChapterData,0x10);
-      GMeatHUD__AddUnlockScreen(SMBHUD,0xd);
+      iVar5 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData, 0x10);
+      if (iVar5 != 0)
+        goto switchD_00493a43_caseD_d;
+      GSMBChapterData__UnlockCharacter(SMBChapterData, 0x10);
+      GMeatHUD__AddUnlockScreen(SMBHUD, 0xd);
       local_24 = 0x20;
       break;
     case 0x13:
-      iVar5 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,0x12);
-      if (iVar5 != 0) goto switchD_00493a43_caseD_d;
-      GSMBChapterData__UnlockCharacter(SMBChapterData,0x12);
-      GMeatHUD__AddUnlockScreen(SMBHUD,0xb);
+      iVar5 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData, 0x12);
+      if (iVar5 != 0)
+        goto switchD_00493a43_caseD_d;
+      GSMBChapterData__UnlockCharacter(SMBChapterData, 0x12);
+      GMeatHUD__AddUnlockScreen(SMBHUD, 0xb);
       local_24 = 0x1e;
       break;
     case 0x17:
-      iVar5 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,0x16);
-      if (iVar5 != 0) goto switchD_00493a43_caseD_d;
-      GSMBChapterData__UnlockCharacter(SMBChapterData,0x16);
-      GMeatHUD__AddUnlockScreen(SMBHUD,0xc);
+      iVar5 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData, 0x16);
+      if (iVar5 != 0)
+        goto switchD_00493a43_caseD_d;
+      GSMBChapterData__UnlockCharacter(SMBChapterData, 0x16);
+      GMeatHUD__AddUnlockScreen(SMBHUD, 0xc);
       local_24 = 0x21;
       break;
     case 0x19:
-      iVar5 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,0x18);
-      if (iVar5 != 0) goto switchD_00493a43_caseD_d;
-      GSMBChapterData__UnlockCharacter(SMBChapterData,0x18);
-      GMeatHUD__AddUnlockScreen(SMBHUD,10);
+      iVar5 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData, 0x18);
+      if (iVar5 != 0)
+        goto switchD_00493a43_caseD_d;
+      GSMBChapterData__UnlockCharacter(SMBChapterData, 0x18);
+      GMeatHUD__AddUnlockScreen(SMBHUD, 10);
       local_24 = 0x1f;
     }
     local_28 = 1;
     pUVar4 = (UserProfile *)TPlayer__GetProfile((TPlayer *)Players__Player);
-    Achievements__AwardAchievement(pUVar4,(AchievementAward *)&local_28);
-    GSMBChapterData__SaveData(SMBChapterData,1);
+    Achievements__AwardAchievement(pUVar4, (AchievementAward *)&local_28);
+    GSMBChapterData__SaveData(SMBChapterData, 1);
   }
 switchD_00493a43_caseD_d:
-  GSMBMenu__LoadChapterMenu(SMBMenu,*(uint32_t *)(self + 0x200));
+  GSMBMenu__LoadChapterMenu(SMBMenu, *(uint32_t *)(self + 0x200));
   Loader__WaitAll();
   DisableLoadingRenderThread();
   return;
@@ -2905,34 +2895,34 @@ uint64_t __thiscall SMBChapter__LoadNextLevel(SMBChapter *self)
   int iVar1;
   long lVar2;
   uint64_t uVar3;
-  uint32_t local_b8 [2];
+  uint32_t local_b8[2];
   int *local_b0;
   uint32_t local_a8;
   uint64_t local_a0;
-  uint32_t local_98 [2];
+  uint32_t local_98[2];
   int *local_90;
   uint32_t local_88;
   uint64_t local_80;
   char *local_78;
   uchar *local_70;
-  uint local_68 [4];
-  int local_58 [2];
+  uint local_68[4];
+  int local_58[2];
   uint64_t local_50;
-  int local_48 [4];
-  int local_38 [3];
-  int local_2c [3];
-  
+  int local_48[4];
+  int local_38[3];
+  int local_2c[3];
+
   lVar2 = GetLevelInfoArray();
   if (iCurrentLevel == 99) {
     return 0;
   }
-  if ((int)(uint)*(ushort *)(lVar2 + 0x28) <= (int)iCurrentLevel) {
+  if ((int)(uint) * (ushort *)(lVar2 + 0x28) <= (int)iCurrentLevel) {
     if (1 < *(uint *)(self + 0x204)) {
       GSMBChapterData__SaveWarpzoneStats(SMBChapterData);
       PlayWarpOutro(self);
       return 0;
     }
-    ShowMenuPress((tagButtonProps *)0x0,(void *)0x0);
+    ShowMenuPress((tagButtonProps *)0x0, (void *)0x0);
     return 0;
   }
   local_b0 = local_2c;
@@ -2948,32 +2938,30 @@ uint64_t __thiscall SMBChapter__LoadNextLevel(SMBChapter *self)
   if (local_38[0] == 9) {
     iVar1 = SMBLevelPortal__IsChapterLoaded();
     if (iVar1 == 1) {
-      GSMBMenu__GetLevelDataByIndex(SMBMenu,iCurrentLevel,&local_70,local_68);
+      GSMBMenu__GetLevelDataByIndex(SMBMenu, iCurrentLevel, &local_70, local_68);
       if ((local_70 == (uchar *)0x0) || (local_68[0] == 0)) {
-        ShowMenuPress((tagButtonProps *)0x0,(void *)0x0);
+        ShowMenuPress((tagButtonProps *)0x0, (void *)0x0);
         return 0;
       }
       lVar2 = *(long *)(LoadedPortalChapter + (long)(int)iCurrentLevel * 8);
       if (lVar2 != 0) {
-        GSuperMeatBoy__DeferLoadCharactor(SuperMeatBoy,*(uint32_t *)(lVar2 + 0x14));
+        GSuperMeatBoy__DeferLoadCharactor(SuperMeatBoy, *(uint32_t *)(lVar2 + 0x14));
         local_38[0] = *(int *)(self + 0x200);
         goto LAB_00493d55;
       }
-    }
-    else {
-      SMBLevelPortal__LoadSelectedLevel(SuperMeatBoyPortal,&local_70,local_68);
+    } else {
+      SMBLevelPortal__LoadSelectedLevel(SuperMeatBoyPortal, &local_70, local_68);
     }
     local_38[0] = *(int *)(self + 0x200);
-  }
-  else {
+  } else {
     local_78 = (char *)((ulong)(iCurrentLevel & 0xffff) * 0x50 + *(long *)(lVar2 + 0x38));
   }
 LAB_00493d55:
   if (*(uint *)(self + 0x204) < 2) {
     local_48[0] = iCurrentLevel + 1;
     if ((local_38[0] == 9) ||
-       (GSMBMenu__ExtractChapterAndLevelFromSelectedLevel(SMBMenu,local_38,local_48,local_78),
-       *(int *)(self + 0x200) == 9)) {
+        (GSMBMenu__ExtractChapterAndLevelFromSelectedLevel(SMBMenu, local_38, local_48, local_78),
+         *(int *)(self + 0x200) == 9)) {
       local_38[0] = 8;
     }
     local_b8[0] = 2;
@@ -2987,12 +2975,10 @@ LAB_00493d55:
     local_a0 = TPlayer__GetProfile((TPlayer *)Players__Player);
     BroadcastString__SetBroadcastStringParam((BroadcastStringParam *)local_b8);
     local_58[0] = (-(uint)(*(int *)(self + 0x204) == 0) & 0xfffffffa) + 10;
-  }
-  else if (*(uint *)(self + 0x204) == 10) {
+  } else if (*(uint *)(self + 0x204) == 10) {
     if (local_38[0] == 9) {
       local_38[0] = 8;
-    }
-    else if (local_38[0] == 8) {
+    } else if (local_38[0] == 8) {
       local_38[0] = 1;
     }
     local_90 = local_38;
@@ -3001,12 +2987,10 @@ LAB_00493d55:
     local_80 = TPlayer__GetProfile((TPlayer *)Players__Player);
     BroadcastString__SetBroadcastStringParam((BroadcastStringParam *)local_98);
     local_58[0] = 6;
-  }
-  else {
+  } else {
     if (local_38[0] == 9) {
       local_38[0] = 8;
-    }
-    else if (local_38[0] == 8) {
+    } else if (local_38[0] == 8) {
       local_38[0] = 1;
     }
     local_90 = local_38;
@@ -3018,9 +3002,9 @@ LAB_00493d55:
   }
   local_50 = TPlayer__GetProfile((TPlayer *)Players__Player);
   BroadcastString__SetBroadcastString((BroadcastStringCreate *)local_58);
-  uVar3 = SMBEditor__LoadLevel(SuperMeatBoyEditor,(TileLevelLoad *)&local_78);
-  GSMBChapterData__SetCurrentLevel(SMBChapterData,iCurrentLevel);
-  GSMBMenu__SetSelectedLevel(SMBMenu,iCurrentLevel,1);
+  uVar3 = SMBEditor__LoadLevel(SuperMeatBoyEditor, (TileLevelLoad *)&local_78);
+  GSMBChapterData__SetCurrentLevel(SMBChapterData, iCurrentLevel);
+  GSMBMenu__SetSelectedLevel(SMBMenu, iCurrentLevel, 1);
   iVar1 = SMBLevelPortal__ReleaseLoadedLevelData();
   if (iVar1 != 1) {
     iCurrentLevel = iCurrentLevel + 1;
@@ -3037,12 +3021,12 @@ LAB_00493d55:
  */
 /* SMBChapter__GetLevelInfo(int, tagChapterLevelType, int) */
 
-long __thiscall SMBChapter__GetLevelInfo(SMBChapter *self,ulong arg2,uint arg3,int arg4)
+long __thiscall SMBChapter__GetLevelInfo(SMBChapter *self, ulong arg2, uint arg3, int arg4)
 
 {
   uint uVar1;
   long lVar2;
-  
+
   if ((int)arg2 == -1) {
     uVar1 = iCurrentLevel - 1U;
     if (iCurrentLevel - 1U == 0xffffffff) {
@@ -3061,8 +3045,8 @@ long __thiscall SMBChapter__GetLevelInfo(SMBChapter *self,ulong arg2,uint arg3,i
     arg3 = *(uint *)(self + 0x204);
   }
   if (arg3 < 10) {
-                    /* WARNING: Could not recover jumptable at 0x004940ca. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+    /* WARNING: Could not recover jumptable at 0x004940ca. Too many branches */
+    /* WARNING: Treating indirect jump as call */
     lVar2 = (**(code **)(&DAT_005c1af0 /* R:6.727199524699506e-39f */ + (ulong)arg3 * 8))();
     return lVar2;
   }
@@ -3078,7 +3062,7 @@ long __thiscall SMBChapter__GetLevelInfo(SMBChapter *self,ulong arg2,uint arg3,i
  */
 /* SMBChapter__PlayChapterIntro(void (*)(void*, int, int)) */
 
-void __thiscall SMBChapter__PlayChapterIntro(SMBChapter *self,_func_void_void_ptr_int_int *arg1)
+void __thiscall SMBChapter__PlayChapterIntro(SMBChapter *self, _func_void_void_ptr_int_int *arg1)
 
 {
   char *pcVar1;
@@ -3095,7 +3079,7 @@ void __thiscall SMBChapter__PlayChapterIntro(SMBChapter *self,_func_void_void_pt
   uint32_t local_40;
   uint32_t local_3c;
   uint32_t local_38;
-  
+
   pFVar2 = *(FlashAnimationLibrary **)(self + 0x2a0);
   if (pFVar2 != (FlashAnimationLibrary *)0x0) {
     FlashAnimationLibrary__FlashAnimationLibrary(pFVar2);
@@ -3108,10 +3092,10 @@ void __thiscall SMBChapter__PlayChapterIntro(SMBChapter *self,_func_void_void_pt
   pcVar1 = *(char **)(self + 0x298);
   *(uint64_t *)(self + 0x2a8) = 0;
   pFVar2 = operator_new(0xb0);
-                    /* try { // try from 0049429c to 004942a0 has its CatchHandler @ 00494331 */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar2,pcVar1);
+  /* try { // try from 0049429c to 004942a0 has its CatchHandler @ 00494331 */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar2, pcVar1);
   *(FlashAnimationLibrary **)(self + 0x2a0) = pFVar2;
-  local_68 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar2,0);
+  local_68 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar2, 0);
   this_00 = SMBCutSceneManager;
   *(uint64_t *)(self + 0x2a8) = local_68;
   local_48 = 0;
@@ -3124,7 +3108,7 @@ void __thiscall SMBChapter__PlayChapterIntro(SMBChapter *self,_func_void_void_pt
   local_3c = 0;
   local_60 = arg1;
   local_58 = self;
-  GSMBCutSceneManager__PlayCutScene(this_00,(SMBCutScene *)&local_78);
+  GSMBCutSceneManager__PlayCutScene(this_00, (SMBCutScene *)&local_78);
   return;
 }
 
@@ -3144,7 +3128,7 @@ void __thiscall SMBChapter__DestroyChapterIntro(SMBChapter *self)
     (**(code **)(**(long **)(self + 0x2a8) + 8))();
   }
   *(uint64_t *)(self + 0x2a8) = 0;
-  TAudio__DestroyManagedInstances(Audio,0);
+  TAudio__DestroyManagedInstances(Audio, 0);
   return;
 }
 
@@ -3157,8 +3141,7 @@ void __thiscall SMBChapter__DestroyChapterIntro(SMBChapter *self)
  */
 /* SMBChapter__PlayChapterIntroEnd(void (*)(void*, int, int)) */
 
-void __thiscall
-SMBChapter__PlayChapterIntroEnd(SMBChapter *self,_func_void_void_ptr_int_int *arg1)
+void __thiscall SMBChapter__PlayChapterIntroEnd(SMBChapter *self, _func_void_void_ptr_int_int *arg1)
 
 {
   char *pcVar1;
@@ -3175,16 +3158,16 @@ SMBChapter__PlayChapterIntroEnd(SMBChapter *self,_func_void_void_ptr_int_int *ar
   uint32_t local_40;
   uint32_t local_3c;
   uint32_t local_38;
-  
+
   this_01 = *(FlashAnimationLibrary **)(self + 0x2a0);
   if (this_01 == (FlashAnimationLibrary *)0x0) {
     pcVar1 = *(char **)(self + 0x298);
     this_01 = operator_new(0xb0);
-                    /* try { // try from 0049445a to 0049445e has its CatchHandler @ 0049446b */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_01,pcVar1);
+    /* try { // try from 0049445a to 0049445e has its CatchHandler @ 0049446b */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_01, pcVar1);
     *(FlashAnimationLibrary **)(self + 0x2a0) = this_01;
   }
-  local_68 = FlashAnimationLibrary__GetMovieClip__005731d0(this_01,1);
+  local_68 = FlashAnimationLibrary__GetMovieClip__005731d0(this_01, 1);
   this_00 = SMBCutSceneManager;
   *(uint64_t *)(self + 0x2a8) = local_68;
   local_50 = 0;
@@ -3197,7 +3180,7 @@ SMBChapter__PlayChapterIntroEnd(SMBChapter *self,_func_void_void_ptr_int_int *ar
   local_38 = 0;
   local_60 = arg1;
   local_58 = self;
-  GSMBCutSceneManager__PlayCutScene(this_00,(SMBCutScene *)&local_78);
+  GSMBCutSceneManager__PlayCutScene(this_00, (SMBCutScene *)&local_78);
   return;
 }
 
@@ -3214,7 +3197,7 @@ void __thiscall SMBChapter__DestroyChapterIntroEnd(SMBChapter *self)
 
 {
   FlashAnimationLibrary *this_00;
-  
+
   if (*(long **)(self + 0x2a8) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0x2a8) + 8))();
   }
@@ -3242,12 +3225,12 @@ void SMBChapter__ThreadLoadBossIntro(void)
 {
   int in_ESI;
   _func_void_void_ptr_int_int *in_RDI;
-  
+
   if (*(int *)(in_RDI + 0x200) - 7U < 3) {
     return;
   }
   SyncEvent__Reset((SyncEvent *)bossIntroEvent);
-  PlayBossIntro(in_RDI,in_ESI);
+  PlayBossIntro(in_RDI, in_ESI);
   SyncEvent__Set((SyncEvent *)bossIntroEvent);
   hBossIntroThread = 0;
   return;
@@ -3262,8 +3245,8 @@ void SMBChapter__ThreadLoadBossIntro(void)
  */
 /* SMBChapter__PlayBossIntro(void (*)(void*, int, int), int) */
 
-void __thiscall
-SMBChapter__PlayBossIntro(SMBChapter *self,_func_void_void_ptr_int_int *arg1,int arg2)
+void __thiscall SMBChapter__PlayBossIntro(SMBChapter *self, _func_void_void_ptr_int_int *arg1,
+                                          int arg2)
 
 {
   char *pcVar1;
@@ -3281,7 +3264,7 @@ SMBChapter__PlayBossIntro(SMBChapter *self,_func_void_void_ptr_int_int *arg1,int
   uint32_t local_30;
   uint32_t local_2c;
   uint32_t local_28;
-  
+
   if (arg2 != 1) {
     SyncEvent__Wait((SyncEvent *)bossIntroEvent);
     CloseThread(hBossIntroThread);
@@ -3297,7 +3280,7 @@ SMBChapter__PlayBossIntro(SMBChapter *self,_func_void_void_ptr_int_int *arg1,int
     local_30 = 1;
     local_50 = arg1;
     local_48 = self;
-    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_68);
+    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_68);
     if (*(int *)(self + 0x2e0) == 0) {
       TAudioInstance__Stop((TAudioInstance *)(self + 0xc0));
       TAudioInstance__Stop((TAudioInstance *)(self + 0xe8));
@@ -3312,8 +3295,8 @@ SMBChapter__PlayBossIntro(SMBChapter *self,_func_void_void_ptr_int_int *arg1,int
       }
     }
     CreateSMBBoss(0xffffffff);
-    GSuperMeatBoy__DeferLoadCharactor(SuperMeatBoy,0);
-    GSuperMeatBoy__LoadDeferredCharactor(SuperMeatBoy,1);
+    GSuperMeatBoy__DeferLoadCharactor(SuperMeatBoy, 0);
+    GSuperMeatBoy__LoadDeferredCharactor(SuperMeatBoy, 1);
     Loader__WaitAll();
     DisableLoadingRenderThread();
     return;
@@ -3330,10 +3313,10 @@ SMBChapter__PlayBossIntro(SMBChapter *self,_func_void_void_ptr_int_int *arg1,int
   pcVar1 = *(char **)(self + 0x2b0);
   *(uint64_t *)(self + 0x2b8) = 0;
   pFVar3 = operator_new(0xb0);
-                    /* try { // try from 004946ee to 004946f2 has its CatchHandler @ 00494735 */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar3,pcVar1);
+  /* try { // try from 004946ee to 004946f2 has its CatchHandler @ 00494735 */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar3, pcVar1);
   *(FlashAnimationLibrary **)(self + 0x2b8) = pFVar3;
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar3,0);
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar3, 0);
   *(uint64_t *)(self + 0x2c0) = uVar4;
   return;
 }
@@ -3351,7 +3334,7 @@ void __thiscall SMBChapter__DestroyBossIntro(SMBChapter *self)
 
 {
   FlashAnimationLibrary *this_00;
-  
+
   if (hBossIntroThread != (THREADHANDLESTRUCT *)0x0) {
     SyncEvent__Wait((SyncEvent *)bossIntroEvent);
     CloseThread(hBossIntroThread);
@@ -3384,9 +3367,9 @@ void SMBChapter__ThreadLoadBossOutro(void)
 {
   int in_ESI;
   _func_void_void_ptr_int_int *in_RDI;
-  
+
   SyncEvent__Reset((SyncEvent *)bossOutroEvent);
-  PlayBossOutro(in_RDI,in_ESI);
+  PlayBossOutro(in_RDI, in_ESI);
   SyncEvent__Set((SyncEvent *)bossOutroEvent);
   hBossOutroThread = 0;
   return;
@@ -3401,8 +3384,8 @@ void SMBChapter__ThreadLoadBossOutro(void)
  */
 /* SMBChapter__PlayBossOutro(void (*)(void*, int, int), int) */
 
-void __thiscall
-SMBChapter__PlayBossOutro(SMBChapter *self,_func_void_void_ptr_int_int *arg1,int arg2)
+void __thiscall SMBChapter__PlayBossOutro(SMBChapter *self, _func_void_void_ptr_int_int *arg1,
+                                          int arg2)
 
 {
   char *pcVar1;
@@ -3420,7 +3403,7 @@ SMBChapter__PlayBossOutro(SMBChapter *self,_func_void_void_ptr_int_int *arg1,int
   uint32_t local_30;
   uint32_t local_2c;
   uint32_t local_28;
-  
+
   if (arg2 != 1) {
     SyncEvent__Wait((SyncEvent *)bossOutroEvent);
     CloseThread(hBossOutroThread);
@@ -3441,24 +3424,22 @@ SMBChapter__PlayBossOutro(SMBChapter *self,_func_void_void_ptr_int_int *arg1,int
         if (*(long *)(self + 0x18) != 0) {
           TAudioInstance__Stop((TAudioInstance *)(self + 0x48));
         }
-      }
-      else if (*(uint *)(self + 0x204) == 10) {
+      } else if (*(uint *)(self + 0x204) == 10) {
         TAudioInstance__Stop((TAudioInstance *)(self + 0x98));
-      }
-      else if (*(long *)(self + 0x28) != 0) {
+      } else if (*(long *)(self + 0x28) != 0) {
         TAudioInstance__Stop((TAudioInstance *)(self + 0x70));
       }
     }
     this_00 = SuperMeatBoy;
     *(uint32_t *)(self + 0x204) = 10;
-    GSuperMeatBoy__Freeze(this_00,1);
-    GSuperMeatBoy__SetCurrentLevel(SuperMeatBoy,(TileLevel *)0x0);
-    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_68);
-    GSMBMenu__LoadChapterMenu(SMBMenu,*(uint32_t *)(self + 0x200));
+    GSuperMeatBoy__Freeze(this_00, 1);
+    GSuperMeatBoy__SetCurrentLevel(SuperMeatBoy, (TileLevel *)0x0);
+    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_68);
+    GSMBMenu__LoadChapterMenu(SMBMenu, *(uint32_t *)(self + 0x200));
     GSMBMenu__LoadChapterEnd(SMBMenu);
     if (*(int *)(self + 0x200) == 6) {
-      GSuperMeatBoy__DeferLoadCharactor(SuperMeatBoy,0x1a);
-      GSuperMeatBoy__LoadDeferredCharactor(SuperMeatBoy,1);
+      GSuperMeatBoy__DeferLoadCharactor(SuperMeatBoy, 0x1a);
+      GSuperMeatBoy__LoadDeferredCharactor(SuperMeatBoy, 1);
     }
     Loader__WaitAll();
     DisableLoadingRenderThread();
@@ -3476,10 +3457,10 @@ SMBChapter__PlayBossOutro(SMBChapter *self,_func_void_void_ptr_int_int *arg1,int
   pcVar1 = *(char **)(self + 0x2c8);
   *(uint64_t *)(self + 0x2d0) = 0;
   pFVar2 = operator_new(0xb0);
-                    /* try { // try from 004949ce to 004949d2 has its CatchHandler @ 00494a51 */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar2,pcVar1);
+  /* try { // try from 004949ce to 004949d2 has its CatchHandler @ 00494a51 */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar2, pcVar1);
   *(FlashAnimationLibrary **)(self + 0x2d0) = pFVar2;
-  uVar3 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar2,0);
+  uVar3 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar2, 0);
   *(uint64_t *)(self + 0x2d8) = uVar3;
   return;
 }
@@ -3493,11 +3474,11 @@ SMBChapter__PlayBossOutro(SMBChapter *self,_func_void_void_ptr_int_int *arg1,int
  */
 /* SMBChapter__DestroyBossOutro(int) */
 
-void __thiscall SMBChapter__DestroyBossOutro(SMBChapter *self,int arg1)
+void __thiscall SMBChapter__DestroyBossOutro(SMBChapter *self, int arg1)
 
 {
   FlashAnimationLibrary *this_00;
-  
+
   if (hBossOutroThread != (THREADHANDLESTRUCT *)0x0) {
     SyncEvent__Wait((SyncEvent *)bossOutroEvent);
     CloseThread(hBossOutroThread);
@@ -3553,7 +3534,7 @@ bool __thiscall SMBChapter__IsNextLevelUnlocked(SMBChapter *self)
   long lVar4;
   bool bVar5;
   int iVar6;
-  
+
   pGVar1 = SMBChapterData;
   bVar5 = true;
   if (*(short *)(self + 0x14) != 1) {
@@ -3561,8 +3542,8 @@ bool __thiscall SMBChapter__IsNextLevelUnlocked(SMBChapter *self)
     bVar5 = false;
     iVar6 = *(int *)(pGVar1 + 0x1ce8) + 1;
     if ((iVar6 < iVar2) && (bVar5 = true, *(int *)(self + 0x204) != 0)) {
-      pfVar3 = (float *)GSMBChapterData__GetCurrentLevelData(pGVar1,iVar6,0);
-      lVar4 = GetLevelInfo(self,iVar6,0);
+      pfVar3 = (float *)GSMBChapterData__GetCurrentLevelData(pGVar1, iVar6, 0);
+      lVar4 = GetLevelInfo(self, iVar6, 0);
       bVar5 = *pfVar3 <= *(float *)(lVar4 + 0x40) && *(float *)(lVar4 + 0x40) != *pfVar3;
     }
   }
@@ -3578,8 +3559,7 @@ bool __thiscall SMBChapter__IsNextLevelUnlocked(SMBChapter *self)
  */
 /* SMBChapter__VerifyChapterFileData(unsigned char*, unsigned int) */
 
-uint64_t __thiscall
-SMBChapter__VerifyChapterFileData(SMBChapter *self,uchar *arg1,uint arg2)
+uint64_t __thiscall SMBChapter__VerifyChapterFileData(SMBChapter *self, uchar *arg1, uint arg2)
 
 {
   int iVar1;
@@ -3588,62 +3568,65 @@ SMBChapter__VerifyChapterFileData(SMBChapter *self,uchar *arg1,uint arg2)
   int iVar4;
   int iVar5;
   uint64_t uVar6;
-  PropertiesFile aPStack_188 [80];
-  LevelInfo local_138 [64];
+  PropertiesFile aPStack_188[80];
+  LevelInfo local_138[64];
   uint32_t local_f8;
   uint32_t local_f4;
   uint32_t local_f0;
   uint32_t local_ec;
-  PropertyBlock *local_e8 [2];
-  PropertyVariable *local_d8 [2];
-  PropertyVariable *local_c8 [2];
-  PropertyVariable *local_b8 [2];
-  PropertyVariable *local_a8 [2];
-  PropertyVariable *local_98 [2];
-  PropertyVariable *local_88 [2];
-  PropertyVariable *local_78 [2];
-  PropertyVariable *local_68 [2];
-  PropertyVariable *local_58 [2];
-  PropertyVariable *local_48 [2];
-  PropertyBlock *local_38 [2];
-  
-  PropertiesFile__PropertiesFile__005975b0(aPStack_188,(char *)arg1,arg2);
-                    /* try { // try from 00494ef9 to 00495176 has its CatchHandler @ 0049523d */
-  PropertiesFile__FindPropertyBlock(aPStack_188,local_e8,"chapter",0);
+  PropertyBlock *local_e8[2];
+  PropertyVariable *local_d8[2];
+  PropertyVariable *local_c8[2];
+  PropertyVariable *local_b8[2];
+  PropertyVariable *local_a8[2];
+  PropertyVariable *local_98[2];
+  PropertyVariable *local_88[2];
+  PropertyVariable *local_78[2];
+  PropertyVariable *local_68[2];
+  PropertyVariable *local_58[2];
+  PropertyVariable *local_48[2];
+  PropertyBlock *local_38[2];
+
+  PropertiesFile__PropertiesFile__005975b0(aPStack_188, (char *)arg1, arg2);
+  /* try { // try from 00494ef9 to 00495176 has its CatchHandler @ 0049523d */
+  PropertiesFile__FindPropertyBlock(aPStack_188, local_e8, "chapter", 0);
   if (local_e8[0] != (PropertyBlock *)0x0) {
-    PropertiesFile__FindPropertyVariable(aPStack_188,local_d8,local_e8[0],"music");
-    PropertiesFile__FindPropertyVariable(aPStack_188,local_48,local_e8[0],"altmusic");
-    PropertiesFile__FindPropertyVariable(aPStack_188,local_b8,local_e8[0],"warptrans");
-    PropertiesFile__FindPropertyVariable(aPStack_188,local_c8,local_e8[0],"warpmusic");
-    PropertiesFile__FindPropertyVariable(aPStack_188,local_a8,local_e8[0],"menunormalmusic");
-    PropertiesFile__FindPropertyVariable(aPStack_188,local_98,local_e8[0],"menuretromusic");
-    PropertiesFile__FindPropertyVariable(aPStack_188,local_88,local_e8[0],"intro");
-    PropertiesFile__FindPropertyVariable(aPStack_188,local_78,local_e8[0],"bossmusic");
-    PropertiesFile__FindPropertyVariable(aPStack_188,local_68,local_e8[0],"bossintro");
-    PropertiesFile__FindPropertyVariable(aPStack_188,local_58,local_e8[0],"bossoutro");
+    PropertiesFile__FindPropertyVariable(aPStack_188, local_d8, local_e8[0], "music");
+    PropertiesFile__FindPropertyVariable(aPStack_188, local_48, local_e8[0], "altmusic");
+    PropertiesFile__FindPropertyVariable(aPStack_188, local_b8, local_e8[0], "warptrans");
+    PropertiesFile__FindPropertyVariable(aPStack_188, local_c8, local_e8[0], "warpmusic");
+    PropertiesFile__FindPropertyVariable(aPStack_188, local_a8, local_e8[0], "menunormalmusic");
+    PropertiesFile__FindPropertyVariable(aPStack_188, local_98, local_e8[0], "menuretromusic");
+    PropertiesFile__FindPropertyVariable(aPStack_188, local_88, local_e8[0], "intro");
+    PropertiesFile__FindPropertyVariable(aPStack_188, local_78, local_e8[0], "bossmusic");
+    PropertiesFile__FindPropertyVariable(aPStack_188, local_68, local_e8[0], "bossintro");
+    PropertiesFile__FindPropertyVariable(aPStack_188, local_58, local_e8[0], "bossoutro");
     if ((((((local_d8[0] != (PropertyVariable *)0x0) && (local_48[0] != (PropertyVariable *)0x0)) &&
-          (local_b8[0] != (PropertyVariable *)0x0)) &&
-         ((local_c8[0] != (PropertyVariable *)0x0 && (local_a8[0] != (PropertyVariable *)0x0)))) &&
-        ((local_98[0] != (PropertyVariable *)0x0 &&
-         ((local_88[0] != (PropertyVariable *)0x0 && (local_78[0] != (PropertyVariable *)0x0))))))
-       && ((local_68[0] != (PropertyVariable *)0x0 && (local_58[0] != (PropertyVariable *)0x0)))) {
-      iVar1 = PropertiesFile__GetNumPropertyBlocksByName(aPStack_188,"normlevel");
-      iVar2 = PropertiesFile__GetNumPropertyBlocksByName(aPStack_188,"altlevel");
-      PropertiesFile__GetNumPropertyBlocksByName(aPStack_188,"warp");
+           (local_b8[0] != (PropertyVariable *)0x0)) &&
+          ((local_c8[0] != (PropertyVariable *)0x0 && (local_a8[0] != (PropertyVariable *)0x0)))) &&
+         ((local_98[0] != (PropertyVariable *)0x0 &&
+           ((local_88[0] != (PropertyVariable *)0x0 &&
+             (local_78[0] != (PropertyVariable *)0x0)))))) &&
+        ((local_68[0] != (PropertyVariable *)0x0 && (local_58[0] != (PropertyVariable *)0x0)))) {
+      iVar1 = PropertiesFile__GetNumPropertyBlocksByName(aPStack_188, "normlevel");
+      iVar2 = PropertiesFile__GetNumPropertyBlocksByName(aPStack_188, "altlevel");
+      PropertiesFile__GetNumPropertyBlocksByName(aPStack_188, "warp");
       if (iVar1 != 0) {
         local_38[0] = (PropertyBlock *)0x0;
         if (0 < iVar1) {
           iVar5 = 0;
           iVar4 = 0;
           do {
-            iVar4 = PropertiesFile__FindPropertyBlock(aPStack_188,local_38,"normlevel",iVar4);
-            if (local_38[0] == (PropertyBlock *)0x0) goto LAB_00495190;
+            iVar4 = PropertiesFile__FindPropertyBlock(aPStack_188, local_38, "normlevel", iVar4);
+            if (local_38[0] == (PropertyBlock *)0x0)
+              goto LAB_00495190;
             local_f8 = 0;
             local_f4 = 0xffffffff;
             local_f0 = 0xffffffff;
             local_ec = 0;
-            iVar3 = LoadLevelDataFromBlock(local_38[0],local_138,aPStack_188);
-            if (iVar3 == 0) goto LAB_00495190;
+            iVar3 = LoadLevelDataFromBlock(local_38[0], local_138, aPStack_188);
+            if (iVar3 == 0)
+              goto LAB_00495190;
             iVar5 = iVar5 + 1;
           } while (iVar5 != iVar1);
         }
@@ -3651,15 +3634,17 @@ SMBChapter__VerifyChapterFileData(SMBChapter *self,uchar *arg1,uint arg2)
           iVar4 = 0;
           iVar1 = 0;
           do {
-            iVar1 = PropertiesFile__FindPropertyBlock(aPStack_188,local_38,"altlevel",iVar1);
-            if (local_38[0] == (PropertyBlock *)0x0) goto LAB_00495190;
+            iVar1 = PropertiesFile__FindPropertyBlock(aPStack_188, local_38, "altlevel", iVar1);
+            if (local_38[0] == (PropertyBlock *)0x0)
+              goto LAB_00495190;
             local_f8 = 0;
             local_f4 = 0xffffffff;
             local_f0 = 0xffffffff;
             local_ec = 0;
-                    /* try { // try from 004951fc to 0049521e has its CatchHandler @ 0049523d */
-            iVar5 = LoadLevelDataFromBlock(local_38[0],local_138,aPStack_188);
-            if (iVar5 == 0) goto LAB_00495190;
+            /* try { // try from 004951fc to 0049521e has its CatchHandler @ 0049523d */
+            iVar5 = LoadLevelDataFromBlock(local_38[0], local_138, aPStack_188);
+            if (iVar5 == 0)
+              goto LAB_00495190;
             iVar4 = iVar4 + 1;
           } while (iVar4 != iVar2);
         }
@@ -3696,8 +3681,8 @@ void __thiscall SMBChapter__SMBChapter(SMBChapter *self)
   int *piVar2;
   int iVar3;
   GSMBChapterData *pGVar4;
-  
-                    /* try { // try from 00495269 to 00495281 has its CatchHandler @ 0049565c */
+
+  /* try { // try from 00495269 to 00495281 has its CatchHandler @ 0049565c */
   UnloadChapter(self);
   pGVar4 = SMBChapterData;
   if (SMBChapterData != (GSMBChapterData *)0x0) {
@@ -3771,7 +3756,7 @@ void __thiscall SMBChapter__SMBChapter(SMBChapter *self)
     *(uint64_t *)(self + 0x1e8) = 0;
     *(uint64_t *)(self + 0x1f0) = 0;
   }
-                    /* try { // try from 00495319 to 0049531d has its CatchHandler @ 00495631 */
+  /* try { // try from 00495319 to 0049531d has its CatchHandler @ 00495631 */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x1b0));
   if (*(int *)(self + 0x1a8) == -0x5eef3582) {
     *(uint32_t *)(self + 0x1a8) = 0;
@@ -3785,7 +3770,7 @@ void __thiscall SMBChapter__SMBChapter(SMBChapter *self)
     *(uint64_t *)(self + 0x198) = 0;
     *(uint64_t *)(self + 0x1a0) = 0;
   }
-                    /* try { // try from 00495335 to 00495339 has its CatchHandler @ 004956b1 */
+  /* try { // try from 00495335 to 00495339 has its CatchHandler @ 004956b1 */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x160));
   if (*(int *)(self + 0x158) == -0x5eef3582) {
     *(uint32_t *)(self + 0x158) = 0;
@@ -3799,15 +3784,15 @@ void __thiscall SMBChapter__SMBChapter(SMBChapter *self)
     *(uint64_t *)(self + 0x148) = 0;
     *(uint64_t *)(self + 0x150) = 0;
   }
-                    /* try { // try from 00495351 to 00495355 has its CatchHandler @ 00495603 */
+  /* try { // try from 00495351 to 00495355 has its CatchHandler @ 00495603 */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x110));
-                    /* try { // try from 0049535d to 00495361 has its CatchHandler @ 004956c4 */
+  /* try { // try from 0049535d to 00495361 has its CatchHandler @ 004956c4 */
   TAudioInstance__TAudioInstance__0057a200((TAudioInstance *)(self + 0xe8));
-                    /* try { // try from 00495369 to 0049536d has its CatchHandler @ 0049562c */
+  /* try { // try from 00495369 to 0049536d has its CatchHandler @ 0049562c */
   TAudioInstance__TAudioInstance__0057a200((TAudioInstance *)(self + 0xc0));
-                    /* try { // try from 00495375 to 00495379 has its CatchHandler @ 004955e6 */
+  /* try { // try from 00495375 to 00495379 has its CatchHandler @ 004955e6 */
   TAudioInstance__TAudioInstance__0057a200((TAudioInstance *)(self + 0x98));
-                    /* try { // try from 0049537e to 00495382 has its CatchHandler @ 004956a9 */
+  /* try { // try from 0049537e to 00495382 has its CatchHandler @ 004956a9 */
   TAudioInstance__TAudioInstance__0057a200((TAudioInstance *)(self + 0x70));
   TAudioInstance__TAudioInstance__0057a200((TAudioInstance *)(self + 0x48));
   return;
@@ -3826,7 +3811,7 @@ void __thiscall SMBChapter__SMBChapter__00495700(SMBChapter *self)
 
 {
   GSMBChapterData *this_00;
-  
+
   *(uint32_t *)self = 0;
   *(uint16_t *)(self + 0x14) = 0;
   *(uint16_t *)(self + 0x16) = 0;
@@ -3837,15 +3822,15 @@ void __thiscall SMBChapter__SMBChapter__00495700(SMBChapter *self)
   *(uint64_t *)(self + 0x38) = 0;
   *(uint64_t *)(self + 0x40) = 0;
   TAudioInstance__TAudioInstance((TAudioInstance *)(self + 0x48));
-                    /* try { // try from 00495784 to 00495788 has its CatchHandler @ 004959dc */
+  /* try { // try from 00495784 to 00495788 has its CatchHandler @ 004959dc */
   TAudioInstance__TAudioInstance((TAudioInstance *)(self + 0x70));
-                    /* try { // try from 00495798 to 0049579c has its CatchHandler @ 00495aa9 */
+  /* try { // try from 00495798 to 0049579c has its CatchHandler @ 00495aa9 */
   TAudioInstance__TAudioInstance((TAudioInstance *)(self + 0x98));
-                    /* try { // try from 004957ac to 004957b0 has its CatchHandler @ 00495aa4 */
+  /* try { // try from 004957ac to 004957b0 has its CatchHandler @ 00495aa4 */
   TAudioInstance__TAudioInstance((TAudioInstance *)(self + 0xc0));
-                    /* try { // try from 004957bb to 004957bf has its CatchHandler @ 00495a9f */
+  /* try { // try from 004957bb to 004957bf has its CatchHandler @ 00495a9f */
   TAudioInstance__TAudioInstance((TAudioInstance *)(self + 0xe8));
-                    /* try { // try from 004957ca to 004957ce has its CatchHandler @ 00495a9a */
+  /* try { // try from 004957ca to 004957ce has its CatchHandler @ 00495a9a */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x110));
   *(uint16_t *)(self + 0x13a) = 0;
   *(uint16_t *)(self + 0x138) = 0;
@@ -3855,7 +3840,7 @@ void __thiscall SMBChapter__SMBChapter__00495700(SMBChapter *self)
   *(uint32_t *)(self + 0x158) = 0;
   self[0x13c] = (SMBChapter)0x4;
   *(uint32_t *)(self + 0x140) = 0;
-                    /* try { // try from 00495825 to 00495829 has its CatchHandler @ 00495a95 */
+  /* try { // try from 00495825 to 00495829 has its CatchHandler @ 00495a95 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x160));
   *(uint16_t *)(self + 0x18a) = 0;
   *(uint16_t *)(self + 0x188) = 0;
@@ -3865,7 +3850,7 @@ void __thiscall SMBChapter__SMBChapter__00495700(SMBChapter *self)
   *(uint32_t *)(self + 0x1a8) = 0;
   self[0x18c] = (SMBChapter)0x4;
   *(uint32_t *)(self + 400) = 0;
-                    /* try { // try from 00495880 to 00495884 has its CatchHandler @ 00495a90 */
+  /* try { // try from 00495880 to 00495884 has its CatchHandler @ 00495a90 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x1b0));
   *(uint16_t *)(self + 0x1da) = 0;
   *(uint16_t *)(self + 0x1d8) = 0;
@@ -3895,9 +3880,9 @@ void __thiscall SMBChapter__SMBChapter__00495700(SMBChapter *self)
   *(uint16_t *)(self + 0x2e4) = 0;
   *(uint16_t *)(self + 0x2e6) = 0;
   *(uint32_t *)(self + 0x2f0) = 0xffffffff;
-                    /* try { // try from 004959a9 to 004959ad has its CatchHandler @ 00495a88 */
+  /* try { // try from 004959a9 to 004959ad has its CatchHandler @ 00495a88 */
   this_00 = operator_new(0x1f18);
-                    /* try { // try from 004959b4 to 004959b8 has its CatchHandler @ 004959f1 */
+  /* try { // try from 004959b4 to 004959b8 has its CatchHandler @ 004959f1 */
   GSMBChapterData__GSMBChapterData(this_00);
   return;
 }

@@ -55,8 +55,8 @@ void __thiscall FlashTimeline__FlashTimeline__00574b00(FlashTimeline *self)
  */
 /* FlashTimeline__GetBounds(float, Vector2&, Vector2&) */
 
-void __thiscall
-FlashTimeline__GetBounds(FlashTimeline *self,float arg1,Vector2 *arg2,Vector2 *arg3)
+void __thiscall FlashTimeline__GetBounds(FlashTimeline *self, float arg1, Vector2 *arg2,
+                                         Vector2 *arg3)
 
 {
   bool bVar1;
@@ -72,12 +72,14 @@ FlashTimeline__GetBounds(FlashTimeline *self,float arg1,Vector2 *arg2,Vector2 *a
   float fVar10;
   float local_5c;
   long local_48;
-  
+
   if ((*(int *)self == 1) && (fVar9 = *(float *)(self + 8), fVar9 <= arg1)) {
     fVar8 = arg1 / fVar9;
     fVar10 = fVar8;
-    if ((float)((uint)fVar8 & DAT_005be880 /* R:u32=2147483647 */) < DAT_005dbd0c /* R:8388608.0f */) {
-      fVar10 = (float)(int)fVar8 - (float)(DAT_005be894 /* R:1.0f */ & -(uint)(fVar8 < (float)(int)fVar8));
+    if ((float)((uint)fVar8 & DAT_005be880 /* R:u32=2147483647 */) <
+        DAT_005dbd0c /* R:8388608.0f */) {
+      fVar10 = (float)(int)fVar8 -
+               (float)(DAT_005be894 /* R:1.0f */ & -(uint)(fVar8 < (float)(int)fVar8));
     }
     arg1 = (fVar8 - fVar10) * fVar9;
   }
@@ -106,7 +108,7 @@ FlashTimeline__GetBounds(FlashTimeline *self,float arg1,Vector2 *arg2,Vector2 *a
                 iVar6 = iVar6 + 1;
                 this_00 = (FlashLibraryInstance *)(*(long *)(pfVar5 + 8) + lVar7);
                 lVar7 = lVar7 + 0xa0;
-                FlashLibraryInstance__GetBounds(this_00,arg1,arg2,arg3,local_5c);
+                FlashLibraryInstance__GetBounds(this_00, arg1, arg2, arg3, local_5c);
               } while (iVar6 < (int)pfVar5[6]);
               iVar6 = *(int *)(self + 0x14);
             }
@@ -132,9 +134,9 @@ FlashTimeline__GetBounds(FlashTimeline *self,float arg1,Vector2 *arg2,Vector2 *a
  */
 /* FlashTimeline__IsEntryTouchingBounds(float, Bounds const*, tagInstanceBoundsType, Matrix4x4*) */
 
-uint64_t __thiscall
-FlashTimeline__IsEntryTouchingBounds
-          (float arg1,FlashTimeline *self,Bounds *arg2,uint64_t arg4,Matrix4x4 *arg5)
+uint64_t __thiscall FlashTimeline__IsEntryTouchingBounds(float arg1, FlashTimeline *self,
+                                                         Bounds *arg2, uint64_t arg4,
+                                                         Matrix4x4 *arg5)
 
 {
   bool bVar1;
@@ -149,13 +151,15 @@ FlashTimeline__IsEntryTouchingBounds
   float fVar9;
   float fVar10;
   long local_40;
-  
+
   fVar9 = arg1;
   if ((*(int *)self == 1) && (fVar8 = *(float *)(self + 8), fVar8 <= arg1)) {
     fVar10 = arg1 / fVar8;
     fVar9 = fVar10;
-    if ((float)((uint)fVar10 & DAT_005be880 /* R:u32=2147483647 */) < DAT_005dbd0c /* R:8388608.0f */) {
-      fVar9 = (float)(int)fVar10 - (float)(DAT_005be894 /* R:1.0f */ & -(uint)(fVar10 < (float)(int)fVar10));
+    if ((float)((uint)fVar10 & DAT_005be880 /* R:u32=2147483647 */) <
+        DAT_005dbd0c /* R:8388608.0f */) {
+      fVar9 = (float)(int)fVar10 -
+              (float)(DAT_005be894 /* R:1.0f */ & -(uint)(fVar10 < (float)(int)fVar10));
     }
     fVar9 = (fVar10 - fVar9) * fVar8;
   }
@@ -187,27 +191,31 @@ LAB_00574d0b:
     } while (iVar2 != iVar3);
   }
   goto LAB_00574d52;
-  while( true ) {
+  while (true) {
     fVar8 = 0.0;
     if (pfVar5[2] == 1.4013e-45) {
       fVar8 = (fVar9 - pfVar5[1]) / *pfVar5;
     }
-    iVar3 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660(this_00,arg2,arg1,arg5,fVar8);
+    iVar3 =
+        FlashLibraryInstance__IsBoundsTouchingInstance__00574660(this_00, arg2, arg1, arg5, fVar8);
     if (iVar3 == 1) {
       return 1;
     }
     fVar8 = pfVar5[6];
     iVar7 = iVar7 + 1;
     lVar6 = lVar6 + 0xa0;
-    if ((int)fVar8 <= iVar7) break;
-LAB_00574de0:
+    if ((int)fVar8 <= iVar7)
+      break;
+  LAB_00574de0:
     this_00 = (FlashLibraryInstance *)(*(long *)(pfVar5 + 8) + lVar6);
     if ((*(int *)(this_00 + 0x84) == 0) &&
-       (*(int *)(*(long *)(*(long *)(*(long *)(this_00 + 0x28) + 0x48) +
-                          (ulong)*(ushort *)(this_00 + 0x20) * 8) + 0x10) != 1)) {
+        (*(int *)(*(long *)(*(long *)(*(long *)(this_00 + 0x28) + 0x48) +
+                            (ulong) * (ushort *)(this_00 + 0x20) * 8) +
+                  0x10) != 1)) {
       iVar7 = iVar7 + 1;
       lVar6 = lVar6 + 0xa0;
-      if ((int)fVar8 <= iVar7) break;
+      if ((int)fVar8 <= iVar7)
+        break;
       goto LAB_00574de0;
     }
   }

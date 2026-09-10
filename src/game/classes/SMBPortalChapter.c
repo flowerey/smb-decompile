@@ -26,7 +26,7 @@ void __thiscall SMBPortalChapter__SMBPortalChapter(SMBPortalChapter *self)
   uint uVar3;
   bool bVar5;
   ulong uVar4;
-  
+
   bVar5 = ((ulong)self & 1) != 0;
   *(uint64_t *)(self + 0xa0) = 0;
   *(uint32_t *)(self + 0xa8) = 0xffffffff;
@@ -40,8 +40,7 @@ void __thiscall SMBPortalChapter__SMBPortalChapter(SMBPortalChapter *self)
   }
   if (((ulong)self & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)self = 0;
     self = self + 2;
     uVar3 = iVar2 - 2;
@@ -84,7 +83,7 @@ void __thiscall SMBPortalChapter__SMBPortalChapter__005062f0(SMBPortalChapter *s
 {
   uint64_t *puVar1;
   long lVar2;
-  
+
   lVar2 = 0;
   do {
     puVar1 = *(uint64_t **)(self + lVar2);
@@ -128,23 +127,24 @@ void SMBPortalChapter__OrderByDifficulty(void)
   SMBPortalLevel *pSVar5;
   SMBPortalLevel **in_RDI;
   SMBPortalLevel **ppSVar6;
-  
+
   ppSVar6 = in_RDI + 0x10;
   ppSVar1 = in_RDI + 0x13;
-  std__introsort_loop_SMBPortalLevel,long,bool(*)(SMBPortalLevel*,SMBPortalLevel*)>
-            (in_RDI,ppSVar1,8,in_RCX);
-  std__insertion_sort_SMBPortalLevel,bool(*)(SMBPortalLevel*,SMBPortalLevel*)>
-            (in_RDI,ppSVar6,extraout_RDX);
+  std__introsort_loop_SMBPortalLevel, long,
+      bool (*)(SMBPortalLevel *, SMBPortalLevel *) > (in_RDI, ppSVar1, 8, in_RCX);
+  std__insertion_sort_SMBPortalLevel,
+      bool (*)(SMBPortalLevel *, SMBPortalLevel *) > (in_RDI, ppSVar6, extraout_RDX);
   do {
     if (ppSVar1 == ppSVar6) {
       return;
     }
-    while( true ) {
+    while (true) {
       pSVar5 = ppSVar6[-1];
       pSVar2 = *ppSVar6;
       ppSVar4 = ppSVar6;
       if (*(float *)(pSVar2 + 0x74) <= *(float *)(pSVar5 + 0x74) &&
-          *(float *)(pSVar5 + 0x74) != *(float *)(pSVar2 + 0x74)) break;
+          *(float *)(pSVar5 + 0x74) != *(float *)(pSVar2 + 0x74))
+        break;
       ppSVar4 = ppSVar6 + 1;
       *ppSVar6 = pSVar2;
       ppSVar6 = ppSVar4;
@@ -161,5 +161,5 @@ void SMBPortalChapter__OrderByDifficulty(void)
              *(float *)(pSVar5 + 0x74) != *(float *)(pSVar2 + 0x74));
     ppSVar6 = ppSVar6 + 1;
     *ppSVar3 = pSVar2;
-  } while( true );
+  } while (true);
 }

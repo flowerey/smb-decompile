@@ -21,11 +21,11 @@
 void __thiscall CriticalSection__CriticalSection(CriticalSection *self)
 
 {
-  pthread_mutexattr_t apStack_18 [4];
-  
+  pthread_mutexattr_t apStack_18[4];
+
   pthread_mutexattr_init(apStack_18);
-  pthread_mutexattr_settype(apStack_18,1);
-  pthread_mutex_init((pthread_mutex_t *)self,apStack_18);
+  pthread_mutexattr_settype(apStack_18, 1);
+  pthread_mutex_init((pthread_mutex_t *)self, apStack_18);
   pthread_mutexattr_destroy(apStack_18);
   return;
 }
@@ -55,11 +55,11 @@ void __thiscall CriticalSection__CriticalSection__005b71d0(CriticalSection *self
  */
 /* CriticalSection__Lock(int) */
 
-bool __thiscall CriticalSection__Lock(CriticalSection *self,int arg1)
+bool __thiscall CriticalSection__Lock(CriticalSection *self, int arg1)
 
 {
   int iVar1;
-  
+
   if (arg1 != 1) {
     iVar1 = pthread_mutex_trylock((pthread_mutex_t *)self);
     return iVar1 == 0;

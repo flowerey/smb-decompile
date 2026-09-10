@@ -18,18 +18,18 @@
  */
 /* BoundingSquare__BoundingSquare(Vector2 const&, float, Vector2 const&) */
 
-void __thiscall
-BoundingSquare__BoundingSquare(BoundingSquare *self,Vector2 *arg1,float arg2,Vector2 *arg3)
+void __thiscall BoundingSquare__BoundingSquare(BoundingSquare *self, Vector2 *arg1, float arg2,
+                                               Vector2 *arg3)
 
 {
   float local_1c;
-  
+
   *self = (BoundingSquare)0x10;
   local_1c = arg2;
-  Vector2__operator_assign((Vector2 *)(self + 0x84),arg3);
-  Vector2__operator_assign((Vector2 *)(self + 0x8c),arg3);
-  Matrix4x4__Transformation2DRot((Matrix4x4 *)(self + 4),(Vector2 *)0x0,&local_1c,arg1);
-  Matrix4x4__operator_assign((Matrix4x4 *)(self + 0x44),(Matrix4x4 *)(self + 4));
+  Vector2__operator_assign((Vector2 *)(self + 0x84), arg3);
+  Vector2__operator_assign((Vector2 *)(self + 0x8c), arg3);
+  Matrix4x4__Transformation2DRot((Matrix4x4 *)(self + 4), (Vector2 *)0x0, &local_1c, arg1);
+  Matrix4x4__operator_assign((Matrix4x4 *)(self + 0x44), (Matrix4x4 *)(self + 4));
   return;
 }
 
@@ -42,21 +42,20 @@ BoundingSquare__BoundingSquare(BoundingSquare *self,Vector2 *arg1,float arg2,Vec
  */
 /* BoundingSquare__Update(Vector2 const&, float, Vector2 const&) */
 
-void __thiscall
-BoundingSquare__Update(BoundingSquare *self,Vector2 *arg1,float arg2,Vector2 *arg3)
+void __thiscall BoundingSquare__Update(BoundingSquare *self, Vector2 *arg1, float arg2,
+                                       Vector2 *arg3)
 
 {
   Matrix4x4 *pMVar1;
   float local_2c;
-  Vector2 local_28 [16];
-  
+  Vector2 local_28[16];
+
   local_2c = arg2;
-  pMVar1 = (Matrix4x4 *)
-           Matrix4x4__Transformation2DRot
-                     ((Matrix4x4 *)(self + 0x44),(Vector2 *)0x0,&local_2c,arg3);
-  Matrix4x4__Multiply((Matrix4x4 *)(self + 0x44),(Matrix4x4 *)(self + 4),pMVar1);
-  Vector2__operator_mul__005be200(local_28,(Vector2 *)(self + 0x84));
-  Vector2__operator_assign((Vector2 *)(self + 0x8c),local_28);
+  pMVar1 = (Matrix4x4 *)Matrix4x4__Transformation2DRot((Matrix4x4 *)(self + 0x44), (Vector2 *)0x0,
+                                                       &local_2c, arg3);
+  Matrix4x4__Multiply((Matrix4x4 *)(self + 0x44), (Matrix4x4 *)(self + 4), pMVar1);
+  Vector2__operator_mul__005be200(local_28, (Vector2 *)(self + 0x84));
+  Vector2__operator_assign((Vector2 *)(self + 0x8c), local_28);
   return;
 }
 
@@ -69,16 +68,16 @@ BoundingSquare__Update(BoundingSquare *self,Vector2 *arg1,float arg2,Vector2 *ar
  */
 /* BoundingSquare__Change(Vector2 const&, float, Vector2 const&) */
 
-void __thiscall
-BoundingSquare__Change(BoundingSquare *self,Vector2 *arg1,float arg2,Vector2 *arg3)
+void __thiscall BoundingSquare__Change(BoundingSquare *self, Vector2 *arg1, float arg2,
+                                       Vector2 *arg3)
 
 {
   float local_1c;
-  
+
   local_1c = arg2;
-  Vector2__operator_assign((Vector2 *)(self + 0x84),arg1);
-  Vector2__operator_assign((Vector2 *)(self + 0x8c),arg1);
-  Matrix4x4__Transformation2DRot((Matrix4x4 *)(self + 4),(Vector2 *)0x0,&local_1c,arg3);
-  Matrix4x4__operator_assign((Matrix4x4 *)(self + 0x44),(Matrix4x4 *)(self + 4));
+  Vector2__operator_assign((Vector2 *)(self + 0x84), arg1);
+  Vector2__operator_assign((Vector2 *)(self + 0x8c), arg1);
+  Matrix4x4__Transformation2DRot((Matrix4x4 *)(self + 4), (Vector2 *)0x0, &local_1c, arg3);
+  Matrix4x4__operator_assign((Matrix4x4 *)(self + 0x44), (Matrix4x4 *)(self + 4));
   return;
 }

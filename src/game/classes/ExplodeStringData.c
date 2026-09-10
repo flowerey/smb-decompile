@@ -26,7 +26,7 @@ void __thiscall ExplodeStringData__ExplodeStringData(ExplodeStringData *self)
   void *pvVar3;
   uint uVar4;
   ulong uVar5;
-  
+
   uVar5 = 0;
   uVar2 = *(uint *)self;
   pvVar3 = *(void **)(self + 8);
@@ -58,7 +58,7 @@ void __thiscall ExplodeStringData__ExplodeStringData(ExplodeStringData *self)
  */
 /* ExplodeStringData__operator_index(unsigned int) */
 
-uint64_t __thiscall ExplodeStringData__operator_index(ExplodeStringData *self,uint arg1)
+uint64_t __thiscall ExplodeStringData__operator_index(ExplodeStringData *self, uint arg1)
 
 {
   return *(uint64_t *)(*(long *)(self + 8) + (ulong)arg1 * 8);

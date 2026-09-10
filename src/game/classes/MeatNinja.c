@@ -22,7 +22,7 @@ void __thiscall MeatNinja__RecordSpecial(MeatNinja *self)
 
 {
   long lVar1;
-  
+
   lVar1 = *(long *)(self + 0x7e0);
   if (lVar1 != 0) {
     *(byte *)(lVar1 + 3) = *(byte *)(lVar1 + 3) & 0xbf | (byte)((*(uint *)(self + 0xaa4) & 1) << 6);
@@ -80,7 +80,7 @@ void __thiscall MeatNinja__WallJump(MeatNinja *self)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   puVar6 = &uStack_58;
   iVar4 = (**(code **)(*(long *)self + 0xb0))();
   if (iVar4 == 0) {
@@ -88,14 +88,14 @@ void __thiscall MeatNinja__WallJump(MeatNinja *self)
   }
   *(uint32_t *)(self + 0xbc) = *(uint32_t *)(self + 0x8b4);
   *(float *)(self + 0xb8) =
-       *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
+      *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
   if (*(int *)(self + 0x7d4) != 6) {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (MeatNinja)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x240);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x268) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
@@ -111,20 +111,21 @@ void __thiscall MeatNinja__WallJump(MeatNinja *self)
     uStack_34 = 0x3f800000;
     uStack_28 = 0xbf800000;
     uStack_24 = 0x3f800000;
-    if (((byte)MVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)MVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar6 = &uStack_38;
     puVar8 = &uStack_28;
-  }
-  else {
+  } else {
     MVar7 = self[0x7d9];
     uStack_58 = 0x3f800000;
     uStack_54 = 0x3f800000;
     uStack_48 = 0x3f800000;
     uStack_44 = 0x3f800000;
-    if (((byte)MVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)MVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar8 = &uStack_48;
   }
-  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,3,puVar8,puVar6);
+  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 3, puVar8, puVar6);
   MVar3 = self[0x7d8];
   MVar7 = self[0x7d9];
 LAB_00474591:
@@ -142,7 +143,7 @@ LAB_00474591:
  */
 /* MeatNinja__WallHit(tagTileCollisionType) */
 
-void __thiscall MeatNinja__WallHit(MeatNinja *self,int arg2)
+void __thiscall MeatNinja__WallHit(MeatNinja *self, int arg2)
 
 {
   MeatNinja MVar1;
@@ -158,48 +159,48 @@ void __thiscall MeatNinja__WallHit(MeatNinja *self,int arg2)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   MVar1 = self[0x7d8];
   if (((byte)MVar1 & 4) == 0) {
-    if (*(int *)(self + 0x7d4) == 9) goto LAB_0047440b;
+    if (*(int *)(self + 0x7d4) == 9)
+      goto LAB_0047440b;
     if (arg2 == 4) {
       uStack_48 = 0x3f800000;
       uStack_44 = 0x3f800000;
       uStack_58 = 0x3f800000;
       uStack_54 = 0x3f800000;
       if (((byte)self[0x7d9] & 0x40) == 0) {
-        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,2,&uStack_58,&uStack_48);
+        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 2, &uStack_58, &uStack_48);
         iVar4 = *(int *)(self + 0x7d4);
         goto LAB_004743cd;
       }
-    }
-    else {
+    } else {
       uStack_28 = 0xbf800000;
       uStack_24 = 0x3f800000;
       uStack_38 = 0xbf800000;
       uStack_34 = 0x3f800000;
       if (((byte)self[0x7d9] & 0x40) == 0) {
-        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,2,&uStack_38,&uStack_28);
+        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 2, &uStack_38, &uStack_28);
         goto LAB_004743c7;
       }
     }
-LAB_004743d2:
+  LAB_004743d2:
     lVar3 = *(long *)(self + 0xf8);
     self[0x7db] = (MeatNinja)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar2 = *(ushort *)(lVar3 + 0x348);
     if (uVar2 != 0) {
-      uVar5 = GetRandomINT(0,uVar2 - 1);
+      uVar5 = GetRandomINT(0, uVar2 - 1);
     }
     *(uint32_t *)(lVar3 + 0x370) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
     *(uint32_t *)(self + 0xa50) = 0;
-  }
-  else {
-LAB_004743c7:
+  } else {
+  LAB_004743c7:
     iVar4 = *(int *)(self + 0x7d4);
-LAB_004743cd:
-    if (iVar4 != 9) goto LAB_004743d2;
+  LAB_004743cd:
+    if (iVar4 != 9)
+      goto LAB_004743d2;
   }
   MVar1 = self[0x7d8];
 LAB_0047440b:
@@ -221,9 +222,9 @@ void __thiscall MeatNinja__CreateClones(MeatNinja *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),"meatpoof");
+
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(
+      (FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), "meatpoof");
   *(uint64_t *)(self + 0xa98) = uVar1;
   MeatBoyCharactor__CreateClones((MeatBoyCharactor *)self);
   return;
@@ -243,7 +244,7 @@ void __thiscall MeatNinja__MeatNinja__00480f80(MeatNinja *self)
 {
   *(uint8_t ***)self = &PTR__MeatNinja_005c0d10;
   if ((*(int *)(self + 0xa40) == 0) && (*(long **)(self + 0xa98) != (long *)0x0)) {
-                    /* try { // try from 00480f48 to 00480f4a has its CatchHandler @ 00480f58 */
+    /* try { // try from 00480f48 to 00480f4a has its CatchHandler @ 00480f58 */
     (**(code **)(**(long **)(self + 0xa98) + 8))();
   }
   MeatBoyCharactor__MeatBoyCharactor__00476510((MeatBoyCharactor *)self);
@@ -283,54 +284,58 @@ void __thiscall MeatNinja__RenderClones(MeatNinja *self)
   int iVar2;
   long lVar3;
   int iVar4;
-  
+
   if (*(int *)(self + 0xa40) == 0) {
-    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), 1);
     lVar3 = *(long *)(self + 0xa38);
     if ((*(int *)(lVar3 + 0x2c8) == 0) && (0 < *(int *)(lVar3 + 0x34))) {
       iVar4 = 0;
       do {
         if ((*(int *)(lVar3 + 0x3c) == iVar4) &&
-           (iVar4 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + (long)iVar4 * 8) + 0xa90))) {
-          FlashAnimationLibrary__EnableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
-        }
-        else {
-          FlashAnimationLibrary__DisableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+            (iVar4 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + (long)iVar4 * 8) + 0xa90))) {
+          FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                             1);
+        } else {
+          FlashAnimationLibrary__DisableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                              1);
         }
         pMVar1 = *(MeatBoyCharactor **)(*(long *)(self + 0x7f0) + (long)iVar4 * 8);
         if (*(int *)(self + 0xaa4) == 0) {
-          MeatBoyCharFoundation__Render
-                    (*(MeatBoyCharFoundation **)(self + 0xf8),pMVar1,(FlashLibraryInstance *)0x0);
-          if (*(int *)(pMVar1 + 0xac4) != 1) goto LAB_00481051;
-LAB_004810cf:
+          MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8), pMVar1,
+                                        (FlashLibraryInstance *)0x0);
+          if (*(int *)(pMVar1 + 0xac4) != 1)
+            goto LAB_00481051;
+        LAB_004810cf:
           *(uint32_t *)(*(long *)(pMVar1 + 0xa98) + 0x58) = *(uint32_t *)(pMVar1 + 0xab8);
           *(uint32_t *)(*(long *)(pMVar1 + 0xa98) + 0x30) = *(uint32_t *)(pMVar1 + 0xabc);
           *(uint32_t *)(*(long *)(pMVar1 + 0xa98) + 0x34) = *(uint32_t *)(pMVar1 + 0xac0);
           (**(code **)(**(long **)(pMVar1 + 0xa98) + 0x10))();
           *(uint32_t *)(pMVar1 + 0xab8) =
-               *(uint32_t *)(*(FlashLibraryInstance **)(pMVar1 + 0xa98) + 0x58);
+              *(uint32_t *)(*(FlashLibraryInstance **)(pMVar1 + 0xa98) + 0x58);
           iVar2 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(pMVar1 + 0xa98));
-          if (iVar2 != 0) goto LAB_00481051;
+          if (iVar2 != 0)
+            goto LAB_00481051;
           *(uint32_t *)(pMVar1 + 0xac4) = 0;
-          if (*(int *)(pMVar1 + 0xad4) == 1) goto LAB_00481140;
-LAB_0048105e:
+          if (*(int *)(pMVar1 + 0xad4) == 1)
+            goto LAB_00481140;
+        LAB_0048105e:
           iVar2 = *(int *)(pMVar1 + 0xae4);
-        }
-        else {
-          if (*(int *)(pMVar1 + 0xac4) == 1) goto LAB_004810cf;
-LAB_00481051:
-          if (*(int *)(pMVar1 + 0xad4) != 1) goto LAB_0048105e;
-LAB_00481140:
+        } else {
+          if (*(int *)(pMVar1 + 0xac4) == 1)
+            goto LAB_004810cf;
+        LAB_00481051:
+          if (*(int *)(pMVar1 + 0xad4) != 1)
+            goto LAB_0048105e;
+        LAB_00481140:
           *(uint32_t *)(*(long *)(pMVar1 + 0xa98) + 0x58) = *(uint32_t *)(pMVar1 + 0xac8);
           *(uint32_t *)(*(long *)(pMVar1 + 0xa98) + 0x30) = *(uint32_t *)(pMVar1 + 0xacc);
           *(uint32_t *)(*(long *)(pMVar1 + 0xa98) + 0x34) = *(uint32_t *)(pMVar1 + 0xad0);
           (**(code **)(**(long **)(pMVar1 + 0xa98) + 0x10))();
           *(uint32_t *)(pMVar1 + 0xac8) =
-               *(uint32_t *)(*(FlashLibraryInstance **)(pMVar1 + 0xa98) + 0x58);
+              *(uint32_t *)(*(FlashLibraryInstance **)(pMVar1 + 0xa98) + 0x58);
           iVar2 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(pMVar1 + 0xa98));
-          if (iVar2 != 0) goto LAB_0048105e;
+          if (iVar2 != 0)
+            goto LAB_0048105e;
           iVar2 = *(int *)(pMVar1 + 0xae4);
           *(uint32_t *)(pMVar1 + 0xad4) = 0;
         }
@@ -340,7 +345,7 @@ LAB_00481140:
           *(uint32_t *)(*(long *)(pMVar1 + 0xa98) + 0x34) = *(uint32_t *)(pMVar1 + 0xae0);
           (**(code **)(**(long **)(pMVar1 + 0xa98) + 0x10))();
           *(uint32_t *)(pMVar1 + 0xad8) =
-               *(uint32_t *)(*(FlashLibraryInstance **)(pMVar1 + 0xa98) + 0x58);
+              *(uint32_t *)(*(FlashLibraryInstance **)(pMVar1 + 0xa98) + 0x58);
           iVar2 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(pMVar1 + 0xa98));
           if (iVar2 == 0) {
             *(uint32_t *)(pMVar1 + 0xae4) = 0;
@@ -367,7 +372,7 @@ void __thiscall MeatNinja__Render(MeatNinja *self)
 
 {
   int iVar1;
-  
+
   if (*(int *)(self + 0xaa4) == 0) {
     MeatBoyCharactor__Render((MeatBoyCharactor *)self);
   }
@@ -376,8 +381,7 @@ void __thiscall MeatNinja__Render(MeatNinja *self)
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x30) = *(uint32_t *)(self + 0xabc);
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x34) = *(uint32_t *)(self + 0xac0);
     (**(code **)(**(long **)(self + 0xa98) + 0x10))();
-    *(uint32_t *)(self + 0xab8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58)
-    ;
+    *(uint32_t *)(self + 0xab8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58);
     iVar1 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0xa98));
     if (iVar1 == 0) {
       *(uint32_t *)(self + 0xac4) = 0;
@@ -388,8 +392,7 @@ void __thiscall MeatNinja__Render(MeatNinja *self)
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x30) = *(uint32_t *)(self + 0xacc);
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x34) = *(uint32_t *)(self + 0xad0);
     (**(code **)(**(long **)(self + 0xa98) + 0x10))();
-    *(uint32_t *)(self + 0xac8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58)
-    ;
+    *(uint32_t *)(self + 0xac8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58);
     iVar1 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0xa98));
     if (iVar1 == 0) {
       *(uint32_t *)(self + 0xad4) = 0;
@@ -400,8 +403,7 @@ void __thiscall MeatNinja__Render(MeatNinja *self)
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x30) = *(uint32_t *)(self + 0xadc);
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x34) = *(uint32_t *)(self + 0xae0);
     (**(code **)(**(long **)(self + 0xa98) + 0x10))();
-    *(uint32_t *)(self + 0xad8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58)
-    ;
+    *(uint32_t *)(self + 0xad8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58);
     iVar1 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0xa98));
     if (iVar1 == 0) {
       *(uint32_t *)(self + 0xae4) = 0;
@@ -427,7 +429,7 @@ void __thiscall MeatNinja__ProcessSpecial(MeatNinja *self)
   uint uVar2;
   int iVar3;
   long lVar4;
-  
+
   uVar1 = *(uint *)(self + 0xaa4);
   uVar2 = *(byte *)(*(long *)(self + 0x7e0) + 3) >> 6 & 1;
   *(uint *)(self + 0xaa4) = uVar2;
@@ -437,11 +439,9 @@ void __thiscall MeatNinja__ProcessSpecial(MeatNinja *self)
   *(uint32_t *)(self + 0xab0) = 0x3e4ccccd;
   if (*(int *)(self + 0xac4) == 0) {
     iVar3 = 0;
-  }
-  else if (*(int *)(self + 0xad4) == 0) {
+  } else if (*(int *)(self + 0xad4) == 0) {
     iVar3 = 1;
-  }
-  else {
+  } else {
     iVar3 = 2;
     if (*(int *)(self + 0xae4) != 0) {
       return;
@@ -449,7 +449,7 @@ void __thiscall MeatNinja__ProcessSpecial(MeatNinja *self)
   }
   lVar4 = (long)iVar3 + 0xab;
   *(uint32_t *)(self + lVar4 * 0x10 + 8) = 0;
-  Vector2__operator_assign((Vector2 *)(self + lVar4 * 0x10 + 0xc),(Vector2 *)(self + 0xa0));
+  Vector2__operator_assign((Vector2 *)(self + lVar4 * 0x10 + 0xc), (Vector2 *)(self + 0xa0));
   *(uint32_t *)(self + lVar4 * 0x10 + 0x14) = 1;
   return;
 }
@@ -469,7 +469,7 @@ bool __thiscall MeatNinja__CanDie(MeatNinja *self)
   int iVar1;
   long lVar2;
   bool bVar3;
-  
+
   bVar3 = false;
   if ((*(int *)(self + 0xaa4) == 0) && (bVar3 = true, *(int *)(self + 0xaa0) < 5)) {
     *(uint32_t *)(self + 0xaa4) = 1;
@@ -478,11 +478,9 @@ bool __thiscall MeatNinja__CanDie(MeatNinja *self)
     *(uint32_t *)(self + 0xab4) = 0;
     if (*(int *)(self + 0xac4) == 0) {
       iVar1 = 0;
-    }
-    else if (*(int *)(self + 0xad4) == 0) {
+    } else if (*(int *)(self + 0xad4) == 0) {
       iVar1 = 1;
-    }
-    else {
+    } else {
       iVar1 = 2;
       if (*(int *)(self + 0xae4) != 0) {
         return false;
@@ -490,7 +488,7 @@ bool __thiscall MeatNinja__CanDie(MeatNinja *self)
     }
     lVar2 = (long)iVar1 + 0xab;
     *(uint32_t *)(self + lVar2 * 0x10 + 8) = 0;
-    Vector2__operator_assign((Vector2 *)(self + lVar2 * 0x10 + 0xc),(Vector2 *)(self + 0xa0));
+    Vector2__operator_assign((Vector2 *)(self + lVar2 * 0x10 + 0xc), (Vector2 *)(self + 0xa0));
     *(uint32_t *)(self + lVar2 * 0x10 + 0x14) = 1;
     bVar3 = *(int *)(self + 0xaa4) == 0;
   }
@@ -513,7 +511,7 @@ void __thiscall MeatNinja__Update(MeatNinja *self)
   int iVar2;
   long lVar3;
   float fVar4;
-  
+
   MeatBoyCharactor__ProcessReplayFrame((MeatBoyCharactor *)self);
   *(int *)(self + 0xaa0) = *(int *)(self + 0xaa0) + 1;
   fVar1 = DAT_005c0e00 /* R:-0.5f */;
@@ -525,21 +523,21 @@ void __thiscall MeatNinja__Update(MeatNinja *self)
     *(uint32_t *)(self + 0xaa8) = 1;
     goto LAB_004815e0;
   }
-  if (0.0 <= fVar4) goto LAB_004815e0;
+  if (0.0 <= fVar4)
+    goto LAB_004815e0;
   if (*(int *)(self + 0xaa4) == 1) {
     if (*(int *)(self + 0xac4) == 0) {
       iVar2 = 0;
-    }
-    else if (*(int *)(self + 0xad4) == 0) {
+    } else if (*(int *)(self + 0xad4) == 0) {
       iVar2 = 1;
-    }
-    else {
+    } else {
       iVar2 = 2;
-      if (*(int *)(self + 0xae4) != 0) goto LAB_00481611;
+      if (*(int *)(self + 0xae4) != 0)
+        goto LAB_00481611;
     }
     lVar3 = (long)iVar2 + 0xab;
     *(uint32_t *)(self + lVar3 * 0x10 + 8) = 0;
-    Vector2__operator_assign((Vector2 *)(self + lVar3 * 0x10 + 0xc),(Vector2 *)(self + 0xa0));
+    Vector2__operator_assign((Vector2 *)(self + lVar3 * 0x10 + 0xc), (Vector2 *)(self + 0xa0));
     *(uint32_t *)(self + lVar3 * 0x10 + 0x14) = 1;
   }
 LAB_00481611:
@@ -564,9 +562,9 @@ void __thiscall MeatNinja__MeatNinja__00481750(MeatNinja *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FormatResourcePath("/Animations/meatninja.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,7);
+
+  uVar1 = FormatResourcePath("/Animations/meatninja.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 7);
   *(uint8_t ***)self = &PTR__MeatNinja_005c0d10;
   *(uint32_t *)(self + 0xac4) = 0;
   *(uint32_t *)(self + 0xab8) = 0;
@@ -597,7 +595,7 @@ void __thiscall MeatNinja__MeatNinja__00481750(MeatNinja *self)
  */
 /* MeatNinja__MeatNinja__00481750(MeatBoyCharactor*, int) */
 
-void __thiscall MeatNinja__MeatNinja__00481750(MeatNinja *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall MeatNinja__MeatNinja__00481750(MeatNinja *self, MeatBoyCharactor *arg1, int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
@@ -614,8 +612,8 @@ void __thiscall MeatNinja__MeatNinja__00481750(MeatNinja *self,MeatBoyCharactor 
   *(uint32_t *)(self + 0xadc) = 0;
   *(uint32_t *)(self + 0xae0) = 0;
   *(uint32_t *)(self + 0xae4) = 0;
-                    /* try { // try from 004817fa to 004817fe has its CatchHandler @ 00481852 */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 004817fa to 004817fe has its CatchHandler @ 00481852 */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   *(uint32_t *)(self + 0xa54) = 7;
   *(uint32_t *)(self + 0xaa4) = 0;
   *(uint32_t *)(self + 0xaa8) = 1;
@@ -639,14 +637,12 @@ void __thiscall MeatNinja__AddExplosion(MeatNinja *self)
 {
   int iVar1;
   long lVar2;
-  
+
   if (*(int *)(self + 0xac4) == 0) {
     iVar1 = 0;
-  }
-  else if (*(int *)(self + 0xad4) == 0) {
+  } else if (*(int *)(self + 0xad4) == 0) {
     iVar1 = 1;
-  }
-  else {
+  } else {
     iVar1 = 2;
     if (*(int *)(self + 0xae4) != 0) {
       return;
@@ -654,7 +650,7 @@ void __thiscall MeatNinja__AddExplosion(MeatNinja *self)
   }
   lVar2 = (long)iVar1 + 0xab;
   *(uint32_t *)(self + lVar2 * 0x10 + 8) = 0;
-  Vector2__operator_assign((Vector2 *)(self + lVar2 * 0x10 + 0xc),(Vector2 *)(self + 0xa0));
+  Vector2__operator_assign((Vector2 *)(self + lVar2 * 0x10 + 0xc), (Vector2 *)(self + 0xa0));
   *(uint32_t *)(self + lVar2 * 0x10 + 0x14) = 1;
   return;
 }
@@ -672,14 +668,13 @@ void __thiscall MeatNinja__RenderExplosions(MeatNinja *self)
 
 {
   int iVar1;
-  
+
   if (*(int *)(self + 0xac4) == 1) {
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x58) = *(uint32_t *)(self + 0xab8);
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x30) = *(uint32_t *)(self + 0xabc);
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x34) = *(uint32_t *)(self + 0xac0);
     (**(code **)(**(long **)(self + 0xa98) + 0x10))();
-    *(uint32_t *)(self + 0xab8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58)
-    ;
+    *(uint32_t *)(self + 0xab8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58);
     iVar1 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0xa98));
     if (iVar1 == 0) {
       *(uint32_t *)(self + 0xac4) = 0;
@@ -690,8 +685,7 @@ void __thiscall MeatNinja__RenderExplosions(MeatNinja *self)
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x30) = *(uint32_t *)(self + 0xacc);
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x34) = *(uint32_t *)(self + 0xad0);
     (**(code **)(**(long **)(self + 0xa98) + 0x10))();
-    *(uint32_t *)(self + 0xac8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58)
-    ;
+    *(uint32_t *)(self + 0xac8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58);
     iVar1 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0xa98));
     if (iVar1 == 0) {
       *(uint32_t *)(self + 0xad4) = 0;
@@ -702,8 +696,7 @@ void __thiscall MeatNinja__RenderExplosions(MeatNinja *self)
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x30) = *(uint32_t *)(self + 0xadc);
     *(uint32_t *)(*(long *)(self + 0xa98) + 0x34) = *(uint32_t *)(self + 0xae0);
     (**(code **)(**(long **)(self + 0xa98) + 0x10))();
-    *(uint32_t *)(self + 0xad8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58)
-    ;
+    *(uint32_t *)(self + 0xad8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58);
     iVar1 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0xa98));
     if (iVar1 == 0) {
       *(uint32_t *)(self + 0xae4) = 0;

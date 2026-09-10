@@ -33,11 +33,11 @@ bool __thiscall AudioEffectFade__IsFinished(AudioEffectFade *self)
  */
 /* AudioEffectFade__ContainsInstance(TAudioInstance const*) */
 
-bool __thiscall AudioEffectFade__ContainsInstance(AudioEffectFade *self,TAudioInstance *arg1)
+bool __thiscall AudioEffectFade__ContainsInstance(AudioEffectFade *self, TAudioInstance *arg1)
 
 {
   bool bVar1;
-  
+
   bVar1 = true;
   if (*(TAudioInstance **)(self + 0x10) != arg1) {
     bVar1 = arg1 == *(TAudioInstance **)(self + 0x18);
@@ -60,27 +60,26 @@ void __thiscall AudioEffectFade__Update(AudioEffectFade *self)
   float fVar1;
   uint32_t uVar2;
   float fVar3;
-  
+
   fVar1 = fOneFrameTimeStep;
   if (*(int *)(self + 0x58) == 1) {
     if ((*(int *)(self + 0x60) != 0) ||
-       (fVar3 = *(float *)(self + 0x4c) + fOneFrameTimeStep, *(float *)(self + 0x4c) = fVar3,
-       fVar3 < *(float *)(self + 0x54))) goto LAB_0057bc18;
+        (fVar3 = *(float *)(self + 0x4c) + fOneFrameTimeStep, *(float *)(self + 0x4c) = fVar3,
+         fVar3 < *(float *)(self + 0x54)))
+      goto LAB_0057bc18;
     *(uint32_t *)(self + 0x58) = 0;
     *(uint32_t *)(self + 0x4c) = 0;
-  }
-  else if (*(int *)(self + 0x58) != 0) goto LAB_0057bc18;
+  } else if (*(int *)(self + 0x58) != 0)
+    goto LAB_0057bc18;
   if (*(int *)(self + 0x60) == 0) {
     fVar3 = *(float *)(self + 0x4c);
     *(float *)(self + 0x4c) = fVar1 + fVar3;
     if (fVar1 + fVar3 < *(float *)(self + 0x50)) {
       (*(code *)**(uint64_t **)(self + 0x30))(self + 0x30);
-    }
-    else {
+    } else {
       if (*(int *)(self + 0x5c) == 0) {
         uVar2 = *(uint32_t *)(self + 0x44);
-      }
-      else {
+      } else {
         uVar2 = *(uint32_t *)(self + 0x40);
       }
       **(uint32_t **)(self + 0x38) = uVar2;
@@ -89,15 +88,16 @@ void __thiscall AudioEffectFade__Update(AudioEffectFade *self)
   }
 LAB_0057bc18:
   fVar1 = DAT_005be894 /* R:1.0f */;
-  TAudioInstance__SetVolume
-            (*(TAudioInstance **)(self + 0x10),
-             (uint)(long)((float)*(uint *)(self + 0x24) * *(float *)(self + 0x28) +
-                         (float)*(uint *)(self + 0x20) * (DAT_005be894 /* R:1.0f */ - *(float *)(self + 0x28))));
+  TAudioInstance__SetVolume(
+      *(TAudioInstance **)(self + 0x10),
+      (uint)(long)((float)*(uint *)(self + 0x24) * *(float *)(self + 0x28) +
+                   (float)*(uint *)(self + 0x20) *
+                       (DAT_005be894 /* R:1.0f */ - *(float *)(self + 0x28))));
   if (*(TAudioInstance **)(self + 0x18) != (TAudioInstance *)0x0) {
-    TAudioInstance__SetVolume
-              (*(TAudioInstance **)(self + 0x18),
-               (uint)(long)((float)*(uint *)(self + 0x24) * (fVar1 - *(float *)(self + 0x28)) +
-                           (float)*(uint *)(self + 0x20) * *(float *)(self + 0x28)));
+    TAudioInstance__SetVolume(
+        *(TAudioInstance **)(self + 0x18),
+        (uint)(long)((float)*(uint *)(self + 0x24) * (fVar1 - *(float *)(self + 0x28)) +
+                     (float)*(uint *)(self + 0x20) * *(float *)(self + 0x28)));
     return;
   }
   return;

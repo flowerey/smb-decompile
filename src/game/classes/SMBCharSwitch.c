@@ -39,59 +39,57 @@ void __thiscall SMBCharSwitch__Initialize(SMBCharSwitch *self)
   int iVar1;
   uint64_t uVar2;
   FlashMovieClip *this_00;
-  char acStack_28 [24];
-  
-  (**(code **)(*(long *)self + 0x10))(self,0,"charselectidle");
+  char acStack_28[24];
+
+  (**(code **)(*(long *)self + 0x10))(self, 0, "charselectidle");
   uVar2 = GetLocalizedText(0xde);
   *(uint64_t *)(self + 0x50) = uVar2;
-  this_00 = (FlashMovieClip *)
-            FlashAnimationLibrary__GetLibraryEntry
-                      (*(FlashAnimationLibrary **)(self + 8),*(int *)(*(long *)(self + 0x28) + 0x20)
-                      );
-  uVar2 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"charname");
+  this_00 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(
+      *(FlashAnimationLibrary **)(self + 8), *(int *)(*(long *)(self + 0x28) + 0x20));
+  uVar2 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "charname");
   *(uint64_t *)(self + 0x58) = uVar2;
-  uVar2 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"bandagenumber")
-  ;
+  uVar2 =
+      FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "bandagenumber");
   *(uint64_t *)(self + 0x60) = uVar2;
-  Sprint("char%i-%i",acStack_28,1);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  smbSwitchChars = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
-  Sprint("char%i-%i",acStack_28,1);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  DAT_00817110 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
-  Sprint("char%i-%i",acStack_28,1);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  DAT_00817120 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
-  Sprint("char%i-%i",acStack_28,1);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  DAT_00817130 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
-  Sprint("char%i-%i",acStack_28,1);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  DAT_00817140 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
-  Sprint("char%i-%i",acStack_28,1);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  DAT_00817150 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
-  Sprint("char%i-%i",acStack_28,2);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  DAT_00817160 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
-  Sprint("char%i-%i",acStack_28,2);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  DAT_00817170 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
-  Sprint("char%i-%i",acStack_28,2);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  DAT_00817180 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
-  Sprint("char%i-%i",acStack_28,2);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  DAT_00817190 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
-  Sprint("char%i-%i",acStack_28,2);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  DAT_008171a0 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
-  Sprint("char%i-%i",acStack_28,2);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  DAT_008171b0 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
-  Sprint("char%i-%i",acStack_28,3);
-  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),acStack_28);
-  DAT_008171c0 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00,iVar1,0,(int *)0x0,0);
+  Sprint("char%i-%i", acStack_28, 1);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  smbSwitchChars = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
+  Sprint("char%i-%i", acStack_28, 1);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  DAT_00817110 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
+  Sprint("char%i-%i", acStack_28, 1);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  DAT_00817120 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
+  Sprint("char%i-%i", acStack_28, 1);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  DAT_00817130 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
+  Sprint("char%i-%i", acStack_28, 1);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  DAT_00817140 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
+  Sprint("char%i-%i", acStack_28, 1);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  DAT_00817150 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
+  Sprint("char%i-%i", acStack_28, 2);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  DAT_00817160 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
+  Sprint("char%i-%i", acStack_28, 2);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  DAT_00817170 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
+  Sprint("char%i-%i", acStack_28, 2);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  DAT_00817180 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
+  Sprint("char%i-%i", acStack_28, 2);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  DAT_00817190 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
+  Sprint("char%i-%i", acStack_28, 2);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  DAT_008171a0 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
+  Sprint("char%i-%i", acStack_28, 2);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  DAT_008171b0 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
+  Sprint("char%i-%i", acStack_28, 3);
+  iVar1 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), acStack_28);
+  DAT_008171c0 /* R:0.0f */ = FlashMovieClip__FindInstance(this_00, iVar1, 0, (int *)0x0, 0);
   return;
 }
 
@@ -112,7 +110,7 @@ void __thiscall SMBCharSwitch__DeactivationFinished(SMBCharSwitch *self)
   if (*(int *)(self + 0x6c) != 1) {
     return;
   }
-  ShowPauseMenuPress((tagButtonProps *)0x0,(void *)0x0);
+  ShowPauseMenuPress((tagButtonProps *)0x0, (void *)0x0);
   return;
 }
 
@@ -129,239 +127,224 @@ void __thiscall SMBCharSwitch__Render(SMBCharSwitch *self)
 
 {
   int iVar1;
-  
+
   if (*(int *)(self + 0x68) == 0) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817108 /* R:0.0f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData, DAT_00817108 /* R:0.0f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(smbSwitchChars,1);
+      FlashLibraryInstance__GotoAndStop(smbSwitchChars, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(smbSwitchChars, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(smbSwitchChars,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817108 /* R:0.0f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData, DAT_00817108 /* R:0.0f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(smbSwitchChars,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(smbSwitchChars,6);
+      FlashLibraryInstance__GotoAndStop(smbSwitchChars, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(smbSwitchChars, 6);
     }
   }
   if (*(int *)(self + 0x68) == 1) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817118 /* R:1.5414283107572988e-44f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817118 /* R:1.5414283107572988e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817110 /* R:0.0f */,1);
+      FlashLibraryInstance__GotoAndStop(DAT_00817110 /* R:0.0f */, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817110 /* R:0.0f */, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817110 /* R:0.0f */,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817118 /* R:1.5414283107572988e-44f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817118 /* R:1.5414283107572988e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817110 /* R:0.0f */,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817110 /* R:0.0f */,6);
+      FlashLibraryInstance__GotoAndStop(DAT_00817110 /* R:0.0f */, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817110 /* R:0.0f */, 6);
     }
   }
   if (*(int *)(self + 0x68) == 2) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817128 /* R:2.2420775429197073e-44f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817128 /* R:2.2420775429197073e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817120 /* R:0.0f */,1);
+      FlashLibraryInstance__GotoAndStop(DAT_00817120 /* R:0.0f */, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817120 /* R:0.0f */, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817120 /* R:0.0f */,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817128 /* R:2.2420775429197073e-44f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817128 /* R:2.2420775429197073e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817120 /* R:0.0f */,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817120 /* R:0.0f */,6);
+      FlashLibraryInstance__GotoAndStop(DAT_00817120 /* R:0.0f */, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817120 /* R:0.0f */, 6);
     }
   }
   if (*(int *)(self + 0x68) == 3) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817138 /* R:3.363116314379561e-44f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817138 /* R:3.363116314379561e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817130 /* R:0.0f */,1);
+      FlashLibraryInstance__GotoAndStop(DAT_00817130 /* R:0.0f */, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817130 /* R:0.0f */, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817130 /* R:0.0f */,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817138 /* R:3.363116314379561e-44f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817138 /* R:3.363116314379561e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817130 /* R:0.0f */,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817130 /* R:0.0f */,6);
+      FlashLibraryInstance__GotoAndStop(DAT_00817130 /* R:0.0f */, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817130 /* R:0.0f */, 6);
     }
   }
   if (*(int *)(self + 0x68) == 4) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817148 /* R:2.5223372357846707e-44f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817148 /* R:2.5223372357846707e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817140 /* R:0.0f */,1);
+      FlashLibraryInstance__GotoAndStop(DAT_00817140 /* R:0.0f */, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817140 /* R:0.0f */, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817140 /* R:0.0f */,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817148 /* R:2.5223372357846707e-44f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817148 /* R:2.5223372357846707e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817140 /* R:0.0f */,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817140 /* R:0.0f */,6);
+      FlashLibraryInstance__GotoAndStop(DAT_00817140 /* R:0.0f */, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817140 /* R:0.0f */, 6);
     }
   }
   if (*(int *)(self + 0x68) == 5) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817158 /* R:3.0828566215145976e-44f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817158 /* R:3.0828566215145976e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817150 /* R:0.0f */,1);
+      FlashLibraryInstance__GotoAndStop(DAT_00817150 /* R:0.0f */, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817150 /* R:0.0f */, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817150 /* R:0.0f */,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817158 /* R:3.0828566215145976e-44f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817158 /* R:3.0828566215145976e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817150 /* R:0.0f */,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817150 /* R:0.0f */,6);
+      FlashLibraryInstance__GotoAndStop(DAT_00817150 /* R:0.0f */, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817150 /* R:0.0f */, 6);
     }
   }
   if (*(int *)(self + 0x68) == 6) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817168 /* R:3.2229864679470793e-44f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817168 /* R:3.2229864679470793e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817160 /* R:0.0f */,1);
+      FlashLibraryInstance__GotoAndStop(DAT_00817160 /* R:0.0f */, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817160 /* R:0.0f */, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817160 /* R:0.0f */,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817168 /* R:3.2229864679470793e-44f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817168 /* R:3.2229864679470793e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817160 /* R:0.0f */,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817160 /* R:0.0f */,6);
+      FlashLibraryInstance__GotoAndStop(DAT_00817160 /* R:0.0f */, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817160 /* R:0.0f */, 6);
     }
   }
   if (*(int *)(self + 0x68) == 7) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817178 /* R:2.942726775082116e-44f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817178 /* R:2.942726775082116e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817170 /* R:0.0f */,1);
+      FlashLibraryInstance__GotoAndStop(DAT_00817170 /* R:0.0f */, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817170 /* R:0.0f */, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817170 /* R:0.0f */,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817178 /* R:2.942726775082116e-44f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817178 /* R:2.942726775082116e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817170 /* R:0.0f */,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817170 /* R:0.0f */,6);
+      FlashLibraryInstance__GotoAndStop(DAT_00817170 /* R:0.0f */, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817170 /* R:0.0f */, 6);
     }
   }
   if (*(int *)(self + 0x68) == 8) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817188 /* R:1.401298464324817e-44f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817188 /* R:1.401298464324817e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817180 /* R:0.0f */,1);
+      FlashLibraryInstance__GotoAndStop(DAT_00817180 /* R:0.0f */, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817180 /* R:0.0f */, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817180 /* R:0.0f */,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817188 /* R:1.401298464324817e-44f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817188 /* R:1.401298464324817e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817180 /* R:0.0f */,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817180 /* R:0.0f */,6);
+      FlashLibraryInstance__GotoAndStop(DAT_00817180 /* R:0.0f */, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817180 /* R:0.0f */, 6);
     }
   }
   if (*(int *)(self + 0x68) == 9) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817198 /* R:1.6815581571897805e-44f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817198 /* R:1.6815581571897805e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817190 /* R:0.0f */,1);
+      FlashLibraryInstance__GotoAndStop(DAT_00817190 /* R:0.0f */, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817190 /* R:0.0f */, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817190 /* R:0.0f */,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_00817198 /* R:1.6815581571897805e-44f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_00817198 /* R:1.6815581571897805e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_00817190 /* R:0.0f */,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_00817190 /* R:0.0f */,6);
+      FlashLibraryInstance__GotoAndStop(DAT_00817190 /* R:0.0f */, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_00817190 /* R:0.0f */, 6);
     }
   }
   if (*(int *)(self + 0x68) == 10) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_008171a8 /* R:2.6624670822171524e-44f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_008171a8 /* R:2.6624670822171524e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_008171a0 /* R:0.0f */,1);
+      FlashLibraryInstance__GotoAndStop(DAT_008171a0 /* R:0.0f */, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_008171a0 /* R:0.0f */, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_008171a0 /* R:0.0f */,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_008171a8 /* R:2.6624670822171524e-44f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_008171a8 /* R:2.6624670822171524e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_008171a0 /* R:0.0f */,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_008171a0 /* R:0.0f */,6);
+      FlashLibraryInstance__GotoAndStop(DAT_008171a0 /* R:0.0f */, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_008171a0 /* R:0.0f */, 6);
     }
   }
   if (*(int *)(self + 0x68) == 0xb) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_008171b8 /* R:1.961817850054744e-44f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_008171b8 /* R:1.961817850054744e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_008171b0 /* R:0.0f */,1);
+      FlashLibraryInstance__GotoAndStop(DAT_008171b0 /* R:0.0f */, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_008171b0 /* R:0.0f */, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_008171b0 /* R:0.0f */,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_008171b8 /* R:1.961817850054744e-44f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_008171b8 /* R:1.961817850054744e-44f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_008171b0 /* R:0.0f */,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_008171b0 /* R:0.0f */,6);
+      FlashLibraryInstance__GotoAndStop(DAT_008171b0 /* R:0.0f */, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_008171b0 /* R:0.0f */, 6);
     }
   }
   if (*(int *)(self + 0x68) == 0xc) {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_008171c8 /* R:9.80908925027372e-45f */);
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_008171c8 /* R:9.80908925027372e-45f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_008171c0 /* R:0.0f */,1);
+      FlashLibraryInstance__GotoAndStop(DAT_008171c0 /* R:0.0f */, 1);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_008171c0 /* R:0.0f */, 5);
     }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_008171c0 /* R:0.0f */,5);
-    }
-  }
-  else {
-    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,DAT_008171c8 /* R:9.80908925027372e-45f */);
+  } else {
+    iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                                 DAT_008171c8 /* R:9.80908925027372e-45f */);
     if (iVar1 == 1) {
-      FlashLibraryInstance__GotoAndStop(DAT_008171c0 /* R:0.0f */,2);
-    }
-    else {
-      FlashLibraryInstance__GotoAndStop(DAT_008171c0 /* R:0.0f */,6);
+      FlashLibraryInstance__GotoAndStop(DAT_008171c0 /* R:0.0f */, 2);
+    } else {
+      FlashLibraryInstance__GotoAndStop(DAT_008171c0 /* R:0.0f */, 6);
     }
   }
   if ((*(ushort *)(self + 0x34) & 0x3ff) == 0) {
@@ -387,7 +370,7 @@ void __thiscall SMBCharSwitch__Activate(SMBCharSwitch *self)
   uint uVar2;
   Joystick *pJVar3;
   uint64_t uVar4;
-  uint32_t local_88 [2];
+  uint32_t local_88[2];
   uint64_t local_80;
   uint64_t local_78;
   uint64_t local_70;
@@ -401,9 +384,9 @@ void __thiscall SMBCharSwitch__Activate(SMBCharSwitch *self)
   uint64_t local_30;
   uint64_t local_28;
   uint64_t local_20;
-  tagSuperMeatBoyCharactor local_c [4];
-  
-  iVar1 = SMBChapter__AllowCharSelect((SMBChapter *)(SuperMeatBoy + 0x90),local_c);
+  tagSuperMeatBoyCharactor local_c[4];
+
+  iVar1 = SMBChapter__AllowCharSelect((SMBChapter *)(SuperMeatBoy + 0x90), local_c);
   if (iVar1 == 0) {
     local_88[0] = 0;
     local_80 = 0;
@@ -421,39 +404,39 @@ void __thiscall SMBCharSwitch__Activate(SMBCharSwitch *self)
     local_20 = 0;
     local_80 = GetLocalizedText(0xe0);
     uVar2 = 0xe1;
-  }
-  else {
+  } else {
     if (*(int *)(GSuperMeatBoy__pReplay + 0x2c8) != 0) {
       SMBPopupMenu__Activate((SMBPopupMenu *)self);
-      iVar1 = GSMBChapterData__IsCharacterUnlocked
-                        (SMBChapterData,(&DAT_00817108 /* R:0.0f */)[(long)*(int *)(self + 0x68) * 4]);
+      iVar1 = GSMBChapterData__IsCharacterUnlocked(
+          SMBChapterData, (&DAT_00817108 /* R:0.0f */)[(long)*(int *)(self + 0x68) * 4]);
       if (iVar1 == 1) {
-        uVar4 = GetLocalizedText(*(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)(self + 0x68) * 0x10));
-        FlashTextField__SetText(*(wchar_t **)(self + 0x58),uVar4);
-      }
-      else {
-        FlashTextField__SetText(*(char **)(self + 0x58),&DAT_005c741a /* R:"??????" */);
+        uVar4 = GetLocalizedText(*(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ +
+                                           (long)*(int *)(self + 0x68) * 0x10));
+        FlashTextField__SetText(*(wchar_t **)(self + 0x58), uVar4);
+      } else {
+        FlashTextField__SetText(*(char **)(self + 0x58), &DAT_005c741a /* R:"??????" */);
       }
       if (Keyboard != (TKeyboard *)0x0) {
-        TKeyboard__AddKeyCallback(Keyboard,0x7f,SMBCharSwitchMoveUp,self);
-        TKeyboard__AddKeyCallback(Keyboard,0x1f,SMBCharSwitchMoveDown,self);
-        TKeyboard__AddKeyCallback(Keyboard,0x41,SMBCharSwitchMoveLeft,self);
-        TKeyboard__AddKeyCallback(Keyboard,0x6d,SMBCharSwitchMoveRight,self);
-        TKeyboard__AddKeyCallback(Keyboard,0x76,SMBCharSwitchMoveSelect,self);
-        TKeyboard__AddKeyCallback(Keyboard,0x6c,SMBCharSwitchMoveSelect,self);
+        TKeyboard__AddKeyCallback(Keyboard, 0x7f, SMBCharSwitchMoveUp, self);
+        TKeyboard__AddKeyCallback(Keyboard, 0x1f, SMBCharSwitchMoveDown, self);
+        TKeyboard__AddKeyCallback(Keyboard, 0x41, SMBCharSwitchMoveLeft, self);
+        TKeyboard__AddKeyCallback(Keyboard, 0x6d, SMBCharSwitchMoveRight, self);
+        TKeyboard__AddKeyCallback(Keyboard, 0x76, SMBCharSwitchMoveSelect, self);
+        TKeyboard__AddKeyCallback(Keyboard, 0x6c, SMBCharSwitchMoveSelect, self);
       }
       pJVar3 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-      Joystick__AddPOVCallback(pJVar3,0,SMBCharSwitchMoveUp,self);
+      Joystick__AddPOVCallback(pJVar3, 0, SMBCharSwitchMoveUp, self);
       pJVar3 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-      Joystick__AddPOVCallback(pJVar3,2,SMBCharSwitchMoveDown,self);
+      Joystick__AddPOVCallback(pJVar3, 2, SMBCharSwitchMoveDown, self);
       pJVar3 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-      Joystick__AddPOVCallback(pJVar3,3,SMBCharSwitchMoveLeft,self);
+      Joystick__AddPOVCallback(pJVar3, 3, SMBCharSwitchMoveLeft, self);
       pJVar3 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-      Joystick__AddPOVCallback(pJVar3,1,SMBCharSwitchMoveRight,self);
+      Joystick__AddPOVCallback(pJVar3, 1, SMBCharSwitchMoveRight, self);
       pJVar3 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-      Joystick__AddButtonCallback(pJVar3,0,SMBCharSwitchMoveSelect,self);
+      Joystick__AddButtonCallback(pJVar3, 0, SMBCharSwitchMoveSelect, self);
       uVar2 = GSMBChapterData__GetTotalNumBandagesCollected(SMBChapterData);
-      FlashTextField__SetText(*(char **)(self + 0x60),&DAT_005c8bf9 /* R:u32=1996515621 */,(ulong)uVar2);
+      FlashTextField__SetText(*(char **)(self + 0x60), &DAT_005c8bf9 /* R:u32=1996515621 */,
+                              (ulong)uVar2);
       *(uint32_t *)(self + 0x6c) = 0;
       return;
     }
@@ -531,34 +514,34 @@ void __thiscall SMBCharSwitch__DeActivate(SMBCharSwitch *self)
 
 {
   Joystick *pJVar1;
-  
+
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x7f,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x1f,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x41,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x6d,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x76,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x6c,0,0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x7f, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x1f, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x41, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6d, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x76, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6c, 0, 0);
   }
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,0,0,0);
+  Joystick__AddPOVCallback(pJVar1, 0, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,2,0,0);
+  Joystick__AddPOVCallback(pJVar1, 2, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,3,0,0);
+  Joystick__AddPOVCallback(pJVar1, 3, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,1,0,0);
+  Joystick__AddPOVCallback(pJVar1, 1, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,0,0,0);
+  Joystick__AddButtonCallback(pJVar1, 0, 0, 0);
   *(uint32_t *)(self + 0x30) = 2;
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,1,0,0);
+  Joystick__AddButtonCallback(pJVar1, 1, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__RestoreCallbacks(pJVar1,(InputCallback **)(self + 0x40),(InputCallback **)(self + 0x38))
-  ;
+  Joystick__RestoreCallbacks(pJVar1, (InputCallback **)(self + 0x40),
+                             (InputCallback **)(self + 0x38));
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x23,0,0);
-    TKeyboard__RestoreCallbacks(Keyboard,(InputCallback **)(self + 0x48));
+    TKeyboard__AddKeyCallback(Keyboard, 0x23, 0, 0);
+    TKeyboard__RestoreCallbacks(Keyboard, (InputCallback **)(self + 0x48));
     return;
   }
   return;
@@ -577,7 +560,7 @@ void __thiscall SMBCharSwitch__SMBCharSwitch__00505080(SMBCharSwitch *self)
 
 {
   uint64_t uVar1;
-  
+
   *(ushort *)(self + 0x34) = *(ushort *)(self + 0x34) & 0xfc00;
   *(uint8_t ***)self = &PTR__SMBPopupMenu_005c76d0;
   *(uint64_t *)(self + 8) = 0;
@@ -610,19 +593,21 @@ void __thiscall SMBCharSwitch__MoveUp(SMBCharSwitch *self)
 {
   int iVar1;
   uint64_t uVar2;
-  
+
   iVar1 = *(int *)(self + 0x68) + -6;
   if (iVar1 < 0) {
     iVar1 = 0;
   }
   *(int *)(self + 0x68) = iVar1;
-  iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,(&DAT_00817108 /* R:0.0f */)[(long)iVar1 * 4]);
+  iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                               (&DAT_00817108 /* R:0.0f */)[(long)iVar1 * 4]);
   if (iVar1 != 1) {
-    FlashTextField__SetText(*(char **)(self + 0x58),&DAT_005c741a /* R:"??????" */);
+    FlashTextField__SetText(*(char **)(self + 0x58), &DAT_005c741a /* R:"??????" */);
     return;
   }
-  uVar2 = GetLocalizedText(*(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)(self + 0x68) * 0x10));
-  FlashTextField__SetText(*(wchar_t **)(self + 0x58),uVar2);
+  uVar2 = GetLocalizedText(
+      *(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)(self + 0x68) * 0x10));
+  FlashTextField__SetText(*(wchar_t **)(self + 0x58), uVar2);
   return;
 }
 
@@ -641,7 +626,7 @@ void __thiscall SMBCharSwitch__MoveDown(SMBCharSwitch *self)
   uint uVar1;
   int iVar2;
   uint64_t uVar3;
-  
+
   uVar1 = *(int *)(self + 0x68) + 6;
   if (0xc < uVar1) {
     uVar1 = 0xc;
@@ -654,18 +639,18 @@ void __thiscall SMBCharSwitch__MoveDown(SMBCharSwitch *self)
       iVar2 = *(int *)(self + 0x68);
       *(int *)(self + 0x68) = iVar2 + -1;
       iVar2 = (&DAT_00817108 /* R:0.0f */)[(long)(iVar2 + -1) * 4];
-    }
-    else {
+    } else {
       iVar2 = (&DAT_00817108 /* R:0.0f */)[(long)*(int *)(self + 0x68) * 4];
     }
   }
-  iVar2 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,iVar2);
+  iVar2 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData, iVar2);
   if (iVar2 != 1) {
-    FlashTextField__SetText(*(char **)(self + 0x58),&DAT_005c741a /* R:"??????" */);
+    FlashTextField__SetText(*(char **)(self + 0x58), &DAT_005c741a /* R:"??????" */);
     return;
   }
-  uVar3 = GetLocalizedText(*(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)(self + 0x68) * 0x10));
-  FlashTextField__SetText(*(wchar_t **)(self + 0x58),uVar3);
+  uVar3 = GetLocalizedText(
+      *(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)(self + 0x68) * 0x10));
+  FlashTextField__SetText(*(wchar_t **)(self + 0x58), uVar3);
   return;
 }
 
@@ -683,19 +668,21 @@ void __thiscall SMBCharSwitch__MoveLeft(SMBCharSwitch *self)
 {
   int iVar1;
   uint64_t uVar2;
-  
+
   iVar1 = *(int *)(self + 0x68) + -1;
   if (iVar1 < 0) {
     iVar1 = 0;
   }
   *(int *)(self + 0x68) = iVar1;
-  iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,(&DAT_00817108 /* R:0.0f */)[(long)iVar1 * 4]);
+  iVar1 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,
+                                               (&DAT_00817108 /* R:0.0f */)[(long)iVar1 * 4]);
   if (iVar1 != 1) {
-    FlashTextField__SetText(*(char **)(self + 0x58),&DAT_005c741a /* R:"??????" */);
+    FlashTextField__SetText(*(char **)(self + 0x58), &DAT_005c741a /* R:"??????" */);
     return;
   }
-  uVar2 = GetLocalizedText(*(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)(self + 0x68) * 0x10));
-  FlashTextField__SetText(*(wchar_t **)(self + 0x58),uVar2);
+  uVar2 = GetLocalizedText(
+      *(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)(self + 0x68) * 0x10));
+  FlashTextField__SetText(*(wchar_t **)(self + 0x58), uVar2);
   return;
 }
 
@@ -714,7 +701,7 @@ void __thiscall SMBCharSwitch__MoveRight(SMBCharSwitch *self)
   uint uVar1;
   int iVar2;
   uint64_t uVar3;
-  
+
   uVar1 = *(int *)(self + 0x68) + 1;
   if (0xc < uVar1) {
     uVar1 = 0xc;
@@ -727,18 +714,18 @@ void __thiscall SMBCharSwitch__MoveRight(SMBCharSwitch *self)
       iVar2 = *(int *)(self + 0x68);
       *(int *)(self + 0x68) = iVar2 + -1;
       iVar2 = (&DAT_00817108 /* R:0.0f */)[(long)(iVar2 + -1) * 4];
-    }
-    else {
+    } else {
       iVar2 = (&DAT_00817108 /* R:0.0f */)[(long)*(int *)(self + 0x68) * 4];
     }
   }
-  iVar2 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData,iVar2);
+  iVar2 = GSMBChapterData__IsCharacterUnlocked(SMBChapterData, iVar2);
   if (iVar2 != 1) {
-    FlashTextField__SetText(*(char **)(self + 0x58),&DAT_005c741a /* R:"??????" */);
+    FlashTextField__SetText(*(char **)(self + 0x58), &DAT_005c741a /* R:"??????" */);
     return;
   }
-  uVar3 = GetLocalizedText(*(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)(self + 0x68) * 0x10));
-  FlashTextField__SetText(*(wchar_t **)(self + 0x58),uVar3);
+  uVar3 = GetLocalizedText(
+      *(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)(self + 0x68) * 0x10));
+  FlashTextField__SetText(*(wchar_t **)(self + 0x58), uVar3);
   return;
 }
 
@@ -756,15 +743,16 @@ void __thiscall SMBCharSwitch__SelectionChanged(SMBCharSwitch *self)
 {
   int iVar1;
   uint64_t uVar2;
-  
-  iVar1 = GSMBChapterData__IsCharacterUnlocked
-                    (SMBChapterData,(&DAT_00817108 /* R:0.0f */)[(long)*(int *)(self + 0x68) * 4]);
+
+  iVar1 = GSMBChapterData__IsCharacterUnlocked(
+      SMBChapterData, (&DAT_00817108 /* R:0.0f */)[(long)*(int *)(self + 0x68) * 4]);
   if (iVar1 != 1) {
-    FlashTextField__SetText(*(char **)(self + 0x58),&DAT_005c741a /* R:"??????" */);
+    FlashTextField__SetText(*(char **)(self + 0x58), &DAT_005c741a /* R:"??????" */);
     return;
   }
-  uVar2 = GetLocalizedText(*(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)(self + 0x68) * 0x10));
-  FlashTextField__SetText(*(wchar_t **)(self + 0x58),uVar2);
+  uVar2 = GetLocalizedText(
+      *(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)(self + 0x68) * 0x10));
+  FlashTextField__SetText(*(wchar_t **)(self + 0x58), uVar2);
   return;
 }
 
@@ -782,17 +770,18 @@ void __thiscall SMBCharSwitch__LoadSelectedCharacter(SMBCharSwitch *self)
 {
   GSuperMeatBoy *pGVar1;
   int iVar2;
-  
-  iVar2 = GSMBChapterData__IsCharacterUnlocked
-                    (SMBChapterData,(&DAT_00817108 /* R:0.0f */)[(long)*(int *)(self + 0x68) * 4]);
+
+  iVar2 = GSMBChapterData__IsCharacterUnlocked(
+      SMBChapterData, (&DAT_00817108 /* R:0.0f */)[(long)*(int *)(self + 0x68) * 4]);
   pGVar1 = SuperMeatBoy;
   if (iVar2 != 1) {
     return;
   }
   *(uint32_t *)(self + 0x6c) = 1;
-  GSuperMeatBoy__DeferLoadCharactor(pGVar1,(&DAT_00817108 /* R:0.0f */)[(long)*(int *)(self + 0x68) * 4]);
-                    /* WARNING: Could not recover jumptable at 0x00505454. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  GSuperMeatBoy__DeferLoadCharactor(pGVar1,
+                                    (&DAT_00817108 /* R:0.0f */)[(long)*(int *)(self + 0x68) * 4]);
+  /* WARNING: Could not recover jumptable at 0x00505454. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(*(long *)self + 0x28))(self);
   return;
 }

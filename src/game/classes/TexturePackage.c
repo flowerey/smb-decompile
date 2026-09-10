@@ -18,7 +18,7 @@
  */
 /* TexturePackage__TexturePackage(TexturePackageCreate const*) */
 
-void __thiscall TexturePackage__TexturePackage(TexturePackage *self,TexturePackageCreate *arg1)
+void __thiscall TexturePackage__TexturePackage(TexturePackage *self, TexturePackageCreate *arg1)
 
 {
   void *pvVar1;
@@ -37,9 +37,9 @@ void __thiscall TexturePackage__TexturePackage(TexturePackage *self,TexturePacka
   uint32_t local_58;
   uint32_t local_54;
   uint8_t *local_50;
-  File local_48 [4];
+  File local_48[4];
   int local_44;
-  
+
   local_88 = *(uint64_t *)arg1;
   local_78 = 2;
   local_70 = 0;
@@ -51,33 +51,34 @@ void __thiscall TexturePackage__TexturePackage(TexturePackage *self,TexturePacka
   local_54 = 0;
   local_50 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
   local_80 = &DAT_005c328c /* R:u32=1811964530 */;
-  File__File(local_48,(tagFileCreation *)&local_88);
-                    /* try { // try from 005a19df to 005a1ae5 has its CatchHandler @ 005a1af9 */
-  File__ReadVariable(local_48,self,4);
+  File__File(local_48, (tagFileCreation *)&local_88);
+  /* try { // try from 005a19df to 005a1ae5 has its CatchHandler @ 005a1af9 */
+  File__ReadVariable(local_48, self, 4);
   pvVar1 = operator_new__((long)*(int *)self * 0x14);
   iVar2 = *(int *)self;
   *(void **)(self + 8) = pvVar1;
   if (0 < iVar2) {
     lVar4 = 0;
     iVar5 = 0;
-    while( true ) {
-      File__ReadVariable(local_48,(void *)((long)pvVar1 + lVar4),4);
-      File__ReadVariable(local_48,(void *)(lVar4 + *(long *)(self + 8) + 4),4);
-      File__ReadVariable(local_48,(void *)(lVar4 + *(long *)(self + 8) + 8),2);
-      File__ReadVariable(local_48,(void *)(lVar4 + *(long *)(self + 8) + 10),2);
-      File__ReadVariable(local_48,(void *)(lVar4 + *(long *)(self + 8) + 0xc),1);
-      File__ReadVariable(local_48,(void *)(lVar4 + *(long *)(self + 8) + 0x10),4);
+    while (true) {
+      File__ReadVariable(local_48, (void *)((long)pvVar1 + lVar4), 4);
+      File__ReadVariable(local_48, (void *)(lVar4 + *(long *)(self + 8) + 4), 4);
+      File__ReadVariable(local_48, (void *)(lVar4 + *(long *)(self + 8) + 8), 2);
+      File__ReadVariable(local_48, (void *)(lVar4 + *(long *)(self + 8) + 10), 2);
+      File__ReadVariable(local_48, (void *)(lVar4 + *(long *)(self + 8) + 0xc), 1);
+      File__ReadVariable(local_48, (void *)(lVar4 + *(long *)(self + 8) + 0x10), 4);
       iVar2 = *(int *)self;
       iVar5 = iVar5 + 1;
       lVar4 = lVar4 + 0x14;
-      if (iVar2 <= iVar5) break;
+      if (iVar2 <= iVar5)
+        break;
       pvVar1 = *(void **)(self + 8);
     }
   }
   uVar3 = local_44 + -4 + iVar2 * -0x11;
   pvVar1 = malloc((ulong)uVar3);
   *(void **)(self + 0x10) = pvVar1;
-  File__Read(local_48,pvVar1,uVar3);
+  File__Read(local_48, pvVar1, uVar3);
   File__File__005b7a70(local_48);
   return;
 }
@@ -110,7 +111,7 @@ void __thiscall TexturePackage__TexturePackage__005a1b10(TexturePackage *self)
  */
 /* TexturePackage__CreateTexture(int) */
 
-void __thiscall TexturePackage__CreateTexture(TexturePackage *self,int arg1)
+void __thiscall TexturePackage__CreateTexture(TexturePackage *self, int arg1)
 
 {
   uint *puVar1;
@@ -124,7 +125,7 @@ void __thiscall TexturePackage__CreateTexture(TexturePackage *self,int arg1)
   uint8_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   local_48 = 0;
   puVar1 = (uint *)(*(long *)(self + 8) + (long)arg1 * 0x14);
   local_34 = 0;
@@ -149,19 +150,19 @@ void __thiscall TexturePackage__CreateTexture(TexturePackage *self,int arg1)
  */
 /* TexturePackage__GetTextureData(int, TexturePackageTexture*) */
 
-void __thiscall
-TexturePackage__GetTextureData(TexturePackage *self,int arg1,TexturePackageTexture *arg2)
+void __thiscall TexturePackage__GetTextureData(TexturePackage *self, int arg1,
+                                               TexturePackageTexture *arg2)
 
 {
   long lVar1;
-  
+
   lVar1 = (long)arg1 * 0x14;
   arg2[4] = *(TexturePackageTexture *)(*(long *)(self + 8) + 0xc + lVar1);
   *(uint16_t *)arg2 = *(uint16_t *)(*(long *)(self + 8) + 8 + lVar1);
   *(uint16_t *)(arg2 + 2) = *(uint16_t *)(*(long *)(self + 8) + 10 + lVar1);
   *(uint32_t *)(arg2 + 8) = *(uint32_t *)(*(long *)(self + 8) + 0x10 + lVar1);
   *(ulong *)(arg2 + 0x10) =
-       ((ulong)*(uint *)(*(long *)(self + 8) + lVar1) + *(long *)(self + 0x10) + -4) -
-       (ulong)(uint)(*(int *)self * 0x11);
+      ((ulong) * (uint *)(*(long *)(self + 8) + lVar1) + *(long *)(self + 0x10) + -4) -
+      (ulong)(uint)(*(int *)self * 0x11);
   return;
 }

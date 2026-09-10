@@ -74,9 +74,9 @@ void __thiscall MeatBoy4Color__MeatBoy4Color__00465820(MeatBoy4Color *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FormatResourcePath("/Animations/gameboy.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,2);
+
+  uVar1 = FormatResourcePath("/Animations/gameboy.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 2);
   *(uint8_t ***)self = &PTR__MeatBoy4Color_005befb0;
   *(uint32_t *)(self + 0xa54) = 2;
   return;
@@ -91,13 +91,13 @@ void __thiscall MeatBoy4Color__MeatBoy4Color__00465820(MeatBoy4Color *self)
  */
 /* MeatBoy4Color__MeatBoy4Color__00465820(MeatBoyCharactor*, int) */
 
-void __thiscall
-MeatBoy4Color__MeatBoy4Color__00465820(MeatBoy4Color *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall MeatBoy4Color__MeatBoy4Color__00465820(MeatBoy4Color *self, MeatBoyCharactor *arg1,
+                                                       int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__MeatBoy4Color_005befb0;
-                    /* try { // try from 00465851 to 00465855 has its CatchHandler @ 00465869 */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 00465851 to 00465855 has its CatchHandler @ 00465869 */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   return;
 }

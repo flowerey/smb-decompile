@@ -22,7 +22,7 @@ void __thiscall VertexBuffer__VertexBuffer__005a6360(VertexBuffer *self)
 
 {
   *(uint8_t ***)self = &PTR__VertexBuffer_005ddd90;
-                    /* try { // try from 005a6322 to 005a6342 has its CatchHandler @ 005a634c */
+  /* try { // try from 005a6322 to 005a6342 has its CatchHandler @ 005a634c */
   TGraphics__AcquireDevice();
   _uNumVertexBuffers = _uNumVertexBuffers + -1;
   gfxDestroyVertexBuffer(self + 0x28);
@@ -44,15 +44,15 @@ void __thiscall VertexBuffer__VertexBuffer__005a6360(VertexBuffer *self)
 
 {
   void *in_RSI;
-  
+
   *(uint8_t ***)self = &PTR__VertexBuffer_005ddd90;
-                    /* try { // try from 005a6372 to 005a6392 has its CatchHandler @ 005a63a3 */
+  /* try { // try from 005a6372 to 005a6392 has its CatchHandler @ 005a63a3 */
   TGraphics__AcquireDevice();
   _uNumVertexBuffers = _uNumVertexBuffers + -1;
   gfxDestroyVertexBuffer(self + 0x28);
   TGraphics__ReleaseDevice();
   *(uint8_t ***)self = &PTR__BaseResource_005dbe30;
-  BaseResource__operator_delete((BaseResource *)self,in_RSI);
+  BaseResource__operator_delete((BaseResource *)self, in_RSI);
   return;
 }
 
@@ -84,14 +84,14 @@ void __thiscall VertexBuffer__VertexBuffer__005a63c0(VertexBuffer *self)
  */
 /* VertexBuffer__Lock(void**, unsigned int, unsigned long) */
 
-void __thiscall VertexBuffer__Lock(VertexBuffer *self,void **arg1,uint arg2,ulong arg3)
+void __thiscall VertexBuffer__Lock(VertexBuffer *self, void **arg1, uint arg2, ulong arg3)
 
 {
   TGraphics__AcquireDevice();
   if (arg3 == 0) {
     arg3 = *(ulong *)(self + 0x10);
   }
-  gfxLockVertexBuffer(*(tagGLVertexBuffer **)(self + 0x28),arg1,arg2,arg3);
+  gfxLockVertexBuffer(*(tagGLVertexBuffer **)(self + 0x28), arg1, arg2, arg3);
   return;
 }
 
@@ -121,7 +121,7 @@ void __thiscall VertexBuffer__Unlock(VertexBuffer *self)
  */
 /* VertexBuffer__Realloc(unsigned long) */
 
-void __thiscall VertexBuffer__Realloc(VertexBuffer *self,ulong arg1)
+void __thiscall VertexBuffer__Realloc(VertexBuffer *self, ulong arg1)
 
 {
   ulong local_48;
@@ -131,7 +131,7 @@ void __thiscall VertexBuffer__Realloc(VertexBuffer *self,ulong arg1)
   uint32_t local_30;
   uint32_t local_2c;
   uint32_t local_28;
-  
+
   TGraphics__AcquireDevice();
   if (*(ulong *)(self + 0x10) < arg1) {
     local_40 = *(uint16_t *)(self + 0x18);
@@ -141,7 +141,7 @@ void __thiscall VertexBuffer__Realloc(VertexBuffer *self,ulong arg1)
     local_2c = 1;
     local_28 = 0;
     local_48 = arg1;
-    gfxReallocVertexBuffer(self + 0x28,&local_48);
+    gfxReallocVertexBuffer(self + 0x28, &local_48);
     *(ulong *)(self + 0x10) = arg1;
   }
   TGraphics__ReleaseDevice();
@@ -157,7 +157,7 @@ void __thiscall VertexBuffer__Realloc(VertexBuffer *self,ulong arg1)
  */
 /* VertexBuffer__Replicate(unsigned int) */
 
-void __thiscall VertexBuffer__Replicate(VertexBuffer *self,uint arg1)
+void __thiscall VertexBuffer__Replicate(VertexBuffer *self, uint arg1)
 
 {
   *(uint *)(self + 0x20) = arg1;

@@ -28,7 +28,7 @@ void __thiscall TGraphics__GPUState_GPUState(GPUState *self)
   GPUState *pGVar5;
   bool bVar6;
   ulong uVar4;
-  
+
   uVar4 = 0x3a8;
   iVar2 = 0x3a8;
   bVar6 = ((ulong)self & 1) != 0;
@@ -41,8 +41,7 @@ void __thiscall TGraphics__GPUState_GPUState(GPUState *self)
   }
   if (((ulong)pGVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pGVar5 = 0xffff;
     pGVar5 = pGVar5 + 2;
     uVar3 = iVar2 - 2;
@@ -80,8 +79,7 @@ void __thiscall TGraphics__GPUState_GPUState(GPUState *self)
   }
   if (((ulong)pGVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pGVar5 = 0;
     pGVar5 = pGVar5 + 2;
     uVar3 = iVar2 - 2;
@@ -119,8 +117,7 @@ void __thiscall TGraphics__GPUState_GPUState(GPUState *self)
   }
   if (((ulong)pGVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pGVar5 = 0;
     pGVar5 = pGVar5 + 2;
     uVar3 = iVar2 - 2;
@@ -171,7 +168,7 @@ void __thiscall TGraphics__GPUState_Reset(GPUState *self)
   GPUState *pGVar5;
   bool bVar6;
   ulong uVar4;
-  
+
   uVar4 = 0x3a8;
   iVar2 = 0x3a8;
   bVar6 = ((ulong)self & 1) != 0;
@@ -184,8 +181,7 @@ void __thiscall TGraphics__GPUState_Reset(GPUState *self)
   }
   if (((ulong)pGVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pGVar5 = 0xffff;
     pGVar5 = pGVar5 + 2;
     uVar3 = iVar2 - 2;
@@ -223,8 +219,7 @@ void __thiscall TGraphics__GPUState_Reset(GPUState *self)
   }
   if (((ulong)pGVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pGVar5 = 0;
     pGVar5 = pGVar5 + 2;
     uVar3 = iVar2 - 2;
@@ -262,8 +257,7 @@ void __thiscall TGraphics__GPUState_Reset(GPUState *self)
   }
   if (((ulong)pGVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pGVar5 = 0;
     pGVar5 = pGVar5 + 2;
     uVar3 = iVar2 - 2;
@@ -315,7 +309,7 @@ void __thiscall TGraphics__TGraphics(TGraphics *self)
   TGraphics *pTVar6;
   bool bVar7;
   ulong uVar4;
-  
+
   *(uint32_t *)(self + 0x348) = 0;
   pTVar5 = self + 0x350;
   uVar4 = 0x3a8;
@@ -329,8 +323,7 @@ void __thiscall TGraphics__TGraphics(TGraphics *self)
   }
   if (((ulong)pTVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pTVar5 = 0xffff;
     pTVar5 = (TGraphics *)((long)pTVar5 + 2);
     uVar3 = iVar2 - 2;
@@ -368,8 +361,7 @@ void __thiscall TGraphics__TGraphics(TGraphics *self)
   }
   if (((ulong)pTVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pTVar5 = 0;
     pTVar5 = (TGraphics *)((long)pTVar5 + 2);
     uVar3 = iVar2 - 2;
@@ -407,8 +399,7 @@ void __thiscall TGraphics__TGraphics(TGraphics *self)
   }
   if (((ulong)pTVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pTVar5 = 0;
     pTVar5 = (TGraphics *)((long)pTVar5 + 2);
     uVar3 = iVar2 - 2;
@@ -450,8 +441,7 @@ void __thiscall TGraphics__TGraphics(TGraphics *self)
   }
   if (((ulong)pTVar6 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pTVar6 = 0xffff;
     pTVar6 = pTVar6 + 2;
     uVar3 = iVar2 - 2;
@@ -489,8 +479,7 @@ void __thiscall TGraphics__TGraphics(TGraphics *self)
   }
   if (((ulong)pTVar6 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pTVar6 = 0;
     pTVar6 = pTVar6 + 2;
     uVar3 = iVar2 - 2;
@@ -528,8 +517,7 @@ void __thiscall TGraphics__TGraphics(TGraphics *self)
   }
   if (((ulong)pTVar6 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pTVar6 = 0;
     pTVar6 = pTVar6 + 2;
     uVar3 = iVar2 - 2;
@@ -588,7 +576,7 @@ void __thiscall TGraphics__TGraphics__00588560(TGraphics *self)
 
 {
   OpenGLGraphics *pOVar1;
-  
+
   pOVar1 = GLGraphics;
   if (GLGraphics != (OpenGLGraphics *)0x0) {
     OpenGLGraphics__OpenGLGraphics__005608f0(GLGraphics);
@@ -637,7 +625,7 @@ void TGraphics__ReleaseDevice(void)
  */
 /* TGraphics__ResetDevice(tagResetDeviceParams const*) */
 
-void __thiscall TGraphics__ResetDevice(TGraphics *self,tagResetDeviceParams *arg1)
+void __thiscall TGraphics__ResetDevice(TGraphics *self, tagResetDeviceParams *arg1)
 
 {
   long lVar1;
@@ -647,7 +635,7 @@ void __thiscall TGraphics__ResetDevice(TGraphics *self,tagResetDeviceParams *arg
   TGraphics *pTVar5;
   bool bVar6;
   byte bVar7;
-  
+
   bVar7 = 0;
   if ((gfxCurrState == 4) || (gfxCurrState == 1)) {
     pTVar5 = self + 0x6f8;
@@ -857,8 +845,7 @@ void __thiscall TGraphics__ResetDevice(TGraphics *self,tagResetDeviceParams *arg
     TResourceCreator__DestroyResources((TResourceCreator *)ResourceCreator);
     ResourcePool__ReleaseAll(Resources);
     iVar2 = gfxResetDevice(arg1);
-  }
-  else {
+  } else {
     iVar2 = gfxResetDevice(arg1);
   }
   if (iVar2 == 1) {
@@ -968,12 +955,12 @@ void __thiscall TGraphics__ResetDevice(TGraphics *self,tagResetDeviceParams *arg
     *(uint32_t *)(self + 0x668) = 1;
     *(uint64_t *)(self + 0x6f0) = 0;
     gfxCurrState = 0;
-    (**(code **)(**(long **)(lVar1 + 0x30) + 0x28))(*(long **)(lVar1 + 0x30),0,1);
+    (**(code **)(**(long **)(lVar1 + 0x30) + 0x28))(*(long **)(lVar1 + 0x30), 0, 1);
     *(TGraphics **)(self + 0xaa0) = self + 0x6f8;
     return;
   }
   gfxCurrState = 2;
-  (**(code **)(**(long **)(Engine + 0x30) + 0x28))(*(long **)(Engine + 0x30),1,1);
+  (**(code **)(**(long **)(Engine + 0x30) + 0x28))(*(long **)(Engine + 0x30), 1, 1);
   *(TGraphics **)(self + 0xaa0) = self + 0x6f8;
   return;
 }
@@ -987,10 +974,10 @@ void __thiscall TGraphics__ResetDevice(TGraphics *self,tagResetDeviceParams *arg
  */
 /* TGraphics__Clear(ColorTemplate<float> const&, unsigned int) */
 
-void __thiscall TGraphics__Clear(TGraphics *self,ColorTemplate *arg1,uint arg2)
+void __thiscall TGraphics__Clear(TGraphics *self, ColorTemplate *arg1, uint arg2)
 
 {
-  gfxClear(arg1,arg2);
+  gfxClear(arg1, arg2);
   return;
 }
 
@@ -1019,13 +1006,13 @@ void TGraphics__Present(void)
   float fVar11;
   int iStack_60;
   int iStack_5c;
-  int aiStack_58 [4];
-  int aiStack_48 [6];
-  
+  int aiStack_58[4];
+  int aiStack_48[6];
+
   iVar3 = *(int *)(GLGraphics + 2);
   uVar4 = *GLGraphics;
   if (iVar3 != 0) {
-    SDL_GL_GetDrawableSize(uVar4,aiStack_58,aiStack_48);
+    SDL_GL_GetDrawableSize(uVar4, aiStack_58, aiStack_48);
     fVar7 = (float)aiStack_48[0];
     fVar9 = (float)aiStack_58[0];
     uVar1 = *(ushort *)(Window + 8);
@@ -1038,25 +1025,24 @@ void TGraphics__Present(void)
       iVar6 = 0;
       iStack_60 = aiStack_58[0];
       iStack_5c = aiStack_48[0];
-    }
-    else if (fVar10 / fVar11 <= fVar9 / fVar7) {
+    } else if (fVar10 / fVar11 <= fVar9 / fVar7) {
       iVar5 = 0;
       iStack_5c = aiStack_48[0];
       dVar8 = (double)SDL_ceil((double)(((float)aiStack_48[0] / fVar11) * fVar10));
       iStack_60 = (int)dVar8;
       iVar6 = (aiStack_58[0] - iStack_60) / 2;
-    }
-    else {
+    } else {
       iVar6 = 0;
       iStack_60 = aiStack_58[0];
       dVar8 = (double)SDL_ceil((double)(((float)aiStack_58[0] / fVar10) * fVar11));
       iStack_5c = (int)dVar8;
       iVar5 = (aiStack_48[0] - iStack_5c) / 2;
     }
-    (*pglfn_glBindFramebufferEXT)(0x8ca8,iVar3);
-    (*pglfn_glBindFramebufferEXT)(0x8ca9,0);
-    (*pglfn_glBlitFramebufferEXT)(0,0,uVar1,uVar2,iVar6,iVar5,iStack_60,iStack_5c,0x4000,0x2601);
-    (*pglfn_glBindFramebufferEXT)(0x8d40,0);
+    (*pglfn_glBindFramebufferEXT)(0x8ca8, iVar3);
+    (*pglfn_glBindFramebufferEXT)(0x8ca9, 0);
+    (*pglfn_glBlitFramebufferEXT)(0, 0, uVar1, uVar2, iVar6, iVar5, iStack_60, iStack_5c, 0x4000,
+                                  0x2601);
+    (*pglfn_glBindFramebufferEXT)(0x8d40, 0);
   }
   SDL_GL_SwapWindow(uVar4);
   iVar6 = gfxPresent__frametime + 0xb;
@@ -1065,9 +1051,9 @@ void TGraphics__Present(void)
   } while (0 < iVar6 - iVar5);
   gfxPresent__frametime = iVar6;
   if (iVar3 != 0) {
-    (*pglfn_glClearColor)(0,0,0);
+    (*pglfn_glClearColor)(0, 0, 0);
     (*pglfn_glClear)(0x4000);
-    (*pglfn_glBindFramebufferEXT)(0x8d40,iVar3);
+    (*pglfn_glBindFramebufferEXT)(0x8d40, iVar3);
   }
   return;
 }
@@ -1081,7 +1067,7 @@ void TGraphics__Present(void)
  */
 /* TGraphics__BindRenderTarget(Texture*) */
 
-void __thiscall TGraphics__BindRenderTarget(TGraphics *self,Texture *arg1)
+void __thiscall TGraphics__BindRenderTarget(TGraphics *self, Texture *arg1)
 
 {
   if (*(long *)(self + 0xaa8) != 0) {
@@ -1141,7 +1127,7 @@ void __thiscall TGraphics__RenderToBackBuffer(TGraphics *self)
  */
 /* TGraphics__SetCamera(Camera*) */
 
-void __thiscall TGraphics__SetCamera(TGraphics *self,Camera *arg1)
+void __thiscall TGraphics__SetCamera(TGraphics *self, Camera *arg1)
 
 {
   *(Camera **)(*(long *)(self + 0xaa0) + 0x3a0) = arg1;
@@ -1157,7 +1143,7 @@ void __thiscall TGraphics__SetCamera(TGraphics *self,Camera *arg1)
  */
 /* TGraphics__SetActiveGPUBlock(TGraphics__GPUState) */
 
-void __thiscall TGraphics__SetActiveGPUBlock(TGraphics *self,GPUState *arg1)
+void __thiscall TGraphics__SetActiveGPUBlock(TGraphics *self, GPUState *arg1)
 
 {
   if (arg1 != (GPUState *)0x0) {
@@ -1177,14 +1163,13 @@ void __thiscall TGraphics__SetActiveGPUBlock(TGraphics *self,GPUState *arg1)
  */
 /* TGraphics__SetMatrix(tagMatrixType, Matrix4x4 const*) */
 
-void __thiscall TGraphics__SetMatrix(TGraphics *self,int arg2,Matrix4x4 *arg3)
+void __thiscall TGraphics__SetMatrix(TGraphics *self, int arg2, Matrix4x4 *arg3)
 
 {
   if (arg3 == (Matrix4x4 *)0x0) {
     Matrix4x4__Identity((Matrix4x4 *)(self + (long)arg2 * 0x40));
-  }
-  else {
-    Matrix4x4__operator_assign((Matrix4x4 *)(self + (long)arg2 * 0x40),arg3);
+  } else {
+    Matrix4x4__operator_assign((Matrix4x4 *)(self + (long)arg2 * 0x40), arg3);
   }
   *(uint32_t *)(*(long *)(self + 0xaa0) + 0x398) = 1;
   return;
@@ -1199,7 +1184,7 @@ void __thiscall TGraphics__SetMatrix(TGraphics *self,int arg2,Matrix4x4 *arg3)
  */
 /* TGraphics__GetMatrix(tagMatrixType) */
 
-TGraphics * __thiscall TGraphics__GetMatrix(TGraphics *self,int arg2)
+TGraphics *__thiscall TGraphics__GetMatrix(TGraphics *self, int arg2)
 
 {
   *(uint32_t *)(*(long *)(self + 0xaa0) + 0x398) = 1;
@@ -1221,15 +1206,15 @@ void __thiscall TGraphics__RecalculatePushCacheMatrix(TGraphics *self)
   Matrix4x4 *this_00;
   long lVar1;
   int iVar2;
-  
+
   this_00 = (Matrix4x4 *)(self + 0x40);
-  Matrix4x4__operator_assign(this_00,(Matrix4x4 *)&matIdentity);
+  Matrix4x4__operator_assign(this_00, (Matrix4x4 *)&matIdentity);
   iVar2 = *(int *)(self + 0x340) + -1;
   if (-1 < iVar2) {
     do {
       lVar1 = (long)iVar2;
       iVar2 = iVar2 + -1;
-      Matrix4x4__Multiply(this_00,this_00,(Matrix4x4 *)(self + (lVar1 + 4) * 0x40));
+      Matrix4x4__Multiply(this_00, this_00, (Matrix4x4 *)(self + (lVar1 + 4) * 0x40));
     } while (iVar2 != -1);
   }
   return;
@@ -1244,26 +1229,25 @@ void __thiscall TGraphics__RecalculatePushCacheMatrix(TGraphics *self)
  */
 /* TGraphics__PushMatrix(tagMatrixType) */
 
-void __thiscall TGraphics__PushMatrix(TGraphics *self,int arg2)
+void __thiscall TGraphics__PushMatrix(TGraphics *self, int arg2)
 
 {
   Matrix4x4 *this_00;
   long lVar1;
   int iVar2;
-  
+
   this_00 = (Matrix4x4 *)(self + 0x40);
   iVar2 = *(int *)(self + 0x340);
   *(int *)(self + 0x340) = iVar2 + 1;
-  Matrix4x4__operator_assign
-            ((Matrix4x4 *)(self + ((long)iVar2 + 4) * 0x40),
-             (Matrix4x4 *)(self + (long)arg2 * 0x40));
-  Matrix4x4__operator_assign(this_00,(Matrix4x4 *)&matIdentity);
+  Matrix4x4__operator_assign((Matrix4x4 *)(self + ((long)iVar2 + 4) * 0x40),
+                             (Matrix4x4 *)(self + (long)arg2 * 0x40));
+  Matrix4x4__operator_assign(this_00, (Matrix4x4 *)&matIdentity);
   iVar2 = *(int *)(self + 0x340) + -1;
   if (-1 < iVar2) {
     do {
       lVar1 = (long)iVar2;
       iVar2 = iVar2 + -1;
-      Matrix4x4__Multiply(this_00,this_00,(Matrix4x4 *)(self + (lVar1 + 4) * 0x40));
+      Matrix4x4__Multiply(this_00, this_00, (Matrix4x4 *)(self + (lVar1 + 4) * 0x40));
     } while (iVar2 != -1);
   }
   return;
@@ -1284,20 +1268,20 @@ void __thiscall TGraphics__PopMatrix(TGraphics *self)
   Matrix4x4 *this_00;
   long lVar1;
   int iVar2;
-  
+
   this_00 = (Matrix4x4 *)(self + 0x40);
   iVar2 = 0;
   if (0 < *(int *)(self + 0x340)) {
     iVar2 = *(int *)(self + 0x340) + -1;
   }
   *(int *)(self + 0x340) = iVar2;
-  Matrix4x4__operator_assign(this_00,(Matrix4x4 *)&matIdentity);
+  Matrix4x4__operator_assign(this_00, (Matrix4x4 *)&matIdentity);
   iVar2 = *(int *)(self + 0x340) + -1;
   if (-1 < iVar2) {
     do {
       lVar1 = (long)iVar2;
       iVar2 = iVar2 + -1;
-      Matrix4x4__Multiply(this_00,this_00,(Matrix4x4 *)(self + (lVar1 + 4) * 0x40));
+      Matrix4x4__Multiply(this_00, this_00, (Matrix4x4 *)(self + (lVar1 + 4) * 0x40));
     } while (iVar2 != -1);
   }
   return;
@@ -1328,7 +1312,7 @@ void __thiscall TGraphics__ResetMatricies(TGraphics *self)
  */
 /* TGraphics__SetTexture(unsigned char, Texture*) */
 
-uint64_t __thiscall TGraphics__SetTexture(TGraphics *self,uchar arg1,Texture *arg2)
+uint64_t __thiscall TGraphics__SetTexture(TGraphics *self, uchar arg1, Texture *arg2)
 
 {
   *(Texture **)(*(long *)(self + 0xaa0) + 0x98) = arg2;
@@ -1347,11 +1331,10 @@ uint64_t __thiscall TGraphics__SetTexture(TGraphics *self,uchar arg1,Texture *ar
  */
 /* TGraphics__SetSamplerState(unsigned char, unsigned char, unsigned int) */
 
-void __thiscall TGraphics__SetSamplerState(TGraphics *self,uchar arg1,uchar arg2,uint arg3)
+void __thiscall TGraphics__SetSamplerState(TGraphics *self, uchar arg1, uchar arg2, uint arg3)
 
 {
-  *(uint *)(*(long *)(self + 0xaa0) + 4 + ((ulong)arg2 + 0x48 + (ulong)arg1 * 9) * 4) =
-       arg3;
+  *(uint *)(*(long *)(self + 0xaa0) + 4 + ((ulong)arg2 + 0x48 + (ulong)arg1 * 9) * 4) = arg3;
   return;
 }
 
@@ -1364,7 +1347,7 @@ void __thiscall TGraphics__SetSamplerState(TGraphics *self,uchar arg1,uchar arg2
  */
 /* TGraphics__SetRenderState(unsigned char, unsigned int) */
 
-void __thiscall TGraphics__SetRenderState(TGraphics *self,uchar arg1,uint arg2)
+void __thiscall TGraphics__SetRenderState(TGraphics *self, uchar arg1, uint arg2)
 
 {
   *(uint *)(*(long *)(self + 0xaa0) + 0xf0 + (ulong)arg1 * 4) = arg2;
@@ -1380,7 +1363,7 @@ void __thiscall TGraphics__SetRenderState(TGraphics *self,uchar arg1,uint arg2)
  */
 /* TGraphics__SetVertexBuffer(unsigned char, VertexBuffer const*) */
 
-void __thiscall TGraphics__SetVertexBuffer(TGraphics *self,uchar arg1,VertexBuffer *arg2)
+void __thiscall TGraphics__SetVertexBuffer(TGraphics *self, uchar arg1, VertexBuffer *arg2)
 
 {
   *(VertexBuffer **)(*(long *)(self + 0xaa0) + (ulong)arg1 * 8) = arg2;
@@ -1396,7 +1379,7 @@ void __thiscall TGraphics__SetVertexBuffer(TGraphics *self,uchar arg1,VertexBuff
  */
 /* TGraphics__SetIndexBuffer(IndexBuffer const*) */
 
-void __thiscall TGraphics__SetIndexBuffer(TGraphics *self,IndexBuffer *arg1)
+void __thiscall TGraphics__SetIndexBuffer(TGraphics *self, IndexBuffer *arg1)
 
 {
   *(IndexBuffer **)(*(long *)(self + 0xaa0) + 0x80) = arg1;
@@ -1412,7 +1395,7 @@ void __thiscall TGraphics__SetIndexBuffer(TGraphics *self,IndexBuffer *arg1)
  */
 /* TGraphics__SetVertexDeclaration(VertexDeclaration const*) */
 
-void __thiscall TGraphics__SetVertexDeclaration(TGraphics *self,VertexDeclaration *arg1)
+void __thiscall TGraphics__SetVertexDeclaration(TGraphics *self, VertexDeclaration *arg1)
 
 {
   *(VertexDeclaration **)(*(long *)(self + 0xaa0) + 0xd8) = arg1;
@@ -1428,11 +1411,10 @@ void __thiscall TGraphics__SetVertexDeclaration(TGraphics *self,VertexDeclaratio
  */
 /* TGraphics__SetPixelColorConstant(tagColorConstantRegister, ColorTemplate<float> const&) */
 
-void __thiscall
-TGraphics__SetPixelColorConstant(uint64_t arg1,uint32_t arg2,uint64_t arg3)
+void __thiscall TGraphics__SetPixelColorConstant(uint64_t arg1, uint32_t arg2, uint64_t arg3)
 
 {
-  gfxSetColorConstant(arg2,arg3);
+  gfxSetColorConstant(arg2, arg3);
   return;
 }
 
@@ -1445,7 +1427,7 @@ TGraphics__SetPixelColorConstant(uint64_t arg1,uint32_t arg2,uint64_t arg3)
  */
 /* TGraphics__SetFogParameters(FogParams const&) */
 
-void __thiscall TGraphics__SetFogParameters(TGraphics *self,FogParams *arg1)
+void __thiscall TGraphics__SetFogParameters(TGraphics *self, FogParams *arg1)
 
 {
   gfxSetFogParams(arg1);
@@ -1461,9 +1443,8 @@ void __thiscall TGraphics__SetFogParameters(TGraphics *self,FogParams *arg1)
  */
 /* TGraphics__SetPixelOutputParams(float, float, float, float) */
 
-void __thiscall
-TGraphics__SetPixelOutputParams
-          (TGraphics *self,float arg1,float arg2,float arg3,float arg4)
+void __thiscall TGraphics__SetPixelOutputParams(TGraphics *self, float arg1, float arg2, float arg3,
+                                                float arg4)
 
 {
   *(float *)(*(long *)(self + 0xaa0) + 0x244) = arg1;
@@ -1483,14 +1464,13 @@ TGraphics__SetPixelOutputParams
 /* TGraphics__AddPixelStage(tagColorChannelSource, tagColorChannelSourceGen, tagColorChannelSource,
    tagColorChannelSourceGen, tagColorChannelOp, tagColorChannelOutput, int) */
 
-void __thiscall
-TGraphics__AddPixelStage
-          (TGraphics *self,uint32_t arg2,uint32_t arg3,uint32_t arg4,
-          uint32_t arg5,uint32_t arg6,uint32_t arg7,int arg8)
+void __thiscall TGraphics__AddPixelStage(TGraphics *self, uint32_t arg2, uint32_t arg3,
+                                         uint32_t arg4, uint32_t arg5, uint32_t arg6, uint32_t arg7,
+                                         int arg8)
 
 {
   long lVar1;
-  
+
   if (arg8 == -1) {
     arg8 = *(int *)(*(long *)(self + 0xaa0) + 0x254);
     *(int *)(*(long *)(self + 0xaa0) + 0x254) = arg8 + 1;
@@ -1531,10 +1511,8 @@ void __thiscall TGraphics__ResetPixelStages(TGraphics *self)
 /* TGraphics__SetMasterPixelStage(tagColorChannelSource, tagColorChannelSourceGen,
    tagColorChannelSource, tagColorChannelSourceGen, tagColorChannelOp) */
 
-void __thiscall
-TGraphics__SetMasterPixelStage
-          (TGraphics *self,uint32_t arg2,uint32_t arg3,uint32_t arg4,
-          uint32_t arg5,uint32_t arg6)
+void __thiscall TGraphics__SetMasterPixelStage(TGraphics *self, uint32_t arg2, uint32_t arg3,
+                                               uint32_t arg4, uint32_t arg5, uint32_t arg6)
 
 {
   *(uint32_t *)(*(long *)(self + 0xaa0) + 0x32c) = arg6;
@@ -1628,11 +1606,10 @@ void __thiscall TGraphics__ResetTexCoordGen(TGraphics *self)
  */
 /* TGraphics__SetTextCoordMatrix(tagTexCoordMatrix, Matrix4x4 const*) */
 
-void __thiscall
-TGraphics__SetTextCoordMatrix(uint64_t arg1,uint32_t arg2,uint64_t arg3)
+void __thiscall TGraphics__SetTextCoordMatrix(uint64_t arg1, uint32_t arg2, uint64_t arg3)
 
 {
-  gfxSetTexCoordMatrix(arg2,arg3);
+  gfxSetTexCoordMatrix(arg2, arg3);
   return;
 }
 
@@ -1646,20 +1623,18 @@ TGraphics__SetTextCoordMatrix(uint64_t arg1,uint32_t arg2,uint64_t arg3)
 /* TGraphics__AddTextureCoordGen(tagTexCoordGenSource, tagTexCoordGenFunc, tagTexCoordGenParam, int)
     */
 
-void __thiscall
-TGraphics__AddTextureCoordGen
-          (TGraphics *self,uint32_t arg2,uint32_t arg3,uint32_t arg4,int arg5)
+void __thiscall TGraphics__AddTextureCoordGen(TGraphics *self, uint32_t arg2, uint32_t arg3,
+                                              uint32_t arg4, int arg5)
 
 {
   long lVar1;
   long lVar2;
-  
+
   if (arg5 == -1) {
     arg5 = *(int *)(*(long *)(self + 0xaa0) + 0x334);
     *(int *)(*(long *)(self + 0xaa0) + 0x334) = arg5 + 1;
     lVar2 = *(long *)(self + 0xaa0);
-  }
-  else {
+  } else {
     lVar2 = *(long *)(self + 0xaa0);
     if (*(int *)(lVar2 + 0x334) <= arg5) {
       *(int *)(lVar2 + 0x334) = arg5 + 1;
@@ -1682,7 +1657,7 @@ TGraphics__AddTextureCoordGen
  */
 /* TGraphics__Draw(VertexStream*, IndexBuffer*) */
 
-void __thiscall TGraphics__Draw(TGraphics *self,VertexStream *arg1,IndexBuffer *arg2)
+void __thiscall TGraphics__Draw(TGraphics *self, VertexStream *arg1, IndexBuffer *arg2)
 
 {
   long lVar1;
@@ -1696,103 +1671,87 @@ void __thiscall TGraphics__Draw(TGraphics *self,VertexStream *arg1,IndexBuffer *
   uint32_t unaff_R15D;
   uint32_t local_50;
   uint32_t local_4c;
-  AutoLockSection local_48 [24];
-  
-  AutoLockSection__AutoLockSection(local_48,(CriticalSection *)GFXDrawSection);
+  AutoLockSection local_48[24];
+
+  AutoLockSection__AutoLockSection(local_48, (CriticalSection *)GFXDrawSection);
   if (arg1[0xc] == (VertexStream)0x0) {
     **(uint64_t **)(self + 0xaa0) = 0;
-  }
-  else {
+  } else {
     **(uint64_t **)(self + 0xaa0) = *(uint64_t *)(arg1 + 0x20);
   }
   if ((byte)arg1[0xc] < 2) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 8) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 8) = *(uint64_t *)(arg1 + 0x28);
   }
   if ((byte)arg1[0xc] < 3) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x10) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x10) = *(uint64_t *)(arg1 + 0x30);
   }
   if ((byte)arg1[0xc] < 4) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x18) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x18) = *(uint64_t *)(arg1 + 0x38);
   }
   if ((byte)arg1[0xc] < 5) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x20) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x20) = *(uint64_t *)(arg1 + 0x40);
   }
   if ((byte)arg1[0xc] < 6) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x28) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x28) = *(uint64_t *)(arg1 + 0x48);
   }
   if ((byte)arg1[0xc] < 7) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x30) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x30) = *(uint64_t *)(arg1 + 0x50);
   }
   if ((byte)arg1[0xc] < 8) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x38) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x38) = *(uint64_t *)(arg1 + 0x58);
   }
   if ((byte)arg1[0xc] < 9) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x40) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x40) = *(uint64_t *)(arg1 + 0x60);
   }
   if ((byte)arg1[0xc] < 10) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x48) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x48) = *(uint64_t *)(arg1 + 0x68);
   }
   if ((byte)arg1[0xc] < 0xb) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x50) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x50) = *(uint64_t *)(arg1 + 0x70);
   }
   if ((byte)arg1[0xc] < 0xc) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x58) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x58) = *(uint64_t *)(arg1 + 0x78);
   }
   if ((byte)arg1[0xc] < 0xd) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x60) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x60) = *(uint64_t *)(arg1 + 0x80);
   }
   if ((byte)arg1[0xc] < 0xe) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x68) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x68) = *(uint64_t *)(arg1 + 0x88);
   }
   if ((byte)arg1[0xc] < 0xf) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x70) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x70) = *(uint64_t *)(arg1 + 0x90);
   }
   if ((byte)arg1[0xc] < 0x10) {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x78) = 0;
-  }
-  else {
+  } else {
     *(uint64_t *)(*(long *)(self + 0xaa0) + 0x78) = *(uint64_t *)(arg1 + 0x98);
   }
   *(VertexStream *)(*(long *)(self + 0xaa0) + 0xe0) = arg1[0xc];
@@ -1806,7 +1765,7 @@ void __thiscall TGraphics__Draw(TGraphics *self,VertexStream *arg1,IndexBuffer *
   pGPUStateDesired = lVar4;
   bVar2 = false;
   if (((*(int *)(lVar4 + 0x318) == 1) && (bVar2 = false, *(int *)(lVar4 + 0x31c) != 0)) &&
-     (bVar2 = false, *(int *)(lVar4 + 0x324) != 0)) {
+      (bVar2 = false, *(int *)(lVar4 + 0x324) != 0)) {
     iVar5 = *(int *)(lVar4 + 0x254);
     lVar1 = lVar4 + 0x250 + (long)(iVar5 + -1) * 0x18;
     unaff_R13D = *(uint32_t *)(lVar1 + 8);
@@ -1819,13 +1778,11 @@ void __thiscall TGraphics__Draw(TGraphics *self,VertexStream *arg1,IndexBuffer *
       *(uint32_t *)(lVar1 + 0x1c) = 0;
       iVar5 = *(int *)(lVar4 + 0x254);
       lVar3 = *(long *)(self + 0xaa0);
-    }
-    else if (unaff_R12D == 1) {
+    } else if (unaff_R12D == 1) {
       *(uint32_t *)(lVar1 + 0x1c) = 4;
       iVar5 = *(int *)(lVar4 + 0x254);
       lVar3 = *(long *)(self + 0xaa0);
-    }
-    else {
+    } else {
       lVar3 = lVar4;
       if (unaff_R12D == 2) {
         *(uint32_t *)(lVar1 + 0x1c) = 5;
@@ -1842,8 +1799,8 @@ void __thiscall TGraphics__Draw(TGraphics *self,VertexStream *arg1,IndexBuffer *
     lVar4 = *(long *)(self + 0xaa0);
   }
   if (((*(char *)(lVar4 + 0xe0) != '\0') && (*(int *)(lVar4 + 0xe8) != 0)) &&
-     (*(int *)(lVar4 + 0xe4) != 0)) {
-                    /* try { // try from 0058994e to 00589952 has its CatchHandler @ 00589a79 */
+      (*(int *)(lVar4 + 0xe4) != 0)) {
+    /* try { // try from 0058994e to 00589952 has its CatchHandler @ 00589a79 */
     gfxDraw();
   }
   if (bVar2) {
@@ -1870,7 +1827,7 @@ void __thiscall TGraphics__Draw(TGraphics *self,VertexStream *arg1,IndexBuffer *
  */
 /* TGraphics__SetPerspectiveProjectionMode(int) */
 
-void __thiscall TGraphics__SetPerspectiveProjectionMode(TGraphics *self,int arg1)
+void __thiscall TGraphics__SetPerspectiveProjectionMode(TGraphics *self, int arg1)
 
 {
   *(int *)(*(long *)(self + 0xaa0) + 0x39c) = arg1;
@@ -1920,25 +1877,25 @@ void TGraphics__UnbindAll(void)
 
 {
   (*pglfn_glActiveTexture)(0x84c7);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c6);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c5);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c4);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c3);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c2);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c1);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c0);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   MOJOSHADER_glBindProgram(0);
-                    /* WARNING: Could not recover jumptable at 0x0056212d. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (*pglfn_glBindBufferARB)(0x8893,0);
+  /* WARNING: Could not recover jumptable at 0x0056212d. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (*pglfn_glBindBufferARB)(0x8893, 0);
   return;
 }
 
@@ -1951,7 +1908,7 @@ void TGraphics__UnbindAll(void)
  */
 /* TGraphics__ForceAspectRatio(tagAspectRatioForce) */
 
-void __thiscall TGraphics__ForceAspectRatio(TGraphics *self,uint32_t arg2)
+void __thiscall TGraphics__ForceAspectRatio(TGraphics *self, uint32_t arg2)
 
 {
   *(uint32_t *)(self + 0x348) = arg2;
@@ -1977,7 +1934,7 @@ void TGraphics__AutoSetViewport(void)
   ulong uVar4;
   uint uVar5;
   uint uVar6;
-  
+
   uVar1 = *(ushort *)(Window + 10);
   uVar4 = (ulong)uVar1;
   uVar2 = *(ushort *)(Window + 8);
@@ -1986,19 +1943,19 @@ void TGraphics__AutoSetViewport(void)
     uVar6 = 0;
     uVar4 = (long)((float)uVar2 * _DAT_005d5478 /* R:0.5625f */) & 0xffffffff;
     uVar5 = (uint)uVar1 - (int)(long)((float)uVar2 * _DAT_005d5478 /* R:0.5625f */) >> 1;
-  }
-  else {
+  } else {
     uVar6 = 0;
     uVar5 = 0;
     if (*(int *)(Graphics + 0x348) == 2) {
       uVar3 = (long)((float)uVar1 * DAT_005d547c /* R:1.3333333730697632f */) & 0xffffffff;
-      uVar6 = (uint)uVar2 - (int)(long)((float)uVar1 * DAT_005d547c /* R:1.3333333730697632f */) >> 1;
+      uVar6 =
+          (uint)uVar2 - (int)(long)((float)uVar1 * DAT_005d547c /* R:1.3333333730697632f */) >> 1;
     }
   }
-  (*pglfn_glViewport)(uVar6,uVar5,uVar3,uVar4);
-                    /* WARNING: Could not recover jumptable at 0x00560f02. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (*pglfn_glScissor)((uint)*(ushort *)(Window + 8) - (int)uVar3 >> 1,
-                     (uint)*(ushort *)(Window + 10) - (int)uVar4 >> 1,uVar3,uVar4);
+  (*pglfn_glViewport)(uVar6, uVar5, uVar3, uVar4);
+  /* WARNING: Could not recover jumptable at 0x00560f02. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (*pglfn_glScissor)((uint) * (ushort *)(Window + 8) - (int)uVar3 >> 1,
+                     (uint) * (ushort *)(Window + 10) - (int)uVar4 >> 1, uVar3, uVar4);
   return;
 }

@@ -49,9 +49,8 @@ ResizeableArray_tagUnlockScreen__ResizeableArray(ResizeableArray<tagUnlockScreen
  */
 /* ResizeableArray_MrMinecraft__ManipulatedBlock_ResizeableArray() */
 
-void __thiscall
-ResizeableArray_MrMinecraft__ManipulatedBlock_ResizeableArray
-          (ResizeableArray_MrMinecraft__ManipulatedBlock *self)
+void __thiscall ResizeableArray_MrMinecraft__ManipulatedBlock_ResizeableArray(
+    ResizeableArray_MrMinecraft__ManipulatedBlock *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -81,7 +80,7 @@ ResizeableArray_MrMinecraft__ManipulatedBlock_ResizeableArray
  */
 /* ResizeableArray_SMBAnimal__ResizeableArray() */
 
-void __thiscall ResizeableArray_SMBAnimal__ResizeableArray(ResizeableArray<SMBAnimal*> *self)
+void __thiscall ResizeableArray_SMBAnimal__ResizeableArray(ResizeableArray<SMBAnimal *> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -112,8 +111,7 @@ void __thiscall ResizeableArray_SMBAnimal__ResizeableArray(ResizeableArray<SMBAn
 /* ResizeableArray_SMBChapter__LevelInfo_ResizeableArray() */
 
 void __thiscall
-ResizeableArray_SMBChapter__LevelInfo_ResizeableArray
-          (ResizeableArray_SMBChapter__LevelInfo *self)
+ResizeableArray_SMBChapter__LevelInfo_ResizeableArray(ResizeableArray_SMBChapter__LevelInfo *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -174,8 +172,7 @@ ResizeableArray_SMBChapter__WarpZone_ResizeableArray(ResizeableArray_SMBChapter_
  */
 /* ResizeableArray_EditorButton__ResizeableArray() */
 
-void __thiscall
-ResizeableArray_EditorButton__ResizeableArray(ResizeableArray<EditorButton*> *self)
+void __thiscall ResizeableArray_EditorButton__ResizeableArray(ResizeableArray<EditorButton *> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -237,7 +234,7 @@ ResizeableArray_SortedSetPiece__ResizeableArray(ResizeableArray<SortedSetPiece> 
 /* ResizeableArray_TileLevelSetPiece__ResizeableArray() */
 
 void __thiscall
-ResizeableArray_TileLevelSetPiece__ResizeableArray(ResizeableArray<TileLevelSetPiece*> *self)
+ResizeableArray_TileLevelSetPiece__ResizeableArray(ResizeableArray<TileLevelSetPiece *> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -267,9 +264,8 @@ ResizeableArray_TileLevelSetPiece__ResizeableArray(ResizeableArray<TileLevelSetP
  */
 /* ResizeableArray_EditorLayerColorTweens__ResizeableArray() */
 
-void __thiscall
-ResizeableArray_EditorLayerColorTweens__ResizeableArray
-          (ResizeableArray<EditorLayerColorTweens> *self)
+void __thiscall ResizeableArray_EditorLayerColorTweens__ResizeableArray(
+    ResizeableArray<EditorLayerColorTweens> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -299,8 +295,7 @@ ResizeableArray_EditorLayerColorTweens__ResizeableArray
  */
 /* ResizeableArray_SelectedBlock__ResizeableArray() */
 
-void __thiscall
-ResizeableArray_SelectedBlock__ResizeableArray(ResizeableArray<SelectedBlock> *self)
+void __thiscall ResizeableArray_SelectedBlock__ResizeableArray(ResizeableArray<SelectedBlock> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -330,8 +325,8 @@ ResizeableArray_SelectedBlock__ResizeableArray(ResizeableArray<SelectedBlock> *s
  */
 /* ResizeableArray_TileLevelSetPiece__ResizeableArray__004b5c70() */
 
-void __thiscall
-ResizeableArray_TileLevelSetPiece__ResizeableArray__004b5c70(ResizeableArray<TileLevelSetPiece> *self)
+void __thiscall ResizeableArray_TileLevelSetPiece__ResizeableArray__004b5c70(
+    ResizeableArray<TileLevelSetPiece> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -362,7 +357,7 @@ ResizeableArray_TileLevelSetPiece__ResizeableArray__004b5c70(ResizeableArray<Til
 /* ResizeableArray_RemoteChapter__ResizeableArray() */
 
 void __thiscall
-ResizeableArray_RemoteChapter__ResizeableArray(ResizeableArray<RemoteChapter*> *self)
+ResizeableArray_RemoteChapter__ResizeableArray(ResizeableArray<RemoteChapter *> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -392,9 +387,8 @@ ResizeableArray_RemoteChapter__ResizeableArray(ResizeableArray<RemoteChapter*> *
  */
 /* ResizeableArray_GSMBMenu__CharacterSilouette_ResizeableArray() */
 
-void __thiscall
-ResizeableArray_GSMBMenu__CharacterSilouette_ResizeableArray
-          (ResizeableArray_GSMBMenu__CharacterSilouette *self)
+void __thiscall ResizeableArray_GSMBMenu__CharacterSilouette_ResizeableArray(
+    ResizeableArray_GSMBMenu__CharacterSilouette *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -425,8 +419,7 @@ ResizeableArray_GSMBMenu__CharacterSilouette_ResizeableArray
 /* ResizeableArray_GSMBMenu__WarpInstance_ResizeableArray() */
 
 void __thiscall
-ResizeableArray_GSMBMenu__WarpInstance_ResizeableArray
-          (ResizeableArray_GSMBMenu__WarpInstance *self)
+ResizeableArray_GSMBMenu__WarpInstance_ResizeableArray(ResizeableArray_GSMBMenu__WarpInstance *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -519,8 +512,7 @@ ResizeableArray_ChapterMessageString__ResizeableArray(ResizeableArray<ChapterMes
 /* ResizeableArray_FlashLibraryInstance__ResizeableArray() */
 
 void __thiscall
-ResizeableArray_FlashLibraryInstance__ResizeableArray
-          (ResizeableArray<FlashLibraryInstance*> *self)
+ResizeableArray_FlashLibraryInstance__ResizeableArray(ResizeableArray<FlashLibraryInstance *> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -733,8 +725,7 @@ void __thiscall ResizeableArray_SMBShooter__ResizeableArray(ResizeableArray<SMBS
  */
 /* ResizeableArray_SMBDemonSpawn__ResizeableArray() */
 
-void __thiscall
-ResizeableArray_SMBDemonSpawn__ResizeableArray(ResizeableArray<SMBDemonSpawn> *self)
+void __thiscall ResizeableArray_SMBDemonSpawn__ResizeableArray(ResizeableArray<SMBDemonSpawn> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -945,8 +936,7 @@ void __thiscall ResizeableArray_SMBPortal__ResizeableArray(ResizeableArray<SMBPo
  */
 /* ResizeableArray_SMBGravityOrb__ResizeableArray() */
 
-void __thiscall
-ResizeableArray_SMBGravityOrb__ResizeableArray(ResizeableArray<SMBGravityOrb> *self)
+void __thiscall ResizeableArray_SMBGravityOrb__ResizeableArray(ResizeableArray<SMBGravityOrb> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -1007,8 +997,8 @@ ResizeableArray_SMBPaletteEmitter__ResizeableArray(ResizeableArray<SMBPaletteEmi
  */
 /* ResizeableArray_SMBLaser__Add(SMBLaser const&, int) */
 
-short __thiscall
-ResizeableArray_SMBLaser__Add(ResizeableArray<SMBLaser> *self,SMBLaser *arg1,int arg2)
+short __thiscall ResizeableArray_SMBLaser__Add(ResizeableArray<SMBLaser> *self, SMBLaser *arg1,
+                                               int arg2)
 
 {
   int iVar1;
@@ -1025,10 +1015,10 @@ ResizeableArray_SMBLaser__Add(ResizeableArray<SMBLaser> *self,SMBLaser *arg1,int
   short sVar12;
   bool bVar13;
   byte bVar14;
-  
+
   bVar14 = 0;
   if (arg2 == 1) {
-    CriticalSection__Lock((CriticalSection *)self,1);
+    CriticalSection__Lock((CriticalSection *)self, 1);
   }
   if (*(int *)(self + 0x48) == -0x5eef3582) {
     uVar4 = *(ushort *)(self + 0x28);
@@ -1049,7 +1039,7 @@ ResizeableArray_SMBLaser__Add(ResizeableArray<SMBLaser> *self,SMBLaser *arg1,int
           if (uVar10 <= *(ulong *)((long)pvVar2 + -0x10)) {
             uVar7 = uVar10;
           }
-          memcpy(pvVar5,pvVar2,uVar7);
+          memcpy(pvVar5, pvVar2, uVar7);
           free(*(void **)((long)pvVar2 + -8));
         }
       }
@@ -1062,26 +1052,28 @@ ResizeableArray_SMBLaser__Add(ResizeableArray<SMBLaser> *self,SMBLaser *arg1,int
         uVar10 = (ulong)uVar8 * 2;
         pvVar6 = malloc(uVar7 + 0x10 + uVar10);
         if (pvVar6 != (void *)0x0) {
-          pvVar5 = (void *)((long)pvVar6 + 0x10U + (uVar7 - ((long)pvVar6 + 0x10U) % uVar7) % uVar7)
-          ;
+          pvVar5 =
+              (void *)((long)pvVar6 + 0x10U + (uVar7 - ((long)pvVar6 + 0x10U) % uVar7) % uVar7);
           *(ulong *)((long)pvVar5 + -0x10) = uVar10;
           *(void **)((long)pvVar5 + -8) = pvVar6;
           uVar7 = *(ulong *)((long)pvVar2 + -0x10);
           if (uVar10 <= *(ulong *)((long)pvVar2 + -0x10)) {
             uVar7 = uVar10;
           }
-          memcpy(pvVar5,pvVar2,uVar7);
+          memcpy(pvVar5, pvVar2, uVar7);
           free(*(void **)((long)pvVar2 + -8));
           uVar8 = *(ushort *)(self + 0x2a);
         }
         uVar4 = *(ushort *)(self + 0x28);
         *(void **)(self + 0x40) = pvVar5;
-        if (uVar8 <= uVar4) goto LAB_00500d5f;
-        while( true ) {
+        if (uVar8 <= uVar4)
+          goto LAB_00500d5f;
+        while (true) {
           uVar10 = (ulong)uVar4;
           uVar4 = uVar4 + 1;
           *(uint16_t *)((long)pvVar5 + uVar10 * 2) = 0xffff;
-          if (uVar8 <= uVar4) break;
+          if (uVar8 <= uVar4)
+            break;
           pvVar5 = *(void **)(self + 0x40);
         }
       }
@@ -1089,15 +1081,14 @@ ResizeableArray_SMBLaser__Add(ResizeableArray<SMBLaser> *self,SMBLaser *arg1,int
       uVar4 = *(ushort *)(self + 0x28);
       goto joined_r0x00500f48;
     }
-  }
-  else {
+  } else {
     uVar10 = (ulong)(byte)self[0x2c];
     *(uint32_t *)(self + 0x30) = 0;
     pvVar5 = malloc(uVar10 + 0xd8);
     puVar11 = (uint64_t *)0x0;
     if (pvVar5 != (void *)0x0) {
-      puVar11 = (uint64_t *)
-                ((long)pvVar5 + 0x10U + (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
+      puVar11 =
+          (uint64_t *)((long)pvVar5 + 0x10U + (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
       puVar11[-2] = 200;
       puVar11[-1] = pvVar5;
     }
@@ -1150,8 +1141,7 @@ joined_r0x00500f48:
       puVar9 = *(ushort **)(self + 0x40);
       if (*puVar9 == 0xffff) {
         sVar12 = 0;
-      }
-      else {
+      } else {
         sVar3 = 1;
         do {
           sVar12 = sVar3;
@@ -1174,8 +1164,8 @@ LAB_00500d72:
   *(uint32_t *)((long)puVar11 + 0xc) = *(uint32_t *)(arg1 + 0xc);
   *(uint32_t *)(puVar11 + 2) = *(uint32_t *)(arg1 + 0x10);
   *(uint32_t *)((long)puVar11 + 0x14) = *(uint32_t *)(arg1 + 0x14);
-  Vector2__operator_assign((Vector2 *)(puVar11 + 3),(Vector2 *)(arg1 + 0x18));
-  Vector2__operator_assign((Vector2 *)(puVar11 + 4),(Vector2 *)(arg1 + 0x20));
+  Vector2__operator_assign((Vector2 *)(puVar11 + 3), (Vector2 *)(arg1 + 0x18));
+  Vector2__operator_assign((Vector2 *)(puVar11 + 4), (Vector2 *)(arg1 + 0x20));
   *(short *)(self + 0x28) = *(short *)(self + 0x28) + 1;
   if (arg2 == 1) {
     CriticalSection__Unlock((CriticalSection *)self);
@@ -1223,7 +1213,7 @@ ResizeableArray_GFXScreenResolutions__ResizeableArray(ResizeableArray<GFXScreenR
  */
 /* ResizeableArray_OpenALCue__ResizeableArray() */
 
-void __thiscall ResizeableArray_OpenALCue__ResizeableArray(ResizeableArray<OpenALCue*> *self)
+void __thiscall ResizeableArray_OpenALCue__ResizeableArray(ResizeableArray<OpenALCue *> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -1253,9 +1243,8 @@ void __thiscall ResizeableArray_OpenALCue__ResizeableArray(ResizeableArray<OpenA
  */
 /* ResizeableArray_AnimationFinishedCallback__ResizeableArray() */
 
-void __thiscall
-ResizeableArray_AnimationFinishedCallback__ResizeableArray
-          (ResizeableArray<AnimationFinishedCallback> *self)
+void __thiscall ResizeableArray_AnimationFinishedCallback__ResizeableArray(
+    ResizeableArray<AnimationFinishedCallback> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -1286,7 +1275,7 @@ ResizeableArray_AnimationFinishedCallback__ResizeableArray
 /* ResizeableArray_TAudioInstance__ResizeableArray() */
 
 void __thiscall
-ResizeableArray_TAudioInstance__ResizeableArray(ResizeableArray<TAudioInstance*> *self)
+ResizeableArray_TAudioInstance__ResizeableArray(ResizeableArray<TAudioInstance *> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -1347,9 +1336,8 @@ ResizeableArray_TAudioCueCache__ResizeableArray(ResizeableArray<TAudioCueCache> 
  */
 /* ResizeableArray_TAudio__ManagedAudioInstance_ResizeableArray() */
 
-void __thiscall
-ResizeableArray_TAudio__ManagedAudioInstance_ResizeableArray
-          (ResizeableArray_TAudio__ManagedAudioInstance *self)
+void __thiscall ResizeableArray_TAudio__ManagedAudioInstance_ResizeableArray(
+    ResizeableArray_TAudio__ManagedAudioInstance *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -1380,7 +1368,7 @@ ResizeableArray_TAudio__ManagedAudioInstance_ResizeableArray
 /* ResizeableArray_AudioEffectBase__ResizeableArray() */
 
 void __thiscall
-ResizeableArray_AudioEffectBase__ResizeableArray(ResizeableArray<AudioEffectBase*> *self)
+ResizeableArray_AudioEffectBase__ResizeableArray(ResizeableArray<AudioEffectBase *> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -1411,7 +1399,7 @@ ResizeableArray_AudioEffectBase__ResizeableArray(ResizeableArray<AudioEffectBase
 /* ResizeableArray_tagEditableItem__ResizeableArray() */
 
 void __thiscall
-ResizeableArray_tagEditableItem__ResizeableArray(ResizeableArray<tagEditableItem*> *self)
+ResizeableArray_tagEditableItem__ResizeableArray(ResizeableArray<tagEditableItem *> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -1442,7 +1430,7 @@ ResizeableArray_tagEditableItem__ResizeableArray(ResizeableArray<tagEditableItem
 /* ResizeableArray_tagEditableCategory__ResizeableArray() */
 
 void __thiscall
-ResizeableArray_tagEditableCategory__ResizeableArray(ResizeableArray<tagEditableCategory*> *self)
+ResizeableArray_tagEditableCategory__ResizeableArray(ResizeableArray<tagEditableCategory *> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -1472,9 +1460,8 @@ ResizeableArray_tagEditableCategory__ResizeableArray(ResizeableArray<tagEditable
  */
 /* ResizeableArray_SelectableResolutions__ResizeableArray() */
 
-void __thiscall
-ResizeableArray_SelectableResolutions__ResizeableArray
-          (ResizeableArray<_SelectableResolutions> *self)
+void __thiscall ResizeableArray_SelectableResolutions__ResizeableArray(
+    ResizeableArray<_SelectableResolutions> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -1504,8 +1491,7 @@ ResizeableArray_SelectableResolutions__ResizeableArray
  */
 /* ResizeableArray_tagCheatCode__ResizeableArray() */
 
-void __thiscall
-ResizeableArray_tagCheatCode__ResizeableArray(ResizeableArray<tagCheatCode*> *self)
+void __thiscall ResizeableArray_tagCheatCode__ResizeableArray(ResizeableArray<tagCheatCode *> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -1535,8 +1521,8 @@ ResizeableArray_tagCheatCode__ResizeableArray(ResizeableArray<tagCheatCode*> *se
  */
 /* ResizeableArray_Loader__LoaderFuncBlock::ResizeableArray__dtor() */
 
-void __thiscall
-ResizeableArray_Loader__LoaderFuncBlock::ResizeableArray__dtor(ResizeableArray_Loader__LoaderFuncBlock *self)
+void __thiscall ResizeableArray_Loader__LoaderFuncBlock::ResizeableArray__dtor(
+    ResizeableArray_Loader__LoaderFuncBlock *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -1597,9 +1583,8 @@ ResizeableArray_ModelLoader__Face_ResizeableArray(ResizeableArray_ModelLoader__F
  */
 /* ResizeableArray_TResourceCreator__GraphicsCreationFunction_ResizeableArray() */
 
-void __thiscall
-ResizeableArray_TResourceCreator__GraphicsCreationFunction_ResizeableArray
-          (ResizeableArray_TResourceCreator__GraphicsCreationFunction *self)
+void __thiscall ResizeableArray_TResourceCreator__GraphicsCreationFunction_ResizeableArray(
+    ResizeableArray_TResourceCreator__GraphicsCreationFunction *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {
@@ -1630,8 +1615,7 @@ ResizeableArray_TResourceCreator__GraphicsCreationFunction_ResizeableArray
 /* ResizeableArray_SetPieceWayPointGroup__ResizeableArray() */
 
 void __thiscall
-ResizeableArray_SetPieceWayPointGroup__ResizeableArray
-          (ResizeableArray<SetPieceWayPointGroup> *self)
+ResizeableArray_SetPieceWayPointGroup__ResizeableArray(ResizeableArray<SetPieceWayPointGroup> *self)
 
 {
   if (*(int *)(self + 0x48) != -0x5eef3582) {

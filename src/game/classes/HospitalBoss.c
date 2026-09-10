@@ -18,12 +18,12 @@
  */
 /* HospitalBoss__GetCameraFocus(FPUVector*) */
 
-void __thiscall HospitalBoss__GetCameraFocus(HospitalBoss *self,FPUVector *arg1)
+void __thiscall HospitalBoss__GetCameraFocus(HospitalBoss *self, FPUVector *arg1)
 
 {
   float fVar1;
   float fVar2;
-  
+
   fVar2 = DAT_005c0060 /* R:350.0f */;
   *(uint32_t *)arg1 = *(uint32_t *)(*(long *)(self + 0x1b8) + 0x30);
   fVar1 = *(float *)(*(long *)(self + 0x1b8) + 0x34);
@@ -41,7 +41,7 @@ void __thiscall HospitalBoss__GetCameraFocus(HospitalBoss *self,FPUVector *arg1)
  */
 /* HospitalBoss__GetPosition() */
 
-HospitalBoss * __thiscall HospitalBoss__GetPosition(HospitalBoss *self)
+HospitalBoss *__thiscall HospitalBoss__GetPosition(HospitalBoss *self)
 
 {
   *(uint32_t *)self = 0;
@@ -58,19 +58,20 @@ HospitalBoss * __thiscall HospitalBoss__GetPosition(HospitalBoss *self)
  */
 /* HospitalBoss__IsCollidingWithBounds(Bounds const*) */
 
-bool __thiscall HospitalBoss__IsCollidingWithBounds(HospitalBoss *self,Bounds *arg1)
+bool __thiscall HospitalBoss__IsCollidingWithBounds(HospitalBoss *self, Bounds *arg1)
 
 {
   int iVar1;
   bool bVar2;
-  
+
   if (*(FlashLibraryInstance **)(self + 0x1b0) != (FlashLibraryInstance *)0x0) {
-    iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660
-                      (*(FlashLibraryInstance **)(self + 0x1b0),arg1);
-    if (iVar1 != 0) goto LAB_0046cfe9;
+    iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660(
+        *(FlashLibraryInstance **)(self + 0x1b0), arg1);
+    if (iVar1 != 0)
+      goto LAB_0046cfe9;
   }
-  iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660
-                    (*(FlashLibraryInstance **)(self + 0x1b8),arg1);
+  iVar1 = FlashLibraryInstance__IsBoundsTouchingInstance__00574660(
+      *(FlashLibraryInstance **)(self + 0x1b8), arg1);
   if (iVar1 == 0) {
     return false;
   }
@@ -96,7 +97,7 @@ void __thiscall HospitalBoss__HospitalBoss__0046d120(HospitalBoss *self)
 {
   *(uint8_t ***)self = &PTR__HospitalBoss_005c0010;
   if (*(long **)(self + 0x1b8) != (long *)0x0) {
-                    /* try { // try from 0046d05e to 0046d0f0 has its CatchHandler @ 0046d0fe */
+    /* try { // try from 0046d05e to 0046d0f0 has its CatchHandler @ 0046d0fe */
     (**(code **)(**(long **)(self + 0x1b8) + 8))();
   }
   if (*(long **)(self + 0x1c0) != (long *)0x0) {
@@ -158,7 +159,7 @@ void __thiscall HospitalBoss__Render(HospitalBoss *self)
 {
   int iVar1;
   bool bVar2;
-  
+
   if (*(int *)(self + 500) == 1) {
     return;
   }
@@ -167,13 +168,16 @@ void __thiscall HospitalBoss__Render(HospitalBoss *self)
   (**(code **)(**(long **)(self + 0x1b0) + 0x10))();
   RegisterAudioPosition((FPUVector *)0x0);
   TAudio__EnableDirectionalAudio(Audio);
-  if (*(float *)(self + 0x1c8) <= DAT_005be894 /* R:1.0f */ && DAT_005be894 /* R:1.0f */ != *(float *)(self + 0x1c8)) {
-    SMBCamera__ScreenShake(*(SMBCamera **)(SuperMeatBoy + 0x38),DAT_005c0068 /* R:2.0f */,DAT_005c0064 /* R:6.0f */);
-    if (*(int *)(self + 0x1fc) != 1) goto LAB_0046d1ae;
+  if (*(float *)(self + 0x1c8) <= DAT_005be894 /* R:1.0f */ &&
+      DAT_005be894 /* R:1.0f */ != *(float *)(self + 0x1c8)) {
+    SMBCamera__ScreenShake(*(SMBCamera **)(SuperMeatBoy + 0x38), DAT_005c0068 /* R:2.0f */,
+                           DAT_005c0064 /* R:6.0f */);
+    if (*(int *)(self + 0x1fc) != 1)
+      goto LAB_0046d1ae;
     bVar2 = false;
-  }
-  else {
-    if (*(int *)(self + 0x1fc) != 1) goto LAB_0046d1ae;
+  } else {
+    if (*(int *)(self + 0x1fc) != 1)
+      goto LAB_0046d1ae;
     bVar2 = *(int *)(self + 0x1d4) == -1;
   }
   *(uint32_t *)(*(long *)(self + 0x1c0) + 0x30) = *(uint32_t *)(*(long *)(self + 0x1b8) + 0x30);
@@ -185,13 +189,12 @@ void __thiscall HospitalBoss__Render(HospitalBoss *self)
     if (iVar1 == 0) {
       *(uint32_t *)(self + 0x1fc) = 0;
     }
-  }
-  else {
+  } else {
     FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(self + 0x1c0));
   }
 LAB_0046d1ae:
-                    /* WARNING: Could not recover jumptable at 0x0046d1ca. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0046d1ca. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(**(long **)(self + 0x1b8) + 0x10))();
   return;
 }
@@ -209,10 +212,10 @@ void __thiscall HospitalBoss__OnDeath(HospitalBoss *self)
 
 {
   MeatBoyCharactor *this_00;
-  
+
   if (*(int *)(self + 0x1f8) != 1) {
     *(uint32_t *)(self + 0x1e8) = 0xffffffff;
-    this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy,1);
+    this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy, 1);
     MeatBoyCharactor__RemoveControls(this_00);
     *(uint32_t *)(self + 0x1f8) = 1;
     *(uint32_t *)(*(long *)(self + 0x1b0) + 0x60) = 0x40000000;
@@ -241,8 +244,8 @@ void __thiscall HospitalBoss__HospitalBoss__0046d390(HospitalBoss *self)
   char *pcVar4;
   FlashAnimationLibrary *this_00;
   uint64_t uVar5;
-  uint8_t *local_28 [2];
-  
+  uint8_t *local_28[2];
+
   SMBBoss__SMBBoss__0048d980((SMBBoss *)self);
   *(uint8_t ***)self = &PTR__HospitalBoss_005c0010;
   *(uint32_t *)(self + 0x1c8) = 0x3f800000;
@@ -255,33 +258,38 @@ void __thiscall HospitalBoss__HospitalBoss__0046d390(HospitalBoss *self)
   *(uint32_t *)(self + 0x1fc) = 0;
   *(uint32_t *)(self + 0x200) = 1;
   local_28[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 0046d411 to 0046d422 has its CatchHandler @ 0046d57e */
-  pcVar4 = (char *)FormatResourcePath("/Bosses/boss2.am",local_28);
+  /* try { // try from 0046d411 to 0046d422 has its CatchHandler @ 0046d57e */
+  pcVar4 = (char *)FormatResourcePath("/Bosses/boss2.am", local_28);
   this_00 = operator_new(0xb0);
-                    /* try { // try from 0046d42c to 0046d430 has its CatchHandler @ 0046d558 */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_00,pcVar4);
+  /* try { // try from 0046d42c to 0046d430 has its CatchHandler @ 0046d558 */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_00, pcVar4);
   *(FlashAnimationLibrary **)(self + 0x20) = this_00;
-                    /* try { // try from 0046d43d to 0046d50d has its CatchHandler @ 0046d57e */
-  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(this_00,"bloodpool");
+  /* try { // try from 0046d43d to 0046d50d has its CatchHandler @ 0046d57e */
+  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(this_00, "bloodpool");
   *(uint64_t *)(self + 0x1b8) = uVar5;
-  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),"bloodpool2")
-  ;
+  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "bloodpool2");
   *(uint64_t *)(self + 0x1c0) = uVar5;
-  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),"bossidle1");
+  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "bossidle1");
   *(uint64_t *)(self + 0x170) = uVar5;
-  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),"bossdeath");
+  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "bossdeath");
   *(uint64_t *)(self + 0x1a8) = uVar5;
-  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),"bossjump");
+  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "bossjump");
   *(uint64_t *)(self + 0x180) = uVar5;
-  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),"bossjump2");
+  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "bossjump2");
   *(uint64_t *)(self + 0x188) = uVar5;
-  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),"bosscharge")
-  ;
+  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "bosscharge");
   *(uint64_t *)(self + 0x198) = uVar5;
-  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),"bossappear")
-  ;
+  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "bossappear");
   *(uint64_t *)(self + 400) = uVar5;
-  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),"bossdive");
+  uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x20),
+                                                        "bossdive");
   lVar3 = SuperMeatBoy;
   *(uint64_t *)(self + 0x178) = uVar5;
   if (*(int *)(lVar3 + 0x3a4) == 0) {
@@ -310,51 +318,46 @@ void __thiscall HospitalBoss__HospitalBoss__0046d390(HospitalBoss *self)
  */
 /* HospitalBoss__ChangeAction(tagHospitalBossState) */
 
-void __thiscall HospitalBoss__ChangeAction(HospitalBoss *self,int arg2)
+void __thiscall HospitalBoss__ChangeAction(HospitalBoss *self, int arg2)
 
 {
   int iVar1;
   FlashLibraryInstance *this_00;
-  
+
   if (arg2 == 5) {
     *(uint32_t *)(self + 0x200) = 5;
     *(uint32_t *)(*(long *)(self + 0x198) + 0x30) = *(uint32_t *)(self + 0x128);
     *(uint32_t *)(*(long *)(self + 0x198) + 0x40) = 0x3f800000;
     this_00 = *(FlashLibraryInstance **)(self + 0x198);
-  }
-  else if (arg2 == 0) {
+  } else if (arg2 == 0) {
     this_00 = *(FlashLibraryInstance **)(self + 0x170);
     *(uint32_t *)(self + 0x200) = 0;
-  }
-  else if (arg2 == 7) {
+  } else if (arg2 == 7) {
     this_00 = *(FlashLibraryInstance **)(self + 0x1a8);
     *(uint32_t *)(self + 0x200) = 7;
-    ScreenFlashManager__SetFade
-              ((ScreenFlashManager *)&ScreenFlash,DAT_005bff40 /* R:6.199999809265137f */,(ColorTemplate *)::cWhite);
-  }
-  else if (arg2 == 2) {
+    ScreenFlashManager__SetFade((ScreenFlashManager *)&ScreenFlash,
+                                DAT_005bff40 /* R:6.199999809265137f */, (ColorTemplate *)::cWhite);
+  } else if (arg2 == 2) {
     *(uint32_t *)(self + 0x200) = 2;
     this_00 = *(FlashLibraryInstance **)(self + 0x180);
-  }
-  else if (arg2 == 3) {
+  } else if (arg2 == 3) {
     *(uint32_t *)(self + 0x200) = 3;
-    iVar1 = GetRandomINT(0,10);
+    iVar1 = GetRandomINT(0, 10);
     if (iVar1 < 6) {
       *(uint32_t *)(*(long *)(self + 0x188) + 0x30) = *(uint32_t *)(self + 0x148);
       *(uint32_t *)(*(long *)(self + 0x188) + 0x40) = 0xbf800000;
-    }
-    else {
-      *(uint *)(*(long *)(self + 0x188) + 0x30) = *(uint *)(self + 0x148) ^ DAT_005be6f0 /* R:u32=2147483648 */;
+    } else {
+      *(uint *)(*(long *)(self + 0x188) + 0x30) =
+          *(uint *)(self + 0x148) ^ DAT_005be6f0 /* R:u32=2147483648 */;
       *(uint32_t *)(*(long *)(self + 0x188) + 0x40) = 0x3f800000;
     }
     this_00 = *(FlashLibraryInstance **)(self + 0x188);
-  }
-  else if (arg2 == 4) {
+  } else if (arg2 == 4) {
     *(uint32_t *)(self + 0x200) = 4;
     this_00 = *(FlashLibraryInstance **)(self + 400);
-  }
-  else {
-    if (arg2 != 1) goto LAB_0046d61d;
+  } else {
+    if (arg2 != 1)
+      goto LAB_0046d61d;
     *(uint32_t *)(self + 0x200) = 1;
     this_00 = *(FlashLibraryInstance **)(self + 0x178);
   }
@@ -385,22 +388,22 @@ void __thiscall HospitalBoss__Reset(HospitalBoss *self)
 
 {
   MeatBoyCharactor *this_00;
-  
+
   *(uint32_t *)(self + 0x1c8) = 0x3f800000;
   *(uint32_t *)(self + 0x1cc) = 0;
   *(uint32_t *)(self + 0x1d0) = 0;
   *(uint32_t *)(self + 0x1d4) = 0xffffffff;
   *(uint32_t *)(self + 0x1e8) = 0xffffffff;
-  Vector2__operator_assign((Vector2 *)(self + 0x1e0),(Vector2 *)(self + 0x28));
+  Vector2__operator_assign((Vector2 *)(self + 0x1e0), (Vector2 *)(self + 0x28));
   *(uint64_t *)(self + 0x1b0) = 0;
   uSwitchResetCount = 0;
-  ChangeAction(self,1);
+  ChangeAction(self, 1);
   *(uint32_t *)(*(long *)(self + 0x1b0) + 0x60) = 0x3f800000;
   *(uint32_t *)(self + 0x1f8) = 0;
   *(uint32_t *)(self + 500) = 0;
   *(uint32_t *)(self + 0x1fc) = 0;
   SMBBoss__Reset((SMBBoss *)self);
-  this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy,1);
+  this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   MeatBoyCharactor__RestoreControls(this_00);
   return;
 }
@@ -424,65 +427,64 @@ void __thiscall HospitalBoss__Update(HospitalBoss *self)
   int iVar4;
   long lVar5;
   float fVar6;
-  Vector2 local_38 [4];
+  Vector2 local_38[4];
   float local_34;
-  Vector2 local_28 [16];
-  Vector2 local_18 [16];
-  
+  Vector2 local_28[16];
+  Vector2 local_18[16];
+
   if (*(int *)(self + 500) == 1) {
     return;
   }
   if ((*(int *)(self + 0x200) == 7) &&
-     (iVar4 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0x1a8)),
-     pGVar3 = SuperMeatBoy, iVar4 == 0)) {
+      (iVar4 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0x1a8)),
+       pGVar3 = SuperMeatBoy, iVar4 == 0)) {
     *(uint32_t *)(self + 500) = 1;
     if (*(int *)(pGVar3 + 0x3a4) != 0) {
       return;
     }
-    SMBChapter__PlayBossOutro((SMBChapter *)(pGVar3 + 0x90),SMBHospitalBossOutroFinished,0);
+    SMBChapter__PlayBossOutro((SMBChapter *)(pGVar3 + 0x90), SMBHospitalBossOutroFinished, 0);
     return;
   }
   fVar6 = *(float *)(self + 0x1c8);
-  Vector2__operator_mul__005be200(local_18,fVar6);
+  Vector2__operator_mul__005be200(local_18, fVar6);
   fVar2 = DAT_005be894 /* R:1.0f */;
-  Vector2__operator_mul__005be200(local_28,DAT_005be894 /* R:1.0f */ - fVar6);
-  Vector2__operator_plus__005be140(local_38,local_28);
+  Vector2__operator_mul__005be200(local_28, DAT_005be894 /* R:1.0f */ - fVar6);
+  Vector2__operator_plus__005be140(local_38, local_28);
   fVar6 = local_34 + _DAT_005c0074 /* R:30.0f */;
   local_34 = local_34 - DAT_005c0070 /* R:49.0f */;
   *(uint32_t *)(*(long *)(self + 0x1b8) + 0x30) = 0;
   *(float *)(*(long *)(self + 0x1b8) + 0x34) = local_34;
   *(float *)(*(long *)(self + 0x1b0) + 0x34) = fVar6;
   if ((*(int *)(self + 0x1d4) == -1) ||
-     (iVar4 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0x1b0)), iVar4 != 0)
-     ) {
+      (iVar4 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0x1b0)),
+       iVar4 != 0)) {
     fVar6 = DAT_005c006c /* R:0.0024999999441206455f */ + *(float *)(self + 0x1c8);
     *(float *)(self + 0x1c8) = fVar6;
     if (fVar6 <= fVar2) {
-      if (fVar6 != fVar2) goto LAB_0046dacb;
-    }
-    else {
+      if (fVar6 != fVar2)
+        goto LAB_0046dacb;
+    } else {
       *(float *)(self + 0x1c8) = fVar2;
       *(uint32_t *)(self + 0x1cc) = *(uint32_t *)(self + 0x1d0);
     }
-    if (*(int *)(self + 0x1d4) != -1) goto LAB_0046d95b;
+    if (*(int *)(self + 0x1d4) != -1)
+      goto LAB_0046d95b;
     iVar4 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0x1b0));
     if (iVar4 == 0) {
       if (*(int *)(self + 0x1f8) == 1) {
-        ChangeAction(self,7);
+        ChangeAction(self, 7);
         return;
       }
-      iVar4 = GetRandomINT(0,1);
+      iVar4 = GetRandomINT(0, 1);
       if (iVar4 == 0) {
-        ChangeAction(self,2);
-      }
-      else if (iVar4 == 1) {
-        ChangeAction(self,3);
+        ChangeAction(self, 2);
+      } else if (iVar4 == 1) {
+        ChangeAction(self, 3);
       }
       goto LAB_0046d95b;
     }
     fVar6 = *(float *)(self + 0x1c8);
-  }
-  else {
+  } else {
     uVar1 = *(uint32_t *)(self + 0x1d4);
     *(uint32_t *)(self + 0x1d4) = 0xffffffff;
     *(uint32_t *)(self + 0x1d0) = uVar1;
@@ -491,16 +493,16 @@ void __thiscall HospitalBoss__Update(HospitalBoss *self)
   }
 LAB_0046dacb:
   if ((fVar6 < fVar2) &&
-     (iVar4 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0x1b0)), iVar4 == 0)
-     ) {
-    ChangeAction(self,5);
+      (iVar4 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0x1b0)),
+       iVar4 == 0)) {
+    ChangeAction(self, 5);
   }
 LAB_0046d95b:
   uSwitchResetCount = uSwitchResetCount + 1;
-  lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+  lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   if (((*(byte *)(lVar5 + 0x7d9) & 1) == 0) && (0x78 < uSwitchResetCount)) {
-    lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
-    iVar4 = SMBBoss__WayPointCollision__0048da90((SMBBoss *)self,3,*(Bounds **)(lVar5 + 0x48));
+    lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
+    iVar4 = SMBBoss__WayPointCollision__0048da90((SMBBoss *)self, 3, *(Bounds **)(lVar5 + 0x48));
     if ((iVar4 == 1) && (*(long *)(self + 0x1d0) == -0x100000000)) {
       *(uint32_t *)(self + 0x1d4) = 1;
       fVar2 = DAT_005c0070 /* R:49.0f */;
@@ -510,10 +512,9 @@ LAB_0046d95b:
       *(uint32_t *)(self + 0x1fc) = 1;
       *(float *)(self + 0x1e4) = fVar2 + fVar6;
       FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(self + 0x1c0));
-    }
-    else {
-      lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
-      iVar4 = SMBBoss__WayPointCollision__0048da90((SMBBoss *)self,4,*(Bounds **)(lVar5 + 0x48));
+    } else {
+      lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
+      iVar4 = SMBBoss__WayPointCollision__0048da90((SMBBoss *)self, 4, *(Bounds **)(lVar5 + 0x48));
       if ((iVar4 == 1) && (*(long *)(self + 0x1d0) == -0xffffffff)) {
         *(uint32_t *)(self + 0x1d4) = 2;
         fVar2 = DAT_005c0070 /* R:49.0f */;
@@ -523,21 +524,21 @@ LAB_0046d95b:
         *(uint32_t *)(self + 0x1fc) = 1;
         *(float *)(self + 0x1e4) = fVar2 + fVar6;
         FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(self + 0x1c0));
-      }
-      else {
-        lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
-        iVar4 = SMBBoss__WayPointCollision__0048da90((SMBBoss *)self,5,*(Bounds **)(lVar5 + 0x48));
+      } else {
+        lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
+        iVar4 =
+            SMBBoss__WayPointCollision__0048da90((SMBBoss *)self, 5, *(Bounds **)(lVar5 + 0x48));
         if (iVar4 == 1) {
           *(uint32_t *)(self + 0x1e8) = 3;
         }
       }
     }
-    lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
-    iVar4 = SMBBoss__WayPointCollision__0048da90((SMBBoss *)self,6,*(Bounds **)(lVar5 + 0x48));
+    lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
+    iVar4 = SMBBoss__WayPointCollision__0048da90((SMBBoss *)self, 6, *(Bounds **)(lVar5 + 0x48));
     if (((iVar4 == 1) && (*(int *)(self + 0x200) != 7)) && (*(int *)(self + 0x1e8) == 3)) {
-      lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+      lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
       *(uint32_t *)(lVar5 + 0x9c) = 1;
-      Vector2__operator_assign((Vector2 *)(lVar5 + 0xa0),(Vector2 *)(self + 0xe8));
+      Vector2__operator_assign((Vector2 *)(lVar5 + 0xa0), (Vector2 *)(self + 0xe8));
       (**(code **)(*(long *)self + 0x20))(self);
     }
   }

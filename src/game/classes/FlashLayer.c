@@ -18,16 +18,15 @@
  */
 /* FlashLayer__GetKeyFramesFromTime(float, FlashKeyFrame**, FlashKeyFrame**) */
 
-float __thiscall
-FlashLayer__GetKeyFramesFromTime
-          (FlashLayer *self,float arg1,FlashKeyFrame **arg2,FlashKeyFrame **arg3)
+float __thiscall FlashLayer__GetKeyFramesFromTime(FlashLayer *self, float arg1,
+                                                  FlashKeyFrame **arg2, FlashKeyFrame **arg3)
 
 {
   bool bVar1;
   long lVar2;
   FlashKeyFrame *pFVar3;
   float fVar4;
-  
+
   fVar4 = DAT_005dbd08 /* R:10000000.0f */;
   if (0 < *(int *)self) {
     pFVar3 = *(FlashKeyFrame **)(self + 8);

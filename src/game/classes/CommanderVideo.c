@@ -22,7 +22,7 @@ void __thiscall CommanderVideo__RecordSpecial(CommanderVideo *self)
 
 {
   long lVar1;
-  
+
   lVar1 = *(long *)(self + 0x7e0);
   if (lVar1 != 0) {
     *(byte *)(lVar1 + 3) = *(byte *)(lVar1 + 3) & 0xbf | (byte)((*(uint *)(self + 0xa94) & 1) << 6);
@@ -95,7 +95,7 @@ void __thiscall CommanderVideo__WallJump(CommanderVideo *self)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   puVar6 = &uStack_58;
   iVar4 = (**(code **)(*(long *)self + 0xb0))();
   if (iVar4 == 0) {
@@ -103,14 +103,14 @@ void __thiscall CommanderVideo__WallJump(CommanderVideo *self)
   }
   *(uint32_t *)(self + 0xbc) = *(uint32_t *)(self + 0x8b4);
   *(float *)(self + 0xb8) =
-       *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
+      *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
   if (*(int *)(self + 0x7d4) != 6) {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (CommanderVideo)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x240);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x268) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
@@ -126,20 +126,21 @@ void __thiscall CommanderVideo__WallJump(CommanderVideo *self)
     uStack_34 = 0x3f800000;
     uStack_28 = 0xbf800000;
     uStack_24 = 0x3f800000;
-    if (((byte)CVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)CVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar6 = &uStack_38;
     puVar8 = &uStack_28;
-  }
-  else {
+  } else {
     CVar7 = self[0x7d9];
     uStack_58 = 0x3f800000;
     uStack_54 = 0x3f800000;
     uStack_48 = 0x3f800000;
     uStack_44 = 0x3f800000;
-    if (((byte)CVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)CVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar8 = &uStack_48;
   }
-  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,3,puVar8,puVar6);
+  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 3, puVar8, puVar6);
   CVar3 = self[0x7d8];
   CVar7 = self[0x7d9];
 LAB_00474591:
@@ -161,12 +162,12 @@ void __thiscall CommanderVideo__CreateClones(CommanderVideo *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),"float");
+
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(
+      (FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), "float");
   *(uint64_t *)(self + 0xaa8) = uVar1;
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),"float move");
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(
+      (FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), "float move");
   *(uint64_t *)(self + 0xab0) = uVar1;
   MeatBoyCharactor__CreateClones((MeatBoyCharactor *)self);
   return;
@@ -186,7 +187,7 @@ void __thiscall CommanderVideo__ProcessSpecial(CommanderVideo *self)
 {
   int iVar1;
   uint uVar2;
-  
+
   iVar1 = *(int *)(self + 0xa94);
   uVar2 = *(byte *)(*(long *)(self + 0x7e0) + 3) >> 6 & 1;
   *(uint *)(self + 0xa94) = uVar2;
@@ -213,40 +214,36 @@ void __thiscall CommanderVideo__RenderClones(CommanderVideo *self)
   MeatBoyCharactor *pMVar1;
   long lVar2;
   int iVar3;
-  
+
   if (*(int *)(self + 0xa40) == 0) {
-    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), 1);
     lVar2 = *(long *)(self + 0xa38);
     if ((*(int *)(lVar2 + 0x2c8) == 0) && (0 < *(int *)(lVar2 + 0x34))) {
       iVar3 = 0;
       do {
         if ((*(int *)(lVar2 + 0x3c) == iVar3) &&
-           (iVar3 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + (long)iVar3 * 8) + 0xa90))) {
-          FlashAnimationLibrary__EnableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
-        }
-        else {
-          FlashAnimationLibrary__DisableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+            (iVar3 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + (long)iVar3 * 8) + 0xa90))) {
+          FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                             1);
+        } else {
+          FlashAnimationLibrary__DisableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                              1);
         }
         pMVar1 = *(MeatBoyCharactor **)(*(long *)(self + 0x7f0) + (long)iVar3 * 8);
         if (*(int *)(pMVar1 + 0xa94) == 1) {
-          if ((float)(*(uint *)(pMVar1 + 0xb8) & DAT_005be880 /* R:u32=2147483647 */) < DAT_005be890 /* R:200.0f */) {
+          if ((float)(*(uint *)(pMVar1 + 0xb8) & DAT_005be880 /* R:u32=2147483647 */) <
+              DAT_005be890 /* R:200.0f */) {
             *(uint32_t *)(*(long *)(self + 0xaa8) + 0x58) = *(uint32_t *)(pMVar1 + 0xad4);
-            MeatBoyCharFoundation__Render
-                      (*(MeatBoyCharFoundation **)(self + 0xf8),pMVar1,
-                       *(FlashLibraryInstance **)(self + 0xaa8));
-          }
-          else {
+            MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8), pMVar1,
+                                          *(FlashLibraryInstance **)(self + 0xaa8));
+          } else {
             *(uint32_t *)(*(long *)(self + 0xab0) + 0x58) = *(uint32_t *)(pMVar1 + 0xad4);
-            MeatBoyCharFoundation__Render
-                      (*(MeatBoyCharFoundation **)(self + 0xf8),pMVar1,
-                       *(FlashLibraryInstance **)(self + 0xab0));
+            MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8), pMVar1,
+                                          *(FlashLibraryInstance **)(self + 0xab0));
           }
-        }
-        else {
-          MeatBoyCharFoundation__Render
-                    (*(MeatBoyCharFoundation **)(self + 0xf8),pMVar1,(FlashLibraryInstance *)0x0);
+        } else {
+          MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8), pMVar1,
+                                        (FlashLibraryInstance *)0x0);
         }
         lVar2 = *(long *)(self + 0xa38);
         iVar3 = iVar3 + 1;
@@ -271,7 +268,7 @@ void __thiscall CommanderVideo__CommanderVideo__00464490(CommanderVideo *self)
   *(uint8_t ***)self = &PTR__CommanderVideo_005be790;
   if (*(int *)(self + 0xa40) == 0) {
     if (*(long **)(self + 0xaa8) != (long *)0x0) {
-                    /* try { // try from 004643f8 to 0046445a has its CatchHandler @ 00464468 */
+      /* try { // try from 004643f8 to 0046445a has its CatchHandler @ 00464468 */
       (**(code **)(**(long **)(self + 0xaa8) + 8))();
     }
     if (*(long **)(self + 0xab0) != (long *)0x0) {
@@ -280,12 +277,12 @@ void __thiscall CommanderVideo__CommanderVideo__00464490(CommanderVideo *self)
     free(*(void **)(self + 0xac0));
     *(uint64_t *)(self + 0xac0) = 0;
     if (*(BaseResource **)(self + 0xab8) != (BaseResource *)0x0) {
-      BaseResource__Release(*(BaseResource **)(self + 0xab8),0);
+      BaseResource__Release(*(BaseResource **)(self + 0xab8), 0);
     }
-    TResourceCreator__RemoveResourceCreationFunction
-              ((TResourceCreator *)ResourceCreator,CreateCommanderVideoResources,self);
-    TResourceCreator__RemoveResourceDestroyFunction
-              ((TResourceCreator *)ResourceCreator,DestroyCommanderVideoResources,self);
+    TResourceCreator__RemoveResourceCreationFunction((TResourceCreator *)ResourceCreator,
+                                                     CreateCommanderVideoResources, self);
+    TResourceCreator__RemoveResourceDestroyFunction((TResourceCreator *)ResourceCreator,
+                                                    DestroyCommanderVideoResources, self);
   }
   MeatBoyCharactor__MeatBoyCharactor__00476510((MeatBoyCharactor *)self);
   return;
@@ -323,7 +320,7 @@ void __thiscall CommanderVideo__Update(CommanderVideo *self)
   long lVar1;
   int iVar2;
   float fVar3;
-  
+
   MeatBoyCharactor__ProcessReplayFrame((MeatBoyCharactor *)self);
   lVar1 = Engine;
   if (*(int *)(self + 0xa94) == 1) {
@@ -334,13 +331,13 @@ void __thiscall CommanderVideo__Update(CommanderVideo *self)
     if (fVar3 <= 0.0) {
       *(uint32_t *)(self + 0xa94) = 0;
     }
-  }
-  else {
+  } else {
     *(uint32_t *)(self + 0x8c4) = *(uint32_t *)(self + 0xa9c);
   }
   if (*(long *)(self + 0xab8) != 0) {
-    Vector2__operator_assign((Vector2 *)(*(long *)(self + 0xac0) + (long)*(int *)(self + 0xacc) * 8),
-                       (Vector2 *)(self + 0xa0));
+    Vector2__operator_assign(
+        (Vector2 *)(*(long *)(self + 0xac0) + (long)*(int *)(self + 0xacc) * 8),
+        (Vector2 *)(self + 0xa0));
     iVar2 = 100;
     if (*(int *)(self + 0xad0) < 99) {
       iVar2 = *(int *)(self + 0xad0) + 1;
@@ -351,8 +348,7 @@ void __thiscall CommanderVideo__Update(CommanderVideo *self)
       if (iVar2 < 0) {
         iVar2 = 99;
       }
-    }
-    else {
+    } else {
       iVar2 = 0;
     }
     *(int *)(self + 0xacc) = iVar2;
@@ -387,8 +383,8 @@ void __thiscall CommanderVideo__Render(CommanderVideo *self)
   int iVar8;
   float fVar9;
   float local_fc;
-  uint32_t *local_f8 [2];
-  uint64_t local_e8 [2];
+  uint32_t *local_f8[2];
+  uint64_t local_e8[2];
   uint32_t local_d8;
   uint32_t local_d4;
   uint32_t local_c8;
@@ -397,7 +393,7 @@ void __thiscall CommanderVideo__Render(CommanderVideo *self)
   uint32_t local_b4;
   uint32_t local_a8;
   uint32_t local_a4;
-  Vector2 local_98 [16];
+  Vector2 local_98[16];
   uint32_t local_88;
   uint32_t local_84;
   uint32_t local_78;
@@ -408,10 +404,10 @@ void __thiscall CommanderVideo__Render(CommanderVideo *self)
   uint32_t local_54;
   uint32_t local_48;
   uint32_t local_44;
-  
+
   if ((*(long *)(self + 0xab8) != 0) && (1 < *(int *)(self + 0xad0))) {
     this_00 = *(VertexBuffer **)(*(long *)(self + 0xab8) + 0x20);
-    VertexBuffer__Lock(this_00,local_f8,1,0);
+    VertexBuffer__Lock(this_00, local_f8, 1, 0);
     lVar1 = 0;
     iVar5 = *(int *)(self + 0xad0);
     iVar4 = *(int *)(self + 0xacc) + -1;
@@ -423,13 +419,13 @@ void __thiscall CommanderVideo__Render(CommanderVideo *self)
     local_e8[0] = *(uint64_t *)(*(long *)(self + 0xac0) + lVar1);
     local_d8 = 0;
     local_d4 = 0x40000000;
-    Vector2__operator_minus__005be180((Vector2 *)&local_c8,(Vector2 *)local_e8);
+    Vector2__operator_minus__005be180((Vector2 *)&local_c8, (Vector2 *)local_e8);
     *local_f8[0] = local_c8;
     local_b8 = 0;
     local_f8[0][1] = local_c4;
     local_b4 = 0x40000000;
     local_f8[0][2] = 0xffffffff;
-    Vector2__operator_plus__005be140((Vector2 *)&local_a8,(Vector2 *)local_e8);
+    Vector2__operator_plus__005be140((Vector2 *)&local_a8, (Vector2 *)local_e8);
     local_f8[0][3] = local_a8;
     local_f8[0][5] = 0xffffffff;
     local_f8[0][4] = local_a4;
@@ -444,8 +440,7 @@ void __thiscall CommanderVideo__Render(CommanderVideo *self)
           if (iVar5 < 0) {
             iVar5 = 99;
           }
-        }
-        else {
+        } else {
           iVar5 = 0;
         }
         iVar5 = iVar5 - iVar8;
@@ -454,10 +449,10 @@ void __thiscall CommanderVideo__Render(CommanderVideo *self)
         }
         iVar4 = iVar6 + 2;
         iVar8 = iVar8 + 1;
-        Vector2__operator_assign(local_98,(Vector2 *)(*(long *)(self + 0xac0) + (long)iVar5 * 8));
+        Vector2__operator_assign(local_98, (Vector2 *)(*(long *)(self + 0xac0) + (long)iVar5 * 8));
         local_88 = 0;
         local_84 = 0x40000000;
-        Vector2__operator_minus__005be180((Vector2 *)&local_78,local_98);
+        Vector2__operator_minus__005be180((Vector2 *)&local_78, local_98);
         fVar9 = DAT_005be898 /* R:255.0f */ * local_fc;
         puVar2 = (uint32_t *)(lVar1 + -0xc + (long)local_f8[0]);
         *puVar2 = local_78;
@@ -466,7 +461,7 @@ void __thiscall CommanderVideo__Render(CommanderVideo *self)
         local_64 = 0x40000000;
         uVar7 = (int)(long)fVar9 << 0x18 | 0xffffff;
         *(uint *)((long)local_f8[0] + lVar1 + -4) = uVar7;
-        Vector2__operator_plus__005be140((Vector2 *)&local_58,local_98);
+        Vector2__operator_plus__005be140((Vector2 *)&local_58, local_98);
         fVar9 = _DAT_005be89c /* R:0.9300000071525574f */ * local_fc;
         *(uint32_t *)(lVar1 + (long)local_f8[0]) = local_58;
         local_fc = 0.0;
@@ -476,7 +471,7 @@ void __thiscall CommanderVideo__Render(CommanderVideo *self)
         ((uint32_t *)(lVar1 + (long)local_f8[0]))[1] = local_54;
         *(uint *)((long)local_f8[0] + lVar1 + 8) = uVar7;
         lVar1 = lVar1 + 0x18;
-        Vector2__operator_assign((Vector2 *)local_e8,local_98);
+        Vector2__operator_assign((Vector2 *)local_e8, local_98);
       } while (iVar8 < *(int *)(self + 0xad0));
     }
     VertexBuffer__Unlock(this_00);
@@ -485,11 +480,11 @@ void __thiscall CommanderVideo__Render(CommanderVideo *self)
     *(int *)(*(long *)(self + 0xab8) + 0x10) = iVar6;
     TGraphics__ResetPixelStages(this_01);
     TGraphics__ResetTexCoordGen(Graphics);
-    TGraphics__AddPixelStage(Graphics,4,0,1,0,3,3,0xffffffff);
-    pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,0);
+    TGraphics__AddPixelStage(Graphics, 4, 0, 1, 0, 3, 3, 0xffffffff);
+    pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 0);
     Matrix4x4__Identity(pMVar3);
-    if ((Render()::pColors == '\0') && (iVar5 = __cxa_guard_acquire(&Render()::pColors), iVar5 != 0)
-       ) {
+    if ((Render()::pColors == '\0') &&
+        (iVar5 = __cxa_guard_acquire(&Render()::pColors), iVar5 != 0)) {
       Render()::pColors._0_4_ = 0x3ec4c4c5;
       Render()::pColors._4_4_ = 0x3eaeaeaf;
       Render()::pColors._8_4_ = 0x3f038384;
@@ -511,56 +506,55 @@ void __thiscall CommanderVideo__Render(CommanderVideo *self)
       Render()::pColors._72_4_ = 0x3e008081;
       Render()::pColors._76_4_ = 0x3f800000;
       __cxa_guard_release(&Render()::pColors);
-      __cxa_atexit(__tcf_0,0,&__dso_handle);
+      __cxa_atexit(__tcf_0, 0, &__dso_handle);
     }
-    TGraphics__SetRenderState(Graphics,'\a',0);
+    TGraphics__SetRenderState(Graphics, '\a', 0);
     local_48 = 0;
     local_44 = 0xc0d55556;
     pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics);
-    Matrix4x4__Transformation2DRot(pMVar3,(Vector2 *)0x0,(float *)0x0,(Vector2 *)&local_48);
-    TGraphics__SetPixelColorConstant(Graphics,0,Render()::pColors);
-    TGraphics__Draw(Graphics,*(VertexStream **)(self + 0xab8),(IndexBuffer *)0x0);
+    Matrix4x4__Transformation2DRot(pMVar3, (Vector2 *)0x0, (float *)0x0, (Vector2 *)&local_48);
+    TGraphics__SetPixelColorConstant(Graphics, 0, Render()::pColors);
+    TGraphics__Draw(Graphics, *(VertexStream **)(self + 0xab8), (IndexBuffer *)0x0);
     local_48 = 0;
     local_44 = 0xc02aaaac;
     pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics);
-    Matrix4x4__Transformation2DRot(pMVar3,(Vector2 *)0x0,(float *)0x0,(Vector2 *)&local_48);
-    TGraphics__SetPixelColorConstant(Graphics,0,0x818790);
-    TGraphics__Draw(Graphics,*(VertexStream **)(self + 0xab8),(IndexBuffer *)0x0);
+    Matrix4x4__Transformation2DRot(pMVar3, (Vector2 *)0x0, (float *)0x0, (Vector2 *)&local_48);
+    TGraphics__SetPixelColorConstant(Graphics, 0, 0x818790);
+    TGraphics__Draw(Graphics, *(VertexStream **)(self + 0xab8), (IndexBuffer *)0x0);
     local_48 = 0;
     local_44 = 0x3faaaaa8;
     pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics);
-    Matrix4x4__Transformation2DRot(pMVar3,(Vector2 *)0x0,(float *)0x0,(Vector2 *)&local_48);
-    TGraphics__SetPixelColorConstant(Graphics,0,0x8187a0);
-    TGraphics__Draw(Graphics,*(VertexStream **)(self + 0xab8),(IndexBuffer *)0x0);
+    Matrix4x4__Transformation2DRot(pMVar3, (Vector2 *)0x0, (float *)0x0, (Vector2 *)&local_48);
+    TGraphics__SetPixelColorConstant(Graphics, 0, 0x8187a0);
+    TGraphics__Draw(Graphics, *(VertexStream **)(self + 0xab8), (IndexBuffer *)0x0);
     local_48 = 0;
     local_44 = 0x40aaaaaa;
     pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics);
-    Matrix4x4__Transformation2DRot(pMVar3,(Vector2 *)0x0,(float *)0x0,(Vector2 *)&local_48);
-    TGraphics__SetPixelColorConstant(Graphics,0,0x8187b0);
-    TGraphics__Draw(Graphics,*(VertexStream **)(self + 0xab8),(IndexBuffer *)0x0);
+    Matrix4x4__Transformation2DRot(pMVar3, (Vector2 *)0x0, (float *)0x0, (Vector2 *)&local_48);
+    TGraphics__SetPixelColorConstant(Graphics, 0, 0x8187b0);
+    TGraphics__Draw(Graphics, *(VertexStream **)(self + 0xab8), (IndexBuffer *)0x0);
     local_48 = 0;
     local_44 = 0x41155555;
     pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics);
-    Matrix4x4__Transformation2DRot(pMVar3,(Vector2 *)0x0,(float *)0x0,(Vector2 *)&local_48);
-    TGraphics__SetPixelColorConstant(Graphics,0,0x8187c0);
-    TGraphics__Draw(Graphics,*(VertexStream **)(self + 0xab8),(IndexBuffer *)0x0);
+    Matrix4x4__Transformation2DRot(pMVar3, (Vector2 *)0x0, (float *)0x0, (Vector2 *)&local_48);
+    TGraphics__SetPixelColorConstant(Graphics, 0, 0x8187c0);
+    TGraphics__Draw(Graphics, *(VertexStream **)(self + 0xab8), (IndexBuffer *)0x0);
   }
   if (*(int *)(self + 0xa94) == 1) {
     (**(code **)(*(long *)self + 0x50))(self);
-    if ((float)(*(uint *)(self + 0xb8) & DAT_005be880 /* R:u32=2147483647 */) < DAT_005be890 /* R:200.0f */) {
+    if ((float)(*(uint *)(self + 0xb8) & DAT_005be880 /* R:u32=2147483647 */) <
+        DAT_005be890 /* R:200.0f */) {
       *(uint32_t *)(*(long *)(self + 0xaa8) + 0x58) = *(uint32_t *)(self + 0xad4);
-      MeatBoyCharFoundation__Render
-                (*(MeatBoyCharFoundation **)(self + 0xf8),(MeatBoyCharactor *)self,
-                 *(FlashLibraryInstance **)(self + 0xaa8));
-    }
-    else {
+      MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8),
+                                    (MeatBoyCharactor *)self,
+                                    *(FlashLibraryInstance **)(self + 0xaa8));
+    } else {
       *(uint32_t *)(*(long *)(self + 0xab0) + 0x58) = *(uint32_t *)(self + 0xad4);
-      MeatBoyCharFoundation__Render
-                (*(MeatBoyCharFoundation **)(self + 0xf8),(MeatBoyCharactor *)self,
-                 *(FlashLibraryInstance **)(self + 0xab0));
+      MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8),
+                                    (MeatBoyCharactor *)self,
+                                    *(FlashLibraryInstance **)(self + 0xab0));
     }
-  }
-  else {
+  } else {
     MeatBoyCharactor__Render((MeatBoyCharactor *)self);
   }
   return;
@@ -580,14 +574,14 @@ void __thiscall CommanderVideo__CommanderVideo__00464d60(CommanderVideo *self)
 {
   uint64_t uVar1;
   void *pvVar2;
-  
-  uVar1 = FormatResourcePath("/Animations/commander_video.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,0xb);
+
+  uVar1 = FormatResourcePath("/Animations/commander_video.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 0xb);
   *(uint8_t ***)self = &PTR__CommanderVideo_005be790;
   *(uint32_t *)(self + 0xacc) = 0;
   *(uint32_t *)(self + 0xad0) = 0;
   *(uint64_t *)(self + 0xab8) = 0;
-                    /* try { // try from 00464cc0 to 00464d26 has its CatchHandler @ 00464d3e */
+  /* try { // try from 00464cc0 to 00464d26 has its CatchHandler @ 00464d3e */
   CreateCommanderVideoResources(self);
   *(uint32_t *)(self + 0xa54) = 0xb;
   *(uint32_t *)(self + 0xaa4) = 0;
@@ -595,10 +589,10 @@ void __thiscall CommanderVideo__CommanderVideo__00464d60(CommanderVideo *self)
   *(uint32_t *)(self + 0xa98) = 0;
   *(uint32_t *)(self + 0xad4) = 0;
   *(uint32_t *)(self + 0xa9c) = *(uint32_t *)(self + 0x8c4);
-  TResourceCreator__AddResourceCreationFunction
-            ((TResourceCreator *)ResourceCreator,CreateCommanderVideoResources,self);
-  TResourceCreator__AddResourceDestroyFunction
-            ((TResourceCreator *)ResourceCreator,DestroyCommanderVideoResources,self);
+  TResourceCreator__AddResourceCreationFunction((TResourceCreator *)ResourceCreator,
+                                                CreateCommanderVideoResources, self);
+  TResourceCreator__AddResourceDestroyFunction((TResourceCreator *)ResourceCreator,
+                                               DestroyCommanderVideoResources, self);
   pvVar2 = malloc(800);
   *(void **)(self + 0xac0) = pvVar2;
   return;
@@ -613,16 +607,16 @@ void __thiscall CommanderVideo__CommanderVideo__00464d60(CommanderVideo *self)
  */
 /* CommanderVideo__CommanderVideo__00464d60(MeatBoyCharactor*, int) */
 
-void __thiscall
-CommanderVideo__CommanderVideo__00464d60(CommanderVideo *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall CommanderVideo__CommanderVideo__00464d60(CommanderVideo *self,
+                                                         MeatBoyCharactor *arg1, int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__CommanderVideo_005be790;
   *(uint64_t *)(self + 0xab8) = 0;
   *(uint64_t *)(self + 0xac0) = 0;
-                    /* try { // try from 00464da7 to 00464dab has its CatchHandler @ 00464e0f */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 00464da7 to 00464dab has its CatchHandler @ 00464e0f */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   *(uint32_t *)(self + 0xaa4) = 0;
   *(uint32_t *)(self + 0xa94) = 0;
   *(uint32_t *)(self + 0xa98) = 0;
@@ -642,13 +636,13 @@ CommanderVideo__CommanderVideo__00464d60(CommanderVideo *self,MeatBoyCharactor *
  */
 /* CommanderVideo__AddRainbowPosition(Vector2 const&) */
 
-void __thiscall CommanderVideo__AddRainbowPosition(CommanderVideo *self,Vector2 *arg1)
+void __thiscall CommanderVideo__AddRainbowPosition(CommanderVideo *self, Vector2 *arg1)
 
 {
   int iVar1;
-  
-  Vector2__operator_assign((Vector2 *)(*(long *)(self + 0xac0) + (long)*(int *)(self + 0xacc) * 8),arg1
-                    );
+
+  Vector2__operator_assign((Vector2 *)(*(long *)(self + 0xac0) + (long)*(int *)(self + 0xacc) * 8),
+                           arg1);
   iVar1 = 100;
   if (*(int *)(self + 0xad0) < 99) {
     iVar1 = *(int *)(self + 0xad0) + 1;
@@ -675,18 +669,17 @@ void __thiscall CommanderVideo__AddRainbowPosition(CommanderVideo *self,Vector2 
  */
 /* CommanderVideo__GetRainbowPosition(int) */
 
-long __thiscall CommanderVideo__GetRainbowPosition(CommanderVideo *self,int arg1)
+long __thiscall CommanderVideo__GetRainbowPosition(CommanderVideo *self, int arg1)
 
 {
   int iVar1;
-  
+
   iVar1 = *(int *)(self + 0xacc) + -1;
   if (iVar1 < 100) {
     if (iVar1 < 0) {
       iVar1 = 99;
     }
-  }
-  else {
+  } else {
     iVar1 = 0;
   }
   iVar1 = iVar1 - arg1;

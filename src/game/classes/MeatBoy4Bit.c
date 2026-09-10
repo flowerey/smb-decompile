@@ -74,9 +74,9 @@ void __thiscall MeatBoy4Bit__MeatBoy4Bit__00465780(MeatBoy4Bit *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FormatResourcePath("/Animations/4bitmeatboyfinal.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,3);
+
+  uVar1 = FormatResourcePath("/Animations/4bitmeatboyfinal.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 3);
   *(uint8_t ***)self = &PTR__MeatBoy4Bit_005beeb0;
   *(uint32_t *)(self + 0xa54) = 3;
   return;
@@ -91,12 +91,13 @@ void __thiscall MeatBoy4Bit__MeatBoy4Bit__00465780(MeatBoy4Bit *self)
  */
 /* MeatBoy4Bit__MeatBoy4Bit__00465780(MeatBoyCharactor*, int) */
 
-void __thiscall MeatBoy4Bit__MeatBoy4Bit__00465780(MeatBoy4Bit *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall MeatBoy4Bit__MeatBoy4Bit__00465780(MeatBoy4Bit *self, MeatBoyCharactor *arg1,
+                                                   int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__MeatBoy4Bit_005beeb0;
-                    /* try { // try from 004657b1 to 004657b5 has its CatchHandler @ 004657c9 */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 004657b1 to 004657b5 has its CatchHandler @ 004657c9 */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   return;
 }

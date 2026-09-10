@@ -22,7 +22,7 @@ void __thiscall Tim__RecordSpecial(Tim *self)
 
 {
   *(byte *)(*(long *)(self + 0x7e0) + 3) =
-       *(byte *)(*(long *)(self + 0x7e0) + 3) & 0xbf | ((byte)self[0x10e4] & 1) << 6;
+      *(byte *)(*(long *)(self + 0x7e0) + 3) & 0xbf | ((byte)self[0x10e4] & 1) << 6;
   if (((byte)self[0x10e4] & 1) != 0) {
     self[0x7db] = (Tim)((byte)self[0x7db] | 8);
   }
@@ -100,7 +100,7 @@ void __thiscall Tim__WallJump(Tim *self)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   puVar6 = &uStack_58;
   iVar4 = (**(code **)(*(long *)self + 0xb0))();
   if (iVar4 == 0) {
@@ -108,14 +108,14 @@ void __thiscall Tim__WallJump(Tim *self)
   }
   *(uint32_t *)(self + 0xbc) = *(uint32_t *)(self + 0x8b4);
   *(float *)(self + 0xb8) =
-       *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
+      *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
   if (*(int *)(self + 0x7d4) != 6) {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (Tim)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x240);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x268) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
@@ -131,20 +131,21 @@ void __thiscall Tim__WallJump(Tim *self)
     uStack_34 = 0x3f800000;
     uStack_28 = 0xbf800000;
     uStack_24 = 0x3f800000;
-    if (((byte)TVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)TVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar6 = &uStack_38;
     puVar8 = &uStack_28;
-  }
-  else {
+  } else {
     TVar7 = self[0x7d9];
     uStack_58 = 0x3f800000;
     uStack_54 = 0x3f800000;
     uStack_48 = 0x3f800000;
     uStack_44 = 0x3f800000;
-    if (((byte)TVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)TVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar8 = &uStack_48;
   }
-  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,3,puVar8,puVar6);
+  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 3, puVar8, puVar6);
   TVar3 = self[0x7d8];
   TVar7 = self[0x7d9];
 LAB_00474591:
@@ -162,7 +163,7 @@ LAB_00474591:
  */
 /* Tim__WallHit(tagTileCollisionType) */
 
-void __thiscall Tim__WallHit(Tim *self,int arg2)
+void __thiscall Tim__WallHit(Tim *self, int arg2)
 
 {
   Tim TVar1;
@@ -178,48 +179,48 @@ void __thiscall Tim__WallHit(Tim *self,int arg2)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   TVar1 = self[0x7d8];
   if (((byte)TVar1 & 4) == 0) {
-    if (*(int *)(self + 0x7d4) == 9) goto LAB_0047440b;
+    if (*(int *)(self + 0x7d4) == 9)
+      goto LAB_0047440b;
     if (arg2 == 4) {
       uStack_48 = 0x3f800000;
       uStack_44 = 0x3f800000;
       uStack_58 = 0x3f800000;
       uStack_54 = 0x3f800000;
       if (((byte)self[0x7d9] & 0x40) == 0) {
-        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,2,&uStack_58,&uStack_48);
+        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 2, &uStack_58, &uStack_48);
         iVar4 = *(int *)(self + 0x7d4);
         goto LAB_004743cd;
       }
-    }
-    else {
+    } else {
       uStack_28 = 0xbf800000;
       uStack_24 = 0x3f800000;
       uStack_38 = 0xbf800000;
       uStack_34 = 0x3f800000;
       if (((byte)self[0x7d9] & 0x40) == 0) {
-        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,2,&uStack_38,&uStack_28);
+        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 2, &uStack_38, &uStack_28);
         goto LAB_004743c7;
       }
     }
-LAB_004743d2:
+  LAB_004743d2:
     lVar3 = *(long *)(self + 0xf8);
     self[0x7db] = (Tim)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar2 = *(ushort *)(lVar3 + 0x348);
     if (uVar2 != 0) {
-      uVar5 = GetRandomINT(0,uVar2 - 1);
+      uVar5 = GetRandomINT(0, uVar2 - 1);
     }
     *(uint32_t *)(lVar3 + 0x370) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
     *(uint32_t *)(self + 0xa50) = 0;
-  }
-  else {
-LAB_004743c7:
+  } else {
+  LAB_004743c7:
     iVar4 = *(int *)(self + 0x7d4);
-LAB_004743cd:
-    if (iVar4 != 9) goto LAB_004743d2;
+  LAB_004743cd:
+    if (iVar4 != 9)
+      goto LAB_004743d2;
   }
   TVar1 = self[0x7d8];
 LAB_0047440b:
@@ -241,9 +242,9 @@ void __thiscall Tim__CreateClones(Tim *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),"glow");
+
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(
+      (FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), "glow");
   *(uint64_t *)(self + 0xa98) = uVar1;
   MeatBoyCharactor__CreateClones((MeatBoyCharactor *)self);
   return;
@@ -263,7 +264,7 @@ void __thiscall Tim__Tim__00518bd0(Tim *self)
 {
   *(uint8_t ***)self = &PTR__Tim_005c9810;
   if ((*(int *)(self + 0xa40) == 0) && (*(long **)(self + 0xa98) != (long *)0x0)) {
-                    /* try { // try from 00518b98 to 00518b9a has its CatchHandler @ 00518ba8 */
+    /* try { // try from 00518b98 to 00518b9a has its CatchHandler @ 00518ba8 */
     (**(code **)(**(long **)(self + 0xa98) + 8))();
   }
   MeatBoyCharactor__MeatBoyCharactor__00476510((MeatBoyCharactor *)self);
@@ -305,9 +306,9 @@ void __thiscall Tim__Render(Tim *self)
   }
   *(uint32_t *)(*(long *)(self + 0xa98) + 0x30) = *(uint32_t *)(self + 0xa0);
   *(uint32_t *)(*(long *)(self + 0xa98) + 0x34) = *(uint32_t *)(self + 0xa4);
-  FlashAnimationLibrary__DisableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+  FlashAnimationLibrary__DisableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), 1);
   (**(code **)(**(long **)(self + 0xa98) + 0x10))();
-  FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+  FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), 1);
   return;
 }
 
@@ -326,35 +327,34 @@ void __thiscall Tim__RenderClones(Tim *self)
   MeatBoyCharactor *pMVar1;
   long lVar2;
   int iVar3;
-  
+
   if (*(int *)(self + 0xa40) == 0) {
-    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), 1);
     lVar2 = *(long *)(self + 0xa38);
     if ((*(int *)(lVar2 + 0x2c8) == 0) && (0 < *(int *)(lVar2 + 0x34))) {
       iVar3 = 0;
       do {
         if ((*(int *)(lVar2 + 0x3c) == iVar3) &&
-           (iVar3 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + (long)iVar3 * 8) + 0xa90))) {
-          FlashAnimationLibrary__EnableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
-        }
-        else {
-          FlashAnimationLibrary__DisableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+            (iVar3 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + (long)iVar3 * 8) + 0xa90))) {
+          FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                             1);
+        } else {
+          FlashAnimationLibrary__DisableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                              1);
         }
         pMVar1 = *(MeatBoyCharactor **)(*(long *)(self + 0x7f0) + (long)iVar3 * 8);
-        MeatBoyCharFoundation__Render
-                  (*(MeatBoyCharFoundation **)(self + 0xf8),pMVar1,(FlashLibraryInstance *)0x0);
+        MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8), pMVar1,
+                                      (FlashLibraryInstance *)0x0);
         if (((byte)pMVar1[0x10e4] & 1) != 0) {
-          FlashAnimationLibrary__DisableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+          FlashAnimationLibrary__DisableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                              1);
           *(uint32_t *)(*(long *)(pMVar1 + 0xa98) + 0x58) = *(uint32_t *)(self + 0x10ec);
           *(uint32_t *)(*(long *)(pMVar1 + 0xa98) + 0x30) = *(uint32_t *)(pMVar1 + 0xa0);
           *(uint32_t *)(*(long *)(pMVar1 + 0xa98) + 0x34) = *(uint32_t *)(pMVar1 + 0xa4);
           (**(code **)(**(long **)(pMVar1 + 0xa98) + 0x10))();
           *(uint32_t *)(self + 0x10ec) = *(uint32_t *)(*(long *)(pMVar1 + 0xa98) + 0x58);
-          FlashAnimationLibrary__EnableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+          FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                             1);
         }
         lVar2 = *(long *)(self + 0xa38);
         iVar3 = iVar3 + 1;
@@ -377,9 +377,9 @@ void __thiscall Tim__Tim__00518f20(Tim *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FormatResourcePath("/Animations/Tim.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,0x1d);
+
+  uVar1 = FormatResourcePath("/Animations/Tim.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 0x1d);
   *(uint8_t ***)self = &PTR__Tim_005c9810;
   *(uint32_t *)(self + 0xa54) = 0x1d;
   self[0x10e0] = (Tim)0x0;
@@ -405,13 +405,13 @@ void __thiscall Tim__Tim__00518f20(Tim *self)
  */
 /* Tim__Tim__00518f20(MeatBoyCharactor*, int) */
 
-void __thiscall Tim__Tim__00518f20(Tim *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall Tim__Tim__00518f20(Tim *self, MeatBoyCharactor *arg1, int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__Tim_005c9810;
-                    /* try { // try from 00518f51 to 00518f55 has its CatchHandler @ 00518fdd */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 00518f51 to 00518f55 has its CatchHandler @ 00518fdd */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   self[0x10e0] = (Tim)0x0;
   self[0x10e1] = (Tim)0x0;
   self[0x10e2] = (Tim)0x0;
@@ -442,14 +442,14 @@ void __thiscall Tim__AddFrame(Tim *self)
   Tim TVar1;
   Tim TVar2;
   long lVar3;
-  
+
   Vector2__operator_assign((Vector2 *)(self + ((long)(char)self[0x10e0] + 0xaa) * 0x10),
-                     (Vector2 *)(self + 0xa0));
+                           (Vector2 *)(self + 0xa0));
   TVar2 = self[0x10e0];
   lVar3 = (long)(char)TVar2 + 0xaa;
   *(uint32_t *)(self + lVar3 * 0x10 + 8) = *(uint32_t *)(self + 0x7d4);
   *(uint *)(self + lVar3 * 0x10 + 0xc) =
-       *(uint *)(self + lVar3 * 0x10 + 0xc) & 0x80000000 | *(uint *)(self + 0xa4c) & 0x7fffffff;
+      *(uint *)(self + lVar3 * 0x10 + 0xc) & 0x80000000 | *(uint *)(self + 0xa4c) & 0x7fffffff;
   self[lVar3 * 0x10 + 0xf] = (Tim)((byte)self[lVar3 * 0x10 + 0xf] & 0x7f | (char)self[0x7d8] << 7);
   TVar2 = (Tim)((char)TVar2 + '\x01');
   TVar1 = (Tim)0x0;
@@ -457,7 +457,7 @@ void __thiscall Tim__AddFrame(Tim *self)
     TVar1 = TVar2;
   }
   self[0x10e0] = TVar1;
-  TVar2 = SUB41((int)(char)self[0x10e2] + 1U,0);
+  TVar2 = SUB41((int)(char)self[0x10e2] + 1U, 0);
   if (100 < (int)(char)self[0x10e2] + 1U) {
     TVar2 = (Tim)0x64;
   }
@@ -479,19 +479,18 @@ void __thiscall Tim__RestoreFrame(Tim *self)
 {
   Vector2 *this_00;
   Tim TVar1;
-  
+
   this_00 = (Vector2 *)(self + 0xa0);
-  Vector2__operator_assign(this_00,(Vector2 *)(self + ((long)(char)self[0x10e3] + 0xaa) * 0x10));
-  MeatBoyCharactor__SetState
-            ((MeatBoyCharactor *)self,
-             *(uint32_t *)(self + ((long)(char)self[0x10e3] + 0xaa) * 0x10 + 8));
+  Vector2__operator_assign(this_00, (Vector2 *)(self + ((long)(char)self[0x10e3] + 0xaa) * 0x10));
+  MeatBoyCharactor__SetState((MeatBoyCharactor *)self,
+                             *(uint32_t *)(self + ((long)(char)self[0x10e3] + 0xaa) * 0x10 + 8));
   *(int *)(self + 0xa4c) = *(int *)(self + ((long)(char)self[0x10e3] + 0xaa) * 0x10 + 0xc) * 2 >> 1;
   self[0x7d8] = (Tim)((byte)self[0x7d8] & 0xfe |
-                     (byte)self[((long)(char)self[0x10e3] + 0xaa) * 0x10 + 0xf] >> 7);
-  Vector2__operator_assign((Vector2 *)(self + 0xa8),this_00);
-  Vector2__operator_assign((Vector2 *)(self + 0x868),this_00);
+                      (byte)self[((long)(char)self[0x10e3] + 0xaa) * 0x10 + 0xf] >> 7);
+  Vector2__operator_assign((Vector2 *)(self + 0xa8), this_00);
+  Vector2__operator_assign((Vector2 *)(self + 0x868), this_00);
   if (('\0' < (char)self[0x10e2]) &&
-     (TVar1 = (Tim)((char)self[0x10e2] + -1), self[0x10e2] = TVar1, TVar1 != (Tim)0x0)) {
+      (TVar1 = (Tim)((char)self[0x10e2] + -1), self[0x10e2] = TVar1, TVar1 != (Tim)0x0)) {
     TVar1 = (Tim)0x63;
     if (-1 < (char)((char)self[0x10e3] + -1)) {
       TVar1 = (Tim)((char)self[0x10e3] + -1);
@@ -516,7 +515,7 @@ void __thiscall Tim__Update(Tim *self)
   Tim TVar1;
   Tim TVar2;
   long lVar3;
-  
+
   MeatBoyCharactor__ProcessReplayFrame((MeatBoyCharactor *)self);
   *(uint32_t *)(self + 0x8a8) = *(uint32_t *)(self + 0x8ac);
   if (*(int *)(self + 0xa40) != 0) {
@@ -533,21 +532,21 @@ void __thiscall Tim__Update(Tim *self)
   MeatBoyCharactor__Update((MeatBoyCharactor *)self);
   if (*(int *)(self + 0x7d4) != 0xe) {
     Vector2__operator_assign((Vector2 *)(self + ((long)(char)self[0x10e0] + 0xaa) * 0x10),
-                       (Vector2 *)(self + 0xa0));
+                             (Vector2 *)(self + 0xa0));
     TVar2 = self[0x10e0];
     lVar3 = (long)(char)TVar2 + 0xaa;
     *(uint32_t *)(self + lVar3 * 0x10 + 8) = *(uint32_t *)(self + 0x7d4);
     *(uint *)(self + lVar3 * 0x10 + 0xc) =
-         *(uint *)(self + lVar3 * 0x10 + 0xc) & 0x80000000 | *(uint *)(self + 0xa4c) & 0x7fffffff;
-    self[lVar3 * 0x10 + 0xf] = (Tim)((byte)self[lVar3 * 0x10 + 0xf] & 0x7f | (char)self[0x7d8] << 7)
-    ;
+        *(uint *)(self + lVar3 * 0x10 + 0xc) & 0x80000000 | *(uint *)(self + 0xa4c) & 0x7fffffff;
+    self[lVar3 * 0x10 + 0xf] =
+        (Tim)((byte)self[lVar3 * 0x10 + 0xf] & 0x7f | (char)self[0x7d8] << 7);
     TVar2 = (Tim)((char)TVar2 + '\x01');
     TVar1 = (Tim)0x0;
     if (TVar2 != (Tim)0x64) {
       TVar1 = TVar2;
     }
     self[0x10e0] = TVar1;
-    TVar2 = SUB41((int)(char)self[0x10e2] + 1U,0);
+    TVar2 = SUB41((int)(char)self[0x10e2] + 1U, 0);
     if (100 < (int)(char)self[0x10e2] + 1U) {
       TVar2 = (Tim)0x64;
     }

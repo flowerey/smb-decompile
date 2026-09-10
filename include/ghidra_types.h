@@ -10,14 +10,16 @@
 typedef uint64_t ulong;
 typedef uint32_t uint;
 typedef uint16_t ushort;
-typedef uint8_t  byte;
+typedef uint8_t byte;
 typedef uint64_t undefined8;
 typedef uint32_t undefined4;
 typedef uint16_t undefined2;
-typedef uint8_t  undefined1;
-typedef uint8_t  undefined;
+typedef uint8_t undefined1;
+typedef uint8_t undefined;
 typedef void *(*code)(); /* Ghidra code-pointer: generic function */
-typedef struct { char *_rep; } allocator; /* libstdc++ COW stub */
+typedef struct {
+  char *_rep;
+} allocator; /* libstdc++ COW stub */
 
 static inline void halt_baddata(void) { __builtin_trap(); }
 

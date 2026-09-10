@@ -63,11 +63,11 @@ void __thiscall DefaultMeatBoy__DefaultMeatBoy__00465430(DefaultMeatBoy *self)
 
 {
   SMBBloodExplosion *this_00;
-  
+
   *(uint8_t ***)self = &PTR__DefaultMeatBoy_005bebb0;
   if ((*(int *)(self + 0xa40) == 0) &&
-     (this_00 = *(SMBBloodExplosion **)(self + 0xa98), this_00 != (SMBBloodExplosion *)0x0)) {
-                    /* try { // try from 004651f3 to 004651f7 has its CatchHandler @ 00465216 */
+      (this_00 = *(SMBBloodExplosion **)(self + 0xa98), this_00 != (SMBBloodExplosion *)0x0)) {
+    /* try { // try from 004651f3 to 004651f7 has its CatchHandler @ 00465216 */
     SMBBloodExplosion__SMBBloodExplosion__0048cc90(this_00);
     operator_delete(this_00);
   }
@@ -91,7 +91,7 @@ void __thiscall DefaultMeatBoy__Death(DefaultMeatBoy *self)
   if (*(int *)(self + 0xa40) != 0) {
     return;
   }
-  SMBBloodExplosion__Spawn(*(SMBBloodExplosion **)(self + 0xa98),(Vector2 *)(self + 0xa0));
+  SMBBloodExplosion__Spawn(*(SMBBloodExplosion **)(self + 0xa98), (Vector2 *)(self + 0xa0));
   return;
 }
 
@@ -108,11 +108,11 @@ void __thiscall DefaultMeatBoy__DefaultMeatBoy__00465430(DefaultMeatBoy *self)
 
 {
   SMBBloodExplosion *this_00;
-  
+
   *(uint8_t ***)self = &PTR__DefaultMeatBoy_005bebb0;
   if ((*(int *)(self + 0xa40) == 0) &&
-     (this_00 = *(SMBBloodExplosion **)(self + 0xa98), this_00 != (SMBBloodExplosion *)0x0)) {
-                    /* try { // try from 00465461 to 00465465 has its CatchHandler @ 0046548c */
+      (this_00 = *(SMBBloodExplosion **)(self + 0xa98), this_00 != (SMBBloodExplosion *)0x0)) {
+    /* try { // try from 00465461 to 00465465 has its CatchHandler @ 0046548c */
     SMBBloodExplosion__SMBBloodExplosion__0048cc90(this_00);
     operator_delete(this_00);
   }
@@ -135,14 +135,14 @@ void __thiscall DefaultMeatBoy__DefaultMeatBoy__00465540(DefaultMeatBoy *self)
 {
   uint64_t uVar1;
   SMBBloodExplosion *this_00;
-  
-  uVar1 = FormatResourcePath("/Animations/meatboyanim.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,0);
+
+  uVar1 = FormatResourcePath("/Animations/meatboyanim.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 0);
   *(uint8_t ***)self = &PTR__DefaultMeatBoy_005bebb0;
   *(uint32_t *)(self + 0xa54) = 0;
-                    /* try { // try from 004654e3 to 004654e7 has its CatchHandler @ 00465509 */
+  /* try { // try from 004654e3 to 004654e7 has its CatchHandler @ 00465509 */
   this_00 = operator_new(0x690);
-                    /* try { // try from 004654ee to 004654f2 has its CatchHandler @ 0046551c */
+  /* try { // try from 004654ee to 004654f2 has its CatchHandler @ 0046551c */
   SMBBloodExplosion__SMBBloodExplosion(this_00);
   *(SMBBloodExplosion **)(self + 0xa98) = this_00;
   return;
@@ -157,13 +157,13 @@ void __thiscall DefaultMeatBoy__DefaultMeatBoy__00465540(DefaultMeatBoy *self)
  */
 /* DefaultMeatBoy__DefaultMeatBoy__00465540(MeatBoyCharactor*, int) */
 
-void __thiscall
-DefaultMeatBoy__DefaultMeatBoy__00465540(DefaultMeatBoy *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall DefaultMeatBoy__DefaultMeatBoy__00465540(DefaultMeatBoy *self,
+                                                         MeatBoyCharactor *arg1, int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__DefaultMeatBoy_005bebb0;
-                    /* try { // try from 00465571 to 00465575 has its CatchHandler @ 00465589 */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 00465571 to 00465575 has its CatchHandler @ 00465589 */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   return;
 }

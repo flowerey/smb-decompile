@@ -54,8 +54,8 @@ void __thiscall SMBCreditMenu__Initialize(SMBCreditMenu *self)
 
 {
   uint64_t uVar1;
-  
-  (**(code **)(*(long *)self + 0x10))(self,0,"creditsidle");
+
+  (**(code **)(*(long *)self + 0x10))(self, 0, "creditsidle");
   uVar1 = GetLocalizedText(0x23);
   *(uint64_t *)(self + 0x50) = uVar1;
   return;
@@ -94,57 +94,57 @@ void __thiscall SMBCreditMenu__Activate(SMBCreditMenu *self)
 {
   uint64_t uVar1;
   wchar_t *pwVar2;
-  
+
   SMBPopupMenu__Activate((SMBPopupMenu *)self);
   uVar1 = GetLocalizedText(0x116);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"tommy");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "tommy");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar1);
+    FlashTextField__SetText(pwVar2, uVar1);
   }
   uVar1 = GetLocalizedText(0x80);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"tommytitle");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "tommytitle");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar1);
+    FlashTextField__SetText(pwVar2, uVar1);
   }
   uVar1 = GetLocalizedText(0x117);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"ed");
+  pwVar2 =
+      (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "ed");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar1);
+    FlashTextField__SetText(pwVar2, uVar1);
   }
   uVar1 = GetLocalizedText(0x7f);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"edtitle");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "edtitle");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar1);
+    FlashTextField__SetText(pwVar2, uVar1);
   }
   uVar1 = GetLocalizedText(0x118);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"danny");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "danny");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar1);
+    FlashTextField__SetText(pwVar2, uVar1);
   }
   uVar1 = GetLocalizedText(0x81);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"dannytitle");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "dannytitle");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar1);
+    FlashTextField__SetText(pwVar2, uVar1);
   }
   uVar1 = GetLocalizedText(0x119);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"jordan");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "jordan");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar1);
+    FlashTextField__SetText(pwVar2, uVar1);
   }
   GetLocalizedText(0x82);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"jordantitle");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "jordantitle");
   if (pwVar2 != (wchar_t *)0x0) {
     FlashTextField__SetText(pwVar2);
   }
-  SMBCreditRoll__SetCreditsText(*(FlashAnimationLibrary **)(self + 8),0);
+  SMBCreditRoll__SetCreditsText(*(FlashAnimationLibrary **)(self + 8), 0);
   return;
 }
 
@@ -196,16 +196,16 @@ void __thiscall SMBCreditMenu__DeActivate(SMBCreditMenu *self)
 
 {
   Joystick *pJVar1;
-  
+
   *(uint32_t *)(self + 0x30) = 2;
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,1,0,0);
+  Joystick__AddButtonCallback(pJVar1, 1, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__RestoreCallbacks(pJVar1,(InputCallback **)(self + 0x40),(InputCallback **)(self + 0x38))
-  ;
+  Joystick__RestoreCallbacks(pJVar1, (InputCallback **)(self + 0x40),
+                             (InputCallback **)(self + 0x38));
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x23,0,0);
-    TKeyboard__RestoreCallbacks(Keyboard,(InputCallback **)(self + 0x48));
+    TKeyboard__AddKeyCallback(Keyboard, 0x23, 0, 0);
+    TKeyboard__RestoreCallbacks(Keyboard, (InputCallback **)(self + 0x48));
     return;
   }
   return;
@@ -224,7 +224,7 @@ void __thiscall SMBCreditMenu__SMBCreditMenu__00504890(SMBCreditMenu *self)
 
 {
   uint64_t uVar1;
-  
+
   *(ushort *)(self + 0x34) = *(ushort *)(self + 0x34) & 0xfc00;
   *(uint8_t ***)self = &PTR__SMBPopupMenu_005c76d0;
   *(uint64_t *)(self + 8) = 0;

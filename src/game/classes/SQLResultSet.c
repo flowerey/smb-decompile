@@ -53,22 +53,23 @@ void __thiscall SQLResultSet__SQLResultSet__005b3ec0(SQLResultSet *self)
  */
 /* SQLResultSet__GetFieldIndex(char const*) */
 
-int __thiscall SQLResultSet__GetFieldIndex(SQLResultSet *self,char *arg1)
+int __thiscall SQLResultSet__GetFieldIndex(SQLResultSet *self, char *arg1)
 
 {
   int iVar1;
   int iVar2;
   int iVar3;
   uint64_t *puVar4;
-  
+
   iVar3 = -1;
   iVar1 = *(int *)(*(long *)self + 8);
   if (iVar1 != 0) {
     puVar4 = *(uint64_t **)(*(long *)self + 0x10);
     iVar3 = 0;
-    while( true ) {
-      iVar2 = strcmp((char *)*puVar4,arg1);
-      if (iVar2 == 0) break;
+    while (true) {
+      iVar2 = strcmp((char *)*puVar4, arg1);
+      if (iVar2 == 0)
+        break;
       iVar3 = iVar3 + 1;
       puVar4 = puVar4 + 0x10;
       if (iVar3 == iVar1) {
@@ -88,8 +89,8 @@ int __thiscall SQLResultSet__GetFieldIndex(SQLResultSet *self,char *arg1)
  */
 /* SQLResultSet__GetINT(SQLFieldName const*, int*, unsigned int*) */
 
-uint64_t __thiscall
-SQLResultSet__GetINT(SQLResultSet *self,SQLFieldName *arg1,int *arg2,uint *arg3)
+uint64_t __thiscall SQLResultSet__GetINT(SQLResultSet *self, SQLFieldName *arg1, int *arg2,
+                                         uint *arg3)
 
 {
   uint uVar1;
@@ -101,26 +102,26 @@ SQLResultSet__GetINT(SQLResultSet *self,SQLFieldName *arg1,int *arg2,uint *arg3)
   size_t __n;
   long lVar5;
   uint64_t *puVar6;
-  uint8_t local_58 [40];
-  
+  uint8_t local_58[40];
+
   uVar4 = 0;
   lVar2 = *(long *)self;
   if ((lVar2 != 0) && (arg2 != (int *)0x0)) {
     __s2 = *(char **)arg1;
     if (__s2 == (char *)0x0) {
       lVar5 = (long)*(int *)(arg1 + 8);
-LAB_005b3ff3:
+    LAB_005b3ff3:
       lVar5 = lVar5 << 3;
-    }
-    else {
+    } else {
       uVar1 = *(uint *)(lVar2 + 8);
       lVar5 = -8;
       if (uVar1 != 0) {
         puVar6 = *(uint64_t **)(lVar2 + 0x10);
         lVar5 = 0;
         do {
-          iVar3 = strcmp((char *)*puVar6,__s2);
-          if (iVar3 == 0) goto LAB_005b3ff3;
+          iVar3 = strcmp((char *)*puVar6, __s2);
+          if (iVar3 == 0)
+            goto LAB_005b3ff3;
           lVar5 = lVar5 + 1;
           puVar6 = puVar6 + 0x10;
         } while ((uint)lVar5 < uVar1);
@@ -130,13 +131,13 @@ LAB_005b3ff3:
     __n = *(size_t *)(lVar5 + *(long *)(lVar2 + 0x70));
     __src = *(uint8_t **)(*(long *)(lVar2 + 0x68) + lVar5);
     if (__src != local_58) {
-      memcpy(local_58,__src,__n);
+      memcpy(local_58, __src, __n);
       __n = *(size_t *)(*(long *)(lVar2 + 0x70) + lVar5);
     }
     local_58[__n] = 0;
     iVar3 = StringToInt(local_58);
     if (arg3 != (uint *)0x0) {
-      *arg3 = (uint)*(uint64_t *)(*(long *)(lVar2 + 0x70) + lVar5);
+      *arg3 = (uint) * (uint64_t *)(*(long *)(lVar2 + 0x70) + lVar5);
     }
     *arg2 = iVar3;
     uVar4 = 1;
@@ -153,8 +154,8 @@ LAB_005b3ff3:
  */
 /* SQLResultSet__GetFLOAT(SQLFieldName const*, float*, unsigned int*) */
 
-uint64_t __thiscall
-SQLResultSet__GetFLOAT(SQLResultSet *self,SQLFieldName *arg1,float *arg2,uint *arg3)
+uint64_t __thiscall SQLResultSet__GetFLOAT(SQLResultSet *self, SQLFieldName *arg1, float *arg2,
+                                           uint *arg3)
 
 {
   uint uVar1;
@@ -167,26 +168,26 @@ SQLResultSet__GetFLOAT(SQLResultSet *self,SQLFieldName *arg1,float *arg2,uint *a
   long lVar5;
   uint64_t *puVar6;
   float fVar7;
-  uint8_t local_58 [40];
-  
+  uint8_t local_58[40];
+
   uVar4 = 0;
   lVar2 = *(long *)self;
   if ((lVar2 != 0) && (arg2 != (float *)0x0)) {
     __s2 = *(char **)arg1;
     if (__s2 == (char *)0x0) {
       lVar5 = (long)*(int *)(arg1 + 8);
-LAB_005b4123:
+    LAB_005b4123:
       lVar5 = lVar5 << 3;
-    }
-    else {
+    } else {
       uVar1 = *(uint *)(lVar2 + 8);
       lVar5 = -8;
       if (uVar1 != 0) {
         puVar6 = *(uint64_t **)(lVar2 + 0x10);
         lVar5 = 0;
         do {
-          iVar3 = strcmp((char *)*puVar6,__s2);
-          if (iVar3 == 0) goto LAB_005b4123;
+          iVar3 = strcmp((char *)*puVar6, __s2);
+          if (iVar3 == 0)
+            goto LAB_005b4123;
           lVar5 = lVar5 + 1;
           puVar6 = puVar6 + 0x10;
         } while ((uint)lVar5 < uVar1);
@@ -196,13 +197,13 @@ LAB_005b4123:
     __n = *(size_t *)(lVar5 + *(long *)(lVar2 + 0x70));
     __src = *(uint8_t **)(*(long *)(lVar2 + 0x68) + lVar5);
     if (__src != local_58) {
-      memcpy(local_58,__src,__n);
+      memcpy(local_58, __src, __n);
       __n = *(size_t *)(*(long *)(lVar2 + 0x70) + lVar5);
     }
     local_58[__n] = 0;
     fVar7 = (float)StringToFloat(local_58);
     if (arg3 != (uint *)0x0) {
-      *arg3 = (uint)*(uint64_t *)(*(long *)(lVar2 + 0x70) + lVar5);
+      *arg3 = (uint) * (uint64_t *)(*(long *)(lVar2 + 0x70) + lVar5);
     }
     *arg2 = fVar7;
     uVar4 = 1;
@@ -219,8 +220,8 @@ LAB_005b4123:
  */
 /* SQLResultSet__GetString(SQLFieldName const*, char**, unsigned int*) */
 
-uint64_t __thiscall
-SQLResultSet__GetString(SQLResultSet *self,SQLFieldName *arg1,char **arg2,uint *arg3)
+uint64_t __thiscall SQLResultSet__GetString(SQLResultSet *self, SQLFieldName *arg1, char **arg2,
+                                            uint *arg3)
 
 {
   uint uVar1;
@@ -232,25 +233,25 @@ SQLResultSet__GetString(SQLResultSet *self,SQLFieldName *arg1,char **arg2,uint *
   ulong uVar6;
   uint64_t *puVar7;
   long lVar8;
-  
+
   uVar5 = 0;
   lVar2 = *(long *)self;
   if ((lVar2 != 0) && (arg2 != (char **)0x0)) {
     pcVar3 = *(char **)arg1;
     if (pcVar3 == (char *)0x0) {
       lVar8 = (long)*(int *)(arg1 + 8);
-LAB_005b4253:
+    LAB_005b4253:
       lVar8 = lVar8 << 3;
-    }
-    else {
+    } else {
       uVar1 = *(uint *)(lVar2 + 8);
       lVar8 = -8;
       if (uVar1 != 0) {
         puVar7 = *(uint64_t **)(lVar2 + 0x10);
         lVar8 = 0;
         do {
-          iVar4 = strcmp((char *)*puVar7,pcVar3);
-          if (iVar4 == 0) goto LAB_005b4253;
+          iVar4 = strcmp((char *)*puVar7, pcVar3);
+          if (iVar4 == 0)
+            goto LAB_005b4253;
           lVar8 = lVar8 + 1;
           puVar7 = puVar7 + 0x10;
         } while ((uint)lVar8 < uVar1);
@@ -262,7 +263,7 @@ LAB_005b4253:
     __dest = malloc((ulong)(uVar1 + 1));
     pcVar3 = *(char **)(*(long *)(lVar2 + 0x68) + lVar8);
     if (pcVar3 != __dest) {
-      memcpy(__dest,pcVar3,uVar6 & 0xffffffff);
+      memcpy(__dest, pcVar3, uVar6 & 0xffffffff);
       uVar6 = *(ulong *)(lVar8 + *(long *)(lVar2 + 0x70));
     }
     __dest[uVar6] = '\0';
@@ -284,8 +285,8 @@ LAB_005b4253:
  */
 /* SQLResultSet__GetBlob(SQLFieldName const*, void**, unsigned int*) */
 
-uint64_t __thiscall
-SQLResultSet__GetBlob(SQLResultSet *self,SQLFieldName *arg1,void **arg2,uint *arg3)
+uint64_t __thiscall SQLResultSet__GetBlob(SQLResultSet *self, SQLFieldName *arg1, void **arg2,
+                                          uint *arg3)
 
 {
   uint uVar1;
@@ -297,22 +298,21 @@ SQLResultSet__GetBlob(SQLResultSet *self,SQLFieldName *arg1,void **arg2,uint *ar
   uint64_t uVar4;
   long lVar5;
   uint64_t *puVar6;
-  
+
   uVar4 = 0;
   lVar2 = *(long *)self;
   if ((lVar2 != 0) && (arg2 != (void **)0x0)) {
     __s2 = *(char **)arg1;
     if (__s2 == (char *)0x0) {
       lVar5 = (long)*(int *)(arg1 + 8) << 3;
-    }
-    else {
+    } else {
       uVar1 = *(uint *)(lVar2 + 8);
       lVar5 = -8;
       if (uVar1 != 0) {
         puVar6 = *(uint64_t **)(lVar2 + 0x10);
         lVar5 = 0;
         do {
-          iVar3 = strcmp((char *)*puVar6,__s2);
+          iVar3 = strcmp((char *)*puVar6, __s2);
           if (iVar3 == 0) {
             lVar5 = lVar5 * 8;
             goto LAB_005b4389;
@@ -323,12 +323,12 @@ SQLResultSet__GetBlob(SQLResultSet *self,SQLFieldName *arg1,void **arg2,uint *ar
         lVar5 = -8;
       }
     }
-LAB_005b4389:
+  LAB_005b4389:
     uVar1 = *(uint *)(*(long *)(lVar2 + 0x70) + lVar5);
     __dest = malloc((ulong)(uVar1 + 1));
     __src = *(void **)(*(long *)(lVar2 + 0x68) + lVar5);
     if (__src != __dest) {
-      memcpy(__dest,__src,(ulong)uVar1);
+      memcpy(__dest, __src, (ulong)uVar1);
     }
     if (arg3 != (uint *)0x0) {
       *arg3 = uVar1;
@@ -354,7 +354,7 @@ bool __thiscall SQLResultSet__NextRow(SQLResultSet *self)
   long lVar1;
   long lVar2;
   bool bVar3;
-  
+
   lVar1 = *(long *)self;
   bVar3 = false;
   if (lVar1 != 0) {

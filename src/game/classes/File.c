@@ -24,7 +24,7 @@
 /* WARNING: Removing unreachable block (ram,0x005b79ce) */
 /* File__File(tagFileCreation const*) */
 
-void __thiscall File__File(File *self,tagFileCreation *arg1)
+void __thiscall File__File(File *self, tagFileCreation *arg1)
 
 {
   uint32_t uVar1;
@@ -42,11 +42,11 @@ void __thiscall File__File(File *self,tagFileCreation *arg1)
   uint uVar10;
   bool bVar11;
   byte bVar12;
-  stat asStack_448 [7];
-  char *local_48 [2];
-  uint local_38 [2];
-  uint local_30 [2];
-  
+  stat asStack_448[7];
+  char *local_48[2];
+  uint local_38[2];
+  uint local_30[2];
+
   bVar12 = 0;
   *(uint32_t *)self = 0xffffffff;
   *(uint64_t *)(self + 0x28) = 0;
@@ -68,7 +68,8 @@ void __thiscall File__File(File *self,tagFileCreation *arg1)
       lVar7 = 5;
       pcVar8 = ".wav";
       do {
-        if (lVar7 == 0) break;
+        if (lVar7 == 0)
+          break;
         lVar7 = lVar7 + -1;
         bVar11 = *pcVar8 == *pcVar5;
         pcVar8 = pcVar8 + (ulong)bVar12 * -2 + 1;
@@ -76,17 +77,15 @@ void __thiscall File__File(File *self,tagFileCreation *arg1)
       } while (bVar11);
       if (bVar11) {
         *(FilePackage **)(self + 0x28) = GameAudioPackage;
-      }
-      else {
+      } else {
         *(FilePackage **)(self + 0x28) = GameFilePackage;
         this_00 = pFVar2;
       }
       if ((this_00 != (FilePackage *)0x0) && (*(int *)(arg1 + 0x2c) == 0)) {
-        FilePackage__GetFileFromPackage(this_00,*(char **)arg1,local_30,local_38,(void **)0x0);
+        FilePackage__GetFileFromPackage(this_00, *(char **)arg1, local_30, local_38, (void **)0x0);
         if ((local_30[0] == 0) || (local_38[0] == 0)) {
           uVar10 = *(uint *)(self + 8);
-        }
-        else {
+        } else {
           *(uint *)(self + 4) = local_30[0];
           *(uint *)(self + 0x1c) = local_38[0];
           *(uint32_t *)(self + 0x18) = 0;
@@ -101,10 +100,10 @@ void __thiscall File__File(File *self,tagFileCreation *arg1)
         __oflag = 0;
       }
       do {
-        CriticalSection__Lock((CriticalSection *)fileOpenSection,1);
+        CriticalSection__Lock((CriticalSection *)fileOpenSection, 1);
         FixFileCase((char *)local_48);
-                    /* try { // try from 005b77dd to 005b77e1 has its CatchHandler @ 005b79bb */
-        iVar3 = open(local_48[0],__oflag,0x180);
+        /* try { // try from 005b77dd to 005b77e1 has its CatchHandler @ 005b79bb */
+        iVar3 = open(local_48[0], __oflag, 0x180);
         *(int *)self = iVar3;
         if ((allocator *)(local_48[0] + -0x18) !=
             (allocator *)&std__string_Rep_S_empty_rep_storage) {
@@ -125,16 +124,16 @@ void __thiscall File__File(File *self,tagFileCreation *arg1)
             psVar9->st_dev = 0;
             psVar9 = (stat *)((long)psVar9 + ((ulong)bVar12 * -2 + 1) * 8);
           }
-          __fxstat(1,iVar3,asStack_448);
+          __fxstat(1, iVar3, asStack_448);
           *(uint *)(self + 4) = (uint)asStack_448[0].st_size;
           *(__time_t *)(self + 0x20) = asStack_448[0].st_mtim.tv_sec;
           if (((0x4fffff < (uint)asStack_448[0].st_size) || (**(char **)(arg1 + 8) != 'r')) &&
-             (((byte)self[8] & 0x40) == 0)) {
+              (((byte)self[8] & 0x40) == 0)) {
             return;
           }
           __buf = malloc(asStack_448[0].st_size & 0xffffffffU);
           *(void **)(self + 0x10) = __buf;
-          read(*(int *)self,__buf,asStack_448[0].st_size & 0xffffffffU);
+          read(*(int *)self, __buf, asStack_448[0].st_size & 0xffffffffU);
           *(uint *)(self + 8) = *(uint *)(self + 8) | 0x10;
           close(*(int *)self);
           *(uint32_t *)self = 0xfffffffe;
@@ -144,12 +143,11 @@ void __thiscall File__File(File *self,tagFileCreation *arg1)
         iVar3 = *piVar4;
       } while ((iVar3 - 0x17U < 2) || (iVar3 == 4));
       pcVar5 = strerror(iVar3);
-      Sprint("Could not open file: %s \n Returned Error: %i (%s)",asStack_448,*(uint64_t *)arg1
-             ,*piVar4,pcVar5);
+      Sprint("Could not open file: %s \n Returned Error: %i (%s)", asStack_448, *(uint64_t *)arg1,
+             *piVar4, pcVar5);
       Error__ThrowFatalError((char *)asStack_448);
     }
-  }
-  else {
+  } else {
     *(long *)(self + 0x10) = *(long *)(arg1 + 0x18);
     uVar1 = *(uint32_t *)(arg1 + 0x20);
     *(uint *)(self + 8) = uVar10 | 8;
@@ -171,15 +169,14 @@ void __thiscall File__File__005b7a70(File *self)
 
 {
   uint uVar1;
-  
+
   uVar1 = *(uint *)(self + 8);
   if ((uVar1 & 0x18) == 0) {
     if (((uVar1 & 0x20) == 0) && (1 < *(int *)self + 2U)) {
       close(*(int *)self);
       return;
     }
-  }
-  else if ((uVar1 & 0x10) != 0) {
+  } else if ((uVar1 & 0x10) != 0) {
     free(*(void **)(self + 0x10));
     *(uint64_t *)(self + 0x10) = 0;
     return;
@@ -219,7 +216,7 @@ void __thiscall File__Reset(File *self)
     *(uint32_t *)(self + 0x18) = 0;
     return;
   }
-  lseek(*(int *)self,0,0);
+  lseek(*(int *)self, 0, 0);
   return;
 }
 
@@ -236,11 +233,11 @@ ulong __thiscall File__GetFilePos(File *self)
 
 {
   ulong uVar1;
-  
+
   if (((byte)self[8] & 0x38) != 0) {
-    return (ulong)*(uint *)(self + 0x18);
+    return (ulong) * (uint *)(self + 0x18);
   }
-  uVar1 = lseek(*(int *)self,0,1);
+  uVar1 = lseek(*(int *)self, 0, 1);
   return uVar1;
 }
 
@@ -253,14 +250,14 @@ ulong __thiscall File__GetFilePos(File *self)
  */
 /* File__Seek(int) */
 
-void __thiscall File__Seek(File *self,int arg1)
+void __thiscall File__Seek(File *self, int arg1)
 
 {
   if (((byte)self[8] & 0x38) != 0) {
     *(int *)(self + 0x18) = arg1;
     return;
   }
-  lseek(*(int *)self,(long)arg1,0);
+  lseek(*(int *)self, (long)arg1, 0);
   return;
 }
 
@@ -273,14 +270,14 @@ void __thiscall File__Seek(File *self,int arg1)
  */
 /* File__Read(void*, unsigned int) */
 
-ulong __thiscall File__Read(File *self,void *arg1,uint arg2)
+ulong __thiscall File__Read(File *self, void *arg1, uint arg2)
 
 {
   uint uVar1;
   uint uVar2;
   ulong uVar3;
   ulong uVar4;
-  
+
   if ((*(uint *)(self + 8) & 0x18) != 0) {
     uVar2 = *(uint *)(self + 0x18);
     uVar1 = *(int *)(self + 4) - uVar2;
@@ -288,14 +285,14 @@ ulong __thiscall File__Read(File *self,void *arg1,uint arg2)
       uVar1 = arg2;
     }
     if ((void *)((ulong)uVar2 + *(long *)(self + 0x10)) != arg1) {
-      memcpy(arg1,(void *)((ulong)uVar2 + *(long *)(self + 0x10)),(ulong)uVar1);
+      memcpy(arg1, (void *)((ulong)uVar2 + *(long *)(self + 0x10)), (ulong)uVar1);
       uVar2 = *(uint *)(self + 0x18);
     }
     *(uint *)(self + 0x18) = uVar2 + uVar1;
     return (ulong)uVar1;
   }
   if ((*(uint *)(self + 8) & 0x20) == 0) {
-    uVar3 = read(*(int *)self,arg1,(ulong)arg2);
+    uVar3 = read(*(int *)self, arg1, (ulong)arg2);
     uVar4 = 0;
     if (-1 < (long)uVar3) {
       uVar4 = uVar3;
@@ -306,8 +303,8 @@ ulong __thiscall File__Read(File *self,void *arg1,uint arg2)
   if (arg2 <= uVar2) {
     uVar2 = arg2;
   }
-  FilePackage__Read(*(FilePackage **)(self + 0x28),arg1,
-                    *(int *)(self + 0x1c) + *(int *)(self + 0x18),uVar2);
+  FilePackage__Read(*(FilePackage **)(self + 0x28), arg1,
+                    *(int *)(self + 0x1c) + *(int *)(self + 0x18), uVar2);
   *(uint *)(self + 0x18) = *(int *)(self + 0x18) + uVar2;
   return (ulong)uVar2;
 }
@@ -321,14 +318,14 @@ ulong __thiscall File__Read(File *self,void *arg1,uint arg2)
  */
 /* File__ReadVariable(void*, unsigned int) */
 
-ulong __thiscall File__ReadVariable(File *self,void *arg1,uint arg2)
+ulong __thiscall File__ReadVariable(File *self, void *arg1, uint arg2)
 
 {
   uint uVar1;
   uint uVar2;
   ulong uVar3;
   ulong uVar4;
-  
+
   if ((*(uint *)(self + 8) & 0x18) != 0) {
     uVar2 = *(uint *)(self + 0x18);
     uVar1 = *(int *)(self + 4) - uVar2;
@@ -336,14 +333,14 @@ ulong __thiscall File__ReadVariable(File *self,void *arg1,uint arg2)
       uVar1 = arg2;
     }
     if ((void *)((ulong)uVar2 + *(long *)(self + 0x10)) != arg1) {
-      memcpy(arg1,(void *)((ulong)uVar2 + *(long *)(self + 0x10)),(ulong)uVar1);
+      memcpy(arg1, (void *)((ulong)uVar2 + *(long *)(self + 0x10)), (ulong)uVar1);
       uVar2 = *(uint *)(self + 0x18);
     }
     *(uint *)(self + 0x18) = uVar2 + uVar1;
     return (ulong)uVar1;
   }
   if ((*(uint *)(self + 8) & 0x20) == 0) {
-    uVar3 = read(*(int *)self,arg1,(ulong)arg2);
+    uVar3 = read(*(int *)self, arg1, (ulong)arg2);
     uVar4 = 0;
     if (-1 < (long)uVar3) {
       uVar4 = uVar3;
@@ -354,8 +351,8 @@ ulong __thiscall File__ReadVariable(File *self,void *arg1,uint arg2)
   if (arg2 <= uVar2) {
     uVar2 = arg2;
   }
-  FilePackage__Read(*(FilePackage **)(self + 0x28),arg1,
-                    *(int *)(self + 0x1c) + *(int *)(self + 0x18),uVar2);
+  FilePackage__Read(*(FilePackage **)(self + 0x28), arg1,
+                    *(int *)(self + 0x1c) + *(int *)(self + 0x18), uVar2);
   *(uint *)(self + 0x18) = *(int *)(self + 0x18) + uVar2;
   return (ulong)uVar2;
 }
@@ -369,13 +366,13 @@ ulong __thiscall File__ReadVariable(File *self,void *arg1,uint arg2)
  */
 /* File__ReadArray(unsigned char*, unsigned int, unsigned int) */
 
-void __thiscall File__ReadArray(File *self,uchar *arg1,uint arg2,uint arg3)
+void __thiscall File__ReadArray(File *self, uchar *arg1, uint arg2, uint arg3)
 
 {
   uchar *puVar1;
   uint uVar2;
   ulong uVar3;
-  
+
   if (arg2 != 0) {
     uVar3 = 0;
     uVar2 = 0;
@@ -383,7 +380,7 @@ void __thiscall File__ReadArray(File *self,uchar *arg1,uint arg2,uint arg3)
       puVar1 = arg1 + uVar3;
       uVar2 = uVar2 + 1;
       uVar3 = (ulong)((int)uVar3 + arg3);
-      Read(self,puVar1,arg3);
+      Read(self, puVar1, arg3);
     } while (uVar2 != arg2);
   }
   return;
@@ -398,11 +395,11 @@ void __thiscall File__ReadArray(File *self,uchar *arg1,uint arg2,uint arg3)
  */
 /* File__Write(void const*, unsigned int) */
 
-void __thiscall File__Write(File *self,void *arg1,uint arg2)
+void __thiscall File__Write(File *self, void *arg1, uint arg2)
 
 {
   if (arg1 != (void *)0x0) {
-    write(*(int *)self,arg1,(ulong)arg2);
+    write(*(int *)self, arg1, (ulong)arg2);
     return;
   }
   return;
@@ -417,18 +414,18 @@ void __thiscall File__Write(File *self,void *arg1,uint arg2)
  */
 /* File__WriteArray(unsigned char const*, unsigned int, unsigned int) */
 
-void __thiscall File__WriteArray(File *self,uchar *arg1,uint arg2,uint arg3)
+void __thiscall File__WriteArray(File *self, uchar *arg1, uint arg2, uint arg3)
 
 {
   uint uVar1;
   ulong uVar2;
-  
+
   if (arg2 != 0) {
     uVar2 = 0;
     uVar1 = 0;
     do {
       if (arg1 + uVar2 != (uchar *)0x0) {
-        write(*(int *)self,arg1 + uVar2,(ulong)arg3);
+        write(*(int *)self, arg1 + uVar2, (ulong)arg3);
       }
       uVar1 = uVar1 + 1;
       uVar2 = (ulong)((int)uVar2 + arg3);
@@ -446,13 +443,13 @@ void __thiscall File__WriteArray(File *self,uchar *arg1,uint arg2,uint arg3)
  */
 /* File__GetFileDate(SystemFileTime*) */
 
-void __thiscall File__GetFileDate(File *self,SystemFileTime *arg1)
+void __thiscall File__GetFileDate(File *self, SystemFileTime *arg1)
 
 {
   uint16_t uVar1;
   tm local_48;
-  
-  localtime_r((time_t *)(self + 0x20),&local_48);
+
+  localtime_r((time_t *)(self + 0x20), &local_48);
   *(short *)arg1 = (short)local_48.tm_mon + 1;
   *(uint16_t *)(arg1 + 2) = (uint16_t)local_48.tm_mday;
   *(short *)(arg1 + 4) = (short)local_48.tm_year + 0x76c;

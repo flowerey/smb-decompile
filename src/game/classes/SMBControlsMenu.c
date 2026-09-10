@@ -39,7 +39,7 @@ void __thiscall SMBControlsMenu__Update(SMBControlsMenu *self)
 
 {
   int *piVar1;
-  
+
   piVar1 = (int *)TPlayer__GetJoystick((TPlayer *)Players__Player);
   if (*piVar1 != 1) {
     *(uint64_t *)(self + 0x28) = *(uint64_t *)(self + 0x58);
@@ -62,15 +62,17 @@ void __thiscall SMBControlsMenu__Initialize(SMBControlsMenu *self)
 
 {
   uint64_t uVar1;
-  
-  (**(code **)(*(long *)self + 0x10))(self,0,"howidle");
+
+  (**(code **)(*(long *)self + 0x10))(self, 0, "howidle");
   if (*(long **)(self + 0x28) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0x28) + 8))();
   }
   *(uint64_t *)(self + 0x28) = 0;
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 8),"howidle");
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 8),
+                                                        "howidle");
   *(uint64_t *)(self + 0x60) = uVar1;
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 8),"how2idle");
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 8),
+                                                        "how2idle");
   *(uint64_t *)(self + 0x58) = uVar1;
   *(uint64_t *)(self + 0x28) = *(uint64_t *)(self + 0x60);
   uVar1 = GetLocalizedText(0xb6);
@@ -91,12 +93,11 @@ void __thiscall SMBControlsMenu__Render(SMBControlsMenu *self)
 
 {
   int *piVar1;
-  
+
   piVar1 = (int *)TPlayer__GetJoystick((TPlayer *)Players__Player);
   if (*piVar1 == 1) {
     *(uint64_t *)(self + 0x28) = *(uint64_t *)(self + 0x60);
-  }
-  else {
+  } else {
     *(uint64_t *)(self + 0x28) = *(uint64_t *)(self + 0x58);
   }
   if ((*(ushort *)(self + 0x34) & 0x3ff) == 0) {
@@ -120,25 +121,25 @@ void __thiscall SMBControlsMenu__Activate(SMBControlsMenu *self)
 {
   uint64_t uVar1;
   wchar_t *pwVar2;
-  
+
   SMBPopupMenu__Activate((SMBPopupMenu *)self);
   uVar1 = GetLocalizedText(0x1c);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"move");
+  pwVar2 =
+      (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "move");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar1);
+    FlashTextField__SetText(pwVar2, uVar1);
   }
   uVar1 = GetLocalizedText(0x1a);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"run");
+  pwVar2 =
+      (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "run");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar1);
+    FlashTextField__SetText(pwVar2, uVar1);
   }
   uVar1 = GetLocalizedText(0x1b);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"jump");
+  pwVar2 =
+      (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "jump");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar1);
+    FlashTextField__SetText(pwVar2, uVar1);
     return;
   }
   return;
@@ -158,7 +159,7 @@ void __thiscall SMBControlsMenu__SMBControlsMenu__00503fe0(SMBControlsMenu *self
 {
   *(uint8_t ***)self = &PTR__SMBControlsMenu_005c77f0;
   if (*(long **)(self + 0x60) != (long *)0x0) {
-                    /* try { // try from 00503eab to 00503ec4 has its CatchHandler @ 00503ee2 */
+    /* try { // try from 00503eab to 00503ec4 has its CatchHandler @ 00503ee2 */
     (**(code **)(**(long **)(self + 0x60) + 8))();
   }
   *(uint64_t *)(self + 0x60) = 0;
@@ -185,7 +186,7 @@ void __thiscall SMBControlsMenu__SMBControlsMenu__00503fe0(SMBControlsMenu *self
 {
   *(uint8_t ***)self = &PTR__SMBControlsMenu_005c77f0;
   if (*(long **)(self + 0x60) != (long *)0x0) {
-                    /* try { // try from 00503ffb to 00504014 has its CatchHandler @ 0050403a */
+    /* try { // try from 00503ffb to 00504014 has its CatchHandler @ 0050403a */
     (**(code **)(**(long **)(self + 0x60) + 8))();
   }
   *(uint64_t *)(self + 0x60) = 0;
@@ -212,16 +213,16 @@ void __thiscall SMBControlsMenu__DeActivate(SMBControlsMenu *self)
 
 {
   Joystick *pJVar1;
-  
+
   *(uint32_t *)(self + 0x30) = 2;
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,1,0,0);
+  Joystick__AddButtonCallback(pJVar1, 1, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__RestoreCallbacks(pJVar1,(InputCallback **)(self + 0x40),(InputCallback **)(self + 0x38))
-  ;
+  Joystick__RestoreCallbacks(pJVar1, (InputCallback **)(self + 0x40),
+                             (InputCallback **)(self + 0x38));
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x23,0,0);
-    TKeyboard__RestoreCallbacks(Keyboard,(InputCallback **)(self + 0x48));
+    TKeyboard__AddKeyCallback(Keyboard, 0x23, 0, 0);
+    TKeyboard__RestoreCallbacks(Keyboard, (InputCallback **)(self + 0x48));
     return;
   }
   return;
@@ -240,7 +241,7 @@ void __thiscall SMBControlsMenu__SMBControlsMenu__00504970(SMBControlsMenu *self
 
 {
   uint64_t uVar1;
-  
+
   *(ushort *)(self + 0x34) = *(ushort *)(self + 0x34) & 0xfc00;
   *(uint8_t ***)self = &PTR__SMBPopupMenu_005c76d0;
   *(uint64_t *)(self + 8) = 0;

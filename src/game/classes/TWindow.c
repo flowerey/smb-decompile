@@ -18,7 +18,7 @@
  */
 /* TWindow__TWindow(WindowSetupProps const*) */
 
-void __thiscall TWindow__TWindow(TWindow *self,WindowSetupProps *arg1)
+void __thiscall TWindow__TWindow(TWindow *self, WindowSetupProps *arg1)
 
 {
   int iVar1;
@@ -26,10 +26,10 @@ void __thiscall TWindow__TWindow(TWindow *self,WindowSetupProps *arg1)
   uint64_t uVar3;
   char *pcVar4;
   bool bVar5;
-  uint8_t auStack_38 [4];
+  uint8_t auStack_38[4];
   uint32_t local_34;
   uint32_t local_30;
-  
+
   if (Window != (TWindow *)0x0) {
     Error__ThrowFatalError("Window Already created");
   }
@@ -43,12 +43,11 @@ void __thiscall TWindow__TWindow(TWindow *self,WindowSetupProps *arg1)
     *(uint64_t *)(self + 0x30) = *(uint64_t *)(arg1 + 0x28);
     *(uint32_t *)(self + 0x38) = *(uint32_t *)(arg1 + 0x30);
   }
-  iVar1 = SDL_GetDesktopDisplayMode(0,auStack_38);
+  iVar1 = SDL_GetDesktopDisplayMode(0, auStack_38);
   if (iVar1 == -1) {
     *(uint32_t *)(self + 0x3c) = 800;
     *(uint32_t *)(self + 0x40) = 600;
-  }
-  else {
+  } else {
     *(uint32_t *)(self + 0x3c) = local_34;
     *(uint32_t *)(self + 0x40) = local_30;
   }
@@ -58,8 +57,8 @@ void __thiscall TWindow__TWindow(TWindow *self,WindowSetupProps *arg1)
     if (*(int *)(arg1 + 8) == 0) {
       iVar1 = (-(uint)bVar5 & 0xffffefff) + 0x100b;
     }
-    lVar2 = SDL_CreateWindow(arg1 + 0x10,0x1fff0000,0x1fff0000,*(uint16_t *)arg1,
-                             *(uint16_t *)(arg1 + 2),iVar1);
+    lVar2 = SDL_CreateWindow(arg1 + 0x10, 0x1fff0000, 0x1fff0000, *(uint16_t *)arg1,
+                             *(uint16_t *)(arg1 + 2), iVar1);
     *(long *)self = lVar2;
     if (lVar2 == 0) {
       uVar3 = SDL_GetError();
@@ -67,8 +66,8 @@ void __thiscall TWindow__TWindow(TWindow *self,WindowSetupProps *arg1)
       if (!bVar5) {
         pcVar4 = "|FULLSCREEN";
       }
-      fprintf(stderr,"SDL_CreateWindow(%d, %d, OPENGL%s) failed: %s\n",(ulong)*(ushort *)arg1,
-              (ulong)*(ushort *)(arg1 + 2),pcVar4,uVar3);
+      fprintf(stderr, "SDL_CreateWindow(%d, %d, OPENGL%s) failed: %s\n", (ulong) * (ushort *)arg1,
+              (ulong) * (ushort *)(arg1 + 2), pcVar4, uVar3);
       fflush(stderr);
       Error__ThrowFatalError("SDL_CreateWindow() failed");
     }
@@ -110,15 +109,15 @@ void __thiscall TWindow__TWindow__005b93e0(TWindow *self)
  */
 /* TWindow__GetWindowPosition(unsigned int&, unsigned int&) */
 
-void __thiscall TWindow__GetWindowPosition(TWindow *self,uint *arg1,uint *arg2)
+void __thiscall TWindow__GetWindowPosition(TWindow *self, uint *arg1, uint *arg2)
 
 {
   uint uVar1;
   uint uVar2;
   uint local_20;
-  uint local_1c [3];
-  
-  SDL_GetWindowPosition(*(uint64_t *)self,&local_20,local_1c);
+  uint local_1c[3];
+
+  SDL_GetWindowPosition(*(uint64_t *)self, &local_20, local_1c);
   uVar1 = 0;
   if (-1 < (int)local_20) {
     uVar1 = local_20;

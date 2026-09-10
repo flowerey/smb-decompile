@@ -25,9 +25,9 @@ void __thiscall Texture__Texture__005a0720(Texture *self)
   long lVar1;
   Texture *pTVar2;
   long lVar3;
-  
+
   *(uint8_t ***)self = &PTR__Texture_005dd630;
-                    /* try { // try from 005a0412 to 005a0509 has its CatchHandler @ 005a0710 */
+  /* try { // try from 005a0412 to 005a0509 has its CatchHandler @ 005a0710 */
   TGraphics__AcquireDevice();
   _uNumTextures = _uNumTextures + -1;
   gfxDestroyTexture(self + 0x18);
@@ -37,112 +37,97 @@ void __thiscall Texture__Texture__005a0720(Texture *self)
     *(uint64_t *)(lVar1 + 0x98) = 0;
     pTVar2 = *(Texture **)(lVar3 + 1000);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(Graphics + 1000);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar3 + 1000) = 0;
     pTVar2 = *(Texture **)(lVar1 + 0xa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 0xa0);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar1 + 0xa0) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x3f0);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x3f0);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar3 + 0x3f0) = 0;
     pTVar2 = *(Texture **)(lVar1 + 0xa8);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 0xa8);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar1 + 0xa8) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x3f8);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x3f8);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar3 + 0x3f8) = 0;
     pTVar2 = *(Texture **)(lVar1 + 0xb0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 0xb0);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar1 + 0xb0) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x400);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x400);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar3 + 0x400) = 0;
     pTVar2 = *(Texture **)(lVar1 + 0xb8);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 0xb8);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar1 + 0xb8) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x408);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x408);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar3 + 0x408) = 0;
     pTVar2 = *(Texture **)(lVar1 + 0xc0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 0xc0);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar1 + 0xc0) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x410);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x410);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar3 + 0x410) = 0;
     pTVar2 = *(Texture **)(lVar1 + 200);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 200);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar1 + 200) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x418);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x418);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar3 + 0x418) = 0;
     pTVar2 = *(Texture **)(lVar1 + 0xd0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 0xd0);
   }
   if (pTVar2 == self) {
     *(uint64_t *)(lVar1 + 0xd0) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x420);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x420);
   }
   if (pTVar2 == self) {
@@ -170,9 +155,9 @@ void __thiscall Texture__Texture__005a0720(Texture *self)
   Texture *pTVar2;
   long lVar3;
   void *in_RSI;
-  
+
   *(uint8_t ***)self = &PTR__Texture_005dd630;
-                    /* try { // try from 005a0732 to 005a0829 has its CatchHandler @ 005a0a30 */
+  /* try { // try from 005a0732 to 005a0829 has its CatchHandler @ 005a0a30 */
   TGraphics__AcquireDevice();
   _uNumTextures = _uNumTextures + -1;
   gfxDestroyTexture(self + 0x18);
@@ -182,112 +167,97 @@ void __thiscall Texture__Texture__005a0720(Texture *self)
     *(uint64_t *)(lVar1 + 0x98) = 0;
     pTVar2 = *(Texture **)(lVar3 + 1000);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(Graphics + 1000);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar3 + 1000) = 0;
     pTVar2 = *(Texture **)(lVar1 + 0xa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 0xa0);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar1 + 0xa0) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x3f0);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x3f0);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar3 + 0x3f0) = 0;
     pTVar2 = *(Texture **)(lVar1 + 0xa8);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 0xa8);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar1 + 0xa8) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x3f8);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x3f8);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar3 + 0x3f8) = 0;
     pTVar2 = *(Texture **)(lVar1 + 0xb0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 0xb0);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar1 + 0xb0) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x400);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x400);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar3 + 0x400) = 0;
     pTVar2 = *(Texture **)(lVar1 + 0xb8);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 0xb8);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar1 + 0xb8) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x408);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x408);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar3 + 0x408) = 0;
     pTVar2 = *(Texture **)(lVar1 + 0xc0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 0xc0);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar1 + 0xc0) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x410);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x410);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar3 + 0x410) = 0;
     pTVar2 = *(Texture **)(lVar1 + 200);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 200);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar1 + 200) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x418);
     lVar1 = *(long *)(lVar3 + 0xaa0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x418);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar3 + 0x418) = 0;
     pTVar2 = *(Texture **)(lVar1 + 0xd0);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar1 + 0xd0);
   }
   if (self == pTVar2) {
     *(uint64_t *)(lVar1 + 0xd0) = 0;
     pTVar2 = *(Texture **)(lVar3 + 0x420);
-  }
-  else {
+  } else {
     pTVar2 = *(Texture **)(lVar3 + 0x420);
   }
   if (self == pTVar2) {
@@ -295,7 +265,7 @@ void __thiscall Texture__Texture__005a0720(Texture *self)
   }
   TGraphics__ReleaseDevice();
   *(uint8_t ***)self = &PTR__BaseResource_005dbe30;
-  BaseResource__operator_delete((BaseResource *)self,in_RSI);
+  BaseResource__operator_delete((BaseResource *)self, in_RSI);
   return;
 }
 
@@ -326,11 +296,11 @@ void __thiscall Texture__Texture__005a0a40(Texture *self)
  */
 /* Texture__Lock(void**, unsigned int) */
 
-void __thiscall Texture__Lock(Texture *self,void **arg1,uint arg2)
+void __thiscall Texture__Lock(Texture *self, void **arg1, uint arg2)
 
 {
   TGraphics__AcquireDevice();
-  gfxLockTexture(self + 0x18,arg1,arg2);
+  gfxLockTexture(self + 0x18, arg1, arg2);
   TGraphics__ReleaseDevice();
   return;
 }

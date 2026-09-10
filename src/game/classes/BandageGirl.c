@@ -74,9 +74,9 @@ void __thiscall BandageGirl__BandageGirl__004658c0(BandageGirl *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FormatResourcePath("/Animations/bandagegirl.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,6);
+
+  uVar1 = FormatResourcePath("/Animations/bandagegirl.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 6);
   *(uint8_t ***)self = &PTR__BandageGirl_005bf0b0;
   *(uint32_t *)(self + 0xa54) = 6;
   return;
@@ -91,12 +91,13 @@ void __thiscall BandageGirl__BandageGirl__004658c0(BandageGirl *self)
  */
 /* BandageGirl__BandageGirl__004658c0(MeatBoyCharactor*, int) */
 
-void __thiscall BandageGirl__BandageGirl__004658c0(BandageGirl *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall BandageGirl__BandageGirl__004658c0(BandageGirl *self, MeatBoyCharactor *arg1,
+                                                   int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__BandageGirl_005bf0b0;
-                    /* try { // try from 004658f1 to 004658f5 has its CatchHandler @ 00465909 */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 004658f1 to 004658f5 has its CatchHandler @ 00465909 */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   return;
 }

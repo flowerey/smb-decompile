@@ -37,7 +37,7 @@ void __thiscall MeatboyReplayBoys__MeatboyReplayBoys__00474fa0(MeatboyReplayBoys
 
 {
   long lVar1;
-  
+
   lVar1 = 0;
   do {
     if (*(long **)(self + lVar1) != (long *)0x0) {

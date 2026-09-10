@@ -78,7 +78,7 @@ void __thiscall EditorButton__SetSelectedState(EditorButton *self)
 
 {
   if (*(FlashLibraryInstance **)(self + 0x10) != (FlashLibraryInstance *)0x0) {
-    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0x10),3);
+    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0x10), 3);
     return;
   }
   return;
@@ -97,7 +97,7 @@ void __thiscall EditorButton__SetMouseOutState(EditorButton *self)
 
 {
   if (*(FlashLibraryInstance **)(self + 0x10) != (FlashLibraryInstance *)0x0) {
-    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0x10),1);
+    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0x10), 1);
     return;
   }
   return;
@@ -116,7 +116,7 @@ void __thiscall EditorButton__SetMouseOverState(EditorButton *self)
 
 {
   if (*(FlashLibraryInstance **)(self + 0x10) != (FlashLibraryInstance *)0x0) {
-    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0x10),2);
+    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0x10), 2);
     return;
   }
   return;
@@ -137,8 +137,8 @@ void __thiscall EditorButton__OnMouseOver(EditorButton *self)
   if (self[0x4b] != (EditorButton)0x1) {
     (**(code **)(*(long *)self + 0x10))();
     if (*(code **)(self + 0x18) != (code *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x0049eb9e. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+      /* WARNING: Could not recover jumptable at 0x0049eb9e. Too many branches */
+      /* WARNING: Treating indirect jump as call */
       (**(code **)(self + 0x18))(*(uint64_t *)(self + 0x30));
       return;
     }
@@ -161,8 +161,8 @@ void __thiscall EditorButton__OnMouseOut(EditorButton *self)
   if (self[0x4b] != (EditorButton)0x1) {
     (**(code **)(*(long *)self + 0x20))();
     if (*(code **)(self + 0x20) != (code *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x0049ebce. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+      /* WARNING: Could not recover jumptable at 0x0049ebce. Too many branches */
+      /* WARNING: Treating indirect jump as call */
       (**(code **)(self + 0x20))(*(uint64_t *)(self + 0x38));
       return;
     }
@@ -185,8 +185,8 @@ void __thiscall EditorButton__OnMouseClick(EditorButton *self)
   if (self[0x4b] != (EditorButton)0x1) {
     (**(code **)(*(long *)self + 0x38))();
     if (*(code **)(self + 0x28) != (code *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x0049ebfe. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+      /* WARNING: Could not recover jumptable at 0x0049ebfe. Too many branches */
+      /* WARNING: Treating indirect jump as call */
       (**(code **)(self + 0x28))(*(uint64_t *)(self + 0x40));
       return;
     }
@@ -231,9 +231,8 @@ void __thiscall EditorButton__EditorButton__004a25f0(EditorButton *self)
  */
 /* EditorButton__EditorButton__004a25f0(FlashLibraryInstance*, FlashLibraryInstance*) */
 
-void __thiscall
-EditorButton__EditorButton__004a25f0
-          (EditorButton *self,FlashLibraryInstance *arg1,FlashLibraryInstance *arg2)
+void __thiscall EditorButton__EditorButton__004a25f0(EditorButton *self, FlashLibraryInstance *arg1,
+                                                     FlashLibraryInstance *arg2)
 
 {
   *(uint8_t ***)self = &PTR__EditorButton_005c4390;
@@ -262,10 +261,9 @@ EditorButton__EditorButton__004a25f0
 /* EditorButton__SetButtonProps(void (*)(void*), void*, void (*)(void*), void*, void (*)(void*),
    void*) */
 
-void __thiscall
-EditorButton__SetButtonProps
-          (EditorButton *self,_func_void_void_ptr *arg1,void *arg2,
-          _func_void_void_ptr *arg3,void *arg4,_func_void_void_ptr *arg5,void *arg6)
+void __thiscall EditorButton__SetButtonProps(EditorButton *self, _func_void_void_ptr *arg1,
+                                             void *arg2, _func_void_void_ptr *arg3, void *arg4,
+                                             _func_void_void_ptr *arg5, void *arg6)
 
 {
   *(_func_void_void_ptr **)(self + 0x28) = arg1;
@@ -293,42 +291,44 @@ bool __thiscall EditorButton__IsMouseOverButton(EditorButton *self)
   float fVar1;
   float fVar2;
   float fVar3;
-  Matrix4x4 local_88 [64];
+  Matrix4x4 local_88[64];
   uint32_t local_48;
   uint32_t local_44;
   float local_38;
   float local_34;
   float local_28;
   float local_24;
-  Vector2 local_18 [8];
+  Vector2 local_18[8];
   float local_10;
   float local_c;
-  
+
   fVar1 = *(float *)(Mouse + 0xc);
   fVar3 = (float)(*(uint *)(Mouse + 0x10) ^ DAT_005be6f0 /* R:u32=2147483648 */);
   fVar2 = (float)TWindow__getAspectRatio(Window);
   if (fVar2 != DAT_005c4894 /* R:1.7777777910232544f */) {
     fVar3 = fVar3 * ((float)*(ushort *)(Window + 8) / (float)*(ushort *)(Window + 10));
   }
-  Matrix4x4__ConvertToOrthoMatrix
-            (local_88,_DAT_005c0c9c /* R:240.0f */,DAT_005c0c98 /* R:-240.0f */,DAT_005c0c94 /* R:-426.5f */,DAT_005c0c90 /* R:426.5f */,DAT_005c07a4 /* R:-1.0f */,DAT_005be894 /* R:1.0f */
-            );
+  Matrix4x4__ConvertToOrthoMatrix(local_88, _DAT_005c0c9c /* R:240.0f */,
+                                  DAT_005c0c98 /* R:-240.0f */, DAT_005c0c94 /* R:-426.5f */,
+                                  DAT_005c0c90 /* R:426.5f */, DAT_005c07a4 /* R:-1.0f */,
+                                  DAT_005be894 /* R:1.0f */
+  );
   local_38 = 0.0;
   local_34 = 0.0;
   local_28 = 0.0;
   local_44 = *(uint32_t *)(*(long *)(self + 0x10) + 0x34);
   local_48 = *(uint32_t *)(*(long *)(self + 0x10) + 0x30);
   local_24 = 0.0;
-  FlashLibraryInstance__GetInstanceBounds
-            (*(FlashLibraryInstance **)(self + 8),&local_10,&local_c,local_18);
+  FlashLibraryInstance__GetInstanceBounds(*(FlashLibraryInstance **)(self + 8), &local_10, &local_c,
+                                          local_18);
   local_38 = local_38 - local_10;
   local_34 = local_34 - local_c;
-  Vector2__operator_plus_assign((Vector2 *)&local_38,(Vector2 *)&local_48);
+  Vector2__operator_plus_assign((Vector2 *)&local_38, (Vector2 *)&local_48);
   local_28 = local_28 + local_10;
   local_24 = local_24 + local_c;
-  Vector2__operator_plus_assign((Vector2 *)&local_28,(Vector2 *)&local_48);
-  Matrix4x4__TransformVector2((Vector2 *)&local_38,(Vector2 *)&local_38,local_88,1);
-  Matrix4x4__TransformVector2((Vector2 *)&local_28,(Vector2 *)&local_28,local_88,1);
+  Vector2__operator_plus_assign((Vector2 *)&local_28, (Vector2 *)&local_48);
+  Matrix4x4__TransformVector2((Vector2 *)&local_38, (Vector2 *)&local_38, local_88, 1);
+  Matrix4x4__TransformVector2((Vector2 *)&local_28, (Vector2 *)&local_28, local_88, 1);
   if (((local_38 < fVar1) && (local_34 < fVar3)) && (fVar1 < local_28)) {
     return fVar3 < local_24;
   }
@@ -349,7 +349,7 @@ void __thiscall EditorButton__Update(EditorButton *self)
 {
   EditorButton EVar1;
   int iVar2;
-  
+
   iVar2 = IsMouseOverButton(self);
   if (iVar2 == 1) {
     iVar2 = *(int *)(Mouse + 0x14);
@@ -359,8 +359,7 @@ void __thiscall EditorButton__Update(EditorButton *self)
       EVar1 = self[0x4a];
       goto joined_r0x004a28de;
     }
-  }
-  else {
+  } else {
     if (*(int *)(Mouse + 0x14) == 1) {
       self[0x4a] = (EditorButton)0x0;
       *(uint16_t *)(self + 0x48) = 0;
@@ -373,8 +372,8 @@ joined_r0x004a28de:
   if (EVar1 != (EditorButton)0x1) {
     return;
   }
-                    /* WARNING: Could not recover jumptable at 0x004a28f8. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x004a28f8. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(*(long *)self + 0x38))(self);
   return;
 }

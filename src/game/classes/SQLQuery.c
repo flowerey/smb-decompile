@@ -37,7 +37,7 @@ void __thiscall SQLQuery__SQLQuery(SQLQuery *self)
 
 {
   long *plVar1;
-  
+
   plVar1 = *(long **)(self + 0x10);
   if (plVar1 != (long *)0x0) {
     if (*plVar1 != 0) {
@@ -62,7 +62,7 @@ void __thiscall SQLQuery__ReleaseResults(SQLQuery *self)
 
 {
   long *plVar1;
-  
+
   plVar1 = *(long **)(self + 0x10);
   if (plVar1 != (long *)0x0) {
     if (*plVar1 != 0) {

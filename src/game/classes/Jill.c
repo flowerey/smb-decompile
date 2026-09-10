@@ -38,7 +38,7 @@ void __thiscall Jill__RecordSpecial(Jill *self)
 
 {
   long lVar1;
-  
+
   lVar1 = *(long *)(self + 0x7e0);
   if (lVar1 != 0) {
     *(byte *)(lVar1 + 3) = *(byte *)(lVar1 + 3) & 0xbf | (byte)((*(uint *)(self + 0xaa0) & 1) << 6);
@@ -93,18 +93,19 @@ void __thiscall Jill__Update(Jill *self)
 
 {
   MeatBoyCharactor__ProcessReplayFrame((MeatBoyCharactor *)self);
-  if (*(int *)(self + 0xa40) != 0) goto LAB_0046ddb6;
+  if (*(int *)(self + 0xa40) != 0)
+    goto LAB_0046ddb6;
   if (((byte)self[0x7d8] & 2) == 0) {
-LAB_0046dd8c:
+  LAB_0046dd8c:
     *(uint32_t *)(self + 0xaa0) = 0;
-  }
-  else {
+  } else {
     if (DAT_005bf760 /* R:0.0f */ <= *(float *)(self + 0xbc)) {
       *(uint32_t *)(self + 0xaa0) = 0;
     }
-    if (*(float *)(self + 0xbc) < DAT_005c01c0 /* R:-100.0f */) goto LAB_0046dd8c;
+    if (*(float *)(self + 0xbc) < DAT_005c01c0 /* R:-100.0f */)
+      goto LAB_0046dd8c;
   }
-  RibbonEmitter__AddRibbonPoint(*(RibbonEmitter **)(self + 0xaa8),(Vector2 *)(self + 0xa0));
+  RibbonEmitter__AddRibbonPoint(*(RibbonEmitter **)(self + 0xaa8), (Vector2 *)(self + 0xa0));
   (**(code **)(**(long **)(self + 0xaa8) + 0x18))();
 LAB_0046ddb6:
   MeatBoyCharactor__Update((MeatBoyCharactor *)self);
@@ -140,7 +141,7 @@ void __thiscall Jill__WallJump(Jill *self)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   puVar6 = &uStack_58;
   iVar4 = (**(code **)(*(long *)self + 0xb0))();
   if (iVar4 == 0) {
@@ -148,14 +149,14 @@ void __thiscall Jill__WallJump(Jill *self)
   }
   *(uint32_t *)(self + 0xbc) = *(uint32_t *)(self + 0x8b4);
   *(float *)(self + 0xb8) =
-       *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
+      *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
   if (*(int *)(self + 0x7d4) != 6) {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (Jill)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x240);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x268) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
@@ -171,20 +172,21 @@ void __thiscall Jill__WallJump(Jill *self)
     uStack_34 = 0x3f800000;
     uStack_28 = 0xbf800000;
     uStack_24 = 0x3f800000;
-    if (((byte)JVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)JVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar6 = &uStack_38;
     puVar8 = &uStack_28;
-  }
-  else {
+  } else {
     JVar7 = self[0x7d9];
     uStack_58 = 0x3f800000;
     uStack_54 = 0x3f800000;
     uStack_48 = 0x3f800000;
     uStack_44 = 0x3f800000;
-    if (((byte)JVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)JVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar8 = &uStack_48;
   }
-  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,3,puVar8,puVar6);
+  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 3, puVar8, puVar6);
   JVar3 = self[0x7d8];
   JVar7 = self[0x7d9];
 LAB_00474591:
@@ -202,7 +204,7 @@ LAB_00474591:
  */
 /* Jill__WallHit(tagTileCollisionType) */
 
-void __thiscall Jill__WallHit(Jill *self,int arg2)
+void __thiscall Jill__WallHit(Jill *self, int arg2)
 
 {
   Jill JVar1;
@@ -218,48 +220,48 @@ void __thiscall Jill__WallHit(Jill *self,int arg2)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   JVar1 = self[0x7d8];
   if (((byte)JVar1 & 4) == 0) {
-    if (*(int *)(self + 0x7d4) == 9) goto LAB_0047440b;
+    if (*(int *)(self + 0x7d4) == 9)
+      goto LAB_0047440b;
     if (arg2 == 4) {
       uStack_48 = 0x3f800000;
       uStack_44 = 0x3f800000;
       uStack_58 = 0x3f800000;
       uStack_54 = 0x3f800000;
       if (((byte)self[0x7d9] & 0x40) == 0) {
-        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,2,&uStack_58,&uStack_48);
+        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 2, &uStack_58, &uStack_48);
         iVar4 = *(int *)(self + 0x7d4);
         goto LAB_004743cd;
       }
-    }
-    else {
+    } else {
       uStack_28 = 0xbf800000;
       uStack_24 = 0x3f800000;
       uStack_38 = 0xbf800000;
       uStack_34 = 0x3f800000;
       if (((byte)self[0x7d9] & 0x40) == 0) {
-        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,2,&uStack_38,&uStack_28);
+        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 2, &uStack_38, &uStack_28);
         goto LAB_004743c7;
       }
     }
-LAB_004743d2:
+  LAB_004743d2:
     lVar3 = *(long *)(self + 0xf8);
     self[0x7db] = (Jill)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar2 = *(ushort *)(lVar3 + 0x348);
     if (uVar2 != 0) {
-      uVar5 = GetRandomINT(0,uVar2 - 1);
+      uVar5 = GetRandomINT(0, uVar2 - 1);
     }
     *(uint32_t *)(lVar3 + 0x370) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
     *(uint32_t *)(self + 0xa50) = 0;
-  }
-  else {
-LAB_004743c7:
+  } else {
+  LAB_004743c7:
     iVar4 = *(int *)(self + 0x7d4);
-LAB_004743cd:
-    if (iVar4 != 9) goto LAB_004743d2;
+  LAB_004743cd:
+    if (iVar4 != 9)
+      goto LAB_004743d2;
   }
   JVar1 = self[0x7d8];
 LAB_0047440b:
@@ -281,9 +283,9 @@ void __thiscall Jill__CreateClones(Jill *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),"slowfall");
+
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(
+      (FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), "slowfall");
   *(uint64_t *)(self + 0xa98) = uVar1;
   MeatBoyCharactor__CreateClones((MeatBoyCharactor *)self);
   return;
@@ -304,7 +306,7 @@ void __thiscall Jill__Jill__0046e0a0(Jill *self)
   *(uint8_t ***)self = &PTR__Jill_005c00d0;
   if (*(int *)(self + 0xa40) == 0) {
     if (*(long **)(self + 0xa98) != (long *)0x0) {
-                    /* try { // try from 0046dec8 to 0046dedc has its CatchHandler @ 0046deea */
+      /* try { // try from 0046dec8 to 0046dedc has its CatchHandler @ 0046deea */
       (**(code **)(**(long **)(self + 0xa98) + 8))();
     }
     if (*(long **)(self + 0xaa8) != (long *)0x0) {
@@ -332,9 +334,9 @@ void __thiscall Jill__Render(Jill *self)
     if (*(int *)(self + 0xa40) == 0) {
       (**(code **)(**(long **)(self + 0xaa8) + 0x10))();
     }
-    MeatBoyCharFoundation__Render
-              (*(MeatBoyCharFoundation **)(self + 0xf8),(MeatBoyCharactor *)self,
-               *(FlashLibraryInstance **)(self + 0xa98));
+    MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8),
+                                  (MeatBoyCharactor *)self,
+                                  *(FlashLibraryInstance **)(self + 0xa98));
     return;
   }
   if (*(int *)(self + 0xa40) != 0) {
@@ -361,33 +363,30 @@ void __thiscall Jill__RenderClones(Jill *self)
   MeatBoyCharactor *pMVar1;
   long lVar2;
   int iVar3;
-  
+
   if (*(int *)(self + 0xa40) == 0) {
-    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), 1);
     lVar2 = *(long *)(self + 0xa38);
     if ((*(int *)(lVar2 + 0x2c8) == 0) && (0 < *(int *)(lVar2 + 0x34))) {
       iVar3 = 0;
       do {
         if ((*(int *)(lVar2 + 0x3c) == iVar3) &&
-           (iVar3 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + (long)iVar3 * 8) + 0xa90))) {
-          FlashAnimationLibrary__EnableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
-        }
-        else {
-          FlashAnimationLibrary__DisableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+            (iVar3 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + (long)iVar3 * 8) + 0xa90))) {
+          FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                             1);
+        } else {
+          FlashAnimationLibrary__DisableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                              1);
         }
         pMVar1 = *(MeatBoyCharactor **)(*(long *)(self + 0x7f0) + (long)iVar3 * 8);
-        MeatBoyCharFoundation__Render
-                  (*(MeatBoyCharFoundation **)(self + 0xf8),pMVar1,(FlashLibraryInstance *)0x0);
+        MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8), pMVar1,
+                                      (FlashLibraryInstance *)0x0);
         if (*(int *)(pMVar1 + 0xaa0) == 1) {
-          MeatBoyCharFoundation__Render
-                    (*(MeatBoyCharFoundation **)(self + 0xf8),pMVar1,
-                     *(FlashLibraryInstance **)(self + 0xa98));
-        }
-        else {
-          MeatBoyCharFoundation__Render
-                    (*(MeatBoyCharFoundation **)(self + 0xf8),pMVar1,(FlashLibraryInstance *)0x0);
+          MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8), pMVar1,
+                                        *(FlashLibraryInstance **)(self + 0xa98));
+        } else {
+          MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8), pMVar1,
+                                        (FlashLibraryInstance *)0x0);
         }
         lVar2 = *(long *)(self + 0xa38);
         iVar3 = iVar3 + 1;
@@ -412,7 +411,7 @@ void __thiscall Jill__Jill__0046e0a0(Jill *self)
   *(uint8_t ***)self = &PTR__Jill_005c00d0;
   if (*(int *)(self + 0xa40) == 0) {
     if (*(long **)(self + 0xa98) != (long *)0x0) {
-                    /* try { // try from 0046e0ca to 0046e0de has its CatchHandler @ 0046e0f4 */
+      /* try { // try from 0046e0ca to 0046e0de has its CatchHandler @ 0046e0f4 */
       (**(code **)(**(long **)(self + 0xa98) + 8))();
     }
     if (*(long **)(self + 0xaa8) != (long *)0x0) {
@@ -445,9 +444,9 @@ void __thiscall Jill__Jill__0046e1e0(Jill *self)
   uint64_t local_30;
   uint64_t local_28;
   uint32_t local_20;
-  
-  uVar1 = FormatResourcePath("/Animations/jill.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,0x12);
+
+  uVar1 = FormatResourcePath("/Animations/jill.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 0x12);
   *(uint8_t ***)self = &PTR__Jill_005c00d0;
   local_38 = DAT_00818e58 /* R:2.0739217272007293e-43f */;
   local_40 = ::cBlack;
@@ -458,10 +457,10 @@ void __thiscall Jill__Jill__0046e1e0(Jill *self)
   local_28 = local_38;
   local_48 = 0x40000000;
   local_20 = 10;
-                    /* try { // try from 0046e192 to 0046e196 has its CatchHandler @ 0046e1b5 */
+  /* try { // try from 0046e192 to 0046e196 has its CatchHandler @ 0046e1b5 */
   this_00 = operator_new(0x70);
-                    /* try { // try from 0046e1a2 to 0046e1a6 has its CatchHandler @ 0046e1c8 */
-  RibbonEmitter__RibbonEmitter__0059ac20(this_00,(RibbonEmitterCreation *)&local_48);
+  /* try { // try from 0046e1a2 to 0046e1a6 has its CatchHandler @ 0046e1c8 */
+  RibbonEmitter__RibbonEmitter__0059ac20(this_00, (RibbonEmitterCreation *)&local_48);
   *(RibbonEmitter **)(self + 0xaa8) = this_00;
   return;
 }
@@ -475,13 +474,13 @@ void __thiscall Jill__Jill__0046e1e0(Jill *self)
  */
 /* Jill__Jill__0046e1e0(MeatBoyCharactor*, int) */
 
-void __thiscall Jill__Jill__0046e1e0(Jill *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall Jill__Jill__0046e1e0(Jill *self, MeatBoyCharactor *arg1, int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__Jill_005c00d0;
-                    /* try { // try from 0046e212 to 0046e216 has its CatchHandler @ 0046e242 */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 0046e212 to 0046e216 has its CatchHandler @ 0046e242 */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   *(uint32_t *)(self + 0xaa0) = 0;
   *(uint64_t *)(self + 0xa98) = *(uint64_t *)(arg1 + 0xa98);
   return;

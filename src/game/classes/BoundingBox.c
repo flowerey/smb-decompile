@@ -18,9 +18,8 @@
  */
 /* BoundingBox__BoundingBox(FPUVector const&, FPUVector const&, TQuaternion const&) */
 
-void __thiscall
-BoundingBox__BoundingBox
-          (BoundingBox *self,FPUVector *arg1,FPUVector *arg2,TQuaternion *arg3)
+void __thiscall BoundingBox__BoundingBox(BoundingBox *self, FPUVector *arg1, FPUVector *arg2,
+                                         TQuaternion *arg3)
 
 {
   *(uint32_t *)(self + 4) = 0;
@@ -40,8 +39,8 @@ BoundingBox__BoundingBox
   *(uint32_t *)(self + 8) = *(uint32_t *)(arg2 + 4);
   *(uint32_t *)(self + 0xc) = *(uint32_t *)(arg2 + 8);
   *(uint32_t *)(self + 0x10) = *(uint32_t *)(arg2 + 0xc);
-  Matrix4x4__Transformation3D((Matrix4x4 *)(self + 0x24),(FPUVector *)0x0,arg3,arg1);
-  Matrix4x4__operator_assign((Matrix4x4 *)(self + 100),(Matrix4x4 *)(self + 0x24));
+  Matrix4x4__Transformation3D((Matrix4x4 *)(self + 0x24), (FPUVector *)0x0, arg3, arg1);
+  Matrix4x4__operator_assign((Matrix4x4 *)(self + 100), (Matrix4x4 *)(self + 0x24));
   return;
 }
 
@@ -54,8 +53,8 @@ BoundingBox__BoundingBox
  */
 /* BoundingBox__Update(FPUVector const&, TQuaternion const&, FPUVector const&) */
 
-void __thiscall
-BoundingBox__Update(BoundingBox *self,FPUVector *arg1,TQuaternion *arg2,FPUVector *arg3)
+void __thiscall BoundingBox__Update(BoundingBox *self, FPUVector *arg1, TQuaternion *arg2,
+                                    FPUVector *arg3)
 
 {
   float fVar1;
@@ -63,16 +62,16 @@ BoundingBox__Update(BoundingBox *self,FPUVector *arg1,TQuaternion *arg2,FPUVecto
   float fVar3;
   float fVar4;
   Matrix4x4 *pMVar5;
-  
+
   fVar1 = *(float *)(self + 0x30);
   fVar2 = *(float *)(self + 0x34);
   fVar3 = *(float *)(self + 0x38);
   fVar4 = *(float *)(self + 0x3c);
   *(uint64_t *)(self + 0x30) = 0;
   *(uint64_t *)(self + 0x38) = 0;
-  pMVar5 = (Matrix4x4 *)
-           Matrix4x4__Transformation3D((Matrix4x4 *)(self + 100),(FPUVector *)0x0,arg2,arg3);
-  Matrix4x4__Multiply((Matrix4x4 *)(self + 100),(Matrix4x4 *)(self + 0x24),pMVar5);
+  pMVar5 = (Matrix4x4 *)Matrix4x4__Transformation3D((Matrix4x4 *)(self + 100), (FPUVector *)0x0,
+                                                    arg2, arg3);
+  Matrix4x4__Multiply((Matrix4x4 *)(self + 100), (Matrix4x4 *)(self + 0x24), pMVar5);
   *(float *)(self + 0x30) = fVar1;
   *(float *)(self + 0x70) = *(float *)(self + 0x70) + fVar1;
   *(float *)(self + 0x34) = fVar2;
@@ -100,8 +99,8 @@ BoundingBox__Update(BoundingBox *self,FPUVector *arg1,TQuaternion *arg2,FPUVecto
  */
 /* BoundingBox__Change(FPUVector const&, TQuaternion const&, FPUVector const&) */
 
-void __thiscall
-BoundingBox__Change(BoundingBox *self,FPUVector *arg1,TQuaternion *arg2,FPUVector *arg3)
+void __thiscall BoundingBox__Change(BoundingBox *self, FPUVector *arg1, TQuaternion *arg2,
+                                    FPUVector *arg3)
 
 {
   *(uint32_t *)(self + 0x14) = *(uint32_t *)arg1;
@@ -112,7 +111,7 @@ BoundingBox__Change(BoundingBox *self,FPUVector *arg1,TQuaternion *arg2,FPUVecto
   *(uint32_t *)(self + 8) = *(uint32_t *)(arg1 + 4);
   *(uint32_t *)(self + 0xc) = *(uint32_t *)(arg1 + 8);
   *(uint32_t *)(self + 0x10) = *(uint32_t *)(arg1 + 0xc);
-  Matrix4x4__Transformation3D((Matrix4x4 *)(self + 0x24),(FPUVector *)0x0,arg2,arg3);
-  Matrix4x4__operator_assign((Matrix4x4 *)(self + 100),(Matrix4x4 *)(self + 0x24));
+  Matrix4x4__Transformation3D((Matrix4x4 *)(self + 0x24), (FPUVector *)0x0, arg2, arg3);
+  Matrix4x4__operator_assign((Matrix4x4 *)(self + 100), (Matrix4x4 *)(self + 0x24));
   return;
 }

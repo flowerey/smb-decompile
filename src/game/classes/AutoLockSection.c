@@ -18,11 +18,11 @@
  */
 /* AutoLockSection__AutoLockSection(CriticalSection*) */
 
-void __thiscall AutoLockSection__AutoLockSection(AutoLockSection *self,CriticalSection *arg1)
+void __thiscall AutoLockSection__AutoLockSection(AutoLockSection *self, CriticalSection *arg1)
 
 {
   *(CriticalSection **)self = arg1;
-  CriticalSection__Lock(arg1,1);
+  CriticalSection__Lock(arg1, 1);
   return;
 }
 

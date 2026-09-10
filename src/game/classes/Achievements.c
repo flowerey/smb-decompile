@@ -27,6 +27,6 @@ void __thiscall Achievements__Achievements(Achievements *self)
   *(Achievements **)(self + 0x10) = self;
   *(code **)(self + 0x18) = OnUserStatsReceived;
   *(uint64_t *)(self + 0x20) = 0;
-  SteamAPI_RegisterCallback(self,0x44d);
+  SteamAPI_RegisterCallback(self, 0x44d);
   return;
 }

@@ -19,7 +19,7 @@ int _init(EVP_PKEY_CTX *ctx)
 
 {
   int iVar1;
-  
+
   call_gmon_start();
   frame_dummy();
   iVar1 = __do_global_ctors_aux();
@@ -34,11 +34,11 @@ int _init(EVP_PKEY_CTX *ctx)
  */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int * __errno_location(void)
+int *__errno_location(void)
 
 {
   int *piVar1;
-  
+
   piVar1 = (int *)(*(code *)PTR___errno_location_00815670)();
   return piVar1;
 }
@@ -200,11 +200,11 @@ void __isoc99_sscanf(void)
  */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int __xstat(int __ver,char *__filename,stat *__stat_buf)
+int __xstat(int __ver, char *__filename, stat *__stat_buf)
 
 {
   int iVar1;
-  
+
   iVar1 = (*(code *)PTR___xstat_00815a30)();
   return iVar1;
 }
@@ -217,11 +217,11 @@ int __xstat(int __ver,char *__filename,stat *__stat_buf)
  */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int __fxstat(int __ver,int __fildes,stat *__stat_buf)
+int __fxstat(int __ver, int __fildes, stat *__stat_buf)
 
 {
   int iVar1;
-  
+
   iVar1 = (*(code *)PTR___fxstat_00815a60)();
   return iVar1;
 }
@@ -251,7 +251,7 @@ int _setjmp(__jmp_buf_tag *__env)
 
 {
   int iVar1;
-  
+
   iVar1 = (*(code *)PTR__setjmp_00815bf0)();
   return iVar1;
 }
@@ -283,8 +283,8 @@ void __gxx_personality_v0(void)
 
 {
   do {
-                    /* WARNING: Do nothing block with infinite loop */
-  } while( true );
+    /* WARNING: Do nothing block with infinite loop */
+  } while (true);
 }
 
 /* ======================================================================
@@ -338,8 +338,8 @@ void __cxa_pure_virtual(void)
 
 {
   do {
-                    /* WARNING: Do nothing block with infinite loop */
-  } while( true );
+    /* WARNING: Do nothing block with infinite loop */
+  } while (true);
 }
 
 /* ======================================================================
@@ -358,42 +358,42 @@ void AlienHominid__AlienHominid(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -410,44 +410,44 @@ void _GLOBAL__sub_I_bloodRender(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)bloodRender);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,bloodRender,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, bloodRender, &__dso_handle);
   return;
 }
 
@@ -464,42 +464,42 @@ void _GLOBAL__sub_I_CreateCommanderVideoResources(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -519,42 +519,42 @@ void DefaultMeatBoy__DefaultMeatBoy(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -574,42 +574,42 @@ void DrFetus__DrFetus(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -629,42 +629,42 @@ void _GLOBAL__sub_I_SMBFactoryBossOutroFinished(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -681,46 +681,46 @@ void _GLOBAL__sub_I_pEscapeMusic(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   TAudioInstance__TAudioInstance((TAudioInstance *)escapeMusic);
-  __cxa_atexit(TAudioInstance__TAudioInstance__0057a200,escapeMusic,&__dso_handle);
+  __cxa_atexit(TAudioInstance__TAudioInstance__0057a200, escapeMusic, &__dso_handle);
   SyncEvent__SyncEvent((SyncEvent *)endLibLoaded);
-  __cxa_atexit(SyncEvent__SyncEvent__005b8100,endLibLoaded,&__dso_handle);
+  __cxa_atexit(SyncEvent__SyncEvent__005b8100, endLibLoaded, &__dso_handle);
   return;
 }
 
@@ -740,42 +740,42 @@ void FlyWrench__FlyWrench(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -795,42 +795,42 @@ void _GLOBAL__sub_I_SMBForestBossOutroFinished(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -850,42 +850,42 @@ void GooBall__GooBall(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -905,42 +905,42 @@ void HeadCrab__HeadCrab(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -960,42 +960,42 @@ void _GLOBAL__sub_I_SMBHellBossOutroFinished(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -1012,42 +1012,42 @@ void _GLOBAL__sub_I_uSwitchResetCount(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -1067,42 +1067,42 @@ void Jill__Jill(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   DAT_00818e58 /* R:2.0739217272007293e-43f */._0_4_ = 0;
   DAT_00818e58 /* R:2.0739217272007293e-43f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -1121,44 +1121,44 @@ void TileLevelLightMap__GLOBAL_sub_I_ShadowMapSection(void)
   ::cWhite._4_4_ = 0x3f800000;
   DAT_00818ef8 /* R:5.268882225861312e-43f */._0_4_ = 0x3f800000;
   DAT_00818ef8 /* R:5.268882225861312e-43f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)ShadowMapSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,ShadowMapSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, ShadowMapSection, &__dso_handle);
   return;
 }
 
@@ -1178,42 +1178,42 @@ void Machinarium__Machinarium(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -1223,7 +1223,7 @@ void Machinarium__Machinarium(void)
  * Calls: `GSuperMeatBoy__GSuperMeatBoy__00514290`, `SDL_GL_LoadLibrary`, `SDL_GetBasePath`, `SDL_GetError`, `SDL_Init`, `TEngine__Run`, `TEngine__TEngine`, `TEngine__TEngine__00583e20`, `atexit`, `chdir` (+15 more)
  * Called by: `start`
  */
-uint64_t main(int arg1,long arg2)
+uint64_t main(int arg1, long arg2)
 
 {
   char cVar1;
@@ -1244,96 +1244,92 @@ uint64_t main(int arg1,long arg2)
   uint32_t local_6c;
   uint32_t local_68;
   GSuperMeatBoy *local_60;
-  char *local_58 [2];
-  char *local_48 [2];
+  char *local_58[2];
+  char *local_48[2];
   char *local_38;
   allocator local_2a;
-  allocator local_29 [9];
-  
+  allocator local_29[9];
+
   bVar12 = 0;
-  setlocale(0,"");
+  setlocale(0, "");
   iVar2 = SDL_Init(0x20);
   if (iVar2 == -1) {
     uVar7 = SDL_GetError();
-    fprintf(stderr,"SDL_Init(SDL_INIT_VIDEO) failed: %s\n",uVar7);
-  }
-  else {
+    fprintf(stderr, "SDL_Init(SDL_INIT_VIDEO) failed: %s\n", uVar7);
+  } else {
     atexit(sdl_quit_at_exit);
     iVar2 = SDL_GL_LoadLibrary(0);
     if (iVar2 != -1) {
       local_58[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 00453b97 to 00453c97 has its CatchHandler @ 00453f20 */
+      /* try { // try from 00453b97 to 00453c97 has its CatchHandler @ 00453f20 */
       pcVar3 = (char *)SDL_GetBasePath();
       if (pcVar3 == (char *)0x0) {
-                    /* try { // try from 00453f11 to 00453f6e has its CatchHandler @ 00453f20 */
-        fwrite("Couldn\'t determine game\'s base path!\n",1,0x25,stderr);
-      }
-      else {
+        /* try { // try from 00453f11 to 00453f6e has its CatchHandler @ 00453f20 */
+        fwrite("Couldn\'t determine game\'s base path!\n", 1, 0x25, stderr);
+      } else {
         iVar2 = chdir(pcVar3);
         if (iVar2 == -1) {
-          fwrite("Couldn\'t chdir to game\'s base path!\n",1,0x24,stderr);
-        }
-        else {
+          fwrite("Couldn\'t chdir to game\'s base path!\n", 1, 0x24, stderr);
+        } else {
           iVar2 = chdir("..");
           if (iVar2 != -1) {
             pcVar3 = getenv("XDG_DATA_HOME");
             if (pcVar3 == (char *)0x0) {
               pcVar3 = getenv("HOME");
               if (pcVar3 == (char *)0x0) {
-                    /* try { // try from 00453eb0 to 00453eb4 has its CatchHandler @ 00453f20 */
+                /* try { // try from 00453eb0 to 00453eb4 has its CatchHandler @ 00453f20 */
                 std__string_assign((char *)local_58);
-              }
-              else {
-                    /* try { // try from 00453e7c to 00453e8d has its CatchHandler @ 00453f20 */
+              } else {
+                /* try { // try from 00453e7c to 00453e8d has its CatchHandler @ 00453f20 */
                 std__string_assign((char *)local_58);
                 std__string_append((char *)local_58);
               }
-            }
-            else {
+            } else {
               std__string_assign((char *)local_58);
               std__string_append((char *)local_58);
             }
             uVar8 = 0xffffffffffffffff;
             pcVar3 = local_58[0];
             do {
-              if (uVar8 == 0) break;
+              if (uVar8 == 0)
+                break;
               uVar8 = uVar8 - 1;
               cVar1 = *pcVar3;
               pcVar3 = pcVar3 + (ulong)bVar12 * -2 + 1;
             } while (cVar1 != '\0');
             pcVar3 = operator_new__(~uVar8);
-            strcpy(pcVar3,local_58[0]);
+            strcpy(pcVar3, local_58[0]);
             cVar1 = *pcVar3;
             GUserDataPath = pcVar3;
             while (cVar1 != '\0') {
               while (cVar1 != '/') {
                 pcVar3 = pcVar3 + 1;
                 cVar1 = *pcVar3;
-                if (cVar1 == '\0') goto LAB_00453c71;
+                if (cVar1 == '\0')
+                  goto LAB_00453c71;
               }
               *pcVar3 = '\0';
-              mkdir(GUserDataPath,0x1c0);
+              mkdir(GUserDataPath, 0x1c0);
               *pcVar3 = '/';
               pcVar3 = pcVar3 + 1;
               cVar1 = *pcVar3;
             }
-LAB_00453c71:
-            mkdir(GUserDataPath,0x1c0);
-            std__string_string((string *)local_48,GUserDataPath,local_29);
-                    /* try { // try from 00453ca2 to 00453cbc has its CatchHandler @ 00453f47 */
+          LAB_00453c71:
+            mkdir(GUserDataPath, 0x1c0);
+            std__string_string((string *)local_48, GUserDataPath, local_29);
+            /* try { // try from 00453ca2 to 00453cbc has its CatchHandler @ 00453f47 */
             std__string_append((char *)local_48);
-            std__string_string((string *)&local_38,GUserDataPath,&local_2a);
-                    /* try { // try from 00453cc7 to 00453ccb has its CatchHandler @ 00453eba */
+            std__string_string((string *)&local_38, GUserDataPath, &local_2a);
+            /* try { // try from 00453cc7 to 00453ccb has its CatchHandler @ 00453eba */
             std__string_append((char *)&local_38);
-            rename(local_48[0],local_38);
+            rename(local_48[0], local_38);
             std__string_string((string *)&local_38);
             std__string_string((string *)local_48);
             std__string_string((string *)local_58);
             if (arg1 < 1) {
               pcVar3 = operator_new__(1);
               *pcVar3 = '\0';
-            }
-            else {
+            } else {
               lVar9 = 0;
               lVar11 = 0;
               do {
@@ -1349,7 +1345,7 @@ LAB_00453c71:
               do {
                 lVar9 = lVar11 * 8;
                 lVar11 = lVar11 + 1;
-                strcat(pcVar3,*(char **)(arg2 + lVar9));
+                strcat(pcVar3, *(char **)(arg2 + lVar9));
                 sVar4 = strlen(pcVar3);
                 (pcVar3 + sVar4)[0] = ' ';
                 (pcVar3 + sVar4)[1] = '\0';
@@ -1358,7 +1354,8 @@ LAB_00453c71:
             uVar8 = 0xffffffffffffffff;
             pcVar10 = pcVar3;
             do {
-              if (uVar8 == 0) break;
+              if (uVar8 == 0)
+                break;
               uVar8 = uVar8 - 1;
               cVar1 = *pcVar10;
               pcVar10 = pcVar10 + (ulong)bVar12 * -2 + 1;
@@ -1370,15 +1367,15 @@ LAB_00453c71:
             local_60 = (GSuperMeatBoy *)0x0;
             local_78 = pcVar3;
             this = operator_new(0x430);
-                    /* try { // try from 00453da6 to 00453daa has its CatchHandler @ 00453ef4 */
-            GSuperMeatBoy__GSuperMeatBoy__00514290(this,(char *)0x0);
+            /* try { // try from 00453da6 to 00453daa has its CatchHandler @ 00453ef4 */
+            GSuperMeatBoy__GSuperMeatBoy__00514290(this, (char *)0x0);
             local_60 = (GSuperMeatBoy *)0x0;
             if (this != (GSuperMeatBoy *)0x0) {
               local_60 = this + 0x20;
             }
             pTVar6 = operator_new(0x40);
-                    /* try { // try from 00453dd0 to 00453dd4 has its CatchHandler @ 00453ee1 */
-            TEngine__TEngine(pTVar6,(EngineParams *)&local_78);
+            /* try { // try from 00453dd0 to 00453dd4 has its CatchHandler @ 00453ee1 */
+            TEngine__TEngine(pTVar6, (EngineParams *)&local_78);
             TEngine__Run(Engine);
             pTVar6 = Engine;
             if (Engine != (TEngine *)0x0) {
@@ -1388,14 +1385,14 @@ LAB_00453c71:
             operator_delete__(pcVar3);
             return 0;
           }
-          fwrite("Couldn\'t chdir to game\'s install path!\n",1,0x27,stderr);
+          fwrite("Couldn\'t chdir to game\'s install path!\n", 1, 0x27, stderr);
         }
       }
-                    /* WARNING: Subroutine does not return */
+      /* WARNING: Subroutine does not return */
       exit(1);
     }
     uVar7 = SDL_GetError();
-    fprintf(stderr,"SDL_GL_LoadLibrary(NULL) failed: %s\n",uVar7);
+    fprintf(stderr, "SDL_GL_LoadLibrary(NULL) failed: %s\n", uVar7);
     fflush(stderr);
   }
   return 1;
@@ -1414,42 +1411,42 @@ void _GLOBAL__sub_I_main(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -1466,42 +1463,42 @@ void _GLOBAL__sub_I_keyJump(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -1518,44 +1515,44 @@ void _GLOBAL__sub_I_SMBHUD(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)hudUpdate);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,hudUpdate,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, hudUpdate, &__dso_handle);
   return;
 }
 
@@ -1575,42 +1572,42 @@ void MeatNinja__MeatNinja(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -1630,42 +1627,42 @@ void MrMinecraft__MrMinecraft(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -1686,42 +1683,42 @@ void Naija__Naija(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange = 0x3f800000;
   _DAT_00819508 /* R:1.1895499349388512e-38f */ = 0;
   _DAT_0081950c /* R:0.0f */ = 0x3f800000;
   _DAT_00819504 /* R:2.2958888052482446e-39f */ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -1741,42 +1738,42 @@ void Ogmo__Ogmo(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -1795,42 +1792,42 @@ void QuakeEmitter__GLOBAL_sub_I_QuakeEmitter(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -1850,42 +1847,42 @@ void _GLOBAL__sub_I_SMBRaptureBossOutroFinished(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -1906,42 +1903,42 @@ void Runman__Runman(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed = 0x3f800000;
   _DAT_00819704 /* R:0.0f */ = 0;
   _DAT_00819708 /* R:2.2420775429197073e-44f */ = 0;
   _DAT_0081970c /* R:0.0f */ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -1961,42 +1958,42 @@ void SMBAnimal__SMBAnimal(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -2016,42 +2013,42 @@ void _GLOBAL__sub_I_SMBBloodExplosionCreateResources(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -2068,42 +2065,42 @@ void _GLOBAL__sub_I_CurrentSMBBoss(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -2120,44 +2117,44 @@ void _GLOBAL__sub_I_cameraUpdateSection(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)cameraUpdateSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,cameraUpdateSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, cameraUpdateSection, &__dso_handle);
   return;
 }
 
@@ -2174,46 +2171,46 @@ void _GLOBAL__sub_I_iCurrentLevel(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   SyncEvent__SyncEvent((SyncEvent *)bossIntroEvent);
-  __cxa_atexit(SyncEvent__SyncEvent__005b8100,bossIntroEvent,&__dso_handle);
+  __cxa_atexit(SyncEvent__SyncEvent__005b8100, bossIntroEvent, &__dso_handle);
   SyncEvent__SyncEvent((SyncEvent *)bossOutroEvent);
-  __cxa_atexit(SyncEvent__SyncEvent__005b8100,bossOutroEvent,&__dso_handle);
+  __cxa_atexit(SyncEvent__SyncEvent__005b8100, bossOutroEvent, &__dso_handle);
   return;
 }
 
@@ -2230,48 +2227,48 @@ void _GLOBAL__sub_I_SMBChapterData(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   SMBCurrLevelData._0_4_ = 0x4cbebc20;
   SMBCurrLevelData._4_4_ = 0;
   SMBCurrLevelData._8_4_ = 0;
-  __cxa_atexit(SMBLevelData__SMBLevelData,SMBCurrLevelData,&__dso_handle);
+  __cxa_atexit(SMBLevelData__SMBLevelData, SMBCurrLevelData, &__dso_handle);
   SyncEvent__SyncEvent((SyncEvent *)SMBChapterSaveEvent);
-  __cxa_atexit(SyncEvent__SyncEvent__005b8100,SMBChapterSaveEvent,&__dso_handle);
+  __cxa_atexit(SyncEvent__SyncEvent__005b8100, SMBChapterSaveEvent, &__dso_handle);
   return;
 }
 
@@ -2288,44 +2285,44 @@ void _GLOBAL__sub_I_SMBCharactor(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   strCharPath = &DAT_008184c8 /* R:0.00016803004837129265f */;
-  __cxa_atexit(std__string_string,&strCharPath,&__dso_handle);
+  __cxa_atexit(std__string_string, &strCharPath, &__dso_handle);
   return;
 }
 
@@ -2342,42 +2339,42 @@ void _GLOBAL__sub_I_strBefore(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -2394,42 +2391,42 @@ void _GLOBAL__sub_I_SMBCutSceneManager(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -2450,42 +2447,42 @@ void _GLOBAL__sub_I_UserLoginCheck(void)
   cWhite._4_4_ = 0x3f800000;
   DAT_0081a968 /* R:2.2420775429197073e-44f */._0_4_ = 0x3f800000;
   DAT_0081a968 /* R:2.2420775429197073e-44f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pEditorButtons);
   pEditorButtons._42_2_ = 0;
   pEditorButtons._40_2_ = 0;
@@ -2495,7 +2492,7 @@ void _GLOBAL__sub_I_UserLoginCheck(void)
   pEditorButtons._72_4_ = 0;
   pEditorButtons[0x2c] = 4;
   pEditorButtons._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_EditorButton__ResizeableArray,pEditorButtons,&__dso_handle);
+  __cxa_atexit(ResizeableArray_EditorButton__ResizeableArray, pEditorButtons, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pLayerColorTweens);
   pLayerColorTweens._42_2_ = 0;
   pLayerColorTweens._40_2_ = 0;
@@ -2505,92 +2502,92 @@ void _GLOBAL__sub_I_UserLoginCheck(void)
   pLayerColorTweens._72_4_ = 0;
   pLayerColorTweens[0x2c] = 4;
   pLayerColorTweens._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_EditorLayerColorTweens__ResizeableArray,pLayerColorTweens,
+  __cxa_atexit(ResizeableArray_EditorLayerColorTweens__ResizeableArray, pLayerColorTweens,
                &__dso_handle);
-  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue,defaultObjectDefault,&__dso_handle);
-  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue,particleEmitterDefault,&__dso_handle);
-  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue,smokeEmitterDefault,&__dso_handle);
-  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue,quakeEmitterDefault,&__dso_handle);
-  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue,laserObjectDefault,&__dso_handle);
-  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue,shooterObjectDefault,&__dso_handle);
-  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue,keyObjectDefault,&__dso_handle);
-  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue,orbObjectDefault,&__dso_handle);
-  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue,switchObjectDefault,&__dso_handle);
-  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue,fanObjectDefault,&__dso_handle);
+  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue, defaultObjectDefault, &__dso_handle);
+  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue, particleEmitterDefault, &__dso_handle);
+  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue, smokeEmitterDefault, &__dso_handle);
+  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue, quakeEmitterDefault, &__dso_handle);
+  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue, laserObjectDefault, &__dso_handle);
+  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue, shooterObjectDefault, &__dso_handle);
+  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue, keyObjectDefault, &__dso_handle);
+  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue, orbObjectDefault, &__dso_handle);
+  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue, switchObjectDefault, &__dso_handle);
+  __cxa_atexit(ObjectDefaultValue__ObjectDefaultValue, fanObjectDefault, &__dso_handle);
   defaultObjectForm = 0;
   DAT_0081a648 /* R:1.1900140449902355e-38f */ = 0;
   _DAT_0081a650 /* R:2.2420775429197073e-44f */ = 0;
   DAT_0081a658 /* R:2.872661851865875e-42f */ = 0;
   DAT_0081a660 /* R:1.1900162870677785e-38f */ = 0;
-  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue,&defaultObjectForm,&__dso_handle);
+  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue, &defaultObjectForm, &__dso_handle);
   particleEmitterForm._0_8_ = 0;
   particleEmitterForm._8_8_ = 0;
   particleEmitterForm._16_4_ = 0;
   particleEmitterForm._24_8_ = 0;
   particleEmitterForm._32_4_ = 0;
-  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue,particleEmitterForm,&__dso_handle);
+  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue, particleEmitterForm, &__dso_handle);
   smokeEmitterForm._0_8_ = 0;
   smokeEmitterForm._8_8_ = 0;
   smokeEmitterForm._16_4_ = 0;
   smokeEmitterForm._24_8_ = 0;
   smokeEmitterForm._32_4_ = 0;
-  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue,smokeEmitterForm,&__dso_handle);
+  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue, smokeEmitterForm, &__dso_handle);
   quakeEmitterForm._0_8_ = 0;
   quakeEmitterForm._8_8_ = 0;
   quakeEmitterForm._16_4_ = 0;
   quakeEmitterForm._24_8_ = 0;
   quakeEmitterForm._32_4_ = 0;
-  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue,quakeEmitterForm,&__dso_handle);
+  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue, quakeEmitterForm, &__dso_handle);
   laserObjectForm._0_8_ = 0;
   laserObjectForm._8_8_ = 0;
   laserObjectForm._16_4_ = 0;
   laserObjectForm._24_8_ = 0;
   laserObjectForm._32_4_ = 0;
-  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue,laserObjectForm,&__dso_handle);
+  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue, laserObjectForm, &__dso_handle);
   shooterObjectForm._0_8_ = 0;
   shooterObjectForm._8_8_ = 0;
   shooterObjectForm._16_4_ = 0;
   shooterObjectForm._24_8_ = 0;
   shooterObjectForm._32_4_ = 0;
-  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue,shooterObjectForm,&__dso_handle);
+  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue, shooterObjectForm, &__dso_handle);
   keyObjectForm._0_8_ = 0;
   keyObjectForm._8_8_ = 0;
   keyObjectForm._16_4_ = 0;
   keyObjectForm._24_8_ = 0;
   keyObjectForm._32_4_ = 0;
-  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue,keyObjectForm,&__dso_handle);
+  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue, keyObjectForm, &__dso_handle);
   orbObjectForm._0_8_ = 0;
   orbObjectForm._8_8_ = 0;
   orbObjectForm._16_4_ = 0;
   orbObjectForm._24_8_ = 0;
   orbObjectForm._32_4_ = 0;
-  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue,orbObjectForm,&__dso_handle);
+  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue, orbObjectForm, &__dso_handle);
   switchObjectForm._0_8_ = 0;
   switchObjectForm._8_8_ = 0;
   switchObjectForm._16_4_ = 0;
   switchObjectForm._24_8_ = 0;
   switchObjectForm._32_4_ = 0;
-  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue,switchObjectForm,&__dso_handle);
+  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue, switchObjectForm, &__dso_handle);
   fanObjectForm._0_8_ = 0;
   fanObjectForm._8_8_ = 0;
   fanObjectForm._16_4_ = 0;
   fanObjectForm._24_8_ = 0;
   fanObjectForm._32_4_ = 0;
-  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue,fanObjectForm,&__dso_handle);
+  __cxa_atexit(EditorFormDisplayValue__EditorFormDisplayValue, fanObjectForm, &__dso_handle);
   vSelectionPoint1 = 0x4cbebc20;
   DAT_0081a974 /* R:2.2958888052482446e-39f */ = 0x4cbebc20;
-  __cxa_atexit(Vector2__Vector2,&vSelectionPoint1,&__dso_handle);
+  __cxa_atexit(Vector2__Vector2, &vSelectionPoint1, &__dso_handle);
   vSelectionPoint2 = 0x4cbebc20;
   _DAT_0081a97c /* R:0.0f */ = 0x4cbebc20;
-  __cxa_atexit(Vector2__Vector2,&vSelectionPoint2,&__dso_handle);
+  __cxa_atexit(Vector2__Vector2, &vSelectionPoint2, &__dso_handle);
   TileLevelSetPiece__TileLevelSetPiece__0058d640((TileLevelSetPiece *)lastParalax);
-  __cxa_atexit(TileLevelSetPiece__TileLevelSetPiece__0058d560,lastParalax,&__dso_handle);
+  __cxa_atexit(TileLevelSetPiece__TileLevelSetPiece__0058d560, lastParalax, &__dso_handle);
   TileLevelSetPiece__TileLevelSetPiece__0058d640((TileLevelSetPiece *)lastSetPiece);
-  __cxa_atexit(TileLevelSetPiece__TileLevelSetPiece__0058d560,lastSetPiece,&__dso_handle);
+  __cxa_atexit(TileLevelSetPiece__TileLevelSetPiece__0058d560, lastSetPiece, &__dso_handle);
   TileLevelSetPiece__TileLevelSetPiece__0058d640((TileLevelSetPiece *)lastAnimation);
-  __cxa_atexit(TileLevelSetPiece__TileLevelSetPiece__0058d560,lastAnimation,&__dso_handle);
+  __cxa_atexit(TileLevelSetPiece__TileLevelSetPiece__0058d560, lastAnimation, &__dso_handle);
   TileLevelSetPiece__TileLevelSetPiece__0058d640((TileLevelSetPiece *)lastObstacle);
-  __cxa_atexit(TileLevelSetPiece__TileLevelSetPiece__0058d560,lastObstacle,&__dso_handle);
+  __cxa_atexit(TileLevelSetPiece__TileLevelSetPiece__0058d560, lastObstacle, &__dso_handle);
   vTileScale._0_4_ = 0x3f800000;
   vTileScale._4_4_ = 0x3f800000;
   vTileScale._8_4_ = 0xbf800000;
@@ -2599,7 +2596,7 @@ void _GLOBAL__sub_I_UserLoginCheck(void)
   vTileScale._20_4_ = 0xbf800000;
   vTileScale._24_4_ = 0xbf800000;
   vTileScale._28_4_ = 0xbf800000;
-  __cxa_atexit(__tcf_0,0,&__dso_handle);
+  __cxa_atexit(__tcf_0, 0, &__dso_handle);
   vTileOpposite._0_4_ = 0x3f800000;
   vTileOpposite._4_4_ = 0x3f800000;
   vTileOpposite._8_4_ = 0xbf800000;
@@ -2608,7 +2605,7 @@ void _GLOBAL__sub_I_UserLoginCheck(void)
   vTileOpposite._20_4_ = 0xbf800000;
   vTileOpposite._24_4_ = 0xbf800000;
   vTileOpposite._28_4_ = 0xbf800000;
-  __cxa_atexit(__tcf_1,0,&__dso_handle);
+  __cxa_atexit(__tcf_1, 0, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pCopiedBlocks);
   pCopiedBlocks._42_2_ = 0;
   pCopiedBlocks._40_2_ = 0;
@@ -2618,7 +2615,7 @@ void _GLOBAL__sub_I_UserLoginCheck(void)
   pCopiedBlocks._72_4_ = 0;
   pCopiedBlocks[0x2c] = 4;
   pCopiedBlocks._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_SelectedBlock__ResizeableArray,pCopiedBlocks,&__dso_handle);
+  __cxa_atexit(ResizeableArray_SelectedBlock__ResizeableArray, pCopiedBlocks, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pTempSetSelection);
   pTempSetSelection._42_2_ = 0;
   pTempSetSelection._40_2_ = 0;
@@ -2628,8 +2625,8 @@ void _GLOBAL__sub_I_UserLoginCheck(void)
   pTempSetSelection._72_4_ = 0;
   pTempSetSelection[0x2c] = 4;
   pTempSetSelection._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_TileLevelSetPiece__ResizeableArray,pTempSetSelection,&__dso_handle
-              );
+  __cxa_atexit(ResizeableArray_TileLevelSetPiece__ResizeableArray, pTempSetSelection,
+               &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pCopiedSetPieces);
   pCopiedSetPieces._42_2_ = 0;
   pCopiedSetPieces._40_2_ = 0;
@@ -2639,15 +2636,16 @@ void _GLOBAL__sub_I_UserLoginCheck(void)
   pCopiedSetPieces._72_4_ = 0;
   pCopiedSetPieces[0x2c] = 4;
   pCopiedSetPieces._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_TileLevelSetPiece__ResizeableArray__004b5c70,pCopiedSetPieces,&__dso_handle);
+  __cxa_atexit(ResizeableArray_TileLevelSetPiece__ResizeableArray__004b5c70, pCopiedSetPieces,
+               &__dso_handle);
   vXYCOM = 0;
   DAT_00819f44 /* R:0.0f */ = 0;
-  __cxa_atexit(Vector2__Vector2,&vXYCOM,&__dso_handle);
-  __cxa_atexit(Vector2__Vector2,&vWorldCursorPos,&__dso_handle);
+  __cxa_atexit(Vector2__Vector2, &vXYCOM, &__dso_handle);
+  __cxa_atexit(Vector2__Vector2, &vWorldCursorPos, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)SMBEditor__editorSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,SMBEditor__editorSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, SMBEditor__editorSection, &__dso_handle);
   strEditorTmpLevelFile = &DAT_008184c8 /* R:0.00016803004837129265f */;
-  __cxa_atexit(std__string_string,&strEditorTmpLevelFile,&__dso_handle);
+  __cxa_atexit(std__string_string, &strEditorTmpLevelFile, &__dso_handle);
   return;
 }
 
@@ -2666,42 +2664,42 @@ void SMBEditorForms__GLOBAL_sub_I_SMB_MASTER_FORM(void)
   ::cWhite._4_4_ = 0x3f800000;
   DAT_0081afd8 /* R:6.367051806383385e-39f */._0_4_ = 0x3f800000;
   DAT_0081afd8 /* R:6.367051806383385e-39f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -2718,42 +2716,42 @@ void _GLOBAL__sub_I_SMBInstructions(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -2770,42 +2768,42 @@ void _GLOBAL__sub_I_rmChapterStatus(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -2822,42 +2820,42 @@ void _GLOBAL__sub_I_pLeaderboards(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -2877,57 +2875,57 @@ void _GLOBAL__sub_I_SMBLeaderBoardSwitchFilter(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   cSelected._0_4_ = 0x3f800000;
   cSelected._4_4_ = 0;
   cSelected._8_4_ = 0;
   cSelected._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cSelected,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cSelected, &__dso_handle);
   cDisabled._12_4_ = 0x3f800000;
   cDisabled._0_4_ = 0x3f000000;
   cDisabled._4_4_ = 0x3f000000;
   cDisabled._8_4_ = 0x3f000000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cDisabled,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cDisabled, &__dso_handle);
   cUnSelected._0_4_ = 0x3f800000;
   cUnSelected._4_4_ = 0x3f800000;
   cUnSelected._8_4_ = 0x3f800000;
   cUnSelected._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cUnSelected,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cUnSelected, &__dso_handle);
   return;
 }
 
@@ -2944,42 +2942,42 @@ void _GLOBAL__sub_I_SMBLevelLoad(void)
   cWhite._4_4_ = 0x3f800000;
   DAT_0081ba88 /* R:1.1910274640396352e-38f */._0_4_ = 0x3f800000;
   DAT_0081ba88 /* R:1.1910274640396352e-38f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -2998,44 +2996,44 @@ void _GLOBAL__sub_I_SMBMenu(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   SyncEvent__SyncEvent((SyncEvent *)loadChapterEvent);
-  __cxa_atexit(SyncEvent__SyncEvent__005b8100,loadChapterEvent,&__dso_handle);
+  __cxa_atexit(SyncEvent__SyncEvent__005b8100, loadChapterEvent, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pInternetsChapters);
   pInternetsChapters._42_2_ = 0;
   pInternetsChapters._40_2_ = 0;
@@ -3045,7 +3043,7 @@ void _GLOBAL__sub_I_SMBMenu(void)
   pInternetsChapters._72_4_ = 0;
   pInternetsChapters[0x2c] = 4;
   pInternetsChapters._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_RemoteChapter__ResizeableArray,pInternetsChapters,&__dso_handle);
+  __cxa_atexit(ResizeableArray_RemoteChapter__ResizeableArray, pInternetsChapters, &__dso_handle);
   playAsBrownie._0_4_ = 0;
   playAsBrownie._4_4_ = 0;
   playAsBrownie._8_4_ = 0;
@@ -3070,7 +3068,7 @@ void _GLOBAL__sub_I_SMBMenu(void)
   playAsBrownie._84_4_ = 1000;
   playAsBrownie._88_4_ = 0;
   playAsBrownie._92_4_ = 0;
-  __cxa_atexit(tagCheatCode__tagCheatCode,playAsBrownie,&__dso_handle);
+  __cxa_atexit(tagCheatCode__tagCheatCode, playAsBrownie, &__dso_handle);
   playAsDrFetus._0_4_ = 0;
   playAsDrFetus._4_4_ = 0;
   playAsDrFetus._8_4_ = 0;
@@ -3095,7 +3093,7 @@ void _GLOBAL__sub_I_SMBMenu(void)
   playAsDrFetus._84_4_ = 1000;
   playAsDrFetus._88_4_ = 0;
   playAsDrFetus._92_4_ = 0;
-  __cxa_atexit(tagCheatCode__tagCheatCode,playAsDrFetus,&__dso_handle);
+  __cxa_atexit(tagCheatCode__tagCheatCode, playAsDrFetus, &__dso_handle);
   playAsTofuBoy._0_4_ = 0;
   playAsTofuBoy._4_4_ = 0;
   playAsTofuBoy._8_4_ = 0;
@@ -3120,7 +3118,7 @@ void _GLOBAL__sub_I_SMBMenu(void)
   playAsTofuBoy._84_4_ = 1000;
   playAsTofuBoy._88_4_ = 0;
   playAsTofuBoy._92_4_ = 0;
-  __cxa_atexit(tagCheatCode__tagCheatCode,playAsTofuBoy,&__dso_handle);
+  __cxa_atexit(tagCheatCode__tagCheatCode, playAsTofuBoy, &__dso_handle);
   playAsWOG._0_4_ = 0;
   playAsWOG._4_4_ = 0;
   playAsWOG._8_4_ = 0;
@@ -3145,7 +3143,7 @@ void _GLOBAL__sub_I_SMBMenu(void)
   playAsWOG._84_4_ = 1000;
   playAsWOG._88_4_ = 0;
   playAsWOG._92_4_ = 0;
-  __cxa_atexit(tagCheatCode__tagCheatCode,playAsWOG,&__dso_handle);
+  __cxa_atexit(tagCheatCode__tagCheatCode, playAsWOG, &__dso_handle);
   playAsTim._0_4_ = 0;
   playAsTim._4_4_ = 0;
   playAsTim._8_4_ = 0;
@@ -3170,21 +3168,21 @@ void _GLOBAL__sub_I_SMBMenu(void)
   playAsTim._84_4_ = 1000;
   playAsTim._88_4_ = 0;
   playAsTim._92_4_ = 0;
-  __cxa_atexit(tagCheatCode__tagCheatCode,playAsTim,&__dso_handle);
+  __cxa_atexit(tagCheatCode__tagCheatCode, playAsTim, &__dso_handle);
   vChapterMenuMeatBoyOffset = 0;
   _DAT_0081bf28 /* R:2.2420775429197073e-44f */ = 0;
   _DAT_0081bf2c /* R:0.0f */ = 0;
   _DAT_0081bf24 /* R:0.0f */ = 0x41200000;
-  __cxa_atexit(FPUVector__FPUVector,&vChapterMenuMeatBoyOffset,&__dso_handle);
+  __cxa_atexit(FPUVector__FPUVector, &vChapterMenuMeatBoyOffset, &__dso_handle);
   vWorldMenuMeatBoyOffset = 0;
   DAT_0081bf38 /* R:1.1915431418745068e-38f */ = 0;
   DAT_0081bf3c /* R:0.0f */ = 0;
   DAT_0081bf34 /* R:2.2958888052482446e-39f */ = 0x41700000;
-  __cxa_atexit(FPUVector__FPUVector,&vWorldMenuMeatBoyOffset,&__dso_handle);
+  __cxa_atexit(FPUVector__FPUVector, &vWorldMenuMeatBoyOffset, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)SMBMenuSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,SMBMenuSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, SMBMenuSection, &__dso_handle);
   TAudioInstance__TAudioInstance((TAudioInstance *)titleMusicInstance);
-  __cxa_atexit(TAudioInstance__TAudioInstance__0057a200,titleMusicInstance,&__dso_handle);
+  __cxa_atexit(TAudioInstance__TAudioInstance__0057a200, titleMusicInstance, &__dso_handle);
   return;
 }
 
@@ -3201,47 +3199,47 @@ void _GLOBAL__sub_I_pPalProps(void)
   cWhite._4_4_ = 0x3f800000;
   DAT_0081c008 /* R:1.0778787787586493e-41f */._0_4_ = 0x3f800000;
   DAT_0081c008 /* R:1.0778787787586493e-41f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   DAT_0081bfe8 /* R:1.6815581571897805e-44f */._0_4_ = 0;
   DAT_0081bfe8 /* R:1.6815581571897805e-44f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   demonSpawnCircle._8_4_ = 0;
   demonSpawnCircle._12_4_ = 0;
   demonSpawnCircle._4_4_ = 0x41200000;
   demonSpawnCircle[0] = 0x11;
-  __cxa_atexit(BoundingCircle__BoundingCircle,demonSpawnCircle,&__dso_handle);
+  __cxa_atexit(BoundingCircle__BoundingCircle, demonSpawnCircle, &__dso_handle);
   return;
 }
 
@@ -3261,42 +3259,42 @@ void _GLOBAL__sub_I_SMBPopupDeActivateMenu(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -3313,42 +3311,42 @@ void _GLOBAL__sub_I_strPortalUploadQuery(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   sqlQuery._0_8_ = 0;
   sqlQuery._8_8_ = 0;
   sqlQuery._16_8_ = 0;
@@ -3356,7 +3354,7 @@ void _GLOBAL__sub_I_strPortalUploadQuery(void)
   sqlQuery._28_4_ = 0;
   sqlQuery._32_2_ = 0;
   sqlQuery._34_2_ = 0;
-  __cxa_atexit(SQLQuery__SQLQuery,sqlQuery,&__dso_handle);
+  __cxa_atexit(SQLQuery__SQLQuery, sqlQuery, &__dso_handle);
   sqlQuery2._0_8_ = 0;
   sqlQuery2._8_8_ = 0;
   sqlQuery2._16_8_ = 0;
@@ -3364,7 +3362,7 @@ void _GLOBAL__sub_I_strPortalUploadQuery(void)
   sqlQuery2._28_4_ = 0;
   sqlQuery2._32_2_ = 0;
   sqlQuery2._34_2_ = 0;
-  __cxa_atexit(SQLQuery__SQLQuery,sqlQuery2,&__dso_handle);
+  __cxa_atexit(SQLQuery__SQLQuery, sqlQuery2, &__dso_handle);
   return;
 }
 
@@ -3381,44 +3379,44 @@ void _GLOBAL__sub_I_dwFrameStartTime(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   SyncEvent__SyncEvent((SyncEvent *)writeReplayEvent);
-  __cxa_atexit(SyncEvent__SyncEvent__005b8100,writeReplayEvent,&__dso_handle);
+  __cxa_atexit(SyncEvent__SyncEvent__005b8100, writeReplayEvent, &__dso_handle);
   return;
 }
 
@@ -3438,42 +3436,42 @@ void _GLOBAL__sub_I_SMBReplayConfirmDelete(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -3493,42 +3491,42 @@ void _GLOBAL__sub_I_SMBSelectionMenuIncrement(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -3545,42 +3543,42 @@ void _GLOBAL__sub_I_GLOBAL_SETTINGS_MENU(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pScreenResolutions);
   pScreenResolutions._42_2_ = 0;
   pScreenResolutions._40_2_ = 0;
@@ -3590,7 +3588,7 @@ void _GLOBAL__sub_I_GLOBAL_SETTINGS_MENU(void)
   pScreenResolutions._72_4_ = 0;
   pScreenResolutions[0x2c] = 4;
   pScreenResolutions._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_GFXScreenResolutions__ResizeableArray,pScreenResolutions,
+  __cxa_atexit(ResizeableArray_GFXScreenResolutions__ResizeableArray, pScreenResolutions,
                &__dso_handle);
   return;
 }
@@ -3610,42 +3608,42 @@ void SmokeEmitter__GLOBAL_sub_I_SmokeEmitter(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -3664,56 +3662,58 @@ void _GLOBAL__sub_I__SMB_GLOBAL_INVINCIBLE(void)
   cWhite._4_4_ = 0x3f800000;
   DAT_0081c7f8 /* R:2.2420775429197073e-44f */._0_4_ = 0x3f800000;
   DAT_0081c7f8 /* R:2.2420775429197073e-44f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   DAT_0081c838 /* R:1.1917718337838846e-38f */._0_4_ = 0;
   DAT_0081c838 /* R:1.1917718337838846e-38f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   vLastEyePos._0_4_ = 0;
   vLastEyePos._4_4_ = 0;
   vLastEyePos._8_4_ = 0;
   vLastEyePos._12_4_ = 0;
   uTmpGlobalMusicVolume = GLOBALMUSICVOLUME;
-  __cxa_atexit(FPUVector__FPUVector,vLastEyePos,&__dso_handle);
-  _DAT_0081c768 /* R:2.2420775429197073e-44f */ = CONCAT44(cWhite._4_4_,(uint32_t)cWhite);
+  __cxa_atexit(FPUVector__FPUVector, vLastEyePos, &__dso_handle);
+  _DAT_0081c768 /* R:2.2420775429197073e-44f */ = CONCAT44(cWhite._4_4_, (uint32_t)cWhite);
   ScreenFlash = 0;
   _DAT_0081c764 /* R:0.0f */ = 0;
   _DAT_0081c778 /* R:8.499491757454318e-39f */ = 0;
-  _DAT_0081c770 /* R:1.3176409460046255e-41f */ = CONCAT44(DAT_0081c7f8 /* R:2.2420775429197073e-44f */._4_4_,(uint32_t)DAT_0081c7f8 /* R:2.2420775429197073e-44f */);
-  __cxa_atexit(ScreenFlashManager__ScreenFlashManager__00517a70,&ScreenFlash,&__dso_handle);
+  _DAT_0081c770 /* R:1.3176409460046255e-41f */ =
+      CONCAT44(DAT_0081c7f8 /* R:2.2420775429197073e-44f */._4_4_,
+               (uint32_t)DAT_0081c7f8 /* R:2.2420775429197073e-44f */);
+  __cxa_atexit(ScreenFlashManager__ScreenFlashManager__00517a70, &ScreenFlash, &__dso_handle);
   strStartingPalette = &DAT_008184c8 /* R:0.00016803004837129265f */;
-  __cxa_atexit(std__string_string,&strStartingPalette,&__dso_handle);
+  __cxa_atexit(std__string_string, &strStartingPalette, &__dso_handle);
   return;
 }
 
@@ -3733,42 +3733,42 @@ void TheKid__TheKid(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -3788,42 +3788,42 @@ void Tim__Tim(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -3843,42 +3843,42 @@ void VVVVVV__VVVVVV(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -3892,15 +3892,15 @@ void _GLOBAL__sub_I_XAudioSection(void)
 
 {
   uint32_t *puVar1;
-  
+
   CriticalSection__CriticalSection((CriticalSection *)XAudioSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,XAudioSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, XAudioSection, &__dso_handle);
   puVar1 = &DAT_0081cedc /* R:2.2958888052482446e-39f */;
   do {
     *puVar1 = 0;
     puVar1 = puVar1 + 8;
   } while (puVar1 != (uint32_t *)(XAudioSection + 0x1c));
-  __cxa_atexit(__tcf_0,0,&__dso_handle);
+  __cxa_atexit(__tcf_0, 0, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pActiveCues);
   pActiveCues._42_2_ = 0;
   pActiveCues._40_2_ = 0;
@@ -3910,7 +3910,7 @@ void _GLOBAL__sub_I_XAudioSection(void)
   pActiveCues._72_4_ = 0;
   pActiveCues[0x2c] = 4;
   pActiveCues._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_OpenALCue__ResizeableArray,pActiveCues,&__dso_handle);
+  __cxa_atexit(ResizeableArray_OpenALCue__ResizeableArray, pActiveCues, &__dso_handle);
   return;
 }
 
@@ -3927,42 +3927,42 @@ void _GLOBAL__sub_I_gfxLockIndexBuffer(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -3979,42 +3979,42 @@ void _GLOBAL__sub_I_gfxCreateTexture(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -4031,42 +4031,42 @@ void _GLOBAL__sub_I_gfxLockVertexBuffer(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -4083,42 +4083,42 @@ void _GLOBAL__sub_I_gfxCreateVertexDeclaration(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -4147,11 +4147,11 @@ void _GLOBAL__sub_I_uMasterInputFrameCounter(void)
   pJoysticks._104_8_ = 0;
   pJoysticks._112_8_ = 0;
   pJoysticks._120_8_ = 0;
-  __cxa_atexit(__tcf_0,0,&__dso_handle);
+  __cxa_atexit(__tcf_0, 0, &__dso_handle);
   mouse = 0;
-  __cxa_atexit(tagSDLMouse__tagSDLMouse,&mouse,&__dso_handle);
+  __cxa_atexit(tagSDLMouse__tagSDLMouse, &mouse, &__dso_handle);
   keyboard = 0;
-  __cxa_atexit(tagSDLKeyboard__tagSDLKeyboard,&keyboard,&__dso_handle);
+  __cxa_atexit(tagSDLKeyboard__tagSDLKeyboard, &keyboard, &__dso_handle);
   return;
 }
 
@@ -4170,44 +4170,44 @@ void AnimationManager__GLOBAL_sub_I_AnimationCallbackSection(void)
   ::cWhite._4_4_ = 0x3f800000;
   DAT_00820458 /* R:2.2420775429197073e-44f */._0_4_ = 0x3f800000;
   DAT_00820458 /* R:2.2420775429197073e-44f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   DAT_00820448 /* R:2.8306228979361305e-42f */._0_4_ = 0;
   DAT_00820448 /* R:2.8306228979361305e-42f */._4_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &::cNullColor, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)AnimationCallbackSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,AnimationCallbackSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, AnimationCallbackSection, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pAnimCallbacks);
   pAnimCallbacks._42_2_ = 0;
   pAnimCallbacks._40_2_ = 0;
@@ -4217,7 +4217,7 @@ void AnimationManager__GLOBAL_sub_I_AnimationCallbackSection(void)
   pAnimCallbacks._72_4_ = 0;
   pAnimCallbacks[0x2c] = 4;
   pAnimCallbacks._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_AnimationFinishedCallback__ResizeableArray,pAnimCallbacks,
+  __cxa_atexit(ResizeableArray_AnimationFinishedCallback__ResizeableArray, pAnimCallbacks,
                &__dso_handle);
   FlashEditableTextFieldStyle._0_4_ = 0;
   FlashEditableTextFieldStyle._4_4_ = 0;
@@ -4227,7 +4227,7 @@ void AnimationManager__GLOBAL_sub_I_AnimationCallbackSection(void)
   FlashEditableTextFieldStyle._20_4_ = 0;
   FlashEditableTextFieldStyle._24_4_ = 0;
   FlashEditableTextFieldStyle._28_4_ = 0;
-  __cxa_atexit(UITextFieldStyle__UITextFieldStyle,FlashEditableTextFieldStyle,&__dso_handle);
+  __cxa_atexit(UITextFieldStyle__UITextFieldStyle, FlashEditableTextFieldStyle, &__dso_handle);
   return;
 }
 
@@ -4241,7 +4241,7 @@ void _GLOBAL__sub_I_Audio(void)
 
 {
   CriticalSection__CriticalSection((CriticalSection *)TAudioSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,TAudioSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, TAudioSection, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pMusicInstances);
   pMusicInstances._42_2_ = 0;
   pMusicInstances._40_2_ = 0;
@@ -4251,7 +4251,7 @@ void _GLOBAL__sub_I_Audio(void)
   pMusicInstances._72_4_ = 0;
   pMusicInstances[0x2c] = 4;
   pMusicInstances._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_TAudioInstance__ResizeableArray,pMusicInstances,&__dso_handle);
+  __cxa_atexit(ResizeableArray_TAudioInstance__ResizeableArray, pMusicInstances, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pAudioCueCache);
   pAudioCueCache._42_2_ = 0;
   pAudioCueCache._40_2_ = 0;
@@ -4261,9 +4261,9 @@ void _GLOBAL__sub_I_Audio(void)
   pAudioCueCache._72_4_ = 0;
   pAudioCueCache[0x2c] = 4;
   pAudioCueCache._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_TAudioCueCache__ResizeableArray,pAudioCueCache,&__dso_handle);
+  __cxa_atexit(ResizeableArray_TAudioCueCache__ResizeableArray, pAudioCueCache, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)cacheCueSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,cacheCueSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, cacheCueSection, &__dso_handle);
   return;
 }
 
@@ -4283,42 +4283,42 @@ void AudioEffectFade__AudioEffectFade(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -4337,44 +4337,44 @@ void Plane__GLOBAL_sub_I_Plane(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   VertexStream__VertexStream__005a6980((VertexStream *)pBoundsStream);
-  __cxa_atexit(VertexStream__VertexStream__005a6810,pBoundsStream,&__dso_handle);
+  __cxa_atexit(VertexStream__VertexStream__005a6810, pBoundsStream, &__dso_handle);
   return;
 }
 
@@ -4393,42 +4393,42 @@ void CGR__GLOBAL_sub_I_pSingleQuadStream(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -4448,42 +4448,42 @@ void Camera__Camera(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -4500,42 +4500,42 @@ void _GLOBAL__sub_I_ConfigurationFile_cpp(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -4554,42 +4554,42 @@ void Cursor3D__GLOBAL_sub_I_p3DCursorTexture(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -4611,7 +4611,7 @@ void _GLOBAL__sub_I_uMasterInvokeID(void)
   pEditableItems._72_4_ = 0;
   pEditableItems[0x2c] = 4;
   pEditableItems._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_tagEditableItem__ResizeableArray,pEditableItems,&__dso_handle);
+  __cxa_atexit(ResizeableArray_tagEditableItem__ResizeableArray, pEditableItems, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pEditableCategories);
   pEditableCategories._42_2_ = 0;
   pEditableCategories._40_2_ = 0;
@@ -4621,7 +4621,7 @@ void _GLOBAL__sub_I_uMasterInvokeID(void)
   pEditableCategories._72_4_ = 0;
   pEditableCategories[0x2c] = 4;
   pEditableCategories._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_tagEditableCategory__ResizeableArray,pEditableCategories,
+  __cxa_atexit(ResizeableArray_tagEditableCategory__ResizeableArray, pEditableCategories,
                &__dso_handle);
   return;
 }
@@ -4641,45 +4641,45 @@ void TEngine__GLOBAL_sub_I_dwDefaultTimeBetweenFrames(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   dwDefaultTimeBetweenFrames = (uint32_t)(long)(DAT_005c01c4 /* R:1000.0f */ * fOneFrameTimeStep);
   SyncEvent__SyncEvent((SyncEvent *)LoadingRenderThreadFinished);
-  __cxa_atexit(SyncEvent__SyncEvent__005b8100,LoadingRenderThreadFinished,&__dso_handle);
+  __cxa_atexit(SyncEvent__SyncEvent__005b8100, LoadingRenderThreadFinished, &__dso_handle);
   return;
 }
 
@@ -4699,42 +4699,42 @@ void _GLOBAL__sub_I_CreateTextEmitterFontResources(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   DAT_00820c68 /* R:2.802596928649634e-45f */._0_4_ = 0;
   DAT_00820c68 /* R:2.802596928649634e-45f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -4751,42 +4751,42 @@ void _GLOBAL__sub_I_bIgnoreFragmentCache(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -4806,42 +4806,42 @@ void Game__ExitGame(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -4858,50 +4858,50 @@ void _GLOBAL__sub_I__GFXResetParams(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   _GFXResetParams._0_4_ = 800;
   _GFXResetParams._4_4_ = 600;
   _GFXResetParams._8_4_ = 0;
-  __cxa_atexit(tagResetDeviceParams__tagResetDeviceParams,_GFXResetParams,&__dso_handle);
+  __cxa_atexit(tagResetDeviceParams__tagResetDeviceParams, _GFXResetParams, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)GFXDrawSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,GFXDrawSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, GFXDrawSection, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)TGraphicsSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,TGraphicsSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, TGraphicsSection, &__dso_handle);
   return;
 }
 
@@ -4920,42 +4920,42 @@ void GraphicsSettings__GLOBAL_sub_I_GRAPHICSFORM(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pSelectableResolutions);
   pSelectableResolutions._42_2_ = 0;
   pSelectableResolutions._40_2_ = 0;
@@ -4965,7 +4965,7 @@ void GraphicsSettings__GLOBAL_sub_I_GRAPHICSFORM(void)
   pSelectableResolutions._72_4_ = 0;
   pSelectableResolutions[0x2c] = 4;
   pSelectableResolutions._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_SelectableResolutions__ResizeableArray,pSelectableResolutions,
+  __cxa_atexit(ResizeableArray_SelectableResolutions__ResizeableArray, pSelectableResolutions,
                &__dso_handle);
   return;
 }
@@ -4986,42 +4986,42 @@ void IndexBuffer__IndexBuffer(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -5038,42 +5038,42 @@ void _GLOBAL__sub_I_Input(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -5092,42 +5092,42 @@ void TileLevel__GLOBAL_sub_I_fLevelGridWH(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -5141,7 +5141,7 @@ void _GLOBAL__sub_I_LoaderAllocSection(void)
 
 {
   CriticalSection__CriticalSection((CriticalSection *)LoaderAllocSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,LoaderAllocSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, LoaderAllocSection, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)pLoaderFuncs);
   pLoaderFuncs._42_2_ = 0;
   pLoaderFuncs._40_2_ = 0;
@@ -5151,7 +5151,7 @@ void _GLOBAL__sub_I_LoaderAllocSection(void)
   pLoaderFuncs._72_4_ = 0;
   pLoaderFuncs[0x2c] = 4;
   pLoaderFuncs._48_4_ = 0;
-  __cxa_atexit(ResizeableArray_Loader__LoaderFuncBlock::~ResizeableArray,pLoaderFuncs,
+  __cxa_atexit(ResizeableArray_Loader__LoaderFuncBlock::~ResizeableArray, pLoaderFuncs,
                &__dso_handle);
   return;
 }
@@ -5172,42 +5172,42 @@ void Model__GLOBAL_sub_I_Model(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -5224,50 +5224,50 @@ void _GLOBAL__sub_I_vDefaultStart3D(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   vDefaultStart3D._0_4_ = 0;
   vDefaultStart3D._4_4_ = 0;
   DAT_008224a8 /* R:7.541182974059577e-39f */._0_4_ = 0;
   DAT_008224a8 /* R:7.541182974059577e-39f */._4_4_ = 0;
-  __cxa_atexit(FPUVector__FPUVector,&vDefaultStart3D,&__dso_handle);
+  __cxa_atexit(FPUVector__FPUVector, &vDefaultStart3D, &__dso_handle);
   vDefaultStart2D._0_4_ = 0;
   vDefaultStart2D._4_4_ = 0;
-  __cxa_atexit(Vector2__Vector2,&vDefaultStart2D,&__dso_handle);
+  __cxa_atexit(Vector2__Vector2, &vDefaultStart2D, &__dso_handle);
   return;
 }
 
@@ -5294,7 +5294,7 @@ void Players__GLOBAL_sub_I_Player(void)
   Player._72_4_ = 0xffffffff;
   Player._80_8_ = 0;
   Player._88_4_ = 0;
-  __cxa_atexit(__tcf_0,0,&__dso_handle);
+  __cxa_atexit(__tcf_0, 0, &__dso_handle);
   return;
 }
 
@@ -5310,7 +5310,7 @@ void PropertiesFile__GLOBAL_sub_I_PropertiesFile(void)
 
 {
   std__ios_base_Init_Init((Init *)&std__ioinit);
-  __cxa_atexit(std__ios_base_Init_Init,&std__ioinit,&__dso_handle);
+  __cxa_atexit(std__ios_base_Init_Init, &std__ioinit, &__dso_handle);
   return;
 }
 
@@ -5330,42 +5330,42 @@ void ReimplmentThisSprite__ReimplmentThisSprite(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -5385,46 +5385,47 @@ void RenderLayer__RenderLayer(void)
   ::cWhite._4_4_ = 0x3f800000;
   DAT_00822778 /* R:7.547281424976319e-39f */._0_4_ = 0x3f800000;
   DAT_00822778 /* R:7.547281424976319e-39f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)RenderLayers__MasterRenderSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,RenderLayers__MasterRenderSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, RenderLayers__MasterRenderSection,
+               &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)_RENDERLAYER_SECTION);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,_RENDERLAYER_SECTION,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, _RENDERLAYER_SECTION, &__dso_handle);
   return;
 }
 
@@ -5438,7 +5439,7 @@ void _GLOBAL__sub_I_ResourceCreator(void)
 
 {
   TResourceCreator__TResourceCreator__00599f60((TResourceCreator *)ResourceCreator);
-  __cxa_atexit(TResourceCreator__TResourceCreator,ResourceCreator,&__dso_handle);
+  __cxa_atexit(TResourceCreator__TResourceCreator, ResourceCreator, &__dso_handle);
   return;
 }
 
@@ -5455,42 +5456,42 @@ void _GLOBAL__sub_I_CreateRibbonEmitterResources(void)
   cWhite._4_4_ = 0x3f800000;
   DAT_008228c8 /* R:7.550128863455827e-39f */._0_4_ = 0x3f800000;
   DAT_008228c8 /* R:7.550128863455827e-39f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   DAT_008228d8 /* R:3.1986038746678274e-41f */._0_4_ = 0;
   DAT_008228d8 /* R:3.1986038746678274e-41f */._4_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &cNullColor, &__dso_handle);
   return;
 }
 
@@ -5510,42 +5511,42 @@ void SceneObject2D__GLOBAL_sub_I_SceneObject2D(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -5562,42 +5563,42 @@ void _GLOBAL__sub_I___pMarginStream(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -5614,42 +5615,42 @@ void _GLOBAL__sub_I_pSetPieceWayPointStream(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -5666,42 +5667,42 @@ void _GLOBAL__sub_I_SparkEmitterResourceCreate(void)
   cWhite._4_4_ = 0x3f800000;
   DAT_00822b88 /* R:1.401298464324817e-44f */._0_4_ = 0x3f800000;
   DAT_00822b88 /* R:1.401298464324817e-44f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -5720,42 +5721,42 @@ void Sprite__GLOBAL_sub_I_Sprite(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -5772,42 +5773,42 @@ void _GLOBAL__sub_I__uNumTextures(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -5826,42 +5827,42 @@ void TexturePackage__GLOBAL_sub_I_TexturePackage(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -5881,42 +5882,42 @@ void TilePalette__TilePalette(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -5933,42 +5934,42 @@ void _GLOBAL__sub_I_UI_cpp(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -5985,42 +5986,42 @@ void _GLOBAL__sub_I___UILayer(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -6037,42 +6038,42 @@ void _GLOBAL__sub_I__DEFAULT_UIBUTTON_STYLE(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   _DEFAULT_UIBUTTON_STYLE._0_4_ = 0;
   _DEFAULT_UIBUTTON_STYLE._4_4_ = 0;
   _DEFAULT_UIBUTTON_STYLE._16_4_ = 0x3f000000;
@@ -6085,7 +6086,7 @@ void _GLOBAL__sub_I__DEFAULT_UIBUTTON_STYLE(void)
   _DEFAULT_UIBUTTON_STYLE._32_4_ = 0x3f333333;
   _DEFAULT_UIBUTTON_STYLE._36_4_ = 0x3f333333;
   _DEFAULT_UIBUTTON_STYLE._40_4_ = 0x3f333333;
-  __cxa_atexit(UIButtonStyle__UIButtonStyle,_DEFAULT_UIBUTTON_STYLE,&__dso_handle);
+  __cxa_atexit(UIButtonStyle__UIButtonStyle, _DEFAULT_UIBUTTON_STYLE, &__dso_handle);
   return;
 }
 
@@ -6102,52 +6103,52 @@ void _GLOBAL__sub_I__DEFAULT_UIDROPDOWN_STYLE(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   _DEFAULT_UIDROPDOWN_STYLE._0_4_ = 0;
   _DEFAULT_UIDROPDOWN_STYLE._4_4_ = 0;
   _DEFAULT_UIDROPDOWN_STYLE._8_4_ = 0;
   _DEFAULT_UIDROPDOWN_STYLE._12_4_ = 0x3f800000;
-  __cxa_atexit(UIDropDownStyle__UIDropDownStyle,_DEFAULT_UIDROPDOWN_STYLE,&__dso_handle);
+  __cxa_atexit(UIDropDownStyle__UIDropDownStyle, _DEFAULT_UIDROPDOWN_STYLE, &__dso_handle);
   _DEFAULT_UIDROPDOWNFORM_STYLE._0_4_ = 0;
   _DEFAULT_UIDROPDOWNFORM_STYLE._4_4_ = 0;
   _DEFAULT_UIDROPDOWNFORM_STYLE._8_4_ = 0;
   _DEFAULT_UIDROPDOWNFORM_STYLE._12_4_ = 0x3f800000;
-  __cxa_atexit(UIFormStyle__UIFormStyle,_DEFAULT_UIDROPDOWNFORM_STYLE,&__dso_handle);
+  __cxa_atexit(UIFormStyle__UIFormStyle, _DEFAULT_UIDROPDOWNFORM_STYLE, &__dso_handle);
   return;
 }
 
@@ -6167,47 +6168,47 @@ void _GLOBAL__sub_I_ConvertPosTo0To1(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   _DEFAULT_UIFORM_STYLE._12_4_ = 0x3f333333;
   _DEFAULT_UIFORM_STYLE._0_4_ = 0x3e4ccccd;
   _DEFAULT_UIFORM_STYLE._4_4_ = 0x3e4ccccd;
   _DEFAULT_UIFORM_STYLE._8_4_ = 0x3e4ccccd;
-  __cxa_atexit(UIFormStyle__UIFormStyle,_DEFAULT_UIFORM_STYLE,&__dso_handle);
+  __cxa_atexit(UIFormStyle__UIFormStyle, _DEFAULT_UIFORM_STYLE, &__dso_handle);
   return;
 }
 
@@ -6224,42 +6225,42 @@ void _GLOBAL__sub_I__DEFAULT_UIFRAME_STYLE(void)
   cWhite._4_4_ = 0x3f800000;
   DAT_00823178 /* R:3.3978685162948164e-41f */._0_4_ = 0x3f800000;
   DAT_00823178 /* R:3.3978685162948164e-41f */._4_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,&cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, &cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   _DEFAULT_UIFRAME_STYLE._4_4_ = cWhite._4_4_;
   _DEFAULT_UIFRAME_STYLE._0_4_ = (uint32_t)cWhite;
   _DEFAULT_UIFRAME_STYLE._16_4_ = 0;
@@ -6268,7 +6269,7 @@ void _GLOBAL__sub_I__DEFAULT_UIFRAME_STYLE(void)
   _DEFAULT_UIFRAME_STYLE._28_4_ = 0x3f800000;
   _DEFAULT_UIFRAME_STYLE._12_4_ = DAT_00823178 /* R:3.3978685162948164e-41f */._4_4_;
   _DEFAULT_UIFRAME_STYLE._8_4_ = (uint32_t)DAT_00823178 /* R:3.3978685162948164e-41f */;
-  __cxa_atexit(UIFrameStyle__UIFrameStyle,_DEFAULT_UIFRAME_STYLE,&__dso_handle);
+  __cxa_atexit(UIFrameStyle__UIFrameStyle, _DEFAULT_UIFRAME_STYLE, &__dso_handle);
   return;
 }
 
@@ -6285,48 +6286,48 @@ void _GLOBAL__sub_I__DEFAULT_UILABEL_STYLE(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   _DEFAULT_UILABEL_STYLE._0_4_ = 0x3f800000;
   _DEFAULT_UILABEL_STYLE._4_4_ = 0x3f800000;
   _DEFAULT_UILABEL_STYLE._8_4_ = 0x3f800000;
   _DEFAULT_UILABEL_STYLE._12_4_ = 0x3f800000;
   _DEFAULT_UILABEL_STYLE._24_4_ = _DEFAULT_UI_FONT_SIZE;
-  __cxa_atexit(UILabelStyle__UILabelStyle,_DEFAULT_UILABEL_STYLE,&__dso_handle);
+  __cxa_atexit(UILabelStyle__UILabelStyle, _DEFAULT_UILABEL_STYLE, &__dso_handle);
   return;
 }
 
@@ -6343,42 +6344,42 @@ void _GLOBAL__sub_I__DEFAULT_UISCROLLBAR_STYLE(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   _DEFAULT_UISCROLLBAR_STYLE._12_4_ = 0x3f800000;
   _DEFAULT_UISCROLLBAR_STYLE._28_4_ = 0x3f800000;
   _DEFAULT_UISCROLLBAR_STYLE._0_4_ = 0x3dcccccd;
@@ -6391,7 +6392,7 @@ void _GLOBAL__sub_I__DEFAULT_UISCROLLBAR_STYLE(void)
   _DEFAULT_UISCROLLBAR_STYLE._32_4_ = 0x3f333333;
   _DEFAULT_UISCROLLBAR_STYLE._36_4_ = 0x3f333333;
   _DEFAULT_UISCROLLBAR_STYLE._40_4_ = 0x3f333333;
-  __cxa_atexit(UIScrollBarStyle__UIScrollBarStyle,_DEFAULT_UISCROLLBAR_STYLE,&__dso_handle);
+  __cxa_atexit(UIScrollBarStyle__UIScrollBarStyle, _DEFAULT_UISCROLLBAR_STYLE, &__dso_handle);
   return;
 }
 
@@ -6410,42 +6411,42 @@ void _GLOBAL__sub_I__DEFAULT_UITEXTFIELD_STYLE(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   _DEFAULT_UITEXTFIELD_STYLE._0_4_ = 0;
   _DEFAULT_UITEXTFIELD_STYLE._4_4_ = 0;
   DAT_00823350 /* R:1.0930128021733573e-43f */._0_4_ = 0x3f4ccccd;
@@ -6455,7 +6456,7 @@ void _GLOBAL__sub_I__DEFAULT_UITEXTFIELD_STYLE(void)
   DAT_00823348 /* R:7.56734801898545e-39f */._4_4_ = 0x3f800000;
   DAT_00823358 /* R:3.4400476000709934e-41f */._4_4_ = 0x3f800000;
   _DAT_00823368 /* R:1.6535321879032841e-43f */ = _DEFAULT_UI_FONT_SIZE;
-  __cxa_atexit(UITextFieldStyle__UITextFieldStyle,&_DEFAULT_UITEXTFIELD_STYLE,&__dso_handle);
+  __cxa_atexit(UITextFieldStyle__UITextFieldStyle, &_DEFAULT_UITEXTFIELD_STYLE, &__dso_handle);
   return;
 }
 
@@ -6472,42 +6473,42 @@ void _GLOBAL__sub_I__uNumVertexBuffers(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -6526,42 +6527,42 @@ void VertexDeclaration__GLOBAL_sub_I_VertexDeclaration(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -6581,42 +6582,42 @@ void VertexStream__VertexStream(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -6629,7 +6630,7 @@ void VertexStream__VertexStream(void)
 void _GLOBAL__sub_I_Memory(void)
 
 {
-  __cxa_atexit(TMemory__TMemory,&Memory,&__dso_handle);
+  __cxa_atexit(TMemory__TMemory, &Memory, &__dso_handle);
   return;
 }
 
@@ -6660,9 +6661,9 @@ void _GLOBAL__sub_I_FixFileCase(void)
 
 {
   CriticalSection__CriticalSection((CriticalSection *)fileOpenSection);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,fileOpenSection,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, fileOpenSection, &__dso_handle);
   CriticalSection__CriticalSection((CriticalSection *)packageRead);
-  __cxa_atexit(CriticalSection__CriticalSection__005b71d0,packageRead,&__dso_handle);
+  __cxa_atexit(CriticalSection__CriticalSection__005b71d0, packageRead, &__dso_handle);
   return;
 }
 
@@ -6679,42 +6680,42 @@ void _GLOBAL__sub_I_Window(void)
   cWhite._4_4_ = 0x3f800000;
   cWhite._8_4_ = 0x3f800000;
   cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cWhite, &__dso_handle);
   cBlack._0_4_ = 0;
   cBlack._4_4_ = 0;
   cBlack._8_4_ = 0;
   cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlack, &__dso_handle);
   cOrange._0_4_ = 0x3f800000;
   cOrange._8_4_ = 0;
   cOrange._12_4_ = 0x3f800000;
   cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cOrange, &__dso_handle);
   cYellow._0_4_ = 0x3f800000;
   cYellow._4_4_ = 0x3f800000;
   cYellow._8_4_ = 0;
   cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cYellow, &__dso_handle);
   cRed._0_4_ = 0x3f800000;
   cRed._4_4_ = 0;
   cRed._8_4_ = 0;
   cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cRed, &__dso_handle);
   cGreen._0_4_ = 0;
   cGreen._4_4_ = 0x3f800000;
   cGreen._8_4_ = 0;
   cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cGreen, &__dso_handle);
   cBlue._0_4_ = 0;
   cBlue._4_4_ = 0;
   cBlue._8_4_ = 0x3f800000;
   cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cBlue, &__dso_handle);
   cNullColor._0_4_ = 0;
   cNullColor._4_4_ = 0;
   cNullColor._8_4_ = 0;
   cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, cNullColor, &__dso_handle);
   return;
 }
 
@@ -6743,7 +6744,7 @@ void UserAlert__GLOBAL_sub_I_fnMessageBoxRender(void)
   pendingCreation._88_8_ = 0;
   pendingCreation._96_8_ = 0;
   pendingCreation._104_8_ = 0;
-  __cxa_atexit(MessageCreate__MessageCreate,pendingCreation,&__dso_handle);
+  __cxa_atexit(MessageCreate__MessageCreate, pendingCreation, &__dso_handle);
   return;
 }
 
@@ -6763,42 +6764,42 @@ void ColorConversion__GLOBAL_sub_I_ConvertColorToColor8(void)
   ::cWhite._4_4_ = 0x3f800000;
   ::cWhite._8_4_ = 0x3f800000;
   ::cWhite._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cWhite,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cWhite, &__dso_handle);
   ::cBlack._0_4_ = 0;
   ::cBlack._4_4_ = 0;
   ::cBlack._8_4_ = 0;
   ::cBlack._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlack,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlack, &__dso_handle);
   ::cOrange._0_4_ = 0x3f800000;
   ::cOrange._8_4_ = 0;
   ::cOrange._12_4_ = 0x3f800000;
   ::cOrange._4_4_ = 0x3f266666;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cOrange,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cOrange, &__dso_handle);
   ::cYellow._0_4_ = 0x3f800000;
   ::cYellow._4_4_ = 0x3f800000;
   ::cYellow._8_4_ = 0;
   ::cYellow._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cYellow,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cYellow, &__dso_handle);
   ::cRed._0_4_ = 0x3f800000;
   ::cRed._4_4_ = 0;
   ::cRed._8_4_ = 0;
   ::cRed._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cRed,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cRed, &__dso_handle);
   ::cGreen._0_4_ = 0;
   ::cGreen._4_4_ = 0x3f800000;
   ::cGreen._8_4_ = 0;
   ::cGreen._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cGreen,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cGreen, &__dso_handle);
   ::cBlue._0_4_ = 0;
   ::cBlue._4_4_ = 0;
   ::cBlue._8_4_ = 0x3f800000;
   ::cBlue._12_4_ = 0x3f800000;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cBlue,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cBlue, &__dso_handle);
   ::cNullColor._0_4_ = 0;
   ::cNullColor._4_4_ = 0;
   ::cNullColor._8_4_ = 0;
   ::cNullColor._12_4_ = 0;
-  __cxa_atexit(ColorTemplate_float__ColorTemplate,::cNullColor,&__dso_handle);
+  __cxa_atexit(ColorTemplate_float__ColorTemplate, ::cNullColor, &__dso_handle);
   return;
 }
 
@@ -6808,16 +6809,16 @@ void ColorConversion__GLOBAL_sub_I_ConvertColorToColor8(void)
  * Calls: `main`
  * Called by: (none)
  */
-void processEntry _start(uint64_t arg1,uint64_t arg2)
+void processEntry _start(uint64_t arg1, uint64_t arg2)
 
 {
-  uint8_t auStack_8 [8];
-  
-  __libc_start_main(main,arg2,&stack0x00000008,__libc_csu_init,__libc_csu_fini,arg1,auStack_8)
-  ;
+  uint8_t auStack_8[8];
+
+  __libc_start_main(main, arg2, &stack0x00000008, __libc_csu_init, __libc_csu_fini, arg1,
+                    auStack_8);
   do {
-                    /* WARNING: Do nothing block with infinite loop */
-  } while( true );
+    /* WARNING: Do nothing block with infinite loop */
+  } while (true);
 }
 
 /* ======================================================================
@@ -6843,7 +6844,7 @@ void call_gmon_start(void)
  */
 /* WARNING: Removing unreachable block (ram,0x00461280) */
 
-uint64_t __do_global_dtors_aux(uint64_t arg1,uint64_t arg2,uint64_t arg3)
+uint64_t __do_global_dtors_aux(uint64_t arg1, uint64_t arg2, uint64_t arg3)
 
 {
   if (completed_5889 == '\0') {
@@ -6948,7 +6949,7 @@ uint __thiscall TileLevelLightMap__getNumLights(TileLevelLightMap *this)
 {
   uint uVar1;
   uint uVar2;
-  
+
   uVar2 = (*(int *)(this + 0x28) != 0) + 1;
   if (*(int *)(this + 0x68) == 0) {
     uVar2 = (uint)(*(int *)(this + 0x28) != 0);
@@ -6997,13 +6998,13 @@ uint __thiscall TileLevelLightMap__getNumLights(TileLevelLightMap *this)
  */
 /* MeatBoyCharactor__getRenderPos() */
 
-MeatBoyCharactor * __thiscall MeatBoyCharactor__getRenderPos(MeatBoyCharactor *this)
+MeatBoyCharactor *__thiscall MeatBoyCharactor__getRenderPos(MeatBoyCharactor *this)
 
 {
   if (*(int *)(*(long *)(this + 0xa38) + 0x2c8) != 1) {
-    return (MeatBoyCharactor *)
-           (*(long *)(*(long *)(this + 0x7f0) + (long)*(int *)(*(long *)(this + 0xa38) + 0x3c) * 8)
-           + 0x868);
+    return (MeatBoyCharactor *)(*(long *)(*(long *)(this + 0x7f0) +
+                                          (long)*(int *)(*(long *)(this + 0xa38) + 0x3c) * 8) +
+                                0x868);
   }
   return this + 0x868;
 }
@@ -7076,9 +7077,10 @@ uint64_t SMBEditor__getCurrAnimal(void)
    SMBPortalLevel*)>(SMBPortalLevel**, SMBPortalLevel**, bool (*)(SMBPortalLevel*, SMBPortalLevel*))
    [clone .constprop.34] */
 
-void std__insertion_sort_SMBPortalLevel,bool(*)(SMBPortalLevel*,SMBPortalLevel*)>
-               (SMBPortalLevel **arg1,SMBPortalLevel **arg2,
-               _func_bool_SMBPortalLevel_ptr_SMBPortalLevel_ptr *arg3)
+void std__insertion_sort_SMBPortalLevel,
+    bool (*)(SMBPortalLevel *, SMBPortalLevel *) >
+        (SMBPortalLevel * *arg1, SMBPortalLevel **arg2,
+         _func_bool_SMBPortalLevel_ptr_SMBPortalLevel_ptr *arg3)
 
 {
   SMBPortalLevel *pSVar1;
@@ -7089,13 +7091,14 @@ void std__insertion_sort_SMBPortalLevel,bool(*)(SMBPortalLevel*,SMBPortalLevel*)
   SMBPortalLevel **ppSVar6;
   SMBPortalLevel **ppSVar7;
   bool bVar8;
-  
+
   if ((arg1 != arg2) && (ppSVar6 = arg1 + 1, arg2 != ppSVar6)) {
     ppSVar7 = arg1 + 2;
     do {
-      while( true ) {
+      while (true) {
         pSVar1 = *ppSVar6;
-        if (*(float *)(pSVar1 + 0x74) < *(float *)(*arg1 + 0x74)) break;
+        if (*(float *)(pSVar1 + 0x74) < *(float *)(*arg1 + 0x74))
+          break;
         pSVar5 = ppSVar6[-1];
         ppSVar3 = ppSVar6;
         if (*(float *)(pSVar1 + 0x74) < *(float *)(pSVar5 + 0x74)) {
@@ -7107,8 +7110,7 @@ void std__insertion_sort_SMBPortalLevel,bool(*)(SMBPortalLevel*,SMBPortalLevel*)
           } while (*(float *)(pSVar1 + 0x74) <= *(float *)(pSVar5 + 0x74) &&
                    *(float *)(pSVar5 + 0x74) != *(float *)(pSVar1 + 0x74));
           *ppSVar2 = pSVar1;
-        }
-        else {
+        } else {
           *ppSVar6 = pSVar1;
         }
         ppSVar6 = ppSVar6 + 1;
@@ -7120,7 +7122,7 @@ void std__insertion_sort_SMBPortalLevel,bool(*)(SMBPortalLevel*,SMBPortalLevel*)
       }
       lVar4 = (long)ppSVar6 - (long)arg1 >> 3;
       if (lVar4 != 0) {
-        memmove(ppSVar7 + -lVar4,arg1,lVar4 * 8);
+        memmove(ppSVar7 + -lVar4, arg1, lVar4 * 8);
       }
       ppSVar6 = ppSVar6 + 1;
       bVar8 = arg2 != ppSVar7;
@@ -7142,10 +7144,10 @@ void std__insertion_sort_SMBPortalLevel,bool(*)(SMBPortalLevel*,SMBPortalLevel*)
    SMBPortalLevel*)>(SMBPortalLevel**, long, long, SMBPortalLevel*, bool (*)(SMBPortalLevel*,
    SMBPortalLevel*)) [clone .constprop.37] */
 
-void std::
-     __adjust_heap<SMBPortalLevel**,long,SMBPortalLevel*,bool(*)(SMBPortalLevel*,SMBPortalLevel*)>
-               (SMBPortalLevel **arg1,long arg2,long arg3,SMBPortalLevel *arg4,
-               _func_bool_SMBPortalLevel_ptr_SMBPortalLevel_ptr *arg5)
+void std::__adjust_heap<SMBPortalLevel **, long, SMBPortalLevel *,
+                        bool (*)(SMBPortalLevel *, SMBPortalLevel *)>(
+    SMBPortalLevel **arg1, long arg2, long arg3, SMBPortalLevel *arg4,
+    _func_bool_SMBPortalLevel_ptr_SMBPortalLevel_ptr *arg5)
 
 {
   float fVar1;
@@ -7155,7 +7157,7 @@ void std::
   long lVar5;
   SMBPortalLevel **ppSVar6;
   SMBPortalLevel *pSVar7;
-  
+
   ppSVar6 = arg1 + arg2;
   lVar2 = arg2;
   while (lVar2 < (arg3 + -1) / 2) {
@@ -7186,10 +7188,11 @@ void std::
       *ppSVar6 = arg4;
       return;
     }
-    while( true ) {
+    while (true) {
       ppSVar6 = arg1 + lVar5;
       arg1[lVar2] = pSVar7;
-      if (lVar5 <= arg2) break;
+      if (lVar5 <= arg2)
+        break;
       lVar3 = (lVar5 + -1) / 2;
       pSVar7 = arg1[lVar3];
       lVar2 = lVar5;
@@ -7216,9 +7219,10 @@ void std::
    SMBPortalLevel*)>(SMBPortalLevel**, SMBPortalLevel**, long, bool (*)(SMBPortalLevel*,
    SMBPortalLevel*)) [clone .constprop.35] */
 
-void std__introsort_loop_SMBPortalLevel,long,bool(*)(SMBPortalLevel*,SMBPortalLevel*)>
-               (SMBPortalLevel **arg1,SMBPortalLevel **arg2,long arg3,
-               _func_bool_SMBPortalLevel_ptr_SMBPortalLevel_ptr *arg4)
+void std__introsort_loop_SMBPortalLevel, long,
+    bool (*)(SMBPortalLevel *, SMBPortalLevel *) >
+        (SMBPortalLevel * *arg1, SMBPortalLevel **arg2, long arg3,
+         _func_bool_SMBPortalLevel_ptr_SMBPortalLevel_ptr *arg4)
 
 {
   SMBPortalLevel **ppSVar1;
@@ -7233,23 +7237,26 @@ void std__introsort_loop_SMBPortalLevel,long,bool(*)(SMBPortalLevel*,SMBPortalLe
   long lVar9;
   float fVar10;
   float fVar11;
-  
+
   lVar5 = (long)arg2 - (long)arg1;
   if (0x87 < lVar5) {
     ppSVar1 = arg1 + 1;
     do {
       if (arg3 == 0) {
         for (lVar9 = (lVar5 >> 3) + -2 >> 1;
-            __adjust_heap<SMBPortalLevel**,long,SMBPortalLevel*,bool(*)(SMBPortalLevel*,SMBPortalLevel*)>
-                      (arg1,lVar9,lVar5 >> 3,arg1[lVar9],in_R8), lVar9 != 0;
-            lVar9 = lVar9 + -1) {
+             __adjust_heap<SMBPortalLevel **, long, SMBPortalLevel *,
+                           bool (*)(SMBPortalLevel *, SMBPortalLevel *)>(arg1, lVar9, lVar5 >> 3,
+                                                                         arg1[lVar9], in_R8),
+            lVar9 != 0;
+             lVar9 = lVar9 + -1) {
         }
         do {
           arg2 = arg2 + -1;
           pSVar7 = *arg2;
           *arg2 = *arg1;
-          __adjust_heap<SMBPortalLevel**,long,SMBPortalLevel*,bool(*)(SMBPortalLevel*,SMBPortalLevel*)>
-                    (arg1,0,(long)arg2 - (long)arg1 >> 3,pSVar7,in_R8);
+          __adjust_heap<SMBPortalLevel **, long, SMBPortalLevel *,
+                        bool (*)(SMBPortalLevel *, SMBPortalLevel *)>(
+              arg1, 0, (long)arg2 - (long)arg1 >> 3, pSVar7, in_R8);
         } while (0xf < (long)arg2 - (long)arg1);
         return;
       }
@@ -7264,31 +7271,30 @@ void std__introsort_loop_SMBPortalLevel,long,bool(*)(SMBPortalLevel*,SMBPortalLe
       ppSVar8 = ppSVar1;
       if (fVar2 <= fVar10) {
         if (fVar11 <= fVar10) {
-          if (fVar2 < fVar11) goto LAB_00505b0c;
+          if (fVar2 < fVar11)
+            goto LAB_00505b0c;
           goto LAB_00505a58;
         }
-      }
-      else if (fVar11 <= fVar2) {
+      } else if (fVar11 <= fVar2) {
         if (fVar10 < fVar11) {
-LAB_00505b0c:
+        LAB_00505b0c:
           *arg1 = pSVar7;
           arg2[-1] = pSVar3;
           fVar11 = *(float *)(pSVar3 + 0x74);
           fVar10 = *(float *)(*arg1 + 0x74);
           pSVar7 = pSVar3;
         }
-      }
-      else {
-LAB_00505a58:
+      } else {
+      LAB_00505a58:
         *arg1 = pSVar4;
         arg1[lVar5 >> 4] = pSVar3;
         fVar10 = *(float *)(*arg1 + 0x74);
         fVar11 = *(float *)(arg2[-1] + 0x74);
         pSVar7 = arg2[-1];
       }
-      while( true ) {
+      while (true) {
         while (pSVar3 = *ppSVar8,
-              *(float *)(pSVar3 + 0x74) <= fVar10 && fVar10 != *(float *)(pSVar3 + 0x74)) {
+               *(float *)(pSVar3 + 0x74) <= fVar10 && fVar10 != *(float *)(pSVar3 + 0x74)) {
           ppSVar8 = ppSVar8 + 1;
         }
         ppSVar6 = ppSVar6 + -1;
@@ -7297,7 +7303,8 @@ LAB_00505a58:
           pSVar7 = *ppSVar6;
           fVar11 = *(float *)(pSVar7 + 0x74);
         }
-        if (ppSVar6 <= ppSVar8) break;
+        if (ppSVar6 <= ppSVar8)
+          break;
         *ppSVar8 = pSVar7;
         *ppSVar6 = pSVar3;
         fVar10 = *(float *)(*arg1 + 0x74);
@@ -7305,9 +7312,8 @@ LAB_00505a58:
         pSVar7 = ppSVar6[-1];
         ppSVar8 = ppSVar8 + 1;
       }
-      __introsort_loop<SMBPortalLevel**,long,bool(*)(SMBPortalLevel*,SMBPortalLevel*)>
-                (ppSVar8,arg2,arg3,(_func_bool_SMBPortalLevel_ptr_SMBPortalLevel_ptr *)pSVar3)
-      ;
+      __introsort_loop<SMBPortalLevel **, long, bool (*)(SMBPortalLevel *, SMBPortalLevel *)>(
+          ppSVar8, arg2, arg3, (_func_bool_SMBPortalLevel_ptr_SMBPortalLevel_ptr *)pSVar3);
       lVar5 = (long)ppSVar8 - (long)arg1;
       arg2 = ppSVar8;
     } while (0x87 < lVar5);
@@ -7324,12 +7330,12 @@ LAB_00505a58:
  */
 /* GSuperMeatBoy__getChar(int) */
 
-uint64_t __thiscall GSuperMeatBoy__getChar(GSuperMeatBoy *this,int arg1)
+uint64_t __thiscall GSuperMeatBoy__getChar(GSuperMeatBoy *this, int arg1)
 
 {
   if ((*(int *)(pReplay + 0x2c8) != 1) && (arg1 != 1)) {
-    return *(uint64_t *)
-            (*(long *)(*(long *)(this + 0x48) + 0x7f0) + (long)*(int *)(pReplay + 0x3c) * 8);
+    return *(uint64_t *)(*(long *)(*(long *)(this + 0x48) + 0x7f0) +
+                         (long)*(int *)(pReplay + 0x3c) * 8);
   }
   return *(uint64_t *)(this + 0x48);
 }
@@ -7340,7 +7346,7 @@ uint64_t __thiscall GSuperMeatBoy__getChar(GSuperMeatBoy *this,int arg1)
  * Calls: `failf`, `find_define`, `memcpy`, `preprocessor_lexer`
  * Called by: (none)
  */
-int * _handle_pp_ifdef(long arg1,int arg2)
+int *_handle_pp_ifdef(long arg1, int arg2)
 
 {
   void *__dest;
@@ -7356,15 +7362,14 @@ int * _handle_pp_ifdef(long arg1,int arg2)
   char *pcVar9;
   uint8_t *puVar10;
   uint64_t uStack_50;
-  uint8_t auStack_48 [8];
-  long local_40 [2];
-  
+  uint8_t auStack_48[8];
+  long local_40[2];
+
   lVar1 = *(long *)(arg1 + 0x120);
   if (*(int *)(lVar1 + 0x28) == 0) {
     uStack_50 = 0x539a58;
     iVar5 = preprocessor_lexer(lVar1);
-  }
-  else {
+  } else {
     iVar5 = *(int *)(lVar1 + 0x24);
     *(uint32_t *)(lVar1 + 0x28) = 0;
   }
@@ -7376,13 +7381,12 @@ int * _handle_pp_ifdef(long arg1,int arg2)
     lVar6 = -((ulong)(*(int *)(lVar1 + 0x20) + 1) + 0x1e & 0xfffffffffffffff0);
     __dest = (void *)((long)local_40 + lVar6);
     *(uint64_t *)(auStack_48 + lVar6 + -8) = 0x539939;
-    memcpy(__dest,__src,(ulong)uVar4);
-    *(uint8_t *)((long)__dest + (ulong)*(uint *)(lVar1 + 0x20)) = 0;
+    memcpy(__dest, __src, (ulong)uVar4);
+    *(uint8_t *)((long)__dest + (ulong) * (uint *)(lVar1 + 0x20)) = 0;
     if (*(int *)(lVar1 + 0x28) == 0) {
       *(uint64_t *)(auStack_48 + lVar6 + -8) = 0x539a78;
       iVar5 = preprocessor_lexer(lVar1);
-    }
-    else {
+    } else {
       iVar5 = *(int *)(lVar1 + 0x24);
       *(uint32_t *)(lVar1 + 0x28) = 0;
     }
@@ -7393,13 +7397,12 @@ int * _handle_pp_ifdef(long arg1,int arg2)
         uVar2 = *(uint64_t *)(arg1 + 0x970);
         pcVar3 = *(code **)(arg1 + 0x960);
         *(uint64_t *)(auStack_48 + lVar6 + -8) = 0x539a93;
-        piVar7 = (int *)(*pcVar3)(0x18,uVar2);
+        piVar7 = (int *)(*pcVar3)(0x18, uVar2);
         if (piVar7 == (int *)0x0) {
           *(uint32_t *)(arg1 + 4) = 1;
           return (int *)0x0;
         }
-      }
-      else {
+      } else {
         *(uint64_t *)(arg1 + 0x118) = *(uint64_t *)(piVar7 + 4);
       }
       piVar7[0] = 0;
@@ -7410,7 +7413,7 @@ int * _handle_pp_ifdef(long arg1,int arg2)
       piVar7[5] = 0;
       local_40[0] = *(long *)(lVar1 + 0x50);
       *(uint64_t *)(auStack_48 + lVar6 + -8) = 0x5399f5;
-      lVar6 = find_define(arg1,__dest);
+      lVar6 = find_define(arg1, __dest);
       uVar4 = (uint)(lVar6 != 0);
       if (arg2 != 0x123) {
         uVar4 = lVar6 != 0 ^ 1;
@@ -7435,7 +7438,7 @@ int * _handle_pp_ifdef(long arg1,int arg2)
     }
   }
   *(uint64_t *)(puVar10 + -8) = 0x539994;
-  failf(arg1,"%s",pcVar9);
+  failf(arg1, "%s", pcVar9);
   return (int *)0x0;
 }
 
@@ -7545,7 +7548,7 @@ void _tr_init(long arg1)
 
 {
   long lVar1;
-  
+
   *(uint8_t **)(arg1 + 0xb58) = static_l_desc;
   *(uint8_t **)(arg1 + 0xb70) = static_d_desc;
   *(uint8_t **)(arg1 + 0xb88) = static_bl_desc;
@@ -7584,7 +7587,7 @@ void _tr_init(long arg1)
  * Calls: (none)
  * Called by: (none)
  */
-void _tr_stored_block(long arg1,uint8_t *arg2,int arg3,uint arg4)
+void _tr_stored_block(long arg1, uint8_t *arg2, int arg3, uint arg4)
 
 {
   byte bVar1;
@@ -7596,7 +7599,7 @@ void _tr_stored_block(long arg1,uint8_t *arg2,int arg3,uint arg4)
   uint8_t *puVar7;
   uint uVar8;
   ulong uVar9;
-  
+
   iVar5 = *(int *)(arg1 + 0x1724);
   if (iVar5 < 0xe) {
     uVar3 = (ushort)(arg4 << ((byte)iVar5 & 0x1f)) | *(ushort *)(arg1 + 0x1720);
@@ -7604,14 +7607,12 @@ void _tr_stored_block(long arg1,uint8_t *arg2,int arg3,uint arg4)
     iVar5 = iVar5 + 3;
     *(int *)(arg1 + 0x1724) = iVar5;
     *(ushort *)(arg1 + 0x1720) = uVar3;
-  }
-  else {
+  } else {
     uVar8 = *(uint *)(arg1 + 0x28);
     uVar3 = (ushort)(arg4 << ((byte)iVar5 & 0x1f)) | *(ushort *)(arg1 + 0x1720);
     *(ushort *)(arg1 + 0x1720) = uVar3;
     *(char *)(*(long *)(arg1 + 0x10) + (ulong)uVar8) = (char)uVar3;
-    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar8 + 1)) =
-         *(uint8_t *)(arg1 + 0x1721);
+    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar8 + 1)) = *(uint8_t *)(arg1 + 0x1721);
     *(uint *)(arg1 + 0x28) = uVar8 + 2;
     uVar8 = (int)(arg4 & 0xffff) >> (0x10U - (char)*(int *)(arg1 + 0x1724) & 0x1f);
     iVar5 = *(int *)(arg1 + 0x1724) + -0xd;
@@ -7624,12 +7625,10 @@ void _tr_stored_block(long arg1,uint8_t *arg2,int arg3,uint arg4)
       *(char *)(*(long *)(arg1 + 0x10) + (ulong)uVar4) = (char)uVar8;
       *(uint *)(arg1 + 0x28) = uVar4 + 1;
     }
-  }
-  else {
+  } else {
     uVar4 = *(uint *)(arg1 + 0x28);
     *(char *)(*(long *)(arg1 + 0x10) + (ulong)uVar4) = (char)uVar8;
-    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar4 + 1)) =
-         *(uint8_t *)(arg1 + 0x1721);
+    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar4 + 1)) = *(uint8_t *)(arg1 + 0x1721);
     *(uint *)(arg1 + 0x28) = uVar4 + 2;
   }
   uVar8 = *(uint *)(arg1 + 0x28);
@@ -7646,13 +7645,14 @@ void _tr_stored_block(long arg1,uint8_t *arg2,int arg3,uint arg4)
   if (arg3 != 0) {
     puVar2 = arg2 + 1;
     puVar7 = arg2;
-    while( true ) {
+    while (true) {
       puVar6 = puVar2;
       uVar9 = (ulong)uVar4;
       uVar4 = uVar4 + 1;
       *(uint8_t *)(*(long *)(arg1 + 0x10) + uVar9) = *puVar7;
       *(uint *)(arg1 + 0x28) = uVar4;
-      if (puVar6 == arg2 + 1 + (arg3 - 1)) break;
+      if (puVar6 == arg2 + 1 + (arg3 - 1))
+        break;
       puVar2 = puVar6 + 1;
       puVar7 = puVar6;
     }
@@ -7675,7 +7675,7 @@ void _tr_align(long arg1)
   ushort uVar4;
   int iVar5;
   int iVar6;
-  
+
   iVar5 = *(int *)(arg1 + 0x1724);
   if (iVar5 < 0xe) {
     uVar4 = (ushort)(2 << ((byte)iVar5 & 0x1f)) | *(ushort *)(arg1 + 0x1720);
@@ -7683,14 +7683,12 @@ void _tr_align(long arg1)
     iVar5 = iVar5 + 3;
     *(int *)(arg1 + 0x1724) = iVar5;
     *(ushort *)(arg1 + 0x1720) = uVar4;
-  }
-  else {
+  } else {
     uVar3 = *(uint *)(arg1 + 0x28);
     uVar4 = (ushort)(2 << ((byte)iVar5 & 0x1f)) | *(ushort *)(arg1 + 0x1720);
     *(ushort *)(arg1 + 0x1720) = uVar4;
     *(char *)(*(long *)(arg1 + 0x10) + (ulong)uVar3) = (char)uVar4;
-    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar3 + 1)) =
-         *(uint8_t *)(arg1 + 0x1721);
+    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar3 + 1)) = *(uint8_t *)(arg1 + 0x1721);
     *(uint *)(arg1 + 0x28) = uVar3 + 2;
     uVar3 = 2 >> (0x10U - (char)*(int *)(arg1 + 0x1724) & 0x1f);
     *(short *)(arg1 + 0x1720) = (short)uVar3;
@@ -7700,72 +7698,71 @@ void _tr_align(long arg1)
   if (iVar5 < 10) {
     iVar5 = iVar5 + 7;
     *(int *)(arg1 + 0x1724) = iVar5;
-    if (iVar5 != 0x10) goto LAB_0056ed1f;
-LAB_0056ee22:
+    if (iVar5 != 0x10)
+      goto LAB_0056ed1f;
+  LAB_0056ee22:
     uVar1 = *(uint *)(arg1 + 0x28);
     *(char *)(*(long *)(arg1 + 0x10) + (ulong)uVar1) = (char)uVar3;
-    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar1 + 1)) =
-         *(uint8_t *)(arg1 + 0x1721);
+    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar1 + 1)) = *(uint8_t *)(arg1 + 0x1721);
     *(uint *)(arg1 + 0x28) = uVar1 + 2;
     uVar3 = 0;
     *(uint16_t *)(arg1 + 0x1720) = 0;
     *(uint32_t *)(arg1 + 0x1724) = 0;
     iVar5 = 0;
-  }
-  else {
+  } else {
     uVar1 = *(uint *)(arg1 + 0x28);
     *(char *)(*(long *)(arg1 + 0x10) + (ulong)uVar1) = (char)uVar3;
-    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar1 + 1)) =
-         *(uint8_t *)(arg1 + 0x1721);
+    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar1 + 1)) = *(uint8_t *)(arg1 + 0x1721);
     uVar3 = 0;
     *(uint *)(arg1 + 0x28) = uVar1 + 2;
     *(uint16_t *)(arg1 + 0x1720) = 0;
     iVar5 = *(int *)(arg1 + 0x1724) + -9;
     *(int *)(arg1 + 0x1724) = iVar5;
-    if (iVar5 == 0x10) goto LAB_0056ee22;
-LAB_0056ed1f:
+    if (iVar5 == 0x10)
+      goto LAB_0056ee22;
+  LAB_0056ed1f:
     if (7 < iVar5) {
       uVar1 = *(uint *)(arg1 + 0x28);
       *(char *)(*(long *)(arg1 + 0x10) + (ulong)uVar1) = (char)uVar3;
-      uVar3 = (uint)*(byte *)(arg1 + 0x1721);
+      uVar3 = (uint) * (byte *)(arg1 + 0x1721);
       *(uint *)(arg1 + 0x28) = uVar1 + 1;
       iVar5 = *(int *)(arg1 + 0x1724) + -8;
       *(int *)(arg1 + 0x1724) = iVar5;
-      *(ushort *)(arg1 + 0x1720) = (ushort)*(byte *)(arg1 + 0x1721);
+      *(ushort *)(arg1 + 0x1720) = (ushort) * (byte *)(arg1 + 0x1721);
     }
   }
-  if (8 < (*(int *)(arg1 + 0x171c) + 0xb) - iVar5) goto LAB_0056edff;
+  if (8 < (*(int *)(arg1 + 0x171c) + 0xb) - iVar5)
+    goto LAB_0056edff;
   if (iVar5 < 0xe) {
     iVar6 = iVar5 + 3;
     uVar3 = uVar3 | 2 << ((byte)iVar5 & 0x1f);
     *(short *)(arg1 + 0x1720) = (short)uVar3;
     *(int *)(arg1 + 0x1724) = iVar6;
-    if (iVar6 < 10) goto LAB_0056eeef;
-LAB_0056ed92:
+    if (iVar6 < 10)
+      goto LAB_0056eeef;
+  LAB_0056ed92:
     uVar1 = *(uint *)(arg1 + 0x28);
     *(char *)(*(long *)(arg1 + 0x10) + (ulong)uVar1) = (char)uVar3;
-    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar1 + 1)) =
-         *(uint8_t *)(arg1 + 0x1721);
+    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar1 + 1)) = *(uint8_t *)(arg1 + 0x1721);
     *(uint *)(arg1 + 0x28) = uVar1 + 2;
     uVar2 = 0;
     *(uint16_t *)(arg1 + 0x1720) = 0;
     iVar6 = *(int *)(arg1 + 0x1724) + -9;
     *(int *)(arg1 + 0x1724) = iVar6;
-  }
-  else {
+  } else {
     uVar1 = *(uint *)(arg1 + 0x28);
     uVar3 = uVar3 | 2 << ((byte)iVar5 & 0x1f);
     *(short *)(arg1 + 0x1720) = (short)uVar3;
     *(char *)(*(long *)(arg1 + 0x10) + (ulong)uVar1) = (char)uVar3;
-    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar1 + 1)) =
-         *(uint8_t *)(arg1 + 0x1721);
+    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar1 + 1)) = *(uint8_t *)(arg1 + 0x1721);
     *(uint *)(arg1 + 0x28) = uVar1 + 2;
     iVar6 = *(int *)(arg1 + 0x1724) + -0xd;
     uVar3 = 2 >> (0x10U - (char)*(int *)(arg1 + 0x1724) & 0x1f);
     *(int *)(arg1 + 0x1724) = iVar6;
     *(short *)(arg1 + 0x1720) = (short)uVar3;
-    if (9 < iVar6) goto LAB_0056ed92;
-LAB_0056eeef:
+    if (9 < iVar6)
+      goto LAB_0056ed92;
+  LAB_0056eeef:
     uVar2 = (uint8_t)uVar3;
     iVar6 = iVar6 + 7;
     *(int *)(arg1 + 0x1724) = iVar6;
@@ -7773,8 +7770,7 @@ LAB_0056eeef:
   if (iVar6 == 0x10) {
     uVar3 = *(uint *)(arg1 + 0x28);
     *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)uVar3) = uVar2;
-    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar3 + 1)) =
-         *(uint8_t *)(arg1 + 0x1721);
+    *(uint8_t *)(*(long *)(arg1 + 0x10) + (ulong)(uVar3 + 1)) = *(uint8_t *)(arg1 + 0x1721);
     *(uint *)(arg1 + 0x28) = uVar3 + 2;
     *(uint16_t *)(arg1 + 0x1720) = 0;
     *(uint32_t *)(arg1 + 0x1724) = 0;
@@ -7799,7 +7795,7 @@ LAB_0056edff:
  * Calls: `build_tree`, `compress_block`, `scan_tree`, `send_tree`
  * Called by: (none)
  */
-void _tr_flush_block(long *arg1,long arg2,long arg3,int arg4)
+void _tr_flush_block(long *arg1, long arg2, long arg3, int arg4)
 
 {
   uint uVar1;
@@ -7818,22 +7814,21 @@ void _tr_flush_block(long *arg1,long arg2,long arg3,int arg4)
   ulong uVar15;
   uint uVar16;
   uint32_t uVar13;
-  
+
   if (*(int *)((long)arg1 + 0xb4) < 1) {
     uVar8 = arg3 + 5;
     iVar14 = 0;
     uVar15 = uVar8;
-  }
-  else {
+  } else {
     if ((arg3 != 0) && (*(int *)(*arg1 + 0x58) == 2)) {
       uVar12 = 0;
       uVar13 = 0;
       if ((((*(short *)((long)arg1 + 0xc4) == 0) &&
-           (((((short)arg1[0x19] == 0 && (*(short *)((long)arg1 + 0xcc) == 0)) &&
-             (uVar12 = uVar13, (short)arg1[0x1a] == 0)) &&
-            ((*(short *)((long)arg1 + 0xd4) == 0 && ((short)arg1[0x1b] == 0)))))) &&
-          (*(short *)((long)arg1 + 0xdc) == 0)) &&
-         (((short)arg1[0x1c] == 0 && (*(short *)((long)arg1 + 0xe4) == 0)))) {
+            (((((short)arg1[0x19] == 0 && (*(short *)((long)arg1 + 0xcc) == 0)) &&
+               (uVar12 = uVar13, (short)arg1[0x1a] == 0)) &&
+              ((*(short *)((long)arg1 + 0xd4) == 0 && ((short)arg1[0x1b] == 0)))))) &&
+           (*(short *)((long)arg1 + 0xdc) == 0)) &&
+          (((short)arg1[0x1c] == 0 && (*(short *)((long)arg1 + 0xe4) == 0)))) {
         psVar11 = (short *)((long)arg1 + 0xfc);
         iVar14 = 0xe;
         do {
@@ -7846,14 +7841,14 @@ void _tr_flush_block(long *arg1,long arg2,long arg3,int arg4)
         } while (iVar14 != 0x20);
         uVar12 = 1;
       }
-LAB_0056f4bd:
+    LAB_0056f4bd:
       *(uint32_t *)(*arg1 + 0x58) = uVar12;
     }
-    build_tree(arg1,arg1 + 0x169);
-    build_tree(arg1,arg1 + 0x16c);
-    scan_tree(arg1,(long)arg1 + 0xc4,(int)arg1[0x16a]);
-    scan_tree(arg1,arg1 + 0x137,(int)arg1[0x16d]);
-    build_tree(arg1,arg1 + 0x16f);
+    build_tree(arg1, arg1 + 0x169);
+    build_tree(arg1, arg1 + 0x16c);
+    scan_tree(arg1, (long)arg1 + 0xc4, (int)arg1[0x16a]);
+    scan_tree(arg1, arg1 + 0x137, (int)arg1[0x16d]);
+    build_tree(arg1, arg1 + 0x16f);
     if (*(short *)((long)arg1 + 0xaea) == 0) {
       if (*(short *)((long)arg1 + 0xab2) != 0) {
         iVar14 = 0x11;
@@ -7917,10 +7912,9 @@ LAB_0056f4bd:
         iVar14 = 3;
         goto LAB_0056f677;
       }
-    }
-    else {
+    } else {
       iVar14 = 0x12;
-LAB_0056f677:
+    LAB_0056f677:
       lVar7 = (long)(iVar14 * 3 + 0x11);
     }
     lVar3 = arg1[0x2e1];
@@ -7932,7 +7926,7 @@ LAB_0056f677:
     }
   }
   if ((arg3 + 4U <= uVar8) && (arg2 != 0)) {
-    _tr_stored_block(arg1,arg2,arg3,arg4);
+    _tr_stored_block(arg1, arg2, arg3, arg4);
     goto LAB_0056f352;
   }
   if ((uVar15 == uVar8) || ((int)arg1[0x17] == 4)) {
@@ -7940,10 +7934,9 @@ LAB_0056f677:
     uVar5 = arg4 + 2;
     if (iVar14 < 0xe) {
       *(ushort *)(arg1 + 0x2e4) =
-           *(ushort *)(arg1 + 0x2e4) | (ushort)(uVar5 << ((byte)iVar14 & 0x1f));
+          *(ushort *)(arg1 + 0x2e4) | (ushort)(uVar5 << ((byte)iVar14 & 0x1f));
       *(int *)((long)arg1 + 0x1724) = iVar14 + 3;
-    }
-    else {
+    } else {
       uVar1 = *(uint *)(arg1 + 5);
       uVar4 = (ushort)(uVar5 << ((byte)iVar14 & 0x1f)) | *(ushort *)(arg1 + 0x2e4);
       *(ushort *)(arg1 + 0x2e4) = uVar4;
@@ -7954,7 +7947,7 @@ LAB_0056f677:
       *(int *)((long)arg1 + 0x1724) = iVar14 + -0xd;
       *(short *)(arg1 + 0x2e4) = (short)((int)(uVar5 & 0xffff) >> (0x10U - (char)iVar14 & 0x1f));
     }
-    compress_block(arg1,static_ltree,static_dtree);
+    compress_block(arg1, static_ltree, static_dtree);
     goto LAB_0056f352;
   }
   iVar10 = *(int *)((long)arg1 + 0x1724);
@@ -7964,8 +7957,7 @@ LAB_0056f677:
     iVar10 = iVar10 + 3;
     *(int *)((long)arg1 + 0x1724) = iVar10;
     *(ushort *)(arg1 + 0x2e4) = uVar4;
-  }
-  else {
+  } else {
     uVar5 = *(uint *)(arg1 + 5);
     uVar4 = (ushort)(arg4 + 4U << ((byte)iVar10 & 0x1f)) | *(ushort *)(arg1 + 0x2e4);
     *(ushort *)(arg1 + 0x2e4) = uVar4;
@@ -7985,8 +7977,9 @@ LAB_0056f677:
     *(int *)((long)arg1 + 0x1724) = iVar6;
     uVar16 = uVar1 << ((byte)iVar6 & 0x1f);
     *(short *)(arg1 + 0x2e4) = (short)uVar5;
-    if (iVar6 < 0xc) goto LAB_0056f639;
-LAB_0056f1b8:
+    if (iVar6 < 0xc)
+      goto LAB_0056f639;
+  LAB_0056f1b8:
     uVar2 = *(uint *)(arg1 + 5);
     *(short *)(arg1 + 0x2e4) = (short)(uVar5 | uVar16);
     *(char *)(arg1[2] + (ulong)uVar2) = (char)(uVar5 | uVar16);
@@ -7996,14 +7989,14 @@ LAB_0056f1b8:
     iVar6 = *(int *)((long)arg1 + 0x1724) + -0xb;
     *(short *)(arg1 + 0x2e4) = (short)uVar5;
     *(int *)((long)arg1 + 0x1724) = iVar6;
-    if (0xc < iVar6) goto LAB_0056f216;
-LAB_0056f658:
+    if (0xc < iVar6)
+      goto LAB_0056f216;
+  LAB_0056f658:
     iVar10 = iVar6 + 4;
     uVar5 = iVar14 + -3 << ((byte)iVar6 & 0x1f) | uVar5;
     *(int *)((long)arg1 + 0x1724) = iVar10;
     *(short *)(arg1 + 0x2e4) = (short)uVar5;
-  }
-  else {
+  } else {
     uVar2 = *(uint *)(arg1 + 5);
     uVar5 = uVar5 | uVar16 << ((byte)iVar10 & 0x1f);
     *(short *)(arg1 + 0x2e4) = (short)uVar5;
@@ -8015,14 +8008,16 @@ LAB_0056f658:
     *(short *)(arg1 + 0x2e4) = (short)uVar5;
     uVar16 = uVar1 << ((byte)iVar6 & 0x1f);
     *(int *)((long)arg1 + 0x1724) = iVar6;
-    if (0xb < iVar6) goto LAB_0056f1b8;
-LAB_0056f639:
+    if (0xb < iVar6)
+      goto LAB_0056f1b8;
+  LAB_0056f639:
     iVar6 = iVar6 + 5;
     uVar5 = uVar5 | uVar16;
     *(short *)(arg1 + 0x2e4) = (short)uVar5;
     *(int *)((long)arg1 + 0x1724) = iVar6;
-    if (iVar6 < 0xd) goto LAB_0056f658;
-LAB_0056f216:
+    if (iVar6 < 0xd)
+      goto LAB_0056f658;
+  LAB_0056f216:
     uVar16 = *(uint *)(arg1 + 5);
     uVar5 = uVar5 | iVar14 - 3U << ((byte)iVar6 & 0x1f);
     *(short *)(arg1 + 0x2e4) = (short)uVar5;
@@ -8036,17 +8031,19 @@ LAB_0056f216:
   }
   iVar6 = 0;
   do {
-    while( true ) {
+    while (true) {
       lVar7 = (long)iVar6;
       bVar9 = (byte)iVar10;
-      if (0xd < iVar10) break;
+      if (0xd < iVar10)
+        break;
       iVar6 = iVar6 + 1;
       iVar10 = iVar10 + 3;
-      uVar5 = uVar5 | (uint)*(ushort *)((long)arg1 + (ulong)(byte)(&bl_order)[lVar7] * 4 + 0xaae)
-                      << (bVar9 & 0x1f);
+      uVar5 = uVar5 | (uint) * (ushort *)((long)arg1 + (ulong)(byte)(&bl_order)[lVar7] * 4 + 0xaae)
+                          << (bVar9 & 0x1f);
       *(int *)((long)arg1 + 0x1724) = iVar10;
       *(short *)(arg1 + 0x2e4) = (short)uVar5;
-      if (iVar14 < iVar6) goto LAB_0056f31e;
+      if (iVar14 < iVar6)
+        goto LAB_0056f31e;
     }
     uVar4 = *(ushort *)((long)arg1 + (ulong)(byte)(&bl_order)[lVar7] * 4 + 0xaae);
     uVar16 = *(uint *)(arg1 + 5);
@@ -8062,9 +8059,9 @@ LAB_0056f216:
     *(int *)((long)arg1 + 0x1724) = iVar10;
   } while (iVar6 <= iVar14);
 LAB_0056f31e:
-  send_tree(arg1,(long)arg1 + 0xc4);
-  send_tree(arg1,arg1 + 0x137,uVar1);
-  compress_block(arg1,(long)arg1 + 0xc4,arg1 + 0x137);
+  send_tree(arg1, (long)arg1 + 0xc4);
+  send_tree(arg1, arg1 + 0x137, uVar1);
+  compress_block(arg1, (long)arg1 + 0xc4, arg1 + 0x137);
 LAB_0056f352:
   lVar7 = 0;
   do {
@@ -8093,8 +8090,7 @@ LAB_0056f352:
         *(char *)(arg1[2] + (ulong)uVar5) = (char)(short)arg1[0x2e4];
         *(uint *)(arg1 + 5) = uVar5 + 1;
       }
-    }
-    else {
+    } else {
       uVar5 = *(uint *)(arg1 + 5);
       *(char *)(arg1[2] + (ulong)uVar5) = (char)(short)arg1[0x2e4];
       *(uint8_t *)(arg1[2] + (ulong)(uVar5 + 1)) = *(uint8_t *)((long)arg1 + 0x1721);
@@ -8112,22 +8108,21 @@ LAB_0056f352:
  * Calls: (none)
  * Called by: (none)
  */
-bool _tr_tally(long arg1,int arg2,uint arg3)
+bool _tr_tally(long arg1, int arg2, uint arg3)
 
 {
   short *psVar1;
   int iVar2;
   uint uVar3;
-  
-  *(short *)(*(long *)(arg1 + 0x1700) + (ulong)*(uint *)(arg1 + 0x16fc) * 2) = (short)arg2;
+
+  *(short *)(*(long *)(arg1 + 0x1700) + (ulong) * (uint *)(arg1 + 0x16fc) * 2) = (short)arg2;
   iVar2 = *(uint *)(arg1 + 0x16fc) + 1;
-  *(char *)(*(long *)(arg1 + 0x16f0) + (ulong)*(uint *)(arg1 + 0x16fc)) = (char)arg3;
+  *(char *)(*(long *)(arg1 + 0x16f0) + (ulong) * (uint *)(arg1 + 0x16fc)) = (char)arg3;
   *(int *)(arg1 + 0x16fc) = iVar2;
   if (arg2 == 0) {
     psVar1 = (short *)(arg1 + 0xc4 + (ulong)arg3 * 4);
     *psVar1 = *psVar1 + 1;
-  }
-  else {
+  } else {
     *(int *)(arg1 + 0x1718) = *(int *)(arg1 + 0x1718) + 1;
     uVar3 = arg2 - 1;
     psVar1 = (short *)(arg1 + 0x4c8 + (ulong)(byte)_length_code[arg3] * 4);
@@ -8190,10 +8185,10 @@ uint64_t SceneObject3D__getEditorProperties(EditableProperty *arg1)
  */
 /* TileLevel__getLevelLayer(tagTileLayerLevelType) */
 
-TileLevel * __thiscall TileLevel__getLevelLayer(TileLevel *this,uint32_t arg2)
+TileLevel *__thiscall TileLevel__getLevelLayer(TileLevel *this, uint32_t arg2)
 
 {
-  switch(arg2) {
+  switch (arg2) {
   default:
     return this + 0x1140;
   case 1:
@@ -8234,13 +8229,12 @@ void __tcf_0(void)
  */
 /* SceneObject2D__getTransformationMatrix() */
 
-Matrix4x4 * __thiscall SceneObject2D__getTransformationMatrix(SceneObject2D *this)
+Matrix4x4 *__thiscall SceneObject2D__getTransformationMatrix(SceneObject2D *this)
 
 {
   if (*(int *)(this + 0x9c) == 1) {
-    Matrix4x4__Transformation2DRot
-              ((Matrix4x4 *)(this + 8),(Vector2 *)(this + 0xd0),(float *)(this + 0xd8),
-               (Vector2 *)(this + 0xa0));
+    Matrix4x4__Transformation2DRot((Matrix4x4 *)(this + 8), (Vector2 *)(this + 0xd0),
+                                   (float *)(this + 0xd8), (Vector2 *)(this + 0xa0));
     *(uint32_t *)(this + 0x9c) = 0;
   }
   return (Matrix4x4 *)(this + 8);
@@ -8255,7 +8249,7 @@ Matrix4x4 * __thiscall SceneObject2D__getTransformationMatrix(SceneObject2D *thi
  */
 /* SceneObject3D__setVelocity(FPUVector const&) */
 
-void __thiscall SceneObject3D__setVelocity(SceneObject3D *this,FPUVector *arg1)
+void __thiscall SceneObject3D__setVelocity(SceneObject3D *this, FPUVector *arg1)
 
 {
   float fVar1;
@@ -8264,9 +8258,9 @@ void __thiscall SceneObject3D__setVelocity(SceneObject3D *this,FPUVector *arg1)
   float fVar4;
   float fVar5;
   float fVar6;
-  uint8_t auVar7 [16];
-  uint8_t auVar8 [16];
-  
+  uint8_t auVar7[16];
+  uint8_t auVar8[16];
+
   fVar1 = *(float *)arg1;
   *(float *)(this + 0xc0) = fVar1;
   fVar2 = *(float *)(arg1 + 4);
@@ -8292,13 +8286,13 @@ void __thiscall SceneObject3D__setVelocity(SceneObject3D *this,FPUVector *arg1)
     auVar8._0_4_ = fVar6;
     auVar8._8_4_ = fVar6;
     auVar8._12_4_ = fVar6;
-    auVar8 = divps(auVar7,auVar8);
+    auVar8 = divps(auVar7, auVar8);
     *(long *)(this + 0x100) = auVar8._0_8_;
     *(long *)(this + 0x108) = auVar8._8_8_;
     return;
   }
-  *(ulong *)(this + 0x100) = CONCAT44(fVar2,fVar1);
-  *(ulong *)(this + 0x108) = CONCAT44(fVar4,fVar3);
+  *(ulong *)(this + 0x100) = CONCAT44(fVar2, fVar1);
+  *(ulong *)(this + 0x108) = CONCAT44(fVar4, fVar3);
   return;
 }
 
@@ -8311,13 +8305,12 @@ void __thiscall SceneObject3D__setVelocity(SceneObject3D *this,FPUVector *arg1)
  */
 /* SceneObject3D__getTransformationMatrix() */
 
-Matrix4x4 * __thiscall SceneObject3D__getTransformationMatrix(SceneObject3D *this)
+Matrix4x4 *__thiscall SceneObject3D__getTransformationMatrix(SceneObject3D *this)
 
 {
   if (*(int *)(this + 0x9c) == 1) {
-    Matrix4x4__Transformation3D
-              ((Matrix4x4 *)(this + 8),(FPUVector *)(this + 0xd0),(TQuaternion *)(this + 0xe0),
-               (FPUVector *)(this + 0xa0));
+    Matrix4x4__Transformation3D((Matrix4x4 *)(this + 8), (FPUVector *)(this + 0xd0),
+                                (TQuaternion *)(this + 0xe0), (FPUVector *)(this + 0xa0));
     *(uint32_t *)(this + 0x9c) = 0;
   }
   return (Matrix4x4 *)(this + 8);
@@ -8332,11 +8325,11 @@ Matrix4x4 * __thiscall SceneObject3D__getTransformationMatrix(SceneObject3D *thi
  */
 /* UIFormElement__setParent(UIForm*) */
 
-void __thiscall UIFormElement__setParent(UIFormElement *this,UIForm *arg1)
+void __thiscall UIFormElement__setParent(UIFormElement *this, UIForm *arg1)
 
 {
   if (*(UIForm **)(this + 0x30) != (UIForm *)0x0) {
-    UIForm__RemoveFormElement(*(UIForm **)(this + 0x30),this);
+    UIForm__RemoveFormElement(*(UIForm **)(this + 0x30), this);
   }
   *(UIForm **)(this + 0x30) = arg1;
   return;
@@ -8351,7 +8344,7 @@ void __thiscall UIFormElement__setParent(UIFormElement *this,UIForm *arg1)
  */
 /* UIButton__getElementArea(UIRect&) */
 
-void __thiscall UIButton__getElementArea(UIButton *this,UIRect *arg1)
+void __thiscall UIButton__getElementArea(UIButton *this, UIRect *arg1)
 
 {
   float fVar1;
@@ -8361,7 +8354,7 @@ void __thiscall UIButton__getElementArea(UIButton *this,UIRect *arg1)
   float fVar5;
   float fVar6;
   float fVar7;
-  
+
   (**(code **)(**(long **)(this + 0x50) + 0x58))();
   fVar7 = DAT_005be6e4 /* R:0.5f */;
   fVar1 = *(float *)(this + 100);
@@ -8387,13 +8380,13 @@ void __thiscall UIButton__getElementArea(UIButton *this,UIRect *arg1)
  */
 /* UIButton__setParent(UIForm*) */
 
-void __thiscall UIButton__setParent(UIButton *this,UIForm *arg1)
+void __thiscall UIButton__setParent(UIButton *this, UIForm *arg1)
 
 {
-  UIFormElement__setParent((UIFormElement *)this,arg1);
-                    /* WARNING: Could not recover jumptable at 0x005a2315. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (**(code **)(**(long **)(this + 0x50) + 0x50))(*(long **)(this + 0x50),arg1);
+  UIFormElement__setParent((UIFormElement *)this, arg1);
+  /* WARNING: Could not recover jumptable at 0x005a2315. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (**(code **)(**(long **)(this + 0x50) + 0x50))(*(long **)(this + 0x50), arg1);
   return;
 }
 
@@ -8406,11 +8399,11 @@ void __thiscall UIButton__setParent(UIButton *this,UIForm *arg1)
  */
 /* UIButton__setButtonPadding(float, float) */
 
-void __thiscall UIButton__setButtonPadding(UIButton *this,float arg1,float arg2)
+void __thiscall UIButton__setButtonPadding(UIButton *this, float arg1, float arg2)
 
 {
   float fVar1;
-  
+
   fVar1 = arg2 * DAT_005be6e4 /* R:0.5f */;
   *(float *)(this + 100) = arg1 * DAT_005be6e4 /* R:0.5f */;
   *(float *)(this + 0x68) = fVar1;
@@ -8426,18 +8419,18 @@ void __thiscall UIButton__setButtonPadding(UIButton *this,float arg1,float arg2)
  */
 /* UIDropDown__getElementArea(UIRect&) */
 
-void __thiscall UIDropDown__getElementArea(UIDropDown *this,UIRect *arg1)
+void __thiscall UIDropDown__getElementArea(UIDropDown *this, UIRect *arg1)
 
 {
   float fVar1;
-  uint8_t auStack_28 [8];
+  uint8_t auStack_28[8];
   float local_20;
   float local_1c;
-  
+
   fVar1 = DAT_005be6e4 /* R:0.5f */;
   *(float *)arg1 = *(float *)(this + 0x20) - *(float *)(this + 0x28) * DAT_005be6e4 /* R:0.5f */;
   *(float *)(arg1 + 4) = *(float *)(this + 0x24) - fVar1 * *(float *)(this + 0x2c);
-  (**(code **)(**(long **)(this + 0x50) + 0x58))(*(long **)(this + 0x50),auStack_28);
+  (**(code **)(**(long **)(this + 0x50) + 0x58))(*(long **)(this + 0x50), auStack_28);
   *(float *)(arg1 + 8) = local_20 + *(float *)(this + 0x28);
   *(float *)(arg1 + 0xc) = local_1c + *(float *)(this + 0x2c);
   return;
@@ -8452,18 +8445,18 @@ void __thiscall UIDropDown__getElementArea(UIDropDown *this,UIRect *arg1)
  */
 /* UIDropDown__setParent(UIForm*) */
 
-void __thiscall UIDropDown__setParent(UIDropDown *this,UIForm *arg1)
+void __thiscall UIDropDown__setParent(UIDropDown *this, UIForm *arg1)
 
 {
-  UIFormElement__setParent((UIFormElement *)this,arg1);
-  (**(code **)(**(long **)(this + 0x58) + 0x50))(*(long **)(this + 0x58),arg1);
+  UIFormElement__setParent((UIFormElement *)this, arg1);
+  (**(code **)(**(long **)(this + 0x58) + 0x50))(*(long **)(this + 0x58), arg1);
   if (arg1 != (UIForm *)0x0) {
-    UIForm__AddFormElement(arg1,*(UIFormElement **)(this + 0x50));
+    UIForm__AddFormElement(arg1, *(UIFormElement **)(this + 0x50));
     return;
   }
-                    /* WARNING: Could not recover jumptable at 0x005a2b93. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (**(code **)(**(long **)(this + 0x50) + 0x50))(*(long **)(this + 0x50),0);
+  /* WARNING: Could not recover jumptable at 0x005a2b93. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (**(code **)(**(long **)(this + 0x50) + 0x50))(*(long **)(this + 0x50), 0);
   return;
 }
 
@@ -8476,7 +8469,7 @@ void __thiscall UIDropDown__setParent(UIDropDown *this,UIForm *arg1)
  */
 /* UIForm__setPositionInPixels(float, float) */
 
-void __thiscall UIForm__setPositionInPixels(UIForm *this,float arg1,float arg2)
+void __thiscall UIForm__setPositionInPixels(UIForm *this, float arg1, float arg2)
 
 {
   *(float *)(this + 0x38) = arg1;
@@ -8493,11 +8486,11 @@ void __thiscall UIForm__setPositionInPixels(UIForm *this,float arg1,float arg2)
  */
 /* UIForm__setEdgePadding(unsigned short, unsigned short) */
 
-void __thiscall UIForm__setEdgePadding(UIForm *this,ushort arg1,ushort arg2)
+void __thiscall UIForm__setEdgePadding(UIForm *this, ushort arg1, ushort arg2)
 
 {
   long lVar1;
-  
+
   lVar1 = Window;
   *(float *)(this + 0x30) = (float)arg1 / (float)*(ushort *)(Window + 8);
   *(float *)(this + 0x34) = (float)arg2 / (float)*(ushort *)(lVar1 + 10);
@@ -8513,11 +8506,12 @@ void __thiscall UIForm__setEdgePadding(UIForm *this,ushort arg1,ushort arg2)
  */
 /* UIFrame__getElementArea(UIRect&) */
 
-void __thiscall UIFrame__getElementArea(UIFrame *this,UIRect *arg1)
+void __thiscall UIFrame__getElementArea(UIFrame *this, UIRect *arg1)
 
 {
   *(float *)arg1 = DAT_005c0e00 /* R:-0.5f */ * *(float *)(this + 0x28) + *(float *)(this + 0x20);
-  *(float *)(arg1 + 4) = DAT_005be6e4 /* R:0.5f */ * *(float *)(this + 0x2c) + *(float *)(this + 0x24);
+  *(float *)(arg1 + 4) =
+      DAT_005be6e4 /* R:0.5f */ * *(float *)(this + 0x2c) + *(float *)(this + 0x24);
   *(uint32_t *)(arg1 + 8) = *(uint32_t *)(this + 0x28);
   *(uint32_t *)(arg1 + 0xc) = *(uint32_t *)(this + 0x2c);
   return;
@@ -8532,19 +8526,19 @@ void __thiscall UIFrame__getElementArea(UIFrame *this,UIRect *arg1)
  */
 /* UIFrame__setParent(UIForm*) */
 
-void __thiscall UIFrame__setParent(UIFrame *this,UIForm *arg1)
+void __thiscall UIFrame__setParent(UIFrame *this, UIForm *arg1)
 
 {
-  UIFormElement__setParent((UIFormElement *)this,arg1);
+  UIFormElement__setParent((UIFormElement *)this, arg1);
   if (arg1 != (UIForm *)0x0) {
-    UIForm__AddFormElement(arg1,*(UIFormElement **)(this + 0x50));
-    UIForm__AddFormElement(arg1,*(UIFormElement **)(this + 0x58));
+    UIForm__AddFormElement(arg1, *(UIFormElement **)(this + 0x50));
+    UIForm__AddFormElement(arg1, *(UIFormElement **)(this + 0x58));
     return;
   }
-  (**(code **)(**(long **)(this + 0x50) + 0x50))(*(long **)(this + 0x50),0);
-                    /* WARNING: Could not recover jumptable at 0x005a497f. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (**(code **)(**(long **)(this + 0x58) + 0x50))(*(long **)(this + 0x58),0);
+  (**(code **)(**(long **)(this + 0x50) + 0x50))(*(long **)(this + 0x50), 0);
+  /* WARNING: Could not recover jumptable at 0x005a497f. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (**(code **)(**(long **)(this + 0x58) + 0x50))(*(long **)(this + 0x58), 0);
   return;
 }
 
@@ -8557,7 +8551,7 @@ void __thiscall UIFrame__setParent(UIFrame *this,UIForm *arg1)
  */
 /* UILabel__getElementArea(UIRect&) */
 
-void __thiscall UILabel__getElementArea(UILabel *this,UIRect *arg1)
+void __thiscall UILabel__getElementArea(UILabel *this, UIRect *arg1)
 
 {
   float fVar1;
@@ -8566,11 +8560,11 @@ void __thiscall UILabel__getElementArea(UILabel *this,UIRect *arg1)
   long lVar4;
   float fVar5;
   float fVar6;
-  
+
   fVar2 = DAT_005be6e4 /* R:0.5f */;
   *(float *)(arg1 + 8) = *(float *)(*(long *)(this + 0x40) + 0x98) * DAT_005be6e4 /* R:0.5f */;
   fVar1 = *(float *)(*(long *)(this + 0x40) + 0x9c);
-  lVar4 = TextEmitterFont__GetCharInfo(*(TextEmitterFont **)(*(long *)(this + 0x40) + 0x20),L'M');
+  lVar4 = TextEmitterFont__GetCharInfo(*(TextEmitterFont **)(*(long *)(this + 0x40) + 0x20), L'M');
   lVar3 = Window;
   fVar6 = ((float)*(ushort *)(lVar4 + 10) + fVar1) * fVar2;
   *(float *)(arg1 + 0xc) = fVar6;
@@ -8585,8 +8579,7 @@ void __thiscall UILabel__getElementArea(UILabel *this,UIRect *arg1)
   *(float *)(arg1 + 4) = fVar6 * fVar2 + *(float *)(this + 0x24);
   if (*(int *)(*(long *)(this + 0x40) + 0x5c) == 0) {
     *(float *)arg1 = fVar1 - fVar2 * fVar5;
-  }
-  else if (*(int *)(*(long *)(this + 0x40) + 0x5c) == 2) {
+  } else if (*(int *)(*(long *)(this + 0x40) + 0x5c) == 2) {
     *(float *)arg1 = fVar1 - fVar5;
     return;
   }
@@ -8602,10 +8595,10 @@ void __thiscall UILabel__getElementArea(UILabel *this,UIRect *arg1)
  */
 /* UILabel__setText(wchar_t const*) */
 
-void __thiscall UILabel__setText(UILabel *this,wchar_t *arg1)
+void __thiscall UILabel__setText(UILabel *this, wchar_t *arg1)
 
 {
-  FontEmitter__SetStaticText(*(FontEmitter **)(this + 0x40),arg1);
+  FontEmitter__SetStaticText(*(FontEmitter **)(this + 0x40), arg1);
   return;
 }
 
@@ -8618,7 +8611,7 @@ void __thiscall UILabel__setText(UILabel *this,wchar_t *arg1)
  */
 /* UILabel__setAlign(tagTextAlign) */
 
-void __thiscall UILabel__setAlign(UILabel *this,uint32_t arg2)
+void __thiscall UILabel__setAlign(UILabel *this, uint32_t arg2)
 
 {
   *(uint32_t *)(*(long *)(this + 0x40) + 0x5c) = arg2;
@@ -8634,11 +8627,12 @@ void __thiscall UILabel__setAlign(UILabel *this,uint32_t arg2)
  */
 /* UIScrollBar__getElementArea(UIRect&) */
 
-void __thiscall UIScrollBar__getElementArea(UIScrollBar *this,UIRect *arg1)
+void __thiscall UIScrollBar__getElementArea(UIScrollBar *this, UIRect *arg1)
 
 {
   *(float *)arg1 = DAT_005c0e00 /* R:-0.5f */ * *(float *)(this + 0x28) + *(float *)(this + 0x20);
-  *(float *)(arg1 + 4) = DAT_005be6e4 /* R:0.5f */ * *(float *)(this + 0x2c) + *(float *)(this + 0x24);
+  *(float *)(arg1 + 4) =
+      DAT_005be6e4 /* R:0.5f */ * *(float *)(this + 0x2c) + *(float *)(this + 0x24);
   *(uint32_t *)(arg1 + 8) = *(uint32_t *)(this + 0x28);
   *(uint32_t *)(arg1 + 0xc) = *(uint32_t *)(this + 0x2c);
   return;
@@ -8653,19 +8647,19 @@ void __thiscall UIScrollBar__getElementArea(UIScrollBar *this,UIRect *arg1)
  */
 /* UIScrollBar__setParent(UIForm*) */
 
-void __thiscall UIScrollBar__setParent(UIScrollBar *this,UIForm *arg1)
+void __thiscall UIScrollBar__setParent(UIScrollBar *this, UIForm *arg1)
 
 {
-  UIFormElement__setParent((UIFormElement *)this,arg1);
+  UIFormElement__setParent((UIFormElement *)this, arg1);
   if (arg1 != (UIForm *)0x0) {
-    UIForm__AddFormElement(arg1,*(UIFormElement **)(this + 0x58));
-    UIForm__AddFormElement(arg1,*(UIFormElement **)(this + 0x50));
+    UIForm__AddFormElement(arg1, *(UIFormElement **)(this + 0x58));
+    UIForm__AddFormElement(arg1, *(UIFormElement **)(this + 0x50));
     return;
   }
-  (**(code **)(**(long **)(this + 0x58) + 0x50))(*(long **)(this + 0x58),0);
-                    /* WARNING: Could not recover jumptable at 0x005a54ef. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (**(code **)(**(long **)(this + 0x50) + 0x50))(*(long **)(this + 0x50),0);
+  (**(code **)(**(long **)(this + 0x58) + 0x50))(*(long **)(this + 0x58), 0);
+  /* WARNING: Could not recover jumptable at 0x005a54ef. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (**(code **)(**(long **)(this + 0x50) + 0x50))(*(long **)(this + 0x50), 0);
   return;
 }
 
@@ -8678,7 +8672,7 @@ void __thiscall UIScrollBar__setParent(UIScrollBar *this,UIForm *arg1)
  */
 /* UITextField__getElementArea(UIRect&) */
 
-void __thiscall UITextField__getElementArea(UITextField *this,UIRect *arg1)
+void __thiscall UITextField__getElementArea(UITextField *this, UIRect *arg1)
 
 {
   float fVar1;
@@ -8688,7 +8682,7 @@ void __thiscall UITextField__getElementArea(UITextField *this,UIRect *arg1)
   float fVar5;
   float fVar6;
   float fVar7;
-  
+
   fVar1 = *(float *)(this + 0x20);
   *(float *)arg1 = fVar1;
   fVar7 = DAT_005be6e4 /* R:0.5f */;
@@ -8770,13 +8764,13 @@ void __libc_csu_fini(void)
  * Calls: (none)
  * Called by: (none)
  */
-uint64_t __do_global_ctors_aux(uint64_t arg1,uint64_t arg2,uint64_t arg3)
+uint64_t __do_global_ctors_aux(uint64_t arg1, uint64_t arg2, uint64_t arg3)
 
 {
   uint8_t **ppuVar1;
-  
+
   for (ppuVar1 = &PTR__GLOBAL__sub_I_ConvertColorToColor8_008153c0;
-      (code *)*ppuVar1 != (code *)0xffffffffffffffff; ppuVar1 = ppuVar1 + -1) {
+       (code *)*ppuVar1 != (code *)0xffffffffffffffff; ppuVar1 = ppuVar1 + -1) {
     (*(code *)*ppuVar1)();
   }
   return arg3;

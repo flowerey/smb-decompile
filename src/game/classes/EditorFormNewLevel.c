@@ -23,7 +23,7 @@ void __thiscall EditorFormNewLevel__Update(EditorFormNewLevel *self)
 {
   TKeyboard *this_00;
   int iVar1;
-  
+
   iVar1 = -1;
   if (*(long **)(self + 0xb8) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0xb8) + 0x48))();
@@ -78,22 +78,23 @@ void __thiscall EditorFormNewLevel__Update(EditorFormNewLevel *self)
     }
   }
   if (*(long **)(self + 0x100) == (long *)0x0) {
-LAB_004b64fd:
+  LAB_004b64fd:
     *(uint8_t *)(*(long *)(self + 0x108) + 0x4a) = 1;
     if (iVar1 == -1) {
-      FlashAnimationLibrary__SetTextFieldText(*(char **)(self + 0x78),"labeltext4",&DAT_005c2b74 /* R:"None" */);
+      FlashAnimationLibrary__SetTextFieldText(*(char **)(self + 0x78), "labeltext4",
+                                              &DAT_005c2b74 /* R:"None" */);
       goto LAB_004b652c;
     }
-  }
-  else {
+  } else {
     (**(code **)(**(long **)(self + 0x100) + 0x48))();
-    if (*(long *)(self + 0x100) != *(long *)(self + 0x108)) goto LAB_004b64fd;
+    if (*(long *)(self + 0x100) != *(long *)(self + 0x108))
+      goto LAB_004b64fd;
     *(uint8_t *)(*(long *)(self + 0x100) + 0x4a) = 1;
     iVar1 = 9;
   }
-  FlashAnimationLibrary__SetTextFieldText
-            (*(char **)(self + 0x78),"labeltext4",
-             *(uint64_t *)(Update()::strPaletteFriendlyNames + (long)iVar1 * 8));
+  FlashAnimationLibrary__SetTextFieldText(
+      *(char **)(self + 0x78), "labeltext4",
+      *(uint64_t *)(Update()::strPaletteFriendlyNames + (long)iVar1 * 8));
 LAB_004b652c:
   if (*(long **)(self + 0x10) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0x10) + 0x48))();
@@ -145,7 +146,7 @@ LAB_004b652c:
     pCurrentVisibleForm = (EditorFormNewLevel *)0x0;
   }
   *(uint32_t *)(self + 0xa8) = 0;
-  TKeyboard__RestoreCallbacks(this_00,(InputCallback **)(self + 0xb0));
+  TKeyboard__RestoreCallbacks(this_00, (InputCallback **)(self + 0xb0));
   TKeyboard__UnLock(Keyboard);
   *(uint32_t *)(self + 0xac) = 0;
   return;
@@ -164,10 +165,10 @@ void __thiscall EditorFormNewLevel__EditorFormNewLevel__004b7e00(EditorFormNewLe
 
 {
   uint64_t *puVar1;
-  
+
   *(uint8_t ***)self = &PTR__EditorFormNewLevel_005c45f0;
   if (*(long **)(self + 0xb8) != (long *)0x0) {
-                    /* try { // try from 004b76ee to 004b77f5 has its CatchHandler @ 004b79d6 */
+    /* try { // try from 004b76ee to 004b77f5 has its CatchHandler @ 004b79d6 */
     (**(code **)(**(long **)(self + 0xb8) + 8))();
   }
   *(uint64_t *)(self + 0xb8) = 0;
@@ -305,10 +306,10 @@ void __thiscall EditorFormNewLevel__EditorFormNewLevel__004b7e00(EditorFormNewLe
 
 {
   uint64_t *puVar1;
-  
+
   *(uint8_t ***)self = &PTR__EditorFormNewLevel_005c45f0;
   if (*(long **)(self + 0xb8) != (long *)0x0) {
-                    /* try { // try from 004b7e1e to 004b7f25 has its CatchHandler @ 004b8103 */
+    /* try { // try from 004b7e1e to 004b7f25 has its CatchHandler @ 004b8103 */
     (**(code **)(**(long **)(self + 0xb8) + 8))();
   }
   *(uint64_t *)(self + 0xb8) = 0;

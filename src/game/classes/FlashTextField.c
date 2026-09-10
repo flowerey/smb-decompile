@@ -23,7 +23,7 @@ void __thiscall FlashTextField__FlashTextField__00571ad0(FlashTextField *self)
 {
   *(uint8_t ***)self = &PTR__FlashTextField_005dbc10;
   if (*(long **)(self + 0x18) != (long *)0x0) {
-                    /* try { // try from 005713d7 to 005713d9 has its CatchHandler @ 005713eb */
+    /* try { // try from 005713d7 to 005713d9 has its CatchHandler @ 005713eb */
     (**(code **)(**(long **)(self + 0x18) + 8))();
   }
   *(uint64_t *)(self + 0x18) = 0;
@@ -45,7 +45,7 @@ void __thiscall FlashTextField__FlashTextField__00571ad0(FlashTextField *self)
 {
   *(uint8_t ***)self = &PTR__FlashTextField_005dbc10;
   if (*(long **)(self + 0x18) != (long *)0x0) {
-                    /* try { // try from 00571ae7 to 00571ae9 has its CatchHandler @ 00571b02 */
+    /* try { // try from 00571ae7 to 00571ae9 has its CatchHandler @ 00571b02 */
     (**(code **)(**(long **)(self + 0x18) + 8))();
   }
   *(uint64_t *)(self + 0x18) = 0;
@@ -63,20 +63,20 @@ void __thiscall FlashTextField__FlashTextField__00571ad0(FlashTextField *self)
  */
 /* FlashTextField__FlashTextField__005762b0(tagTextAlign) */
 
-void __thiscall FlashTextField__FlashTextField__005762b0(FlashTextField *self,uint32_t arg2)
+void __thiscall FlashTextField__FlashTextField__005762b0(FlashTextField *self, uint32_t arg2)
 
 {
   FontEmitter *this_00;
   uint64_t local_28;
   uint64_t local_20;
-  
+
   *(uint8_t ***)self = &PTR__FlashTextField_005dbc10;
   local_28 = 0;
   local_20 = _DEFAULT_UI_FONT;
-                    /* try { // try from 00576249 to 0057624d has its CatchHandler @ 00576286 */
+  /* try { // try from 00576249 to 0057624d has its CatchHandler @ 00576286 */
   this_00 = operator_new(0xa0);
-                    /* try { // try from 00576257 to 0057625b has its CatchHandler @ 00576296 */
-  FontEmitter__FontEmitter__005861d0(this_00,(FontEmitterCreation *)&local_28);
+  /* try { // try from 00576257 to 0057625b has its CatchHandler @ 00576296 */
+  FontEmitter__FontEmitter__005861d0(this_00, (FontEmitterCreation *)&local_28);
   *(FontEmitter **)(self + 0x18) = this_00;
   *(uint32_t *)(this_00 + 0x5c) = arg2;
   *(uint32_t *)(self + 0x20) = 1;

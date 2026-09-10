@@ -22,7 +22,7 @@ void __thiscall Ogmo__RecordSpecial(Ogmo *self)
 
 {
   long lVar1;
-  
+
   lVar1 = *(long *)(self + 0x7e0);
   if (lVar1 != 0) {
     *(byte *)(lVar1 + 3) = *(byte *)(lVar1 + 3) & 0xbf | (byte)((*(uint *)(self + 0xaa0) & 1) << 6);
@@ -103,10 +103,10 @@ void __thiscall Ogmo__Reset(Ogmo *self)
   uint uVar6;
   long lVar7;
   FlashLibraryInstance *this_01;
-  Vector2 aVStack_d0 [8];
-  Vector2 aVStack_c8 [8];
-  Vector2 aVStack_c0 [8];
-  Vector2 aVStack_b8 [8];
+  Vector2 aVStack_d0[8];
+  Vector2 aVStack_c8[8];
+  Vector2 aVStack_c0[8];
+  Vector2 aVStack_b8[8];
   uint32_t uStack_b0;
   uint64_t uStack_a8;
   uint64_t uStack_a0;
@@ -114,10 +114,10 @@ void __thiscall Ogmo__Reset(Ogmo *self)
   uint64_t uStack_90;
   uint32_t uStack_88;
   uint32_t uStack_84;
-  Vector2 aVStack_80 [8];
-  Vector2 aVStack_78 [8];
-  Vector2 aVStack_70 [8];
-  Vector2 aVStack_68 [8];
+  Vector2 aVStack_80[8];
+  Vector2 aVStack_78[8];
+  Vector2 aVStack_70[8];
+  Vector2 aVStack_68[8];
   uint32_t uStack_60;
   uint32_t uStack_58;
   uint32_t uStack_54;
@@ -128,17 +128,17 @@ void __thiscall Ogmo__Reset(Ogmo *self)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   lVar7 = SuperMeatBoy;
   if (((byte)self[0x7db] & 0x10) != 0) {
     pVVar1 = (Vector2 *)(self + 0xa0);
     *(uint32_t *)(self + 0xbc) = 0;
     *(uint32_t *)(self + 0xb8) = 0;
-    Vector2__operator_assign(pVVar1,(Vector2 *)(*(long *)(lVar7 + 0x40) + 0x22a8));
-    Vector2__operator_assign((Vector2 *)(self + 0x868),pVVar1);
+    Vector2__operator_assign(pVVar1, (Vector2 *)(*(long *)(lVar7 + 0x40) + 0x22a8));
+    Vector2__operator_assign((Vector2 *)(self + 0x868), pVVar1);
     uStack_38 = *(uint32_t *)(self + 0x8d0);
     uStack_34 = uStack_38;
-    BoundingSquare__Change((BoundingSquare *)(self + 0x740),(Vector2 *)&uStack_38,0.0,pVVar1);
+    BoundingSquare__Change((BoundingSquare *)(self + 0x740), (Vector2 *)&uStack_38, 0.0, pVVar1);
     *(uint64_t *)(self + 0x818) = 0;
     *(uint64_t *)(self + 0x820) = 0;
     *(uint64_t *)(self + 0x828) = 0;
@@ -146,23 +146,23 @@ void __thiscall Ogmo__Reset(Ogmo *self)
     *(uint32_t *)(self + 0x838) = 0;
     *(uint32_t *)(self + 0x83c) = 0;
     uStack_b0 = 1;
-    Vector2__operator_assign((Vector2 *)(self + 0x840),aVStack_d0);
-    Vector2__operator_assign((Vector2 *)(self + 0x848),aVStack_c8);
-    Vector2__operator_assign((Vector2 *)(self + 0x850),aVStack_c0);
-    Vector2__operator_assign((Vector2 *)(self + 0x858),aVStack_b8);
+    Vector2__operator_assign((Vector2 *)(self + 0x840), aVStack_d0);
+    Vector2__operator_assign((Vector2 *)(self + 0x848), aVStack_c8);
+    Vector2__operator_assign((Vector2 *)(self + 0x850), aVStack_c0);
+    Vector2__operator_assign((Vector2 *)(self + 0x858), aVStack_b8);
     *(uint32_t *)(self + 0x860) = uStack_b0;
     return;
   }
   if ((*(int *)(self + 0xa40) == 0) && (((byte)self[0x7d9] & 1) != 0)) {
-    uStack_50 = (Ogmo *)(CONCAT17((char)SMBCurrLevelData._4_4_,(uint7)*(uint *)(SMBHUD + 0x418)) &
-                        0x1ffffffffffffff);
+    uStack_50 =
+        (Ogmo *)(CONCAT17((char)SMBCurrLevelData._4_4_, (uint7) * (uint *)(SMBHUD + 0x418)) &
+                 0x1ffffffffffffff);
     uStack_48 = *(uint64_t *)(SuperMeatBoyEditor + 0x100);
-    uStack_40 = CONCAT44(uStack_40._4_4_,*(uint32_t *)(Engine + 8));
+    uStack_40 = CONCAT44(uStack_40._4_4_, *(uint32_t *)(Engine + 8));
     uStack_58 = *(uint32_t *)(self + 0xa0);
-    uStack_50 = (Ogmo *)CONCAT35(CONCAT21(uStack_50._6_2_,
-                                          (char)*(uint32_t *)(self + 0x7f8) + '\x01'),
-                                 CONCAT14((char)*(uint32_t *)(self + 0xa54),(uint32_t)uStack_50)
-                                );
+    uStack_50 =
+        (Ogmo *)CONCAT35(CONCAT21(uStack_50._6_2_, (char)*(uint32_t *)(self + 0x7f8) + '\x01'),
+                         CONCAT14((char)*(uint32_t *)(self + 0xa54), (uint32_t)uStack_50));
     uStack_54 = uStack_58;
     ShowMonitorMessage((SMBMonitorMessage *)&uStack_58);
   }
@@ -175,13 +175,13 @@ void __thiscall Ogmo__Reset(Ogmo *self)
   pVVar1 = (Vector2 *)(self + 0xa0);
   *(uint32_t *)(self + 0xbc) = 0;
   *(uint32_t *)(self + 0xb8) = 0;
-  Vector2__operator_assign(pVVar1,(Vector2 *)(*(long *)(lVar3 + 0x40) + 0x22a8));
+  Vector2__operator_assign(pVVar1, (Vector2 *)(*(long *)(lVar3 + 0x40) + 0x22a8));
   *(uint32_t *)(self + 0xf0) = 0;
   *(uint32_t *)(self + 0xec) = 0;
-  Vector2__operator_assign((Vector2 *)(self + 0x868),pVVar1);
+  Vector2__operator_assign((Vector2 *)(self + 0x868), pVVar1);
   uStack_28 = *(uint32_t *)(self + 0x8d0);
   uStack_24 = uStack_28;
-  BoundingSquare__Change((BoundingSquare *)(self + 0x740),(Vector2 *)&uStack_28,0.0,pVVar1);
+  BoundingSquare__Change((BoundingSquare *)(self + 0x740), (Vector2 *)&uStack_28, 0.0, pVVar1);
   *(uint64_t *)(self + 0x818) = 0;
   *(uint64_t *)(self + 0x820) = 0;
   *(uint64_t *)(self + 0x828) = 0;
@@ -195,10 +195,10 @@ void __thiscall Ogmo__Reset(Ogmo *self)
   uStack_88 = 0;
   uStack_84 = 0;
   uStack_60 = 1;
-  Vector2__operator_assign((Vector2 *)(self + 0x840),aVStack_80);
-  Vector2__operator_assign((Vector2 *)(self + 0x848),aVStack_78);
-  Vector2__operator_assign((Vector2 *)(self + 0x850),aVStack_70);
-  Vector2__operator_assign((Vector2 *)(self + 0x858),aVStack_68);
+  Vector2__operator_assign((Vector2 *)(self + 0x840), aVStack_80);
+  Vector2__operator_assign((Vector2 *)(self + 0x848), aVStack_78);
+  Vector2__operator_assign((Vector2 *)(self + 0x850), aVStack_70);
+  Vector2__operator_assign((Vector2 *)(self + 0x858), aVStack_68);
   this_00 = SMBHUD;
   *(uint32_t *)(self + 0x860) = uStack_60;
   GMeatHUD__ResetTimer(this_00);
@@ -212,22 +212,22 @@ void __thiscall Ogmo__Reset(Ogmo *self)
       SMBAnimals__Reset(*(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8));
       ResetSMBBoss();
       OVar4 = self[0x7d9];
-      if (*(int *)(self + 0xa40) != 0) goto LAB_00474ba3;
+      if (*(int *)(self + 0xa40) != 0)
+        goto LAB_00474ba3;
     }
     if (((byte)OVar4 & 1) != 0) {
-      ScreenFlashManager__SetFlash
-                ((ScreenFlashManager *)&ScreenFlash,DAT_005c07b0 /* R:0.009999999776482582f */,DAT_005be6e8 /* R:0.25f */,
-                 (ColorTemplate *)::cBlack);
+      ScreenFlashManager__SetFlash((ScreenFlashManager *)&ScreenFlash,
+                                   DAT_005c07b0 /* R:0.009999999776482582f */,
+                                   DAT_005be6e8 /* R:0.25f */, (ColorTemplate *)::cBlack);
       if (*(int *)(self + 0x7d4) == 0x10) {
         uVar6 = *(uint *)(self + 0xa4c);
-      }
-      else {
+      } else {
         lVar7 = *(long *)(self + 0xf8);
         self[0x7db] = (Ogmo)((byte)self[0x7db] | 8);
         uVar6 = 0;
         uVar2 = *(ushort *)(lVar7 + 0x5b0);
         if (uVar2 != 0) {
-          uVar6 = GetRandomINT(0,uVar2 - 1);
+          uVar6 = GetRandomINT(0, uVar2 - 1);
         }
         *(uint *)(lVar7 + 0x5d8) = uVar6;
         *(uint *)(self + 0xa4c) = uVar6;
@@ -236,16 +236,15 @@ void __thiscall Ogmo__Reset(Ogmo *self)
       *(uint32_t *)(self + 0x7d4) = 0x10;
       lVar7 = *(long *)(self + 0xf8);
       if (uVar6 == 0xffffffff) {
-        this_01 = *(FlashLibraryInstance **)
-                   (*(long *)(lVar7 + 0x5c0) + (ulong)*(ushort *)(lVar7 + 0x5d8) * 8);
-      }
-      else {
-        this_01 = *(FlashLibraryInstance **)(*(long *)(lVar7 + 0x5c0) + (ulong)(uVar6 & 0xffff) * 8)
-        ;
+        this_01 = *(FlashLibraryInstance **)(*(long *)(lVar7 + 0x5c0) +
+                                             (ulong) * (ushort *)(lVar7 + 0x5d8) * 8);
+      } else {
+        this_01 =
+            *(FlashLibraryInstance **)(*(long *)(lVar7 + 0x5c0) + (ulong)(uVar6 & 0xffff) * 8);
       }
       FlashLibraryInstance__Reset(this_01);
       GMeatHUD__ResetTimer(SMBHUD);
-      GMeatHUD__FreezeTimer(SMBHUD,1);
+      GMeatHUD__FreezeTimer(SMBHUD, 1);
       iVar5 = *(int *)(self + 0x7f8);
       *(int *)(self + 0x7f8) = iVar5 + 1;
       if (iVar5 + 1 == 0x14) {
@@ -254,16 +253,15 @@ void __thiscall Ogmo__Reset(Ogmo *self)
       iVar5 = *(int *)(SuperMeatBoy + 0x294);
       if (((1 < iVar5) && (iVar5 != 10)) && (iVar5 != 3)) {
         if (*(uint *)(self + 0x7f8) < 3) {
-          SMBChapter__ShowLivesScreen((SMBChapter *)(SuperMeatBoy + 0x90),*(uint *)(self + 0x7f8));
-        }
-        else {
+          SMBChapter__ShowLivesScreen((SMBChapter *)(SuperMeatBoy + 0x90), *(uint *)(self + 0x7f8));
+        } else {
           SMBChapter__ShowGameOverScreen((SMBChapter *)(SuperMeatBoy + 0x90));
         }
       }
     }
     uStack_50 = self + 0x7f8;
     uStack_58 = 0;
-    uStack_48 = CONCAT44(uStack_48._4_4_,4);
+    uStack_48 = CONCAT44(uStack_48._4_4_, 4);
     uStack_40 = TPlayer__GetProfile((TPlayer *)Players__Player);
     BroadcastString__SetBroadcastStringParam((BroadcastStringParam *)&uStack_58);
     iVar5 = GSMBMenu__IsInReplayMode(SMBMenu);
@@ -328,7 +326,7 @@ void __thiscall Ogmo__WallJump(Ogmo *self)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   puVar6 = &uStack_58;
   iVar4 = (**(code **)(*(long *)self + 0xb0))();
   if (iVar4 == 0) {
@@ -336,14 +334,14 @@ void __thiscall Ogmo__WallJump(Ogmo *self)
   }
   *(uint32_t *)(self + 0xbc) = *(uint32_t *)(self + 0x8b4);
   *(float *)(self + 0xb8) =
-       *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
+      *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
   if (*(int *)(self + 0x7d4) != 6) {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (Ogmo)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x240);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x268) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
@@ -359,20 +357,21 @@ void __thiscall Ogmo__WallJump(Ogmo *self)
     uStack_34 = 0x3f800000;
     uStack_28 = 0xbf800000;
     uStack_24 = 0x3f800000;
-    if (((byte)OVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)OVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar6 = &uStack_38;
     puVar8 = &uStack_28;
-  }
-  else {
+  } else {
     OVar7 = self[0x7d9];
     uStack_58 = 0x3f800000;
     uStack_54 = 0x3f800000;
     uStack_48 = 0x3f800000;
     uStack_44 = 0x3f800000;
-    if (((byte)OVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)OVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar8 = &uStack_48;
   }
-  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,3,puVar8,puVar6);
+  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 3, puVar8, puVar6);
   OVar3 = self[0x7d8];
   OVar7 = self[0x7d9];
 LAB_00474591:
@@ -394,9 +393,9 @@ void __thiscall Ogmo__CreateClones(Ogmo *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),"doublejump");
+
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(
+      (FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), "doublejump");
   *(uint64_t *)(self + 0xa98) = uVar1;
   MeatBoyCharactor__CreateClones((MeatBoyCharactor *)self);
   return;
@@ -416,7 +415,7 @@ void __thiscall Ogmo__Ogmo__00483850(Ogmo *self)
 {
   *(uint8_t ***)self = &PTR__Ogmo_005c1130;
   if ((*(int *)(self + 0xa40) == 0) && (*(long **)(self + 0xa98) != (long *)0x0)) {
-                    /* try { // try from 004835c8 to 004835ca has its CatchHandler @ 004835d8 */
+    /* try { // try from 004835c8 to 004835ca has its CatchHandler @ 004835d8 */
     (**(code **)(**(long **)(self + 0xa98) + 8))();
   }
   MeatBoyCharactor__MeatBoyCharactor__00476510((MeatBoyCharactor *)self);
@@ -437,7 +436,7 @@ void __thiscall Ogmo__ProcessSpecial(Ogmo *self)
 {
   int iVar1;
   uint uVar2;
-  
+
   iVar1 = *(int *)(self + 0xaa0);
   uVar2 = *(byte *)(*(long *)(self + 0x7e0) + 3) >> 6 & 1;
   *(uint *)(self + 0xaa0) = uVar2;
@@ -461,11 +460,11 @@ void __thiscall Ogmo__Jump(Ogmo *self)
 
 {
   int iVar1;
-  
+
   MeatBoyCharactor__Jump((MeatBoyCharactor *)self);
   iVar1 = (**(code **)(*(long *)self + 0xa8))(self);
   if ((iVar1 == 1) &&
-     (iVar1 = *(int *)(self + 0xa94), *(int *)(self + 0xa94) = iVar1 + 1, iVar1 + 1 == 2)) {
+      (iVar1 = *(int *)(self + 0xa94), *(int *)(self + 0xa94) = iVar1 + 1, iVar1 + 1 == 2)) {
     *(uint32_t *)(self + 0xaa4) = 0;
     *(uint32_t *)(self + 0xaa0) = 1;
     return;
@@ -486,16 +485,15 @@ void __thiscall Ogmo__Render(Ogmo *self)
 
 {
   int iVar1;
-  
+
   if (*(int *)(self + 0xaa0) != 1) {
     MeatBoyCharactor__Render((MeatBoyCharactor *)self);
     return;
   }
   (**(code **)(*(long *)self + 0x50))();
   *(uint32_t *)(*(long *)(self + 0xa98) + 0x58) = *(uint32_t *)(self + 0xaa4);
-  MeatBoyCharFoundation__Render
-            (*(MeatBoyCharFoundation **)(self + 0xf8),(MeatBoyCharactor *)self,
-             *(FlashLibraryInstance **)(self + 0xa98));
+  MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8), (MeatBoyCharactor *)self,
+                                *(FlashLibraryInstance **)(self + 0xa98));
   *(uint32_t *)(self + 0xaa4) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xa98) + 0x58);
   iVar1 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0xa98));
   if (iVar1 == 0) {
@@ -521,39 +519,36 @@ void __thiscall Ogmo__RenderClones(Ogmo *self)
   int iVar2;
   long lVar3;
   int iVar4;
-  
+
   if (*(int *)(self + 0xa40) == 0) {
-    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), 1);
     lVar3 = *(long *)(self + 0xa38);
     if ((*(int *)(lVar3 + 0x2c8) == 0) && (0 < *(int *)(lVar3 + 0x34))) {
       iVar4 = 0;
       do {
         if ((*(int *)(lVar3 + 0x3c) == iVar4) &&
-           (iVar4 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + (long)iVar4 * 8) + 0xa90))) {
-          FlashAnimationLibrary__EnableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
-        }
-        else {
-          FlashAnimationLibrary__DisableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+            (iVar4 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + (long)iVar4 * 8) + 0xa90))) {
+          FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                             1);
+        } else {
+          FlashAnimationLibrary__DisableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                              1);
         }
         pMVar1 = *(MeatBoyCharactor **)(*(long *)(self + 0x7f0) + (long)iVar4 * 8);
         if (*(int *)(pMVar1 + 0xaa0) == 1) {
           *(uint32_t *)(*(long *)(pMVar1 + 0xa98) + 0x58) = *(uint32_t *)(pMVar1 + 0xaa4);
-          MeatBoyCharFoundation__Render
-                    (*(MeatBoyCharFoundation **)(pMVar1 + 0xf8),pMVar1,
-                     *(FlashLibraryInstance **)(pMVar1 + 0xa98));
+          MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(pMVar1 + 0xf8), pMVar1,
+                                        *(FlashLibraryInstance **)(pMVar1 + 0xa98));
           *(uint32_t *)(pMVar1 + 0xaa4) =
-               *(uint32_t *)(*(FlashLibraryInstance **)(pMVar1 + 0xa98) + 0x58);
+              *(uint32_t *)(*(FlashLibraryInstance **)(pMVar1 + 0xa98) + 0x58);
           iVar2 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(pMVar1 + 0xa98));
           if (iVar2 == 0) {
             *(uint32_t *)(pMVar1 + 0xaa0) = 0;
             *(uint32_t *)(pMVar1 + 0xaa4) = 0;
           }
-        }
-        else {
-          MeatBoyCharFoundation__Render
-                    (*(MeatBoyCharFoundation **)(self + 0xf8),pMVar1,(FlashLibraryInstance *)0x0);
+        } else {
+          MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8), pMVar1,
+                                        (FlashLibraryInstance *)0x0);
         }
         lVar3 = *(long *)(self + 0xa38);
         iVar4 = iVar4 + 1;
@@ -577,7 +572,7 @@ void __thiscall Ogmo__Ogmo__00483850(Ogmo *self)
 {
   *(uint8_t ***)self = &PTR__Ogmo_005c1130;
   if ((*(int *)(self + 0xa40) == 0) && (*(long **)(self + 0xa98) != (long *)0x0)) {
-                    /* try { // try from 00483878 to 0048387a has its CatchHandler @ 00483890 */
+    /* try { // try from 00483878 to 0048387a has its CatchHandler @ 00483890 */
     (**(code **)(**(long **)(self + 0xa98) + 8))();
   }
   MeatBoyCharactor__MeatBoyCharactor__00476510((MeatBoyCharactor *)self);
@@ -598,9 +593,9 @@ void __thiscall Ogmo__Ogmo__00483910(Ogmo *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FormatResourcePath("/Animations/ogmo.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,0x18);
+
+  uVar1 = FormatResourcePath("/Animations/ogmo.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 0x18);
   *(uint8_t ***)self = &PTR__Ogmo_005c1130;
   *(uint32_t *)(self + 0xa94) = 0;
   *(uint32_t *)(self + 0xaa0) = 0;
@@ -618,15 +613,15 @@ void __thiscall Ogmo__Ogmo__00483910(Ogmo *self)
  */
 /* Ogmo__Ogmo__00483910(MeatBoyCharactor*, int) */
 
-void __thiscall Ogmo__Ogmo__00483910(Ogmo *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall Ogmo__Ogmo__00483910(Ogmo *self, MeatBoyCharactor *arg1, int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__Ogmo_005c1130;
   *(uint32_t *)(self + 0xaa0) = 0;
   *(uint32_t *)(self + 0xaa4) = 0;
-                    /* try { // try from 00483956 to 0048395a has its CatchHandler @ 0048397c */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 00483956 to 0048395a has its CatchHandler @ 0048397c */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   *(uint64_t *)(self + 0xa98) = *(uint64_t *)(arg1 + 0xa98);
   return;
 }

@@ -38,13 +38,13 @@ void __thiscall BossLayer__BossLayer__005182a0(BossLayer *self)
 void BossLayer__Render(void)
 
 {
-  TGraphics__SetRenderState(Graphics,'\b',1);
-  TGraphics__SetRenderState(Graphics,'\x05',4);
-  TGraphics__SetRenderState(Graphics,'\x06',5);
-  TGraphics__SetRenderState(Graphics,'\a',0);
-  TGraphics__SetRenderState(Graphics,'\x03',0);
-  TGraphics__SetRenderState(Graphics,'\x01',7);
-  Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38),1);
+  TGraphics__SetRenderState(Graphics, '\b', 1);
+  TGraphics__SetRenderState(Graphics, '\x05', 4);
+  TGraphics__SetRenderState(Graphics, '\x06', 5);
+  TGraphics__SetRenderState(Graphics, '\a', 0);
+  TGraphics__SetRenderState(Graphics, '\x03', 0);
+  TGraphics__SetRenderState(Graphics, '\x01', 7);
+  Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38), 1);
   RenderSMBBoss();
   return;
 }

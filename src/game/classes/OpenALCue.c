@@ -43,7 +43,7 @@ void __thiscall OpenALCue__OpenALCue__0053e1e0(OpenALCue *self)
   AudioFile *this_00;
   void *pvVar3;
   void *pvVar4;
-  
+
   piVar2 = *(int **)(self + 8);
   if ((piVar2 != (int *)0x0) && (iVar1 = *piVar2, *piVar2 = iVar1 + -1, iVar1 + -1 == 0)) {
     this_00 = *(AudioFile **)(piVar2 + 8);
@@ -60,7 +60,7 @@ void __thiscall OpenALCue__OpenALCue__0053e1e0(OpenALCue *self)
       operator_delete__(pvVar4);
     }
     operator_delete(pvVar3);
-    alDeleteBuffers(2,piVar2 + 4);
+    alDeleteBuffers(2, piVar2 + 4);
     operator_delete(piVar2);
     return;
   }

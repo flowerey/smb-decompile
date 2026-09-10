@@ -26,7 +26,7 @@ void __thiscall FragmentLinker__FragmentLinker(FragmentLinker *self)
   allocator *paVar1;
   int *piVar2;
   int iVar3;
-  
+
   if (*(int *)(self + 0x9c0) == -0x5eef3582) {
     *(uint32_t *)(self + 0x9c0) = 0;
     free(*(void **)(*(long *)(self + 0x9b0) + -8));
@@ -122,7 +122,7 @@ void __thiscall FragmentLinker__ResetFragments(FragmentLinker *self)
  */
 /* FragmentLinker__AddFragment__00586940(ShaderFragment const&) */
 
-void __thiscall FragmentLinker__AddFragment__00586940(FragmentLinker *self,ShaderFragment *arg1)
+void __thiscall FragmentLinker__AddFragment__00586940(FragmentLinker *self, ShaderFragment *arg1)
 
 {
   int iVar1;
@@ -133,7 +133,7 @@ void __thiscall FragmentLinker__AddFragment__00586940(FragmentLinker *self,Shade
   int iVar6;
   long lVar7;
   FragmentLinker *pFVar8;
-  
+
   iVar4 = *(int *)(self + 0x960);
   iVar6 = *(int *)arg1;
   iVar1 = iVar4 + 1;
@@ -173,13 +173,13 @@ void __thiscall FragmentLinker__AddFragment__00586940(FragmentLinker *self,Shade
  */
 /* FragmentLinker__AddFragment__00586940(int) */
 
-void __thiscall FragmentLinker__AddFragment__00586940(FragmentLinker *self,int arg1)
+void __thiscall FragmentLinker__AddFragment__00586940(FragmentLinker *self, int arg1)
 
 {
   int iVar1;
   int iVar2;
   FragmentLinker *pFVar3;
-  
+
   iVar2 = *(int *)(self + 0x960);
   iVar1 = iVar2 + 1;
   *(int *)(self + 0x960) = iVar1;
@@ -202,13 +202,13 @@ void __thiscall FragmentLinker__AddFragment__00586940(FragmentLinker *self,int a
  */
 /* FragmentLinker__AddParam(int) */
 
-void __thiscall FragmentLinker__AddParam(FragmentLinker *self,int arg1)
+void __thiscall FragmentLinker__AddParam(FragmentLinker *self, int arg1)
 
 {
   long lVar1;
   int iVar2;
   long lVar3;
-  
+
   lVar3 = (long)*(int *)(self + 0x960);
   iVar2 = *(int *)(self + lVar3 * 0x30 + 4);
   lVar1 = (long)iVar2 + lVar3 * 0xc;
@@ -245,10 +245,10 @@ void __thiscall FragmentLinker__CompileFragments(FragmentLinker *self)
   FragmentLinker *pFVar13;
   FragmentLinker *local_48;
   int local_3c;
-  
+
   psVar2 = (string *)(self + 0x9d8);
   std__string_assign(psVar2);
-  std__string_append((char *)psVar2,0x5dc114);
+  std__string_append((char *)psVar2, 0x5dc114);
   iVar10 = *(int *)(self + 0x960);
   *(int *)(self + 0xa08) = *(int *)(self + 0xa08) + 1;
   if (-1 < iVar10) {
@@ -268,18 +268,17 @@ void __thiscall FragmentLinker__CompileFragments(FragmentLinker *self)
             if (pcVar9 != (char *)0x0) {
               if (*(int *)(self + 0x9e0) == 1) {
                 if (iVar11 != 0) {
-                  std__string_append((char *)psVar2,0x5ca6b5);
+                  std__string_append((char *)psVar2, 0x5ca6b5);
                 }
                 strlen(pcVar9);
-                std__string_append((char *)psVar2,(ulong)pcVar9);
+                std__string_append((char *)psVar2, (ulong)pcVar9);
                 iVar11 = iVar11 + 1;
                 iVar6 = *(int *)(self + 0xa08);
                 piVar4 = (int *)(*(long *)(self + 0xa00) + (long)*(int *)pFVar8 * 4);
-              }
-              else if (*(int *)(self + 0x9e0) == 0) {
+              } else if (*(int *)(self + 0x9e0) == 0) {
                 strlen(pcVar9);
-                std__string_append((char *)psVar2,(ulong)pcVar9);
-                std__string_append((char *)psVar2,0x5ca6b5);
+                std__string_append((char *)psVar2, (ulong)pcVar9);
+                std__string_append((char *)psVar2, 0x5ca6b5);
                 iVar6 = *(int *)(self + 0xa08);
                 piVar4 = (int *)(*(long *)(self + 0xa00) + (long)*(int *)pFVar8 * 4);
               }
@@ -297,10 +296,9 @@ void __thiscall FragmentLinker__CompileFragments(FragmentLinker *self)
     } while (local_3c <= iVar10);
   }
   if (*(int *)(self + 0x9e0) == 0) {
-    std__string_append((char *)psVar2,0x5dc750);
-  }
-  else {
-    std__string_append((char *)psVar2,0x5dc124);
+    std__string_append((char *)psVar2, 0x5dc750);
+  } else {
+    std__string_append((char *)psVar2, 0x5dc124);
   }
   iVar10 = *(int *)(self + 0x960);
   if (-1 < iVar10) {
@@ -310,7 +308,7 @@ void __thiscall FragmentLinker__CompileFragments(FragmentLinker *self)
       pcVar9 = *(char **)(*(long *)(self + 0x9f0) + (long)*(int *)local_48 * 8);
       if (pcVar9 != (char *)0x0) {
         strlen(pcVar9);
-        std__string_append((char *)psVar2,(ulong)pcVar9);
+        std__string_append((char *)psVar2, (ulong)pcVar9);
         lVar5 = *(long *)(self + 0x9d8);
         lVar7 = *(long *)(lVar5 + -0x18);
         uVar1 = lVar7 + 1;
@@ -335,18 +333,18 @@ void __thiscall FragmentLinker__CompileFragments(FragmentLinker *self)
             pcVar9 = *(char **)(*(long *)(self + 0x9f8) + (long)*(int *)pFVar13 * 8);
             if (pcVar9 != (char *)0x0) {
               if (iVar12 != 0) {
-                std__string_append((char *)psVar2,0x5ca6b5);
+                std__string_append((char *)psVar2, 0x5ca6b5);
               }
               iVar12 = iVar12 + 1;
               strlen(pcVar9);
-              std__string_append((char *)psVar2,(ulong)pcVar9);
+              std__string_append((char *)psVar2, (ulong)pcVar9);
               iVar10 = *(int *)(local_48 + 4);
             }
             iVar11 = iVar11 + 1;
             pFVar13 = pFVar13 + 4;
           } while (iVar11 < iVar10);
         }
-        std__string_append((char *)psVar2,0x5dc129);
+        std__string_append((char *)psVar2, 0x5dc129);
         iVar10 = *(int *)(self + 0x960);
       }
       local_3c = local_3c + 1;
@@ -357,7 +355,7 @@ void __thiscall FragmentLinker__CompileFragments(FragmentLinker *self)
   if (*(int *)(self + 0x9e0) != 0) {
     pcVar9 = "\n}\n";
   }
-  std__string_append((char *)psVar2,(ulong)pcVar9);
+  std__string_append((char *)psVar2, (ulong)pcVar9);
   return;
 }
 
@@ -391,12 +389,12 @@ void __thiscall FragmentLinker__CreateFromCache(FragmentLinker *self)
   uint32_t local_78;
   uint32_t local_74;
   uint8_t *local_70;
-  File local_68 [48];
-  int local_38 [4];
-  int local_28 [2];
+  File local_68[48];
+  int local_38[4];
+  int local_28[2];
   int local_20;
   int local_1c;
-  
+
   local_a8 = "pixel.cache";
   local_98 = 2;
   local_90 = 0;
@@ -411,24 +409,25 @@ void __thiscall FragmentLinker__CreateFromCache(FragmentLinker *self)
   local_74 = 0;
   local_70 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
   local_a0 = &DAT_005c328c /* R:u32=1811964530 */;
-  iVar3 = File__Exists(local_a8,0);
+  iVar3 = File__Exists(local_a8, 0);
   if (iVar3 != 1) {
     return;
   }
   *(uint32_t *)(self + 0x9cc) = 0;
-  File__File(local_68,(tagFileCreation *)&local_a8);
+  File__File(local_68, (tagFileCreation *)&local_a8);
   local_38[0] = 0;
-                    /* try { // try from 005872a1 to 00587442 has its CatchHandler @ 005874b5 */
-  File__ReadVariable(local_68,local_38,4);
+  /* try { // try from 005872a1 to 00587442 has its CatchHandler @ 005874b5 */
+  File__ReadVariable(local_68, local_38, 4);
   if (0 < local_38[0]) {
     iVar3 = 0;
     do {
-      while( true ) {
+      while (true) {
         local_28[0] = 0;
-        File__ReadVariable(local_68,local_28,4);
-        if (local_28[0] == -1) break;
+        File__ReadVariable(local_68, local_28, 4);
+        if (local_28[0] == -1)
+          break;
         local_20 = 0;
-        File__ReadVariable(local_68,&local_20,4);
+        File__ReadVariable(local_68, &local_20, 4);
         iVar4 = *(int *)(self + 0x960);
         iVar7 = iVar4 + 1;
         *(int *)(self + 0x960) = iVar7;
@@ -443,7 +442,7 @@ void __thiscall FragmentLinker__CreateFromCache(FragmentLinker *self)
           iVar7 = 0;
           do {
             local_1c = 0;
-            File__ReadVariable(local_68,&local_1c,4);
+            File__ReadVariable(local_68, &local_1c, 4);
             lVar6 = (long)*(int *)(self + 0x960);
             iVar7 = iVar7 + 1;
             iVar4 = *(int *)(self + lVar6 * 0x30 + 4);
@@ -451,31 +450,32 @@ void __thiscall FragmentLinker__CreateFromCache(FragmentLinker *self)
             *(int *)(self + lVar1 * 4 + 8) = local_1c;
             *(int *)(self + lVar6 * 0x30 + 4) = iVar4 + 1;
             *(int *)(self + 0x9c8) =
-                 local_1c + *(int *)(self + 0x9c8) + (int)self + 8 + (int)lVar1 * 4;
+                local_1c + *(int *)(self + 0x9c8) + (int)self + 8 + (int)lVar1 * 4;
           } while (iVar7 < local_28[0]);
         }
       }
       uVar2 = *(ushort *)(self + 0x9a0);
       if (*(int *)(self + 0x9e0) == 0) {
-        if (uVar2 == 0) goto LAB_0058743b;
+        if (uVar2 == 0)
+          goto LAB_0058743b;
         iVar4 = 0;
         iVar7 = **(int **)(self + 0x9b0);
         while (iVar7 != *(int *)(self + 0x9c8)) {
           iVar4 = iVar4 + 1;
-          if ((int)(uint)uVar2 <= iVar4) goto LAB_0058743b;
+          if ((int)(uint)uVar2 <= iVar4)
+            goto LAB_0058743b;
           iVar7 = (*(int **)(self + 0x9b0))[(ulong)(ushort)iVar4 * 4];
         }
-      }
-      else if (uVar2 == 0) {
-LAB_0058743b:
+      } else if (uVar2 == 0) {
+      LAB_0058743b:
         GetShader(self);
-      }
-      else {
+      } else {
         iVar4 = 0;
         iVar7 = **(int **)(self + 0x9b0);
         while (iVar7 != *(int *)(self + 0x9c8)) {
           iVar4 = iVar4 + 1;
-          if ((int)(uint)uVar2 <= iVar4) goto LAB_0058743b;
+          if ((int)(uint)uVar2 <= iVar4)
+            goto LAB_0058743b;
           iVar7 = (*(int **)(self + 0x9b0))[(ulong)(ushort)iVar4 * 4];
         }
       }
@@ -502,7 +502,7 @@ void __thiscall FragmentLinker__ResetCache(FragmentLinker *self)
 {
   ushort uVar1;
   long lVar2;
-  
+
   *(uint16_t *)(self + 0x9a0) = 0;
   if ((*(int *)(self + 0x9a8) == 1) && (uVar1 = *(ushort *)(self + 0x9a2), uVar1 != 0)) {
     lVar2 = 0;
@@ -527,7 +527,8 @@ void __thiscall FragmentLinker__ResetCache(FragmentLinker *self)
 /* WARNING: Removing unreachable block (ram,0x00587a96) */
 /* FragmentLinker__FragmentLinker__00587530(FragmentLinkerCreation const*) */
 
-void __thiscall FragmentLinker__FragmentLinker__00587530(FragmentLinker *self,FragmentLinkerCreation *arg1)
+void __thiscall FragmentLinker__FragmentLinker__00587530(FragmentLinker *self,
+                                                         FragmentLinkerCreation *arg1)
 
 {
   ulong uVar1;
@@ -565,13 +566,13 @@ void __thiscall FragmentLinker__FragmentLinker__00587530(FragmentLinker *self,Fr
   uint32_t local_b8;
   uint32_t local_b4;
   uint8_t *local_b0;
-  File local_a8 [4];
+  File local_a8[4];
   uint local_a4;
-  File local_78 [4];
+  File local_78[4];
   uint local_74;
   long local_48;
-  allocator local_3a [10];
-  
+  allocator local_3a[10];
+
   bVar11 = 0;
   pFVar6 = self;
   do {
@@ -608,12 +609,12 @@ void __thiscall FragmentLinker__FragmentLinker__00587530(FragmentLinker *self,Fr
   local_f0 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
   local_128 = "resources/Shaders/ShaderMacros.h";
   local_120 = &DAT_005c328c /* R:u32=1811964530 */;
-                    /* try { // try from 00587693 to 00587697 has its CatchHandler @ 005879c0 */
-  std__string_string((string *)&local_48,"resources/Shaders/",local_3a);
+  /* try { // try from 00587693 to 00587697 has its CatchHandler @ 005879c0 */
+  std__string_string((string *)&local_48, "resources/Shaders/", local_3a);
   __s = *(char **)arg1;
   strlen(__s);
-                    /* try { // try from 005876b2 to 005876b6 has its CatchHandler @ 00587b07 */
-  std__string_append((char *)&local_48,(ulong)__s);
+  /* try { // try from 005876b2 to 005876b6 has its CatchHandler @ 00587b07 */
+  std__string_append((char *)&local_48, (ulong)__s);
   local_d8 = 2;
   local_d0 = 0;
   pFVar6 = self + 0x9d0;
@@ -626,25 +627,25 @@ void __thiscall FragmentLinker__FragmentLinker__00587530(FragmentLinker *self,Fr
   local_b0 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
   local_e8 = local_48;
   local_e0 = &DAT_005c328c /* R:u32=1811964530 */;
-                    /* try { // try from 00587729 to 0058772d has its CatchHandler @ 00587b02 */
-  File__File(local_a8,(tagFileCreation *)&local_128);
-                    /* try { // try from 0058773b to 0058773f has its CatchHandler @ 00587afd */
-  File__File(local_78,(tagFileCreation *)&local_e8);
+  /* try { // try from 00587729 to 0058772d has its CatchHandler @ 00587b02 */
+  File__File(local_a8, (tagFileCreation *)&local_128);
+  /* try { // try from 0058773b to 0058773f has its CatchHandler @ 00587afd */
+  File__File(local_78, (tagFileCreation *)&local_e8);
   uVar3 = local_a4;
   if (local_a4 <= local_74) {
     uVar3 = local_74;
   }
   __ptr = malloc((ulong)(uVar3 + 1));
-                    /* try { // try from 0058776f to 00587931 has its CatchHandler @ 00587ace */
-  std__string_assign((char *)pFVar6,0x5dc17c);
-  File__Read(local_a8,__ptr,local_a4);
+  /* try { // try from 0058776f to 00587931 has its CatchHandler @ 00587ace */
+  std__string_assign((char *)pFVar6, 0x5dc17c);
+  File__Read(local_a8, __ptr, local_a4);
   *(uint8_t *)((long)__ptr + (ulong)local_a4) = 0;
   puVar8 = __ptr;
   do {
     uVar3 = *puVar8;
     puVar8 = puVar8 + 1;
   } while ((uVar3 + 0xfefefeff & ~uVar3 & 0x80808080) == 0);
-  std__string_append((char *)pFVar6,(ulong)__ptr);
+  std__string_append((char *)pFVar6, (ulong)__ptr);
   lVar7 = *(long *)(self + 0x9d0);
   lVar9 = *(long *)(lVar7 + -0x18);
   uVar1 = lVar9 + 1;
@@ -660,14 +661,14 @@ void __thiscall FragmentLinker__FragmentLinker__00587530(FragmentLinker *self,Fr
     *(ulong *)(puVar5 + -0x18) = uVar1;
     puVar5[uVar1] = 0;
   }
-  File__Read(local_78,__ptr,local_74);
+  File__Read(local_78, __ptr, local_74);
   *(uint8_t *)((long)__ptr + (ulong)local_74) = 0;
   puVar8 = __ptr;
   do {
     uVar3 = *puVar8;
     puVar8 = puVar8 + 1;
   } while ((uVar3 + 0xfefefeff & ~uVar3 & 0x80808080) == 0);
-  std__string_append((char *)pFVar6,(ulong)__ptr);
+  std__string_append((char *)pFVar6, (ulong)__ptr);
   lVar7 = *(long *)(self + 0x9d0);
   lVar9 = *(long *)(lVar7 + -0x18);
   uVar1 = lVar9 + 1;
@@ -696,8 +697,7 @@ void __thiscall FragmentLinker__FragmentLinker__00587530(FragmentLinker *self,Fr
     }
     *(uint8_t **)(self + 0x9e8) = strPixelShaderDeclLookup;
     *(uint64_t **)(self + 0xa00) = &pPixelDeclCounter;
-  }
-  else {
+  } else {
     *(uint8_t **)(self + 0x9f0) = strVertexShaderFragmentLookup;
     *(uint8_t **)(self + 0x9f8) = strVertexShaderParamLookup;
     puVar10 = &pVertexDeclCounter;
@@ -710,9 +710,9 @@ void __thiscall FragmentLinker__FragmentLinker__00587530(FragmentLinker *self,Fr
     *(uint32_t *)puVar10 = 0;
   }
   CreateFromCache(self);
-                    /* try { // try from 0058793a to 0058793e has its CatchHandler @ 00587afd */
+  /* try { // try from 0058793a to 0058793e has its CatchHandler @ 00587afd */
   File__File__005b7a70(local_78);
-                    /* try { // try from 00587947 to 0058794b has its CatchHandler @ 00587b02 */
+  /* try { // try from 00587947 to 0058794b has its CatchHandler @ 00587b02 */
   File__File__005b7a70(local_a8);
   if ((allocator *)(local_48 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
     LOCK();

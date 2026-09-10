@@ -21,8 +21,8 @@
 void __thiscall MeatBoyCharactor__Initialize(MeatBoyCharactor *self)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x00473cd7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x00473cd7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(*(long *)self + 0x60))();
   return;
 }
@@ -153,11 +153,11 @@ void __thiscall MeatBoyCharactor__CreateClones(MeatBoyCharactor *self)
   uint64_t uVar2;
   long lVar3;
   int iVar4;
-  
+
   iVar4 = 0;
   do {
     lVar1 = *(long *)(self + 0x7f0);
-    uVar2 = GSMBCharactor__CreateCharactor__0049c600(SMBCharactor,self,iVar4);
+    uVar2 = GSMBCharactor__CreateCharactor__0049c600(SMBCharactor, self, iVar4);
     lVar3 = (long)iVar4;
     iVar4 = iVar4 + 1;
     *(uint64_t *)(lVar1 + lVar3 * 8) = uVar2;
@@ -194,8 +194,8 @@ void __thiscall MeatBoyCharactor__Death(MeatBoyCharactor *self)
 /* MeatBoyCharactor__AddEffect__0047af00(tagSuperMeatBoyEffects, Vector2 const&, Vector2 const&) [clone
    .part.37] [clone .constprop.63] */
 
-void __thiscall
-MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg3,float *arg4)
+void __thiscall MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self, int arg2, float *arg3,
+                                                      float *arg4)
 
 {
   byte *pbVar1;
@@ -205,14 +205,14 @@ MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg
   int iVar5;
   long lVar6;
   float fVar7;
-  Matrix4x4 aMStack_78 [64];
+  Matrix4x4 aMStack_78[64];
   float local_38;
   float local_34;
   float local_30;
   uint32_t local_2c;
   float local_28;
   float local_24;
-  
+
   fVar7 = DAT_005c07a4 /* R:-1.0f */;
   puVar3 = *(ushort **)(self + 0x7e0);
   if ((puVar3 != (ushort *)0x0) && (*(int *)(self + 0xa40) == 0)) {
@@ -220,16 +220,14 @@ MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg
     if (fVar7 == *arg3) {
       pbVar1 = (byte *)(*(long *)(self + 0x7e0) + 1);
       *pbVar1 = *pbVar1 | 8;
-    }
-    else {
+    } else {
       pbVar1 = (byte *)(*(long *)(self + 0x7e0) + 1);
       *pbVar1 = *pbVar1 & 0xf7;
     }
     if (fVar7 == *arg4) {
       pbVar1 = (byte *)(*(long *)(self + 0x7e0) + 1);
       *pbVar1 = *pbVar1 | 0x10;
-    }
-    else {
+    } else {
       pbVar1 = (byte *)(*(long *)(self + 0x7e0) + 1);
       *pbVar1 = *pbVar1 & 0xef;
     }
@@ -248,8 +246,7 @@ MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg
         local_34 = arg3[1] * *(float *)(self + lVar6 * 0x10 + 0x18);
         local_38 = *arg3 * *(float *)(self + lVar6 * 0x10 + 0x14);
         local_30 = *(float *)(self + lVar6 * 0x10 + 0x1c);
-      }
-      else {
+      } else {
         lVar6 = lVar6 + 0x98;
         local_30 = *(float *)(self + lVar6 * 0x10 + 0x1c);
         local_38 = *(float *)(self + lVar6 * 0x10 + 0x14) * *arg3;
@@ -259,8 +256,8 @@ MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg
         if ((*(ushort *)(self + 0x7da) & 0x7ff) != 0) {
           fVar7 = DAT_005c07ac /* R:0.7853981852531433f */;
         }
-        Matrix4x4__ConvertToRotationMatrix(aMStack_78,fVar7);
-        Matrix4x4__TransformVector3((FPUVector *)&local_38,(FPUVector *)&local_38,aMStack_78,1);
+        Matrix4x4__ConvertToRotationMatrix(aMStack_78, fVar7);
+        Matrix4x4__TransformVector3((FPUVector *)&local_38, (FPUVector *)&local_38, aMStack_78, 1);
       }
       fVar7 = *(float *)(self + 0xa0);
       *(float *)(pMVar4 + 0xc) = fVar7;
@@ -270,14 +267,12 @@ MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg
       *(float *)(pMVar4 + 0x10) = fVar2 + local_34;
       local_24 = arg4[1] * local_30;
       local_28 = local_30 * *arg4;
-      Vector2__operator_assign((Vector2 *)(pMVar4 + 0x1c),(Vector2 *)&local_28);
+      Vector2__operator_assign((Vector2 *)(pMVar4 + 0x1c), (Vector2 *)&local_28);
       if (((byte)self[0x7d9] & 2) == 0) {
         *(uint32_t *)(pMVar4 + 0x24) = 0;
-      }
-      else if ((*(ushort *)(self + 0x7da) & 0x7ff) == 0) {
+      } else if ((*(ushort *)(self + 0x7da) & 0x7ff) == 0) {
         *(uint32_t *)(pMVar4 + 0x24) = 0xbf490fdb;
-      }
-      else {
+      } else {
         *(uint32_t *)(pMVar4 + 0x24) = 0x3f490fdb;
       }
       *(uint32_t *)(pMVar4 + 8) = 0;
@@ -321,14 +316,13 @@ void __thiscall MeatBoyCharactor__SpawnMovementEffect(MeatBoyCharactor *self)
   uint32_t local_24;
   uint32_t local_18;
   uint32_t local_14;
-  
+
   MVar2 = self[0x7d8];
   fVar4 = fOneFrameTimeStep + *(float *)(self + 0x810);
   *(float *)(self + 0x810) = fVar4;
   if (((byte)MVar2 & 0x40) == 0) {
     fVar1 = *(float *)(self + 0xa2c);
-  }
-  else {
+  } else {
     fVar1 = *(float *)(self + 0xa28);
   }
   bVar3 = fVar1 <= fVar4;
@@ -343,21 +337,19 @@ void __thiscall MeatBoyCharactor__SpawnMovementEffect(MeatBoyCharactor *self)
         local_28 = 0xbf800000;
         local_24 = 0x3f800000;
         if (((byte)self[0x7d9] & 0x40) == 0) {
-          AddEffect(self,5,&local_28,&local_18);
+          AddEffect(self, 5, &local_28, &local_18);
         }
-      }
-      else {
+      } else {
         local_38 = 0xbf800000;
         local_34 = 0x3f800000;
         local_48 = 0xbf800000;
         local_44 = 0x3f800000;
         if (((byte)self[0x7d9] & 0x40) == 0) {
-          AddEffect(self,6,&local_48,&local_38);
+          AddEffect(self, 6, &local_48, &local_38);
         }
       }
     }
-  }
-  else {
+  } else {
     self[0x7d8] = (MeatBoyCharactor)((byte)MVar2 | 1);
     if (bVar3) {
       if (((byte)MVar2 & 0x40) == 0) {
@@ -366,16 +358,15 @@ void __thiscall MeatBoyCharactor__SpawnMovementEffect(MeatBoyCharactor *self)
         local_68 = 0x3f800000;
         local_64 = 0x3f800000;
         if (((byte)self[0x7d9] & 0x40) == 0) {
-          AddEffect(self,5,&local_68,&local_58);
+          AddEffect(self, 5, &local_68, &local_58);
         }
-      }
-      else {
+      } else {
         local_78 = 0x3f800000;
         local_74 = 0x3f800000;
         local_88 = 0x3f800000;
         local_84 = 0x3f800000;
         if (((byte)self[0x7d9] & 0x40) == 0) {
-          AddEffect(self,6,&local_88,&local_78);
+          AddEffect(self, 6, &local_88, &local_78);
         }
       }
     }
@@ -392,7 +383,7 @@ void __thiscall MeatBoyCharactor__SpawnMovementEffect(MeatBoyCharactor *self)
  */
 /* MeatBoyCharactor__WallHit(tagTileCollisionType) */
 
-void __thiscall MeatBoyCharactor__WallHit(MeatBoyCharactor *self,int arg2)
+void __thiscall MeatBoyCharactor__WallHit(MeatBoyCharactor *self, int arg2)
 
 {
   MeatBoyCharactor MVar1;
@@ -408,48 +399,48 @@ void __thiscall MeatBoyCharactor__WallHit(MeatBoyCharactor *self,int arg2)
   uint32_t local_34;
   uint32_t local_28;
   uint32_t local_24;
-  
+
   MVar1 = self[0x7d8];
   if (((byte)MVar1 & 4) == 0) {
-    if (*(int *)(self + 0x7d4) == 9) goto LAB_0047440b;
+    if (*(int *)(self + 0x7d4) == 9)
+      goto LAB_0047440b;
     if (arg2 == 4) {
       local_48 = 0x3f800000;
       local_44 = 0x3f800000;
       local_58 = 0x3f800000;
       local_54 = 0x3f800000;
       if (((byte)self[0x7d9] & 0x40) == 0) {
-        AddEffect(self,2,&local_58,&local_48);
+        AddEffect(self, 2, &local_58, &local_48);
         iVar4 = *(int *)(self + 0x7d4);
         goto LAB_004743cd;
       }
-    }
-    else {
+    } else {
       local_28 = 0xbf800000;
       local_24 = 0x3f800000;
       local_38 = 0xbf800000;
       local_34 = 0x3f800000;
       if (((byte)self[0x7d9] & 0x40) == 0) {
-        AddEffect(self,2,&local_38,&local_28);
+        AddEffect(self, 2, &local_38, &local_28);
         goto LAB_004743c7;
       }
     }
-LAB_004743d2:
+  LAB_004743d2:
     lVar3 = *(long *)(self + 0xf8);
     self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar2 = *(ushort *)(lVar3 + 0x348);
     if (uVar2 != 0) {
-      uVar5 = GetRandomINT(0,uVar2 - 1);
+      uVar5 = GetRandomINT(0, uVar2 - 1);
     }
     *(uint32_t *)(lVar3 + 0x370) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
     *(uint32_t *)(self + 0xa50) = 0;
-  }
-  else {
-LAB_004743c7:
+  } else {
+  LAB_004743c7:
     iVar4 = *(int *)(self + 0x7d4);
-LAB_004743cd:
-    if (iVar4 != 9) goto LAB_004743d2;
+  LAB_004743cd:
+    if (iVar4 != 9)
+      goto LAB_004743d2;
   }
   MVar1 = self[0x7d8];
 LAB_0047440b:
@@ -487,7 +478,7 @@ void __thiscall MeatBoyCharactor__WallJump(MeatBoyCharactor *self)
   uint32_t local_34;
   uint32_t local_28;
   uint32_t local_24;
-  
+
   puVar6 = &local_58;
   iVar4 = (**(code **)(*(long *)self + 0xb0))();
   if (iVar4 == 0) {
@@ -495,14 +486,14 @@ void __thiscall MeatBoyCharactor__WallJump(MeatBoyCharactor *self)
   }
   *(uint32_t *)(self + 0xbc) = *(uint32_t *)(self + 0x8b4);
   *(float *)(self + 0xb8) =
-       *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
+      *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
   if (*(int *)(self + 0x7d4) != 6) {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x240);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x268) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
@@ -518,20 +509,21 @@ void __thiscall MeatBoyCharactor__WallJump(MeatBoyCharactor *self)
     local_34 = 0x3f800000;
     local_28 = 0xbf800000;
     local_24 = 0x3f800000;
-    if (((byte)MVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)MVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar6 = &local_38;
     puVar8 = &local_28;
-  }
-  else {
+  } else {
     MVar7 = self[0x7d9];
     local_58 = 0x3f800000;
     local_54 = 0x3f800000;
     local_48 = 0x3f800000;
     local_44 = 0x3f800000;
-    if (((byte)MVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)MVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar8 = &local_48;
   }
-  AddEffect(self,3,puVar8,puVar6);
+  AddEffect(self, 3, puVar8, puVar6);
   MVar3 = self[0x7d8];
   MVar7 = self[0x7d9];
 LAB_00474591:
@@ -556,17 +548,16 @@ void __thiscall MeatBoyCharactor__ForceAppear(MeatBoyCharactor *self)
   long lVar2;
   uint uVar3;
   FlashLibraryInstance *this_00;
-  
+
   if (*(int *)(self + 0x7d4) == 0x10) {
     uVar3 = *(uint *)(self + 0xa4c);
-  }
-  else {
+  } else {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
     uVar3 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x5b0);
     if (uVar1 != 0) {
-      uVar3 = GetRandomINT(0,uVar1 - 1);
+      uVar3 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint *)(lVar2 + 0x5d8) = uVar3;
     *(uint *)(self + 0xa4c) = uVar3;
@@ -575,15 +566,14 @@ void __thiscall MeatBoyCharactor__ForceAppear(MeatBoyCharactor *self)
   *(uint32_t *)(self + 0x7d4) = 0x10;
   lVar2 = *(long *)(self + 0xf8);
   if (uVar3 == 0xffffffff) {
-    this_00 = *(FlashLibraryInstance **)
-               (*(long *)(lVar2 + 0x5c0) + (ulong)*(ushort *)(lVar2 + 0x5d8) * 8);
-  }
-  else {
+    this_00 = *(FlashLibraryInstance **)(*(long *)(lVar2 + 0x5c0) +
+                                         (ulong) * (ushort *)(lVar2 + 0x5d8) * 8);
+  } else {
     this_00 = *(FlashLibraryInstance **)(*(long *)(lVar2 + 0x5c0) + (ulong)(uVar3 & 0xffff) * 8);
   }
   FlashLibraryInstance__Reset(this_00);
   GMeatHUD__ResetTimer(SMBHUD);
-  GMeatHUD__FreezeTimer(SMBHUD,1);
+  GMeatHUD__FreezeTimer(SMBHUD, 1);
   return;
 }
 
@@ -608,17 +598,16 @@ void __thiscall MeatBoyCharactor__GroundHit(MeatBoyCharactor *self)
   uint32_t local_34;
   uint32_t local_28;
   uint32_t local_24;
-  
+
   if (*(int *)(self + 0x7d4) == 0xf) {
     uVar4 = *(uint *)(self + 0xa4c);
-  }
-  else {
+  } else {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
     uVar4 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x558);
     if (uVar1 != 0) {
-      uVar4 = GetRandomINT(0,uVar1 - 1);
+      uVar4 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint *)(lVar2 + 0x580) = uVar4;
     *(uint *)(self + 0xa4c) = uVar4;
@@ -627,10 +616,9 @@ void __thiscall MeatBoyCharactor__GroundHit(MeatBoyCharactor *self)
   *(uint32_t *)(self + 0x7d4) = 0xf;
   lVar2 = *(long *)(self + 0xf8);
   if (uVar4 == 0xffffffff) {
-    this_00 = *(FlashLibraryInstance **)
-               (*(long *)(lVar2 + 0x568) + (ulong)*(ushort *)(lVar2 + 0x580) * 8);
-  }
-  else {
+    this_00 = *(FlashLibraryInstance **)(*(long *)(lVar2 + 0x568) +
+                                         (ulong) * (ushort *)(lVar2 + 0x580) * 8);
+  } else {
     this_00 = *(FlashLibraryInstance **)(*(long *)(lVar2 + 0x568) + (ulong)(uVar4 & 0xffff) * 8);
   }
   FlashLibraryInstance__Reset(this_00);
@@ -640,7 +628,7 @@ void __thiscall MeatBoyCharactor__GroundHit(MeatBoyCharactor *self)
   local_38 = 0x3f800000;
   local_34 = 0x3f800000;
   if (((byte)MVar3 & 0x40) == 0) {
-    AddEffect(self,0,&local_38,&local_28);
+    AddEffect(self, 0, &local_38, &local_28);
     MVar3 = self[0x7d9];
   }
   if (((byte)self[0x7d8] & 0x18) == 0) {
@@ -671,7 +659,7 @@ void __thiscall MeatBoyCharactor__Jump(MeatBoyCharactor *self)
   uint32_t local_34;
   uint32_t local_28;
   uint32_t local_24;
-  
+
   iVar4 = (**(code **)(*(long *)self + 0xa8))();
   if (iVar4 == 0) {
     return;
@@ -683,7 +671,7 @@ void __thiscall MeatBoyCharactor__Jump(MeatBoyCharactor *self)
     uVar5 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x240);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x268) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
@@ -696,7 +684,7 @@ void __thiscall MeatBoyCharactor__Jump(MeatBoyCharactor *self)
   local_28 = 0x3f800000;
   local_24 = 0x3f800000;
   if (((byte)MVar3 & 0x40) == 0) {
-    AddEffect(self,1,&local_28,&local_38);
+    AddEffect(self, 1, &local_28, &local_38);
     MVar3 = self[0x7d9];
   }
   *(uint32_t *)(self + 0x800) = 0;
@@ -727,10 +715,10 @@ void __thiscall MeatBoyCharactor__Reset(MeatBoyCharactor *self)
   uint uVar6;
   long lVar7;
   FlashLibraryInstance *this_01;
-  Vector2 local_d0 [8];
-  Vector2 local_c8 [8];
-  Vector2 local_c0 [8];
-  Vector2 local_b8 [8];
+  Vector2 local_d0[8];
+  Vector2 local_c8[8];
+  Vector2 local_c0[8];
+  Vector2 local_b8[8];
   uint32_t local_b0;
   uint64_t local_a8;
   uint64_t local_a0;
@@ -738,10 +726,10 @@ void __thiscall MeatBoyCharactor__Reset(MeatBoyCharactor *self)
   uint64_t local_90;
   uint32_t local_88;
   uint32_t local_84;
-  Vector2 local_80 [8];
-  Vector2 local_78 [8];
-  Vector2 local_70 [8];
-  Vector2 local_68 [8];
+  Vector2 local_80[8];
+  Vector2 local_78[8];
+  Vector2 local_70[8];
+  Vector2 local_68[8];
   uint32_t local_60;
   uint32_t local_58;
   uint32_t local_54;
@@ -752,17 +740,17 @@ void __thiscall MeatBoyCharactor__Reset(MeatBoyCharactor *self)
   uint32_t local_34;
   uint32_t local_28;
   uint32_t local_24;
-  
+
   lVar7 = SuperMeatBoy;
   if (((byte)self[0x7db] & 0x10) != 0) {
     pVVar1 = (Vector2 *)(self + 0xa0);
     *(uint32_t *)(self + 0xbc) = 0;
     *(uint32_t *)(self + 0xb8) = 0;
-    Vector2__operator_assign(pVVar1,(Vector2 *)(*(long *)(lVar7 + 0x40) + 0x22a8));
-    Vector2__operator_assign((Vector2 *)(self + 0x868),pVVar1);
+    Vector2__operator_assign(pVVar1, (Vector2 *)(*(long *)(lVar7 + 0x40) + 0x22a8));
+    Vector2__operator_assign((Vector2 *)(self + 0x868), pVVar1);
     local_38 = *(uint32_t *)(self + 0x8d0);
     local_34 = local_38;
-    BoundingSquare__Change((BoundingSquare *)(self + 0x740),(Vector2 *)&local_38,0.0,pVVar1);
+    BoundingSquare__Change((BoundingSquare *)(self + 0x740), (Vector2 *)&local_38, 0.0, pVVar1);
     *(uint64_t *)(self + 0x818) = 0;
     *(uint64_t *)(self + 0x820) = 0;
     *(uint64_t *)(self + 0x828) = 0;
@@ -770,23 +758,23 @@ void __thiscall MeatBoyCharactor__Reset(MeatBoyCharactor *self)
     *(uint32_t *)(self + 0x838) = 0;
     *(uint32_t *)(self + 0x83c) = 0;
     local_b0 = 1;
-    Vector2__operator_assign((Vector2 *)(self + 0x840),local_d0);
-    Vector2__operator_assign((Vector2 *)(self + 0x848),local_c8);
-    Vector2__operator_assign((Vector2 *)(self + 0x850),local_c0);
-    Vector2__operator_assign((Vector2 *)(self + 0x858),local_b8);
+    Vector2__operator_assign((Vector2 *)(self + 0x840), local_d0);
+    Vector2__operator_assign((Vector2 *)(self + 0x848), local_c8);
+    Vector2__operator_assign((Vector2 *)(self + 0x850), local_c0);
+    Vector2__operator_assign((Vector2 *)(self + 0x858), local_b8);
     *(uint32_t *)(self + 0x860) = local_b0;
     return;
   }
   if ((*(int *)(self + 0xa40) == 0) && (((byte)self[0x7d9] & 1) != 0)) {
-    local_50 = (MeatBoyCharactor *)
-               (CONCAT17((char)SMBCurrLevelData._4_4_,(uint7)*(uint *)(SMBHUD + 0x418)) &
-               0x1ffffffffffffff);
+    local_50 = (MeatBoyCharactor *)(CONCAT17((char)SMBCurrLevelData._4_4_,
+                                             (uint7) * (uint *)(SMBHUD + 0x418)) &
+                                    0x1ffffffffffffff);
     local_48 = *(uint64_t *)(SuperMeatBoyEditor + 0x100);
-    local_40 = CONCAT44(local_40._4_4_,*(uint32_t *)(Engine + 8));
+    local_40 = CONCAT44(local_40._4_4_, *(uint32_t *)(Engine + 8));
     local_58 = *(uint32_t *)(self + 0xa0);
-    local_50 = (MeatBoyCharactor *)
-               CONCAT35(CONCAT21(local_50._6_2_,(char)*(uint32_t *)(self + 0x7f8) + '\x01'),
-                        CONCAT14((char)*(uint32_t *)(self + 0xa54),(uint32_t)local_50));
+    local_50 = (MeatBoyCharactor *)CONCAT35(
+        CONCAT21(local_50._6_2_, (char)*(uint32_t *)(self + 0x7f8) + '\x01'),
+        CONCAT14((char)*(uint32_t *)(self + 0xa54), (uint32_t)local_50));
     local_54 = local_58;
     ShowMonitorMessage((SMBMonitorMessage *)&local_58);
   }
@@ -799,13 +787,13 @@ void __thiscall MeatBoyCharactor__Reset(MeatBoyCharactor *self)
   pVVar1 = (Vector2 *)(self + 0xa0);
   *(uint32_t *)(self + 0xbc) = 0;
   *(uint32_t *)(self + 0xb8) = 0;
-  Vector2__operator_assign(pVVar1,(Vector2 *)(*(long *)(lVar3 + 0x40) + 0x22a8));
+  Vector2__operator_assign(pVVar1, (Vector2 *)(*(long *)(lVar3 + 0x40) + 0x22a8));
   *(uint32_t *)(self + 0xf0) = 0;
   *(uint32_t *)(self + 0xec) = 0;
-  Vector2__operator_assign((Vector2 *)(self + 0x868),pVVar1);
+  Vector2__operator_assign((Vector2 *)(self + 0x868), pVVar1);
   local_28 = *(uint32_t *)(self + 0x8d0);
   local_24 = local_28;
-  BoundingSquare__Change((BoundingSquare *)(self + 0x740),(Vector2 *)&local_28,0.0,pVVar1);
+  BoundingSquare__Change((BoundingSquare *)(self + 0x740), (Vector2 *)&local_28, 0.0, pVVar1);
   *(uint64_t *)(self + 0x818) = 0;
   *(uint64_t *)(self + 0x820) = 0;
   *(uint64_t *)(self + 0x828) = 0;
@@ -819,10 +807,10 @@ void __thiscall MeatBoyCharactor__Reset(MeatBoyCharactor *self)
   local_88 = 0;
   local_84 = 0;
   local_60 = 1;
-  Vector2__operator_assign((Vector2 *)(self + 0x840),local_80);
-  Vector2__operator_assign((Vector2 *)(self + 0x848),local_78);
-  Vector2__operator_assign((Vector2 *)(self + 0x850),local_70);
-  Vector2__operator_assign((Vector2 *)(self + 0x858),local_68);
+  Vector2__operator_assign((Vector2 *)(self + 0x840), local_80);
+  Vector2__operator_assign((Vector2 *)(self + 0x848), local_78);
+  Vector2__operator_assign((Vector2 *)(self + 0x850), local_70);
+  Vector2__operator_assign((Vector2 *)(self + 0x858), local_68);
   this_00 = SMBHUD;
   *(uint32_t *)(self + 0x860) = local_60;
   GMeatHUD__ResetTimer(this_00);
@@ -836,22 +824,22 @@ void __thiscall MeatBoyCharactor__Reset(MeatBoyCharactor *self)
       SMBAnimals__Reset(*(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8));
       ResetSMBBoss();
       MVar4 = self[0x7d9];
-      if (*(int *)(self + 0xa40) != 0) goto LAB_00474ba3;
+      if (*(int *)(self + 0xa40) != 0)
+        goto LAB_00474ba3;
     }
     if (((byte)MVar4 & 1) != 0) {
-      ScreenFlashManager__SetFlash
-                ((ScreenFlashManager *)&ScreenFlash,DAT_005c07b0 /* R:0.009999999776482582f */,DAT_005be6e8 /* R:0.25f */,
-                 (ColorTemplate *)::cBlack);
+      ScreenFlashManager__SetFlash((ScreenFlashManager *)&ScreenFlash,
+                                   DAT_005c07b0 /* R:0.009999999776482582f */,
+                                   DAT_005be6e8 /* R:0.25f */, (ColorTemplate *)::cBlack);
       if (*(int *)(self + 0x7d4) == 0x10) {
         uVar6 = *(uint *)(self + 0xa4c);
-      }
-      else {
+      } else {
         lVar7 = *(long *)(self + 0xf8);
         self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
         uVar6 = 0;
         uVar2 = *(ushort *)(lVar7 + 0x5b0);
         if (uVar2 != 0) {
-          uVar6 = GetRandomINT(0,uVar2 - 1);
+          uVar6 = GetRandomINT(0, uVar2 - 1);
         }
         *(uint *)(lVar7 + 0x5d8) = uVar6;
         *(uint *)(self + 0xa4c) = uVar6;
@@ -860,16 +848,15 @@ void __thiscall MeatBoyCharactor__Reset(MeatBoyCharactor *self)
       *(uint32_t *)(self + 0x7d4) = 0x10;
       lVar7 = *(long *)(self + 0xf8);
       if (uVar6 == 0xffffffff) {
-        this_01 = *(FlashLibraryInstance **)
-                   (*(long *)(lVar7 + 0x5c0) + (ulong)*(ushort *)(lVar7 + 0x5d8) * 8);
-      }
-      else {
-        this_01 = *(FlashLibraryInstance **)(*(long *)(lVar7 + 0x5c0) + (ulong)(uVar6 & 0xffff) * 8)
-        ;
+        this_01 = *(FlashLibraryInstance **)(*(long *)(lVar7 + 0x5c0) +
+                                             (ulong) * (ushort *)(lVar7 + 0x5d8) * 8);
+      } else {
+        this_01 =
+            *(FlashLibraryInstance **)(*(long *)(lVar7 + 0x5c0) + (ulong)(uVar6 & 0xffff) * 8);
       }
       FlashLibraryInstance__Reset(this_01);
       GMeatHUD__ResetTimer(SMBHUD);
-      GMeatHUD__FreezeTimer(SMBHUD,1);
+      GMeatHUD__FreezeTimer(SMBHUD, 1);
       iVar5 = *(int *)(self + 0x7f8);
       *(int *)(self + 0x7f8) = iVar5 + 1;
       if (iVar5 + 1 == 0x14) {
@@ -878,16 +865,15 @@ void __thiscall MeatBoyCharactor__Reset(MeatBoyCharactor *self)
       iVar5 = *(int *)(SuperMeatBoy + 0x294);
       if (((1 < iVar5) && (iVar5 != 10)) && (iVar5 != 3)) {
         if (*(uint *)(self + 0x7f8) < 3) {
-          SMBChapter__ShowLivesScreen((SMBChapter *)(SuperMeatBoy + 0x90),*(uint *)(self + 0x7f8));
-        }
-        else {
+          SMBChapter__ShowLivesScreen((SMBChapter *)(SuperMeatBoy + 0x90), *(uint *)(self + 0x7f8));
+        } else {
           SMBChapter__ShowGameOverScreen((SMBChapter *)(SuperMeatBoy + 0x90));
         }
       }
     }
     local_50 = self + 0x7f8;
     local_58 = 0;
-    local_48 = CONCAT44(local_48._4_4_,4);
+    local_48 = CONCAT44(local_48._4_4_, 4);
     local_40 = TPlayer__GetProfile((TPlayer *)Players__Player);
     BroadcastString__SetBroadcastStringParam((BroadcastStringParam *)&local_58);
     iVar5 = GSMBMenu__IsInReplayMode(SMBMenu);
@@ -926,7 +912,7 @@ void __thiscall MeatBoyCharactor__MeatBoyCharactor__00476510(MeatBoyCharactor *s
   int iVar4;
   long lVar5;
   MeatBoyCharactor *pMVar6;
-  
+
   *(uint8_t ***)self = &PTR__MeatBoyCharactor_005c05f0;
   if (*(int *)(self + 0xa40) == 0) {
     pvVar3 = *(void **)(self + 0x7f0);
@@ -934,7 +920,7 @@ void __thiscall MeatBoyCharactor__MeatBoyCharactor__00476510(MeatBoyCharactor *s
       lVar5 = 0;
       do {
         if (*(long **)((long)pvVar3 + lVar5) != (long *)0x0) {
-                    /* try { // try from 004763ed to 00476461 has its CatchHandler @ 004764a1 */
+          /* try { // try from 004763ed to 00476461 has its CatchHandler @ 004764a1 */
           (**(code **)(**(long **)((long)pvVar3 + lVar5) + 8))();
         }
         lVar5 = lVar5 + 8;
@@ -952,7 +938,7 @@ void __thiscall MeatBoyCharactor__MeatBoyCharactor__00476510(MeatBoyCharactor *s
   iVar4 = 0;
   do {
     if (*(long *)pMVar6 != 0) {
-      TAudio__RemoveInstanceByPosition(Audio,(FPUVector *)(self + (long)iVar4 * 0x28 + 0x10c));
+      TAudio__RemoveInstanceByPosition(Audio, (FPUVector *)(self + (long)iVar4 * 0x28 + 0x10c));
     }
     iVar4 = iVar4 + 1;
     pMVar6 = pMVar6 + 0x28;
@@ -968,7 +954,7 @@ void __thiscall MeatBoyCharactor__MeatBoyCharactor__00476510(MeatBoyCharactor *s
       std__string_Rep_M_destroy(paVar1);
     }
   }
-                    /* try { // try from 0047648b to 0047648f has its CatchHandler @ 004764ce */
+  /* try { // try from 0047648b to 0047648f has its CatchHandler @ 004764ce */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x880));
   SceneObject2D__SceneObject2D__0059b220((SceneObject2D *)self);
   return;
@@ -1012,11 +998,11 @@ void __thiscall MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *s
   uint32_t local_24;
   uint32_t local_18;
   uint32_t local_14;
-  
+
   *(uint64_t *)(self + 0x48) = 0;
   *(uint32_t *)(self + 0x50) = 1;
   *(uint8_t ***)self = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 00476552 to 00476556 has its CatchHandler @ 00476956 */
+  /* try { // try from 00476552 to 00476556 has its CatchHandler @ 00476956 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x58));
   uVar3 = vDefaultStart2D;
   pMVar1 = self + 0x10c;
@@ -1065,9 +1051,9 @@ void __thiscall MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *s
   local_14 = 0x3f000000;
   local_28 = 0;
   local_24 = 0;
-                    /* try { // try from 00476710 to 00476830 has its CatchHandler @ 00476965 */
-  BoundingSquare__BoundingSquare
-            ((BoundingSquare *)(self + 0x740),(Vector2 *)&local_28,0.0,(Vector2 *)&local_18);
+  /* try { // try from 00476710 to 00476830 has its CatchHandler @ 00476965 */
+  BoundingSquare__BoundingSquare((BoundingSquare *)(self + 0x740), (Vector2 *)&local_28, 0.0,
+                                 (Vector2 *)&local_18);
   uVar2 = *(ushort *)(self + 0x7da);
   self[0x7d9] = (MeatBoyCharactor)((byte)self[0x7d9] & 0xb4);
   *(uint32_t *)(self + 0x7d4) = 0;
@@ -1120,9 +1106,9 @@ void __thiscall MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *s
   *(uint32_t *)(self + 0xa4c) = 0;
   *(uint32_t *)(self + 0xa50) = 0;
   *(uint8_t **)(self + 0xa58) = &DAT_008184c8 /* R:0.00016803004837129265f */;
-  *(uint8_t (*) [16])(self + 0xa60) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0xa70) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0xa80) = (uint8_t  [16])0x0;
+  *(uint8_t (*)[16])(self + 0xa60) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0xa70) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0xa80) = (uint8_t[16])0x0;
   return;
 }
 
@@ -1135,8 +1121,7 @@ void __thiscall MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *s
  */
 /* MeatBoyCharactor__Clone(MeatBoyCharactor*, int) */
 
-void __thiscall
-MeatBoyCharactor__Clone(MeatBoyCharactor *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall MeatBoyCharactor__Clone(MeatBoyCharactor *self, MeatBoyCharactor *arg1, int arg2)
 
 {
   uint64_t uVar1;
@@ -1145,10 +1130,10 @@ MeatBoyCharactor__Clone(MeatBoyCharactor *self,MeatBoyCharactor *arg1,int arg2)
   MeatBoyCharactor *this_01;
   MeatBoyCharactor *pMVar3;
   uint32_t local_108;
-  Matrix4x4 local_104 [64];
-  Matrix4x4 local_c4 [64];
-  Vector2 local_84 [8];
-  Vector2 local_7c [20];
+  Matrix4x4 local_104[64];
+  Matrix4x4 local_c4[64];
+  Vector2 local_84[8];
+  Vector2 local_7c[20];
   uint32_t local_68;
   uint32_t local_64;
   uint32_t local_58;
@@ -1157,7 +1142,7 @@ MeatBoyCharactor__Clone(MeatBoyCharactor *self,MeatBoyCharactor *arg1,int arg2)
   uint32_t local_44;
   uint32_t local_38;
   uint32_t local_34;
-  
+
   *(uint32_t *)(self + 0xa40) = 1;
   *(int *)(self + 0xa90) = arg2;
   *(uint64_t *)(self + 0xa38) = *(uint64_t *)(arg1 + 0xa38);
@@ -1176,7 +1161,7 @@ MeatBoyCharactor__Clone(MeatBoyCharactor *self,MeatBoyCharactor *arg1,int arg2)
   this_01 = self + 0x8d4;
   do {
     pMVar3 = this_01 + 8;
-    Vector2__operator_assign((Vector2 *)this_01,(Vector2 *)(this_01 + ((long)arg1 - (long)self)));
+    Vector2__operator_assign((Vector2 *)this_01, (Vector2 *)(this_01 + ((long)arg1 - (long)self)));
     this_01 = pMVar3;
   } while (pMVar3 != self + 0x994);
   if ((self + 0x9a4 < arg1 + 0x994) || (arg1 + 0x9a4 < pMVar3)) {
@@ -1207,8 +1192,7 @@ MeatBoyCharactor__Clone(MeatBoyCharactor *self,MeatBoyCharactor *arg1,int arg2)
     uVar1 = *(uint64_t *)(arg1 + 0xa1c);
     *(uint64_t *)(self + 0xa14) = *(uint64_t *)(arg1 + 0xa14);
     *(uint64_t *)(self + 0xa1c) = uVar1;
-  }
-  else {
+  } else {
     *(uint32_t *)(self + 0x994) = *(uint32_t *)(arg1 + 0x994);
     *(uint32_t *)(self + 0x998) = *(uint32_t *)(arg1 + 0x998);
     *(uint32_t *)(self + 0x99c) = *(uint32_t *)(arg1 + 0x99c);
@@ -1262,8 +1246,8 @@ MeatBoyCharactor__Clone(MeatBoyCharactor *self,MeatBoyCharactor *arg1,int arg2)
     *(uint64_t *)(this_00 + -0x10) = 0x94;
     *(void **)(this_00 + -8) = pvVar2;
   }
-                    /* try { // try from 00476c4d to 00476c51 has its CatchHandler @ 00476ed1 */
-  BoundingSquare__BoundingSquare(this_00,(Vector2 *)&local_68,0.0,(Vector2 *)&local_58);
+  /* try { // try from 00476c4d to 00476c51 has its CatchHandler @ 00476ed1 */
+  BoundingSquare__BoundingSquare(this_00, (Vector2 *)&local_68, 0.0, (Vector2 *)&local_58);
   *(BoundingSquare **)(self + 0x48) = this_00;
   *(uint32_t *)(self + 0xd4) = *(uint32_t *)(self + 0x8c8);
   *(uint32_t *)(self + 0xd0) = *(uint32_t *)(self + 0x8c8);
@@ -1271,13 +1255,13 @@ MeatBoyCharactor__Clone(MeatBoyCharactor *self,MeatBoyCharactor *arg1,int arg2)
   local_38 = *(uint32_t *)(self + 0x8d0);
   local_44 = 0;
   local_34 = local_38;
-  BoundingSquare__BoundingSquare
-            ((BoundingSquare *)&local_108,(Vector2 *)&local_48,0.0,(Vector2 *)&local_38);
+  BoundingSquare__BoundingSquare((BoundingSquare *)&local_108, (Vector2 *)&local_48, 0.0,
+                                 (Vector2 *)&local_38);
   *(uint32_t *)(self + 0x740) = local_108;
-  Matrix4x4__operator_assign((Matrix4x4 *)(self + 0x744),local_104);
-  Matrix4x4__operator_assign((Matrix4x4 *)(self + 0x784),local_c4);
-  Vector2__operator_assign((Vector2 *)(self + 0x7c4),local_84);
-  Vector2__operator_assign((Vector2 *)(self + 0x7cc),local_7c);
+  Matrix4x4__operator_assign((Matrix4x4 *)(self + 0x744), local_104);
+  Matrix4x4__operator_assign((Matrix4x4 *)(self + 0x784), local_c4);
+  Vector2__operator_assign((Vector2 *)(self + 0x7c4), local_84);
+  Vector2__operator_assign((Vector2 *)(self + 0x7cc), local_7c);
   return;
 }
 
@@ -1290,20 +1274,20 @@ MeatBoyCharactor__Clone(MeatBoyCharactor *self,MeatBoyCharactor *arg1,int arg2)
  */
 /* MeatBoyCharactor__SetState(tagSuperMeatBoyState) */
 
-void __thiscall MeatBoyCharactor__SetState(MeatBoyCharactor *self,int arg2)
+void __thiscall MeatBoyCharactor__SetState(MeatBoyCharactor *self, int arg2)
 
 {
   long lVar1;
   ushort uVar2;
   uint32_t uVar3;
-  
+
   if (arg2 != *(int *)(self + 0x7d4)) {
     self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
     uVar3 = 0;
     lVar1 = *(long *)(self + 0xf8) + (long)arg2 * 0x58;
     uVar2 = *(ushort *)(lVar1 + 0x30);
     if (uVar2 != 0) {
-      uVar3 = GetRandomINT(0,uVar2 - 1);
+      uVar3 = GetRandomINT(0, uVar2 - 1);
     }
     *(uint32_t *)(lVar1 + 0x58) = uVar3;
     *(uint32_t *)(self + 0xa4c) = uVar3;
@@ -1354,7 +1338,7 @@ void __thiscall MeatBoyCharactor__Update(MeatBoyCharactor *self)
   float fVar25;
   float local_310;
   byte local_30c;
-  BoundingSquare local_2f8 [80];
+  BoundingSquare local_2f8[80];
   uint32_t local_2a8;
   uint32_t local_298;
   uint64_t local_258;
@@ -1364,22 +1348,22 @@ void __thiscall MeatBoyCharactor__Update(MeatBoyCharactor *self)
   int local_238;
   int local_234;
   uint32_t local_210;
-  AutoLockSection local_208 [16];
+  AutoLockSection local_208[16];
   uint32_t local_1f8;
   uint32_t local_1f4;
-  Vector2 local_1e8 [16];
+  Vector2 local_1e8[16];
   uint64_t local_1d8;
-  Vector2 local_1c8 [16];
-  Vector2 local_1b8 [16];
-  Vector2 local_1a8 [16];
-  Vector2 local_198 [16];
-  Vector2 local_188 [16];
-  Vector2 local_178 [16];
-  Vector2 local_168 [16];
-  Vector2 local_158 [16];
-  Vector2 local_148 [16];
-  Vector2 local_138 [16];
-  uint64_t local_128 [2];
+  Vector2 local_1c8[16];
+  Vector2 local_1b8[16];
+  Vector2 local_1a8[16];
+  Vector2 local_198[16];
+  Vector2 local_188[16];
+  Vector2 local_178[16];
+  Vector2 local_168[16];
+  Vector2 local_158[16];
+  Vector2 local_148[16];
+  Vector2 local_138[16];
+  uint64_t local_128[2];
   uint32_t local_118;
   uint32_t local_114;
   uint32_t local_108;
@@ -1388,57 +1372,56 @@ void __thiscall MeatBoyCharactor__Update(MeatBoyCharactor *self)
   uint32_t local_f4;
   float local_e8;
   uint32_t local_e4;
-  float local_d8 [4];
-  float local_c8 [4];
-  Vector2 local_b8 [16];
-  Vector2 local_a8 [16];
+  float local_d8[4];
+  float local_c8[4];
+  Vector2 local_b8[16];
+  Vector2 local_a8[16];
   float local_98;
   uint32_t local_94;
-  Vector2 local_88 [16];
-  Vector2 local_78 [16];
-  Vector2 local_68 [16];
-  Vector2 local_58 [16];
-  int local_48 [3];
-  int local_3c [3];
-  
+  Vector2 local_88[16];
+  Vector2 local_78[16];
+  Vector2 local_68[16];
+  Vector2 local_58[16];
+  int local_48[3];
+  int local_3c[3];
+
   bVar22 = 0;
-  AutoLockSection__AutoLockSection(local_208,(CriticalSection *)(self + 0x880));
+  AutoLockSection__AutoLockSection(local_208, (CriticalSection *)(self + 0x880));
   self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] & 0xf7);
-                    /* try { // try from 004770ab to 004770af has its CatchHandler @ 00479545 */
-  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette,0x3f);
+  /* try { // try from 004770ab to 004770af has its CatchHandler @ 00479545 */
+  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette, 0x3f);
   if ((char)self[0x7db] < '\0') {
     self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] & 0x7f);
-                    /* try { // try from 004777cf to 004778ac has its CatchHandler @ 00479545 */
+    /* try { // try from 004777cf to 004778ac has its CatchHandler @ 00479545 */
     (**(code **)(*(long *)self + 0x68))(self);
   }
   self[0x7d9] = (MeatBoyCharactor)((byte)self[0x7d9] & 0x7f | ((byte)self[0x7d9] >> 6) << 7);
   if (*(int *)(self + 0x7d4) == 0xe) {
-LAB_004775c1:
+  LAB_004775c1:
     *(uint64_t *)(self + 0x7e0) = 0;
-  }
-  else if (*(int *)(self + 0x7d4) == 0x10) {
+  } else if (*(int *)(self + 0x7d4) == 0x10) {
     lVar12 = *(long *)(self + 0xf8);
     if (*(uint *)(self + 0xa4c) == 0xffffffff) {
-      pFVar18 = *(FlashLibraryInstance **)
-                 (*(long *)(lVar12 + 0x5c0) + (ulong)*(ushort *)(lVar12 + 0x5d8) * 8);
+      pFVar18 = *(FlashLibraryInstance **)(*(long *)(lVar12 + 0x5c0) +
+                                           (ulong) * (ushort *)(lVar12 + 0x5d8) * 8);
+    } else {
+      pFVar18 = *(FlashLibraryInstance **)(*(long *)(lVar12 + 0x5c0) +
+                                           (ulong)(*(uint *)(self + 0xa4c) & 0xffff) * 8);
     }
-    else {
-      pFVar18 = *(FlashLibraryInstance **)
-                 (*(long *)(lVar12 + 0x5c0) + (ulong)(*(uint *)(self + 0xa4c) & 0xffff) * 8);
-    }
-                    /* try { // try from 004775b4 to 00477796 has its CatchHandler @ 00479545 */
+    /* try { // try from 004775b4 to 00477796 has its CatchHandler @ 00479545 */
     iVar5 = FlashLibraryInstance__IsPlaying(pFVar18);
-    if (iVar5 != 0) goto LAB_004775c1;
-                    /* try { // try from 00478450 to 004784a6 has its CatchHandler @ 00479545 */
-    GMeatHUD__FreezeTimer(SMBHUD,0);
+    if (iVar5 != 0)
+      goto LAB_004775c1;
+    /* try { // try from 00478450 to 004784a6 has its CatchHandler @ 00479545 */
+    GMeatHUD__FreezeTimer(SMBHUD, 0);
     if (*(int *)(self + 0x7d4) != 0) {
       lVar12 = *(long *)(self + 0xf8);
       self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
       uVar7 = 0;
       uVar13 = *(ushort *)(lVar12 + 0x30);
       if (uVar13 != 0) {
-                    /* try { // try from 00478fe8 to 00478fec has its CatchHandler @ 00479545 */
-        uVar7 = GetRandomINT(0,uVar13 - 1);
+        /* try { // try from 00478fe8 to 00478fec has its CatchHandler @ 00479545 */
+        uVar7 = GetRandomINT(0, uVar13 - 1);
       }
       *(uint32_t *)(lVar12 + 0x58) = uVar7;
       *(uint32_t *)(self + 0xa4c) = uVar7;
@@ -1447,9 +1430,9 @@ LAB_004775c1:
     *(uint32_t *)(self + 0x7d4) = 0;
     uVar15 = SMBReplay__StartReplayFrame(*(SMBReplay **)(self + 0xa38));
     *(uint64_t *)(self + 0x7e0) = uVar15;
-  }
-  else {
-    if (*(int *)(self + 0xa40) == 1) goto LAB_00477797;
+  } else {
+    if (*(int *)(self + 0xa40) == 1)
+      goto LAB_00477797;
     if (*(int *)(self + 0xa40) == 0) {
       uVar15 = SMBReplay__StartReplayFrame(*(SMBReplay **)(self + 0xa38));
       *(uint64_t *)(self + 0x7e0) = uVar15;
@@ -1464,29 +1447,30 @@ LAB_004775c1:
             pSVar17 = *(SMBReplay **)(self + 0xa38);
             iVar5 = iVar5 + 1;
           } while (iVar5 < *(int *)(pSVar17 + 0x34));
-          if (*(int *)(self + 0xa40) != 0) goto LAB_00477113;
+          if (*(int *)(self + 0xa40) != 0)
+            goto LAB_00477113;
         }
         MVar2 = self[0x7d8];
         if (((byte)MVar2 & 0x40) != 0) {
-          SMBReplay__RegisterInput(pSVar17,1);
+          SMBReplay__RegisterInput(pSVar17, 1);
           MVar2 = self[0x7d8];
         }
         if (((byte)MVar2 & 0x20) != 0) {
-          SMBReplay__RegisterInput(*(SMBReplay **)(self + 0xa38),2);
+          SMBReplay__RegisterInput(*(SMBReplay **)(self + 0xa38), 2);
         }
         if (*(int *)(self + 0xa40) == 0) {
           (**(code **)(*(long *)self + 0xb8))(self);
           *(float *)(self + 0x7fc) = *(float *)(self + 0x7fc) + *(float *)(Engine + 0x38);
           if ((*(int *)(self + 0xa40) == 0) && (*(int *)(*(long *)(self + 0xa38) + 0x2c8) == 0))
-          goto LAB_00477797;
+            goto LAB_00477797;
         }
       }
-    }
-    else {
+    } else {
       *(uint64_t *)(self + 0x7e0) = 0;
     }
-LAB_00477113:
-    if (((byte)self[0x7db] & 0x40) != 0) goto LAB_00477797;
+  LAB_00477113:
+    if (((byte)self[0x7db] & 0x40) != 0)
+      goto LAB_00477797;
     uVar7 = 0xbf800000;
     local_30c = (byte)self[0x7d8] & 1;
     if (((byte)self[0x7d8] & 1) != 0) {
@@ -1498,14 +1482,14 @@ LAB_00477113:
       Update()::vRight._0_4_ = 0x3f800000;
       Update()::vRight._4_4_ = 0;
       __cxa_guard_release(&Update()::vRight);
-      __cxa_atexit(Vector2__Vector2,&Update()::vRight,&__dso_handle);
+      __cxa_atexit(Vector2__Vector2, &Update()::vRight, &__dso_handle);
     }
     if ((Update()::vDiagonalUp == '\0') &&
-       (iVar5 = __cxa_guard_acquire(&Update()::vDiagonalUp), iVar5 != 0)) {
+        (iVar5 = __cxa_guard_acquire(&Update()::vDiagonalUp), iVar5 != 0)) {
       Update()::vDiagonalUp = 0x3f800000;
       _DAT_008190c4 /* R:0.0f */ = 0x3f800000;
       __cxa_guard_release(&Update()::vDiagonalUp);
-      __cxa_atexit(Vector2__Vector2,&Update()::vDiagonalUp,&__dso_handle);
+      __cxa_atexit(Vector2__Vector2, &Update()::vDiagonalUp, &__dso_handle);
     }
     puVar14 = (uint64_t *)(*(long *)(SuperMeatBoy + 0x38) + 0x140);
     pBVar16 = local_2f8;
@@ -1517,21 +1501,21 @@ LAB_00477113:
     *(uint32_t *)pBVar16 = *(uint32_t *)puVar14;
     local_1f8 = local_2a8;
     local_1f4 = local_298;
-                    /* try { // try from 004771ae to 004771e3 has its CatchHandler @ 00479555 */
-    Vector2__operator_mul__005be200(local_1e8,DAT_005c07b4 /* R:1.149999976158142f */);
-    BoundingSquare__Change(local_2f8,local_1e8,0.0,(Vector2 *)&local_1f8);
+    /* try { // try from 004771ae to 004771e3 has its CatchHandler @ 00479555 */
+    Vector2__operator_mul__005be200(local_1e8, DAT_005c07b4 /* R:1.149999976158142f */);
+    BoundingSquare__Change(local_2f8, local_1e8, 0.0, (Vector2 *)&local_1f8);
     pVVar1 = (Vector2 *)(self + 0xa0);
-    iVar5 = IsPointWithinBoundingSquare(local_2f8,pVVar1);
+    iVar5 = IsPointWithinBoundingSquare(local_2f8, pVVar1);
     if (((iVar5 == 0) && (*(int *)(self + 0xa40) == 0)) &&
-       (*(int *)(*(long *)(self + 0xa38) + 0x2c8) == 1)) {
+        (*(int *)(*(long *)(self + 0xa38) + 0x2c8) == 1)) {
       self[0x7d9] = (MeatBoyCharactor)((byte)self[0x7d9] | 1);
-                    /* try { // try from 0047852c to 0047854a has its CatchHandler @ 00479555 */
+      /* try { // try from 0047852c to 0047854a has its CatchHandler @ 00479555 */
       (**(code **)(*(long *)self + 0xe0))(self);
       (**(code **)(*(long *)self + 0x68))(self);
       TileLevel__ResetLevel(*(TileLevel **)(SuperMeatBoy + 0x40));
       goto LAB_00477797;
     }
-    local_1d8 = CONCAT44(Update()::vRight._4_4_,(uint32_t)Update()::vRight);
+    local_1d8 = CONCAT44(Update()::vRight._4_4_, (uint32_t)Update()::vRight);
     lVar12 = *(long *)(self + 0x830);
     MVar2 = self[0x7d9];
     self[0x7d9] = (MeatBoyCharactor)((byte)MVar2 & 0xf5);
@@ -1544,22 +1528,22 @@ LAB_00477113:
     if ((lVar12 == 0) || ((*(byte *)(lVar12 + 2) & 0xc) != 8)) {
       lVar12 = *(long *)(self + 0x828);
       if ((lVar12 != 0) && ((*(byte *)(lVar12 + 2) & 0xc) == 8)) {
-        bVar3 = IsOnTrianglePart(lVar12,self + 0x850,*(uint32_t *)(self + 0x83c),local_48);
+        bVar3 = IsOnTrianglePart(lVar12, self + 0x850, *(uint32_t *)(self + 0x83c), local_48);
         goto LAB_004784cd;
       }
       lVar12 = *(long *)(self + 0x818);
       if ((lVar12 == 0) || ((*(byte *)(lVar12 + 2) & 0xc) != 8)) {
         lVar12 = *(long *)(self + 0x820);
         if ((lVar12 != 0) && ((*(byte *)(lVar12 + 2) & 0xc) == 8)) {
-          bVar3 = IsOnTrianglePart(lVar12,self + 0x848,*(uint32_t *)(self + 0x838),local_48);
+          bVar3 = IsOnTrianglePart(lVar12, self + 0x848, *(uint32_t *)(self + 0x838), local_48);
           goto LAB_004789d0;
         }
         uVar20 = 5;
         bVar3 = 0;
         goto LAB_004772f2;
       }
-      bVar3 = IsOnTrianglePart(lVar12,self + 0x840,*(uint32_t *)(self + 0x838),local_48);
-LAB_004789d0:
+      bVar3 = IsOnTrianglePart(lVar12, self + 0x840, *(uint32_t *)(self + 0x838), local_48);
+    LAB_004789d0:
       self[0x7d9] = (MeatBoyCharactor)((byte)self[0x7d9] & 0xfd | (bVar3 & 1) * '\x02');
       if ((bVar3 & 1) == 0) {
         MVar2 = self[0x7d8];
@@ -1567,20 +1551,20 @@ LAB_004789d0:
         uVar20 = (short)((short)local_48[0] << 5) >> 5;
         goto LAB_0047730c;
       }
-      local_1d8 = CONCAT44(_DAT_008190c4 /* R:0.0f */ ^ DAT_005be6f0 /* R:u32=2147483648 */,Update()::vDiagonalUp);
+      local_1d8 = CONCAT44(_DAT_008190c4 /* R:0.0f */ ^ DAT_005be6f0 /* R:u32=2147483648 */,
+                           Update()::vDiagonalUp);
       uVar20 = (short)((short)local_48[0] << 5) >> 5;
       MVar2 = self[0x7d8];
       *(ushort *)(self + 0x7da) = *(ushort *)(self + 0x7da) & 0xf800 | uVar20 & 0x7ff;
-    }
-    else {
-                    /* try { // try from 004784c8 to 004784cc has its CatchHandler @ 00479382 */
-      bVar3 = IsOnTrianglePart(lVar12,self + 0x858,*(uint32_t *)(self + 0x83c),local_48);
-LAB_004784cd:
+    } else {
+      /* try { // try from 004784c8 to 004784cc has its CatchHandler @ 00479382 */
+      bVar3 = IsOnTrianglePart(lVar12, self + 0x858, *(uint32_t *)(self + 0x83c), local_48);
+    LAB_004784cd:
       MVar4 = (MeatBoyCharactor)((byte)self[0x7d9] & 0xfd | (bVar3 & 1) * '\x02');
       self[0x7d9] = MVar4;
       if ((bVar3 & 1) != 0) {
-                    /* try { // try from 00478ce7 to 00478ceb has its CatchHandler @ 00479382 */
-        Vector2__operator_assign((Vector2 *)&local_1d8,(Vector2 *)&Update()::vDiagonalUp);
+        /* try { // try from 00478ce7 to 00478ceb has its CatchHandler @ 00479382 */
+        Vector2__operator_assign((Vector2 *)&local_1d8, (Vector2 *)&Update()::vDiagonalUp);
         MVar4 = self[0x7d9];
       }
       MVar2 = self[0x7d8];
@@ -1588,26 +1572,25 @@ LAB_004784cd:
       self[0x7d9] = (MeatBoyCharactor)((byte)MVar4 | 8);
       bVar3 = (byte)MVar4 & 2;
       uVar20 = (short)((short)local_48[0] << 5) >> 5;
-LAB_004772f2:
+    LAB_004772f2:
       uVar13 = uVar13 & 0xf800 | uVar20 & 0x7ff;
       *(ushort *)(self + 0x7da) = uVar13;
       if (bVar3 == 0) {
-LAB_0047730c:
+      LAB_0047730c:
         *(ushort *)(self + 0x7da) = uVar13 & 0xf800 | 5;
       }
     }
     if (((byte)MVar2 & 1) != 0) {
-      local_1d8 = CONCAT44(local_1d8._4_4_,(uint)local_1d8 ^ DAT_005be6f0 /* R:u32=2147483648 */);
+      local_1d8 = CONCAT44(local_1d8._4_4_, (uint)local_1d8 ^ DAT_005be6f0 /* R:u32=2147483648 */);
     }
     pBVar16 = (BoundingSquare *)(self + 0x740);
-                    /* try { // try from 00477351 to 00477583 has its CatchHandler @ 00479382 */
-    iVar5 = SMBPalette__ApplyObstacleForces
-                      ((SceneObject2D *)GSuperMeatBoy__pLevelPalette,(Bounds *)self);
+    /* try { // try from 00477351 to 00477583 has its CatchHandler @ 00479382 */
+    iVar5 = SMBPalette__ApplyObstacleForces((SceneObject2D *)GSuperMeatBoy__pLevelPalette,
+                                            (Bounds *)self);
     if (iVar5 == 0) {
       MVar2 = self[0x7d9];
       bVar21 = ((byte)MVar2 & 0x10) != 0;
-    }
-    else {
+    } else {
       bVar21 = true;
       MVar2 = self[0x7d9];
     }
@@ -1621,49 +1604,48 @@ LAB_0047730c:
     local_310 = _DAT_005c0074 /* R:30.0f */ * fVar25;
     fVar23 = DAT_005c07b8 /* R:60.0f */ * fOneFrameTimeStep;
     if (((byte)MVar4 & 0x10) != 0) {
-      local_310 = (float)(*(uint *)(self + 0xec) & DAT_005be880 /* R:u32=2147483647 */) * fOneFrameTimeStep + local_310;
+      local_310 = (float)(*(uint *)(self + 0xec) & DAT_005be880 /* R:u32=2147483647 */) *
+                      fOneFrameTimeStep +
+                  local_310;
     }
     if ((*(ushort *)(self + 0x7da) & 0x7ff) == 0) {
       if (*(float *)(self + 0xb8) <= 0.0 && *(float *)(self + 0xb8) != 0.0) {
-LAB_004781f2:
+      LAB_004781f2:
         if (((byte)MVar4 & 2) != 0) {
           local_310 = local_310 * *(float *)(self + 0xa30);
         }
       }
-    }
-    else if (((*(ushort *)(self + 0x7da) & 0x7ff) == 1) && (0.0 < *(float *)(self + 0xb8)))
-    goto LAB_004781f2;
+    } else if (((*(ushort *)(self + 0x7da) & 0x7ff) == 1) && (0.0 < *(float *)(self + 0xb8)))
+      goto LAB_004781f2;
     MVar2 = self[0x7d8];
     if (((byte)MVar2 & 2) == 0) {
       iVar5 = 5 - (uint)(((byte)MVar2 & 0x40) == 0);
-                    /* try { // try from 004779b1 to 004779fa has its CatchHandler @ 00479382 */
+      /* try { // try from 004779b1 to 004779fa has its CatchHandler @ 00479382 */
       (**(code **)(*(long *)self + 0xc0))(self);
       if (((byte)self[0x7d8] & 0x10) == 0) {
         if (((byte)self[0x7d8] & 8) == 0) {
           if ((*(int *)(self + 0x7d4) != 0xf) && (*(int *)(self + 0x7d4) != 10)) {
             if (((byte)self[0x7d9] & 0x10) == 0) {
               *(uint32_t *)(self + 0xb8) = 0;
-            }
-            else {
-              fVar25 = (float)Vector2__Dot((Vector2 *)(self + 0xb8),(Vector2 *)(self + 0xec));
+            } else {
+              fVar25 = (float)Vector2__Dot((Vector2 *)(self + 0xb8), (Vector2 *)(self + 0xec));
               if (fVar25 <= 0.0) {
                 *(uint32_t *)(self + 0xb8) = 0;
               }
             }
             if (uVar20 == 0) {
               if (((byte)self[0x7d8] & 1) == 0) {
-LAB_00479145:
-                SetState(self,0x15);
+              LAB_00479145:
+                SetState(self, 0x15);
+              } else {
+              LAB_004788fd:
+                /* try { // try from 00478905 to 00478a8e has its CatchHandler @ 00479382 */
+                SetState(self, 0x14);
               }
-              else {
-LAB_004788fd:
-                    /* try { // try from 00478905 to 00478a8e has its CatchHandler @ 00479382 */
-                SetState(self,0x14);
-              }
-            }
-            else {
+            } else {
               if (uVar20 == 1) {
-                if (((byte)self[0x7d8] & 1) != 0) goto LAB_00479145;
+                if (((byte)self[0x7d8] & 1) != 0)
+                  goto LAB_00479145;
                 goto LAB_004788fd;
               }
               if (*(int *)(self + 0x7d4) != 0) {
@@ -1672,8 +1654,8 @@ LAB_004788fd:
                 uVar7 = 0;
                 uVar13 = *(ushort *)(lVar12 + 0x30);
                 if (uVar13 != 0) {
-                    /* try { // try from 00479306 to 0047931c has its CatchHandler @ 00479382 */
-                  uVar7 = GetRandomINT(0,uVar13 - 1);
+                  /* try { // try from 00479306 to 0047931c has its CatchHandler @ 00479382 */
+                  uVar7 = GetRandomINT(0, uVar13 - 1);
                 }
                 *(uint32_t *)(lVar12 + 0x58) = uVar7;
                 *(uint32_t *)(self + 0xa4c) = uVar7;
@@ -1682,22 +1664,20 @@ LAB_004788fd:
               *(uint32_t *)(self + 0x7d4) = 0;
             }
           }
-        }
-        else {
+        } else {
           if (*(float *)(self + 0xb8) <= 0.0 && *(float *)(self + 0xb8) != 0.0) {
             fVar25 = *(float *)(self + 0xa34);
-            Vector2__operator_mul__005be200(local_178,*(float *)(self + 0x80c));
-                    /* try { // try from 00478f95 to 00478f99 has its CatchHandler @ 004793a2 */
-            Vector2__operator_mul__005be200(local_168,fVar25);
-                    /* try { // try from 00478fb0 to 00478fc8 has its CatchHandler @ 0047939d */
-            Vector2__operator_mul__005be200(local_158,fVar23);
-            Vector2__operator_plus_assign((Vector2 *)(self + 0xb8),local_158);
-          }
-          else {
-            Vector2__operator_mul__005be200(local_148,*(float *)(self + 0x80c));
-                    /* try { // try from 00477a11 to 00477a29 has its CatchHandler @ 0047937e */
-            Vector2__operator_mul__005be200(local_138,fVar23);
-            Vector2__operator_plus_assign((Vector2 *)(self + 0xb8),local_138);
+            Vector2__operator_mul__005be200(local_178, *(float *)(self + 0x80c));
+            /* try { // try from 00478f95 to 00478f99 has its CatchHandler @ 004793a2 */
+            Vector2__operator_mul__005be200(local_168, fVar25);
+            /* try { // try from 00478fb0 to 00478fc8 has its CatchHandler @ 0047939d */
+            Vector2__operator_mul__005be200(local_158, fVar23);
+            Vector2__operator_plus_assign((Vector2 *)(self + 0xb8), local_158);
+          } else {
+            Vector2__operator_mul__005be200(local_148, *(float *)(self + 0x80c));
+            /* try { // try from 00477a11 to 00477a29 has its CatchHandler @ 0047937e */
+            Vector2__operator_mul__005be200(local_138, fVar23);
+            Vector2__operator_plus_assign((Vector2 *)(self + 0xb8), local_138);
           }
           if (*(int *)(self + 0x7d4) != 10) {
             if (*(int *)(self + 0x7d4) != iVar5) {
@@ -1706,7 +1686,7 @@ LAB_004788fd:
               uVar7 = 0;
               uVar13 = *(ushort *)(lVar12 + 0x30);
               if (uVar13 != 0) {
-                uVar7 = GetRandomINT(0,uVar13 - 1);
+                uVar7 = GetRandomINT(0, uVar13 - 1);
               }
               *(uint32_t *)(lVar12 + 0x58) = uVar7;
               *(uint32_t *)(self + 0xa4c) = uVar7;
@@ -1716,23 +1696,21 @@ LAB_004788fd:
           }
           self[0x7d8] = (MeatBoyCharactor)((byte)self[0x7d8] & 0xfe);
         }
-      }
-      else {
+      } else {
         if (*(float *)(self + 0xb8) <= 0.0) {
-                    /* try { // try from 00478c8a to 00478c8e has its CatchHandler @ 00479382 */
-          Vector2__operator_mul__005be200(local_198,*(float *)(self + 0x80c));
-                    /* try { // try from 00478ca5 to 00478cbd has its CatchHandler @ 00479366 */
-          Vector2__operator_mul__005be200(local_188,fVar23);
-          Vector2__operator_plus_assign((Vector2 *)(self + 0xb8),local_188);
-        }
-        else {
+          /* try { // try from 00478c8a to 00478c8e has its CatchHandler @ 00479382 */
+          Vector2__operator_mul__005be200(local_198, *(float *)(self + 0x80c));
+          /* try { // try from 00478ca5 to 00478cbd has its CatchHandler @ 00479366 */
+          Vector2__operator_mul__005be200(local_188, fVar23);
+          Vector2__operator_plus_assign((Vector2 *)(self + 0xb8), local_188);
+        } else {
           fVar25 = *(float *)(self + 0xa34);
-          Vector2__operator_mul__005be200(local_1c8,*(float *)(self + 0x80c));
-                    /* try { // try from 004783a5 to 004783a9 has its CatchHandler @ 00479535 */
-          Vector2__operator_mul__005be200(local_1b8,fVar25);
-                    /* try { // try from 004783c0 to 004783d8 has its CatchHandler @ 0047952e */
-          Vector2__operator_mul__005be200(local_1a8,fVar23);
-          Vector2__operator_plus_assign((Vector2 *)(self + 0xb8),local_1a8);
+          Vector2__operator_mul__005be200(local_1c8, *(float *)(self + 0x80c));
+          /* try { // try from 004783a5 to 004783a9 has its CatchHandler @ 00479535 */
+          Vector2__operator_mul__005be200(local_1b8, fVar25);
+          /* try { // try from 004783c0 to 004783d8 has its CatchHandler @ 0047952e */
+          Vector2__operator_mul__005be200(local_1a8, fVar23);
+          Vector2__operator_plus_assign((Vector2 *)(self + 0xb8), local_1a8);
         }
         if (*(int *)(self + 0x7d4) != 10) {
           if (*(int *)(self + 0x7d4) != iVar5) {
@@ -1741,8 +1719,8 @@ LAB_004788fd:
             uVar7 = 0;
             uVar13 = *(ushort *)(lVar12 + 0x30);
             if (uVar13 != 0) {
-                    /* try { // try from 00479074 to 00479078 has its CatchHandler @ 00479382 */
-              uVar7 = GetRandomINT(0,uVar13 - 1);
+              /* try { // try from 00479074 to 00479078 has its CatchHandler @ 00479382 */
+              uVar7 = GetRandomINT(0, uVar13 - 1);
             }
             *(uint32_t *)(lVar12 + 0x58) = uVar7;
             *(uint32_t *)(self + 0xa4c) = uVar7;
@@ -1752,16 +1730,16 @@ LAB_004788fd:
         }
         self[0x7d8] = (MeatBoyCharactor)((byte)self[0x7d8] | 1);
       }
-    }
-    else {
+    } else {
       if (((byte)MVar4 & 0x20) != 0) {
-        fVar24 = (float)((uint)(*(float *)(self + 0xa4) - *(float *)(self + 0x804)) & DAT_005be880 /* R:u32=2147483647 */);
+        fVar24 = (float)((uint)(*(float *)(self + 0xa4) - *(float *)(self + 0x804)) &
+                         DAT_005be880 /* R:u32=2147483647 */);
         if (fVar24 <= *(float *)(self + 0x800)) {
           fVar24 = *(float *)(self + 0x800);
         }
         *(float *)(self + 0x800) = fVar24;
         if (((((byte)MVar2 & 0x20) == 0) && (0.0 < *(float *)(self + 0xbc))) &&
-           (TileLevel__fLevelGridWH <= fVar24)) {
+            (TileLevel__fLevelGridWH <= fVar24)) {
           *(uint32_t *)(self + 0xbc) = 0;
         }
       }
@@ -1770,22 +1748,20 @@ LAB_004788fd:
           fVar24 = *(float *)(self + 0xb8);
           if (fVar24 < 0.0) {
             *(float *)(self + 0xb8) = fVar25 * *(float *)(self + 0xa34) * fVar23 + fVar24;
-          }
-          else {
+          } else {
             *(float *)(self + 0xb8) = fVar25 * fVar23 + fVar24;
           }
           if (((byte)MVar2 & 1) != 0) {
             if (*(float *)(self + 0xbc) <= 0.0 && *(float *)(self + 0xbc) != 0.0) {
               if (*(int *)(self + 0x7d4) == 0xc) {
                 uVar9 = *(uint *)(self + 0xa4c);
-              }
-              else {
+              } else {
                 lVar12 = *(long *)(self + 0xf8);
                 self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
                 uVar9 = 0;
                 uVar13 = *(ushort *)(lVar12 + 0x450);
                 if (uVar13 != 0) {
-                  uVar9 = GetRandomINT(0,uVar13 - 1);
+                  uVar9 = GetRandomINT(0, uVar13 - 1);
                 }
                 *(uint *)(lVar12 + 0x478) = uVar9;
                 *(uint *)(self + 0xa4c) = uVar9;
@@ -1793,18 +1769,16 @@ LAB_004788fd:
               }
               *(uint32_t *)(self + 0x7d4) = 0xc;
               iVar5 = 0xc;
-            }
-            else {
+            } else {
               if (*(int *)(self + 0x7d4) == 0xb) {
                 uVar9 = *(uint *)(self + 0xa4c);
-              }
-              else {
+              } else {
                 lVar12 = *(long *)(self + 0xf8);
                 self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
                 uVar9 = 0;
                 uVar13 = *(ushort *)(lVar12 + 0x3f8);
                 if (uVar13 != 0) {
-                  uVar9 = GetRandomINT(0,uVar13 - 1);
+                  uVar9 = GetRandomINT(0, uVar13 - 1);
                 }
                 *(uint *)(lVar12 + 0x420) = uVar9;
                 *(uint *)(self + 0xa4c) = uVar9;
@@ -1815,41 +1789,38 @@ LAB_004788fd:
             }
             lVar12 = *(long *)(self + 0xf8) + (long)iVar5 * 0x58;
             if (uVar9 == 0xffffffff) {
-              pFVar18 = *(FlashLibraryInstance **)
-                         (*(long *)(lVar12 + 0x40) + (ulong)*(ushort *)(lVar12 + 0x58) * 8);
-            }
-            else {
-              pFVar18 = *(FlashLibraryInstance **)
-                         (*(long *)(lVar12 + 0x40) + (ulong)(uVar9 & 0xffff) * 8);
+              pFVar18 = *(FlashLibraryInstance **)(*(long *)(lVar12 + 0x40) +
+                                                   (ulong) * (ushort *)(lVar12 + 0x58) * 8);
+            } else {
+              pFVar18 = *(FlashLibraryInstance **)(*(long *)(lVar12 + 0x40) +
+                                                   (ulong)(uVar9 & 0xffff) * 8);
             }
             FlashLibraryInstance__Reset(pFVar18);
             MVar2 = self[0x7d8];
           }
           self[0x7d8] = (MeatBoyCharactor)((byte)MVar2 & 0xfe);
         }
-      }
-      else {
+      } else {
         fVar24 = *(float *)(self + 0xb8);
         if (fVar24 <= 0.0) {
           *(float *)(self + 0xb8) = fVar24 - fVar25 * fVar23;
-        }
-        else {
-          *(float *)(self + 0xb8) =
-               (float)((uint)fVar25 ^ DAT_005be6f0 /* R:u32=2147483648 */) * fVar23 * *(float *)(self + 0xa34) + fVar24;
+        } else {
+          *(float *)(self + 0xb8) = (float)((uint)fVar25 ^ DAT_005be6f0 /* R:u32=2147483648 */) *
+                                        fVar23 * *(float *)(self + 0xa34) +
+                                    fVar24;
         }
         if (((byte)MVar2 & 1) == 0) {
           if (*(float *)(self + 0xbc) <= 0.0 && *(float *)(self + 0xbc) != 0.0) {
             if (*(int *)(self + 0x7d4) == 0xc) {
               uVar9 = *(uint *)(self + 0xa4c);
-            }
-            else {
+            } else {
               lVar12 = *(long *)(self + 0xf8);
               self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
               uVar9 = 0;
               uVar13 = *(ushort *)(lVar12 + 0x450);
               if (uVar13 != 0) {
-                    /* try { // try from 00479284 to 004792b7 has its CatchHandler @ 00479382 */
-                uVar9 = GetRandomINT(0,uVar13 - 1);
+                /* try { // try from 00479284 to 004792b7 has its CatchHandler @ 00479382 */
+                uVar9 = GetRandomINT(0, uVar13 - 1);
               }
               *(uint *)(lVar12 + 0x478) = uVar9;
               *(uint *)(self + 0xa4c) = uVar9;
@@ -1857,19 +1828,17 @@ LAB_004788fd:
             }
             *(uint32_t *)(self + 0x7d4) = 0xc;
             iVar5 = 0xc;
-          }
-          else {
+          } else {
             if (*(int *)(self + 0x7d4) == 0xb) {
               uVar9 = *(uint *)(self + 0xa4c);
-            }
-            else {
+            } else {
               lVar12 = *(long *)(self + 0xf8);
               self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
               uVar9 = 0;
               uVar13 = *(ushort *)(lVar12 + 0x3f8);
               if (uVar13 != 0) {
-                    /* try { // try from 0047912e to 004791f3 has its CatchHandler @ 00479382 */
-                uVar9 = GetRandomINT(0,uVar13 - 1);
+                /* try { // try from 0047912e to 004791f3 has its CatchHandler @ 00479382 */
+                uVar9 = GetRandomINT(0, uVar13 - 1);
               }
               *(uint *)(lVar12 + 0x420) = uVar9;
               *(uint *)(self + 0xa4c) = uVar9;
@@ -1880,14 +1849,13 @@ LAB_004788fd:
           }
           lVar12 = *(long *)(self + 0xf8) + (long)iVar5 * 0x58;
           if (uVar9 == 0xffffffff) {
-            pFVar18 = *(FlashLibraryInstance **)
-                       (*(long *)(lVar12 + 0x40) + (ulong)*(ushort *)(lVar12 + 0x58) * 8);
+            pFVar18 = *(FlashLibraryInstance **)(*(long *)(lVar12 + 0x40) +
+                                                 (ulong) * (ushort *)(lVar12 + 0x58) * 8);
+          } else {
+            pFVar18 =
+                *(FlashLibraryInstance **)(*(long *)(lVar12 + 0x40) + (ulong)(uVar9 & 0xffff) * 8);
           }
-          else {
-            pFVar18 = *(FlashLibraryInstance **)
-                       (*(long *)(lVar12 + 0x40) + (ulong)(uVar9 & 0xffff) * 8);
-          }
-                    /* try { // try from 0047833a to 0047838e has its CatchHandler @ 00479382 */
+          /* try { // try from 0047833a to 0047838e has its CatchHandler @ 00479382 */
           FlashLibraryInstance__Reset(pFVar18);
           MVar2 = self[0x7d8];
         }
@@ -1895,7 +1863,7 @@ LAB_004788fd:
       }
       (**(code **)(*(long *)self + 0xa0))(self);
     }
-                    /* try { // try from 00477a9e to 00477aa3 has its CatchHandler @ 00479382 */
+    /* try { // try from 00477a9e to 00477aa3 has its CatchHandler @ 00479382 */
     (**(code **)(*(long *)self + 0x98))(self);
     fVar25 = (float)(DAT_005be6f0 /* R:u32=2147483648 */ ^ (uint)local_310);
     if ((float)(DAT_005be6f0 /* R:u32=2147483648 */ ^ (uint)local_310) <= *(float *)(self + 0xb8)) {
@@ -1906,22 +1874,22 @@ LAB_004788fd:
     }
     *(float *)(self + 0xb8) = fVar25;
     if ((*(ushort *)(self + 0x7d8) & 0x202) == 0x200) {
-      *(float *)(self + 0xbc) = (float)((uint)fVar25 & DAT_005be880 /* R:u32=2147483647 */) * local_1d8._4_4_;
+      *(float *)(self + 0xbc) =
+          (float)((uint)fVar25 & DAT_005be880 /* R:u32=2147483647 */) * local_1d8._4_4_;
     }
     MVar2 = self[0x7d8];
     if (local_30c != ((byte)MVar2 & 1)) {
       if (((byte)MVar2 & 2) == 0) {
         if (*(int *)(self + 0x7d4) == 10) {
           uVar9 = *(uint *)(self + 0xa4c);
-        }
-        else {
+        } else {
           lVar12 = *(long *)(self + 0xf8);
           self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
           uVar9 = 0;
           uVar13 = *(ushort *)(lVar12 + 0x3a0);
           if (uVar13 != 0) {
-                    /* try { // try from 00478e33 to 00478f7e has its CatchHandler @ 00479382 */
-            uVar9 = GetRandomINT(0,uVar13 - 1);
+            /* try { // try from 00478e33 to 00478f7e has its CatchHandler @ 00479382 */
+            uVar9 = GetRandomINT(0, uVar13 - 1);
           }
           *(uint *)(lVar12 + 0x3c8) = uVar9;
           *(uint *)(self + 0xa4c) = uVar9;
@@ -1930,27 +1898,25 @@ LAB_004788fd:
         *(uint32_t *)(self + 0x7d4) = 10;
         lVar12 = *(long *)(self + 0xf8);
         if (uVar9 == 0xffffffff) {
-          pFVar18 = *(FlashLibraryInstance **)
-                     (*(long *)(lVar12 + 0x3b0) + (ulong)*(ushort *)(lVar12 + 0x3c8) * 8);
+          pFVar18 = *(FlashLibraryInstance **)(*(long *)(lVar12 + 0x3b0) +
+                                               (ulong) * (ushort *)(lVar12 + 0x3c8) * 8);
+        } else {
+          pFVar18 =
+              *(FlashLibraryInstance **)(*(long *)(lVar12 + 0x3b0) + (ulong)(uVar9 & 0xffff) * 8);
         }
-        else {
-          pFVar18 = *(FlashLibraryInstance **)
-                     (*(long *)(lVar12 + 0x3b0) + (ulong)(uVar9 & 0xffff) * 8);
-        }
-      }
-      else {
-        if (((byte)MVar2 & 6) != 2) goto LAB_00477b03;
+      } else {
+        if (((byte)MVar2 & 6) != 2)
+          goto LAB_00477b03;
         if (*(float *)(self + 0xbc) <= 0.0) {
           if (*(int *)(self + 0x7d4) == 0xc) {
             uVar9 = *(uint *)(self + 0xa4c);
-          }
-          else {
+          } else {
             lVar12 = *(long *)(self + 0xf8);
             self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
             uVar9 = 0;
             uVar13 = *(ushort *)(lVar12 + 0x450);
             if (uVar13 != 0) {
-              uVar9 = GetRandomINT(0,uVar13 - 1);
+              uVar9 = GetRandomINT(0, uVar13 - 1);
             }
             *(uint *)(lVar12 + 0x478) = uVar9;
             *(uint *)(self + 0xa4c) = uVar9;
@@ -1958,19 +1924,17 @@ LAB_004788fd:
           }
           *(uint32_t *)(self + 0x7d4) = 0xc;
           iVar5 = 0xc;
-        }
-        else {
+        } else {
           if (*(int *)(self + 0x7d4) == 0xb) {
             uVar9 = *(uint *)(self + 0xa4c);
-          }
-          else {
+          } else {
             lVar12 = *(long *)(self + 0xf8);
             self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
             uVar9 = 0;
             uVar13 = *(ushort *)(lVar12 + 0x3f8);
             if (uVar13 != 0) {
-                    /* try { // try from 004790ff to 00479103 has its CatchHandler @ 00479382 */
-              uVar9 = GetRandomINT(0,uVar13 - 1);
+              /* try { // try from 004790ff to 00479103 has its CatchHandler @ 00479382 */
+              uVar9 = GetRandomINT(0, uVar13 - 1);
             }
             *(uint *)(lVar12 + 0x420) = uVar9;
             *(uint *)(self + 0xa4c) = uVar9;
@@ -1981,18 +1945,17 @@ LAB_004788fd:
         }
         lVar12 = *(long *)(self + 0xf8) + (long)iVar5 * 0x58;
         if (uVar9 == 0xffffffff) {
-          pFVar18 = *(FlashLibraryInstance **)
-                     (*(long *)(lVar12 + 0x40) + (ulong)*(ushort *)(lVar12 + 0x58) * 8);
-        }
-        else {
-          pFVar18 = *(FlashLibraryInstance **)
-                     (*(long *)(lVar12 + 0x40) + (ulong)(uVar9 & 0xffff) * 8);
+          pFVar18 = *(FlashLibraryInstance **)(*(long *)(lVar12 + 0x40) +
+                                               (ulong) * (ushort *)(lVar12 + 0x58) * 8);
+        } else {
+          pFVar18 =
+              *(FlashLibraryInstance **)(*(long *)(lVar12 + 0x40) + (ulong)(uVar9 & 0xffff) * 8);
         }
       }
-                    /* try { // try from 00478716 to 0047871a has its CatchHandler @ 00479382 */
+      /* try { // try from 00478716 to 0047871a has its CatchHandler @ 00479382 */
       FlashLibraryInstance__Reset(pFVar18);
     }
-LAB_00477b03:
+  LAB_00477b03:
     *(uint32_t *)(self + 0x94) = *(uint32_t *)(self + 0x8c0);
     *(uint32_t *)(self + 0xd4) = *(uint32_t *)(self + 0x8c8);
     *(uint32_t *)(self + 0xd0) = *(uint32_t *)(self + 0x8c8);
@@ -2000,41 +1963,39 @@ LAB_00477b03:
     if (((((byte)self[0x7d9] & 2) == 0) && (bVar22 != 0)) && (((byte)self[0x7d8] & 0x20) == 0)) {
       *(uint32_t *)(self + 0xbc) = 0;
     }
-                    /* try { // try from 00477b5c to 00477bf9 has its CatchHandler @ 00479380 */
-    Apply2DPhysics((SceneObject2D *)self,fOneFrameTimeStep);
-    TileLevel__TileCollision
-              (*(TileLevel **)(SuperMeatBoy + 0x40),(SceneObject2D *)self,
-               (TileCollisionInfo *)(self + 0x818));
+    /* try { // try from 00477b5c to 00477bf9 has its CatchHandler @ 00479380 */
+    Apply2DPhysics((SceneObject2D *)self, fOneFrameTimeStep);
+    TileLevel__TileCollision(*(TileLevel **)(SuperMeatBoy + 0x40), (SceneObject2D *)self,
+                             (TileCollisionInfo *)(self + 0x818));
     local_118 = *(uint32_t *)(self + 0x8cc);
     local_114 = local_118;
-    BoundingSquare__Change(*(BoundingSquare **)(self + 0x48),(Vector2 *)&local_118,0.0,pVVar1);
+    BoundingSquare__Change(*(BoundingSquare **)(self + 0x48), (Vector2 *)&local_118, 0.0, pVVar1);
     local_108 = *(uint32_t *)(self + 0x8d0);
     local_104 = local_108;
-    BoundingSquare__Change(pBVar16,(Vector2 *)&local_108,0.0,pVVar1);
-    iVar5 = SMBPalette__ObstacleCollision
-                      (GSuperMeatBoy__pLevelPalette,(SceneObject2D *)self,(Bounds *)pBVar16);
-                    /* try { // try from 00478564 to 00478579 has its CatchHandler @ 00479380 */
-    if (((((iVar5 == 1) ||
-          (iVar5 = SMBAnimals__AnimalCollision
-                             (*(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8),
-                              (SceneObject2D *)self,(Bounds *)pBVar16), iVar5 == 1)) ||
-         (iVar5 = SMBBossCollision(pBVar16), iVar5 == 1)) &&
-        ((iVar5 = (**(code **)(*(long *)self + 0xe8))(self), iVar5 == 1 &&
-         (_SMB_GLOBAL_INVINCIBLE == 0)))) &&
-       ((*(int *)(self + 0xa40) == 0 ||
-        ((*(int *)(self + 0xa40) == 1 &&
-         (*(int *)(self + 0xa90) != *(int *)(*(long *)(self + 0xa38) + 0x3c))))))) {
+    BoundingSquare__Change(pBVar16, (Vector2 *)&local_108, 0.0, pVVar1);
+    iVar5 = SMBPalette__ObstacleCollision(GSuperMeatBoy__pLevelPalette, (SceneObject2D *)self,
+                                          (Bounds *)pBVar16);
+    /* try { // try from 00478564 to 00478579 has its CatchHandler @ 00479380 */
+    if (((((iVar5 == 1) || (iVar5 = SMBAnimals__AnimalCollision(
+                                *(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8),
+                                (SceneObject2D *)self, (Bounds *)pBVar16),
+                            iVar5 == 1)) ||
+          (iVar5 = SMBBossCollision(pBVar16), iVar5 == 1)) &&
+         ((iVar5 = (**(code **)(*(long *)self + 0xe8))(self),
+           iVar5 == 1 && (_SMB_GLOBAL_INVINCIBLE == 0)))) &&
+        ((*(int *)(self + 0xa40) == 0 ||
+          ((*(int *)(self + 0xa40) == 1 &&
+            (*(int *)(self + 0xa90) != *(int *)(*(long *)(self + 0xa38) + 0x3c))))))) {
       if (*(int *)(self + 0x7d4) == 0xe) {
         uVar9 = *(uint *)(self + 0xa4c);
-      }
-      else {
+      } else {
         lVar12 = *(long *)(self + 0xf8);
         self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
         uVar9 = 0;
         uVar13 = *(ushort *)(lVar12 + 0x500);
         if (uVar13 != 0) {
-                    /* try { // try from 00478fd6 to 00478fda has its CatchHandler @ 00479380 */
-          uVar9 = GetRandomINT(0,uVar13 - 1);
+          /* try { // try from 00478fd6 to 00478fda has its CatchHandler @ 00479380 */
+          uVar9 = GetRandomINT(0, uVar13 - 1);
         }
         *(uint *)(lVar12 + 0x528) = uVar9;
         *(uint *)(self + 0xa4c) = uVar9;
@@ -2043,17 +2004,17 @@ LAB_00477b03:
       *(uint32_t *)(self + 0x7d4) = 0xe;
       lVar12 = *(long *)(self + 0xf8);
       if (uVar9 == 0xffffffff) {
-        pFVar18 = *(FlashLibraryInstance **)
-                   (*(long *)(lVar12 + 0x510) + (ulong)*(ushort *)(lVar12 + 0x528) * 8);
+        pFVar18 = *(FlashLibraryInstance **)(*(long *)(lVar12 + 0x510) +
+                                             (ulong) * (ushort *)(lVar12 + 0x528) * 8);
+      } else {
+        pFVar18 =
+            *(FlashLibraryInstance **)(*(long *)(lVar12 + 0x510) + (ulong)(uVar9 & 0xffff) * 8);
       }
-      else {
-        pFVar18 = *(FlashLibraryInstance **)
-                   (*(long *)(lVar12 + 0x510) + (ulong)(uVar9 & 0xffff) * 8);
-      }
-                    /* try { // try from 00478857 to 00478887 has its CatchHandler @ 00479380 */
+      /* try { // try from 00478857 to 00478887 has its CatchHandler @ 00479380 */
       FlashLibraryInstance__Reset(pFVar18);
       (**(code **)(*(long *)self + 0xe0))(self);
-      SMBCamera__ScreenShake(*(SMBCamera **)(SuperMeatBoy + 0x38),DAT_005c0068 /* R:2.0f */,DAT_005be6e4 /* R:0.5f */);
+      SMBCamera__ScreenShake(*(SMBCamera **)(SuperMeatBoy + 0x38), DAT_005c0068 /* R:2.0f */,
+                             DAT_005be6e4 /* R:0.5f */);
       self[0x7d9] = (MeatBoyCharactor)((byte)self[0x7d9] | 1);
     }
     local_258 = 0;
@@ -2063,53 +2024,48 @@ LAB_00477b03:
     local_238 = 0;
     local_234 = 0;
     local_210 = 1;
-                    /* try { // try from 00477c69 to 00477e86 has its CatchHandler @ 00479386 */
-    bVar3 = SMBPalette__PlatformCollision
-                      (GSuperMeatBoy__pLevelPalette,(SceneObject2D *)self,
-                       (TileCollisionInfo *)&local_258,(TileCollisionInfo *)(self + 0x818));
+    /* try { // try from 00477c69 to 00477e86 has its CatchHandler @ 00479386 */
+    bVar3 = SMBPalette__PlatformCollision(GSuperMeatBoy__pLevelPalette, (SceneObject2D *)self,
+                                          (TileCollisionInfo *)&local_258,
+                                          (TileCollisionInfo *)(self + 0x818));
     MVar2 = self[0x7d9];
     self[0x7d9] = (MeatBoyCharactor)((byte)MVar2 & 0xbf | (bVar3 & 1) << 6);
     if (((byte)self[0x7d8] & 4) == 0) {
       *(float *)(self + 0xf0) = *(float *)(self + 0xf0) + *(float *)(self + 0x8c4);
-    }
-    else {
+    } else {
       *(float *)(self + 0xf0) =
-           (DAT_005be894 /* R:1.0f */ - *(float *)(self + 0x8bc)) * *(float *)(self + 0x8c4) +
-           *(float *)(self + 0xf0);
+          (DAT_005be894 /* R:1.0f */ - *(float *)(self + 0x8bc)) * *(float *)(self + 0x8c4) +
+          *(float *)(self + 0xf0);
     }
     if (((byte)MVar2 & 0x80) == 0 && (bVar3 & 1) == 0) {
       if (*(long *)(self + 0x820) != 0) {
-        BloodyTiles__AddBloodyTile
-                  ((BloodyTiles *)(SuperMeatBoy + 0x50),*(long *)(self + 0x820),
-                   *(uint32_t *)(self + 0x838),self + 0x848,
-                   (int)((short)(*(short *)(self + 0x7da) << 5) >> 5),
-                   *(uint64_t *)(*(long *)(self + 0xf8) + 0x880));
+        BloodyTiles__AddBloodyTile((BloodyTiles *)(SuperMeatBoy + 0x50), *(long *)(self + 0x820),
+                                   *(uint32_t *)(self + 0x838), self + 0x848,
+                                   (int)((short)(*(short *)(self + 0x7da) << 5) >> 5),
+                                   *(uint64_t *)(*(long *)(self + 0xf8) + 0x880));
       }
       if (*(long *)(self + 0x818) != 0) {
-        BloodyTiles__AddBloodyTile
-                  ((BloodyTiles *)(SuperMeatBoy + 0x50),*(long *)(self + 0x818),
-                   *(uint32_t *)(self + 0x838),self + 0x840,
-                   (int)((short)(*(short *)(self + 0x7da) << 5) >> 5),
-                   *(uint64_t *)(*(long *)(self + 0xf8) + 0x880));
+        BloodyTiles__AddBloodyTile((BloodyTiles *)(SuperMeatBoy + 0x50), *(long *)(self + 0x818),
+                                   *(uint32_t *)(self + 0x838), self + 0x840,
+                                   (int)((short)(*(short *)(self + 0x7da) << 5) >> 5),
+                                   *(uint64_t *)(*(long *)(self + 0xf8) + 0x880));
       }
       if (*(long *)(self + 0x830) != 0) {
-        BloodyTiles__AddBloodyTile
-                  ((BloodyTiles *)(SuperMeatBoy + 0x50),*(long *)(self + 0x830),
-                   *(uint32_t *)(self + 0x83c),self + 0x858,
-                   (int)((short)(*(short *)(self + 0x7da) << 5) >> 5),
-                   *(uint64_t *)(*(long *)(self + 0xf8) + 0x880));
+        BloodyTiles__AddBloodyTile((BloodyTiles *)(SuperMeatBoy + 0x50), *(long *)(self + 0x830),
+                                   *(uint32_t *)(self + 0x83c), self + 0x858,
+                                   (int)((short)(*(short *)(self + 0x7da) << 5) >> 5),
+                                   *(uint64_t *)(*(long *)(self + 0xf8) + 0x880));
       }
       if (*(long *)(self + 0x828) != 0) {
-        BloodyTiles__AddBloodyTile
-                  ((BloodyTiles *)(SuperMeatBoy + 0x50),*(long *)(self + 0x828),
-                   *(uint32_t *)(self + 0x83c),self + 0x850,
-                   (int)((short)(*(short *)(self + 0x7da) << 5) >> 5),
-                   *(uint64_t *)(*(long *)(self + 0xf8) + 0x880));
+        BloodyTiles__AddBloodyTile((BloodyTiles *)(SuperMeatBoy + 0x50), *(long *)(self + 0x828),
+                                   *(uint32_t *)(self + 0x83c), self + 0x850,
+                                   (int)((short)(*(short *)(self + 0x7da) << 5) >> 5),
+                                   *(uint64_t *)(*(long *)(self + 0xf8) + 0x880));
       }
     }
     if (*(int *)(self + 0xa40) == 1) {
-                    /* try { // try from 004788a1 to 004788b1 has its CatchHandler @ 00479386 */
-      SMBPalette__SetReplayIndex(GSuperMeatBoy__pLevelPalette,*(int *)(self + 0xa90));
+      /* try { // try from 004788a1 to 004788b1 has its CatchHandler @ 00479386 */
+      SMBPalette__SetReplayIndex(GSuperMeatBoy__pLevelPalette, *(int *)(self + 0xa90));
       SMBPalette__ReplayUpdate(GSuperMeatBoy__pLevelPalette);
     }
     if (local_238 != 0) {
@@ -2119,8 +2075,7 @@ LAB_00477b03:
     }
     if (local_234 == 0) {
       pGVar10 = *(GRIDBLOCK **)(self + 0x830);
-    }
-    else {
+    } else {
       *(int *)(self + 0x83c) = local_234;
       *(uint64_t *)(self + 0x828) = local_248;
       *(GRIDBLOCK **)(self + 0x830) = pGStack_240;
@@ -2128,64 +2083,69 @@ LAB_00477b03:
     }
     if (pGVar10 == (GRIDBLOCK *)0x0) {
       bVar21 = true;
-    }
-    else {
-      iVar5 = SMBPalette__ApplyTredmillForce
-                        (GSuperMeatBoy__pLevelPalette,pGVar10,(SceneObject2D *)self);
+    } else {
+      iVar5 = SMBPalette__ApplyTredmillForce(GSuperMeatBoy__pLevelPalette, pGVar10,
+                                             (SceneObject2D *)self);
       bVar21 = iVar5 == 0;
     }
     if ((bVar21) && (*(GRIDBLOCK **)(self + 0x828) != (GRIDBLOCK *)0x0)) {
-                    /* try { // try from 00478605 to 0047864d has its CatchHandler @ 00479386 */
-      SMBPalette__ApplyTredmillForce
-                (GSuperMeatBoy__pLevelPalette,*(GRIDBLOCK **)(self + 0x828),(SceneObject2D *)self);
+      /* try { // try from 00478605 to 0047864d has its CatchHandler @ 00479386 */
+      SMBPalette__ApplyTredmillForce(GSuperMeatBoy__pLevelPalette, *(GRIDBLOCK **)(self + 0x828),
+                                     (SceneObject2D *)self);
     }
     if (*(GRIDBLOCK **)(self + 0x820) == (GRIDBLOCK *)0x0) {
       bVar21 = true;
-    }
-    else {
-      iVar5 = SMBPalette__ApplyTredmillForce
-                        (GSuperMeatBoy__pLevelPalette,*(GRIDBLOCK **)(self + 0x820),
-                         (SceneObject2D *)self);
+    } else {
+      iVar5 = SMBPalette__ApplyTredmillForce(GSuperMeatBoy__pLevelPalette,
+                                             *(GRIDBLOCK **)(self + 0x820), (SceneObject2D *)self);
       bVar21 = iVar5 == 0;
     }
     if ((bVar21) && (*(GRIDBLOCK **)(self + 0x818) != (GRIDBLOCK *)0x0)) {
-      SMBPalette__ApplyTredmillForce
-                (GSuperMeatBoy__pLevelPalette,*(GRIDBLOCK **)(self + 0x818),(SceneObject2D *)self);
+      SMBPalette__ApplyTredmillForce(GSuperMeatBoy__pLevelPalette, *(GRIDBLOCK **)(self + 0x818),
+                                     (SceneObject2D *)self);
     }
     if (((byte)GSuperMeatBoy__pLevelPalette_0x60 & 4) != 0) {
-      SMBCamera__SetCameraPosition2D(*(SMBCamera **)(SuperMeatBoy + 0x38),pVVar1);
-      Vector2__operator_assign((Vector2 *)(self + 0x868),pVVar1);
+      SMBCamera__SetCameraPosition2D(*(SMBCamera **)(SuperMeatBoy + 0x38), pVVar1);
+      Vector2__operator_assign((Vector2 *)(self + 0x868), pVVar1);
     }
     iVar5 = *(int *)(self + 0x7d4);
-    if (iVar5 == 0xe) goto LAB_004775cc;
+    if (iVar5 == 0xe)
+      goto LAB_004775cc;
     MVar2 = self[0x7d8];
     bVar3 = (byte)MVar2 & 2;
-    if ((((byte)MVar2 & 2) == 0) || (bVar19 == 0)) goto LAB_004780b8;
+    if ((((byte)MVar2 & 2) == 0) || (bVar19 == 0))
+      goto LAB_004780b8;
     lVar12 = *(long *)(self + 0x820);
     if (*(float *)(self + 0x8c4) <= 0.0) {
       if ((((lVar12 == 0) || ((*(byte *)(lVar12 + 2) & 0xc) == 8)) &&
-          ((*(long *)(self + 0x818) == 0 || ((*(byte *)(*(long *)(self + 0x818) + 2) & 0xc) == 8))))
-         || (*(int *)(self + 0x838) != 2)) goto LAB_00477f12;
-LAB_00478699:
+           ((*(long *)(self + 0x818) == 0 ||
+             ((*(byte *)(*(long *)(self + 0x818) + 2) & 0xc) == 8)))) ||
+          (*(int *)(self + 0x838) != 2))
+        goto LAB_00477f12;
+    LAB_00478699:
       bVar3 = 0;
       self[0x7d8] = (MeatBoyCharactor)((byte)MVar2 & 0xf9);
-    }
-    else {
+    } else {
       if ((((lVar12 != 0) && ((*(byte *)(lVar12 + 2) & 0xc) != 8)) ||
-          ((*(long *)(self + 0x818) != 0 && ((*(byte *)(*(long *)(self + 0x818) + 2) & 0xc) != 8))))
-         && (*(int *)(self + 0x838) == 1)) goto LAB_00478699;
-LAB_00477f12:
-      if (((byte)self[0x7d9] & 2) != 0) goto LAB_00478699;
-      if ((((*(float *)(self + 0xbc) <= 0.0 && *(float *)(self + 0xbc) != 0.0) && (iVar5 != 0x13))
-          && (iVar5 != 8)) && (iVar5 != 9)) {
+           ((*(long *)(self + 0x818) != 0 &&
+             ((*(byte *)(*(long *)(self + 0x818) + 2) & 0xc) != 8)))) &&
+          (*(int *)(self + 0x838) == 1))
+        goto LAB_00478699;
+    LAB_00477f12:
+      if (((byte)self[0x7d9] & 2) != 0)
+        goto LAB_00478699;
+      if ((((*(float *)(self + 0xbc) <= 0.0 && *(float *)(self + 0xbc) != 0.0) &&
+            (iVar5 != 0x13)) &&
+           (iVar5 != 8)) &&
+          (iVar5 != 9)) {
         if (iVar5 != 7) {
           lVar12 = *(long *)(self + 0xf8);
           self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
           uVar7 = 0;
           uVar13 = *(ushort *)(lVar12 + 0x298);
           if (uVar13 != 0) {
-                    /* try { // try from 0047911c to 00479120 has its CatchHandler @ 00479386 */
-            uVar7 = GetRandomINT(0,uVar13 - 1);
+            /* try { // try from 0047911c to 00479120 has its CatchHandler @ 00479386 */
+            uVar7 = GetRandomINT(0, uVar13 - 1);
           }
           *(uint32_t *)(lVar12 + 0x2c0) = uVar7;
           *(uint32_t *)(self + 0xa4c) = uVar7;
@@ -2197,13 +2157,13 @@ LAB_00477f12:
       local_f4 = 0;
       local_e4 = 0;
       local_e8 = local_f8;
-                    /* try { // try from 00477f7a to 00478091 has its CatchHandler @ 00479384 */
-      Vector2__operator_plus__005be140(local_b8,pVVar1);
-      iVar5 = SMBPalette__PlatformWallJump
-                        (GSuperMeatBoy__pLevelPalette,local_b8,(Vector2 *)local_c8);
-      Vector2__operator_minus__005be180(local_a8,pVVar1);
-      iVar6 = SMBPalette__PlatformWallJump
-                        (GSuperMeatBoy__pLevelPalette,local_a8,(Vector2 *)local_d8);
+      /* try { // try from 00477f7a to 00478091 has its CatchHandler @ 00479384 */
+      Vector2__operator_plus__005be140(local_b8, pVVar1);
+      iVar5 =
+          SMBPalette__PlatformWallJump(GSuperMeatBoy__pLevelPalette, local_b8, (Vector2 *)local_c8);
+      Vector2__operator_minus__005be180(local_a8, pVVar1);
+      iVar6 =
+          SMBPalette__PlatformWallJump(GSuperMeatBoy__pLevelPalette, local_a8, (Vector2 *)local_d8);
       bVar21 = iVar6 == 1;
       if ((bVar21) || (iVar5 == 1)) {
         if (*(int *)(self + 0x7d4) != 9) {
@@ -2212,181 +2172,178 @@ LAB_00477f12:
           uVar7 = 0;
           uVar13 = *(ushort *)(lVar12 + 0x348);
           if (uVar13 != 0) {
-                    /* try { // try from 00479272 to 00479276 has its CatchHandler @ 00479384 */
-            uVar7 = GetRandomINT(0,uVar13 - 1);
+            /* try { // try from 00479272 to 00479276 has its CatchHandler @ 00479384 */
+            uVar7 = GetRandomINT(0, uVar13 - 1);
           }
           *(uint32_t *)(lVar12 + 0x370) = uVar7;
           *(uint32_t *)(self + 0xa4c) = uVar7;
           *(uint32_t *)(self + 0xa50) = 0;
         }
         *(uint32_t *)(self + 0x7d4) = 9;
-                    /* try { // try from 00478d53 to 00478d58 has its CatchHandler @ 00479384 */
-        (**(code **)(*(long *)self + 200))(self,(-(uint)!bVar21 & 0xfffffffc) + 8);
+        /* try { // try from 00478d53 to 00478d58 has its CatchHandler @ 00479384 */
+        (**(code **)(*(long *)self + 200))(self, (-(uint)!bVar21 & 0xfffffffc) + 8);
         if (bVar21) {
           MVar2 = self[0x7d8];
           fVar25 = DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH;
           self[0x7d8] = (MeatBoyCharactor)((byte)MVar2 | 1);
           bVar3 = (byte)MVar2 & 2;
-          *(float *)(self + 0xa0) = local_d8[0] + *(float *)(self + 0x8cc) + _DAT_005bfba8 /* R:0.10000000149011612f */ + fVar25;
-        }
-        else {
+          *(float *)(self + 0xa0) = local_d8[0] + *(float *)(self + 0x8cc) +
+                                    _DAT_005bfba8 /* R:0.10000000149011612f */ + fVar25;
+        } else {
           fVar25 = DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH;
           bVar3 = (byte)self[0x7d8] & 2;
           self[0x7d8] = (MeatBoyCharactor)((byte)self[0x7d8] & 0xfe);
-          *(float *)(self + 0xa0) =
-               ((local_c8[0] - fVar25) - *(float *)(self + 0x8cc)) - _DAT_005bfba8 /* R:0.10000000149011612f */;
+          *(float *)(self + 0xa0) = ((local_c8[0] - fVar25) - *(float *)(self + 0x8cc)) -
+                                    _DAT_005bfba8 /* R:0.10000000149011612f */;
         }
         goto LAB_004780b8;
       }
       if (((byte)self[0x7d9] & 2) == 0) {
         pGVar10 = *(GRIDBLOCK **)(self + 0x830);
         if (*(GRIDBLOCK **)(self + 0x828) == (GRIDBLOCK *)0x0) {
-          if (pGVar10 == (GRIDBLOCK *)0x0) goto LAB_00478ab0;
-LAB_00478016:
-          iVar5 = GetTriangleOrientation(pGVar10,(Vector2 *)(self + 0x858));
+          if (pGVar10 == (GRIDBLOCK *)0x0)
+            goto LAB_00478ab0;
+        LAB_00478016:
+          iVar5 = GetTriangleOrientation(pGVar10, (Vector2 *)(self + 0x858));
           iVar6 = 0;
-        }
-        else {
-          if (pGVar10 != (GRIDBLOCK *)0x0) goto LAB_00478016;
-                    /* try { // try from 004792da to 004792de has its CatchHandler @ 00479384 */
-          iVar6 = GetTriangleOrientation(*(GRIDBLOCK **)(self + 0x828),(Vector2 *)(self + 0x850));
+        } else {
+          if (pGVar10 != (GRIDBLOCK *)0x0)
+            goto LAB_00478016;
+          /* try { // try from 004792da to 004792de has its CatchHandler @ 00479384 */
+          iVar6 = GetTriangleOrientation(*(GRIDBLOCK **)(self + 0x828), (Vector2 *)(self + 0x850));
           iVar5 = 0;
         }
         if ((*(long *)(self + 0x828) == 0) ||
-           (((iVar5 == 2 || (uVar15 = 4, *(int *)(self + 0x83c) != 4)) &&
-            ((iVar5 == 3 || (uVar15 = 8, *(int *)(self + 0x83c) != 8)))))) {
+            (((iVar5 == 2 || (uVar15 = 4, *(int *)(self + 0x83c) != 4)) &&
+              ((iVar5 == 3 || (uVar15 = 8, *(int *)(self + 0x83c) != 8)))))) {
           if (*(long *)(self + 0x830) == 0) {
-LAB_00479357:
+          LAB_00479357:
             MVar2 = self[0x7d8];
-LAB_0047935e:
+          LAB_0047935e:
             bVar3 = (byte)MVar2 & 2;
             goto LAB_004780b8;
           }
           if (((iVar6 == 2) || (uVar15 = 4, *(int *)(self + 0x83c) != 4)) &&
-             ((iVar6 == 3 || (uVar15 = 8, *(int *)(self + 0x83c) != 8)))) goto LAB_00478c63;
+              ((iVar6 == 3 || (uVar15 = 8, *(int *)(self + 0x83c) != 8))))
+            goto LAB_00478c63;
         }
-        (**(code **)(*(long *)self + 200))(self,uVar15);
+        (**(code **)(*(long *)self + 200))(self, uVar15);
         MVar2 = self[0x7d8];
         if (*(int *)(self + 0x83c) == 8) {
           bVar3 = (byte)MVar2 & 2;
           self[0x7d8] = (MeatBoyCharactor)((byte)MVar2 & 0xfe);
-        }
-        else {
+        } else {
           self[0x7d8] = (MeatBoyCharactor)((byte)MVar2 | 1);
           bVar3 = (byte)MVar2 & 2;
         }
-      }
-      else {
+      } else {
         if ((*(long *)(self + 0x828) == 0) && (*(long *)(self + 0x830) == 0)) {
-LAB_00478ab0:
+        LAB_00478ab0:
           local_98 = DAT_005be894 /* R:1.0f */ + *(float *)(self + 0x8cc);
           local_94 = 0;
-                    /* try { // try from 00478ae7 to 00478c62 has its CatchHandler @ 00479529 */
-          Vector2__operator_minus__005be180(local_68,pVVar1);
-          TileLevel__GetGridIndex__0058dd90
-                    (*(TileLevel **)(SuperMeatBoy + 0x40),local_68,local_88,local_48,local_3c);
-          pGVar10 = (GRIDBLOCK *)
-                    TileLevel__GetGridBlock
-                              (*(TileLevel **)(SuperMeatBoy + 0x40),local_48[0],local_3c[0],0);
-          Vector2__operator_plus__005be140(local_58,pVVar1);
-          TileLevel__GetGridIndex__0058dd90
-                    (*(TileLevel **)(SuperMeatBoy + 0x40),local_58,local_78,local_48,local_3c);
-          pGVar11 = (GRIDBLOCK *)
-                    TileLevel__GetGridBlock
-                              (*(TileLevel **)(SuperMeatBoy + 0x40),local_48[0],local_3c[0],0);
-          iVar5 = GetTriangleOrientation(pGVar10,local_88);
-          iVar6 = GetTriangleOrientation(pGVar11,local_78);
-          iVar8 = SMBPalette__IsBlockCollidable
-                            ((GRIDBLOCK *)GSuperMeatBoy__pLevelPalette,(SceneObject2D *)pGVar10);
+          /* try { // try from 00478ae7 to 00478c62 has its CatchHandler @ 00479529 */
+          Vector2__operator_minus__005be180(local_68, pVVar1);
+          TileLevel__GetGridIndex__0058dd90(*(TileLevel **)(SuperMeatBoy + 0x40), local_68,
+                                            local_88, local_48, local_3c);
+          pGVar10 = (GRIDBLOCK *)TileLevel__GetGridBlock(*(TileLevel **)(SuperMeatBoy + 0x40),
+                                                         local_48[0], local_3c[0], 0);
+          Vector2__operator_plus__005be140(local_58, pVVar1);
+          TileLevel__GetGridIndex__0058dd90(*(TileLevel **)(SuperMeatBoy + 0x40), local_58,
+                                            local_78, local_48, local_3c);
+          pGVar11 = (GRIDBLOCK *)TileLevel__GetGridBlock(*(TileLevel **)(SuperMeatBoy + 0x40),
+                                                         local_48[0], local_3c[0], 0);
+          iVar5 = GetTriangleOrientation(pGVar10, local_88);
+          iVar6 = GetTriangleOrientation(pGVar11, local_78);
+          iVar8 = SMBPalette__IsBlockCollidable((GRIDBLOCK *)GSuperMeatBoy__pLevelPalette,
+                                                (SceneObject2D *)pGVar10);
           bVar21 = false;
           if (((((iVar8 == 1) && (((byte)pGVar10[3] & 1) != 0)) && (*pGVar10 != (GRIDBLOCK)0x0)) &&
-              (((byte)pGVar10[2] & 0xc) != 0xc)) && (((iVar5 == 1 || (iVar5 == 3)) || (iVar5 == 5)))
-             ) {
+               (((byte)pGVar10[2] & 0xc) != 0xc)) &&
+              (((iVar5 == 1 || (iVar5 == 3)) || (iVar5 == 5)))) {
             self[0x7d8] = (MeatBoyCharactor)((byte)self[0x7d8] | 1);
             if (((byte)self[0x7d9] & 0xc0) == 0) {
-              BloodyTiles__AddBloodyTile
-                        ((BloodyTiles *)(SuperMeatBoy + 0x50),pGVar10,4,local_88,iVar5,
-                         *(uint64_t *)(*(long *)(self + 0xf8) + 0x880));
+              BloodyTiles__AddBloodyTile((BloodyTiles *)(SuperMeatBoy + 0x50), pGVar10, 4, local_88,
+                                         iVar5, *(uint64_t *)(*(long *)(self + 0xf8) + 0x880));
             }
-            SMBPalette__BreakyCollide(GSuperMeatBoy__pLevelPalette,pGVar10);
-            SMBPalette__ApplyTredmillForce
-                      (GSuperMeatBoy__pLevelPalette,pGVar10,(SceneObject2D *)self);
-            (**(code **)(*(long *)self + 200))(self,4);
+            SMBPalette__BreakyCollide(GSuperMeatBoy__pLevelPalette, pGVar10);
+            SMBPalette__ApplyTredmillForce(GSuperMeatBoy__pLevelPalette, pGVar10,
+                                           (SceneObject2D *)self);
+            (**(code **)(*(long *)self + 200))(self, 4);
             bVar21 = true;
           }
-          iVar5 = SMBPalette__IsBlockCollidable
-                            ((GRIDBLOCK *)GSuperMeatBoy__pLevelPalette,(SceneObject2D *)pGVar11);
+          iVar5 = SMBPalette__IsBlockCollidable((GRIDBLOCK *)GSuperMeatBoy__pLevelPalette,
+                                                (SceneObject2D *)pGVar11);
           if (((iVar5 != 1) || (((byte)pGVar11[3] & 2) == 0)) ||
-             (((*pGVar11 == (GRIDBLOCK)0x0 || (((byte)pGVar11[2] & 0xc) == 0xc)) ||
-              (((iVar6 != 0 && (iVar6 != 2)) && (iVar6 != 5)))))) {
-            if (bVar21) goto LAB_0047944f;
+              (((*pGVar11 == (GRIDBLOCK)0x0 || (((byte)pGVar11[2] & 0xc) == 0xc)) ||
+                (((iVar6 != 0 && (iVar6 != 2)) && (iVar6 != 5)))))) {
+            if (bVar21)
+              goto LAB_0047944f;
             MVar2 = (MeatBoyCharactor)((byte)self[0x7d8] & 0xfb);
             self[0x7d8] = MVar2;
             if (((0.0 < *(float *)(self + 0xbc)) && (*(int *)(self + 0x7d4) != 6)) &&
-               (*(int *)(self + 0x7d4) != 0x12)) {
-              SetState(self,6);
+                (*(int *)(self + 0x7d4) != 0x12)) {
+              SetState(self, 6);
               goto LAB_00478c63;
             }
-            if (((*(float *)(self + 0xbc) < 0.0) && (iVar5 = *(int *)(self + 0x7d4), iVar5 != 0x13))
-               && ((iVar5 != 8 && (iVar5 != 7)))) {
-                    /* try { // try from 00479352 to 00479356 has its CatchHandler @ 00479529 */
-              SetState(self,7);
+            if (((*(float *)(self + 0xbc) < 0.0) &&
+                 (iVar5 = *(int *)(self + 0x7d4), iVar5 != 0x13)) &&
+                ((iVar5 != 8 && (iVar5 != 7)))) {
+              /* try { // try from 00479352 to 00479356 has its CatchHandler @ 00479529 */
+              SetState(self, 7);
               goto LAB_00479357;
             }
             goto LAB_0047935e;
           }
           self[0x7d8] = (MeatBoyCharactor)((byte)self[0x7d8] & 0xfe);
           if (((byte)self[0x7d9] & 0xc0) == 0) {
-                    /* try { // try from 00479418 to 0047951b has its CatchHandler @ 00479529 */
-            BloodyTiles__AddBloodyTile
-                      ((BloodyTiles *)(SuperMeatBoy + 0x50),pGVar11,8,local_78,iVar6,
-                       *(uint64_t *)(*(long *)(self + 0xf8) + 0x880));
+            /* try { // try from 00479418 to 0047951b has its CatchHandler @ 00479529 */
+            BloodyTiles__AddBloodyTile((BloodyTiles *)(SuperMeatBoy + 0x50), pGVar11, 8, local_78,
+                                       iVar6, *(uint64_t *)(*(long *)(self + 0xf8) + 0x880));
           }
-          SMBPalette__BreakyCollide(GSuperMeatBoy__pLevelPalette,pGVar11);
-          SMBPalette__ApplyTredmillForce(GSuperMeatBoy__pLevelPalette,pGVar11,(SceneObject2D *)self)
-          ;
-          (**(code **)(*(long *)self + 200))(self,8);
-LAB_0047944f:
+          SMBPalette__BreakyCollide(GSuperMeatBoy__pLevelPalette, pGVar11);
+          SMBPalette__ApplyTredmillForce(GSuperMeatBoy__pLevelPalette, pGVar11,
+                                         (SceneObject2D *)self);
+          (**(code **)(*(long *)self + 200))(self, 8);
+        LAB_0047944f:
           self[0x7d8] = (MeatBoyCharactor)((byte)self[0x7d8] | 4);
-          SetState(self,9);
+          SetState(self, 9);
         }
-LAB_00478c63:
+      LAB_00478c63:
         bVar3 = (byte)self[0x7d8] & 2;
       }
     }
-LAB_004780b8:
-                    /* try { // try from 004780d4 to 004780d9 has its CatchHandler @ 00479386 */
+  LAB_004780b8:
+    /* try { // try from 004780d4 to 004780d9 has its CatchHandler @ 00479386 */
     if ((((bVar3 == 0) && (bVar19 != 0)) || ((bVar22 == 0 && (((byte)self[0x7d9] & 2) != 0)))) &&
-       ((**(code **)(*(long *)self + 0xd0))(self), (*(ushort *)(self + 0x7d8) & 0x218) == 0x200)) {
+        ((**(code **)(*(long *)self + 0xd0))(self), (*(ushort *)(self + 0x7d8) & 0x218) == 0x200)) {
       if (((byte)self[0x7d9] & 0x10) == 0) {
         *(uint32_t *)(self + 0xb8) = 0;
-      }
-      else {
-                    /* try { // try from 004790c8 to 004790cc has its CatchHandler @ 00479386 */
-        fVar25 = (float)Vector2__Dot((Vector2 *)(self + 0xb8),(Vector2 *)local_128);
+      } else {
+        /* try { // try from 004790c8 to 004790cc has its CatchHandler @ 00479386 */
+        fVar25 = (float)Vector2__Dot((Vector2 *)(self + 0xb8), (Vector2 *)local_128);
         if (fVar25 <= 0.0) {
           *(uint32_t *)(self + 0xb8) = 0;
         }
       }
     }
     if (((*(long *)(self + 0x820) == 0) && (*(long *)(self + 0x818) == 0)) &&
-       (((byte)self[0x7d9] & 2) == 0)) {
+        (((byte)self[0x7d9] & 2) == 0)) {
       self[0x7d8] = (MeatBoyCharactor)((byte)self[0x7d8] | 2);
     }
     iVar5 = *(int *)(self + 0x7d4);
     if (((((iVar5 != 9) && (iVar5 != 7)) &&
-         ((iVar5 != 0xf && ((iVar5 != 0x13 && (*(long *)(self + 0x820) == 0)))))) &&
-        (*(long *)(self + 0x818) == 0)) &&
-       ((*(float *)(self + 0xbc) <= 0.0 && *(float *)(self + 0xbc) != 0.0 &&
-        (((byte)self[0x7d9] & 2) == 0)))) {
+          ((iVar5 != 0xf && ((iVar5 != 0x13 && (*(long *)(self + 0x820) == 0)))))) &&
+         (*(long *)(self + 0x818) == 0)) &&
+        ((*(float *)(self + 0xbc) <= 0.0 && *(float *)(self + 0xbc) != 0.0 &&
+          (((byte)self[0x7d9] & 2) == 0)))) {
       if (iVar5 != 8) {
         lVar12 = *(long *)(self + 0xf8);
         self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
         uVar7 = 0;
         uVar13 = *(ushort *)(lVar12 + 0x2f0);
         if (uVar13 != 0) {
-                    /* try { // try from 00478e21 to 00478e25 has its CatchHandler @ 00479386 */
-          uVar7 = GetRandomINT(0,uVar13 - 1);
+          /* try { // try from 00478e21 to 00478e25 has its CatchHandler @ 00479386 */
+          uVar7 = GetRandomINT(0, uVar13 - 1);
         }
         *(uint32_t *)(lVar12 + 0x318) = uVar7;
         *(uint32_t *)(self + 0xa4c) = uVar7;
@@ -2398,7 +2355,7 @@ LAB_004780b8:
   }
 LAB_004775cc:
   if (*(int *)(self + 0xa40) == 1) {
-                    /* try { // try from 0047821f to 00478259 has its CatchHandler @ 00479545 */
+    /* try { // try from 0047821f to 00478259 has its CatchHandler @ 00479545 */
     SMBPalette__UnSetReplayIndex(GSuperMeatBoy__pLevelPalette);
   }
   lVar12 = *(long *)(self + 0x7e0);
@@ -2408,31 +2365,31 @@ LAB_004775cc:
     }
     *(byte *)(lVar12 + 1) = *(byte *)(lVar12 + 1) & 0xdf | ((byte)self[0x7d8] & 1) << 5;
     *(byte *)(*(long *)(self + 0x7e0) + 1) =
-         *(byte *)(*(long *)(self + 0x7e0) + 1) & 0xbf | ((byte)self[0x7d9] & 2) << 5;
-    **(uint **)(self + 0x7e0) =
-         **(uint **)(self + 0x7e0) & 0xfffc7fff | ((byte)self[0x7da] & 7) << 0xf;
+        *(byte *)(*(long *)(self + 0x7e0) + 1) & 0xbf | ((byte)self[0x7d9] & 2) << 5;
+    **(uint **)(self + 0x7e0) = **(uint **)(self + 0x7e0) & 0xfffc7fff | ((byte)self[0x7da] & 7)
+                                                                             << 0xf;
     **(byte **)(self + 0x7e0) =
-         **(byte **)(self + 0x7e0) & 0x83 | (byte)((*(uint *)(self + 0x7d4) & 0x1f) << 2);
+        **(byte **)(self + 0x7e0) & 0x83 | (byte)((*(uint *)(self + 0x7d4) & 0x1f) << 2);
     *(byte *)(*(long *)(self + 0x7e0) + 2) =
-         *(byte *)(*(long *)(self + 0x7e0) + 2) & 0xe3 | (byte)((*(uint *)(self + 0xa4c) & 7) << 2);
-    Vector2__operator_assign((Vector2 *)(*(long *)(self + 0x7e0) + 4),(Vector2 *)(self + 0xa0));
+        *(byte *)(*(long *)(self + 0x7e0) + 2) & 0xe3 | (byte)((*(uint *)(self + 0xa4c) & 7) << 2);
+    Vector2__operator_assign((Vector2 *)(*(long *)(self + 0x7e0) + 4), (Vector2 *)(self + 0xa0));
     *(byte *)(*(long *)(self + 0x7e0) + 3) =
-         *(byte *)(*(long *)(self + 0x7e0) + 3) & 0xfb | (byte)self[0x7d8] & 4;
+        *(byte *)(*(long *)(self + 0x7e0) + 3) & 0xfb | (byte)self[0x7d8] & 4;
     *(byte *)(*(long *)(self + 0x7e0) + 3) =
-         *(byte *)(*(long *)(self + 0x7e0) + 3) & 0xfd | (byte)self[0x7d8] & 2;
+        *(byte *)(*(long *)(self + 0x7e0) + 3) & 0xfd | (byte)self[0x7d8] & 2;
     (**(code **)(*(long *)self + 0x30))(self);
-    SMBReplay__EndReplayFrame(*(SMBReplay **)(self + 0xa38),(byte)self[0x7db] >> 3 & 1);
+    SMBReplay__EndReplayFrame(*(SMBReplay **)(self + 0xa38), (byte)self[0x7db] >> 3 & 1);
   }
   self[0x7d9] = (MeatBoyCharactor)((byte)self[0x7d9] & 0xef);
   self[0x7d8] = (MeatBoyCharactor)((byte)self[0x7d8] & 0x27 | 0x80);
-  Vector2__operator_assign((Vector2 *)(self + 0x868),(Vector2 *)(self + 0xa0));
+  Vector2__operator_assign((Vector2 *)(self + 0x868), (Vector2 *)(self + 0xa0));
   this_00 = Audio;
   *(uint32_t *)(self + 0x878) = 0;
   *(uint32_t *)(self + 0x87c) = 0;
   *(uint32_t *)(self + 0x870) = *(uint32_t *)(self + 0xa0);
   *(uint32_t *)(self + 0x874) = *(uint32_t *)(self + 0xa4);
-  TAudio__SetMicrophonePosition(this_00,(FPUVector *)(self + 0x870));
-  TAudio__SetMicrophoneListeningRange(Audio,DAT_005c07bc /* R:400.0f */);
+  TAudio__SetMicrophonePosition(this_00, (FPUVector *)(self + 0x870));
+  TAudio__SetMicrophoneListeningRange(Audio, DAT_005c07bc /* R:400.0f */);
 LAB_00477797:
   AutoLockSection__AutoLockSection__005b59d0(local_208);
   return;
@@ -2466,66 +2423,61 @@ void __thiscall MeatBoyCharactor__ProcessReplayFrame(MeatBoyCharactor *self)
   uint32_t local_84;
   uint32_t local_78;
   uint32_t local_74;
-  Vector2 local_68 [16];
-  Vector2 local_58 [16];
-  Vector2 local_48 [16];
-  Vector2 local_38 [8];
-  int local_30 [4];
-  
+  Vector2 local_68[16];
+  Vector2 local_58[16];
+  Vector2 local_48[16];
+  Vector2 local_38[8];
+  int local_30[4];
+
   if (((*(int *)(self + 0x7d4) != 0xe) && (*(int *)(self + 0x7d4) != 0x10)) &&
-     (*(int *)(self + 0xa40) == 1)) {
+      (*(int *)(self + 0xa40) == 1)) {
     iVar10 = *(int *)(self + 0xa48);
-    puVar5 = (uint *)SMBReplay__GetReplayFrame
-                               (*(SMBReplay **)(self + 0xa38),*(int *)(self + 0xa90),
-                                (int *)(self + 0xa44),(int *)(self + 0xa48));
+    puVar5 =
+        (uint *)SMBReplay__GetReplayFrame(*(SMBReplay **)(self + 0xa38), *(int *)(self + 0xa90),
+                                          (int *)(self + 0xa44), (int *)(self + 0xa48));
     local_30[1] = 0;
     local_30[0] = iVar10 + 1;
-    lVar6 = SMBReplay__GetReplayFrame
-                      (*(SMBReplay **)(self + 0xa38),*(int *)(self + 0xa90),local_30 + 1,local_30);
+    lVar6 = SMBReplay__GetReplayFrame(*(SMBReplay **)(self + 0xa38), *(int *)(self + 0xa90),
+                                      local_30 + 1, local_30);
     if (puVar5 == (uint *)0x0) {
       if ((*(int *)(self + 0xa90) == *(int *)(*(long *)(self + 0xa38) + 0x3c)) &&
-         (*(int *)(SuperMeatBoy + 0x294) != 10)) {
-        SMBPalette__ActivateEnd(GSuperMeatBoy__pLevelPalette,-1);
+          (*(int *)(SuperMeatBoy + 0x294) != 10)) {
+        SMBPalette__ActivateEnd(GSuperMeatBoy__pLevelPalette, -1);
       }
-    }
-    else if (puVar5 == *(uint **)(self + 0x7e0)) {
+    } else if (puVar5 == *(uint **)(self + 0x7e0)) {
       if (lVar6 != 0) {
         if (((byte)self[0x7db] & 0x20) == 0) {
-          Vector2__operator_minus__005be180(local_68,(Vector2 *)(puVar5 + 1));
+          Vector2__operator_minus__005be180(local_68, (Vector2 *)(puVar5 + 1));
           fVar12 = (float)Vector2__LengthSq(local_68);
           if (DAT_005c07c0 /* R:10000.0f */ <= fVar12) {
-            Vector2__operator_assign((Vector2 *)(self + 0xa0),(Vector2 *)(puVar5 + 1));
-          }
-          else {
+            Vector2__operator_assign((Vector2 *)(self + 0xa0), (Vector2 *)(puVar5 + 1));
+          } else {
             fVar12 = (float)(*(int *)(self + 0xa44) + -1) /
                      (float)(*(ushort *)((long)puVar5 + 2) >> 5 & 0xf);
-            Vector2__operator_mul__005be200(local_38,fVar12);
-            Vector2__operator_mul__005be200(local_48,DAT_005be894 /* R:1.0f */ - fVar12);
-            Vector2__operator_plus__005be140(local_58,local_48);
-            Vector2__operator_assign((Vector2 *)(self + 0xa0),local_58);
-            Vector2__operator_assign((Vector2 *)(self + 0x868),(Vector2 *)(self + 0xa0));
+            Vector2__operator_mul__005be200(local_38, fVar12);
+            Vector2__operator_mul__005be200(local_48, DAT_005be894 /* R:1.0f */ - fVar12);
+            Vector2__operator_plus__005be140(local_58, local_48);
+            Vector2__operator_assign((Vector2 *)(self + 0xa0), local_58);
+            Vector2__operator_assign((Vector2 *)(self + 0x868), (Vector2 *)(self + 0xa0));
           }
-        }
-        else {
+        } else {
           fVar12 = (float)(*(int *)(self + 0xa44) + -1) /
                    (float)(*(ushort *)((long)puVar5 + 2) >> 5 & 0xf);
-          *(float *)(self + 0xa0) =
-               *(float *)(lVar6 + 4) * fVar12 + (DAT_005be894 /* R:1.0f */ - fVar12) * (float)puVar5[1];
-          Vector2__operator_assign((Vector2 *)(self + 0x868),(Vector2 *)(self + 0xa0));
+          *(float *)(self + 0xa0) = *(float *)(lVar6 + 4) * fVar12 +
+                                    (DAT_005be894 /* R:1.0f */ - fVar12) * (float)puVar5[1];
+          Vector2__operator_assign((Vector2 *)(self + 0x868), (Vector2 *)(self + 0xa0));
           *(float *)(self + 0xf0) = *(float *)(self + 0xf0) + *(float *)(self + 0x8c4);
-          Apply2DPhysics((SceneObject2D *)self,fOneFrameTimeStep);
-          Vector2__operator_assign((Vector2 *)(self + 0xb8),(Vector2 *)(self + 0xc0));
-          TileLevel__TileCollision
-                    (*(TileLevel **)(SuperMeatBoy + 0x40),(SceneObject2D *)self,
-                     (TileCollisionInfo *)(self + 0x818));
+          Apply2DPhysics((SceneObject2D *)self, fOneFrameTimeStep);
+          Vector2__operator_assign((Vector2 *)(self + 0xb8), (Vector2 *)(self + 0xc0));
+          TileLevel__TileCollision(*(TileLevel **)(SuperMeatBoy + 0x40), (SceneObject2D *)self,
+                                   (TileCollisionInfo *)(self + 0x818));
         }
       }
-    }
-    else {
+    } else {
       *(uint **)(self + 0x7e0) = puVar5;
       *(ushort *)(self + 0x7da) = *(ushort *)(self + 0x7da) & 0xf800 | (ushort)(*puVar5 >> 0xf) & 7;
-      self[0x7d9] = (MeatBoyCharactor)
-                    ((byte)self[0x7d9] & 0xfd | *(byte *)((long)puVar5 + 1) >> 5 & 2);
+      self[0x7d9] =
+          (MeatBoyCharactor)((byte)self[0x7d9] & 0xfd | *(byte *)((long)puVar5 + 1) >> 5 & 2);
       MVar1 = self[0x7d8];
       bVar7 = *(byte *)((long)puVar5 + 1) >> 5 & 1;
       self[0x7d8] = (MeatBoyCharactor)((byte)MVar1 & 0xfe | bVar7);
@@ -2533,9 +2485,8 @@ void __thiscall MeatBoyCharactor__ProcessReplayFrame(MeatBoyCharactor *self)
       self[0x7d8] = (MeatBoyCharactor)((byte)MVar1 & 0xfa | bVar7 | bVar8);
       bVar9 = *(byte *)((long)puVar5 + 3) & 2;
       self[0x7d8] = (MeatBoyCharactor)((byte)MVar1 & 0xf8 | bVar7 | bVar8 | bVar9);
-      self[0x7d8] = (MeatBoyCharactor)
-                    ((byte)MVar1 & 0xb8 | bVar7 | bVar8 | bVar9 | *(byte *)((long)puVar5 + 3) & 0x40
-                    );
+      self[0x7d8] = (MeatBoyCharactor)((byte)MVar1 & 0xb8 | bVar7 | bVar8 | bVar9 |
+                                       *(byte *)((long)puVar5 + 3) & 0x40);
       uVar11 = (byte)((byte)*puVar5 >> 2) & 0x1f;
       if (uVar11 != *(uint *)(self + 0x7d4)) {
         self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
@@ -2543,7 +2494,7 @@ void __thiscall MeatBoyCharactor__ProcessReplayFrame(MeatBoyCharactor *self)
         uVar4 = 0;
         uVar2 = *(ushort *)(lVar6 + 0x30);
         if (uVar2 != 0) {
-          uVar4 = GetRandomINT(0,uVar2 - 1);
+          uVar4 = GetRandomINT(0, uVar2 - 1);
         }
         *(uint32_t *)(lVar6 + 0x58) = uVar4;
         *(uint32_t *)(self + 0xa4c) = uVar4;
@@ -2551,12 +2502,11 @@ void __thiscall MeatBoyCharactor__ProcessReplayFrame(MeatBoyCharactor *self)
       }
       *(uint *)(self + 0x7d4) = uVar11;
       if (((byte)self[0x7db] & 0x20) == 0) {
-        Vector2__operator_assign((Vector2 *)(self + 0xa0),(Vector2 *)(puVar5 + 1));
-        Vector2__operator_assign((Vector2 *)(self + 0x868),(Vector2 *)(self + 0xa0));
-      }
-      else {
+        Vector2__operator_assign((Vector2 *)(self + 0xa0), (Vector2 *)(puVar5 + 1));
+        Vector2__operator_assign((Vector2 *)(self + 0x868), (Vector2 *)(self + 0xa0));
+      } else {
         *(uint *)(self + 0xa0) = puVar5[1];
-        Vector2__operator_assign((Vector2 *)(self + 0x868),(Vector2 *)(self + 0xa0));
+        Vector2__operator_assign((Vector2 *)(self + 0x868), (Vector2 *)(self + 0xa0));
       }
       *(uint *)(self + 0xa4c) = *(byte *)((long)puVar5 + 2) >> 2 & 7;
       if ((*puVar5 & 0x780) != 0) {
@@ -2578,7 +2528,7 @@ void __thiscall MeatBoyCharactor__ProcessReplayFrame(MeatBoyCharactor *self)
           iVar10 = iVar3;
         }
         if (((byte)self[0x7d9] & 0x40) == 0) {
-          AddEffect(self,iVar10,&local_88,&local_78);
+          AddEffect(self, iVar10, &local_88, &local_78);
         }
       }
       (**(code **)(*(long *)self + 0x38))(self);
@@ -2602,7 +2552,7 @@ void __thiscall MeatBoyCharactor__RenderEffects(MeatBoyCharactor *self)
   int iVar1;
   MeatBoyCharactor *pMVar2;
   int iVar3;
-  
+
   iVar3 = 0;
   pMVar2 = self + 0x100;
   do {
@@ -2614,7 +2564,7 @@ void __thiscall MeatBoyCharactor__RenderEffects(MeatBoyCharactor *self)
       *(uint32_t *)(*(long *)pMVar2 + 0x48) = *(uint32_t *)(pMVar2 + 0x24);
       *(uint32_t *)(*(long *)pMVar2 + 0x4c) = *(uint32_t *)(pMVar2 + 0x24);
       Vector2__operator_assign((Vector2 *)(*(long *)pMVar2 + 0x40),
-                         (Vector2 *)(self + (long)iVar3 * 0x28 + 0x11c));
+                               (Vector2 *)(self + (long)iVar3 * 0x28 + 0x11c));
       (**(code **)(**(long **)pMVar2 + 0x10))();
       *(uint32_t *)(pMVar2 + 8) = *(uint32_t *)(*(FlashLibraryInstance **)pMVar2 + 0x58);
       iVar1 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)pMVar2);
@@ -2643,27 +2593,26 @@ void __thiscall MeatBoyCharactor__RenderClones(MeatBoyCharactor *self)
   long lVar1;
   int iVar2;
   long lVar3;
-  
+
   if (*(int *)(self + 0xa40) == 0) {
-    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), 1);
     lVar1 = *(long *)(self + 0xa38);
     if ((*(int *)(lVar1 + 0x2c8) == 0) && (0 < *(int *)(lVar1 + 0x34))) {
       iVar2 = 0;
       do {
         lVar3 = (long)iVar2;
         if ((*(int *)(lVar1 + 0x3c) == iVar2) &&
-           (iVar2 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + lVar3 * 8) + 0xa90))) {
-          FlashAnimationLibrary__EnableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
-        }
-        else {
-          FlashAnimationLibrary__DisableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+            (iVar2 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + lVar3 * 8) + 0xa90))) {
+          FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                             1);
+        } else {
+          FlashAnimationLibrary__DisableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                              1);
         }
         iVar2 = iVar2 + 1;
-        MeatBoyCharFoundation__Render
-                  (*(MeatBoyCharactor **)(self + 0xf8),
-                   *(FlashLibraryInstance **)(*(long *)(self + 0x7f0) + lVar3 * 8));
+        MeatBoyCharFoundation__Render(
+            *(MeatBoyCharactor **)(self + 0xf8),
+            *(FlashLibraryInstance **)(*(long *)(self + 0x7f0) + lVar3 * 8));
         lVar1 = *(long *)(self + 0xa38);
       } while (iVar2 < *(int *)(lVar1 + 0x34));
     }
@@ -2683,17 +2632,17 @@ void __thiscall MeatBoyCharactor__RenderClones(MeatBoyCharactor *self)
 void __thiscall MeatBoyCharactor__Render(MeatBoyCharactor *self)
 
 {
-  AutoLockSection aAStack_18 [16];
-  
-  AutoLockSection__AutoLockSection(aAStack_18,(CriticalSection *)(self + 0x880));
-                    /* try { // try from 0047ab7d to 0047ab7f has its CatchHandler @ 0047abbd */
+  AutoLockSection aAStack_18[16];
+
+  AutoLockSection__AutoLockSection(aAStack_18, (CriticalSection *)(self + 0x880));
+  /* try { // try from 0047ab7d to 0047ab7f has its CatchHandler @ 0047abbd */
   (**(code **)(*(long *)self + 0x50))(self);
   if (*(int *)(*(long *)(self + 0xa38) + 0x2c8) != 1) {
     AutoLockSection__AutoLockSection__005b59d0(aAStack_18);
     return;
   }
-                    /* try { // try from 0047abaa to 0047abae has its CatchHandler @ 0047abbd */
-  MeatBoyCharFoundation__Render(*(MeatBoyCharactor **)(self + 0xf8),(FlashLibraryInstance *)self);
+  /* try { // try from 0047abaa to 0047abae has its CatchHandler @ 0047abbd */
+  MeatBoyCharFoundation__Render(*(MeatBoyCharactor **)(self + 0xf8), (FlashLibraryInstance *)self);
   AutoLockSection__AutoLockSection__005b59d0(aAStack_18);
   return;
 }
@@ -2722,8 +2671,8 @@ void __thiscall MeatBoyCharactor__WritePropertiesToFile(MeatBoyCharactor *self)
   uint32_t local_58;
   uint32_t local_54;
   uint8_t *local_50;
-  File local_48 [56];
-  
+  File local_48[56];
+
   local_88 = *(uint64_t *)(self + 0xa58);
   local_78 = 2;
   local_70 = 0;
@@ -2735,39 +2684,39 @@ void __thiscall MeatBoyCharactor__WritePropertiesToFile(MeatBoyCharactor *self)
   local_54 = 0;
   local_50 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
   local_80 = &DAT_005c04d3 /* R:3.984248865183858e-39f */;
-  File__File(local_48,(tagFileCreation *)&local_88);
-                    /* try { // try from 0047ac53 to 0047aed7 has its CatchHandler @ 0047aee9 */
-  File__Write(local_48,&iCharPropsFileVer,4);
-  File__Write(local_48,self + 0x8a8,4);
-  File__Write(local_48,self + 0x8ac,4);
-  File__Write(local_48,self + 0x8b0,4);
-  File__Write(local_48,self + 0x8b4,4);
-  File__Write(local_48,self + 0x8b8,4);
-  File__Write(local_48,self + 0x8bc,4);
-  File__Write(local_48,self + 0x8c0,4);
-  File__Write(local_48,self + 0x8c4,4);
-  File__Write(local_48,self + 0x8c8,4);
-  File__Write(local_48,self + 0x8cc,4);
-  File__Write(local_48,self + 0x8d0,4);
+  File__File(local_48, (tagFileCreation *)&local_88);
+  /* try { // try from 0047ac53 to 0047aed7 has its CatchHandler @ 0047aee9 */
+  File__Write(local_48, &iCharPropsFileVer, 4);
+  File__Write(local_48, self + 0x8a8, 4);
+  File__Write(local_48, self + 0x8ac, 4);
+  File__Write(local_48, self + 0x8b0, 4);
+  File__Write(local_48, self + 0x8b4, 4);
+  File__Write(local_48, self + 0x8b8, 4);
+  File__Write(local_48, self + 0x8bc, 4);
+  File__Write(local_48, self + 0x8c0, 4);
+  File__Write(local_48, self + 0x8c4, 4);
+  File__Write(local_48, self + 0x8c8, 4);
+  File__Write(local_48, self + 0x8cc, 4);
+  File__Write(local_48, self + 0x8d0, 4);
   iVar1 = 0;
   do {
-    File__WriteArray(local_48,(uchar *)(self + (long)iVar1 * 8 + 0x8d4),2,4);
+    File__WriteArray(local_48, (uchar *)(self + (long)iVar1 * 8 + 0x8d4), 2, 4);
     iVar1 = iVar1 + 1;
   } while (iVar1 != 0x18);
-  File__WriteArray(local_48,(uchar *)(self + 0x994),3,4);
-  File__WriteArray(local_48,(uchar *)(self + 0x9a4),3,4);
-  File__WriteArray(local_48,(uchar *)(self + 0x9b4),3,4);
-  File__WriteArray(local_48,(uchar *)(self + 0x9c4),3,4);
-  File__WriteArray(local_48,(uchar *)(self + 0x9d4),3,4);
-  File__WriteArray(local_48,(uchar *)(self + 0x9e4),3,4);
-  File__WriteArray(local_48,(uchar *)(self + 0x9f4),3,4);
-  File__WriteArray(local_48,(uchar *)(self + 0xa04),3,4);
-  File__WriteArray(local_48,(uchar *)(self + 0xa14),3,4);
-  File__Write(local_48,self + 0xa2c,4);
-  File__Write(local_48,self + 0xa24,4);
-  File__Write(local_48,self + 0xa28,4);
-  File__Write(local_48,self + 0xa30,4);
-  File__Write(local_48,self + 0xa34,4);
+  File__WriteArray(local_48, (uchar *)(self + 0x994), 3, 4);
+  File__WriteArray(local_48, (uchar *)(self + 0x9a4), 3, 4);
+  File__WriteArray(local_48, (uchar *)(self + 0x9b4), 3, 4);
+  File__WriteArray(local_48, (uchar *)(self + 0x9c4), 3, 4);
+  File__WriteArray(local_48, (uchar *)(self + 0x9d4), 3, 4);
+  File__WriteArray(local_48, (uchar *)(self + 0x9e4), 3, 4);
+  File__WriteArray(local_48, (uchar *)(self + 0x9f4), 3, 4);
+  File__WriteArray(local_48, (uchar *)(self + 0xa04), 3, 4);
+  File__WriteArray(local_48, (uchar *)(self + 0xa14), 3, 4);
+  File__Write(local_48, self + 0xa2c, 4);
+  File__Write(local_48, self + 0xa24, 4);
+  File__Write(local_48, self + 0xa28, 4);
+  File__Write(local_48, self + 0xa30, 4);
+  File__Write(local_48, self + 0xa34, 4);
   File__File__005b7a70(local_48);
   return;
 }
@@ -2781,8 +2730,8 @@ void __thiscall MeatBoyCharactor__WritePropertiesToFile(MeatBoyCharactor *self)
  */
 /* MeatBoyCharactor__AddEffect__0047af00(tagSuperMeatBoyEffects, Vector2 const&, Vector2 const&) */
 
-void __thiscall
-MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg3,float *arg4)
+void __thiscall MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self, int arg2, float *arg3,
+                                                      float *arg4)
 
 {
   byte *pbVar1;
@@ -2792,14 +2741,14 @@ MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg
   int iVar5;
   long lVar6;
   float fVar7;
-  Matrix4x4 aMStack_78 [64];
+  Matrix4x4 aMStack_78[64];
   float local_38;
   float local_34;
   float local_30;
   uint32_t local_2c;
   float local_28;
   float local_24;
-  
+
   fVar7 = DAT_005c07a4 /* R:-1.0f */;
   if (((byte)self[0x7d9] & 0x40) == 0) {
     puVar3 = *(ushort **)(self + 0x7e0);
@@ -2810,8 +2759,7 @@ MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg
         *pbVar1 = *pbVar1 | 8;
         lVar6 = *(long *)(self + 0x7e0);
         fVar2 = *arg4;
-      }
-      else {
+      } else {
         pbVar1 = (byte *)(*(long *)(self + 0x7e0) + 1);
         *pbVar1 = *pbVar1 & 0xf7;
         lVar6 = *(long *)(self + 0x7e0);
@@ -2819,8 +2767,7 @@ MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg
       }
       if (fVar7 == fVar2) {
         *(byte *)(lVar6 + 1) = *(byte *)(lVar6 + 1) | 0x10;
-      }
-      else {
+      } else {
         *(byte *)(lVar6 + 1) = *(byte *)(lVar6 + 1) & 0xef;
       }
     }
@@ -2838,8 +2785,7 @@ MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg
           local_34 = arg3[1] * *(float *)(self + lVar6 * 0x10 + 0x18);
           local_38 = *arg3 * *(float *)(self + lVar6 * 0x10 + 0x14);
           local_30 = *(float *)(self + lVar6 * 0x10 + 0x1c);
-        }
-        else {
+        } else {
           lVar6 = lVar6 + 0x98;
           local_30 = *(float *)(self + lVar6 * 0x10 + 0x1c);
           local_38 = *(float *)(self + lVar6 * 0x10 + 0x14) * *arg3;
@@ -2849,8 +2795,9 @@ MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg
           if ((*(ushort *)(self + 0x7da) & 0x7ff) != 0) {
             fVar7 = DAT_005c07ac /* R:0.7853981852531433f */;
           }
-          Matrix4x4__ConvertToRotationMatrix(aMStack_78,fVar7);
-          Matrix4x4__TransformVector3((FPUVector *)&local_38,(FPUVector *)&local_38,aMStack_78,1);
+          Matrix4x4__ConvertToRotationMatrix(aMStack_78, fVar7);
+          Matrix4x4__TransformVector3((FPUVector *)&local_38, (FPUVector *)&local_38, aMStack_78,
+                                      1);
         }
         fVar7 = *(float *)(self + 0xa0);
         *(float *)(pMVar4 + 0xc) = fVar7;
@@ -2860,11 +2807,10 @@ MeatBoyCharactor__AddEffect__0047af00(MeatBoyCharactor *self,int arg2,float *arg
         *(float *)(pMVar4 + 0x10) = fVar2 + local_34;
         local_24 = arg4[1] * local_30;
         local_28 = local_30 * *arg4;
-        Vector2__operator_assign((Vector2 *)(pMVar4 + 0x1c),(Vector2 *)&local_28);
+        Vector2__operator_assign((Vector2 *)(pMVar4 + 0x1c), (Vector2 *)&local_28);
         if (((byte)self[0x7d9] & 2) == 0) {
           *(uint32_t *)(pMVar4 + 0x24) = 0;
-        }
-        else {
+        } else {
           if ((*(ushort *)(self + 0x7da) & 0x7ff) == 0) {
             *(uint32_t *)(pMVar4 + 0x24) = 0xbf490fdb;
             *(uint32_t *)(pMVar4 + 8) = 0;
@@ -2898,32 +2844,32 @@ void __thiscall MeatBoyCharactor__RestoreControls(MeatBoyCharactor *self)
   long lVar2;
   uint32_t uVar3;
   int iVar4;
-  
+
   if ((SMBMenu != (GSMBMenu *)0x0) && (iVar4 = GSMBMenu__IsInReplayMode(SMBMenu), iVar4 == 1)) {
     return;
   }
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,keyJump,CharJump,self);
-    TKeyboard__AddKeyCallback(Keyboard,keySpecial,CharSpecial,self);
-    TKeyboard__AddKeyCallback(Keyboard,keyLeft,CharMoveLeft,self);
-    TKeyboard__AddKeyCallback(Keyboard,keyRight,CharMoveRight,self);
+    TKeyboard__AddKeyCallback(Keyboard, keyJump, CharJump, self);
+    TKeyboard__AddKeyCallback(Keyboard, keySpecial, CharSpecial, self);
+    TKeyboard__AddKeyCallback(Keyboard, keyLeft, CharMoveLeft, self);
+    TKeyboard__AddKeyCallback(Keyboard, keyRight, CharMoveRight, self);
   }
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,3,0,0);
+  Joystick__AddButtonCallback(pJVar1, 3, 0, 0);
   uVar3 = buttonJump;
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,uVar3,CharJump,self);
+  Joystick__AddButtonCallback(pJVar1, uVar3, CharJump, self);
   uVar3 = buttonSpecial;
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,uVar3,CharSpecial,self);
+  Joystick__AddButtonCallback(pJVar1, uVar3, CharSpecial, self);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,3,CharMoveLeft,self);
+  Joystick__AddPOVCallback(pJVar1, 3, CharMoveLeft, self);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,1,CharMoveRight,self);
+  Joystick__AddPOVCallback(pJVar1, 1, CharMoveRight, self);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,10,CharSpecial,self);
+  Joystick__AddButtonCallback(pJVar1, 10, CharSpecial, self);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,0xb,CharSpecial,self);
+  Joystick__AddButtonCallback(pJVar1, 0xb, CharSpecial, self);
   uVar3 = bUseLeftJoyAsPOV;
   lVar2 = TPlayer__GetJoystick((TPlayer *)Players__Player);
   *(uint32_t *)(lVar2 + 0xfc) = uVar3;
@@ -2978,8 +2924,8 @@ void __thiscall MeatBoyCharactor__RestoreControls(MeatBoyCharactor *self)
 /* WARNING: Removing unreachable block (ram,0x0047d68b) */
 /* MeatBoyCharactor__MeatBoyCharactor__0047b350(char const*, tagSuperMeatBoyCharactor) */
 
-void __thiscall
-MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,uint32_t arg3)
+void __thiscall MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self, char *arg1,
+                                                             uint32_t arg3)
 
 {
   int *piVar1;
@@ -3016,10 +2962,10 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
   bool bVar26;
   byte bVar27;
   uint32_t local_298;
-  Matrix4x4 local_294 [64];
-  Matrix4x4 local_254 [64];
-  Vector2 local_214 [8];
-  Vector2 local_20c [20];
+  Matrix4x4 local_294[64];
+  Matrix4x4 local_254[64];
+  Vector2 local_214[8];
+  Vector2 local_20c[20];
   char *local_1f8;
   uint8_t *local_1f0;
   uint32_t local_1e8;
@@ -3042,14 +2988,14 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
   uint32_t local_148;
   uint32_t local_144;
   uint8_t *local_140;
-  char *local_138 [6];
+  char *local_138[6];
   uint32_t local_108;
   uint32_t local_104;
   uint32_t local_f8;
   uint32_t local_f4;
-  long local_e8 [2];
-  long local_d8 [2];
-  uint8_t *local_c8 [2];
+  long local_e8[2];
+  long local_d8[2];
+  uint8_t *local_c8[2];
   uint32_t local_b8;
   uint32_t local_b4;
   uint32_t local_a8;
@@ -3064,15 +3010,15 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
   uint32_t local_64;
   uint32_t local_58;
   uint32_t local_54;
-  int local_48 [2];
+  int local_48[2];
   allocator local_3f;
-  allocator local_3e [14];
-  
+  allocator local_3e[14];
+
   bVar27 = 0;
   *(uint64_t *)(self + 0x48) = 0;
   *(uint32_t *)(self + 0x50) = 1;
   *(uint8_t ***)self = &PTR__SceneObject2D_005dd3d0;
-                    /* try { // try from 0047b383 to 0047b387 has its CatchHandler @ 0047d622 */
+  /* try { // try from 0047b383 to 0047b387 has its CatchHandler @ 0047d622 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x58));
   uVar16 = vDefaultStart2D;
   pMVar3 = self + 0x10c;
@@ -3121,9 +3067,9 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
   local_f4 = 0x3f000000;
   local_108 = 0;
   local_104 = 0;
-                    /* try { // try from 0047b58b to 0047b58f has its CatchHandler @ 0047d620 */
-  BoundingSquare__BoundingSquare
-            ((BoundingSquare *)(self + 0x740),(Vector2 *)&local_108,0.0,(Vector2 *)&local_f8);
+  /* try { // try from 0047b58b to 0047b58f has its CatchHandler @ 0047d620 */
+  BoundingSquare__BoundingSquare((BoundingSquare *)(self + 0x740), (Vector2 *)&local_108, 0.0,
+                                 (Vector2 *)&local_f8);
   uVar8 = *(ushort *)(self + 0x7da);
   self[0x7d9] = (MeatBoyCharactor)((byte)self[0x7d9] & 0x80);
   *(uint32_t *)(self + 0x7d4) = 0;
@@ -3151,18 +3097,18 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
   *(uint32_t *)(self + 0x874) = 0;
   *(uint32_t *)(self + 0x878) = 0;
   *(uint32_t *)(self + 0x87c) = 0;
-                    /* try { // try from 0047b6e2 to 0047b6e6 has its CatchHandler @ 0047d60d */
+  /* try { // try from 0047b6e2 to 0047b6e6 has its CatchHandler @ 0047d60d */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x880));
   *(uint64_t *)(self + 0x994) = 0;
   *(uint64_t *)(self + 0x99c) = 0;
   *(uint64_t *)(self + 0x9a4) = 0;
   *(uint64_t *)(self + 0x9ac) = 0;
   *(uint64_t *)(self + 0x9b4) = 0;
-  *(uint8_t (*) [16])(self + 0xa60) = (uint8_t  [16])0x0;
+  *(uint8_t (*)[16])(self + 0xa60) = (uint8_t[16])0x0;
   *(uint64_t *)(self + 0x9bc) = 0;
   *(uint64_t *)(self + 0x9c4) = 0;
-  *(uint8_t (*) [16])(self + 0xa70) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0xa80) = (uint8_t  [16])0x0;
+  *(uint8_t (*)[16])(self + 0xa70) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0xa80) = (uint8_t[16])0x0;
   *(uint64_t *)(self + 0x9cc) = 0;
   *(uint64_t *)(self + 0x9d4) = 0;
   *(uint64_t *)(self + 0x9dc) = 0;
@@ -3181,12 +3127,12 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
   *(uint32_t *)(self + 0xa50) = 0;
   *(uint32_t *)(self + 0xa54) = arg3;
   *(uint8_t **)(self + 0xa58) = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 0047b836 to 0047b83a has its CatchHandler @ 0047d88a */
+  /* try { // try from 0047b836 to 0047b83a has its CatchHandler @ 0047d88a */
   puVar11 = operator_new(0x890);
   this_03 = (CriticalSection *)(puVar11 + 1);
   lVar20 = 0x17;
   do {
-                    /* try { // try from 0047b853 to 0047b857 has its CatchHandler @ 0047d842 */
+    /* try { // try from 0047b853 to 0047b857 has its CatchHandler @ 0047d842 */
     CriticalSection__CriticalSection(this_03);
     lVar20 = lVar20 + -1;
     *(uint16_t *)(this_03 + 0x2a) = 0;
@@ -3201,28 +3147,28 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
     this_03 = this_03 + 0x58;
   } while (lVar20 != -1);
   *(uint64_t **)(self + 0xf8) = puVar11;
-                    /* try { // try from 0047b8ae to 0047b8b2 has its CatchHandler @ 0047d88a */
+  /* try { // try from 0047b8ae to 0047b8b2 has its CatchHandler @ 0047d88a */
   this_01 = operator_new(0xb0);
-                    /* try { // try from 0047b8bc to 0047b8c0 has its CatchHandler @ 0047d827 */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_01,arg1);
+  /* try { // try from 0047b8bc to 0047b8c0 has its CatchHandler @ 0047d827 */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_01, arg1);
   *puVar11 = this_01;
   lVar20 = 0;
   this_01[0x8d] = (FlashAnimationLibrary)0x1;
   do {
-    if ((&MeatBoyCharFoundation__Initialize(MeatBoyCharFoundationCreate_const*)::strClipNames)
-        [lVar20] != (char *)0x0) {
-                    /* try { // try from 0047b8e5 to 0047bae9 has its CatchHandler @ 0047d88a */
-      lVar12 = FlashAnimationLibrary__GetMovieClip__005731d0
-                         ((FlashAnimationLibrary *)*puVar11,
-                          (&MeatBoyCharFoundation__Initialize(MeatBoyCharFoundationCreate_const*)::
-                            strClipNames)[lVar20]);
+    if ((&MeatBoyCharFoundation__Initialize(
+            MeatBoyCharFoundationCreate_const *)::strClipNames)[lVar20] != (char *)0x0) {
+      /* try { // try from 0047b8e5 to 0047bae9 has its CatchHandler @ 0047d88a */
+      lVar12 = FlashAnimationLibrary__GetMovieClip__005731d0(
+          (FlashAnimationLibrary *)*puVar11,
+          (&MeatBoyCharFoundation__Initialize(
+              MeatBoyCharFoundationCreate_const *)::strClipNames)[lVar20]);
       if (lVar12 == 0) {
-        std__string_string((string *)local_138,"Could not find Clip: ",&local_3f);
-        __s = (&MeatBoyCharFoundation__Initialize(MeatBoyCharFoundationCreate_const*)::strClipNames)
-              [lVar20];
+        std__string_string((string *)local_138, "Could not find Clip: ", &local_3f);
+        __s = (&MeatBoyCharFoundation__Initialize(
+            MeatBoyCharFoundationCreate_const *)::strClipNames)[lVar20];
         strlen(__s);
-                    /* try { // try from 0047bb08 to 0047bb19 has its CatchHandler @ 0047d632 */
-        std__string_append((char *)local_138,(ulong)__s);
+        /* try { // try from 0047bb08 to 0047bb19 has its CatchHandler @ 0047d632 */
+        std__string_append((char *)local_138, (ulong)__s);
         Error__ThrowFatalError(local_138[0]);
         if ((allocator *)(local_138[0] + -0x18) !=
             (allocator *)&std__string_Rep_S_empty_rep_storage) {
@@ -3235,8 +3181,7 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
             std__string_Rep_M_destroy((allocator *)(local_138[0] + -0x18));
           }
         }
-      }
-      else {
+      } else {
         lVar23 = (long)(int)lVar20;
         lVar2 = lVar23 * 0x58;
         if (*(int *)(puVar11 + lVar23 * 0xb + 10) == -0x5eef3582) {
@@ -3244,7 +3189,7 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
           uVar9 = *(ushort *)((long)puVar11 + lVar2 + 0x32);
           if (uVar9 <= uVar8) {
             uVar9 = uVar9 + *(short *)((long)puVar11 + lVar2 + 0x3c);
-            uVar18 = (ulong)*(byte *)((long)puVar11 + lVar2 + 0x34);
+            uVar18 = (ulong) * (byte *)((long)puVar11 + lVar2 + 0x34);
             pvVar13 = (void *)0x0;
             pvVar17 = (void *)puVar11[lVar23 * 0xb + 8];
             *(ushort *)((long)puVar11 + lVar2 + 0x32) = uVar9;
@@ -3252,7 +3197,7 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
             pvVar14 = malloc(uVar18 + 0x10 + uVar22);
             if (pvVar14 != (void *)0x0) {
               pvVar13 = (void *)((long)pvVar14 + 0x10U +
-                                (uVar18 - ((long)pvVar14 + 0x10U) % uVar18) % uVar18);
+                                 (uVar18 - ((long)pvVar14 + 0x10U) % uVar18) % uVar18);
               *(ulong *)((long)pvVar13 + -0x10) = uVar22;
               *(void **)((long)pvVar13 + -8) = pvVar14;
               if (pvVar17 != (void *)0x0) {
@@ -3260,7 +3205,7 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
                 if (uVar22 <= *(ulong *)((long)pvVar17 + -0x10)) {
                   uVar18 = uVar22;
                 }
-                memcpy(pvVar13,pvVar17,uVar18);
+                memcpy(pvVar13, pvVar17, uVar18);
                 free(*(void **)((long)pvVar17 + -8));
               }
             }
@@ -3268,46 +3213,46 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
             puVar11[lVar23 * 0xb + 8] = pvVar13;
             if (pvVar17 != (void *)0x0) {
               uVar9 = *(ushort *)((long)puVar11 + lVar2 + 0x32);
-              uVar18 = (ulong)*(byte *)((long)puVar11 + lVar2 + 0x34);
+              uVar18 = (ulong) * (byte *)((long)puVar11 + lVar2 + 0x34);
               pvVar13 = (void *)0x0;
               uVar22 = (ulong)uVar9 * 2;
               pvVar14 = malloc(uVar18 + 0x10 + uVar22);
               if (pvVar14 != (void *)0x0) {
                 pvVar13 = (void *)((long)pvVar14 + 0x10U +
-                                  (uVar18 - ((long)pvVar14 + 0x10U) % uVar18) % uVar18);
+                                   (uVar18 - ((long)pvVar14 + 0x10U) % uVar18) % uVar18);
                 *(ulong *)((long)pvVar13 + -0x10) = uVar22;
                 *(void **)((long)pvVar13 + -8) = pvVar14;
                 uVar18 = *(ulong *)((long)pvVar17 + -0x10);
                 if (uVar22 <= *(ulong *)((long)pvVar17 + -0x10)) {
                   uVar18 = uVar22;
                 }
-                memcpy(pvVar13,pvVar17,uVar18);
+                memcpy(pvVar13, pvVar17, uVar18);
                 free(*(void **)((long)pvVar17 + -8));
                 uVar9 = *(ushort *)((long)puVar11 + lVar2 + 0x32);
               }
               uVar8 = *(ushort *)(puVar11 + lVar23 * 0xb + 6);
               puVar11[lVar23 * 0xb + 9] = pvVar13;
-              if (uVar9 <= uVar8) goto LAB_0047b99e;
-              while( true ) {
+              if (uVar9 <= uVar8)
+                goto LAB_0047b99e;
+              while (true) {
                 uVar22 = (ulong)uVar8;
                 uVar8 = uVar8 + 1;
                 *(uint16_t *)((long)pvVar13 + uVar22 * 2) = 0xffff;
-                if (uVar9 <= uVar8) break;
+                if (uVar9 <= uVar8)
+                  break;
                 pvVar13 = (void *)puVar11[lVar23 * 0xb + 9];
               }
             }
             uVar8 = *(ushort *)(puVar11 + lVar23 * 0xb + 6);
           }
-        }
-        else {
-          uVar22 = (ulong)*(byte *)((long)puVar11 + lVar2 + 0x34);
+        } else {
+          uVar22 = (ulong) * (byte *)((long)puVar11 + lVar2 + 0x34);
           *(uint32_t *)(puVar11 + lVar23 * 0xb + 7) = 0;
           pvVar13 = malloc(uVar22 + 0x38);
           puVar21 = (uint64_t *)0x0;
           if (pvVar13 != (void *)0x0) {
-            puVar21 = (uint64_t *)
-                      ((uVar22 - ((long)pvVar13 + 0x10U) % uVar22) % uVar22 + (long)pvVar13 + 0x10U)
-            ;
+            puVar21 = (uint64_t *)((uVar22 - ((long)pvVar13 + 0x10U) % uVar22) % uVar22 +
+                                   (long)pvVar13 + 0x10U);
             puVar21[-2] = 0x28;
             puVar21[-1] = pvVar13;
           }
@@ -3323,38 +3268,41 @@ MeatBoyCharactor__MeatBoyCharactor__0047b350(MeatBoyCharactor *self,char *arg1,u
           *(uint32_t *)(puVar11 + lVar23 * 0xb + 10) = 0xa110ca7e;
           *(uint16_t *)((long)puVar11 + lVar2 + 0x3c) = 5;
         }
-LAB_0047b99e:
+      LAB_0047b99e:
         if ((*(int *)(puVar11 + lVar23 * 0xb + 7) == 1) &&
-           (sVar4 = *(short *)((long)puVar11 + lVar2 + 0x32), sVar4 != 0)) {
+            (sVar4 = *(short *)((long)puVar11 + lVar2 + 0x32), sVar4 != 0)) {
           puVar15 = (ushort *)puVar11[lVar23 * 0xb + 9];
           sVar19 = 0;
           uVar9 = *puVar15;
           while (uVar9 != 0xffff) {
             puVar15 = puVar15 + 1;
             sVar19 = sVar19 + 1;
-            if (sVar19 == sVar4) goto LAB_0047b9a8;
+            if (sVar19 == sVar4)
+              goto LAB_0047b9a8;
             uVar9 = *puVar15;
           }
           *puVar15 = uVar8;
           uVar8 = *(ushort *)(puVar11 + lVar23 * 0xb + 6);
         }
-LAB_0047b9a8:
+      LAB_0047b9a8:
         *(long *)(puVar11[lVar23 * 0xb + 8] + (ulong)uVar8 * 8) = lVar12;
-        puVar6 = (&MeatBoyCharFoundation__Initialize(MeatBoyCharFoundationCreate_const*)::
-                   strClipNames)[lVar20];
+        puVar6 = (&MeatBoyCharFoundation__Initialize(
+            MeatBoyCharFoundationCreate_const *)::strClipNames)[lVar20];
         iVar24 = 1;
         *(short *)(puVar11 + lVar23 * 0xb + 6) = *(short *)(puVar11 + lVar23 * 0xb + 6) + 1;
-        while( true ) {
-          Sprint("%s_alt%i",&local_1f8,puVar6,iVar24);
-          lVar12 = FlashAnimationLibrary__GetMovieClip__005731d0
-                             ((FlashAnimationLibrary *)*puVar11,(char *)&local_1f8);
-          if (lVar12 == 0) break;
+        while (true) {
+          Sprint("%s_alt%i", &local_1f8, puVar6, iVar24);
+          lVar12 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,
+                                                                 (char *)&local_1f8);
+          if (lVar12 == 0)
+            break;
           if (*(int *)(puVar11 + lVar23 * 0xb + 10) == -0x5eef3582) {
             uVar9 = *(ushort *)(puVar11 + lVar23 * 0xb + 6);
             uVar8 = *(ushort *)((long)puVar11 + lVar2 + 0x32);
-            if (uVar9 < uVar8) goto LAB_0047baa4;
+            if (uVar9 < uVar8)
+              goto LAB_0047baa4;
             uVar8 = uVar8 + *(short *)((long)puVar11 + lVar2 + 0x3c);
-            uVar18 = (ulong)*(byte *)((long)puVar11 + lVar2 + 0x34);
+            uVar18 = (ulong) * (byte *)((long)puVar11 + lVar2 + 0x34);
             pvVar17 = (void *)puVar11[lVar23 * 0xb + 8];
             *(ushort *)((long)puVar11 + lVar2 + 0x32) = uVar8;
             uVar22 = (ulong)uVar8 * 8;
@@ -3362,7 +3310,7 @@ LAB_0047b9a8:
             pvVar13 = (void *)0x0;
             if (pvVar14 != (void *)0x0) {
               pvVar13 = (void *)((long)pvVar14 + 0x10U +
-                                (uVar18 - ((long)pvVar14 + 0x10U) % uVar18) % uVar18);
+                                 (uVar18 - ((long)pvVar14 + 0x10U) % uVar18) % uVar18);
               *(ulong *)((long)pvVar13 + -0x10) = uVar22;
               *(void **)((long)pvVar13 + -8) = pvVar14;
               if (pvVar17 != (void *)0x0) {
@@ -3370,7 +3318,7 @@ LAB_0047b9a8:
                 if (uVar22 <= *(ulong *)((long)pvVar17 + -0x10)) {
                   uVar18 = uVar22;
                 }
-                memcpy(pvVar13,pvVar17,uVar18);
+                memcpy(pvVar13, pvVar17, uVar18);
                 free(*(void **)((long)pvVar17 + -8));
               }
             }
@@ -3378,46 +3326,46 @@ LAB_0047b9a8:
             pvVar13 = (void *)puVar11[lVar23 * 0xb + 9];
             if (pvVar13 != (void *)0x0) {
               uVar8 = *(ushort *)((long)puVar11 + lVar2 + 0x32);
-              uVar18 = (ulong)*(byte *)((long)puVar11 + lVar2 + 0x34);
+              uVar18 = (ulong) * (byte *)((long)puVar11 + lVar2 + 0x34);
               uVar22 = (ulong)uVar8 * 2;
               pvVar14 = malloc(uVar18 + 0x10 + uVar22);
               pvVar17 = (void *)0x0;
               if (pvVar14 != (void *)0x0) {
                 pvVar17 = (void *)((long)pvVar14 + 0x10U +
-                                  (uVar18 - ((long)pvVar14 + 0x10U) % uVar18) % uVar18);
+                                   (uVar18 - ((long)pvVar14 + 0x10U) % uVar18) % uVar18);
                 *(void **)((long)pvVar17 + -8) = pvVar14;
                 *(ulong *)((long)pvVar17 + -0x10) = uVar22;
                 uVar18 = *(ulong *)((long)pvVar13 + -0x10);
                 if (uVar22 <= *(ulong *)((long)pvVar13 + -0x10)) {
                   uVar18 = uVar22;
                 }
-                memcpy(pvVar17,pvVar13,uVar18);
+                memcpy(pvVar17, pvVar13, uVar18);
                 free(*(void **)((long)pvVar13 + -8));
                 uVar8 = *(ushort *)((long)puVar11 + lVar2 + 0x32);
               }
               uVar9 = *(ushort *)(puVar11 + lVar23 * 0xb + 6);
               puVar11[lVar23 * 0xb + 9] = pvVar17;
-              if (uVar8 <= uVar9) goto LAB_0047baa4;
-              while( true ) {
+              if (uVar8 <= uVar9)
+                goto LAB_0047baa4;
+              while (true) {
                 uVar22 = (ulong)uVar9;
                 uVar9 = uVar9 + 1;
                 *(uint16_t *)((long)pvVar17 + uVar22 * 2) = 0xffff;
-                if (uVar8 <= uVar9) break;
+                if (uVar8 <= uVar9)
+                  break;
                 pvVar17 = (void *)puVar11[lVar23 * 0xb + 9];
               }
             }
             iVar5 = *(int *)(puVar11 + lVar23 * 0xb + 7);
             uVar9 = *(ushort *)(puVar11 + lVar23 * 0xb + 6);
-          }
-          else {
-            uVar22 = (ulong)*(byte *)((long)puVar11 + lVar2 + 0x34);
+          } else {
+            uVar22 = (ulong) * (byte *)((long)puVar11 + lVar2 + 0x34);
             *(uint32_t *)(puVar11 + lVar23 * 0xb + 7) = 0;
             pvVar13 = malloc(uVar22 + 0x38);
             puVar21 = (uint64_t *)0x0;
             if (pvVar13 != (void *)0x0) {
-              puVar21 = (uint64_t *)
-                        ((long)pvVar13 + 0x10U +
-                        (uVar22 - ((long)pvVar13 + 0x10U) % uVar22) % uVar22);
+              puVar21 = (uint64_t *)((long)pvVar13 + 0x10U +
+                                     (uVar22 - ((long)pvVar13 + 0x10U) % uVar22) % uVar22);
               puVar21[-2] = 0x28;
               puVar21[-1] = pvVar13;
             }
@@ -3432,7 +3380,7 @@ LAB_0047b9a8:
             *(uint16_t *)((long)puVar11 + lVar2 + 0x32) = 5;
             *(uint32_t *)(puVar11 + lVar23 * 0xb + 10) = 0xa110ca7e;
             *(uint16_t *)((long)puVar11 + lVar2 + 0x3c) = 5;
-LAB_0047baa4:
+          LAB_0047baa4:
             iVar5 = *(int *)(puVar11 + lVar23 * 0xb + 7);
           }
           if ((iVar5 == 1) && (sVar4 = *(short *)((long)puVar11 + lVar2 + 0x32), sVar4 != 0)) {
@@ -3442,13 +3390,14 @@ LAB_0047baa4:
             while (uVar8 != 0xffff) {
               puVar15 = puVar15 + 1;
               sVar19 = sVar19 + 1;
-              if (sVar19 == sVar4) goto LAB_0047baae;
+              if (sVar19 == sVar4)
+                goto LAB_0047baae;
               uVar8 = *puVar15;
             }
             *puVar15 = uVar9;
             uVar9 = *(ushort *)(puVar11 + lVar23 * 0xb + 6);
           }
-LAB_0047baae:
+        LAB_0047baae:
           iVar24 = iVar24 + 1;
           *(long *)(puVar11[lVar23 * 0xb + 8] + (ulong)uVar9 * 8) = lVar12;
           *(short *)(puVar11 + lVar23 * 0xb + 6) = *(short *)(puVar11 + lVar23 * 0xb + 6) + 1;
@@ -3457,17 +3406,17 @@ LAB_0047baae:
     }
     lVar20 = lVar20 + 1;
   } while (lVar20 != 0x18);
-                    /* try { // try from 0047bb86 to 0047bd2b has its CatchHandler @ 0047d88a */
-  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,"land splat");
+  /* try { // try from 0047bb86 to 0047bd2b has its CatchHandler @ 0047d88a */
+  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,
+                                                         "land splat");
   puVar11[0x109] = lVar20;
   if (lVar20 == 0) {
-                    /* try { // try from 0047cf44 to 0047cf48 has its CatchHandler @ 0047d88a */
-    std__string_string((string *)local_138,"Could not find Clip: ",local_3e);
-                    /* try { // try from 0047cf56 to 0047cf67 has its CatchHandler @ 0047d8d1 */
-    std__string_append((char *)local_138,0x5c046c);
+    /* try { // try from 0047cf44 to 0047cf48 has its CatchHandler @ 0047d88a */
+    std__string_string((string *)local_138, "Could not find Clip: ", local_3e);
+    /* try { // try from 0047cf56 to 0047cf67 has its CatchHandler @ 0047d8d1 */
+    std__string_append((char *)local_138, 0x5c046c);
     Error__ThrowFatalError(local_138[0]);
-    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage
-       ) {
+    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_138[0] + -8);
       iVar24 = *piVar1;
@@ -3478,16 +3427,16 @@ LAB_0047baae:
       }
     }
   }
-  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,"Jumping blood1");
+  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,
+                                                         "Jumping blood1");
   puVar11[0x10a] = lVar20;
   if (lVar20 == 0) {
-                    /* try { // try from 0047cfc0 to 0047cfc4 has its CatchHandler @ 0047d88a */
-    std__string_string((string *)local_138,"Could not find Clip: ",local_3e);
-                    /* try { // try from 0047cfd2 to 0047cfe3 has its CatchHandler @ 0047d8d1 */
-    std__string_append((char *)local_138,0x5c0477);
+    /* try { // try from 0047cfc0 to 0047cfc4 has its CatchHandler @ 0047d88a */
+    std__string_string((string *)local_138, "Could not find Clip: ", local_3e);
+    /* try { // try from 0047cfd2 to 0047cfe3 has its CatchHandler @ 0047d8d1 */
+    std__string_append((char *)local_138, 0x5c0477);
     Error__ThrowFatalError(local_138[0]);
-    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage
-       ) {
+    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_138[0] + -8);
       iVar24 = *piVar1;
@@ -3498,16 +3447,16 @@ LAB_0047baae:
       }
     }
   }
-  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,"wall land");
+  lVar20 =
+      FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11, "wall land");
   puVar11[0x10b] = lVar20;
   if (lVar20 == 0) {
-                    /* try { // try from 0047d040 to 0047d044 has its CatchHandler @ 0047d88a */
-    std__string_string((string *)local_138,"Could not find Clip: ",local_3e);
-                    /* try { // try from 0047d052 to 0047d063 has its CatchHandler @ 0047d8d1 */
-    std__string_append((char *)local_138,0x5c0486);
+    /* try { // try from 0047d040 to 0047d044 has its CatchHandler @ 0047d88a */
+    std__string_string((string *)local_138, "Could not find Clip: ", local_3e);
+    /* try { // try from 0047d052 to 0047d063 has its CatchHandler @ 0047d8d1 */
+    std__string_append((char *)local_138, 0x5c0486);
     Error__ThrowFatalError(local_138[0]);
-    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage
-       ) {
+    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_138[0] + -8);
       iVar24 = *piVar1;
@@ -3518,16 +3467,16 @@ LAB_0047baae:
       }
     }
   }
-  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,"wall blood poof");
+  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,
+                                                         "wall blood poof");
   puVar11[0x10c] = lVar20;
   if (lVar20 == 0) {
-                    /* try { // try from 0047d0c0 to 0047d0c4 has its CatchHandler @ 0047d88a */
-    std__string_string((string *)local_138,"Could not find Clip: ",local_3e);
-                    /* try { // try from 0047d0d2 to 0047d0e3 has its CatchHandler @ 0047d8d1 */
-    std__string_append((char *)local_138,0x5c0490);
+    /* try { // try from 0047d0c0 to 0047d0c4 has its CatchHandler @ 0047d88a */
+    std__string_string((string *)local_138, "Could not find Clip: ", local_3e);
+    /* try { // try from 0047d0d2 to 0047d0e3 has its CatchHandler @ 0047d8d1 */
+    std__string_append((char *)local_138, 0x5c0490);
     Error__ThrowFatalError(local_138[0]);
-    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage
-       ) {
+    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_138[0] + -8);
       iVar24 = *piVar1;
@@ -3538,16 +3487,16 @@ LAB_0047baae:
       }
     }
   }
-  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,"Bloodgush4");
+  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,
+                                                         "Bloodgush4");
   puVar11[0x10d] = lVar20;
   if (lVar20 == 0) {
-                    /* try { // try from 0047d140 to 0047d144 has its CatchHandler @ 0047d88a */
-    std__string_string((string *)local_138,"Could not find Clip: ",local_3e);
-                    /* try { // try from 0047d152 to 0047d163 has its CatchHandler @ 0047d8d1 */
-    std__string_append((char *)local_138,0x5c04a0);
+    /* try { // try from 0047d140 to 0047d144 has its CatchHandler @ 0047d88a */
+    std__string_string((string *)local_138, "Could not find Clip: ", local_3e);
+    /* try { // try from 0047d152 to 0047d163 has its CatchHandler @ 0047d8d1 */
+    std__string_append((char *)local_138, 0x5c04a0);
     Error__ThrowFatalError(local_138[0]);
-    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage
-       ) {
+    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_138[0] + -8);
       iVar24 = *piVar1;
@@ -3558,16 +3507,16 @@ LAB_0047baae:
       }
     }
   }
-  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,"blood gush 3");
+  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,
+                                                         "blood gush 3");
   puVar11[0x10e] = lVar20;
   if (lVar20 == 0) {
-                    /* try { // try from 0047d1c0 to 0047d1c4 has its CatchHandler @ 0047d88a */
-    std__string_string((string *)local_138,"Could not find Clip: ",local_3e);
-                    /* try { // try from 0047d1d2 to 0047d1e3 has its CatchHandler @ 0047d8d1 */
-    std__string_append((char *)local_138,0x5c04ab);
+    /* try { // try from 0047d1c0 to 0047d1c4 has its CatchHandler @ 0047d88a */
+    std__string_string((string *)local_138, "Could not find Clip: ", local_3e);
+    /* try { // try from 0047d1d2 to 0047d1e3 has its CatchHandler @ 0047d8d1 */
+    std__string_append((char *)local_138, 0x5c04ab);
     Error__ThrowFatalError(local_138[0]);
-    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage
-       ) {
+    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_138[0] + -8);
       iVar24 = *piVar1;
@@ -3578,16 +3527,16 @@ LAB_0047baae:
       }
     }
   }
-  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,"bloodgush1");
+  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,
+                                                         "bloodgush1");
   puVar11[0x10f] = lVar20;
   if (lVar20 == 0) {
-                    /* try { // try from 0047d240 to 0047d244 has its CatchHandler @ 0047d88a */
-    std__string_string((string *)local_138,"Could not find Clip: ",local_3e);
-                    /* try { // try from 0047d252 to 0047d263 has its CatchHandler @ 0047d8d1 */
-    std__string_append((char *)local_138,0x5c04b8);
+    /* try { // try from 0047d240 to 0047d244 has its CatchHandler @ 0047d88a */
+    std__string_string((string *)local_138, "Could not find Clip: ", local_3e);
+    /* try { // try from 0047d252 to 0047d263 has its CatchHandler @ 0047d8d1 */
+    std__string_append((char *)local_138, 0x5c04b8);
     Error__ThrowFatalError(local_138[0]);
-    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage
-       ) {
+    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_138[0] + -8);
       iVar24 = *piVar1;
@@ -3598,16 +3547,16 @@ LAB_0047baae:
       }
     }
   }
-  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,"splat");
+  lVar20 =
+      FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11, "splat");
   puVar11[0x110] = lVar20;
   if (lVar20 == 0) {
-                    /* try { // try from 0047d2c0 to 0047d2c4 has its CatchHandler @ 0047d88a */
-    std__string_string((string *)local_138,"Could not find Clip: ",local_3e);
-                    /* try { // try from 0047d2d2 to 0047d2e3 has its CatchHandler @ 0047d8d1 */
-    std__string_append((char *)local_138,0x5c0471);
+    /* try { // try from 0047d2c0 to 0047d2c4 has its CatchHandler @ 0047d88a */
+    std__string_string((string *)local_138, "Could not find Clip: ", local_3e);
+    /* try { // try from 0047d2d2 to 0047d2e3 has its CatchHandler @ 0047d8d1 */
+    std__string_append((char *)local_138, 0x5c0471);
     Error__ThrowFatalError(local_138[0]);
-    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage
-       ) {
+    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_138[0] + -8);
       iVar24 = *piVar1;
@@ -3618,16 +3567,16 @@ LAB_0047baae:
       }
     }
   }
-  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,"slide blood");
+  lVar20 = FlashAnimationLibrary__GetMovieClip__005731d0((FlashAnimationLibrary *)*puVar11,
+                                                         "slide blood");
   puVar11[0x111] = lVar20;
   if (lVar20 == 0) {
-                    /* try { // try from 0047d340 to 0047d344 has its CatchHandler @ 0047d88a */
-    std__string_string((string *)local_138,"Could not find Clip: ",local_3e);
-                    /* try { // try from 0047d352 to 0047d363 has its CatchHandler @ 0047d8d1 */
-    std__string_append((char *)local_138,0x5c04c3);
+    /* try { // try from 0047d340 to 0047d344 has its CatchHandler @ 0047d88a */
+    std__string_string((string *)local_138, "Could not find Clip: ", local_3e);
+    /* try { // try from 0047d352 to 0047d363 has its CatchHandler @ 0047d8d1 */
+    std__string_append((char *)local_138, 0x5c04c3);
     Error__ThrowFatalError(local_138[0]);
-    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage
-       ) {
+    if ((allocator *)(local_138[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_138[0] + -8);
       iVar24 = *piVar1;
@@ -3643,13 +3592,13 @@ LAB_0047baae:
   SMBReplay__ResetAll(this_00);
   pvVar13 = operator_new(0x140);
   *(void **)(self + 0x7f0) = pvVar13;
-  this_02 = (string *)std__string_rfind((char)**(uint64_t **)(self + 0xf8) + 'h',0x2f);
-  iVar24 = std__string_rfind((char)**(uint64_t **)(self + 0xf8) + 'h',0x2e);
+  this_02 = (string *)std__string_rfind((char)**(uint64_t **)(self + 0xf8) + 'h', 0x2f);
+  iVar24 = std__string_rfind((char)**(uint64_t **)(self + 0xf8) + 'h', 0x2e);
   uVar22 = (ulong)((int)this_02 + 1);
   if (*(ulong *)(*(long *)(**(long **)(self + 0xf8) + 0x68) + -0x18) < uVar22) {
-                    /* try { // try from 0047d8cc to 0047d908 has its CatchHandler @ 0047d88a */
+    /* try { // try from 0047d8cc to 0047d908 has its CatchHandler @ 0047d88a */
     uVar16 = std__throw_out_of_range("basic_string__substr");
-                    /* catch() { ... } // from try @ 0047cf56 with catch @ 0047d8d1
+    /* catch() { ... } // from try @ 0047cf56 with catch @ 0047d8d1
                        catch() { ... } // from try @ 0047cfd2 with catch @ 0047d8d1
                        catch() { ... } // from try @ 0047d052 with catch @ 0047d8d1
                        catch() { ... } // from try @ 0047d0d2 with catch @ 0047d8d1
@@ -3671,21 +3620,21 @@ LAB_0047baae:
     std__string_string((string *)(self + 0xa58));
     CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x880));
     SceneObject2D__SceneObject2D__0059b220((SceneObject2D *)self);
-                    /* WARNING: Subroutine does not return */
+    /* WARNING: Subroutine does not return */
     _Unwind_Resume(uVar16);
   }
-  std__string_string((string *)local_e8,(string *)(**(long **)(self + 0xf8) + 0x68),uVar22,
-                      (long)((iVar24 - (int)this_02) + -1));
+  std__string_string((string *)local_e8, (string *)(**(long **)(self + 0xf8) + 0x68), uVar22,
+                     (long)((iVar24 - (int)this_02) + -1));
   local_c8[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 0047bd50 to 0047bd80 has its CatchHandler @ 0047d8aa */
+  /* try { // try from 0047bd50 to 0047bd80 has its CatchHandler @ 0047d8aa */
   std__string_reserve((ulong)local_c8);
-  std__string_append((char *)local_c8,0x5c04ec);
+  std__string_append((char *)local_c8, 0x5c04ec);
   std__string_append((string *)local_c8);
-                    /* try { // try from 0047bd91 to 0047bd95 has its CatchHandler @ 0047d89a */
-  std__string_string((string *)local_d8,(string *)local_c8);
-                    /* try { // try from 0047bda8 to 0047bdac has its CatchHandler @ 0047d5c3 */
-  std__string_append((char *)local_d8,0x5c050c);
-                    /* try { // try from 0047bdc0 to 0047bdc4 has its CatchHandler @ 0047d5ed */
+  /* try { // try from 0047bd91 to 0047bd95 has its CatchHandler @ 0047d89a */
+  std__string_string((string *)local_d8, (string *)local_c8);
+  /* try { // try from 0047bda8 to 0047bdac has its CatchHandler @ 0047d5c3 */
+  std__string_append((char *)local_d8, 0x5c050c);
+  /* try { // try from 0047bdc0 to 0047bdc4 has its CatchHandler @ 0047d5ed */
   std__string_assign((string *)(self + 0xa58));
   if ((allocator *)(local_d8[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
     LOCK();
@@ -3707,8 +3656,8 @@ LAB_0047baae:
       std__string_Rep_M_destroy((allocator *)(local_c8[0] + -0x18));
     }
   }
-                    /* try { // try from 0047be01 to 0047be05 has its CatchHandler @ 0047d567 */
-  iVar24 = File__Exists(*(char **)(self + 0xa58),0);
+  /* try { // try from 0047be01 to 0047be05 has its CatchHandler @ 0047d567 */
+  iVar24 = File__Exists(*(char **)(self + 0xa58), 0);
   if (iVar24 == 0) {
     local_1e8 = 2;
     local_1e0 = 0;
@@ -3721,25 +3670,25 @@ LAB_0047baae:
     local_1c0 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
     local_1f0 = &DAT_005c328c /* R:u32=1811964530 */;
     local_1f8 = "CharProps/meatboyanim.props";
-                    /* try { // try from 0047be9b to 0047be9f has its CatchHandler @ 0047d562 */
-    File__File((File *)&local_178,(tagFileCreation *)&local_1f8);
+    /* try { // try from 0047be9b to 0047be9f has its CatchHandler @ 0047d562 */
+    File__File((File *)&local_178, (tagFileCreation *)&local_1f8);
     uVar7 = local_178._4_4_;
     pvVar13 = malloc((ulong)local_178._4_4_);
-                    /* try { // try from 0047bebe to 0047bef6 has its CatchHandler @ 0047d55a */
-    File__Read((File *)&local_178,pvVar13,uVar7);
+    /* try { // try from 0047bebe to 0047bef6 has its CatchHandler @ 0047d55a */
+    File__Read((File *)&local_178, pvVar13, uVar7);
     local_1f8 = *(char **)(self + 0xa58);
     local_1f0 = &DAT_005c0513 /* R:u32=1996513911 */;
-    File__File((File *)local_138,(tagFileCreation *)&local_1f8);
-                    /* try { // try from 0047bf04 to 0047bf08 has its CatchHandler @ 0047d4ce */
-    File__Write((File *)local_138,pvVar13,local_178._4_4_);
+    File__File((File *)local_138, (tagFileCreation *)&local_1f8);
+    /* try { // try from 0047bf04 to 0047bf08 has its CatchHandler @ 0047d4ce */
+    File__Write((File *)local_138, pvVar13, local_178._4_4_);
     free(pvVar13);
-                    /* try { // try from 0047bf14 to 0047bf18 has its CatchHandler @ 0047d55a */
+    /* try { // try from 0047bf14 to 0047bf18 has its CatchHandler @ 0047d55a */
     File__File__005b7a70((File *)local_138);
-                    /* try { // try from 0047bf21 to 0047bf25 has its CatchHandler @ 0047d562 */
+    /* try { // try from 0047bf21 to 0047bf25 has its CatchHandler @ 0047d562 */
     File__File__005b7a70((File *)&local_178);
   }
-                    /* try { // try from 0047bf30 to 0047bff5 has its CatchHandler @ 0047d567 */
-  iVar24 = File__Exists(*(char **)(self + 0xa58),0);
+  /* try { // try from 0047bf30 to 0047bff5 has its CatchHandler @ 0047d567 */
+  iVar24 = File__Exists(*(char **)(self + 0xa58), 0);
   if (iVar24 != 1) {
     *(uint32_t *)(self + 0x8ac) = 0x41200000;
     *(uint32_t *)(self + 0x8a8) = 0x41a00000;
@@ -3756,7 +3705,7 @@ LAB_0047baae:
     do {
       local_98 = 0;
       local_94 = 0;
-      Vector2__operator_assign((Vector2 *)(self + (long)iVar24 * 8 + 0x8d4),(Vector2 *)&local_98);
+      Vector2__operator_assign((Vector2 *)(self + (long)iVar24 * 8 + 0x8d4), (Vector2 *)&local_98);
       iVar24 = iVar24 + 1;
     } while (iVar24 != 0x18);
     *(uint32_t *)(self + 0x994) = 0;
@@ -3881,118 +3830,114 @@ LAB_0047baae:
   if (bVar26) {
     *pMVar25 = (MeatBoyCharactor)0x0;
   }
-                    /* try { // try from 0047c885 to 0047c889 has its CatchHandler @ 0047d49c */
-  File__File((File *)local_138,(tagFileCreation *)&local_178);
+  /* try { // try from 0047c885 to 0047c889 has its CatchHandler @ 0047d49c */
+  File__File((File *)local_138, (tagFileCreation *)&local_178);
   local_48[0] = 0;
-                    /* try { // try from 0047c8a5 to 0047cc06 has its CatchHandler @ 0047d547 */
-  File__ReadVariable((File *)local_138,local_48,4);
-  File__ReadVariable((File *)local_138,self + 0x8a8,4);
-  File__ReadVariable((File *)local_138,self + 0x8ac,4);
-  File__ReadVariable((File *)local_138,self + 0x8b0,4);
-  File__ReadVariable((File *)local_138,self + 0x8b4,4);
-  File__ReadVariable((File *)local_138,self + 0x8b8,4);
-  File__ReadVariable((File *)local_138,self + 0x8bc,4);
-  File__ReadVariable((File *)local_138,self + 0x8c0,4);
-  File__ReadVariable((File *)local_138,self + 0x8c4,4);
-  File__ReadVariable((File *)local_138,self + 0x8c8,4);
-  File__ReadVariable((File *)local_138,self + 0x8cc,4);
-  File__ReadVariable((File *)local_138,self + 0x8d0,4);
+  /* try { // try from 0047c8a5 to 0047cc06 has its CatchHandler @ 0047d547 */
+  File__ReadVariable((File *)local_138, local_48, 4);
+  File__ReadVariable((File *)local_138, self + 0x8a8, 4);
+  File__ReadVariable((File *)local_138, self + 0x8ac, 4);
+  File__ReadVariable((File *)local_138, self + 0x8b0, 4);
+  File__ReadVariable((File *)local_138, self + 0x8b4, 4);
+  File__ReadVariable((File *)local_138, self + 0x8b8, 4);
+  File__ReadVariable((File *)local_138, self + 0x8bc, 4);
+  File__ReadVariable((File *)local_138, self + 0x8c0, 4);
+  File__ReadVariable((File *)local_138, self + 0x8c4, 4);
+  File__ReadVariable((File *)local_138, self + 0x8c8, 4);
+  File__ReadVariable((File *)local_138, self + 0x8cc, 4);
+  File__ReadVariable((File *)local_138, self + 0x8d0, 4);
   if (local_48[0] < 5) {
-    File__ReadArray((File *)local_138,(uchar *)pMVar3,2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x8dc),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x8e4),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x8ec),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x8f4),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x8fc),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x904),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x90c),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x914),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x91c),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x924),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x92c),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x934),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x93c),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x944),2,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x94c),2,4);
-    File__ReadArray((File *)local_138,(uchar *)pMVar10,3,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x9a4),3,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x9b4),3,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x9c4),3,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x9d4),3,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x9e4),3,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0x9f4),3,4);
-    File__ReadArray((File *)local_138,(uchar *)(self + 0xa04),3,4);
+    File__ReadArray((File *)local_138, (uchar *)pMVar3, 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x8dc), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x8e4), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x8ec), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x8f4), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x8fc), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x904), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x90c), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x914), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x91c), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x924), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x92c), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x934), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x93c), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x944), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x94c), 2, 4);
+    File__ReadArray((File *)local_138, (uchar *)pMVar10, 3, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x9a4), 3, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x9b4), 3, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x9c4), 3, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x9d4), 3, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x9e4), 3, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0x9f4), 3, 4);
+    File__ReadArray((File *)local_138, (uchar *)(self + 0xa04), 3, 4);
     if (local_48[0] == 1) {
       *(uint32_t *)(self + 0xa2c) = 0x3f000000;
       *(uint32_t *)(self + 0xa24) = 0x3f000000;
       *(uint32_t *)(self + 0xa28) = 0x3f000000;
       *(uint32_t *)(self + 0xa30) = 0x3f266666;
       *(uint32_t *)(self + 0xa34) = 0x40000000;
-    }
-    else if (local_48[0] == 2) {
+    } else if (local_48[0] == 2) {
       *(uint32_t *)(self + 0xa30) = 0x3f266666;
       *(uint32_t *)(self + 0xa34) = 0x40000000;
       *(uint32_t *)(self + 0xa2c) = *(uint32_t *)(self + 0xa14);
       *(uint32_t *)(self + 0xa24) = *(uint32_t *)(self + 0xa18);
       *(uint32_t *)(self + 0xa28) = *(uint32_t *)(self + 0xa1c);
-    }
-    else if (local_48[0] == 3) {
-                    /* try { // try from 0047d4fb to 0047d529 has its CatchHandler @ 0047d547 */
-      File__ReadVariable((File *)local_138,self + 0xa2c,4);
-      File__ReadVariable((File *)local_138,self + 0xa24,4);
-      File__ReadVariable((File *)local_138,self + 0xa28,4);
+    } else if (local_48[0] == 3) {
+      /* try { // try from 0047d4fb to 0047d529 has its CatchHandler @ 0047d547 */
+      File__ReadVariable((File *)local_138, self + 0xa2c, 4);
+      File__ReadVariable((File *)local_138, self + 0xa24, 4);
+      File__ReadVariable((File *)local_138, self + 0xa28, 4);
       *(uint32_t *)(self + 0xa30) = 0x3f266666;
       *(uint32_t *)(self + 0xa34) = 0x40000000;
-    }
-    else if (local_48[0] == 4) goto LAB_0047cd57;
-  }
-  else {
+    } else if (local_48[0] == 4)
+      goto LAB_0047cd57;
+  } else {
     iVar24 = 0;
     if (local_48[0] == 5) {
       do {
-        File__ReadArray((File *)local_138,(uchar *)(self + (long)iVar24 * 8 + 0x8d4),2,4);
+        File__ReadArray((File *)local_138, (uchar *)(self + (long)iVar24 * 8 + 0x8d4), 2, 4);
         iVar24 = iVar24 + 1;
       } while (iVar24 != 0x16);
-      File__ReadArray((File *)local_138,(uchar *)pMVar10,3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0x9a4),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0x9b4),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0x9c4),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0x9d4),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0x9e4),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0x9f4),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0xa04),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0xa14),3,4);
+      File__ReadArray((File *)local_138, (uchar *)pMVar10, 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0x9a4), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0x9b4), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0x9c4), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0x9d4), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0x9e4), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0x9f4), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0xa04), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0xa14), 3, 4);
       local_b8 = 0;
       local_b4 = 0;
-      Vector2__operator_assign((Vector2 *)(self + 0x984),(Vector2 *)&local_b8);
+      Vector2__operator_assign((Vector2 *)(self + 0x984), (Vector2 *)&local_b8);
       local_a8 = 0;
       local_a4 = 0;
-      Vector2__operator_assign((Vector2 *)(self + 0x98c),(Vector2 *)&local_a8);
-    }
-    else {
+      Vector2__operator_assign((Vector2 *)(self + 0x98c), (Vector2 *)&local_a8);
+    } else {
       do {
-                    /* try { // try from 0047cc63 to 0047cf26 has its CatchHandler @ 0047d547 */
-        File__ReadArray((File *)local_138,(uchar *)(self + (long)iVar24 * 8 + 0x8d4),2,4);
+        /* try { // try from 0047cc63 to 0047cf26 has its CatchHandler @ 0047d547 */
+        File__ReadArray((File *)local_138, (uchar *)(self + (long)iVar24 * 8 + 0x8d4), 2, 4);
         iVar24 = iVar24 + 1;
       } while (iVar24 != 0x18);
-      File__ReadArray((File *)local_138,(uchar *)pMVar10,3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0x9a4),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0x9b4),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0x9c4),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0x9d4),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0x9e4),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0x9f4),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0xa04),3,4);
-      File__ReadArray((File *)local_138,(uchar *)(self + 0xa14),3,4);
+      File__ReadArray((File *)local_138, (uchar *)pMVar10, 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0x9a4), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0x9b4), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0x9c4), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0x9d4), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0x9e4), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0x9f4), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0xa04), 3, 4);
+      File__ReadArray((File *)local_138, (uchar *)(self + 0xa14), 3, 4);
     }
-LAB_0047cd57:
-    File__ReadVariable((File *)local_138,self + 0xa2c,4);
-    File__ReadVariable((File *)local_138,self + 0xa24,4);
-    File__ReadVariable((File *)local_138,self + 0xa28,4);
-    File__ReadVariable((File *)local_138,self + 0xa30,4);
-    File__ReadVariable((File *)local_138,self + 0xa34,4);
+  LAB_0047cd57:
+    File__ReadVariable((File *)local_138, self + 0xa2c, 4);
+    File__ReadVariable((File *)local_138, self + 0xa24, 4);
+    File__ReadVariable((File *)local_138, self + 0xa28, 4);
+    File__ReadVariable((File *)local_138, self + 0xa30, 4);
+    File__ReadVariable((File *)local_138, self + 0xa34, 4);
   }
-                    /* try { // try from 0047cc35 to 0047cc39 has its CatchHandler @ 0047d49c */
+  /* try { // try from 0047cc35 to 0047cc39 has its CatchHandler @ 0047d49c */
   File__File__005b7a70((File *)local_138);
 LAB_0047c1ea:
   local_78 = *(uint32_t *)(self + 0x8cc);
@@ -4002,13 +3947,13 @@ LAB_0047c1ea:
   local_74 = local_78;
   pvVar13 = malloc(0xb4);
   if (pvVar13 != (void *)0x0) {
-    this_04 = (BoundingSquare *)((long)pvVar13 + 0x10 + (ulong)(-(int)((long)pvVar13 + 0x10) & 0xf))
-    ;
+    this_04 =
+        (BoundingSquare *)((long)pvVar13 + 0x10 + (ulong)(-(int)((long)pvVar13 + 0x10) & 0xf));
     *(uint64_t *)(this_04 + -0x10) = 0x94;
     *(void **)(this_04 + -8) = pvVar13;
   }
-                    /* try { // try from 0047c259 to 0047c25d has its CatchHandler @ 0047d696 */
-  BoundingSquare__BoundingSquare(this_04,(Vector2 *)&local_88,0.0,(Vector2 *)&local_78);
+  /* try { // try from 0047c259 to 0047c25d has its CatchHandler @ 0047d696 */
+  BoundingSquare__BoundingSquare(this_04, (Vector2 *)&local_88, 0.0, (Vector2 *)&local_78);
   *(BoundingSquare **)(self + 0x48) = this_04;
   local_68 = 0;
   *(uint32_t *)(self + 0xd4) = *(uint32_t *)(self + 0x8c8);
@@ -4016,15 +3961,15 @@ LAB_0047c1ea:
   local_58 = *(uint32_t *)(self + 0x8d0);
   local_64 = 0;
   local_54 = local_58;
-                    /* try { // try from 0047c2bf to 0047c320 has its CatchHandler @ 0047d686 */
-  BoundingSquare__BoundingSquare
-            ((BoundingSquare *)&local_298,(Vector2 *)&local_68,0.0,(Vector2 *)&local_58);
+  /* try { // try from 0047c2bf to 0047c320 has its CatchHandler @ 0047d686 */
+  BoundingSquare__BoundingSquare((BoundingSquare *)&local_298, (Vector2 *)&local_68, 0.0,
+                                 (Vector2 *)&local_58);
   *(uint32_t *)(self + 0x740) = local_298;
-  Matrix4x4__operator_assign((Matrix4x4 *)(self + 0x744),local_294);
-  Matrix4x4__operator_assign((Matrix4x4 *)(self + 0x784),local_254);
-  Vector2__operator_assign((Vector2 *)(self + 0x7c4),local_214);
-  Vector2__operator_assign((Vector2 *)(self + 0x7cc),local_20c);
-                    /* try { // try from 0047c324 to 0047c328 has its CatchHandler @ 0047d567 */
+  Matrix4x4__operator_assign((Matrix4x4 *)(self + 0x744), local_294);
+  Matrix4x4__operator_assign((Matrix4x4 *)(self + 0x784), local_254);
+  Vector2__operator_assign((Vector2 *)(self + 0x7c4), local_214);
+  Vector2__operator_assign((Vector2 *)(self + 0x7cc), local_20c);
+  /* try { // try from 0047c324 to 0047c328 has its CatchHandler @ 0047d567 */
   RestoreControls(self);
   if ((allocator *)(local_e8[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
     LOCK();
@@ -4054,29 +3999,29 @@ void __thiscall MeatBoyCharactor__RemoveControls(MeatBoyCharactor *self)
   uint32_t uVar1;
   Joystick *pJVar2;
   long lVar3;
-  
+
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,keyJump,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,keySpecial,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,keyLeft,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,keyRight,0,0);
+    TKeyboard__AddKeyCallback(Keyboard, keyJump, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, keySpecial, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, keyLeft, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, keyRight, 0, 0);
   }
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar2,3,0,0);
+  Joystick__AddButtonCallback(pJVar2, 3, 0, 0);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar2,3,0,0);
+  Joystick__AddPOVCallback(pJVar2, 3, 0, 0);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar2,1,0,0);
+  Joystick__AddPOVCallback(pJVar2, 1, 0, 0);
   uVar1 = buttonJump;
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar2,uVar1,0,0);
+  Joystick__AddButtonCallback(pJVar2, uVar1, 0, 0);
   uVar1 = buttonSpecial;
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar2,uVar1,0,0);
+  Joystick__AddButtonCallback(pJVar2, uVar1, 0, 0);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar2,10,0,0);
+  Joystick__AddButtonCallback(pJVar2, 10, 0, 0);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar2,0xb,0,0);
+  Joystick__AddButtonCallback(pJVar2, 0xb, 0, 0);
   uVar1 = bUseLeftJoyAsPOV;
   lVar3 = TPlayer__GetJoystick((TPlayer *)Players__Player);
   *(uint32_t *)(lVar3 + 0xfc) = uVar1;
@@ -4120,17 +4065,18 @@ void __thiscall MeatBoyCharactor__SwitchToReplayMode(MeatBoyCharactor *self)
   long lVar6;
   FlashLibraryInstance *this_00;
   int iVar7;
-  AutoLockSection aAStack_38 [16];
-  
-  AutoLockSection__AutoLockSection(aAStack_38,(CriticalSection *)RenderLayers__MasterRenderSection);
-                    /* try { // try from 0047de45 to 0047e01e has its CatchHandler @ 0047e034 */
-  SMBReplay__SetReplayMode(*(SMBReplay **)(self + 0xa38),0);
+  AutoLockSection aAStack_38[16];
+
+  AutoLockSection__AutoLockSection(aAStack_38,
+                                   (CriticalSection *)RenderLayers__MasterRenderSection);
+  /* try { // try from 0047de45 to 0047e01e has its CatchHandler @ 0047e034 */
+  SMBReplay__SetReplayMode(*(SMBReplay **)(self + 0xa38), 0);
   iVar7 = 0;
   do {
     lVar6 = (long)iVar7;
     (**(code **)(**(long **)(*(long *)(self + 0x7f0) + lVar6 * 8) + 0x68))();
     *(uint64_t *)(*(long *)(*(long *)(self + 0x7f0) + lVar6 * 8) + 0xa38) =
-         *(uint64_t *)(self + 0xa38);
+        *(uint64_t *)(self + 0xa38);
     lVar3 = *(long *)(*(long *)(self + 0x7f0) + lVar6 * 8);
     if (iVar7 < *(int *)(*(long *)(self + 0xa38) + 0x34)) {
       if (*(int *)(lVar3 + 0x7d4) != 0x10) {
@@ -4139,7 +4085,7 @@ void __thiscall MeatBoyCharactor__SwitchToReplayMode(MeatBoyCharactor *self)
         uVar5 = 0;
         uVar1 = *(ushort *)(lVar4 + 0x5b0);
         if (uVar1 != 0) {
-          uVar5 = GetRandomINT(0,uVar1 - 1);
+          uVar5 = GetRandomINT(0, uVar1 - 1);
         }
         *(uint32_t *)(lVar4 + 0x5d8) = uVar5;
         *(uint32_t *)(lVar3 + 0xa4c) = uVar5;
@@ -4149,23 +4095,21 @@ void __thiscall MeatBoyCharactor__SwitchToReplayMode(MeatBoyCharactor *self)
       lVar3 = *(long *)(self + 0xf8);
       uVar2 = *(uint *)(*(long *)(*(long *)(self + 0x7f0) + lVar6 * 8) + 0xa4c);
       if (uVar2 == 0xffffffff) {
-        this_00 = *(FlashLibraryInstance **)
-                   (*(long *)(lVar3 + 0x5c0) + (ulong)*(ushort *)(lVar3 + 0x5d8) * 8);
-      }
-      else {
-        this_00 = *(FlashLibraryInstance **)(*(long *)(lVar3 + 0x5c0) + (ulong)(uVar2 & 0xffff) * 8)
-        ;
+        this_00 = *(FlashLibraryInstance **)(*(long *)(lVar3 + 0x5c0) +
+                                             (ulong) * (ushort *)(lVar3 + 0x5d8) * 8);
+      } else {
+        this_00 =
+            *(FlashLibraryInstance **)(*(long *)(lVar3 + 0x5c0) + (ulong)(uVar2 & 0xffff) * 8);
       }
       FlashLibraryInstance__Reset(this_00);
-    }
-    else {
+    } else {
       if (*(int *)(lVar3 + 0x7d4) != 0xe) {
         lVar4 = *(long *)(lVar3 + 0xf8);
         *(byte *)(lVar3 + 0x7db) = *(byte *)(lVar3 + 0x7db) | 8;
         uVar5 = 0;
         uVar1 = *(ushort *)(lVar4 + 0x500);
         if (uVar1 != 0) {
-          uVar5 = GetRandomINT(0,uVar1 - 1);
+          uVar5 = GetRandomINT(0, uVar1 - 1);
         }
         *(uint32_t *)(lVar4 + 0x528) = uVar5;
         *(uint32_t *)(lVar3 + 0xa4c) = uVar5;
@@ -4178,8 +4122,8 @@ void __thiscall MeatBoyCharactor__SwitchToReplayMode(MeatBoyCharactor *self)
     *(uint32_t *)(*(long *)(*(long *)(self + 0x7f0) + lVar6 * 8) + 0xa48) = 0;
   } while (iVar7 != 0x28);
   if (((byte)self[0x7db] & 0x10) == 0) {
-    SMBPalette__SetToReplayMode
-              (GSuperMeatBoy__pLevelPalette,*(int *)(*(long *)(self + 0xa38) + 0x34));
+    SMBPalette__SetToReplayMode(GSuperMeatBoy__pLevelPalette,
+                                *(int *)(*(long *)(self + 0xa38) + 0x34));
   }
   AutoLockSection__AutoLockSection__005b59d0(aAStack_38);
   return;
@@ -4197,12 +4141,13 @@ void __thiscall MeatBoyCharactor__SwitchToReplayMode(MeatBoyCharactor *self)
 void __thiscall MeatBoyCharactor__SwitchToRegularMode(MeatBoyCharactor *self)
 
 {
-  AutoLockSection aAStack_18 [16];
-  
-  AutoLockSection__AutoLockSection(aAStack_18,(CriticalSection *)RenderLayers__MasterRenderSection);
-                    /* try { // try from 0047e06c to 0047e099 has its CatchHandler @ 0047e0a8 */
+  AutoLockSection aAStack_18[16];
+
+  AutoLockSection__AutoLockSection(aAStack_18,
+                                   (CriticalSection *)RenderLayers__MasterRenderSection);
+  /* try { // try from 0047e06c to 0047e099 has its CatchHandler @ 0047e0a8 */
   SMBReplay__ResetAll(*(SMBReplay **)(self + 0xa38));
-  SMBReplay__SetReplayMode(*(SMBReplay **)(self + 0xa38),1);
+  SMBReplay__SetReplayMode(*(SMBReplay **)(self + 0xa38), 1);
   SMBReplay__StartNewReplay(*(SMBReplay **)(self + 0xa38));
   SMBPalette__SetToNormalMode(GSuperMeatBoy__pLevelPalette);
   AutoLockSection__AutoLockSection__005b59d0(aAStack_18);
@@ -4221,11 +4166,11 @@ void __thiscall MeatBoyCharactor__SwitchToRegularMode(MeatBoyCharactor *self)
 void __thiscall MeatBoyCharactor__ResetLevelDeaths(MeatBoyCharactor *self)
 
 {
-  uint32_t local_28 [2];
+  uint32_t local_28[2];
   MeatBoyCharactor *local_20;
   uint32_t local_18;
   uint64_t local_10;
-  
+
   *(uint32_t *)(self + 0x7f8) = 0;
   *(uint32_t *)(self + 0x7fc) = 0;
   local_20 = self + 0x7f8;
@@ -4269,14 +4214,14 @@ void __thiscall MeatBoyCharactor__MakeShocked(MeatBoyCharactor *self)
   ushort uVar1;
   long lVar2;
   uint32_t uVar3;
-  
+
   if (*(int *)(self + 0x7d4) != 0x16) {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (MeatBoyCharactor)((byte)self[0x7db] | 8);
     uVar3 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x7c0);
     if (uVar1 != 0) {
-      uVar3 = GetRandomINT(0,uVar1 - 1);
+      uVar3 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x7e8) = uVar3;
     *(uint32_t *)(self + 0xa4c) = uVar3;

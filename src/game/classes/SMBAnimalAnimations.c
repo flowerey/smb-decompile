@@ -23,7 +23,7 @@ void __thiscall SMBAnimalAnimations__SMBAnimalAnimations(SMBAnimalAnimations *se
 {
   SMBAnimalAnimations *pSVar1;
   CriticalSection *this_00;
-  
+
   if (self != (SMBAnimalAnimations *)0x0) {
     this_00 = (CriticalSection *)(self + 0x370);
     pSVar1 = self + 0x360;

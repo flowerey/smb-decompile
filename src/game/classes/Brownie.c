@@ -74,9 +74,9 @@ void __thiscall Brownie__Brownie__00465960(Brownie *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FormatResourcePath("/Animations/brownie.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,5);
+
+  uVar1 = FormatResourcePath("/Animations/brownie.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 5);
   *(uint8_t ***)self = &PTR__Brownie_005bf1b0;
   *(uint32_t *)(self + 0xa54) = 5;
   return;
@@ -91,12 +91,12 @@ void __thiscall Brownie__Brownie__00465960(Brownie *self)
  */
 /* Brownie__Brownie__00465960(MeatBoyCharactor*, int) */
 
-void __thiscall Brownie__Brownie__00465960(Brownie *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall Brownie__Brownie__00465960(Brownie *self, MeatBoyCharactor *arg1, int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__Brownie_005bf1b0;
-                    /* try { // try from 00465991 to 00465995 has its CatchHandler @ 004659a9 */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 00465991 to 00465995 has its CatchHandler @ 004659a9 */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   return;
 }

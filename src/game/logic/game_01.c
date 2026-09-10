@@ -25,18 +25,18 @@ int ConvertLevelToLeaderboardID(void)
   int iVar2;
   int iVar3;
   uint uVar4;
-  int local_28 [3];
-  int local_1c [3];
-  
+  int local_28[3];
+  int local_1c[3];
+
   local_28[0] = 0;
   local_1c[0] = 0;
   iVar2 = *(int *)(SuperMeatBoy + 0x290);
   uVar1 = *(uint *)(SuperMeatBoy + 0x294);
-  GSMBMenu__ExtractChapterAndLevelFromSelectedLevel(SMBMenu,local_1c,local_28,(char *)0x0);
+  GSMBMenu__ExtractChapterAndLevelFromSelectedLevel(SMBMenu, local_1c, local_28, (char *)0x0);
   uVar4 = 0;
   if ((((local_1c[0] != 1) && (uVar4 = 1, local_1c[0] != 2)) && (uVar4 = 2, local_1c[0] != 3)) &&
-     (((uVar4 = 3, local_1c[0] != 4 && (uVar4 = 4, local_1c[0] != 5)) &&
-      (uVar4 = 5, local_1c[0] != 6)))) {
+      (((uVar4 = 3, local_1c[0] != 4 && (uVar4 = 4, local_1c[0] != 5)) &&
+        (uVar4 = 5, local_1c[0] != 6)))) {
     uVar4 = 6;
     if (local_1c[0] != 7) {
       uVar4 = iVar2 - 1;
@@ -55,8 +55,7 @@ int ConvertLevelToLeaderboardID(void)
           iVar2 = (&CSWTCH_13)[uVar4] + iVar2;
         }
         iVar2 = iVar2 + iVar3;
-      }
-      else {
+      } else {
         iVar2 = -1;
       }
     }
@@ -72,7 +71,7 @@ int ConvertLevelToLeaderboardID(void)
  */
 /* SMBLeaderboardPageUp(tagButtonProps const*, void*) */
 
-void SMBLeaderboardPageUp(tagButtonProps *arg1,void *arg2)
+void SMBLeaderboardPageUp(tagButtonProps *arg1, void *arg2)
 
 {
   if (*(int *)arg1 != 1) {
@@ -87,8 +86,8 @@ void SMBLeaderboardPageUp(tagButtonProps *arg1,void *arg2)
   (**(code **)(*(long *)arg2 + 0x50))(arg2);
   (**(code **)(*(long *)arg2 + 0x50))(arg2);
   (**(code **)(*(long *)arg2 + 0x50))(arg2);
-                    /* WARNING: Could not recover jumptable at 0x004c454c. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x004c454c. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(*(long *)arg2 + 0x50))(arg2);
   return;
 }
@@ -101,7 +100,7 @@ void SMBLeaderboardPageUp(tagButtonProps *arg1,void *arg2)
  */
 /* SMBLeaderboardPageDown(tagButtonProps const*, void*) */
 
-void SMBLeaderboardPageDown(tagButtonProps *arg1,void *arg2)
+void SMBLeaderboardPageDown(tagButtonProps *arg1, void *arg2)
 
 {
   if (*(int *)arg1 != 1) {
@@ -116,8 +115,8 @@ void SMBLeaderboardPageDown(tagButtonProps *arg1,void *arg2)
   (**(code **)(*(long *)arg2 + 0x48))(arg2);
   (**(code **)(*(long *)arg2 + 0x48))(arg2);
   (**(code **)(*(long *)arg2 + 0x48))(arg2);
-                    /* WARNING: Could not recover jumptable at 0x004c45bc. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x004c45bc. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(*(long *)arg2 + 0x48))(arg2);
   return;
 }
@@ -130,18 +129,18 @@ void SMBLeaderboardPageDown(tagButtonProps *arg1,void *arg2)
  */
 /* SMBLeaderBoardShowGamerID(tagButtonProps const*, void*) */
 
-void SMBLeaderBoardShowGamerID(tagButtonProps *arg1,void *arg2)
+void SMBLeaderBoardShowGamerID(tagButtonProps *arg1, void *arg2)
 
 {
   long lVar1;
   UserProfile *pUVar2;
-  
+
   if (*(int *)arg1 != 1) {
     return;
   }
   lVar1 = *(long *)((long)arg2 + (long)*(int *)((long)arg2 + 0x68) * 8 + 0x80);
   pUVar2 = (UserProfile *)TPlayer__GetProfile((TPlayer *)Players__Player);
-  Leaderboards__ShowGamerInfo(pUVar2,lVar1);
+  Leaderboards__ShowGamerInfo(pUVar2, lVar1);
   return;
 }
 
@@ -153,7 +152,7 @@ void SMBLeaderBoardShowGamerID(tagButtonProps *arg1,void *arg2)
  */
 /* SMBLeaderBoardSwitchFilter(tagButtonProps const*, void*) */
 
-void SMBLeaderBoardSwitchFilter(tagButtonProps *arg1,void *arg2)
+void SMBLeaderBoardSwitchFilter(tagButtonProps *arg1, void *arg2)
 
 {
   if (*(int *)arg1 != 1) {
@@ -169,7 +168,7 @@ void SMBLeaderBoardSwitchFilter(tagButtonProps *arg1,void *arg2)
  * Calls: `File__ReadArray`, `File__ReadVariable`, `GSetPieceWayPoints__LoadWayPointData`, `SMBAnimals__CreateAnimal`, `SMBAnimals__RemoveAnimals`, `SMBCamera__AddWayPoint`, `SMBCamera__SetStartPosition`, `TileLevelLightMap__CreateLight`, `TileLevelLightMap__Reset`
  * Called by: `SMBEditor__SMBEditor__004ad010`
  */
-uint64_t SMBLevelLoad(File *arg1,TileLevel *arg2,int arg3)
+uint64_t SMBLevelLoad(File *arg1, TileLevel *arg2, int arg3)
 
 {
   TileLevelLightMap *self;
@@ -185,7 +184,7 @@ uint64_t SMBLevelLoad(File *arg1,TileLevel *arg2,int arg3)
   uint64_t local_f0;
   uint32_t local_e8;
   uint32_t local_e4;
-  uint32_t local_e0 [2];
+  uint32_t local_e0[2];
   uint32_t local_d8;
   uint32_t local_d4;
   uint32_t local_d0;
@@ -194,27 +193,27 @@ uint64_t SMBLevelLoad(File *arg1,TileLevel *arg2,int arg3)
   uint64_t local_c0;
   uint32_t local_b8;
   uint32_t local_b4;
-  uint32_t local_b0 [2];
+  uint32_t local_b0[2];
   uint32_t local_a8;
   uint32_t local_a4;
   uint32_t local_a0;
   uint32_t local_9c;
-  uint32_t local_98 [2];
+  uint32_t local_98[2];
   uint64_t local_90;
   uint64_t local_88;
   uint32_t local_78;
-  uchar local_74 [28];
-  uint local_58 [4];
-  byte local_48 [24];
-  
+  uchar local_74[28];
+  uint local_58[4];
+  byte local_48[24];
+
   if (arg3 < 2) {
     return 1;
   }
   local_48[0] = 0;
-  File__ReadVariable(arg1,local_48,1);
+  File__ReadVariable(arg1, local_48, 1);
   self = *(TileLevelLightMap **)(SuperMeatBoy + 0x390);
   TileLevelLightMap__Reset(self);
-  SMBCamera__SetStartPosition(*(SMBCamera **)(SuperMeatBoy + 0x38),(Vector2 *)(arg2 + 0x22a8));
+  SMBCamera__SetStartPosition(*(SMBCamera **)(SuperMeatBoy + 0x38), (Vector2 *)(arg2 + 0x22a8));
   if (arg3 == 2) {
     if (local_48[0] != 0) {
       bVar2 = 0;
@@ -229,16 +228,15 @@ uint64_t SMBLevelLoad(File *arg1,TileLevel *arg2,int arg3)
         local_e4 = 0;
         local_e0[0] = 0;
         local_f0 = DAT_0081ba88 /* R:1.1910274640396352e-38f */;
-        File__ReadArray(arg1,(uchar *)&local_108,3,4);
-        File__ReadArray(arg1,(uchar *)&local_f8,4,4);
-        File__ReadVariable(arg1,&local_e8,4);
-        File__ReadVariable(arg1,local_e0,4);
+        File__ReadArray(arg1, (uchar *)&local_108, 3, 4);
+        File__ReadArray(arg1, (uchar *)&local_f8, 4, 4);
+        File__ReadVariable(arg1, &local_e8, 4);
+        File__ReadVariable(arg1, local_e0, 4);
         local_e4 = 0;
-        TileLevelLightMap__CreateLight(self,(Light *)&local_108);
+        TileLevelLightMap__CreateLight(self, (Light *)&local_108);
       } while (bVar2 < local_48[0]);
     }
-  }
-  else {
+  } else {
     bVar2 = 0;
     if (local_48[0] != 0) {
       do {
@@ -252,17 +250,17 @@ uint64_t SMBLevelLoad(File *arg1,TileLevel *arg2,int arg3)
         local_b4 = 0;
         local_b0[0] = 0;
         local_c0 = DAT_0081ba88 /* R:1.1910274640396352e-38f */;
-        File__ReadArray(arg1,(uchar *)&local_d8,3,4);
-        File__ReadArray(arg1,(uchar *)&local_c8,4,4);
-        File__ReadVariable(arg1,&local_b8,4);
-        File__ReadVariable(arg1,&local_b4,4);
-        File__ReadVariable(arg1,local_b0,4);
-        TileLevelLightMap__CreateLight(self,(Light *)&local_d8);
+        File__ReadArray(arg1, (uchar *)&local_d8, 3, 4);
+        File__ReadArray(arg1, (uchar *)&local_c8, 4, 4);
+        File__ReadVariable(arg1, &local_b8, 4);
+        File__ReadVariable(arg1, &local_b4, 4);
+        File__ReadVariable(arg1, local_b0, 4);
+        TileLevelLightMap__CreateLight(self, (Light *)&local_d8);
       } while (bVar2 < local_48[0]);
     }
     if (arg3 != 3) {
       local_58[0] = local_58[0] & 0xffffff00;
-      File__ReadVariable(arg1,local_58,1);
+      File__ReadVariable(arg1, local_58, 1);
       this_00 = *(SMBCamera **)(SuperMeatBoy + 0x38);
       if ((char)local_58[0] != '\0') {
         iVar3 = 0;
@@ -276,23 +274,24 @@ uint64_t SMBLevelLoad(File *arg1,TileLevel *arg2,int arg3)
             local_98[0] = 0;
             local_90 = 0;
             local_88 = 0;
-            File__ReadArray(arg1,(uchar *)&local_a8,3,4);
-            File__ReadVariable(arg1,local_98,4);
-            SMBCamera__AddWayPoint(this_00,(SMBCameraWayPoint *)&local_a8);
-            if ((int)(local_58[0] & 0xff) <= iVar3) goto LAB_004c66b9;
+            File__ReadArray(arg1, (uchar *)&local_a8, 3, 4);
+            File__ReadVariable(arg1, local_98, 4);
+            SMBCamera__AddWayPoint(this_00, (SMBCameraWayPoint *)&local_a8);
+            if ((int)(local_58[0] & 0xff) <= iVar3)
+              goto LAB_004c66b9;
           }
           puVar1 = *(uchar **)(this_00 + 0x1180);
           iVar3 = 1;
-          File__ReadArray(arg1,puVar1,3,4);
-          File__ReadVariable(arg1,puVar1 + 0x10,4);
+          File__ReadArray(arg1, puVar1, 3, 4);
+          File__ReadVariable(arg1, puVar1 + 0x10, 4);
         } while (1 < (local_58[0] & 0xff));
       }
-LAB_004c66b9:
+    LAB_004c66b9:
       SMBAnimals__RemoveAnimals(*(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8));
       if (arg3 == 4) {
         return 1;
       }
-      File__ReadVariable(arg1,local_58,4);
+      File__ReadVariable(arg1, local_58, 4);
       if (0 < (int)local_58[0]) {
         iVar3 = 0;
         if (arg3 == 5) {
@@ -323,11 +322,10 @@ LAB_004c66b9:
             local_74[0x15] = '\0';
             local_74[0x16] = '\0';
             local_74[0x17] = '\0';
-            File__ReadVariable(arg1,(SMBAnimalCreate *)&local_78,4);
-            File__ReadArray(arg1,local_74,2,4);
-            SMBAnimals__CreateAnimal
-                      (*(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8),
-                       (SMBAnimalCreate *)&local_78);
+            File__ReadVariable(arg1, (SMBAnimalCreate *)&local_78, 4);
+            File__ReadArray(arg1, local_74, 2, 4);
+            SMBAnimals__CreateAnimal(*(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8),
+                                     (SMBAnimalCreate *)&local_78);
           } while (iVar3 < (int)local_58[0]);
           return 1;
         }
@@ -358,19 +356,18 @@ LAB_004c66b9:
           local_74[0x15] = '\0';
           local_74[0x16] = '\0';
           local_74[0x17] = '\0';
-          File__ReadVariable(arg1,(SMBAnimalCreate *)&local_78,4);
-          File__ReadArray(arg1,local_74,2,4);
-          File__ReadArray(arg1,local_74 + 8,2,4);
-          File__ReadArray(arg1,local_74 + 0x10,2,4);
-          SMBAnimals__CreateAnimal
-                    (*(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8),
-                     (SMBAnimalCreate *)&local_78);
+          File__ReadVariable(arg1, (SMBAnimalCreate *)&local_78, 4);
+          File__ReadArray(arg1, local_74, 2, 4);
+          File__ReadArray(arg1, local_74 + 8, 2, 4);
+          File__ReadArray(arg1, local_74 + 0x10, 2, 4);
+          SMBAnimals__CreateAnimal(*(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8),
+                                   (SMBAnimalCreate *)&local_78);
         } while (iVar3 < (int)local_58[0]);
       }
       if (arg3 < 7) {
         return 1;
       }
-      GSetPieceWayPoints__LoadWayPointData(SetPieceWayPoints,arg1,arg2);
+      GSetPieceWayPoints__LoadWayPointData(SetPieceWayPoints, arg1, arg2);
       return 1;
     }
   }
@@ -384,7 +381,7 @@ LAB_004c66b9:
  * Calls: `File__Write`, `File__WriteArray`, `GSetPieceWayPoints__SaveWayPointData`, `SMBAnimals__GetAnimal`, `SMBAnimals__GetNumAnimals`, `SMBCamera__GetNumWayPoints`, `TileLevelLightMap__GetLight`, `TileLevelLightMap__getNumLights`
  * Called by: `SMBEditor__SMBEditor__004ad010`
  */
-uint64_t SMBLevelSave(File *arg1,TileLevel *arg2)
+uint64_t SMBLevelSave(File *arg1, TileLevel *arg2)
 
 {
   TileLevelLightMap *self;
@@ -393,120 +390,120 @@ uint64_t SMBLevelSave(File *arg1,TileLevel *arg2)
   long lVar2;
   int iVar3;
   int iVar4;
-  uint64_t local_48 [2];
-  int local_38 [2];
+  uint64_t local_48[2];
+  int local_38[2];
   uint32_t local_30;
   uint8_t local_2a;
-  uint8_t local_29 [9];
-  
+  uint8_t local_29[9];
+
   self = *(TileLevelLightMap **)(SuperMeatBoy + 0x390);
   local_2a = TileLevelLightMap__getNumLights(self);
-  File__Write(arg1,&local_2a,1);
-  puVar1 = (uchar *)TileLevelLightMap__GetLight(self,0);
+  File__Write(arg1, &local_2a, 1);
+  puVar1 = (uchar *)TileLevelLightMap__GetLight(self, 0);
   if (*(int *)(puVar1 + 0x28) != 0) {
-    File__WriteArray(arg1,puVar1,3,4);
-    File__WriteArray(arg1,puVar1 + 0x10,4,4);
-    File__Write(arg1,puVar1 + 0x20,4);
-    File__Write(arg1,puVar1 + 0x24,4);
-    File__Write(arg1,puVar1 + 0x28,4);
+    File__WriteArray(arg1, puVar1, 3, 4);
+    File__WriteArray(arg1, puVar1 + 0x10, 4, 4);
+    File__Write(arg1, puVar1 + 0x20, 4);
+    File__Write(arg1, puVar1 + 0x24, 4);
+    File__Write(arg1, puVar1 + 0x28, 4);
   }
-  puVar1 = (uchar *)TileLevelLightMap__GetLight(self,1);
+  puVar1 = (uchar *)TileLevelLightMap__GetLight(self, 1);
   if (*(int *)(puVar1 + 0x28) != 0) {
-    File__WriteArray(arg1,puVar1,3,4);
-    File__WriteArray(arg1,puVar1 + 0x10,4,4);
-    File__Write(arg1,puVar1 + 0x20,4);
-    File__Write(arg1,puVar1 + 0x24,4);
-    File__Write(arg1,puVar1 + 0x28,4);
+    File__WriteArray(arg1, puVar1, 3, 4);
+    File__WriteArray(arg1, puVar1 + 0x10, 4, 4);
+    File__Write(arg1, puVar1 + 0x20, 4);
+    File__Write(arg1, puVar1 + 0x24, 4);
+    File__Write(arg1, puVar1 + 0x28, 4);
   }
-  puVar1 = (uchar *)TileLevelLightMap__GetLight(self,2);
+  puVar1 = (uchar *)TileLevelLightMap__GetLight(self, 2);
   if (*(int *)(puVar1 + 0x28) != 0) {
-    File__WriteArray(arg1,puVar1,3,4);
-    File__WriteArray(arg1,puVar1 + 0x10,4,4);
-    File__Write(arg1,puVar1 + 0x20,4);
-    File__Write(arg1,puVar1 + 0x24,4);
-    File__Write(arg1,puVar1 + 0x28,4);
+    File__WriteArray(arg1, puVar1, 3, 4);
+    File__WriteArray(arg1, puVar1 + 0x10, 4, 4);
+    File__Write(arg1, puVar1 + 0x20, 4);
+    File__Write(arg1, puVar1 + 0x24, 4);
+    File__Write(arg1, puVar1 + 0x28, 4);
   }
-  puVar1 = (uchar *)TileLevelLightMap__GetLight(self,3);
+  puVar1 = (uchar *)TileLevelLightMap__GetLight(self, 3);
   if (*(int *)(puVar1 + 0x28) != 0) {
-    File__WriteArray(arg1,puVar1,3,4);
-    File__WriteArray(arg1,puVar1 + 0x10,4,4);
-    File__Write(arg1,puVar1 + 0x20,4);
-    File__Write(arg1,puVar1 + 0x24,4);
-    File__Write(arg1,puVar1 + 0x28,4);
+    File__WriteArray(arg1, puVar1, 3, 4);
+    File__WriteArray(arg1, puVar1 + 0x10, 4, 4);
+    File__Write(arg1, puVar1 + 0x20, 4);
+    File__Write(arg1, puVar1 + 0x24, 4);
+    File__Write(arg1, puVar1 + 0x28, 4);
   }
-  puVar1 = (uchar *)TileLevelLightMap__GetLight(self,4);
+  puVar1 = (uchar *)TileLevelLightMap__GetLight(self, 4);
   if (*(int *)(puVar1 + 0x28) != 0) {
-    File__WriteArray(arg1,puVar1,3,4);
-    File__WriteArray(arg1,puVar1 + 0x10,4,4);
-    File__Write(arg1,puVar1 + 0x20,4);
-    File__Write(arg1,puVar1 + 0x24,4);
-    File__Write(arg1,puVar1 + 0x28,4);
+    File__WriteArray(arg1, puVar1, 3, 4);
+    File__WriteArray(arg1, puVar1 + 0x10, 4, 4);
+    File__Write(arg1, puVar1 + 0x20, 4);
+    File__Write(arg1, puVar1 + 0x24, 4);
+    File__Write(arg1, puVar1 + 0x28, 4);
   }
-  puVar1 = (uchar *)TileLevelLightMap__GetLight(self,5);
+  puVar1 = (uchar *)TileLevelLightMap__GetLight(self, 5);
   if (*(int *)(puVar1 + 0x28) != 0) {
-    File__WriteArray(arg1,puVar1,3,4);
-    File__WriteArray(arg1,puVar1 + 0x10,4,4);
-    File__Write(arg1,puVar1 + 0x20,4);
-    File__Write(arg1,puVar1 + 0x24,4);
-    File__Write(arg1,puVar1 + 0x28,4);
+    File__WriteArray(arg1, puVar1, 3, 4);
+    File__WriteArray(arg1, puVar1 + 0x10, 4, 4);
+    File__Write(arg1, puVar1 + 0x20, 4);
+    File__Write(arg1, puVar1 + 0x24, 4);
+    File__Write(arg1, puVar1 + 0x28, 4);
   }
-  puVar1 = (uchar *)TileLevelLightMap__GetLight(self,6);
+  puVar1 = (uchar *)TileLevelLightMap__GetLight(self, 6);
   if (*(int *)(puVar1 + 0x28) != 0) {
-    File__WriteArray(arg1,puVar1,3,4);
-    File__WriteArray(arg1,puVar1 + 0x10,4,4);
-    File__Write(arg1,puVar1 + 0x20,4);
-    File__Write(arg1,puVar1 + 0x24,4);
-    File__Write(arg1,puVar1 + 0x28,4);
+    File__WriteArray(arg1, puVar1, 3, 4);
+    File__WriteArray(arg1, puVar1 + 0x10, 4, 4);
+    File__Write(arg1, puVar1 + 0x20, 4);
+    File__Write(arg1, puVar1 + 0x24, 4);
+    File__Write(arg1, puVar1 + 0x28, 4);
   }
-  puVar1 = (uchar *)TileLevelLightMap__GetLight(self,7);
+  puVar1 = (uchar *)TileLevelLightMap__GetLight(self, 7);
   if (*(int *)(puVar1 + 0x28) != 0) {
-    File__WriteArray(arg1,puVar1,3,4);
-    File__WriteArray(arg1,puVar1 + 0x10,4,4);
-    File__Write(arg1,puVar1 + 0x20,4);
-    File__Write(arg1,puVar1 + 0x24,4);
-    File__Write(arg1,puVar1 + 0x28,4);
+    File__WriteArray(arg1, puVar1, 3, 4);
+    File__WriteArray(arg1, puVar1 + 0x10, 4, 4);
+    File__Write(arg1, puVar1 + 0x20, 4);
+    File__Write(arg1, puVar1 + 0x24, 4);
+    File__Write(arg1, puVar1 + 0x28, 4);
   }
-  puVar1 = (uchar *)TileLevelLightMap__GetLight(self,8);
+  puVar1 = (uchar *)TileLevelLightMap__GetLight(self, 8);
   if (*(int *)(puVar1 + 0x28) != 0) {
-    File__WriteArray(arg1,puVar1,3,4);
-    File__WriteArray(arg1,puVar1 + 0x10,4,4);
-    File__Write(arg1,puVar1 + 0x20,4);
-    File__Write(arg1,puVar1 + 0x24,4);
-    File__Write(arg1,puVar1 + 0x28,4);
+    File__WriteArray(arg1, puVar1, 3, 4);
+    File__WriteArray(arg1, puVar1 + 0x10, 4, 4);
+    File__Write(arg1, puVar1 + 0x20, 4);
+    File__Write(arg1, puVar1 + 0x24, 4);
+    File__Write(arg1, puVar1 + 0x28, 4);
   }
-  puVar1 = (uchar *)TileLevelLightMap__GetLight(self,9);
+  puVar1 = (uchar *)TileLevelLightMap__GetLight(self, 9);
   if (*(int *)(puVar1 + 0x28) != 0) {
-    File__WriteArray(arg1,puVar1,3,4);
-    File__WriteArray(arg1,puVar1 + 0x10,4,4);
-    File__Write(arg1,puVar1 + 0x20,4);
-    File__Write(arg1,puVar1 + 0x24,4);
-    File__Write(arg1,puVar1 + 0x28,4);
+    File__WriteArray(arg1, puVar1, 3, 4);
+    File__WriteArray(arg1, puVar1 + 0x10, 4, 4);
+    File__Write(arg1, puVar1 + 0x20, 4);
+    File__Write(arg1, puVar1 + 0x24, 4);
+    File__Write(arg1, puVar1 + 0x28, 4);
   }
   this_00 = *(SMBCamera **)(SuperMeatBoy + 0x38);
   local_29[0] = SMBCamera__GetNumWayPoints(this_00);
   puVar1 = *(uchar **)(this_00 + 0x1180);
-  File__Write(arg1,local_29,1);
+  File__Write(arg1, local_29, 1);
   for (; puVar1 != (uchar *)0x0; puVar1 = *(uchar **)(puVar1 + 0x18)) {
-    File__WriteArray(arg1,puVar1,3,4);
-    File__Write(arg1,puVar1 + 0x10,4);
+    File__WriteArray(arg1, puVar1, 3, 4);
+    File__Write(arg1, puVar1 + 0x10, 4);
   }
   local_38[0] = SMBAnimals__GetNumAnimals(*(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8));
-  File__Write(arg1,local_38,4);
+  File__Write(arg1, local_38, 4);
   if (0 < local_38[0]) {
     iVar3 = 0;
     do {
       iVar4 = iVar3 + 1;
-      lVar2 = SMBAnimals__GetAnimal(*(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8),iVar3);
+      lVar2 = SMBAnimals__GetAnimal(*(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8), iVar3);
       local_30 = *(uint32_t *)(lVar2 + 0x214);
       local_48[0] = *(uint64_t *)(lVar2 + 0xf8);
-      File__Write(arg1,&local_30,4);
-      File__WriteArray(arg1,(uchar *)local_48,2,4);
-      File__WriteArray(arg1,(uchar *)(lVar2 + 0x100),2,4);
-      File__WriteArray(arg1,(uchar *)(lVar2 + 0x108),2,4);
+      File__Write(arg1, &local_30, 4);
+      File__WriteArray(arg1, (uchar *)local_48, 2, 4);
+      File__WriteArray(arg1, (uchar *)(lVar2 + 0x100), 2, 4);
+      File__WriteArray(arg1, (uchar *)(lVar2 + 0x108), 2, 4);
       iVar3 = iVar4;
     } while (iVar4 < local_38[0]);
   }
-  GSetPieceWayPoints__SaveWayPointData(SetPieceWayPoints,arg1,arg2);
+  GSetPieceWayPoints__SaveWayPointData(SetPieceWayPoints, arg1, arg2);
   return 1;
 }
 
@@ -516,41 +513,41 @@ uint64_t SMBLevelSave(File *arg1,TileLevel *arg2)
  * Calls: `File__ReadArray`, `File__ReadVariable`, `GSetPieceWayPoints__LoadWayPointData`
  * Called by: `SMBEditor__SMBEditor__004ad010`
  */
-bool SMBLevelVerify(File *arg1,int arg2)
+bool SMBLevelVerify(File *arg1, int arg2)
 
 {
   byte bVar1;
   int iVar2;
-  uchar local_138 [16];
+  uchar local_138[16];
   uint64_t local_128;
   uint64_t local_120;
   uint32_t local_118;
   uint32_t local_114;
-  uint32_t local_110 [2];
-  uchar local_108 [16];
+  uint32_t local_110[2];
+  uchar local_108[16];
   uint64_t local_f8;
   uint64_t local_f0;
   uint32_t local_e8;
   uint32_t local_e4;
-  uint32_t local_e0 [2];
-  uchar local_d8 [16];
-  uint32_t local_c8 [2];
+  uint32_t local_e0[2];
+  uchar local_d8[16];
+  uint32_t local_c8[2];
   uint64_t local_c0;
   uint64_t local_b8;
-  uchar local_a8 [16];
-  uint32_t local_98 [2];
+  uchar local_a8[16];
+  uint32_t local_98[2];
   uint64_t local_90;
   uint64_t local_88;
   uint local_78;
-  uchar local_74 [28];
-  uint local_58 [4];
-  byte local_48 [24];
-  
+  uchar local_74[28];
+  uint local_58[4];
+  byte local_48[24];
+
   if (arg2 < 2) {
     return true;
   }
   local_48[0] = 0;
-  File__ReadVariable(arg1,local_48,1);
+  File__ReadVariable(arg1, local_48, 1);
   if (10 < local_48[0]) {
     return false;
   }
@@ -582,13 +579,12 @@ bool SMBLevelVerify(File *arg1,int arg2)
       local_114 = 0;
       local_110[0] = 0;
       local_120 = DAT_0081ba88 /* R:1.1910274640396352e-38f */;
-      File__ReadArray(arg1,local_138,3,4);
-      File__ReadArray(arg1,(uchar *)&local_128,4,4);
-      File__ReadVariable(arg1,&local_118,4);
-      File__ReadVariable(arg1,local_110,4);
+      File__ReadArray(arg1, local_138, 3, 4);
+      File__ReadArray(arg1, (uchar *)&local_128, 4, 4);
+      File__ReadVariable(arg1, &local_118, 4);
+      File__ReadVariable(arg1, local_110, 4);
     } while (bVar1 < local_48[0]);
-  }
-  else {
+  } else {
     bVar1 = 0;
     if (local_48[0] != 0) {
       do {
@@ -614,18 +610,18 @@ bool SMBLevelVerify(File *arg1,int arg2)
         local_e4 = 0;
         local_e0[0] = 0;
         local_f0 = DAT_0081ba88 /* R:1.1910274640396352e-38f */;
-        File__ReadArray(arg1,local_108,3,4);
-        File__ReadArray(arg1,(uchar *)&local_f8,4,4);
-        File__ReadVariable(arg1,&local_e8,4);
-        File__ReadVariable(arg1,&local_e4,4);
-        File__ReadVariable(arg1,local_e0,4);
+        File__ReadArray(arg1, local_108, 3, 4);
+        File__ReadArray(arg1, (uchar *)&local_f8, 4, 4);
+        File__ReadVariable(arg1, &local_e8, 4);
+        File__ReadVariable(arg1, &local_e4, 4);
+        File__ReadVariable(arg1, local_e0, 4);
       } while (bVar1 < local_48[0]);
     }
     if (arg2 == 3) {
       return true;
     }
     local_58[0] = local_58[0] & 0xffffff00;
-    File__ReadVariable(arg1,local_58,1);
+    File__ReadVariable(arg1, local_58, 1);
     if (100 < (byte)local_58[0]) {
       return false;
     }
@@ -652,10 +648,9 @@ bool SMBLevelVerify(File *arg1,int arg2)
           local_c8[0] = 0;
           local_c0 = 0;
           local_b8 = 0;
-          File__ReadArray(arg1,local_d8,3,4);
-          File__ReadVariable(arg1,local_c8,4);
-        }
-        else {
+          File__ReadArray(arg1, local_d8, 3, 4);
+          File__ReadVariable(arg1, local_c8, 4);
+        } else {
           local_a8[0] = '\0';
           local_a8[1] = '\0';
           local_a8[2] = '\0';
@@ -675,14 +670,14 @@ bool SMBLevelVerify(File *arg1,int arg2)
           local_98[0] = 0;
           local_90 = 0;
           local_88 = 0;
-          File__ReadArray(arg1,local_a8,3,4);
-          File__ReadVariable(arg1,local_98,4);
+          File__ReadArray(arg1, local_a8, 3, 4);
+          File__ReadVariable(arg1, local_98, 4);
         }
         iVar2 = iVar2 + 1;
       } while (iVar2 < (int)(local_58[0] & 0xff));
     }
     if (arg2 != 4) {
-      File__ReadVariable(arg1,local_58,4);
+      File__ReadVariable(arg1, local_58, 4);
       if (0 < (int)local_58[0]) {
         iVar2 = 0;
         if (arg2 == 5) {
@@ -712,12 +707,12 @@ bool SMBLevelVerify(File *arg1,int arg2)
             local_74[0x15] = '\0';
             local_74[0x16] = '\0';
             local_74[0x17] = '\0';
-            File__ReadVariable(arg1,&local_78,4);
+            File__ReadVariable(arg1, &local_78, 4);
             if (0x13 < local_78) {
               return false;
             }
             iVar2 = iVar2 + 1;
-            File__ReadArray(arg1,local_74,2,4);
+            File__ReadArray(arg1, local_74, 2, 4);
           } while (iVar2 < (int)local_58[0]);
           return true;
         }
@@ -747,18 +742,18 @@ bool SMBLevelVerify(File *arg1,int arg2)
           local_74[0x15] = '\0';
           local_74[0x16] = '\0';
           local_74[0x17] = '\0';
-          File__ReadVariable(arg1,&local_78,4);
+          File__ReadVariable(arg1, &local_78, 4);
           if (0x13 < local_78) {
             return false;
           }
           iVar2 = iVar2 + 1;
-          File__ReadArray(arg1,local_74,2,4);
-          File__ReadArray(arg1,local_74 + 8,2,4);
-          File__ReadArray(arg1,local_74 + 0x10,2,4);
+          File__ReadArray(arg1, local_74, 2, 4);
+          File__ReadArray(arg1, local_74 + 8, 2, 4);
+          File__ReadArray(arg1, local_74 + 0x10, 2, 4);
         } while (iVar2 < (int)local_58[0]);
       }
       if (6 < arg2) {
-        iVar2 = GSetPieceWayPoints__LoadWayPointData(SetPieceWayPoints,arg1,(TileLevel *)0x0);
+        iVar2 = GSetPieceWayPoints__LoadWayPointData(SetPieceWayPoints, arg1, (TileLevel *)0x0);
         return iVar2 != 0;
       }
     }
@@ -818,7 +813,7 @@ void SMBProfileInitialized(void)
  */
 /* SMBMenuEndMenuTransition(void*, int, int) */
 
-void SMBMenuEndMenuTransition(void *arg1,int arg2,int arg3)
+void SMBMenuEndMenuTransition(void *arg1, int arg2, int arg3)
 
 {
   bMenuTransitioning = 0;
@@ -833,7 +828,7 @@ void SMBMenuEndMenuTransition(void *arg1,int arg2,int arg3)
  */
 /* SMBMenuTransitionFinished(void*, int, int) */
 
-void SMBMenuTransitionFinished(void *arg1,int arg2,int arg3)
+void SMBMenuTransitionFinished(void *arg1, int arg2, int arg3)
 
 {
   bMenuTransitioning = 0;
@@ -851,8 +846,8 @@ void SMBMenuTransitionFinished(void *arg1,int arg2,int arg3)
 void SMBMenuExitGameFromMsg(void *arg1)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x004c7563. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x004c7563. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(*(long *)(SuperMeatBoy + 0x20) + 0x30))(SuperMeatBoy + 0x20);
   return;
 }
@@ -870,7 +865,7 @@ bool SMBChapterEndSkip(void *arg1)
 {
   long lVar1;
   bool bVar2;
-  
+
   if ((Keyboard == 0) || (bVar2 = true, *(int *)(Keyboard + 8) != 1)) {
     lVar1 = TPlayer__GetJoystick((TPlayer *)Players__Player);
     bVar2 = *(int *)(lVar1 + 8) == 1;
@@ -886,11 +881,11 @@ bool SMBChapterEndSkip(void *arg1)
  */
 /* SMBMenuGameTransitionOut(void*, int, int) */
 
-void SMBMenuGameTransitionOut(void *arg1,int arg2,int arg3)
+void SMBMenuGameTransitionOut(void *arg1, int arg2, int arg3)
 
 {
   bMenuTransitioning = 0;
-  SMBLevelFinished((void *)0x0,0,0);
+  SMBLevelFinished((void *)0x0, 0, 0);
   return;
 }
 
@@ -902,11 +897,11 @@ void SMBMenuGameTransitionOut(void *arg1,int arg2,int arg3)
  */
 /* SMBChapterMenuUpsell(tagButtonProps const*, void*) */
 
-void SMBChapterMenuUpsell(tagButtonProps *arg1,void *arg2)
+void SMBChapterMenuUpsell(tagButtonProps *arg1, void *arg2)
 
 {
   long lVar1;
-  
+
   if (*(int *)arg1 != 1) {
     return;
   }
@@ -923,7 +918,7 @@ void SMBChapterMenuUpsell(tagButtonProps *arg1,void *arg2)
  */
 /* SMBChapterEndInFinished(void*, int, int) */
 
-void SMBChapterEndInFinished(void *arg1,int arg2,int arg3)
+void SMBChapterEndInFinished(void *arg1, int arg2, int arg3)
 
 {
   uint32_t local_58;
@@ -937,10 +932,10 @@ void SMBChapterEndInFinished(void *arg1,int arg2,int arg3)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   if (arg3 != 0) {
     TAudioInstance__Stop((TAudioInstance *)titleMusicInstance);
-    GSuperMeatBoy__SwitchGameMode(SuperMeatBoy,9);
+    GSuperMeatBoy__SwitchGameMode(SuperMeatBoy, 9);
     return;
   }
   local_38 = 0;
@@ -954,7 +949,7 @@ void SMBChapterEndInFinished(void *arg1,int arg2,int arg3)
   local_40 = SMBChapterEndIdleFinished;
   local_18 = 0;
   local_48 = arg1;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_58);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_58);
   return;
 }
 
@@ -966,20 +961,20 @@ void SMBChapterEndInFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBMenuChapterIntroFinished(void*, int, int) */
 
-void SMBMenuChapterIntroFinished(void *arg1,int arg2,int arg3)
+void SMBMenuChapterIntroFinished(void *arg1, int arg2, int arg3)
 
 {
   SMBChapter__DestroyChapterIntro((SMBChapter *)(SuperMeatBoy + 0x90));
   if (arg3 != 0) {
-    GSuperMeatBoy__SwitchGameMode(SuperMeatBoy,9);
+    GSuperMeatBoy__SwitchGameMode(SuperMeatBoy, 9);
     return;
   }
   bShowingIntroEnd = 1;
   bTransitionFromWorldToChapter = 1;
-  GSuperMeatBoy__SwitchGameMode(SuperMeatBoy,9);
+  GSuperMeatBoy__SwitchGameMode(SuperMeatBoy, 9);
   SMBChapter__Reset((SMBChapter *)(SuperMeatBoy + 0x90));
-  SMBChapter__PlayChapterIntroEnd
-            ((SMBChapter *)(SuperMeatBoy + 0x90),SMBMenuChapterIntroEndFinished);
+  SMBChapter__PlayChapterIntroEnd((SMBChapter *)(SuperMeatBoy + 0x90),
+                                  SMBMenuChapterIntroEndFinished);
   return;
 }
 
@@ -991,14 +986,14 @@ void SMBMenuChapterIntroFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBMenuChapterIntroEndFinished(void*, int, int) */
 
-void SMBMenuChapterIntroEndFinished(void *arg1,int arg2,int arg3)
+void SMBMenuChapterIntroEndFinished(void *arg1, int arg2, int arg3)
 
 {
   bMenuTransitioning = 0;
   bShowingIntroEnd = 0;
   SMBChapter__DestroyChapterIntroEnd((SMBChapter *)(SuperMeatBoy + 0x90));
   if (arg3 != 0) {
-    GSuperMeatBoy__SwitchGameMode(SuperMeatBoy,9);
+    GSuperMeatBoy__SwitchGameMode(SuperMeatBoy, 9);
     return;
   }
   SMBChapter__PlayChapterMenuMusic((SMBChapter *)(SuperMeatBoy + 0x90));
@@ -1013,13 +1008,13 @@ void SMBMenuChapterIntroEndFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBMenu_IncrementReplayPauseOption(tagButtonProps const*, void*) */
 
-void SMBMenu_IncrementReplayPauseOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_IncrementReplayPauseOption(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
   long lVar2;
   int iVar3;
-  
+
   lVar2 = SMBMenu;
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
     iVar1 = *(int *)(SMBMenu + 0x81c);
@@ -1029,9 +1024,9 @@ void SMBMenu_IncrementReplayPauseOption(tagButtonProps *arg1,void *arg2)
     }
     *(int *)(SMBMenu + 0x81c) = iVar3;
     *(uint32_t *)(*(long *)(lVar2 + 0xb38 + (long)iVar1 * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x59) * 0x20);
+        *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x59) * 0x20);
     *(uint32_t *)(*(long *)(lVar2 + 0xb38 + (long)*(int *)(lVar2 + 0x81c) * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x81c) + 0x59) * 0x20);
+        *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x81c) + 0x59) * 0x20);
     return;
   }
   return;
@@ -1045,13 +1040,13 @@ void SMBMenu_IncrementReplayPauseOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_DecrementReplayPauseOption(tagButtonProps const*, void*) */
 
-void SMBMenu_DecrementReplayPauseOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_DecrementReplayPauseOption(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
   long lVar2;
   int iVar3;
-  
+
   lVar2 = SMBMenu;
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
     iVar1 = *(int *)(SMBMenu + 0x81c);
@@ -1061,9 +1056,9 @@ void SMBMenu_DecrementReplayPauseOption(tagButtonProps *arg1,void *arg2)
     }
     *(int *)(SMBMenu + 0x81c) = iVar3;
     *(uint32_t *)(*(long *)(lVar2 + 0xb38 + (long)iVar1 * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x59) * 0x20);
+        *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x59) * 0x20);
     *(uint32_t *)(*(long *)(lVar2 + 0xb38 + (long)*(int *)(lVar2 + 0x81c) * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x81c) + 0x59) * 0x20);
+        *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x81c) + 0x59) * 0x20);
     return;
   }
   return;
@@ -1077,13 +1072,13 @@ void SMBMenu_DecrementReplayPauseOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_IncrementTitleHelpOption(tagButtonProps const*, void*) */
 
-void SMBMenu_IncrementTitleHelpOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_IncrementTitleHelpOption(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
   long lVar2;
   int iVar3;
-  
+
   lVar2 = SMBMenu;
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
     iVar1 = *(int *)(SMBMenu + 0x820);
@@ -1093,9 +1088,9 @@ void SMBMenu_IncrementTitleHelpOption(tagButtonProps *arg1,void *arg2)
     }
     *(int *)(SMBMenu + 0x820) = iVar3;
     *(uint32_t *)(*(long *)(lVar2 + 0x9f8 + (long)iVar1 * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x4f) * 0x20);
+        *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x4f) * 0x20);
     *(uint32_t *)(*(long *)(lVar2 + 0x9f8 + (long)*(int *)(lVar2 + 0x820) * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x820) + 0x4f) * 0x20);
+        *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x820) + 0x4f) * 0x20);
     return;
   }
   return;
@@ -1109,13 +1104,13 @@ void SMBMenu_IncrementTitleHelpOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_DecrementTitleHelpOption(tagButtonProps const*, void*) */
 
-void SMBMenu_DecrementTitleHelpOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_DecrementTitleHelpOption(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
   long lVar2;
   int iVar3;
-  
+
   lVar2 = SMBMenu;
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
     iVar1 = *(int *)(SMBMenu + 0x820);
@@ -1125,9 +1120,9 @@ void SMBMenu_DecrementTitleHelpOption(tagButtonProps *arg1,void *arg2)
     }
     *(int *)(SMBMenu + 0x820) = iVar3;
     *(uint32_t *)(*(long *)(lVar2 + 0x9f8 + (long)iVar1 * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x4f) * 0x20);
+        *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x4f) * 0x20);
     *(uint32_t *)(*(long *)(lVar2 + 0x9f8 + (long)*(int *)(lVar2 + 0x820) * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x820) + 0x4f) * 0x20);
+        *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x820) + 0x4f) * 0x20);
     return;
   }
   return;
@@ -1141,13 +1136,13 @@ void SMBMenu_DecrementTitleHelpOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_IncrementPauseHelpOption(tagButtonProps const*, void*) */
 
-void SMBMenu_IncrementPauseHelpOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_IncrementPauseHelpOption(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
   long lVar2;
   int iVar3;
-  
+
   lVar2 = SMBMenu;
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
     iVar1 = *(int *)(SMBMenu + 0x820);
@@ -1157,9 +1152,9 @@ void SMBMenu_IncrementPauseHelpOption(tagButtonProps *arg1,void *arg2)
     }
     *(int *)(SMBMenu + 0x820) = iVar3;
     *(uint32_t *)(*(long *)(lVar2 + 0xa98 + (long)iVar1 * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x54) * 0x20);
+        *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x54) * 0x20);
     *(uint32_t *)(*(long *)(lVar2 + 0xa98 + (long)*(int *)(lVar2 + 0x820) * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x820) + 0x54) * 0x20);
+        *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x820) + 0x54) * 0x20);
     return;
   }
   return;
@@ -1173,13 +1168,13 @@ void SMBMenu_IncrementPauseHelpOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_DecrementPauseHelpOption(tagButtonProps const*, void*) */
 
-void SMBMenu_DecrementPauseHelpOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_DecrementPauseHelpOption(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
   long lVar2;
   int iVar3;
-  
+
   lVar2 = SMBMenu;
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
     iVar1 = *(int *)(SMBMenu + 0x820);
@@ -1189,9 +1184,9 @@ void SMBMenu_DecrementPauseHelpOption(tagButtonProps *arg1,void *arg2)
     }
     *(int *)(SMBMenu + 0x820) = iVar3;
     *(uint32_t *)(*(long *)(lVar2 + 0xa98 + (long)iVar1 * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x54) * 0x20);
+        *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x54) * 0x20);
     *(uint32_t *)(*(long *)(lVar2 + 0xa98 + (long)*(int *)(lVar2 + 0x820) * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x820) + 0x54) * 0x20);
+        *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x820) + 0x54) * 0x20);
     return;
   }
   return;
@@ -1205,7 +1200,7 @@ void SMBMenu_DecrementPauseHelpOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuUnlocksFinished(void*, int, int) */
 
-void SMBMenuUnlocksFinished(void *arg1,int arg2,int arg3)
+void SMBMenuUnlocksFinished(void *arg1, int arg2, int arg3)
 
 {
   bRenderingUnlocks = 0;
@@ -1229,7 +1224,7 @@ void SMBMenuToTitleFromGame(void *arg1)
 
 {
   GSuperMeatBoy__HidePauseMenu((int)SuperMeatBoy);
-  ShowTitleMenuPress((tagButtonProps *)0x0,(void *)0x0);
+  ShowTitleMenuPress((tagButtonProps *)0x0, (void *)0x0);
   UserAlertCloseCurrent((void *)0x0);
   return;
 }
@@ -1246,7 +1241,7 @@ void SMBMenuToMapFromGame(void *arg1)
 
 {
   GSuperMeatBoy__HidePauseMenu((int)SuperMeatBoy);
-  ShowMenuPress((tagButtonProps *)0x0,(void *)0x0);
+  ShowMenuPress((tagButtonProps *)0x0, (void *)0x0);
   UserAlertCloseCurrent((void *)0x0);
   return;
 }
@@ -1259,12 +1254,12 @@ void SMBMenuToMapFromGame(void *arg1)
  */
 /* SMBWorldToTitleTransFinished(void*, int, int) */
 
-void SMBWorldToTitleTransFinished(void *arg1,int arg2,int arg3)
+void SMBWorldToTitleTransFinished(void *arg1, int arg2, int arg3)
 
 {
   uint64_t *puVar1;
   int iVar2;
-  
+
   bMenuTransitioning = 0;
   puVar1 = (uint64_t *)(SMBMenu + 0x7f8);
   *(uint32_t *)(SMBMenu + 0xd04) = 0x10;
@@ -1273,7 +1268,7 @@ void SMBWorldToTitleTransFinished(void *arg1,int arg2,int arg3)
   if (iVar2 != 0) {
     return;
   }
-  TAudioCue__Play(pTitleMenuMusic,GLOBALMUSICVOLUME,0,(TAudioInstance *)titleMusicInstance);
+  TAudioCue__Play(pTitleMenuMusic, GLOBALMUSICVOLUME, 0, (TAudioInstance *)titleMusicInstance);
   return;
 }
 
@@ -1285,23 +1280,23 @@ void SMBWorldToTitleTransFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBGameToTitleTransFinished(void*, int, int) */
 
-void SMBGameToTitleTransFinished(void *arg1,int arg2,int arg3)
+void SMBGameToTitleTransFinished(void *arg1, int arg2, int arg3)
 
 {
   long lVar1;
   int iVar2;
   uint32_t in_register_00000014;
-  
+
   lVar1 = SMBMenu;
   bMenuTransitioning = 0;
-  GSuperMeatBoy__SwitchGameMode(SuperMeatBoy,0xc,CONCAT44(in_register_00000014,arg3));
+  GSuperMeatBoy__SwitchGameMode(SuperMeatBoy, 0xc, CONCAT44(in_register_00000014, arg3));
   *(uint32_t *)(lVar1 + 0xd04) = 0x10;
   FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(lVar1 + 0x7f8));
   iVar2 = TAudioInstance__IsPlaying((TAudioInstance *)titleMusicInstance);
   if (iVar2 != 0) {
     return;
   }
-  TAudioCue__Play(pTitleMenuMusic,GLOBALMUSICVOLUME,0,(TAudioInstance *)titleMusicInstance);
+  TAudioCue__Play(pTitleMenuMusic, GLOBALMUSICVOLUME, 0, (TAudioInstance *)titleMusicInstance);
   return;
 }
 
@@ -1313,7 +1308,7 @@ void SMBGameToTitleTransFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBMenuInWorldTrans(void*, int, int) */
 
-void SMBMenuInWorldTrans(void *arg1,int arg2,int arg3)
+void SMBMenuInWorldTrans(void *arg1, int arg2, int arg3)
 
 {
   uint32_t local_58;
@@ -1327,7 +1322,7 @@ void SMBMenuInWorldTrans(void *arg1,int arg2,int arg3)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   local_38 = 0;
   local_30 = 0;
   local_28 = 0;
@@ -1339,8 +1334,8 @@ void SMBMenuInWorldTrans(void *arg1,int arg2,int arg3)
   local_50 = 1;
   local_40 = SMBMenuEndMenuTransition;
   local_18 = 0;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_58);
-  GSuperMeatBoy__SwitchGameMode(SuperMeatBoy,10);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_58);
+  GSuperMeatBoy__SwitchGameMode(SuperMeatBoy, 10);
   return;
 }
 
@@ -1352,18 +1347,18 @@ void SMBMenuInWorldTrans(void *arg1,int arg2,int arg3)
  */
 /* SMBMenuShowLeaderBoard(tagButtonProps const*, void*) */
 
-void SMBMenuShowLeaderBoard(tagButtonProps *arg1,void *arg2)
+void SMBMenuShowLeaderBoard(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
-  
+
   if ((bMenuTransitioning == 0) && (*(int *)arg1 == 1)) {
     iVar1 = *(int *)(SMBMenu + 0xd04);
     if ((iVar1 != 8) && ((iVar1 != 7 && (bRenderingUnlocks == 0)))) {
       if (((*(int *)(SMBMenu + 0xd00) - 0x62U < 2) ||
-          ((*(long *)(SMBMenu + 0xce0) == 0 ||
-           ((*(byte *)(*(long *)(SMBMenu + 0xce0) + 2) & 5) != 0)))) &&
-         ((iVar1 != 0xf && (iVar1 != 0x11)))) {
+           ((*(long *)(SMBMenu + 0xce0) == 0 ||
+             ((*(byte *)(*(long *)(SMBMenu + 0xce0) + 2) & 5) != 0)))) &&
+          ((iVar1 != 0xf && (iVar1 != 0x11)))) {
         return;
       }
       GSMBMenu__ShowLeaderboardMenu__004d6eb0(SMBMenu);
@@ -1381,17 +1376,17 @@ void SMBMenuShowLeaderBoard(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_DecrementTitleOption(tagButtonProps const*, void*) */
 
-void SMBMenu_DecrementTitleOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_DecrementTitleOption(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
   long lVar2;
   int iVar3;
   int iVar4;
-  
+
   lVar2 = SMBMenu;
   if (((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) &&
-     (*(int *)(SMBMenu + 0xd04) == 0xf)) {
+      (*(int *)(SMBMenu + 0xd04) == 0xf)) {
     iVar1 = *(int *)(SMBMenu + 0x818);
     iVar4 = iVar1 + -1;
     *(int *)(SMBMenu + 0x818) = iVar4;
@@ -1407,9 +1402,9 @@ void SMBMenu_DecrementTitleOption(tagButtonProps *arg1,void *arg2)
       *(uint32_t *)(lVar2 + 0x818) = 6;
     }
     *(uint32_t *)(*(long *)(lVar2 + 0x838 + (long)iVar1 * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x41) * 0x20);
+        *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x41) * 0x20);
     *(uint32_t *)(*(long *)(lVar2 + 0x838 + (long)*(int *)(lVar2 + 0x818) * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x818) + 0x41) * 0x20);
+        *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x818) + 0x41) * 0x20);
   }
   return;
 }
@@ -1422,17 +1417,17 @@ void SMBMenu_DecrementTitleOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_IncrementTitleOption(tagButtonProps const*, void*) */
 
-void SMBMenu_IncrementTitleOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_IncrementTitleOption(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
   long lVar2;
   int iVar3;
   int iVar4;
-  
+
   lVar2 = SMBMenu;
   if (((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) &&
-     (*(int *)(SMBMenu + 0xd04) == 0xf)) {
+      (*(int *)(SMBMenu + 0xd04) == 0xf)) {
     iVar1 = *(int *)(SMBMenu + 0x818);
     iVar4 = iVar1 + 1;
     *(int *)(SMBMenu + 0x818) = iVar4;
@@ -1448,9 +1443,9 @@ void SMBMenu_IncrementTitleOption(tagButtonProps *arg1,void *arg2)
       *(uint32_t *)(lVar2 + 0x818) = 0;
     }
     *(uint32_t *)(*(long *)(lVar2 + 0x838 + (long)iVar1 * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x41) * 0x20);
+        *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x41) * 0x20);
     *(uint32_t *)(*(long *)(lVar2 + 0x838 + (long)*(int *)(lVar2 + 0x818) * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x818) + 0x41) * 0x20);
+        *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x818) + 0x41) * 0x20);
   }
   return;
 }
@@ -1463,14 +1458,14 @@ void SMBMenu_IncrementTitleOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_DecrementPauseOption(tagButtonProps const*, void*) */
 
-void SMBMenu_DecrementPauseOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_DecrementPauseOption(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
   long lVar2;
   int iVar3;
   int iVar4;
-  
+
   lVar2 = SMBMenu;
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
     iVar1 = *(int *)(SMBMenu + 0x81c);
@@ -1488,9 +1483,9 @@ void SMBMenu_DecrementPauseOption(tagButtonProps *arg1,void *arg2)
       *(uint32_t *)(lVar2 + 0x81c) = 6;
     }
     *(uint32_t *)(*(long *)(lVar2 + 0x918 + (long)iVar1 * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x48) * 0x20);
+        *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x48) * 0x20);
     *(uint32_t *)(*(long *)(lVar2 + 0x918 + (long)*(int *)(lVar2 + 0x81c) * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x81c) + 0x48) * 0x20);
+        *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x81c) + 0x48) * 0x20);
     return;
   }
   return;
@@ -1504,14 +1499,14 @@ void SMBMenu_DecrementPauseOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_IncrementPauseOption(tagButtonProps const*, void*) */
 
-void SMBMenu_IncrementPauseOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_IncrementPauseOption(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
   long lVar2;
   int iVar3;
   int iVar4;
-  
+
   lVar2 = SMBMenu;
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
     iVar1 = *(int *)(SMBMenu + 0x81c);
@@ -1529,9 +1524,9 @@ void SMBMenu_IncrementPauseOption(tagButtonProps *arg1,void *arg2)
       *(uint32_t *)(lVar2 + 0x81c) = 0;
     }
     *(uint32_t *)(*(long *)(lVar2 + 0x918 + (long)iVar1 * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x48) * 0x20);
+        *(uint32_t *)(lVar2 + 8 + ((long)iVar1 + 0x48) * 0x20);
     *(uint32_t *)(*(long *)(lVar2 + 0x918 + (long)*(int *)(lVar2 + 0x81c) * 0x20) + 0x20) =
-         *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x81c) + 0x48) * 0x20);
+        *(uint32_t *)(lVar2 + 0xc + ((long)*(int *)(lVar2 + 0x81c) + 0x48) * 0x20);
     return;
   }
   return;
@@ -1545,7 +1540,7 @@ void SMBMenu_IncrementPauseOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuInMenuFromGame(void*, int, int) */
 
-void SMBMenuInMenuFromGame(void *arg1,int arg2,int arg3)
+void SMBMenuInMenuFromGame(void *arg1, int arg2, int arg3)
 
 {
   uint32_t local_58;
@@ -1559,7 +1554,7 @@ void SMBMenuInMenuFromGame(void *arg1,int arg2,int arg3)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   local_38 = 0;
   local_30 = 0;
   local_28 = 0;
@@ -1571,12 +1566,12 @@ void SMBMenuInMenuFromGame(void *arg1,int arg2,int arg3)
   local_50 = 1;
   local_40 = SMBMenuEndMenuTransition;
   local_18 = 0;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_58);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_58);
   EnableLoadingRenderThread(RenderLoadingScreenFunc);
   GSuperMeatBoy__SwitchGameMode(SuperMeatBoy);
   Loader__WaitAll();
   DisableLoadingRenderThread();
-  GSuperMeatBoy__Freeze(SuperMeatBoy,0);
+  GSuperMeatBoy__Freeze(SuperMeatBoy, 0);
   return;
 }
 
@@ -1588,7 +1583,7 @@ void SMBMenuInMenuFromGame(void *arg1,int arg2,int arg3)
  */
 /* SMBChapterEndIdleFinished(void*, int, int) */
 
-void SMBChapterEndIdleFinished(void *arg1,int arg2,int arg3)
+void SMBChapterEndIdleFinished(void *arg1, int arg2, int arg3)
 
 {
   long lVar1;
@@ -1603,15 +1598,15 @@ void SMBChapterEndIdleFinished(void *arg1,int arg2,int arg3)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   lVar1 = SMBMenu;
   if (arg3 != 0) {
     TAudioInstance__Stop((TAudioInstance *)titleMusicInstance);
-    GSuperMeatBoy__SwitchGameMode(SuperMeatBoy,9);
+    GSuperMeatBoy__SwitchGameMode(SuperMeatBoy, 9);
     return;
   }
   TAudioInstance__Stop((TAudioInstance *)titleMusicInstance);
-  GSuperMeatBoy__SwitchGameMode(SuperMeatBoy,9);
+  GSuperMeatBoy__SwitchGameMode(SuperMeatBoy, 9);
   local_48 = *(uint64_t *)(lVar1 + 0x1178);
   local_38 = 0;
   local_30 = 0;
@@ -1623,8 +1618,8 @@ void SMBChapterEndIdleFinished(void *arg1,int arg2,int arg3)
   local_50 = 1;
   local_40 = SMBMenuTransitionFinished;
   local_18 = 0;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_58);
-  GSuperMeatBoy__Freeze(SuperMeatBoy,0);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_58);
+  GSuperMeatBoy__Freeze(SuperMeatBoy, 0);
   return;
 }
 
@@ -1644,7 +1639,7 @@ void FindCachedInternetsChapter(char *arg1)
   int iVar2;
   uint uVar3;
   uint uVar4;
-  
+
   uVar1 = pInternetsChapters._56_8_;
   pCurrInternetsChapter = (char *)0x0;
   uVar4 = (uint)(ushort)pInternetsChapters._40_2_;
@@ -1652,7 +1647,7 @@ void FindCachedInternetsChapter(char *arg1)
     uVar3 = 0;
     do {
       __s2 = *(char **)(uVar1 + (ulong)(uVar3 & 0xffff) * 8);
-      iVar2 = strcmp(arg1,__s2);
+      iVar2 = strcmp(arg1, __s2);
       if (iVar2 == 0) {
         pCurrInternetsChapter = __s2;
         return;
@@ -1686,7 +1681,7 @@ bool IsLeaderboardLevel(int arg1)
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 /* SetupMenuIconTween(FPUVector const&, FPUVector const&, Tweening__Basic_FPUVector&) */
 
-void SetupMenuIconTween(FPUVector *arg1,FPUVector *arg2,Basic *arg3)
+void SetupMenuIconTween(FPUVector *arg1, FPUVector *arg2, Basic *arg3)
 
 {
   float fVar1;
@@ -1696,7 +1691,7 @@ void SetupMenuIconTween(FPUVector *arg1,FPUVector *arg2,Basic *arg3)
   float fVar5;
   float fVar6;
   float fVar7;
-  
+
   fVar4 = *(float *)(arg2 + 0xc) + _DAT_0081bf2c /* R:0.0f */;
   fVar5 = *(float *)(arg2 + 8) + _DAT_0081bf28 /* R:2.2420775429197073e-44f */;
   fVar6 = *(float *)(arg2 + 4) + _DAT_0081bf24 /* R:0.0f */;
@@ -1712,9 +1707,9 @@ void SetupMenuIconTween(FPUVector *arg1,FPUVector *arg2,Basic *arg3)
   *(float *)(arg3 + 0x20) = fVar7;
   *(float *)(arg3 + 0x10) = fVar1;
   *(float *)(arg3 + 0x2c) = fVar4;
-                    /* WARNING: Could not recover jumptable at 0x004c847d. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (**(code **)(*(long *)arg3 + 0x10))(arg3,1);
+  /* WARNING: Could not recover jumptable at 0x004c847d. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (**(code **)(*(long *)arg3 + 0x10))(arg3, 1);
   return;
 }
 
@@ -1733,14 +1728,14 @@ void EnterTitleMenu(void)
   uint uVar1;
   int iVar2;
   long *plVar3;
-  uint32_t local_18 [2];
+  uint32_t local_18[2];
   uint32_t *local_10;
-  
+
   plVar3 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-  (**(code **)(*plVar3 + 0x30))(plVar3,0);
+  (**(code **)(*plVar3 + 0x30))(plVar3, 0);
   GSMBChapterData__ResetData(SMBChapterData);
-  GSMBChapterData__LoadData(SMBChapterData,1);
-  GSuperMeatBoy__SwitchGameMode(SuperMeatBoy,0xc);
+  GSMBChapterData__LoadData(SMBChapterData, 1);
+  GSuperMeatBoy__SwitchGameMode(SuperMeatBoy, 0xc);
   bEnterTitleMenu = 0;
   local_18[0] = 2;
   *(uint32_t *)(SMBMenu + 0xd04) = 0xc;
@@ -1750,18 +1745,18 @@ void EnterTitleMenu(void)
   GLOBALMUSICVOLUME = GLOBALDEFAULTMUSICVOLUME;
   GLOBALSFXVOLUME = GLOBALDEFAULTSFXVOLUME;
   plVar3 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-  (**(code **)(*plVar3 + 0xa0))(plVar3,local_18);
+  (**(code **)(*plVar3 + 0xa0))(plVar3, local_18);
   uVar1 = local_10[1];
   if (((uVar1 != 0xffffffff) && (GLOBALMUSICVOLUME = 100, (int)uVar1 < 100)) &&
-     (GLOBALMUSICVOLUME = 0, -1 < (int)uVar1)) {
+      (GLOBALMUSICVOLUME = 0, -1 < (int)uVar1)) {
     GLOBALMUSICVOLUME = uVar1;
   }
   iVar2 = local_10[3];
-  if (((iVar2 != -1) && (GLOBALSFXVOLUME = 100, iVar2 < 100)) && (GLOBALSFXVOLUME = 0, -1 < iVar2))
-  {
+  if (((iVar2 != -1) && (GLOBALSFXVOLUME = 100, iVar2 < 100)) &&
+      (GLOBALSFXVOLUME = 0, -1 < iVar2)) {
     GLOBALSFXVOLUME = iVar2;
   }
-  TAudio__SetMusicVolume(Audio,GLOBALMUSICVOLUME);
+  TAudio__SetMusicVolume(Audio, GLOBALMUSICVOLUME);
   if (local_10 != (uint32_t *)0x0) {
     operator_delete__(local_10);
   }
@@ -1776,22 +1771,22 @@ void EnterTitleMenu(void)
  */
 /* SMBMenu_StartMenuStart(tagButtonProps const*, void*) */
 
-void SMBMenu_StartMenuStart(tagButtonProps *arg1,void *arg2)
+void SMBMenu_StartMenuStart(tagButtonProps *arg1, void *arg2)
 
 {
   long lVar1;
   long *plVar2;
   Joystick *pJVar3;
-  
+
   if (*(int *)arg1 != 1) {
     return;
   }
   lVar1 = TPlayer__GetProfile((TPlayer *)Players__Player);
   if (*(int *)(lVar1 + 8) != 1) {
     plVar2 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-                    /* WARNING: Could not recover jumptable at 0x004c8601. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-    (**(code **)(*plVar2 + 0x10))(plVar2,0,0,SMBProfileInitialized,*(code **)(*plVar2 + 0x10));
+    /* WARNING: Could not recover jumptable at 0x004c8601. Too many branches */
+    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*plVar2 + 0x10))(plVar2, 0, 0, SMBProfileInitialized, *(code **)(*plVar2 + 0x10));
     return;
   }
   pJVar3 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
@@ -1814,7 +1809,7 @@ void SMBMenu_StartMenuStart(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuUnlockAll(tagButtonProps const*, void*) */
 
-void SMBMenuUnlockAll(tagButtonProps *arg1,void *arg2)
+void SMBMenuUnlockAll(tagButtonProps *arg1, void *arg2)
 
 {
   bAutoUnlock = (uint)(*(int *)arg1 == 2);
@@ -1829,29 +1824,27 @@ void SMBMenuUnlockAll(tagButtonProps *arg1,void *arg2)
  */
 /* DetermineMenuButtons(FlashAnimationLibrary*, FlashLibraryInstance*, char const*) */
 
-void DetermineMenuButtons
-               (FlashAnimationLibrary *arg1,FlashLibraryInstance *arg2,char *arg3)
+void DetermineMenuButtons(FlashAnimationLibrary *arg1, FlashLibraryInstance *arg2, char *arg3)
 
 {
   int *piVar1;
   int iVar2;
   FlashMovieClip *self;
   FlashLibraryInstance *this_00;
-  
+
   if (((arg2 != (FlashLibraryInstance *)0x0) && (*(int *)(arg2 + 0x20) != -1)) &&
-     (arg1 != (FlashAnimationLibrary *)0x0)) {
-    self = (FlashMovieClip *)
-           FlashAnimationLibrary__GetLibraryEntry(arg1,*(int *)(arg2 + 0x20));
+      (arg1 != (FlashAnimationLibrary *)0x0)) {
+    self = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(arg1, *(int *)(arg2 + 0x20));
     if (self != (FlashMovieClip *)0x0) {
-      iVar2 = FlashAnimationLibrary__GetClipIndex(arg1,arg3);
-      this_00 = (FlashLibraryInstance *)FlashMovieClip__FindInstance(self,iVar2,0,(int *)0x0,0);
+      iVar2 = FlashAnimationLibrary__GetClipIndex(arg1, arg3);
+      this_00 = (FlashLibraryInstance *)FlashMovieClip__FindInstance(self, iVar2, 0, (int *)0x0, 0);
       if (this_00 != (FlashLibraryInstance *)0x0) {
         piVar1 = (int *)TPlayer__GetJoystick((TPlayer *)Players__Player);
         iVar2 = 2;
         if (*piVar1 != 1) {
           iVar2 = 1;
         }
-        FlashLibraryInstance__GotoAndStop(this_00,iVar2);
+        FlashLibraryInstance__GotoAndStop(this_00, iVar2);
         return;
       }
     }
@@ -1867,14 +1860,14 @@ void DetermineMenuButtons
  */
 /* SwitchOutMenuButtons(FlashAnimationLibrary*, FlashLibraryInstance*) */
 
-void SwitchOutMenuButtons(FlashAnimationLibrary *arg1,FlashLibraryInstance *arg2)
+void SwitchOutMenuButtons(FlashAnimationLibrary *arg1, FlashLibraryInstance *arg2)
 
 {
   int *piVar1;
   int iVar2;
   FlashMovieClip *pFVar3;
   FlashLibraryInstance *pFVar4;
-  
+
   if (arg2 == (FlashLibraryInstance *)0x0) {
     return;
   }
@@ -1884,95 +1877,94 @@ void SwitchOutMenuButtons(FlashAnimationLibrary *arg1,FlashLibraryInstance *arg2
   if (arg1 == (FlashAnimationLibrary *)0x0) {
     return;
   }
-  pFVar3 = (FlashMovieClip *)
-           FlashAnimationLibrary__GetLibraryEntry(arg1,*(int *)(arg2 + 0x20));
+  pFVar3 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(arg1, *(int *)(arg2 + 0x20));
   if (pFVar3 == (FlashMovieClip *)0x0) {
-LAB_004c879b:
+  LAB_004c879b:
     iVar2 = *(int *)(arg2 + 0x20);
-  }
-  else {
-    iVar2 = FlashAnimationLibrary__GetClipIndex(arg1,"buttony");
-    pFVar4 = (FlashLibraryInstance *)FlashMovieClip__FindInstance(pFVar3,iVar2,0,(int *)0x0,0);
-    if (pFVar4 == (FlashLibraryInstance *)0x0) goto LAB_004c879b;
+  } else {
+    iVar2 = FlashAnimationLibrary__GetClipIndex(arg1, "buttony");
+    pFVar4 = (FlashLibraryInstance *)FlashMovieClip__FindInstance(pFVar3, iVar2, 0, (int *)0x0, 0);
+    if (pFVar4 == (FlashLibraryInstance *)0x0)
+      goto LAB_004c879b;
     piVar1 = (int *)TPlayer__GetJoystick((TPlayer *)Players__Player);
     if (*piVar1 != 1) {
-      FlashLibraryInstance__GotoAndStop(pFVar4,1);
+      FlashLibraryInstance__GotoAndStop(pFVar4, 1);
       goto LAB_004c879b;
     }
-    FlashLibraryInstance__GotoAndStop(pFVar4,2);
+    FlashLibraryInstance__GotoAndStop(pFVar4, 2);
     iVar2 = *(int *)(arg2 + 0x20);
   }
   if (iVar2 == -1) {
     return;
   }
-  pFVar3 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(arg1,iVar2);
+  pFVar3 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(arg1, iVar2);
   if (pFVar3 == (FlashMovieClip *)0x0) {
-LAB_004c87fd:
+  LAB_004c87fd:
     iVar2 = *(int *)(arg2 + 0x20);
-  }
-  else {
-    iVar2 = FlashAnimationLibrary__GetClipIndex(arg1,"buttona");
-    pFVar4 = (FlashLibraryInstance *)FlashMovieClip__FindInstance(pFVar3,iVar2,0,(int *)0x0,0);
-    if (pFVar4 == (FlashLibraryInstance *)0x0) goto LAB_004c87fd;
+  } else {
+    iVar2 = FlashAnimationLibrary__GetClipIndex(arg1, "buttona");
+    pFVar4 = (FlashLibraryInstance *)FlashMovieClip__FindInstance(pFVar3, iVar2, 0, (int *)0x0, 0);
+    if (pFVar4 == (FlashLibraryInstance *)0x0)
+      goto LAB_004c87fd;
     piVar1 = (int *)TPlayer__GetJoystick((TPlayer *)Players__Player);
     if (*piVar1 != 1) {
-      FlashLibraryInstance__GotoAndStop(pFVar4,1);
+      FlashLibraryInstance__GotoAndStop(pFVar4, 1);
       goto LAB_004c87fd;
     }
-    FlashLibraryInstance__GotoAndStop(pFVar4,2);
+    FlashLibraryInstance__GotoAndStop(pFVar4, 2);
     iVar2 = *(int *)(arg2 + 0x20);
   }
   if (iVar2 == -1) {
     return;
   }
-  pFVar3 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(arg1,iVar2);
+  pFVar3 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(arg1, iVar2);
   if (pFVar3 == (FlashMovieClip *)0x0) {
-LAB_004c885f:
+  LAB_004c885f:
     iVar2 = *(int *)(arg2 + 0x20);
-  }
-  else {
-    iVar2 = FlashAnimationLibrary__GetClipIndex(arg1,"buttonax");
-    pFVar4 = (FlashLibraryInstance *)FlashMovieClip__FindInstance(pFVar3,iVar2,0,(int *)0x0,0);
-    if (pFVar4 == (FlashLibraryInstance *)0x0) goto LAB_004c885f;
+  } else {
+    iVar2 = FlashAnimationLibrary__GetClipIndex(arg1, "buttonax");
+    pFVar4 = (FlashLibraryInstance *)FlashMovieClip__FindInstance(pFVar3, iVar2, 0, (int *)0x0, 0);
+    if (pFVar4 == (FlashLibraryInstance *)0x0)
+      goto LAB_004c885f;
     piVar1 = (int *)TPlayer__GetJoystick((TPlayer *)Players__Player);
     if (*piVar1 != 1) {
-      FlashLibraryInstance__GotoAndStop(pFVar4,1);
+      FlashLibraryInstance__GotoAndStop(pFVar4, 1);
       goto LAB_004c885f;
     }
-    FlashLibraryInstance__GotoAndStop(pFVar4,2);
+    FlashLibraryInstance__GotoAndStop(pFVar4, 2);
     iVar2 = *(int *)(arg2 + 0x20);
   }
   if (iVar2 == -1) {
     return;
   }
-  pFVar3 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(arg1,iVar2);
+  pFVar3 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(arg1, iVar2);
   if (pFVar3 != (FlashMovieClip *)0x0) {
-    iVar2 = FlashAnimationLibrary__GetClipIndex(arg1,"buttonb");
-    pFVar4 = (FlashLibraryInstance *)FlashMovieClip__FindInstance(pFVar3,iVar2,0,(int *)0x0,0);
+    iVar2 = FlashAnimationLibrary__GetClipIndex(arg1, "buttonb");
+    pFVar4 = (FlashLibraryInstance *)FlashMovieClip__FindInstance(pFVar3, iVar2, 0, (int *)0x0, 0);
     if (pFVar4 != (FlashLibraryInstance *)0x0) {
       piVar1 = (int *)TPlayer__GetJoystick((TPlayer *)Players__Player);
       if (*piVar1 == 1) {
-        FlashLibraryInstance__GotoAndStop(pFVar4,2);
+        FlashLibraryInstance__GotoAndStop(pFVar4, 2);
         iVar2 = *(int *)(arg2 + 0x20);
         goto LAB_004c88c4;
       }
-      FlashLibraryInstance__GotoAndStop(pFVar4,1);
+      FlashLibraryInstance__GotoAndStop(pFVar4, 1);
     }
   }
   iVar2 = *(int *)(arg2 + 0x20);
 LAB_004c88c4:
   if ((iVar2 != -1) &&
-     (pFVar3 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(arg1,iVar2),
-     pFVar3 != (FlashMovieClip *)0x0)) {
-    iVar2 = FlashAnimationLibrary__GetClipIndex(arg1,"dwbutton");
-    pFVar4 = (FlashLibraryInstance *)FlashMovieClip__FindInstance(pFVar3,iVar2,0,(int *)0x0,0);
+      (pFVar3 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(arg1, iVar2),
+       pFVar3 != (FlashMovieClip *)0x0)) {
+    iVar2 = FlashAnimationLibrary__GetClipIndex(arg1, "dwbutton");
+    pFVar4 = (FlashLibraryInstance *)FlashMovieClip__FindInstance(pFVar3, iVar2, 0, (int *)0x0, 0);
     if (pFVar4 != (FlashLibraryInstance *)0x0) {
       piVar1 = (int *)TPlayer__GetJoystick((TPlayer *)Players__Player);
       iVar2 = 2;
       if (*piVar1 != 1) {
         iVar2 = 1;
       }
-      FlashLibraryInstance__GotoAndStop(pFVar4,iVar2);
+      FlashLibraryInstance__GotoAndStop(pFVar4, iVar2);
       return;
     }
   }
@@ -1988,8 +1980,8 @@ LAB_004c88c4:
 /* SetMenuProperties(int, FlashAnimationLibrary*, FlashLibraryEntry*, MenuSelection*, MenuEntryProps
    const*) */
 
-void SetMenuProperties(int arg1,FlashAnimationLibrary *arg2,FlashLibraryEntry *arg3,
-                      MenuSelection *arg4,MenuEntryProps *arg5)
+void SetMenuProperties(int arg1, FlashAnimationLibrary *arg2, FlashLibraryEntry *arg3,
+                       MenuSelection *arg4, MenuEntryProps *arg5)
 
 {
   MenuSelection *pMVar1;
@@ -1997,18 +1989,18 @@ void SetMenuProperties(int arg1,FlashAnimationLibrary *arg2,FlashLibraryEntry *a
   int iVar3;
   long lVar4;
   uint64_t uVar5;
-  
+
   pMVar1 = arg4 + (long)arg1 * 0x20;
   pMVar2 = arg5 + (long)arg1 * 0x18;
-  iVar3 = FlashAnimationLibrary__GetClipIndex(arg2,*(char **)(pMVar2 + 8));
+  iVar3 = FlashAnimationLibrary__GetClipIndex(arg2, *(char **)(pMVar2 + 8));
   *(int *)pMVar1 = iVar3;
-  iVar3 = FlashAnimationLibrary__GetClipIndex(arg2,*(char **)pMVar2);
+  iVar3 = FlashAnimationLibrary__GetClipIndex(arg2, *(char **)pMVar2);
   *(int *)(pMVar1 + 4) = iVar3;
-  lVar4 = FlashMovieClip__FindInstance((FlashMovieClip *)arg3,*(int *)pMVar1,0,(int *)0x0,0);
+  lVar4 = FlashMovieClip__FindInstance((FlashMovieClip *)arg3, *(int *)pMVar1, 0, (int *)0x0, 0);
   iVar3 = *(int *)(lVar4 + 0x34);
   *(long *)(pMVar1 + 0x10) = lVar4;
   *(int *)(pMVar1 + 8) = iVar3;
-  uVar5 = FlashAnimationLibrary__GetTextField(arg2,*(char **)(pMVar2 + 0x10));
+  uVar5 = FlashAnimationLibrary__GetTextField(arg2, *(char **)(pMVar2 + 0x10));
   *(uint64_t *)(pMVar1 + 0x18) = uVar5;
   return;
 }
@@ -2021,14 +2013,14 @@ void SetMenuProperties(int arg1,FlashAnimationLibrary *arg2,FlashLibraryEntry *a
  */
 /* SMBMenuMoveRightChar(tagButtonProps const*, void*) */
 
-ulong SMBMenuMoveRightChar(tagButtonProps *arg1,void *arg2)
+ulong SMBMenuMoveRightChar(tagButtonProps *arg1, void *arg2)
 
 {
   uint uVar1;
   GSMBMenu *self;
   int iVar2;
   ulong uVar3;
-  
+
   self = SMBMenu;
   uVar1 = *(uint *)arg1;
   uVar3 = (ulong)uVar1;
@@ -2048,8 +2040,7 @@ ulong SMBMenuMoveRightChar(tagButtonProps *arg1,void *arg2)
   iVar2 = *(int *)(SMBMenu + 0xd08) + 1;
   if ((int)(*(ushort *)(SMBMenu + 0xbe8) - 1) < iVar2) {
     iVar2 = 0;
-  }
-  else if (iVar2 < 0) {
+  } else if (iVar2 < 0) {
     iVar2 = *(ushort *)(SMBMenu + 0xbe8) - 1;
   }
   *(int *)(SMBMenu + 0xd08) = iVar2;
@@ -2068,14 +2059,14 @@ ulong SMBMenuMoveRightChar(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuMoveLeftChar(tagButtonProps const*, void*) */
 
-ulong SMBMenuMoveLeftChar(tagButtonProps *arg1,void *arg2)
+ulong SMBMenuMoveLeftChar(tagButtonProps *arg1, void *arg2)
 
 {
   uint uVar1;
   GSMBMenu *self;
   int iVar2;
   ulong uVar3;
-  
+
   self = SMBMenu;
   uVar1 = *(uint *)arg1;
   uVar3 = (ulong)uVar1;
@@ -2095,8 +2086,7 @@ ulong SMBMenuMoveLeftChar(tagButtonProps *arg1,void *arg2)
   iVar2 = *(int *)(SMBMenu + 0xd08) + -1;
   if ((int)(*(ushort *)(SMBMenu + 0xbe8) - 1) < iVar2) {
     iVar2 = 0;
-  }
-  else if (iVar2 < 0) {
+  } else if (iVar2 < 0) {
     iVar2 = *(ushort *)(SMBMenu + 0xbe8) - 1;
   }
   *(int *)(SMBMenu + 0xd08) = iVar2;
@@ -2115,7 +2105,7 @@ ulong SMBMenuMoveLeftChar(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuInChapterTrans(void*, int, int) */
 
-void SMBMenuInChapterTrans(void *arg1,int arg2,int arg3)
+void SMBMenuInChapterTrans(void *arg1, int arg2, int arg3)
 
 {
   GSMBMenu__TransitionInChapter(SMBMenu);
@@ -2131,7 +2121,7 @@ void SMBMenuInChapterTrans(void *arg1,int arg2,int arg3)
 /* WARNING: Removing unreachable block (ram,0x004cd2a4) */
 /* GSMBMenu__LoadWorldMenu(tagChapterName, int) */
 
-void GSMBMenu__LoadWorldMenu(GSMBMenu *arg1,int arg2)
+void GSMBMenu__LoadWorldMenu(GSMBMenu *arg1, int arg2)
 
 {
   int *piVar1;
@@ -2150,28 +2140,29 @@ void GSMBMenu__LoadWorldMenu(GSMBMenu *arg1,int arg2)
   FlashAnimationLibrary *pFVar13;
   float fVar14;
   float fVar15;
-  uint8_t *local_38 [3];
-  
+  uint8_t *local_38[3];
+
   local_38[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
   if (*(int *)(arg1 + 0x41c) != 0) {
     if ((*(int *)(arg1 + 0x41c) != arg2) && (hChapterLoadThreadHandle == 0)) {
       UnloadWorldMenu(arg1);
     }
-    if (arg2 != 7) goto LAB_004ccc82;
-    uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0
-                      (*(FlashAnimationLibrary **)(arg1 + 0x4c8),"idle2");
+    if (arg2 != 7)
+      goto LAB_004ccc82;
+    uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(arg1 + 0x4c8),
+                                                          "idle2");
     *(uint64_t *)(arg1 + 0x4d0) = uVar8;
-    uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0
-                      (*(FlashAnimationLibrary **)(arg1 + 0x4c8),"levelselect2");
+    uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(arg1 + 0x4c8),
+                                                          "levelselect2");
     *(uint64_t *)(arg1 + 0x4d8) = uVar8;
     arg2 = 7;
-switchD_004ccf73_caseD_7:
-    pcVar12 = (char *)FormatResourcePath("/Menus/bworldmenu.am",local_38);
+  switchD_004ccf73_caseD_7:
+    pcVar12 = (char *)FormatResourcePath("/Menus/bworldmenu.am", local_38);
     pFVar13 = operator_new(0xb0);
-                    /* try { // try from 004ccfd3 to 004ccfd7 has its CatchHandler @ 004cd2c6 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13,pcVar12);
+    /* try { // try from 004ccfd3 to 004ccfd7 has its CatchHandler @ 004cd2c6 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13, pcVar12);
     *(FlashAnimationLibrary **)(arg1 + 0x428) = pFVar13;
-                    /* try { // try from 004ccfe4 to 004cd069 has its CatchHandler @ 004cd2d2 */
+    /* try { // try from 004ccfe4 to 004cd069 has its CatchHandler @ 004cd2d2 */
     uVar8 = GetLocalizedText(0x101);
     goto LAB_004ccff0;
   }
@@ -2181,153 +2172,149 @@ switchD_004ccf73_caseD_7:
     arg2 = 8;
   }
 LAB_004ccc82:
-                    /* try { // try from 004ccc8e to 004ccfc9 has its CatchHandler @ 004cd2d2 */
-  uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(arg1 + 0x4c8),"idle");
+  /* try { // try from 004ccc8e to 004ccfc9 has its CatchHandler @ 004cd2d2 */
+  uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(arg1 + 0x4c8),
+                                                        "idle");
   *(uint64_t *)(arg1 + 0x4d0) = uVar8;
-  uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    (*(FlashAnimationLibrary **)(arg1 + 0x4c8),"levelselect");
+  uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(arg1 + 0x4c8),
+                                                        "levelselect");
   *(uint64_t *)(arg1 + 0x4d8) = uVar8;
-  switch(arg2) {
+  switch (arg2) {
   default:
     goto switchD_004ccf73_caseD_0;
   case 1:
-    pcVar12 = (char *)FormatResourcePath("/Menus/worldmenu.am",local_38);
+    pcVar12 = (char *)FormatResourcePath("/Menus/worldmenu.am", local_38);
     pFVar13 = operator_new(0xb0);
-                    /* try { // try from 004cd243 to 004cd247 has its CatchHandler @ 004cd287 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13,pcVar12);
+    /* try { // try from 004cd243 to 004cd247 has its CatchHandler @ 004cd287 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13, pcVar12);
     *(FlashAnimationLibrary **)(arg1 + 0x428) = pFVar13;
-                    /* try { // try from 004cd254 to 004cd258 has its CatchHandler @ 004cd2d2 */
+    /* try { // try from 004cd254 to 004cd258 has its CatchHandler @ 004cd2d2 */
     uVar8 = GetLocalizedText(0xfb);
     break;
   case 2:
-    pcVar12 = (char *)FormatResourcePath("/Menus/hworldmenu.am",local_38);
+    pcVar12 = (char *)FormatResourcePath("/Menus/hworldmenu.am", local_38);
     pFVar13 = operator_new(0xb0);
-                    /* try { // try from 004cd203 to 004cd207 has its CatchHandler @ 004cd2a2 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13,pcVar12);
+    /* try { // try from 004cd203 to 004cd207 has its CatchHandler @ 004cd2a2 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13, pcVar12);
     *(FlashAnimationLibrary **)(arg1 + 0x428) = pFVar13;
-                    /* try { // try from 004cd214 to 004cd239 has its CatchHandler @ 004cd2d2 */
+    /* try { // try from 004cd214 to 004cd239 has its CatchHandler @ 004cd2d2 */
     uVar8 = GetLocalizedText(0xfc);
     break;
   case 3:
-    pcVar12 = (char *)FormatResourcePath("/Menus/fworldmenu.am",local_38);
+    pcVar12 = (char *)FormatResourcePath("/Menus/fworldmenu.am", local_38);
     pFVar13 = operator_new(0xb0);
-                    /* try { // try from 004cd1c3 to 004cd1c7 has its CatchHandler @ 004cd2af */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13,pcVar12);
+    /* try { // try from 004cd1c3 to 004cd1c7 has its CatchHandler @ 004cd2af */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13, pcVar12);
     *(FlashAnimationLibrary **)(arg1 + 0x428) = pFVar13;
-                    /* try { // try from 004cd1d4 to 004cd1f9 has its CatchHandler @ 004cd2d2 */
+    /* try { // try from 004cd1d4 to 004cd1f9 has its CatchHandler @ 004cd2d2 */
     uVar8 = GetLocalizedText(0xfd);
     break;
   case 4:
-    pcVar12 = (char *)FormatResourcePath("/Menus/hellworldmenu.am",local_38);
+    pcVar12 = (char *)FormatResourcePath("/Menus/hellworldmenu.am", local_38);
     pFVar13 = operator_new(0xb0);
-                    /* try { // try from 004cd183 to 004cd187 has its CatchHandler @ 004cd2b2 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13,pcVar12);
+    /* try { // try from 004cd183 to 004cd187 has its CatchHandler @ 004cd2b2 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13, pcVar12);
     *(FlashAnimationLibrary **)(arg1 + 0x428) = pFVar13;
-                    /* try { // try from 004cd194 to 004cd1b9 has its CatchHandler @ 004cd2d2 */
+    /* try { // try from 004cd194 to 004cd1b9 has its CatchHandler @ 004cd2d2 */
     uVar8 = GetLocalizedText(0xfe);
     break;
   case 5:
-    pcVar12 = (char *)FormatResourcePath("/Menus/rworldmenu.am",local_38);
+    pcVar12 = (char *)FormatResourcePath("/Menus/rworldmenu.am", local_38);
     pFVar13 = operator_new(0xb0);
-                    /* try { // try from 004cd143 to 004cd147 has its CatchHandler @ 004cd2b4 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13,pcVar12);
+    /* try { // try from 004cd143 to 004cd147 has its CatchHandler @ 004cd2b4 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13, pcVar12);
     *(FlashAnimationLibrary **)(arg1 + 0x428) = pFVar13;
-                    /* try { // try from 004cd154 to 004cd179 has its CatchHandler @ 004cd2d2 */
+    /* try { // try from 004cd154 to 004cd179 has its CatchHandler @ 004cd2d2 */
     uVar8 = GetLocalizedText(0xff);
     break;
   case 6:
-    pcVar12 = (char *)FormatResourcePath("/Menus/eworldmenu.am",local_38);
+    pcVar12 = (char *)FormatResourcePath("/Menus/eworldmenu.am", local_38);
     pFVar13 = operator_new(0xb0);
-                    /* try { // try from 004cd073 to 004cd077 has its CatchHandler @ 004cd2c4 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13,pcVar12);
+    /* try { // try from 004cd073 to 004cd077 has its CatchHandler @ 004cd2c4 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13, pcVar12);
     *(FlashAnimationLibrary **)(arg1 + 0x428) = pFVar13;
-                    /* try { // try from 004cd084 to 004cd0a9 has its CatchHandler @ 004cd2d2 */
+    /* try { // try from 004cd084 to 004cd0a9 has its CatchHandler @ 004cd2d2 */
     uVar8 = GetLocalizedText(0x100);
     break;
   case 7:
     goto switchD_004ccf73_caseD_7;
   case 8:
-    pcVar12 = (char *)FormatResourcePath("/Menus/dworldmenu.am",local_38);
+    pcVar12 = (char *)FormatResourcePath("/Menus/dworldmenu.am", local_38);
     pFVar13 = operator_new(0xb0);
-                    /* try { // try from 004cd103 to 004cd107 has its CatchHandler @ 004cd2b6 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13,pcVar12);
+    /* try { // try from 004cd103 to 004cd107 has its CatchHandler @ 004cd2b6 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13, pcVar12);
     *(FlashAnimationLibrary **)(arg1 + 0x428) = pFVar13;
-                    /* try { // try from 004cd114 to 004cd139 has its CatchHandler @ 004cd2d2 */
+    /* try { // try from 004cd114 to 004cd139 has its CatchHandler @ 004cd2d2 */
     uVar8 = GetLocalizedText(0x103);
     break;
   case 9:
-    pcVar12 = (char *)FormatResourcePath("/Menus/i2worldmenu.am",local_38);
+    pcVar12 = (char *)FormatResourcePath("/Menus/i2worldmenu.am", local_38);
     pFVar13 = operator_new(0xb0);
-                    /* try { // try from 004cd0b3 to 004cd0b7 has its CatchHandler @ 004cd2c2 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13,pcVar12);
+    /* try { // try from 004cd0b3 to 004cd0b7 has its CatchHandler @ 004cd2c2 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar13, pcVar12);
     *(FlashAnimationLibrary **)(arg1 + 0x428) = pFVar13;
-                    /* try { // try from 004cd0c7 to 004cd0f9 has its CatchHandler @ 004cd2d2 */
-    pwVar11 = (wchar_t *)FlashAnimationLibrary__GetTextField(pFVar13,"chaptername");
-    FlashTextField__SetText(pwVar11,L"Super Meat World");
+    /* try { // try from 004cd0c7 to 004cd0f9 has its CatchHandler @ 004cd2d2 */
+    pwVar11 = (wchar_t *)FlashAnimationLibrary__GetTextField(pFVar13, "chaptername");
+    FlashTextField__SetText(pwVar11, L"Super Meat World");
     goto switchD_004ccf73_caseD_0;
   }
 LAB_004ccff0:
-  pwVar11 = (wchar_t *)
-            FlashAnimationLibrary__GetTextField
-                      (*(FlashAnimationLibrary **)(arg1 + 0x428),"chaptername");
-  FlashTextField__SetText(pwVar11,uVar8);
+  pwVar11 = (wchar_t *)FlashAnimationLibrary__GetTextField(
+      *(FlashAnimationLibrary **)(arg1 + 0x428), "chaptername");
+  FlashTextField__SetText(pwVar11, uVar8);
 switchD_004ccf73_caseD_0:
-  uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    (*(FlashAnimationLibrary **)(arg1 + 0x428),"worldmap");
+  uVar8 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(arg1 + 0x428),
+                                                        "worldmap");
   *(uint64_t *)(arg1 + 0x430) = uVar8;
-  plVar9 = (long *)FlashAnimationLibrary__GetMovieClip__005731d0
-                             (*(FlashAnimationLibrary **)(arg1 + 0x428),"chaptericon");
-  self = (FlashMovieClip *)
-         FlashAnimationLibrary__GetLibraryEntry
-                   (*(FlashAnimationLibrary **)(arg1 + 0x428),
-                    *(int *)(*(long *)(arg1 + 0x430) + 0x20));
-  iVar7 = FlashAnimationLibrary__GetClipIndex
-                    (*(FlashAnimationLibrary **)(arg1 + 0x428),"worldpad1");
-  uVar8 = FlashMovieClip__FindInstance(self,iVar7,0,(int *)0x0,0);
+  plVar9 = (long *)FlashAnimationLibrary__GetMovieClip__005731d0(
+      *(FlashAnimationLibrary **)(arg1 + 0x428), "chaptericon");
+  self = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(
+      *(FlashAnimationLibrary **)(arg1 + 0x428), *(int *)(*(long *)(arg1 + 0x430) + 0x20));
+  iVar7 =
+      FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(arg1 + 0x428), "worldpad1");
+  uVar8 = FlashMovieClip__FindInstance(self, iVar7, 0, (int *)0x0, 0);
   *(uint64_t *)(arg1 + 0x438) = uVar8;
-  iVar7 = FlashAnimationLibrary__GetClipIndex
-                    (*(FlashAnimationLibrary **)(arg1 + 0x428),"worldpad2");
-  uVar8 = FlashMovieClip__FindInstance(self,iVar7,0,(int *)0x0,0);
+  iVar7 =
+      FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(arg1 + 0x428), "worldpad2");
+  uVar8 = FlashMovieClip__FindInstance(self, iVar7, 0, (int *)0x0, 0);
   *(uint64_t *)(arg1 + 0x440) = uVar8;
-  iVar7 = FlashAnimationLibrary__GetClipIndex
-                    (*(FlashAnimationLibrary **)(arg1 + 0x428),"worldpad3");
-  uVar8 = FlashMovieClip__FindInstance(self,iVar7,0,(int *)0x0,0);
+  iVar7 =
+      FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(arg1 + 0x428), "worldpad3");
+  uVar8 = FlashMovieClip__FindInstance(self, iVar7, 0, (int *)0x0, 0);
   *(uint64_t *)(arg1 + 0x448) = uVar8;
-  iVar7 = FlashAnimationLibrary__GetClipIndex
-                    (*(FlashAnimationLibrary **)(arg1 + 0x428),"worldpad4");
-  uVar8 = FlashMovieClip__FindInstance(self,iVar7,0,(int *)0x0,0);
+  iVar7 =
+      FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(arg1 + 0x428), "worldpad4");
+  uVar8 = FlashMovieClip__FindInstance(self, iVar7, 0, (int *)0x0, 0);
   *(uint64_t *)(arg1 + 0x450) = uVar8;
-  iVar7 = FlashAnimationLibrary__GetClipIndex
-                    (*(FlashAnimationLibrary **)(arg1 + 0x428),"worldpad5");
-  uVar8 = FlashMovieClip__FindInstance(self,iVar7,0,(int *)0x0,0);
+  iVar7 =
+      FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(arg1 + 0x428), "worldpad5");
+  uVar8 = FlashMovieClip__FindInstance(self, iVar7, 0, (int *)0x0, 0);
   *(uint64_t *)(arg1 + 0x458) = uVar8;
-  iVar7 = FlashAnimationLibrary__GetClipIndex
-                    (*(FlashAnimationLibrary **)(arg1 + 0x428),"worldpad6");
-  uVar8 = FlashMovieClip__FindInstance(self,iVar7,0,(int *)0x0,0);
+  iVar7 =
+      FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(arg1 + 0x428), "worldpad6");
+  uVar8 = FlashMovieClip__FindInstance(self, iVar7, 0, (int *)0x0, 0);
   *(uint64_t *)(arg1 + 0x460) = uVar8;
-  iVar7 = FlashAnimationLibrary__GetClipIndex
-                    (*(FlashAnimationLibrary **)(arg1 + 0x428),"worldpad7");
-  uVar8 = FlashMovieClip__FindInstance(self,iVar7,0,(int *)0x0,0);
+  iVar7 =
+      FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(arg1 + 0x428), "worldpad7");
+  uVar8 = FlashMovieClip__FindInstance(self, iVar7, 0, (int *)0x0, 0);
   *(uint64_t *)(arg1 + 0x468) = uVar8;
-  iVar7 = FlashAnimationLibrary__GetClipIndex
-                    (*(FlashAnimationLibrary **)(arg1 + 0x428),"worldpad8");
-  uVar8 = FlashMovieClip__FindInstance(self,iVar7,0,(int *)0x0,0);
+  iVar7 =
+      FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(arg1 + 0x428), "worldpad8");
+  uVar8 = FlashMovieClip__FindInstance(self, iVar7, 0, (int *)0x0, 0);
   *(uint64_t *)(arg1 + 0x470) = uVar8;
-  lVar10 = FlashMovieClip__FindInstance(self,(int)plVar9[4],0,(int *)0x0,0);
+  lVar10 = FlashMovieClip__FindInstance(self, (int)plVar9[4], 0, (int *)0x0, 0);
   (**(code **)(*plVar9 + 8))(plVar9);
-  pwVar11 = (wchar_t *)
-            FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(arg1 + 0x428),"back")
-  ;
+  pwVar11 = (wchar_t *)FlashAnimationLibrary__GetTextField(
+      *(FlashAnimationLibrary **)(arg1 + 0x428), "back");
   if (pwVar11 != (wchar_t *)0x0) {
     uVar8 = GetLocalizedText(10);
-    FlashTextField__SetText(pwVar11,uVar8);
+    FlashTextField__SetText(pwVar11, uVar8);
   }
-  pwVar11 = (wchar_t *)
-            FlashAnimationLibrary__GetTextField
-                      (*(FlashAnimationLibrary **)(arg1 + 0x428),"select");
+  pwVar11 = (wchar_t *)FlashAnimationLibrary__GetTextField(
+      *(FlashAnimationLibrary **)(arg1 + 0x428), "select");
   if (pwVar11 != (wchar_t *)0x0) {
     uVar8 = GetLocalizedText(0xb7);
-    FlashTextField__SetText(pwVar11,uVar8);
+    FlashTextField__SetText(pwVar11, uVar8);
   }
   fVar6 = DAT_0081bf3c /* R:0.0f */;
   fVar5 = DAT_0081bf38 /* R:1.1915431418745068e-38f */;
@@ -2335,17 +2322,18 @@ switchD_004ccf73_caseD_0:
   fVar3 = vWorldMenuMeatBoyOffset;
   lVar2 = *(long *)(arg1 + 0x4d0);
   fVar14 = (float)*(uint64_t *)(lVar10 + 0x38) + DAT_0081bf38 /* R:1.1915431418745068e-38f */;
-  fVar15 = (float)((ulong)*(uint64_t *)(lVar10 + 0x38) >> 0x20) + DAT_0081bf3c /* R:0.0f */;
+  fVar15 = (float)((ulong) * (uint64_t *)(lVar10 + 0x38) >> 0x20) + DAT_0081bf3c /* R:0.0f */;
   *(ulong *)(lVar2 + 0x30) =
-       CONCAT44((float)((ulong)*(uint64_t *)(lVar10 + 0x30) >> 0x20) + DAT_0081bf34 /* R:2.2958888052482446e-39f */,
-                (float)*(uint64_t *)(lVar10 + 0x30) + vWorldMenuMeatBoyOffset);
-  *(ulong *)(lVar2 + 0x38) = CONCAT44(fVar15,fVar14);
+      CONCAT44((float)((ulong) * (uint64_t *)(lVar10 + 0x30) >> 0x20) +
+                   DAT_0081bf34 /* R:2.2958888052482446e-39f */,
+               (float)*(uint64_t *)(lVar10 + 0x30) + vWorldMenuMeatBoyOffset);
+  *(ulong *)(lVar2 + 0x38) = CONCAT44(fVar15, fVar14);
   lVar2 = *(long *)(arg1 + 0x4d8);
   uVar8 = *(uint64_t *)(lVar10 + 0x38);
   *(ulong *)(lVar2 + 0x30) =
-       CONCAT44((float)((ulong)*(uint64_t *)(lVar10 + 0x30) >> 0x20) + fVar4,
-                (float)*(uint64_t *)(lVar10 + 0x30) + fVar3);
-  *(ulong *)(lVar2 + 0x38) = CONCAT44((float)((ulong)uVar8 >> 0x20) + fVar6,(float)uVar8 + fVar5);
+      CONCAT44((float)((ulong) * (uint64_t *)(lVar10 + 0x30) >> 0x20) + fVar4,
+               (float)*(uint64_t *)(lVar10 + 0x30) + fVar3);
+  *(ulong *)(lVar2 + 0x38) = CONCAT44((float)((ulong)uVar8 >> 0x20) + fVar6, (float)uVar8 + fVar5);
   *(int *)(arg1 + 0x41c) = arg2;
   SetWorldMenuStats(arg1);
   if ((allocator *)(local_38[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
@@ -2369,7 +2357,7 @@ switchD_004ccf73_caseD_0:
  */
 /* SMBMenuTransitionWorldLeftIn(void*, int, int) */
 
-void SMBMenuTransitionWorldLeftIn(void *arg1,int arg2,int arg3)
+void SMBMenuTransitionWorldLeftIn(void *arg1, int arg2, int arg3)
 
 {
   int iVar1;
@@ -2388,22 +2376,21 @@ void SMBMenuTransitionWorldLeftIn(void *arg1,int arg2,int arg3)
   uint32_t local_30;
   uint32_t local_2c;
   uint32_t local_28;
-  
-  uVar2 = CONCAT44(in_register_00000014,arg3);
+
+  uVar2 = CONCAT44(in_register_00000014, arg3);
   iVar3 = *(int *)(SMBMenu + 0x41c) + -1;
-  while (iVar1 = GSMBChapterData__IsChapterUnlocked(SMBChapterData,iVar3,uVar2), iVar1 == 0) {
+  while (iVar1 = GSMBChapterData__IsChapterUnlocked(SMBChapterData, iVar3, uVar2), iVar1 == 0) {
     uVar2 = extraout_RDX;
     if (iVar3 == 0) {
       iVar3 = 9;
-    }
-    else {
+    } else {
       iVar3 = iVar3 + -1;
       if (iVar3 == 8) {
         iVar3 = 7;
       }
     }
   }
-  GSMBMenu__LoadWorldMenu(SMBMenu,iVar3,0);
+  GSMBMenu__LoadWorldMenu(SMBMenu, iVar3, 0);
   local_48 = 0;
   local_40 = 0;
   local_38 = 0;
@@ -2415,7 +2402,7 @@ void SMBMenuTransitionWorldLeftIn(void *arg1,int arg2,int arg3)
   local_60 = 1;
   local_50 = SMBMenuWorldNextTransEnd;
   local_28 = 0;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_68);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_68);
   return;
 }
 
@@ -2427,7 +2414,7 @@ void SMBMenuTransitionWorldLeftIn(void *arg1,int arg2,int arg3)
  */
 /* SMBMenuTransitionWorldRightIn(void*, int, int) */
 
-void SMBMenuTransitionWorldRightIn(void *arg1,int arg2,int arg3)
+void SMBMenuTransitionWorldRightIn(void *arg1, int arg2, int arg3)
 
 {
   int iVar1;
@@ -2446,12 +2433,13 @@ void SMBMenuTransitionWorldRightIn(void *arg1,int arg2,int arg3)
   uint32_t local_30;
   uint32_t local_2c;
   uint32_t local_28;
-  
-  uVar2 = CONCAT44(in_register_00000014,arg3);
+
+  uVar2 = CONCAT44(in_register_00000014, arg3);
   iVar3 = *(int *)(SMBMenu + 0x41c) + 1;
-  while( true ) {
-    iVar1 = GSMBChapterData__IsChapterUnlocked(SMBChapterData,iVar3,uVar2);
-    if (iVar1 != 0) break;
+  while (true) {
+    iVar1 = GSMBChapterData__IsChapterUnlocked(SMBChapterData, iVar3, uVar2);
+    if (iVar1 != 0)
+      break;
     iVar1 = iVar3 + 1;
     if ((iVar1 == 0) || (iVar1 == 8)) {
       iVar1 = iVar3 + 2;
@@ -2462,7 +2450,7 @@ void SMBMenuTransitionWorldRightIn(void *arg1,int arg2,int arg3)
       iVar3 = iVar1;
     }
   }
-  GSMBMenu__LoadWorldMenu(SMBMenu,iVar3,0);
+  GSMBMenu__LoadWorldMenu(SMBMenu, iVar3, 0);
   local_48 = 0;
   local_40 = 0;
   local_38 = 0;
@@ -2474,7 +2462,7 @@ void SMBMenuTransitionWorldRightIn(void *arg1,int arg2,int arg3)
   local_60 = 1;
   local_50 = SMBMenuWorldNextTransEnd;
   local_28 = 0;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_68);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_68);
   return;
 }
 
@@ -2490,9 +2478,9 @@ void GSMBMenu__HidePauseMenu(int arg1)
 
 {
   uint32_t in_register_0000003c;
-  
-  *(uint32_t *)(CONCAT44(in_register_0000003c,arg1) + 0xd04) = 0;
-  RenderLayers__RemoveLayer((RenderLayer *)CONCAT44(in_register_0000003c,arg1));
+
+  *(uint32_t *)(CONCAT44(in_register_0000003c, arg1) + 0xd04) = 0;
+  RenderLayers__RemoveLayer((RenderLayer *)CONCAT44(in_register_0000003c, arg1));
   return;
 }
 
@@ -2511,8 +2499,8 @@ void GSMBMenu__ShowPauseMenu(int arg1)
   code *pcVar2;
   uint32_t in_register_0000003c;
   long lVar3;
-  
-  lVar3 = CONCAT44(in_register_0000003c,arg1);
+
+  lVar3 = CONCAT44(in_register_0000003c, arg1);
   *(uint32_t *)(lVar3 + 0xd04) = 0x11;
   FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(lVar3 + 2000));
   FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(lVar3 + 0x7d8));
@@ -2520,41 +2508,40 @@ void GSMBMenu__ShowPauseMenu(int arg1)
   FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(lVar3 + 0x7a8));
   if (*(short *)(lVar3 + 0x1840) == 0) {
     if (Keyboard != (TKeyboard *)0x0) {
-      TKeyboard__AddKeyCallback(Keyboard,0x76,SMBMenu_ClickPauseOption,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x6c,SMBMenu_ClickPauseOption,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x1f,SMBMenu_IncrementPauseOption,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x7f,SMBMenu_DecrementPauseOption,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x61,ShowPauseMenuPress,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x23,ShowPauseMenuPress,0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x76, SMBMenu_ClickPauseOption, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x6c, SMBMenu_ClickPauseOption, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x1f, SMBMenu_IncrementPauseOption, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x7f, SMBMenu_DecrementPauseOption, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x61, ShowPauseMenuPress, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x23, ShowPauseMenuPress, 0);
     }
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddButtonCallback(pJVar1,0,SMBMenu_ClickPauseOption,0);
+    Joystick__AddButtonCallback(pJVar1, 0, SMBMenu_ClickPauseOption, 0);
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddPOVCallback(pJVar1,2,SMBMenu_IncrementPauseOption,0);
+    Joystick__AddPOVCallback(pJVar1, 2, SMBMenu_IncrementPauseOption, 0);
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
     pcVar2 = SMBMenu_DecrementPauseOption;
-  }
-  else {
+  } else {
     if (Keyboard != (TKeyboard *)0x0) {
-      TKeyboard__AddKeyCallback(Keyboard,0x76,SMBMenu_ClickReplayPauseOption,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x6c,SMBMenu_ClickReplayPauseOption,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x1f,SMBMenu_IncrementReplayPauseOption,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x7f,SMBMenu_DecrementReplayPauseOption,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x61,ShowPauseMenuPress,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x23,ShowPauseMenuPress,0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x76, SMBMenu_ClickReplayPauseOption, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x6c, SMBMenu_ClickReplayPauseOption, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x1f, SMBMenu_IncrementReplayPauseOption, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x7f, SMBMenu_DecrementReplayPauseOption, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x61, ShowPauseMenuPress, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x23, ShowPauseMenuPress, 0);
     }
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddButtonCallback(pJVar1,0,SMBMenu_ClickReplayPauseOption,0);
+    Joystick__AddButtonCallback(pJVar1, 0, SMBMenu_ClickReplayPauseOption, 0);
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddPOVCallback(pJVar1,2,SMBMenu_IncrementReplayPauseOption,0);
+    Joystick__AddPOVCallback(pJVar1, 2, SMBMenu_IncrementReplayPauseOption, 0);
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
     pcVar2 = SMBMenu_DecrementReplayPauseOption;
   }
-  Joystick__AddPOVCallback(pJVar1,0,pcVar2,0);
+  Joystick__AddPOVCallback(pJVar1, 0, pcVar2, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,7,ShowPauseMenuPress,0);
+  Joystick__AddButtonCallback(pJVar1, 7, ShowPauseMenuPress, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,1,ShowPauseMenuPress,0);
+  Joystick__AddButtonCallback(pJVar1, 1, ShowPauseMenuPress, 0);
   GSMBCutSceneManager__CancelCutScene(SMBCutSceneManager);
   return;
 }
@@ -2567,14 +2554,13 @@ void GSMBMenu__ShowPauseMenu(int arg1)
  */
 /* SMBMenuSelectChar(tagButtonProps const*, void*) */
 
-void SMBMenuSelectChar(tagButtonProps *arg1,void *arg2)
+void SMBMenuSelectChar(tagButtonProps *arg1, void *arg2)
 
 {
   long *plVar1;
-  
-  if ((*(int *)arg1 == 1) &&
-     (*(int *)(*(long *)(SMBMenu + 0xbf8) + (ulong)*(ushort *)(SMBMenu + 0xd08) * 0x2c + 0x14) == 1)
-     ) {
+
+  if ((*(int *)arg1 == 1) && (*(int *)(*(long *)(SMBMenu + 0xbf8) +
+                                       (ulong) * (ushort *)(SMBMenu + 0xd08) * 0x2c + 0x14) == 1)) {
     plVar1 = (long *)(SMBMenu + 0x678);
     *(uint32_t *)(SMBMenu + 0xd04) = 5;
     *(uint32_t *)(*plVar1 + 0x58) = 0;
@@ -2592,7 +2578,7 @@ void SMBMenuSelectChar(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuEnterWorld(tagButtonProps const*, void*) */
 
-void SMBMenuEnterWorld(tagButtonProps *arg1,void *arg2)
+void SMBMenuEnterWorld(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
@@ -2607,18 +2593,17 @@ void SMBMenuEnterWorld(tagButtonProps *arg1,void *arg2)
   uint32_t local_30;
   uint32_t local_2c;
   uint32_t local_28;
-  AutoLockSection local_18 [24];
-  
-  if ((((arg1 == (tagButtonProps *)0x0) || (*(int *)arg1 == 1)) && (bMenuTransitioning == 0))
-     && (*(int *)(SMBMenu + 0xd04) != 7)) {
-    AutoLockSection__AutoLockSection(local_18,(CriticalSection *)SMBMenuSection);
+  AutoLockSection local_18[24];
+
+  if ((((arg1 == (tagButtonProps *)0x0) || (*(int *)arg1 == 1)) && (bMenuTransitioning == 0)) &&
+      (*(int *)(SMBMenu + 0xd04) != 7)) {
+    AutoLockSection__AutoLockSection(local_18, (CriticalSection *)SMBMenuSection);
     if (*(int *)(SuperMeatBoy + 0x290) == 9) {
-                    /* try { // try from 004cfe27 to 004cfee6 has its CatchHandler @ 004cfeec */
+      /* try { // try from 004cfe27 to 004cfee6 has its CatchHandler @ 004cfeec */
       iVar1 = SMBLevelPortal__IsInterfaceActive(SuperMeatBoyPortal);
       if (iVar1 == 0) {
         SMBLevelPortal__InitializeInterface(SuperMeatBoyPortal);
-      }
-      else {
+      } else {
         if (bMenuTransitioning != 1) {
           local_48 = 0;
           local_40 = 0;
@@ -2632,13 +2617,12 @@ void SMBMenuEnterWorld(tagButtonProps *arg1,void *arg2)
           bMenuTransitioning = 1;
           local_50 = SMBMenuInWorldTrans;
           local_28 = 0;
-          GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_68);
+          GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_68);
         }
         GSMBMenu__RemoveControls();
         SMBLevelPortal__DeActivateInterface(SuperMeatBoyPortal);
       }
-    }
-    else {
+    } else {
       if (bMenuTransitioning != 1) {
         local_48 = 0;
         local_40 = 0;
@@ -2652,8 +2636,8 @@ void SMBMenuEnterWorld(tagButtonProps *arg1,void *arg2)
         bMenuTransitioning = 1;
         local_50 = SMBMenuInWorldTrans;
         local_28 = 0;
-                    /* try { // try from 004cfdff to 004cfe0f has its CatchHandler @ 004cfeec */
-        GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_68);
+        /* try { // try from 004cfdff to 004cfe0f has its CatchHandler @ 004cfeec */
+        GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_68);
       }
       GSMBMenu__RemoveControls();
     }
@@ -2671,7 +2655,7 @@ void SMBMenuEnterWorld(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuTransitionInCharMenu(void*, int, int) */
 
-void SMBMenuTransitionInCharMenu(void *arg1,int arg2,int arg3)
+void SMBMenuTransitionInCharMenu(void *arg1, int arg2, int arg3)
 
 {
   ushort uVar1;
@@ -2679,32 +2663,33 @@ void SMBMenuTransitionInCharMenu(void *arg1,int arg2,int arg3)
   uint uVar3;
   Joystick *pJVar4;
   long lVar5;
-  
+
   lVar2 = SMBMenu;
   bMenuTransitioning = 1;
   GSMBMenu__RemoveControls();
   pJVar4 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar4,3,SMBMenuMoveRightChar,0);
+  Joystick__AddPOVCallback(pJVar4, 3, SMBMenuMoveRightChar, 0);
   pJVar4 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar4,1,SMBMenuMoveLeftChar,0);
+  Joystick__AddPOVCallback(pJVar4, 1, SMBMenuMoveLeftChar, 0);
   pJVar4 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar4,0,SMBMenuSelectChar,0);
+  Joystick__AddButtonCallback(pJVar4, 0, SMBMenuSelectChar, 0);
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x41,SMBMenuMoveRightChar,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x6d,SMBMenuMoveLeftChar,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x76,SMBMenuSelectChar,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x6c,SMBMenuSelectChar,0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x41, SMBMenuMoveRightChar, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6d, SMBMenuMoveLeftChar, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x76, SMBMenuSelectChar, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6c, SMBMenuSelectChar, 0);
   }
-  TInput__RegisterCode(Input,(tagCheatCode *)playAsBrownie);
-  TInput__RegisterCode(Input,(tagCheatCode *)playAsDrFetus);
-  TInput__RegisterCode(Input,(tagCheatCode *)playAsTofuBoy);
-  TInput__RegisterCode(Input,(tagCheatCode *)playAsWOG);
-  TInput__RegisterCode(Input,(tagCheatCode *)playAsTim);
+  TInput__RegisterCode(Input, (tagCheatCode *)playAsBrownie);
+  TInput__RegisterCode(Input, (tagCheatCode *)playAsDrFetus);
+  TInput__RegisterCode(Input, (tagCheatCode *)playAsTofuBoy);
+  TInput__RegisterCode(Input, (tagCheatCode *)playAsWOG);
+  TInput__RegisterCode(Input, (tagCheatCode *)playAsTim);
   *(uint32_t *)(lVar2 + 0xd04) = 4;
   FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(lVar2 + 0x670));
   if (*(long *)(lVar2 + 0x758) != 0) {
     uVar3 = GSMBChapterData__GetTotalNumBandagesCollected(SMBChapterData);
-    FlashTextField__SetText(*(char **)(lVar2 + 0x758),&DAT_005c8bf9 /* R:u32=1996515621 */,(ulong)uVar3);
+    FlashTextField__SetText(*(char **)(lVar2 + 0x758), &DAT_005c8bf9 /* R:u32=1996515621 */,
+                            (ulong)uVar3);
   }
   *(uint16_t *)(lVar2 + 0x1818) = 0;
   if ((*(int *)(lVar2 + 0x1820) == 1) && (uVar1 = *(ushort *)(lVar2 + 0x181a), uVar1 != 0)) {
@@ -2726,19 +2711,19 @@ void SMBMenuTransitionInCharMenu(void *arg1,int arg2,int arg3)
  */
 /* SMBMenuChapterSelect(tagButtonProps const*, void*) */
 
-void SMBMenuChapterSelect(tagButtonProps *arg1,void *arg2)
+void SMBMenuChapterSelect(tagButtonProps *arg1, void *arg2)
 
 {
   long lVar1;
   Joystick *pJVar2;
-  AutoLockSection aAStack_18 [16];
-  
+  AutoLockSection aAStack_18[16];
+
   lVar1 = SMBMenu;
   if (*(int *)arg1 == 1) {
     if ((*(int *)(SMBMenu + 0xd04) != 8) && (*(int *)(SMBMenu + 0xd04) != 0x15)) {
-      AutoLockSection__AutoLockSection(aAStack_18,(CriticalSection *)SMBMenuSection);
-                    /* try { // try from 004d1928 to 004d1968 has its CatchHandler @ 004d19f2 */
-      SMBChapter__LoadChapter((SMBChapter *)(SuperMeatBoy + 0x90),*(uint32_t *)(lVar1 + 0x41c));
+      AutoLockSection__AutoLockSection(aAStack_18, (CriticalSection *)SMBMenuSection);
+      /* try { // try from 004d1928 to 004d1968 has its CatchHandler @ 004d19f2 */
+      SMBChapter__LoadChapter((SMBChapter *)(SuperMeatBoy + 0x90), *(uint32_t *)(lVar1 + 0x41c));
       *(uint32_t *)(lVar1 + 0xd00) = 0;
       *(uint32_t *)(lVar1 + 0x420) = 0;
       *(uint32_t *)(lVar1 + 0xd04) = 8;
@@ -2747,13 +2732,13 @@ void SMBMenuChapterSelect(tagButtonProps *arg1,void *arg2)
       GSMBMenu__RemoveControls();
       AutoLockSection__AutoLockSection__005b59d0(aAStack_18);
       pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-      Joystick__AddButtonCallback(pJVar2,0,0,0);
+      Joystick__AddButtonCallback(pJVar2, 0, 0, 0);
       pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-      Joystick__AddButtonCallback(pJVar2,1,0,0);
+      Joystick__AddButtonCallback(pJVar2, 1, 0, 0);
       if (Keyboard != (TKeyboard *)0x0) {
-        TKeyboard__AddKeyCallback(Keyboard,0x23,0,0);
-        TKeyboard__AddKeyCallback(Keyboard,0x76,0,0);
-        TKeyboard__AddKeyCallback(Keyboard,0x6c,0,0);
+        TKeyboard__AddKeyCallback(Keyboard, 0x23, 0, 0);
+        TKeyboard__AddKeyCallback(Keyboard, 0x76, 0, 0);
+        TKeyboard__AddKeyCallback(Keyboard, 0x6c, 0, 0);
         return;
       }
     }
@@ -2769,7 +2754,7 @@ void SMBMenuChapterSelect(tagButtonProps *arg1,void *arg2)
  */
 /* SMBWorldMapBackPress(tagButtonProps const*, void*) */
 
-void SMBWorldMapBackPress(tagButtonProps *arg1,void *arg2)
+void SMBWorldMapBackPress(tagButtonProps *arg1, void *arg2)
 
 {
   Joystick *pJVar1;
@@ -2784,7 +2769,7 @@ void SMBWorldMapBackPress(tagButtonProps *arg1,void *arg2)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   if (*(int *)arg1 == 1) {
     local_38 = 0;
     local_30 = 0;
@@ -2797,16 +2782,16 @@ void SMBWorldMapBackPress(tagButtonProps *arg1,void *arg2)
     local_50 = 1;
     local_40 = SMBWorldToTitleTransFinished;
     local_18 = 0;
-    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_58);
+    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_58);
     GSMBMenu__RemoveControls();
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddButtonCallback(pJVar1,0,0,0);
+    Joystick__AddButtonCallback(pJVar1, 0, 0, 0);
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddButtonCallback(pJVar1,1,0,0);
+    Joystick__AddButtonCallback(pJVar1, 1, 0, 0);
     if (Keyboard != (TKeyboard *)0x0) {
-      TKeyboard__AddKeyCallback(Keyboard,0x23,0,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x76,0,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x6c,0,0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x23, 0, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x76, 0, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x6c, 0, 0);
       return;
     }
   }
@@ -2821,23 +2806,23 @@ void SMBWorldMapBackPress(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_ClickBackFromHelpOption(tagButtonProps const*, void*) */
 
-void SMBMenu_ClickBackFromHelpOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_ClickBackFromHelpOption(tagButtonProps *arg1, void *arg2)
 
 {
   GSMBMenu *self;
-  
+
   self = SMBMenu;
   if ((arg1 == (tagButtonProps *)0x0) || (*(int *)arg1 != 1)) {
     return;
   }
   if (*(int *)(SMBMenu + 0xd04) != 0x11) {
     GSMBMenu__RemoveControls();
-    GSMBMenu__ShowTitleMenu(self,1);
+    GSMBMenu__ShowTitleMenu(self, 1);
     GSMBMenu__SetTitleMenuText(self);
     *(uint32_t *)(*(long *)(self + (long)*(int *)(self + 0x820) * 0x20 + 0x9f8) + 0x20) =
-         *(uint32_t *)(self + ((long)*(int *)(self + 0x820) + 0x4f) * 0x20 + 8);
+        *(uint32_t *)(self + ((long)*(int *)(self + 0x820) + 0x4f) * 0x20 + 8);
     *(uint32_t *)(*(long *)(self + (long)*(int *)(self + 0x818) * 0x20 + 0x838) + 0x20) =
-         *(uint32_t *)(self + ((long)*(int *)(self + 0x818) + 0x41) * 0x20 + 0xc);
+        *(uint32_t *)(self + ((long)*(int *)(self + 0x818) + 0x41) * 0x20 + 0xc);
     return;
   }
   GSMBMenu__RemoveControls();
@@ -2845,16 +2830,16 @@ void SMBMenu_ClickBackFromHelpOption(tagButtonProps *arg1,void *arg2)
   if (*(short *)(self + 0x1840) != 0) {
     GSMBMenu__SetReplayPauseMenuText(self);
     *(uint32_t *)(*(long *)(self + (long)*(int *)(self + 0x820) * 0x20 + 0xa98) + 0x20) =
-         *(uint32_t *)(self + ((long)*(int *)(self + 0x820) + 0x54) * 0x20 + 8);
+        *(uint32_t *)(self + ((long)*(int *)(self + 0x820) + 0x54) * 0x20 + 8);
     *(uint32_t *)(*(long *)(self + (long)*(int *)(self + 0x81c) * 0x20 + 0xb38) + 0x20) =
-         *(uint32_t *)(self + ((long)*(int *)(self + 0x81c) + 0x59) * 0x20 + 0xc);
+        *(uint32_t *)(self + ((long)*(int *)(self + 0x81c) + 0x59) * 0x20 + 0xc);
     return;
   }
   GSMBMenu__SetPauseMenuText(self);
   *(uint32_t *)(*(long *)(self + (long)*(int *)(self + 0x820) * 0x20 + 0xa98) + 0x20) =
-       *(uint32_t *)(self + ((long)*(int *)(self + 0x820) + 0x54) * 0x20 + 8);
+      *(uint32_t *)(self + ((long)*(int *)(self + 0x820) + 0x54) * 0x20 + 8);
   *(uint32_t *)(*(long *)(self + (long)*(int *)(self + 0x81c) * 0x20 + 0x918) + 0x20) =
-       *(uint32_t *)(self + ((long)*(int *)(self + 0x81c) + 0x48) * 0x20 + 0xc);
+      *(uint32_t *)(self + ((long)*(int *)(self + 0x81c) + 0x48) * 0x20 + 0xc);
   return;
 }
 
@@ -2866,7 +2851,7 @@ void SMBMenu_ClickBackFromHelpOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuWorldNextTransEnd(void*, int, int) */
 
-void SMBMenuWorldNextTransEnd(void *arg1,int arg2,int arg3)
+void SMBMenuWorldNextTransEnd(void *arg1, int arg2, int arg3)
 
 {
   bMenuTransitioning = 0;
@@ -2882,7 +2867,7 @@ void SMBMenuWorldNextTransEnd(void *arg1,int arg2,int arg3)
  */
 /* SMBMenuMoveRightLevel(tagButtonProps const*, void*) */
 
-void SMBMenuMoveRightLevel(tagButtonProps *arg1,void *arg2)
+void SMBMenuMoveRightLevel(tagButtonProps *arg1, void *arg2)
 
 {
   if ((*(int *)arg1 == 1) && (bRenderingUnlocks == 0)) {
@@ -2900,7 +2885,7 @@ void SMBMenuMoveRightLevel(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuMoveLeftLevel(tagButtonProps const*, void*) */
 
-void SMBMenuMoveLeftLevel(tagButtonProps *arg1,void *arg2)
+void SMBMenuMoveLeftLevel(tagButtonProps *arg1, void *arg2)
 
 {
   if ((*(int *)arg1 == 1) && (bRenderingUnlocks == 0)) {
@@ -2918,7 +2903,7 @@ void SMBMenuMoveLeftLevel(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuMoveDownLevel(tagButtonProps const*, void*) */
 
-void SMBMenuMoveDownLevel(tagButtonProps *arg1,void *arg2)
+void SMBMenuMoveDownLevel(tagButtonProps *arg1, void *arg2)
 
 {
   if ((*(int *)arg1 == 1) && (bRenderingUnlocks == 0)) {
@@ -2936,7 +2921,7 @@ void SMBMenuMoveDownLevel(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuMoveUpLevel(tagButtonProps const*, void*) */
 
-void SMBMenuMoveUpLevel(tagButtonProps *arg1,void *arg2)
+void SMBMenuMoveUpLevel(tagButtonProps *arg1, void *arg2)
 
 {
   if ((*(int *)arg1 == 1) && (bRenderingUnlocks == 0)) {
@@ -2954,11 +2939,11 @@ void SMBMenuMoveUpLevel(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuLevelSelect(tagButtonProps const*, void*) */
 
-void SMBMenuLevelSelect(tagButtonProps *arg1,void *arg2)
+void SMBMenuLevelSelect(tagButtonProps *arg1, void *arg2)
 
 {
   if ((((*(int *)arg1 == 1) && (bMenuTransitioning == 0)) && (*(int *)(SMBMenu + 0xd04) != 7)) &&
-     (((bRenderingUnlocks == 0 && (bBossJustDefeated == 0)) && (bBossJustUnlocked == 0)))) {
+      (((bRenderingUnlocks == 0 && (bBossJustDefeated == 0)) && (bBossJustUnlocked == 0)))) {
     GSMBMenu__EnterSelectedLevel(SMBMenu);
     return;
   }
@@ -2973,11 +2958,11 @@ void SMBMenuLevelSelect(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuBossIntroFinished(void*, int, int) */
 
-void SMBMenuBossIntroFinished(void *arg1,int arg2,int arg3)
+void SMBMenuBossIntroFinished(void *arg1, int arg2, int arg3)
 
 {
   GSuperMeatBoy *self;
-  
+
   bMenuTransitioning = 0;
   SMBChapter__DestroyBossIntro((SMBChapter *)(SuperMeatBoy + 0x90));
   GSMBMenu__LoadSelectedLevel(SMBMenu);
@@ -2985,7 +2970,7 @@ void SMBMenuBossIntroFinished(void *arg1,int arg2,int arg3)
   GSuperMeatBoy__SwitchGameMode();
   self = SuperMeatBoy;
   *(uint32_t *)(SuperMeatBoy + 0x370) = 0;
-  GSuperMeatBoy__Freeze(self,0);
+  GSuperMeatBoy__Freeze(self, 0);
   return;
 }
 
@@ -2997,7 +2982,7 @@ void SMBMenuBossIntroFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBMenuTransitionPart2(void*, int, int) */
 
-void SMBMenuTransitionPart2(void *arg1,int arg2,int arg3)
+void SMBMenuTransitionPart2(void *arg1, int arg2, int arg3)
 
 {
   GSMBMenu__ToggleLightAndDark(SMBMenu);
@@ -3012,7 +2997,7 @@ void SMBMenuTransitionPart2(void *arg1,int arg2,int arg3)
  */
 /* SMBMenuInChapterReload(void*, int, int) */
 
-void SMBMenuInChapterReload(void *arg1,int arg2,int arg3)
+void SMBMenuInChapterReload(void *arg1, int arg2, int arg3)
 
 {
   GSMBMenu__TransitionOutReloadChapter(SMBMenu);
@@ -3027,7 +3012,7 @@ void SMBMenuInChapterReload(void *arg1,int arg2,int arg3)
  */
 /* SMBMenuInGameFromMenu(void*, int, int) */
 
-void SMBMenuInGameFromMenu(void *arg1,int arg2,int arg3)
+void SMBMenuInGameFromMenu(void *arg1, int arg2, int arg3)
 
 {
   GSMBMenu__TransitionOutGameFromMenu(SMBMenu);
@@ -3042,13 +3027,13 @@ void SMBMenuInGameFromMenu(void *arg1,int arg2,int arg3)
  */
 /* SMBMenuLoadNextWorld(tagButtonProps const*, void*) */
 
-void SMBMenuLoadNextWorld(tagButtonProps *arg1,void *arg2)
+void SMBMenuLoadNextWorld(tagButtonProps *arg1, void *arg2)
 
 {
   if ((((*(int *)arg1 == 1) && (bMenuTransitioning == 0)) && (*(int *)(SMBMenu + 0xd04) != 7)) &&
-     (*(int *)(SMBMenu + 0xd04) != 0x15)) {
+      (*(int *)(SMBMenu + 0xd04) != 0x15)) {
     GSMBMenu__RemoveWorldMapControls();
-    GSMBMenu__TransitionInNextWorldMap(SMBMenu,1);
+    GSMBMenu__TransitionInNextWorldMap(SMBMenu, 1);
     return;
   }
   return;
@@ -3062,13 +3047,13 @@ void SMBMenuLoadNextWorld(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenuLoadPrevWorld(tagButtonProps const*, void*) */
 
-void SMBMenuLoadPrevWorld(tagButtonProps *arg1,void *arg2)
+void SMBMenuLoadPrevWorld(tagButtonProps *arg1, void *arg2)
 
 {
   if ((((*(int *)arg1 == 1) && (bMenuTransitioning == 0)) && (*(int *)(SMBMenu + 0xd04) != 7)) &&
-     (*(int *)(SMBMenu + 0xd04) != 0x15)) {
+      (*(int *)(SMBMenu + 0xd04) != 0x15)) {
     GSMBMenu__RemoveWorldMapControls();
-    GSMBMenu__TransitionInNextWorldMap(SMBMenu,0);
+    GSMBMenu__TransitionInNextWorldMap(SMBMenu, 0);
     return;
   }
   return;
@@ -3082,7 +3067,7 @@ void SMBMenuLoadPrevWorld(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_ClickTitleOption(tagButtonProps const*, void*) */
 
-void SMBMenu_ClickTitleOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_ClickTitleOption(tagButtonProps *arg1, void *arg2)
 
 {
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
@@ -3100,7 +3085,7 @@ void SMBMenu_ClickTitleOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_ClickPauseOption(tagButtonProps const*, void*) */
 
-void SMBMenu_ClickPauseOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_ClickPauseOption(tagButtonProps *arg1, void *arg2)
 
 {
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
@@ -3118,13 +3103,13 @@ void SMBMenu_ClickPauseOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_ClickReplayPauseOption(tagButtonProps const*, void*) */
 
-void SMBMenu_ClickReplayPauseOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_ClickReplayPauseOption(tagButtonProps *arg1, void *arg2)
 
 {
   SMBUpsellMenu *self;
   GSMBMenu *this_00;
   int iVar1;
-  uint32_t local_88 [2];
+  uint32_t local_88[2];
   uint64_t local_80;
   uint64_t local_78;
   uint64_t local_70;
@@ -3138,34 +3123,30 @@ void SMBMenu_ClickReplayPauseOption(tagButtonProps *arg1,void *arg2)
   uint64_t local_30;
   uint64_t local_28;
   uint64_t local_20;
-  
+
   this_00 = SMBMenu;
   if (*(int *)arg1 == 1) {
     iVar1 = *(int *)(SMBMenu + 0x81c);
     if (iVar1 == 0) {
       GSuperMeatBoy__HidePauseMenu((int)SuperMeatBoy);
-    }
-    else if (iVar1 == 1) {
+    } else if (iVar1 == 1) {
       iVar1 = System_IsTrialMode();
       if (iVar1 == 0) {
         if ((((1 < *(int *)(this_00 + 0xd00) - 0x62U) && (*(long *)(this_00 + 0xce0) != 0)) &&
-            ((*(byte *)(*(long *)(this_00 + 0xce0) + 2) & 5) == 0)) ||
-           ((*(int *)(this_00 + 0xd04) == 0xf || (*(int *)(this_00 + 0xd04) == 0x11)))) {
+             ((*(byte *)(*(long *)(this_00 + 0xce0) + 2) & 5) == 0)) ||
+            ((*(int *)(this_00 + 0xd04) == 0xf || (*(int *)(this_00 + 0xd04) == 0x11)))) {
           GSMBMenu__ShowLeaderboardMenu__004d6eb0(this_00);
         }
-      }
-      else {
+      } else {
         self = (SMBUpsellMenu *)(this_00 + 0x1600);
-        SMBUpsellMenu__SetUpsellAchievementMode(self,0);
-        SMBUpsellMenu__SetUpsellNotExitMode(self,(uint)(byte)this_00[0x1842]);
-        SMBUpsellMenu__SetUpsellOutroMode(self,(uint)(byte)this_00[0x1842]);
+        SMBUpsellMenu__SetUpsellAchievementMode(self, 0);
+        SMBUpsellMenu__SetUpsellNotExitMode(self, (uint)(byte)this_00[0x1842]);
+        SMBUpsellMenu__SetUpsellOutroMode(self, (uint)(byte)this_00[0x1842]);
         SMBUpsellMenu__Activate(self);
       }
-    }
-    else if (iVar1 == 2) {
+    } else if (iVar1 == 2) {
       GSMBMenu__ShowPauseHelpAndOptions(SMBMenu);
-    }
-    else if (iVar1 == 3) {
+    } else if (iVar1 == 3) {
       local_88[0] = 0;
       local_80 = 0;
       local_78 = 0;
@@ -3201,7 +3182,7 @@ void SMBMenu_ClickReplayPauseOption(tagButtonProps *arg1,void *arg2)
  */
 /* SMBMenu_ClickTitleHelpOption(tagButtonProps const*, void*) */
 
-void SMBMenu_ClickTitleHelpOption(tagButtonProps *arg1,void *arg2)
+void SMBMenu_ClickTitleHelpOption(tagButtonProps *arg1, void *arg2)
 
 {
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
@@ -3222,8 +3203,8 @@ void SMBMenu_ClickTitleHelpOption(tagButtonProps *arg1,void *arg2)
 uint64_t ThreadRemoteLoadChapterFile(void *arg1)
 
 {
-  (**(code **)**(uint64_t **)((long)arg1 + 8))
-            (*(uint64_t **)((long)arg1 + 8),*(long *)arg1 + 0x38);
+  (**(code **)**(uint64_t **)((long)arg1 + 8))(*(uint64_t **)((long)arg1 + 8),
+                                               *(long *)arg1 + 0x38);
   *(uint64_t *)(*(long *)arg1 + 0x30) = *(uint64_t *)(*(long *)arg1 + 0x38);
   return 0;
 }
@@ -3239,7 +3220,7 @@ uint64_t ThreadRemoteLoadChapterFile(void *arg1)
 uint64_t SMBMenuThreadLoadChapter(void *arg1)
 
 {
-  GSMBMenu__LoadWorldMenu(SMBMenu,(ulong)arg1 & 0xffffffff,1);
+  GSMBMenu__LoadWorldMenu(SMBMenu, (ulong)arg1 & 0xffffffff, 1);
   SyncEvent__Set((SyncEvent *)loadChapterEvent);
   return 0;
 }
@@ -3261,11 +3242,11 @@ void DestroySMBPaletteResources(void *arg1)
   int iVar2;
   int iVar3;
   long lVar4;
-  
-  BaseResource__Release(*(BaseResource **)((long)arg1 + 0x1aa0),0);
-  BaseResource__Release(*(BaseResource **)((long)arg1 + 0x1aa8),0);
-  BaseResource__Release(*(BaseResource **)((long)arg1 + 0x1a90),0);
-  BaseResource__Release(*(BaseResource **)((long)arg1 + 0x1a98),0);
+
+  BaseResource__Release(*(BaseResource **)((long)arg1 + 0x1aa0), 0);
+  BaseResource__Release(*(BaseResource **)((long)arg1 + 0x1aa8), 0);
+  BaseResource__Release(*(BaseResource **)((long)arg1 + 0x1a90), 0);
+  BaseResource__Release(*(BaseResource **)((long)arg1 + 0x1a98), 0);
   iVar2 = *(int *)((long)arg1 + 0x50);
   if (0 < iVar2) {
     lVar4 = 0;
@@ -3376,17 +3357,17 @@ void CreateSMBPaletteResources(void *arg1)
   uint32_t local_160;
   uint32_t local_15c;
   uint32_t local_158;
-  char *local_148 [4];
+  char *local_148[4];
   BaseResource *local_128;
   uint64_t local_120;
   uint32_t local_118;
-  char *local_108 [4];
-  char *local_e8 [2];
-  char *local_d8 [2];
+  char *local_108[4];
+  char *local_e8[2];
+  char *local_d8[2];
   uint8_t *local_c8;
-  char *local_b8 [2];
-  long local_a8 [2];
-  PropertyBlock *local_98 [2];
+  char *local_b8[2];
+  long local_a8[2];
+  PropertyBlock *local_98[2];
   BaseResource *local_88;
   PropertyBlock *local_80;
   PropertyVariable *local_78;
@@ -3395,8 +3376,8 @@ void CreateSMBPaletteResources(void *arg1)
   PropertyVariable *local_60;
   PropertyBlock *local_58;
   PropertyVariable *local_50;
-  PropertyBlock *local_48 [3];
-  
+  PropertyBlock *local_48[3];
+
   plVar4 = CGR__pSingleQuadStream;
   *(long **)((long)arg1 + 0x1a98) = CGR__pSingleQuadStream;
   (**(code **)(*plVar4 + 0x10))();
@@ -3417,11 +3398,11 @@ void CreateSMBPaletteResources(void *arg1)
   local_178 = 0x30;
   local_170 = 0x10;
   local_88 = (BaseResource *)VertexBuffer__Create((tagVertexBufferCreation *)&local_178);
-  pVVar8 = BaseResource__operator_new(0xa8,1);
-                    /* try { // try from 004dcb49 to 004dcb4d has its CatchHandler @ 004dd73b */
-  VertexStream__VertexStream__005a6980(pVVar8,1,1,3,0,&local_88,CGR__pPos2TexDecl);
+  pVVar8 = BaseResource__operator_new(0xa8, 1);
+  /* try { // try from 004dcb49 to 004dcb4d has its CatchHandler @ 004dd73b */
+  VertexStream__VertexStream__005a6980(pVVar8, 1, 1, 3, 0, &local_88, CGR__pPos2TexDecl);
   *(VertexStream **)((long)arg1 + 0x1aa0) = pVVar8;
-  BaseResource__Release(local_88,0);
+  BaseResource__Release(local_88, 0);
   local_168 = &local_1a8;
   local_1a0 = 0;
   local_1a8 = 0xbf800000;
@@ -3434,11 +3415,11 @@ void CreateSMBPaletteResources(void *arg1)
   local_170 = 0x10;
   local_16c = 5;
   local_88 = (BaseResource *)VertexBuffer__Create((tagVertexBufferCreation *)&local_178);
-  pVVar8 = BaseResource__operator_new(0xa8,1);
-                    /* try { // try from 004dcc62 to 004dcc66 has its CatchHandler @ 004dd7c7 */
-  VertexStream__VertexStream__005a6980(pVVar8,1,1,3,0,&local_88,CGR__pPos2TexDecl);
+  pVVar8 = BaseResource__operator_new(0xa8, 1);
+  /* try { // try from 004dcc62 to 004dcc66 has its CatchHandler @ 004dd7c7 */
+  VertexStream__VertexStream__005a6980(pVVar8, 1, 1, 3, 0, &local_88, CGR__pPos2TexDecl);
   *(VertexStream **)((long)arg1 + 0x1aa8) = pVVar8;
-  BaseResource__Release(local_88,0);
+  BaseResource__Release(local_88, 0);
   local_168 = &local_218;
   local_210 = 0;
   local_218 = 0xbf800000;
@@ -3455,43 +3436,44 @@ void CreateSMBPaletteResources(void *arg1)
   local_170 = 0x10;
   local_16c = 5;
   local_88 = (BaseResource *)VertexBuffer__Create((tagVertexBufferCreation *)&local_178);
-  pVVar8 = BaseResource__operator_new(0xa8,1);
-                    /* try { // try from 004dcd7a to 004dcd7e has its CatchHandler @ 004dd7af */
-  VertexStream__VertexStream__005a6980(pVVar8,1,2,4,2,&local_88,CGR__pPos2TexDecl);
+  pVVar8 = BaseResource__operator_new(0xa8, 1);
+  /* try { // try from 004dcd7a to 004dcd7e has its CatchHandler @ 004dd7af */
+  VertexStream__VertexStream__005a6980(pVVar8, 1, 2, 4, 2, &local_88, CGR__pPos2TexDecl);
   *(VertexStream **)((long)arg1 + 0x1a90) = pVVar8;
-  BaseResource__Release(local_88,0);
-  PropertiesFile__FindPropertyBlock
-            (*(PropertiesFile **)((long)arg1 + 0x1a68),&local_80,"tiles",0);
-  PropertiesFile__FindPropertyVariable
-            (*(PropertiesFile **)((long)arg1 + 0x1a68),&local_78,local_80,"texturepackage");
-  PropertiesFile__FindPropertyVariable
-            (*(PropertiesFile **)((long)arg1 + 0x1a68),&local_70,local_80,"packageindex");
-  PropertiesFile__FindPropertyVariable
-            (*(PropertiesFile **)((long)arg1 + 0x1a68),&local_68,local_80,"tilesize");
-  PropertiesFile__FindPropertyVariable
-            (*(PropertiesFile **)((long)arg1 + 0x1a68),&local_60,local_80,"numtiles");
+  BaseResource__Release(local_88, 0);
+  PropertiesFile__FindPropertyBlock(*(PropertiesFile **)((long)arg1 + 0x1a68), &local_80, "tiles",
+                                    0);
+  PropertiesFile__FindPropertyVariable(*(PropertiesFile **)((long)arg1 + 0x1a68), &local_78,
+                                       local_80, "texturepackage");
+  PropertiesFile__FindPropertyVariable(*(PropertiesFile **)((long)arg1 + 0x1a68), &local_70,
+                                       local_80, "packageindex");
+  PropertiesFile__FindPropertyVariable(*(PropertiesFile **)((long)arg1 + 0x1a68), &local_68,
+                                       local_80, "tilesize");
+  PropertiesFile__FindPropertyVariable(*(PropertiesFile **)((long)arg1 + 0x1a68), &local_60,
+                                       local_80, "numtiles");
   psVar2 = (string *)((long)arg1 + 0x1a88);
-  std__string_string((string *)local_e8,psVar2);
+  std__string_string((string *)local_e8, psVar2);
   strlen((char *)(local_78 + 0x20));
-                    /* try { // try from 004dce72 to 004dce76 has its CatchHandler @ 004dd797 */
-  std__string_append((char *)local_e8,(ulong)(local_78 + 0x20));
-                    /* try { // try from 004dce83 to 004dcf44 has its CatchHandler @ 004dd78f */
+  /* try { // try from 004dce72 to 004dce76 has its CatchHandler @ 004dd797 */
+  std__string_append((char *)local_e8, (ulong)(local_78 + 0x20));
+  /* try { // try from 004dce83 to 004dcf44 has its CatchHandler @ 004dd78f */
   iVar6 = StringToInt(local_70 + 0x20);
   StringToInt(local_68 + 0x20);
   if (*(long *)(local_e8[0] + -0x18) != 0) {
     local_108[0] = local_e8[0];
-                    /* try { // try from 004dd474 to 004dd478 has its CatchHandler @ 004dd78f */
-    TexturePackage__TexturePackage((TexturePackage *)local_148,(TexturePackageCreate *)local_108);
-                    /* try { // try from 004dd47e to 004dd4aa has its CatchHandler @ 004dd802 */
-    pBVar9 = (BaseResource *)TexturePackage__CreateTexture((TexturePackage *)local_148,iVar6);
+    /* try { // try from 004dd474 to 004dd478 has its CatchHandler @ 004dd78f */
+    TexturePackage__TexturePackage((TexturePackage *)local_148, (TexturePackageCreate *)local_108);
+    /* try { // try from 004dd47e to 004dd4aa has its CatchHandler @ 004dd802 */
+    pBVar9 = (BaseResource *)TexturePackage__CreateTexture((TexturePackage *)local_148, iVar6);
     fVar13 = (float)StringToFloat(local_60 + 0x20);
     this_00 = operator_new(0x18);
-                    /* try { // try from 004dd4c0 to 004dd4c4 has its CatchHandler @ 004dd763 */
-    TileTexture__TileTexture__005a0be0(this_00,(Texture *)pBVar9,(int)SQRT(fVar13),(int)SQRT(fVar13));
+    /* try { // try from 004dd4c0 to 004dd4c4 has its CatchHandler @ 004dd763 */
+    TileTexture__TileTexture__005a0be0(this_00, (Texture *)pBVar9, (int)SQRT(fVar13),
+                                       (int)SQRT(fVar13));
     *(TileTexture **)((long)arg1 + 0x30) = this_00;
-                    /* try { // try from 004dd4ce to 004dd4d2 has its CatchHandler @ 004dd802 */
-    BaseResource__Release(pBVar9,0);
-                    /* try { // try from 004dd4d6 to 004dd4da has its CatchHandler @ 004dd78f */
+    /* try { // try from 004dd4ce to 004dd4d2 has its CatchHandler @ 004dd802 */
+    BaseResource__Release(pBVar9, 0);
+    /* try { // try from 004dd4d6 to 004dd4da has its CatchHandler @ 004dd78f */
     TexturePackage__TexturePackage__005a1b10((TexturePackage *)local_148);
   }
   if (0 < *(int *)((long)arg1 + 0x50)) {
@@ -3499,37 +3481,35 @@ void CreateSMBPaletteResources(void *arg1)
     iVar6 = 0;
     local_22c = 0;
     do {
-      local_22c = PropertiesFile__FindPropertyBlock
-                            (*(PropertiesFile **)((long)arg1 + 0x1a68),&local_58,"background",
-                             local_22c);
-      PropertiesFile__FindPropertyVariable
-                (*(PropertiesFile **)((long)arg1 + 0x1a68),&local_50,local_58,"texturepackage");
-      PropertiesFile__FindPropertyVariable
-                (*(PropertiesFile **)((long)arg1 + 0x1a68),(PropertyVariable **)local_48,local_58
-                 ,"packageindex");
-      std__string_string((string *)local_108,psVar2);
+      local_22c = PropertiesFile__FindPropertyBlock(*(PropertiesFile **)((long)arg1 + 0x1a68),
+                                                    &local_58, "background", local_22c);
+      PropertiesFile__FindPropertyVariable(*(PropertiesFile **)((long)arg1 + 0x1a68), &local_50,
+                                           local_58, "texturepackage");
+      PropertiesFile__FindPropertyVariable(*(PropertiesFile **)((long)arg1 + 0x1a68),
+                                           (PropertyVariable **)local_48, local_58, "packageindex");
+      std__string_string((string *)local_108, psVar2);
       pPVar12 = local_50 + 0x20;
       strlen((char *)pPVar12);
-                    /* try { // try from 004dcf67 to 004dcfa7 has its CatchHandler @ 004dd787 */
-      std__string_append((char *)local_108,(ulong)pPVar12);
+      /* try { // try from 004dcf67 to 004dcfa7 has its CatchHandler @ 004dd787 */
+      std__string_append((char *)local_108, (ulong)pPVar12);
       iVar7 = StringToInt(local_48[0] + 0x20);
       local_d8[0] = local_108[0];
-      TexturePackage__TexturePackage((TexturePackage *)local_148,(TexturePackageCreate *)local_d8);
-                    /* try { // try from 004dcfae to 004dcfb2 has its CatchHandler @ 004dd785 */
-      pBVar9 = (BaseResource *)TexturePackage__CreateTexture((TexturePackage *)local_148,iVar7);
+      TexturePackage__TexturePackage((TexturePackage *)local_148, (TexturePackageCreate *)local_d8);
+      /* try { // try from 004dcfae to 004dcfb2 has its CatchHandler @ 004dd785 */
+      pBVar9 = (BaseResource *)TexturePackage__CreateTexture((TexturePackage *)local_148, iVar7);
       local_120 = 0;
       local_118 = 0xffffffff;
       local_128 = pBVar9;
-                    /* try { // try from 004dcfda to 004dcfde has its CatchHandler @ 004dd77b */
+      /* try { // try from 004dcfda to 004dcfde has its CatchHandler @ 004dd77b */
       pSVar10 = operator_new(0x128);
-                    /* try { // try from 004dcfed to 004dcff1 has its CatchHandler @ 004dd622 */
-      Sprite__Sprite__005a0040(pSVar10,(SpriteCreation *)&local_128);
+      /* try { // try from 004dcfed to 004dcff1 has its CatchHandler @ 004dd622 */
+      Sprite__Sprite__005a0040(pSVar10, (SpriteCreation *)&local_128);
       *(Sprite **)(*(long *)((long)arg1 + 0x40) + lVar11) = pSVar10;
       pbVar3 = (byte *)(*(long *)(*(long *)((long)arg1 + 0x40) + lVar11) + 0x120);
       *pbVar3 = *pbVar3 | 1;
-                    /* try { // try from 004dd00e to 004dd012 has its CatchHandler @ 004dd77b */
-      BaseResource__Release(pBVar9,0);
-                    /* try { // try from 004dd016 to 004dd01a has its CatchHandler @ 004dd787 */
+      /* try { // try from 004dd00e to 004dd012 has its CatchHandler @ 004dd77b */
+      BaseResource__Release(pBVar9, 0);
+      /* try { // try from 004dd016 to 004dd01a has its CatchHandler @ 004dd787 */
       TexturePackage__TexturePackage__005a1b10((TexturePackage *)local_148);
       if ((allocator *)(local_108[0] + -0x18) !=
           (allocator *)&std__string_Rep_S_empty_rep_storage) {
@@ -3553,25 +3533,22 @@ void CreateSMBPaletteResources(void *arg1)
     iVar6 = 0;
     local_22c = 0;
     do {
-                    /* try { // try from 004dd0a0 to 004dd104 has its CatchHandler @ 004dd5ff */
-      local_22c = PropertiesFile__FindPropertyBlock
-                            (*(PropertiesFile **)((long)arg1 + 0x1a68),local_48,"paralax",
-                             local_22c);
-      PropertiesFile__FindPropertyVariable
-                (*(PropertiesFile **)((long)arg1 + 0x1a68),&local_50,local_48[0],"texturepackage"
-                );
-      PropertiesFile__FindPropertyVariable
-                (*(PropertiesFile **)((long)arg1 + 0x1a68),(PropertyVariable **)&local_58,
-                 local_48[0],"packageindex");
+      /* try { // try from 004dd0a0 to 004dd104 has its CatchHandler @ 004dd5ff */
+      local_22c = PropertiesFile__FindPropertyBlock(*(PropertiesFile **)((long)arg1 + 0x1a68),
+                                                    local_48, "paralax", local_22c);
+      PropertiesFile__FindPropertyVariable(*(PropertiesFile **)((long)arg1 + 0x1a68), &local_50,
+                                           local_48[0], "texturepackage");
+      PropertiesFile__FindPropertyVariable(*(PropertiesFile **)((long)arg1 + 0x1a68),
+                                           (PropertyVariable **)&local_58, local_48[0],
+                                           "packageindex");
       pPVar12 = local_50;
-      std__string_string((string *)local_a8,psVar2);
+      std__string_string((string *)local_a8, psVar2);
       strlen((char *)(pPVar12 + 0x20));
-                    /* try { // try from 004dd11f to 004dd123 has its CatchHandler @ 004dd620 */
-      std__string_append((char *)local_a8,(ulong)(pPVar12 + 0x20));
-                    /* try { // try from 004dd131 to 004dd135 has its CatchHandler @ 004dd609 */
+      /* try { // try from 004dd11f to 004dd123 has its CatchHandler @ 004dd620 */
+      std__string_append((char *)local_a8, (ulong)(pPVar12 + 0x20));
+      /* try { // try from 004dd131 to 004dd135 has its CatchHandler @ 004dd609 */
       std__string_assign((string *)local_b8);
-      if ((allocator *)(local_a8[0] + -0x18) !=
-          (allocator *)&std__string_Rep_S_empty_rep_storage) {
+      if ((allocator *)(local_a8[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
         LOCK();
         piVar1 = (int *)(local_a8[0] + -8);
         iVar7 = *piVar1;
@@ -3582,66 +3559,65 @@ void CreateSMBPaletteResources(void *arg1)
         }
       }
       local_d8[0] = local_b8[0];
-                    /* try { // try from 004dd172 to 004dd176 has its CatchHandler @ 004dd5ff */
-      TexturePackage__TexturePackage((TexturePackage *)local_108,(TexturePackageCreate *)local_d8);
-                    /* try { // try from 004dd183 to 004dd191 has its CatchHandler @ 004dd5ed */
+      /* try { // try from 004dd172 to 004dd176 has its CatchHandler @ 004dd5ff */
+      TexturePackage__TexturePackage((TexturePackage *)local_108, (TexturePackageCreate *)local_d8);
+      /* try { // try from 004dd183 to 004dd191 has its CatchHandler @ 004dd5ed */
       iVar7 = StringToInt(local_58 + 0x20);
-      pBVar9 = (BaseResource *)TexturePackage__CreateTexture((TexturePackage *)local_108,iVar7);
+      pBVar9 = (BaseResource *)TexturePackage__CreateTexture((TexturePackage *)local_108, iVar7);
       local_120 = 0;
       local_118 = 0xffffffff;
       local_128 = pBVar9;
-                    /* try { // try from 004dd1b9 to 004dd1bd has its CatchHandler @ 004dd704 */
+      /* try { // try from 004dd1b9 to 004dd1bd has its CatchHandler @ 004dd704 */
       pSVar10 = operator_new(0x128);
-                    /* try { // try from 004dd1cc to 004dd1d0 has its CatchHandler @ 004dd753 */
-      Sprite__Sprite__005a0040(pSVar10,(SpriteCreation *)&local_128);
+      /* try { // try from 004dd1cc to 004dd1d0 has its CatchHandler @ 004dd753 */
+      Sprite__Sprite__005a0040(pSVar10, (SpriteCreation *)&local_128);
       *(Sprite **)(*(long *)((long)arg1 + 0x38) + lVar11) = pSVar10;
       pbVar3 = (byte *)(*(long *)(*(long *)((long)arg1 + 0x38) + lVar11) + 0x120);
       *pbVar3 = *pbVar3 | 2;
-                    /* try { // try from 004dd1ed to 004dd1f1 has its CatchHandler @ 004dd704 */
-      BaseResource__Release(pBVar9,0);
-                    /* try { // try from 004dd1f5 to 004dd2ed has its CatchHandler @ 004dd5ff */
+      /* try { // try from 004dd1ed to 004dd1f1 has its CatchHandler @ 004dd704 */
+      BaseResource__Release(pBVar9, 0);
+      /* try { // try from 004dd1f5 to 004dd2ed has its CatchHandler @ 004dd5ff */
       TexturePackage__TexturePackage__005a1b10((TexturePackage *)local_108);
       iVar6 = iVar6 + 1;
       lVar11 = lVar11 + 8;
     } while (iVar6 < *(int *)((long)arg1 + 0x54));
   }
-  PropertiesFile__FindPropertyBlock
-            (*(PropertiesFile **)((long)arg1 + 0x1a68),local_98,"setpieces",0);
+  PropertiesFile__FindPropertyBlock(*(PropertiesFile **)((long)arg1 + 0x1a68), local_98,
+                                    "setpieces", 0);
   if (local_98[0] != (PropertyBlock *)0x0) {
-    PropertiesFile__FindPropertyVariable
-              (*(PropertiesFile **)((long)arg1 + 0x1a68),(PropertyVariable **)&local_58,
-               local_98[0],"texturepackage");
-    PropertiesFile__FindPropertyVariable
-              (*(PropertiesFile **)((long)arg1 + 0x1a68),&local_50,local_98[0],"packageindex");
-    PropertiesFile__FindPropertyVariable
-              (*(PropertiesFile **)((long)arg1 + 0x1a68),(PropertyVariable **)local_48,
-               local_98[0],"textureindex");
-    std__string_string((string *)local_d8,psVar2);
+    PropertiesFile__FindPropertyVariable(*(PropertiesFile **)((long)arg1 + 0x1a68),
+                                         (PropertyVariable **)&local_58, local_98[0],
+                                         "texturepackage");
+    PropertiesFile__FindPropertyVariable(*(PropertiesFile **)((long)arg1 + 0x1a68), &local_50,
+                                         local_98[0], "packageindex");
+    PropertiesFile__FindPropertyVariable(*(PropertiesFile **)((long)arg1 + 0x1a68),
+                                         (PropertyVariable **)local_48, local_98[0],
+                                         "textureindex");
+    std__string_string((string *)local_d8, psVar2);
     strlen((char *)(local_58 + 0x20));
-                    /* try { // try from 004dd308 to 004dd30c has its CatchHandler @ 004dd7ff */
-    std__string_append((char *)local_d8,(ulong)(local_58 + 0x20));
-                    /* try { // try from 004dd325 to 004dd329 has its CatchHandler @ 004dd7f7 */
-    std__string_string((string *)local_108,psVar2);
+    /* try { // try from 004dd308 to 004dd30c has its CatchHandler @ 004dd7ff */
+    std__string_append((char *)local_d8, (ulong)(local_58 + 0x20));
+    /* try { // try from 004dd325 to 004dd329 has its CatchHandler @ 004dd7f7 */
+    std__string_string((string *)local_108, psVar2);
     strlen((char *)(local_48[0] + 0x20));
-                    /* try { // try from 004dd33f to 004dd343 has its CatchHandler @ 004dd7e7 */
-    std__string_append((char *)local_108,(ulong)(local_48[0] + 0x20));
+    /* try { // try from 004dd33f to 004dd343 has its CatchHandler @ 004dd7e7 */
+    std__string_append((char *)local_108, (ulong)(local_48[0] + 0x20));
     local_148[0] = local_d8[0];
-                    /* try { // try from 004dd364 to 004dd368 has its CatchHandler @ 004dd7df */
-    TexturePackage__TexturePackage((TexturePackage *)&local_128,(TexturePackageCreate *)local_148);
-                    /* try { // try from 004dd375 to 004dd39d has its CatchHandler @ 004dd5e8 */
+    /* try { // try from 004dd364 to 004dd368 has its CatchHandler @ 004dd7df */
+    TexturePackage__TexturePackage((TexturePackage *)&local_128, (TexturePackageCreate *)local_148);
+    /* try { // try from 004dd375 to 004dd39d has its CatchHandler @ 004dd5e8 */
     iVar6 = StringToInt(local_50 + 0x20);
-    pBVar9 = (BaseResource *)TexturePackage__CreateTexture((TexturePackage *)&local_128,iVar6);
+    pBVar9 = (BaseResource *)TexturePackage__CreateTexture((TexturePackage *)&local_128, iVar6);
     pcVar5 = local_108[0];
     self = operator_new(0x18);
-                    /* try { // try from 004dd3aa to 004dd3ae has its CatchHandler @ 004dd584 */
-    IndexTexture__IndexTexture__005a0fc0(self,(Texture *)pBVar9,pcVar5);
+    /* try { // try from 004dd3aa to 004dd3ae has its CatchHandler @ 004dd584 */
+    IndexTexture__IndexTexture__005a0fc0(self, (Texture *)pBVar9, pcVar5);
     *(IndexTexture **)((long)arg1 + 0x70) = self;
-                    /* try { // try from 004dd3b8 to 004dd3bc has its CatchHandler @ 004dd5e8 */
-    BaseResource__Release(pBVar9,0);
-                    /* try { // try from 004dd3c5 to 004dd3c9 has its CatchHandler @ 004dd7df */
+    /* try { // try from 004dd3b8 to 004dd3bc has its CatchHandler @ 004dd5e8 */
+    BaseResource__Release(pBVar9, 0);
+    /* try { // try from 004dd3c5 to 004dd3c9 has its CatchHandler @ 004dd7df */
     TexturePackage__TexturePackage__005a1b10((TexturePackage *)&local_128);
-    if ((allocator *)(local_108[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage
-       ) {
+    if ((allocator *)(local_108[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_108[0] + -8);
       iVar6 = *piVar1;
@@ -3651,8 +3627,7 @@ void CreateSMBPaletteResources(void *arg1)
         std__string_Rep_M_destroy((allocator *)(local_108[0] + -0x18));
       }
     }
-    if ((allocator *)(local_d8[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_d8[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_d8[0] + -8);
       iVar6 = *piVar1;
@@ -3704,13 +3679,13 @@ void CreateSMBPaletteResources(void *arg1)
  */
 /* ModifyReplayBlock(ResizeableArray<ReplayBreakyBlock>&, GRIDBLOCK*, GRIDBLOCK&) */
 
-void ModifyReplayBlock(ResizeableArray *arg1,GRIDBLOCK *arg2,GRIDBLOCK *arg3)
+void ModifyReplayBlock(ResizeableArray *arg1, GRIDBLOCK *arg2, GRIDBLOCK *arg3)
 
 {
   long *plVar1;
   long lVar2;
   long *plVar3;
-  
+
   if (*(short *)(arg1 + 0x28) == 0) {
     return;
   }
@@ -3741,11 +3716,11 @@ uint64_t SMBBGLoaderThread(SyncEvent *arg1)
 {
   char *pcVar1;
   SMBPalette *self;
-  
+
   pcVar1 = *(char **)(arg1 + 0x70);
-  self = BaseResource__operator_new(0x43d8,0);
-                    /* try { // try from 004f7dff to 004f7e03 has its CatchHandler @ 004f7e25 */
-  SMBPalette__SMBPalette__004f3ca0(self,pcVar1);
+  self = BaseResource__operator_new(0x43d8, 0);
+  /* try { // try from 004f7dff to 004f7e03 has its CatchHandler @ 004f7e25 */
+  SMBPalette__SMBPalette__004f3ca0(self, pcVar1);
   *(SMBPalette **)(arg1 + 0x68) = self;
   SyncEvent__Set(arg1);
   return 0;
@@ -3787,14 +3762,14 @@ void SMBMoveOnUpdate(void *arg1)
  */
 /* SMBPopupDeActivateMenu(tagButtonProps const*, void*) */
 
-void SMBPopupDeActivateMenu(tagButtonProps *arg1,void *arg2)
+void SMBPopupDeActivateMenu(tagButtonProps *arg1, void *arg2)
 
 {
   if (*(int *)arg1 != 1) {
     return;
   }
-                    /* WARNING: Could not recover jumptable at 0x00501eca. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x00501eca. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(*(long *)arg2 + 0x28))(arg2);
   return;
 }
@@ -3807,14 +3782,14 @@ void SMBPopupDeActivateMenu(tagButtonProps *arg1,void *arg2)
  */
 /* SMBUpsellExit(tagButtonProps const*, void*) */
 
-void SMBUpsellExit(tagButtonProps *arg1,void *arg2)
+void SMBUpsellExit(tagButtonProps *arg1, void *arg2)
 
 {
   if (*(int *)arg1 != 1) {
     return;
   }
-                    /* WARNING: Could not recover jumptable at 0x00501ef3. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x00501ef3. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(*(long *)(SuperMeatBoy + 0x20) + 0x30))(SuperMeatBoy + 0x20);
   return;
 }
@@ -3827,11 +3802,11 @@ void SMBUpsellExit(tagButtonProps *arg1,void *arg2)
  */
 /* SMBUpsellBuy(tagButtonProps const*, void*) */
 
-void SMBUpsellBuy(tagButtonProps *arg1,void *arg2)
+void SMBUpsellBuy(tagButtonProps *arg1, void *arg2)
 
 {
   long lVar1;
-  
+
   if (*(int *)arg1 != 1) {
     return;
   }
@@ -3848,7 +3823,7 @@ void SMBUpsellBuy(tagButtonProps *arg1,void *arg2)
  */
 /* SMBUpsellContinue(tagButtonProps const*, void*) */
 
-void SMBUpsellContinue(tagButtonProps *arg1,void *arg2)
+void SMBUpsellContinue(tagButtonProps *arg1, void *arg2)
 
 {
   if (*(int *)arg1 != 1) {
@@ -3875,20 +3850,20 @@ void SMBMessageUpsellControls(void *arg1)
 {
   long lVar1;
   Joystick *pJVar2;
-  
+
   lVar1 = pCurrUpsellMenu;
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar2,2,SMBUpsellBuy,0);
+  Joystick__AddButtonCallback(pJVar2, 2, SMBUpsellBuy, 0);
   if (*(short *)(lVar1 + 0xb0) != 0) {
     return;
   }
   if (*(char *)(lVar1 + 0xb2) != '\x01') {
     pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddButtonCallback(pJVar2,0,SMBUpsellExit,0);
+    Joystick__AddButtonCallback(pJVar2, 0, SMBUpsellExit, 0);
     return;
   }
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar2,0,SMBUpsellContinue,0);
+  Joystick__AddButtonCallback(pJVar2, 0, SMBUpsellContinue, 0);
   return;
 }
 
@@ -3900,22 +3875,22 @@ void SMBMessageUpsellControls(void *arg1)
  */
 /* SMBCharSwitchMoveSelect(tagButtonProps const*, void*) */
 
-void SMBCharSwitchMoveSelect(tagButtonProps *arg1,void *arg2)
+void SMBCharSwitchMoveSelect(tagButtonProps *arg1, void *arg2)
 
 {
   GSuperMeatBoy *pGVar1;
   int iVar2;
-  
+
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
-    iVar2 = GSMBChapterData__IsCharacterUnlocked
-                      (SMBChapterData,(&DAT_00817108 /* R:0.0f */)[(long)*(int *)((long)arg2 + 0x68) * 4]);
+    iVar2 = GSMBChapterData__IsCharacterUnlocked(
+        SMBChapterData, (&DAT_00817108 /* R:0.0f */)[(long)*(int *)((long)arg2 + 0x68) * 4]);
     pGVar1 = SuperMeatBoy;
     if (iVar2 == 1) {
       *(uint32_t *)((long)arg2 + 0x6c) = 1;
-      GSuperMeatBoy__DeferLoadCharactor
-                (pGVar1,(&DAT_00817108 /* R:0.0f */)[(long)*(int *)((long)arg2 + 0x68) * 4]);
-                    /* WARNING: Could not recover jumptable at 0x00502d5b. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+      GSuperMeatBoy__DeferLoadCharactor(
+          pGVar1, (&DAT_00817108 /* R:0.0f */)[(long)*(int *)((long)arg2 + 0x68) * 4]);
+      /* WARNING: Could not recover jumptable at 0x00502d5b. Too many branches */
+      /* WARNING: Treating indirect jump as call */
       (**(code **)(*(long *)arg2 + 0x28))(arg2);
       return;
     }
@@ -3931,13 +3906,13 @@ void SMBCharSwitchMoveSelect(tagButtonProps *arg1,void *arg2)
  */
 /* SMBCharSwitchMoveUp(tagButtonProps const*, void*) */
 
-void SMBCharSwitchMoveUp(tagButtonProps *arg1,void *arg2)
+void SMBCharSwitchMoveUp(tagButtonProps *arg1, void *arg2)
 
 {
   GSMBChapterData *pGVar1;
   int iVar2;
   uint64_t uVar3;
-  
+
   pGVar1 = SMBChapterData;
   if ((arg1 == (tagButtonProps *)0x0) || (*(int *)arg1 != 1)) {
     return;
@@ -3947,13 +3922,15 @@ void SMBCharSwitchMoveUp(tagButtonProps *arg1,void *arg2)
     iVar2 = 0;
   }
   *(int *)((long)arg2 + 0x68) = iVar2;
-  iVar2 = GSMBChapterData__IsCharacterUnlocked(pGVar1,(&DAT_00817108 /* R:0.0f */)[(long)iVar2 * 4]);
+  iVar2 =
+      GSMBChapterData__IsCharacterUnlocked(pGVar1, (&DAT_00817108 /* R:0.0f */)[(long)iVar2 * 4]);
   if (iVar2 != 1) {
-    FlashTextField__SetText(*(char **)((long)arg2 + 0x58),&DAT_005c741a /* R:"??????" */);
+    FlashTextField__SetText(*(char **)((long)arg2 + 0x58), &DAT_005c741a /* R:"??????" */);
     return;
   }
-  uVar3 = GetLocalizedText(*(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)((long)arg2 + 0x68) * 0x10));
-  FlashTextField__SetText(*(wchar_t **)((long)arg2 + 0x58),uVar3);
+  uVar3 = GetLocalizedText(*(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ +
+                                     (long)*(int *)((long)arg2 + 0x68) * 0x10));
+  FlashTextField__SetText(*(wchar_t **)((long)arg2 + 0x58), uVar3);
   return;
 }
 
@@ -3965,13 +3942,13 @@ void SMBCharSwitchMoveUp(tagButtonProps *arg1,void *arg2)
  */
 /* SMBCharSwitchMoveLeft(tagButtonProps const*, void*) */
 
-void SMBCharSwitchMoveLeft(tagButtonProps *arg1,void *arg2)
+void SMBCharSwitchMoveLeft(tagButtonProps *arg1, void *arg2)
 
 {
   GSMBChapterData *pGVar1;
   int iVar2;
   uint64_t uVar3;
-  
+
   pGVar1 = SMBChapterData;
   if ((arg1 == (tagButtonProps *)0x0) || (*(int *)arg1 != 1)) {
     return;
@@ -3981,13 +3958,15 @@ void SMBCharSwitchMoveLeft(tagButtonProps *arg1,void *arg2)
     iVar2 = 0;
   }
   *(int *)((long)arg2 + 0x68) = iVar2;
-  iVar2 = GSMBChapterData__IsCharacterUnlocked(pGVar1,(&DAT_00817108 /* R:0.0f */)[(long)iVar2 * 4]);
+  iVar2 =
+      GSMBChapterData__IsCharacterUnlocked(pGVar1, (&DAT_00817108 /* R:0.0f */)[(long)iVar2 * 4]);
   if (iVar2 != 1) {
-    FlashTextField__SetText(*(char **)((long)arg2 + 0x58),&DAT_005c741a /* R:"??????" */);
+    FlashTextField__SetText(*(char **)((long)arg2 + 0x58), &DAT_005c741a /* R:"??????" */);
     return;
   }
-  uVar3 = GetLocalizedText(*(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ + (long)*(int *)((long)arg2 + 0x68) * 0x10));
-  FlashTextField__SetText(*(wchar_t **)((long)arg2 + 0x58),uVar3);
+  uVar3 = GetLocalizedText(*(uint *)(&DAT_0081710c /* R:3.685414961174269e-43f */ +
+                                     (long)*(int *)((long)arg2 + 0x68) * 0x10));
+  FlashTextField__SetText(*(wchar_t **)((long)arg2 + 0x58), uVar3);
   return;
 }
 
@@ -4029,7 +4008,7 @@ void SMBMessageUpsellRender(void)
  */
 /* SMBCharSwitchMoveDown(tagButtonProps const*, void*) */
 
-void SMBCharSwitchMoveDown(tagButtonProps *arg1,void *arg2)
+void SMBCharSwitchMoveDown(tagButtonProps *arg1, void *arg2)
 
 {
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {
@@ -4047,7 +4026,7 @@ void SMBCharSwitchMoveDown(tagButtonProps *arg1,void *arg2)
  */
 /* SMBCharSwitchMoveRight(tagButtonProps const*, void*) */
 
-void SMBCharSwitchMoveRight(tagButtonProps *arg1,void *arg2)
+void SMBCharSwitchMoveRight(tagButtonProps *arg1, void *arg2)
 
 {
   if ((arg1 != (tagButtonProps *)0x0) && (*(int *)arg1 == 1)) {

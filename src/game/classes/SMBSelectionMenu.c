@@ -67,19 +67,19 @@ void __thiscall SMBSelectionMenu__DeActivate(SMBSelectionMenu *self)
 
 {
   Joystick *pJVar1;
-  
+
   if (*(int *)(self + 0x7c) != 1) {
     SMBPopupMenu__DeActivate((SMBPopupMenu *)self);
     return;
   }
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x1f,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x7f,0,0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x1f, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x7f, 0, 0);
   }
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,0,0,0);
+  Joystick__AddPOVCallback(pJVar1, 0, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,2,0,0);
+  Joystick__AddPOVCallback(pJVar1, 2, 0, 0);
   SMBPopupMenu__DeActivate((SMBPopupMenu *)self);
   return;
 }
@@ -151,19 +151,19 @@ void __thiscall SMBSelectionMenu__Activate(SMBSelectionMenu *self)
 
 {
   Joystick *pJVar1;
-  
+
   SMBPopupMenu__Activate((SMBPopupMenu *)self);
   if (*(int *)(self + 0x7c) != 1) {
     return;
   }
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x1f,SMBSelectionMenuIncrement,self);
-    TKeyboard__AddKeyCallback(Keyboard,0x7f,SMBSelectionMenuDecrement,self);
+    TKeyboard__AddKeyCallback(Keyboard, 0x1f, SMBSelectionMenuIncrement, self);
+    TKeyboard__AddKeyCallback(Keyboard, 0x7f, SMBSelectionMenuDecrement, self);
   }
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,2,SMBSelectionMenuIncrement,self);
+  Joystick__AddPOVCallback(pJVar1, 2, SMBSelectionMenuIncrement, self);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,0,SMBSelectionMenuDecrement,self);
+  Joystick__AddPOVCallback(pJVar1, 0, SMBSelectionMenuDecrement, self);
   return;
 }
 
@@ -204,11 +204,11 @@ void __thiscall SMBSelectionMenu__DecrementSelection(SMBSelectionMenu *self)
   uint uVar2;
   long lVar3;
   uint32_t *puVar4;
-  
+
   if ((*(int *)(self + 0x6c) != 0) && ((*(ushort *)(self + 0x36) & 0xfff0) != 0x10)) {
     uVar2 = *(uint *)(self + 0x68);
-    FlashLibraryInstance__GotoAndStop
-              (*(FlashLibraryInstance **)(*(long *)(self + 0x58) + 0x20 + (ulong)uVar2 * 0x28),2);
+    FlashLibraryInstance__GotoAndStop(
+        *(FlashLibraryInstance **)(*(long *)(self + 0x58) + 0x20 + (ulong)uVar2 * 0x28), 2);
     lVar3 = (ulong)uVar2 * 0x28 + *(long *)(self + 0x58);
     lVar1 = *(long *)(lVar3 + 0x10);
     if (lVar1 != 0) {
@@ -221,8 +221,8 @@ void __thiscall SMBSelectionMenu__DecrementSelection(SMBSelectionMenu *self)
       (**(code **)(*(long *)self + 0x60))(self);
       uVar2 = *(uint *)(self + 0x68);
     }
-    FlashLibraryInstance__GotoAndStop
-              (*(FlashLibraryInstance **)(*(long *)(self + 0x58) + 0x20 + (ulong)uVar2 * 0x28),1);
+    FlashLibraryInstance__GotoAndStop(
+        *(FlashLibraryInstance **)(*(long *)(self + 0x58) + 0x20 + (ulong)uVar2 * 0x28), 1);
     puVar4 = (uint32_t *)((ulong)uVar2 * 0x28 + *(long *)(self + 0x58));
     lVar1 = *(long *)(puVar4 + 4);
     if (lVar1 != 0) {
@@ -249,7 +249,7 @@ void __thiscall SMBSelectionMenu__IncrementSelection(SMBSelectionMenu *self)
   ulong uVar3;
   long lVar4;
   uint32_t *puVar5;
-  
+
   if (*(int *)(self + 0x6c) == 0) {
     return;
   }
@@ -257,8 +257,8 @@ void __thiscall SMBSelectionMenu__IncrementSelection(SMBSelectionMenu *self)
     return;
   }
   uVar2 = *(uint *)(self + 0x68);
-  FlashLibraryInstance__GotoAndStop
-            (*(FlashLibraryInstance **)(*(long *)(self + 0x58) + 0x20 + (ulong)uVar2 * 0x28),2);
+  FlashLibraryInstance__GotoAndStop(
+      *(FlashLibraryInstance **)(*(long *)(self + 0x58) + 0x20 + (ulong)uVar2 * 0x28), 2);
   lVar4 = (ulong)uVar2 * 0x28 + *(long *)(self + 0x58);
   lVar1 = *(long *)(lVar4 + 0x10);
   if (lVar1 != 0) {
@@ -270,15 +270,16 @@ void __thiscall SMBSelectionMenu__IncrementSelection(SMBSelectionMenu *self)
     uVar2 = uVar2 + 1;
     uVar3 = (ulong)uVar2;
     *(uint *)(self + 0x68) = uVar2;
-    if ((int)uVar2 < *(int *)(self + 0x70)) goto LAB_00510208;
-  }
-  else if ((int)uVar2 < *(int *)(self + 0x70)) goto LAB_00510208;
+    if ((int)uVar2 < *(int *)(self + 0x70))
+      goto LAB_00510208;
+  } else if ((int)uVar2 < *(int *)(self + 0x70))
+    goto LAB_00510208;
   *(uint32_t *)(self + 0x68) = 0;
   (**(code **)(*(long *)self + 0x58))(self);
-  uVar3 = (ulong)*(uint *)(self + 0x68);
+  uVar3 = (ulong) * (uint *)(self + 0x68);
 LAB_00510208:
-  FlashLibraryInstance__GotoAndStop
-            (*(FlashLibraryInstance **)(*(long *)(self + 0x58) + 0x20 + uVar3 * 0x28),1);
+  FlashLibraryInstance__GotoAndStop(
+      *(FlashLibraryInstance **)(*(long *)(self + 0x58) + 0x20 + uVar3 * 0x28), 1);
   puVar5 = (uint32_t *)(uVar3 * 0x28 + *(long *)(self + 0x58));
   lVar1 = *(long *)(puVar5 + 4);
   if (lVar1 != 0) {
@@ -315,7 +316,7 @@ void __thiscall SMBSelectionMenu__SMBSelectionMenu__00510270(SMBSelectionMenu *s
  */
 /* SMBSelectionMenu__InitializeMenuRows(int) */
 
-void __thiscall SMBSelectionMenu__InitializeMenuRows(SMBSelectionMenu *self,int arg1)
+void __thiscall SMBSelectionMenu__InitializeMenuRows(SMBSelectionMenu *self, int arg1)
 
 {
   long lVar1;
@@ -326,40 +327,38 @@ void __thiscall SMBSelectionMenu__InitializeMenuRows(SMBSelectionMenu *self,int 
   uint64_t uVar5;
   long lVar6;
   int iVar7;
-  char local_58 [28];
-  int local_3c [3];
-  
+  char local_58[28];
+  int local_3c[3];
+
   pvVar4 = operator_new__((long)arg1 * 0x28);
   *(void **)(self + 0x58) = pvVar4;
-  this_00 = (FlashMovieClip *)
-            FlashAnimationLibrary__GetLibraryEntry
-                      (*(FlashAnimationLibrary **)(self + 8),*(int *)(*(long *)(self + 0x28) + 0x20)
-                      );
-  iVar2 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),"selectbar");
+  this_00 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(
+      *(FlashAnimationLibrary **)(self + 8), *(int *)(*(long *)(self + 0x28) + 0x20));
+  iVar2 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), "selectbar");
   local_3c[0] = 0;
   if (0 < arg1) {
     iVar7 = 0;
     lVar6 = 0;
     do {
       iVar7 = iVar7 + 1;
-      Sprint("row%isel",local_58,iVar7);
+      Sprint("row%isel", local_58, iVar7);
       lVar1 = *(long *)(self + 0x58);
-      uVar3 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),local_58);
+      uVar3 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), local_58);
       *(uint32_t *)(lVar6 + lVar1) = uVar3;
-      Sprint("row%idis",local_58,iVar7);
+      Sprint("row%idis", local_58, iVar7);
       lVar1 = *(long *)(self + 0x58);
-      uVar3 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),local_58);
+      uVar3 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), local_58);
       *(uint32_t *)(lVar6 + lVar1 + 4) = uVar3;
-      Sprint("row%ioff",local_58,iVar7);
+      Sprint("row%ioff", local_58, iVar7);
       lVar1 = *(long *)(self + 0x58);
-      uVar3 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),local_58);
+      uVar3 = FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), local_58);
       *(uint32_t *)(lVar6 + lVar1 + 8) = uVar3;
       lVar1 = *(long *)(self + 0x58);
-      uVar5 = FlashMovieClip__FindInstance(this_00,*(int *)(lVar6 + lVar1 + 8),0,(int *)0x0,0);
+      uVar5 = FlashMovieClip__FindInstance(this_00, *(int *)(lVar6 + lVar1 + 8), 0, (int *)0x0, 0);
       *(uint64_t *)(lVar6 + lVar1 + 0x10) = uVar5;
       *(int *)(*(long *)(self + 0x58) + 0x18 + lVar6) = iVar2;
       lVar1 = *(long *)(self + 0x58);
-      uVar5 = FlashMovieClip__FindInstance(this_00,iVar2,local_3c[0],local_3c,0);
+      uVar5 = FlashMovieClip__FindInstance(this_00, iVar2, local_3c[0], local_3c, 0);
       *(uint64_t *)(lVar6 + lVar1 + 0x20) = uVar5;
       lVar6 = lVar6 + 0x28;
     } while (iVar7 != arg1);
@@ -376,14 +375,14 @@ void __thiscall SMBSelectionMenu__InitializeMenuRows(SMBSelectionMenu *self,int 
  */
 /* SMBSelectionMenu__SetRowAsSelected(unsigned int) */
 
-void __thiscall SMBSelectionMenu__SetRowAsSelected(SMBSelectionMenu *self,uint arg1)
+void __thiscall SMBSelectionMenu__SetRowAsSelected(SMBSelectionMenu *self, uint arg1)
 
 {
   long lVar1;
   uint32_t *puVar2;
-  
-  FlashLibraryInstance__GotoAndStop
-            (*(FlashLibraryInstance **)(*(long *)(self + 0x58) + 0x20 + (ulong)arg1 * 0x28),1);
+
+  FlashLibraryInstance__GotoAndStop(
+      *(FlashLibraryInstance **)(*(long *)(self + 0x58) + 0x20 + (ulong)arg1 * 0x28), 1);
   puVar2 = (uint32_t *)((ulong)arg1 * 0x28 + *(long *)(self + 0x58));
   lVar1 = *(long *)(puVar2 + 4);
   if (lVar1 != 0) {
@@ -401,14 +400,14 @@ void __thiscall SMBSelectionMenu__SetRowAsSelected(SMBSelectionMenu *self,uint a
  */
 /* SMBSelectionMenu__SetRowAsUnselected(unsigned int) */
 
-void __thiscall SMBSelectionMenu__SetRowAsUnselected(SMBSelectionMenu *self,uint arg1)
+void __thiscall SMBSelectionMenu__SetRowAsUnselected(SMBSelectionMenu *self, uint arg1)
 
 {
   long lVar1;
   long lVar2;
-  
-  FlashLibraryInstance__GotoAndStop
-            (*(FlashLibraryInstance **)(*(long *)(self + 0x58) + 0x20 + (ulong)arg1 * 0x28),2);
+
+  FlashLibraryInstance__GotoAndStop(
+      *(FlashLibraryInstance **)(*(long *)(self + 0x58) + 0x20 + (ulong)arg1 * 0x28), 2);
   lVar2 = (ulong)arg1 * 0x28 + *(long *)(self + 0x58);
   lVar1 = *(long *)(lVar2 + 0x10);
   if (lVar1 != 0) {

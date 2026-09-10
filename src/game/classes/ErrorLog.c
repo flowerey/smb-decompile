@@ -41,11 +41,11 @@ void __thiscall ErrorLog__ErrorLog__005b6fc0(ErrorLog *self)
 
 {
   File *this_00;
-  
+
   this_00 = *(File **)self;
   *(uint32_t *)(self + 8) = 0;
   if (this_00 != (File *)0x0) {
-                    /* try { // try from 005b6fe3 to 005b6fe7 has its CatchHandler @ 005b7007 */
+    /* try { // try from 005b6fe3 to 005b6fe7 has its CatchHandler @ 005b7007 */
     File__File__005b7a70(this_00);
     operator_delete(this_00);
   }
@@ -62,7 +62,7 @@ void __thiscall ErrorLog__ErrorLog__005b6fc0(ErrorLog *self)
  */
 /* ErrorLog__Initialize(char const*) */
 
-void __thiscall ErrorLog__Initialize(ErrorLog *self,char *arg1)
+void __thiscall ErrorLog__Initialize(ErrorLog *self, char *arg1)
 
 {
   File *this_00;
@@ -77,7 +77,7 @@ void __thiscall ErrorLog__Initialize(ErrorLog *self,char *arg1)
   uint32_t local_28;
   uint32_t local_24;
   uint8_t *local_20;
-  
+
   local_48 = 2;
   local_40 = 0;
   local_38 = 0;
@@ -90,8 +90,8 @@ void __thiscall ErrorLog__Initialize(ErrorLog *self,char *arg1)
   local_50 = &DAT_005c04d3 /* R:3.984248865183858e-39f */;
   local_58 = arg1;
   this_00 = operator_new(0x30);
-                    /* try { // try from 005b7093 to 005b7097 has its CatchHandler @ 005b70a9 */
-  File__File(this_00,(tagFileCreation *)&local_58);
+  /* try { // try from 005b7093 to 005b7097 has its CatchHandler @ 005b70a9 */
+  File__File(this_00, (tagFileCreation *)&local_58);
   *(File **)self = this_00;
   *(uint32_t *)(self + 8) = 1;
   return;
@@ -106,26 +106,26 @@ void __thiscall ErrorLog__Initialize(ErrorLog *self,char *arg1)
  */
 /* ErrorLog__Write(char const*) */
 
-void __thiscall ErrorLog__Write(ErrorLog *self,char *arg1)
+void __thiscall ErrorLog__Write(ErrorLog *self, char *arg1)
 
 {
   size_t sVar1;
   int iVar2;
-  AutoLockSection aAStack_28 [16];
-  
-  AutoLockSection__AutoLockSection(aAStack_28,(CriticalSection *)(self + 0x10));
+  AutoLockSection aAStack_28[16];
+
+  AutoLockSection__AutoLockSection(aAStack_28, (CriticalSection *)(self + 0x10));
   if (*(int *)(self + 8) == 1) {
     if (0 < *(int *)(self + 0xc)) {
       iVar2 = 0;
       do {
-                    /* try { // try from 005b70fe to 005b7133 has its CatchHandler @ 005b7145 */
-        File__Write(*(File **)self,"\t\n\n\n\nFatal Error: %s\n\n",1);
+        /* try { // try from 005b70fe to 005b7133 has its CatchHandler @ 005b7145 */
+        File__Write(*(File **)self, "\t\n\n\n\nFatal Error: %s\n\n", 1);
         iVar2 = iVar2 + 1;
       } while (iVar2 < *(int *)(self + 0xc));
     }
     sVar1 = strlen(arg1);
-    File__Write(*(File **)self,arg1,(uint)sVar1);
-    File__Write(*(File **)self,"\n\n\n\nFatal Error: %s\n\n",1);
+    File__Write(*(File **)self, arg1, (uint)sVar1);
+    File__Write(*(File **)self, "\n\n\n\nFatal Error: %s\n\n", 1);
   }
   AutoLockSection__AutoLockSection__005b59d0(aAStack_28);
   return;

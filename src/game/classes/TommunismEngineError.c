@@ -18,8 +18,8 @@
  */
 /* TommunismEngineError__TommunismEngineError(char const*, ...) */
 
-void __thiscall
-TommunismEngineError__TommunismEngineError(TommunismEngineError *self,char *arg1,...)
+void __thiscall TommunismEngineError__TommunismEngineError(TommunismEngineError *self, char *arg1,
+                                                           ...)
 
 {
   char *pcVar1;
@@ -42,7 +42,7 @@ TommunismEngineError__TommunismEngineError(TommunismEngineError *self,char *arg1
   uint32_t local_dc;
   uint8_t *local_d8;
   uint8_t *local_d0;
-  uint8_t local_c8 [16];
+  uint8_t local_c8[16];
   uint64_t local_b8;
   uint64_t local_b0;
   uint64_t local_a8;
@@ -55,7 +55,7 @@ TommunismEngineError__TommunismEngineError(TommunismEngineError *self,char *arg1
   uint64_t local_48;
   uint64_t local_38;
   uint64_t local_28;
-  
+
   if (in_AL != '\0') {
     local_98 = in_XMM0_Qa;
     local_88 = in_XMM1_Qa;
@@ -77,14 +77,14 @@ TommunismEngineError__TommunismEngineError(TommunismEngineError *self,char *arg1
   local_b0 = in_RCX;
   local_a8 = in_R8;
   local_a0 = in_R9;
-  SprintArgList(arg1,pcVar1,&local_e0);
+  SprintArgList(arg1, pcVar1, &local_e0);
   pcVar1 = strLargeString;
   sVar2 = strlen(strLargeString);
   sVar2 = (size_t)((int)sVar2 + 1);
   __dest = malloc(sVar2);
   *(char **)(self + 8) = __dest;
   if (pcVar1 != __dest) {
-    memcpy(__dest,pcVar1,sVar2);
+    memcpy(__dest, pcVar1, sVar2);
   }
   return;
 }

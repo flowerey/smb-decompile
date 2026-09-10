@@ -30,7 +30,7 @@ void __thiscall SQLDatabase__SQLDatabase(SQLDatabase *self)
   *(uint8_t **)(self + 0x28) = &DAT_008184c8 /* R:0.00016803004837129265f */;
   *(uint8_t **)(self + 0x30) = &DAT_008184c8 /* R:0.00016803004837129265f */;
   *(uint8_t **)(self + 0x38) = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 005b44c0 to 005b44c4 has its CatchHandler @ 005b4505 */
+  /* try { // try from 005b44c0 to 005b44c4 has its CatchHandler @ 005b4505 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x40));
   *(uint16_t *)(self + 0x6a) = 0;
   *(uint16_t *)(self + 0x68) = 0;
@@ -62,11 +62,11 @@ void __thiscall SQLDatabase__SQLDatabase__005b4540(SQLDatabase *self)
   allocator *paVar1;
   int *piVar2;
   int iVar3;
-  
+
   *(uint32_t *)(self + 0x10) = 0;
   if (*(long *)(self + 8) != 0) {
     while (*(int *)(self + 0x18) == 0) {
-                    /* try { // try from 005b4565 to 005b4589 has its CatchHandler @ 005b4657 */
+      /* try { // try from 005b4565 to 005b4589 has its CatchHandler @ 005b4657 */
       usleep(10000);
     }
     CloseThread(*(THREADHANDLESTRUCT **)(self + 8));
@@ -85,7 +85,7 @@ void __thiscall SQLDatabase__SQLDatabase__005b4540(SQLDatabase *self)
     *(uint64_t *)(self + 0x78) = 0;
     *(uint64_t *)(self + 0x80) = 0;
   }
-                    /* try { // try from 005b459a to 005b459e has its CatchHandler @ 005b47d0 */
+  /* try { // try from 005b459a to 005b459e has its CatchHandler @ 005b47d0 */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x40));
   paVar1 = (allocator *)(*(long *)(self + 0x38) + -0x18);
   if (paVar1 != (allocator *)&std__string_Rep_S_empty_rep_storage) {
@@ -158,7 +158,7 @@ uint32_t __thiscall SQLDatabase__IsConnectionActive(SQLDatabase *self)
  */
 /* SQLDatabase__SetProcessingStatus(int) */
 
-void __thiscall SQLDatabase__SetProcessingStatus(SQLDatabase *self,int arg1)
+void __thiscall SQLDatabase__SetProcessingStatus(SQLDatabase *self, int arg1)
 
 {
   *(int *)(self + 0x14) = arg1;
@@ -193,7 +193,7 @@ void __thiscall SQLDatabase__WaitForQuery(SQLDatabase *self)
 
 {
   int iVar1;
-  
+
   iVar1 = *(int *)(self + 0x14);
   while (iVar1 == 1) {
     usleep(100000);
@@ -227,7 +227,7 @@ void __thiscall SQLDatabase__ReadyConnectionClosure(SQLDatabase *self)
  */
 /* SQLDatabase__ChooseDatabase(char const*) */
 
-void __thiscall SQLDatabase__ChooseDatabase(SQLDatabase *self,char *arg1)
+void __thiscall SQLDatabase__ChooseDatabase(SQLDatabase *self, char *arg1)
 
 {
   if (*(long *)(self + 8) == 0) {
@@ -237,7 +237,7 @@ void __thiscall SQLDatabase__ChooseDatabase(SQLDatabase *self,char *arg1)
     mysql_select_db();
   }
   strlen(arg1);
-  std__string_assign((char *)(self + 0x38),(ulong)arg1);
+  std__string_assign((char *)(self + 0x38), (ulong)arg1);
   return;
 }
 
@@ -254,22 +254,21 @@ void __thiscall SQLDatabase__Reconnect(SQLDatabase *self)
 
 {
   long lVar1;
-  
+
   lVar1 = *(long *)self;
   if (lVar1 == 0) {
     lVar1 = mysql_init(0);
     *(long *)self = lVar1;
-    mysql_real_connect(lVar1,*(uint64_t *)(self + 0x20),*(uint64_t *)(self + 0x28),
-                       *(uint64_t *)(self + 0x30),0,0,0,0);
+    mysql_real_connect(lVar1, *(uint64_t *)(self + 0x20), *(uint64_t *)(self + 0x28),
+                       *(uint64_t *)(self + 0x30), 0, 0, 0, 0);
     if (lVar1 == 0) {
       return;
     }
+  } else {
+    mysql_real_connect(lVar1, *(uint64_t *)(self + 0x20), *(uint64_t *)(self + 0x28),
+                       *(uint64_t *)(self + 0x30), 0, 0, 0, 0);
   }
-  else {
-    mysql_real_connect(lVar1,*(uint64_t *)(self + 0x20),*(uint64_t *)(self + 0x28),
-                       *(uint64_t *)(self + 0x30),0,0,0,0);
-  }
-  mysql_select_db(lVar1,*(uint64_t *)(self + 0x38));
+  mysql_select_db(lVar1, *(uint64_t *)(self + 0x38));
   return;
 }
 
@@ -282,7 +281,7 @@ void __thiscall SQLDatabase__Reconnect(SQLDatabase *self)
  */
 /* SQLDatabase__Connect(SQLDatabaseConnection const*) */
 
-void __thiscall SQLDatabase__Connect(SQLDatabase *self,SQLDatabaseConnection *arg1)
+void __thiscall SQLDatabase__Connect(SQLDatabase *self, SQLDatabaseConnection *arg1)
 
 {
   char *pcVar1;
@@ -290,24 +289,24 @@ void __thiscall SQLDatabase__Connect(SQLDatabase *self,SQLDatabaseConnection *ar
   code *local_38;
   SQLDatabase *local_30;
   uint32_t local_28;
-  
+
   pcVar1 = *(char **)(arg1 + 0x10);
   strlen(pcVar1);
-  std__string_assign((char *)(self + 0x20),(ulong)pcVar1);
+  std__string_assign((char *)(self + 0x20), (ulong)pcVar1);
   pcVar1 = *(char **)arg1;
   strlen(pcVar1);
-  std__string_assign((char *)(self + 0x28),(ulong)pcVar1);
+  std__string_assign((char *)(self + 0x28), (ulong)pcVar1);
   pcVar1 = *(char **)(arg1 + 8);
   strlen(pcVar1);
-  std__string_assign((char *)(self + 0x30),(ulong)pcVar1);
+  std__string_assign((char *)(self + 0x30), (ulong)pcVar1);
   *(uint32_t *)(self + 0x10) = 1;
   if (*(int *)(arg1 + 0x18) != 1) {
     uVar2 = mysql_init(0);
-    mysql_server_init(0,0,0);
+    mysql_server_init(0, 0, 0);
     *(uint64_t *)self = uVar2;
     *(uint64_t *)(self + 8) = 0;
-    mysql_real_connect(uVar2,*(uint64_t *)(self + 0x20),*(uint64_t *)(self + 0x28),
-                       *(uint64_t *)(self + 0x30),0,0,0,0);
+    mysql_real_connect(uVar2, *(uint64_t *)(self + 0x20), *(uint64_t *)(self + 0x28),
+                       *(uint64_t *)(self + 0x30), 0, 0, 0, 0);
     return;
   }
   local_28 = 2;
@@ -339,11 +338,11 @@ uint64_t __thiscall SQLDatabase__PopQueuedQuery(SQLDatabase *self)
   int iVar7;
   uint64_t uVar8;
   ushort uVar9;
-  
+
   uVar8 = 0;
   if (*(short *)(self + 0x68) != 0) {
     uVar8 = **(uint64_t **)(self + 0x78);
-    CriticalSection__Lock((CriticalSection *)(self + 0x40),1);
+    CriticalSection__Lock((CriticalSection *)(self + 0x40), 1);
     uVar5 = *(ushort *)(self + 0x68);
     if (1 < uVar5) {
       lVar4 = 0;
@@ -361,13 +360,15 @@ uint64_t __thiscall SQLDatabase__PopQueuedQuery(SQLDatabase *self)
       if (uVar9 != 0) {
         uVar5 = 0;
         do {
-          while( true ) {
+          while (true) {
             puVar2 = (ushort *)(*(long *)(self + 0x80) + (ulong)uVar5 * 2);
-            if (*puVar2 != 0) break;
+            if (*puVar2 != 0)
+              break;
             *puVar2 = 0xffff;
             uVar9 = *(ushort *)(self + 0x6a);
             uVar5 = uVar5 + 1;
-            if (uVar9 <= uVar5) goto LAB_005b4b2f;
+            if (uVar9 <= uVar5)
+              goto LAB_005b4b2f;
           }
           uVar6 = *puVar2 - 1;
           if (uVar6 < 0xfffe) {
@@ -376,7 +377,7 @@ uint64_t __thiscall SQLDatabase__PopQueuedQuery(SQLDatabase *self)
           }
           uVar5 = uVar5 + 1;
         } while (uVar5 < uVar9);
-LAB_005b4b2f:
+      LAB_005b4b2f:
         uVar5 = *(ushort *)(self + 0x68);
       }
     }
@@ -399,7 +400,7 @@ LAB_005b4b2f:
  */
 /* SQLDatabase__AddQueuedQuery(SQLQuery*) */
 
-void __thiscall SQLDatabase__AddQueuedQuery(SQLDatabase *self,SQLQuery *arg1)
+void __thiscall SQLDatabase__AddQueuedQuery(SQLDatabase *self, SQLQuery *arg1)
 
 {
   void *pvVar1;
@@ -413,7 +414,7 @@ void __thiscall SQLDatabase__AddQueuedQuery(SQLDatabase *self,SQLQuery *arg1)
   uint64_t *puVar9;
   ulong uVar10;
   uint64_t *puVar11;
-  
+
   if (*(short *)(arg1 + 0x22) == 1) {
     puVar11 = operator_new(0x28);
     *puVar11 = *(uint64_t *)arg1;
@@ -421,7 +422,7 @@ void __thiscall SQLDatabase__AddQueuedQuery(SQLDatabase *self,SQLQuery *arg1)
     puVar11[2] = *(uint64_t *)(arg1 + 0x10);
     puVar11[3] = *(uint64_t *)(arg1 + 0x18);
     puVar11[4] = *(uint64_t *)(arg1 + 0x20);
-    CriticalSection__Lock((CriticalSection *)(self + 0x40),1);
+    CriticalSection__Lock((CriticalSection *)(self + 0x40), 1);
     if (*(int *)(self + 0x88) == -0x5eef3582) {
       uVar2 = *(ushort *)(self + 0x68);
       if (*(ushort *)(self + 0x6a) <= uVar2) {
@@ -433,8 +434,8 @@ void __thiscall SQLDatabase__AddQueuedQuery(SQLDatabase *self,SQLQuery *arg1)
         uVar6 = (ulong)uVar2 * 8;
         pvVar5 = malloc(uVar10 + 0x10 + uVar6);
         if (pvVar5 != (void *)0x0) {
-          pvVar4 = (void *)((long)pvVar5 + 0x10U +
-                           (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
+          pvVar4 =
+              (void *)((long)pvVar5 + 0x10U + (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
           *(ulong *)((long)pvVar4 + -0x10) = uVar6;
           *(void **)((long)pvVar4 + -8) = pvVar5;
           if (pvVar1 != (void *)0x0) {
@@ -442,7 +443,7 @@ void __thiscall SQLDatabase__AddQueuedQuery(SQLDatabase *self,SQLQuery *arg1)
             if (uVar6 <= *(ulong *)((long)pvVar1 + -0x10)) {
               uVar10 = uVar6;
             }
-            memcpy(pvVar4,pvVar1,uVar10);
+            memcpy(pvVar4, pvVar1, uVar10);
             free(*(void **)((long)pvVar1 + -8));
           }
         }
@@ -456,39 +457,40 @@ void __thiscall SQLDatabase__AddQueuedQuery(SQLDatabase *self,SQLQuery *arg1)
           pvVar5 = malloc(uVar10 + 0x10 + uVar6);
           if (pvVar5 != (void *)0x0) {
             pvVar4 = (void *)((long)pvVar5 + 0x10U +
-                             (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
+                              (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
             *(ulong *)((long)pvVar4 + -0x10) = uVar6;
             *(void **)((long)pvVar4 + -8) = pvVar5;
             uVar10 = *(ulong *)((long)pvVar1 + -0x10);
             if (uVar6 <= *(ulong *)((long)pvVar1 + -0x10)) {
               uVar10 = uVar6;
             }
-            memcpy(pvVar4,pvVar1,uVar10);
+            memcpy(pvVar4, pvVar1, uVar10);
             free(*(void **)((long)pvVar1 + -8));
             uVar8 = *(ushort *)(self + 0x6a);
           }
           uVar2 = *(ushort *)(self + 0x68);
           *(void **)(self + 0x80) = pvVar4;
-          if (uVar8 <= uVar2) goto LAB_005b4f08;
-          while( true ) {
+          if (uVar8 <= uVar2)
+            goto LAB_005b4f08;
+          while (true) {
             uVar6 = (ulong)uVar2;
             uVar2 = uVar2 + 1;
             *(uint16_t *)((long)pvVar4 + uVar6 * 2) = 0xffff;
-            if (uVar8 <= uVar2) break;
+            if (uVar8 <= uVar2)
+              break;
             pvVar4 = *(void **)(self + 0x80);
           }
         }
         uVar2 = *(ushort *)(self + 0x68);
       }
-    }
-    else {
+    } else {
       uVar6 = (ulong)(byte)self[0x6c];
       *(uint32_t *)(self + 0x70) = 0;
       pvVar4 = malloc(uVar6 + 0x38);
       puVar9 = (uint64_t *)0x0;
       if (pvVar4 != (void *)0x0) {
-        puVar9 = (uint64_t *)
-                 ((uVar6 - ((long)pvVar4 + 0x10U) % uVar6) % uVar6 + (long)pvVar4 + 0x10U);
+        puVar9 =
+            (uint64_t *)((uVar6 - ((long)pvVar4 + 0x10U) % uVar6) % uVar6 + (long)pvVar4 + 0x10U);
         puVar9[-2] = 0x28;
         puVar9[-1] = pvVar4;
       }
@@ -504,26 +506,27 @@ void __thiscall SQLDatabase__AddQueuedQuery(SQLDatabase *self,SQLQuery *arg1)
       *(uint32_t *)(self + 0x88) = 0xa110ca7e;
       *(uint16_t *)(self + 0x74) = 5;
     }
-LAB_005b4f08:
+  LAB_005b4f08:
     if ((*(int *)(self + 0x70) == 1) && (*(short *)(self + 0x6a) != 0)) {
       puVar7 = *(ushort **)(self + 0x80);
       sVar3 = 1;
       uVar8 = *puVar7;
       while (uVar8 != 0xffff) {
         puVar7 = puVar7 + 1;
-        if (sVar3 == *(short *)(self + 0x6a)) goto LAB_005b4f12;
+        if (sVar3 == *(short *)(self + 0x6a))
+          goto LAB_005b4f12;
         sVar3 = sVar3 + 1;
         uVar8 = *puVar7;
       }
       *puVar7 = uVar2;
       uVar2 = *(ushort *)(self + 0x68);
     }
-LAB_005b4f12:
+  LAB_005b4f12:
     *(uint64_t **)(*(long *)(self + 0x78) + (ulong)uVar2 * 8) = puVar11;
     *(short *)(self + 0x68) = *(short *)(self + 0x68) + 1;
     goto LAB_005b4c3f;
   }
-  CriticalSection__Lock((CriticalSection *)(self + 0x40),1);
+  CriticalSection__Lock((CriticalSection *)(self + 0x40), 1);
   if (*(int *)(self + 0x88) == -0x5eef3582) {
     uVar2 = *(ushort *)(self + 0x68);
     if (*(ushort *)(self + 0x6a) <= uVar2) {
@@ -535,8 +538,8 @@ LAB_005b4f12:
       uVar6 = (ulong)uVar2 * 8;
       pvVar5 = malloc(uVar10 + 0x10 + uVar6);
       if (pvVar5 != (void *)0x0) {
-        pvVar4 = (void *)((long)pvVar5 + 0x10U + (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10
-                         );
+        pvVar4 =
+            (void *)((long)pvVar5 + 0x10U + (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
         *(ulong *)((long)pvVar4 + -0x10) = uVar6;
         *(void **)((long)pvVar4 + -8) = pvVar5;
         if (pvVar1 != (void *)0x0) {
@@ -544,7 +547,7 @@ LAB_005b4f12:
           if (uVar6 <= *(ulong *)((long)pvVar1 + -0x10)) {
             uVar10 = uVar6;
           }
-          memcpy(pvVar4,pvVar1,uVar10);
+          memcpy(pvVar4, pvVar1, uVar10);
           free(*(void **)((long)pvVar1 + -8));
         }
       }
@@ -557,40 +560,41 @@ LAB_005b4f12:
         uVar6 = (ulong)uVar8 * 2;
         pvVar5 = malloc(uVar10 + 0x10 + uVar6);
         if (pvVar5 != (void *)0x0) {
-          pvVar4 = (void *)((long)pvVar5 + 0x10U +
-                           (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
+          pvVar4 =
+              (void *)((long)pvVar5 + 0x10U + (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
           *(ulong *)((long)pvVar4 + -0x10) = uVar6;
           *(void **)((long)pvVar4 + -8) = pvVar5;
           uVar10 = *(ulong *)((long)pvVar1 + -0x10);
           if (uVar6 <= *(ulong *)((long)pvVar1 + -0x10)) {
             uVar10 = uVar6;
           }
-          memcpy(pvVar4,pvVar1,uVar10);
+          memcpy(pvVar4, pvVar1, uVar10);
           free(*(void **)((long)pvVar1 + -8));
           uVar8 = *(ushort *)(self + 0x6a);
         }
         uVar2 = *(ushort *)(self + 0x68);
         *(void **)(self + 0x80) = pvVar4;
-        if (uVar8 <= uVar2) goto LAB_005b4c22;
-        while( true ) {
+        if (uVar8 <= uVar2)
+          goto LAB_005b4c22;
+        while (true) {
           uVar6 = (ulong)uVar2;
           uVar2 = uVar2 + 1;
           *(uint16_t *)((long)pvVar4 + uVar6 * 2) = 0xffff;
-          if (uVar8 <= uVar2) break;
+          if (uVar8 <= uVar2)
+            break;
           pvVar4 = *(void **)(self + 0x80);
         }
       }
       uVar2 = *(ushort *)(self + 0x68);
     }
-  }
-  else {
+  } else {
     uVar6 = (ulong)(byte)self[0x6c];
     *(uint32_t *)(self + 0x70) = 0;
     pvVar4 = malloc(uVar6 + 0x38);
     puVar11 = (uint64_t *)0x0;
     if (pvVar4 != (void *)0x0) {
-      puVar11 = (uint64_t *)
-                ((long)pvVar4 + 0x10U + (uVar6 - ((long)pvVar4 + 0x10U) % uVar6) % uVar6);
+      puVar11 =
+          (uint64_t *)((long)pvVar4 + 0x10U + (uVar6 - ((long)pvVar4 + 0x10U) % uVar6) % uVar6);
       puVar11[-2] = 0x28;
       puVar11[-1] = pvVar4;
     }
@@ -614,7 +618,8 @@ LAB_005b4c22:
     while (uVar8 != 0xffff) {
       puVar7 = puVar7 + 1;
       sVar3 = sVar3 + 1;
-      if (sVar3 == *(short *)(self + 0x6a)) goto LAB_005b4c2c;
+      if (sVar3 == *(short *)(self + 0x6a))
+        goto LAB_005b4c2c;
       uVar8 = *puVar7;
     }
     *puVar7 = uVar2;
@@ -637,7 +642,7 @@ LAB_005b4c3f:
  */
 /* SQLDatabase__ExecuteQuery(SQLQuery*, int) */
 
-uint64_t * __thiscall SQLDatabase__ExecuteQuery(SQLDatabase *self,SQLQuery *arg1,int arg2)
+uint64_t *__thiscall SQLDatabase__ExecuteQuery(SQLDatabase *self, SQLQuery *arg1, int arg2)
 
 {
   void *__src;
@@ -646,7 +651,7 @@ uint64_t * __thiscall SQLDatabase__ExecuteQuery(SQLDatabase *self,SQLQuery *arg1
   uint64_t *puVar3;
   void *__dest;
   long lVar4;
-  uint32_t local_98 [2];
+  uint32_t local_98[2];
   wchar_t *local_90;
   wchar_t *local_88;
   uint8_t *local_80;
@@ -660,85 +665,89 @@ uint64_t * __thiscall SQLDatabase__ExecuteQuery(SQLDatabase *self,SQLQuery *arg1
   uint64_t local_40;
   uint64_t local_38;
   uint64_t local_30;
-  
+
   if (((arg2 != 1) && (*(long *)(self + 8) != 0)) && (*(short *)(arg1 + 0x20) != 1)) {
     iVar1 = *(int *)(arg1 + 0x18);
     __src = *(void **)(arg1 + 8);
     __dest = malloc((ulong)(iVar1 + 1));
     *(void **)(arg1 + 8) = __dest;
     if (__src != __dest) {
-      memcpy(__dest,__src,(ulong)(iVar1 + 1));
+      memcpy(__dest, __src, (ulong)(iVar1 + 1));
     }
     *(uint32_t *)(arg1 + 0x1c) = 3;
-    AddQueuedQuery(self,arg1);
+    AddQueuedQuery(self, arg1);
     *(uint32_t *)(self + 0x14) = 1;
     return (uint64_t *)0x0;
   }
   uVar2 = *(uint64_t *)self;
-  iVar1 = mysql_real_query(uVar2,*(uint64_t *)(arg1 + 8),*(uint32_t *)(arg1 + 0x18));
+  iVar1 = mysql_real_query(uVar2, *(uint64_t *)(arg1 + 8), *(uint32_t *)(arg1 + 0x18));
   if (iVar1 == 0) {
-LAB_005b5328:
+  LAB_005b5328:
     uVar2 = mysql_store_result(uVar2);
     puVar3 = operator_new(8);
     *(uint64_t **)(arg1 + 0x10) = puVar3;
     *puVar3 = uVar2;
     *(uint32_t *)(arg1 + 0x1c) = 2;
-  }
-  else {
+  } else {
     iVar1 = mysql_errno(uVar2);
     if ((iVar1 == 0x7d6) || (iVar1 == 0x7dd)) {
       lVar4 = *(long *)self;
       if (lVar4 == 0) {
         lVar4 = mysql_init(0);
         *(long *)self = lVar4;
-        mysql_real_connect(lVar4,*(uint64_t *)(self + 0x20),*(uint64_t *)(self + 0x28),
-                           *(uint64_t *)(self + 0x30),0,0,0,0);
-        if (lVar4 != 0) goto LAB_005b517e;
+        mysql_real_connect(lVar4, *(uint64_t *)(self + 0x20), *(uint64_t *)(self + 0x28),
+                           *(uint64_t *)(self + 0x30), 0, 0, 0, 0);
+        if (lVar4 != 0)
+          goto LAB_005b517e;
+      } else {
+        mysql_real_connect(lVar4, *(uint64_t *)(self + 0x20), *(uint64_t *)(self + 0x28),
+                           *(uint64_t *)(self + 0x30), 0, 0, 0, 0);
+      LAB_005b517e:
+        mysql_select_db(lVar4, *(uint64_t *)(self + 0x38));
       }
-      else {
-        mysql_real_connect(lVar4,*(uint64_t *)(self + 0x20),*(uint64_t *)(self + 0x28),
-                           *(uint64_t *)(self + 0x30),0,0,0,0);
-LAB_005b517e:
-        mysql_select_db(lVar4,*(uint64_t *)(self + 0x38));
-      }
-      iVar1 = mysql_real_query(uVar2,*(uint64_t *)(arg1 + 8),*(uint32_t *)(arg1 + 0x18));
-      if (iVar1 == 0) goto LAB_005b5328;
+      iVar1 = mysql_real_query(uVar2, *(uint64_t *)(arg1 + 8), *(uint32_t *)(arg1 + 0x18));
+      if (iVar1 == 0)
+        goto LAB_005b5328;
       iVar1 = mysql_errno(uVar2);
-      if ((iVar1 != 0x7dd) && (iVar1 != 0x7d6)) goto LAB_005b530a;
+      if ((iVar1 != 0x7dd) && (iVar1 != 0x7d6))
+        goto LAB_005b530a;
       lVar4 = *(long *)self;
       if (lVar4 == 0) {
         lVar4 = mysql_init(0);
         *(long *)self = lVar4;
-        mysql_real_connect(lVar4,*(uint64_t *)(self + 0x20),*(uint64_t *)(self + 0x28),
-                           *(uint64_t *)(self + 0x30),0,0,0,0);
-        if (lVar4 != 0) goto LAB_005b51eb;
+        mysql_real_connect(lVar4, *(uint64_t *)(self + 0x20), *(uint64_t *)(self + 0x28),
+                           *(uint64_t *)(self + 0x30), 0, 0, 0, 0);
+        if (lVar4 != 0)
+          goto LAB_005b51eb;
+      } else {
+        mysql_real_connect(lVar4, *(uint64_t *)(self + 0x20), *(uint64_t *)(self + 0x28),
+                           *(uint64_t *)(self + 0x30), 0, 0, 0, 0);
+      LAB_005b51eb:
+        mysql_select_db(lVar4, *(uint64_t *)(self + 0x38));
       }
-      else {
-        mysql_real_connect(lVar4,*(uint64_t *)(self + 0x20),*(uint64_t *)(self + 0x28),
-                           *(uint64_t *)(self + 0x30),0,0,0,0);
-LAB_005b51eb:
-        mysql_select_db(lVar4,*(uint64_t *)(self + 0x38));
-      }
-      iVar1 = mysql_real_query(uVar2,*(uint64_t *)(arg1 + 8),*(uint32_t *)(arg1 + 0x18));
-      if (iVar1 == 0) goto LAB_005b5328;
+      iVar1 = mysql_real_query(uVar2, *(uint64_t *)(arg1 + 8), *(uint32_t *)(arg1 + 0x18));
+      if (iVar1 == 0)
+        goto LAB_005b5328;
       iVar1 = mysql_errno(uVar2);
-      if ((iVar1 != 0x7dd) && (iVar1 != 0x7d6)) goto LAB_005b530a;
+      if ((iVar1 != 0x7dd) && (iVar1 != 0x7d6))
+        goto LAB_005b530a;
       lVar4 = *(long *)self;
       if (lVar4 == 0) {
         lVar4 = mysql_init(0);
         *(long *)self = lVar4;
-        mysql_real_connect(lVar4,*(uint64_t *)(self + 0x20),*(uint64_t *)(self + 0x28),
-                           *(uint64_t *)(self + 0x30),0,0,0,0);
-        if (lVar4 != 0) goto LAB_005b5258;
+        mysql_real_connect(lVar4, *(uint64_t *)(self + 0x20), *(uint64_t *)(self + 0x28),
+                           *(uint64_t *)(self + 0x30), 0, 0, 0, 0);
+        if (lVar4 != 0)
+          goto LAB_005b5258;
+      } else {
+        mysql_real_connect(lVar4, *(uint64_t *)(self + 0x20), *(uint64_t *)(self + 0x28),
+                           *(uint64_t *)(self + 0x30), 0, 0, 0, 0);
+      LAB_005b5258:
+        mysql_select_db(lVar4, *(uint64_t *)(self + 0x38));
       }
-      else {
-        mysql_real_connect(lVar4,*(uint64_t *)(self + 0x20),*(uint64_t *)(self + 0x28),
-                           *(uint64_t *)(self + 0x30),0,0,0,0);
-LAB_005b5258:
-        mysql_select_db(lVar4,*(uint64_t *)(self + 0x38));
-      }
-      iVar1 = mysql_real_query(uVar2,*(uint64_t *)(arg1 + 8),*(uint32_t *)(arg1 + 0x18));
-      if (iVar1 == 0) goto LAB_005b5328;
+      iVar1 = mysql_real_query(uVar2, *(uint64_t *)(arg1 + 8), *(uint32_t *)(arg1 + 0x18));
+      if (iVar1 == 0)
+        goto LAB_005b5328;
       mysql_errno(uVar2);
       local_78 = 0;
       local_68 = 0;
@@ -750,15 +759,14 @@ LAB_005b5258:
       local_38 = 0;
       local_30 = 0;
       local_90 = L"SQL Server Error";
-      local_88 = 
-      L"A Connection to the SQL Server\ncould not be established after 3 retries\nPlease try to connect again later"
-      ;
+      local_88 = L"A Connection to the SQL Server\ncould not be established after 3 "
+                 L"retries\nPlease try to connect again later";
       local_98[0] = 0xe;
       local_80 = &DAT_005de598 /* R:1.1070257868166055e-43f */;
       local_70 = UserAlertCloseCurrent;
       CreateMessage(local_98);
     }
-LAB_005b530a:
+  LAB_005b530a:
     *(uint32_t *)(arg1 + 0x1c) = 1;
     puVar3 = (uint64_t *)0x0;
   }

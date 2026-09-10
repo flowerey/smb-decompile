@@ -22,7 +22,7 @@ void __thiscall EditorForm__EditorForm__004b7c20(EditorForm *self)
 
 {
   uint64_t *puVar1;
-  
+
   *(uint8_t ***)self = &PTR__EditorForm_005c4670;
   if (*(long **)(self + 0x10) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0x10) + 8))();
@@ -121,7 +121,7 @@ void __thiscall EditorForm__Update(EditorForm *self)
 
 {
   TKeyboard *this_00;
-  
+
   if (*(long **)(self + 0x10) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0x10) + 0x48))();
   }
@@ -172,7 +172,7 @@ void __thiscall EditorForm__Update(EditorForm *self)
     pCurrentVisibleForm = (EditorForm *)0x0;
   }
   *(uint32_t *)(self + 0xa8) = 0;
-  TKeyboard__RestoreCallbacks(this_00,(InputCallback **)(self + 0xb0));
+  TKeyboard__RestoreCallbacks(this_00, (InputCallback **)(self + 0xb0));
   TKeyboard__UnLock(Keyboard);
   *(uint32_t *)(self + 0xac) = 0;
   return;
@@ -191,7 +191,7 @@ void __thiscall EditorForm__EditorForm__004b7c20(EditorForm *self)
 
 {
   uint64_t *puVar1;
-  
+
   *(uint8_t ***)self = &PTR__EditorForm_005c4670;
   if (*(long **)(self + 0x10) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0x10) + 8))();
@@ -286,7 +286,7 @@ void __thiscall EditorForm__EditorForm__004b7c20(EditorForm *self)
  */
 /* EditorForm__EditorForm__004b8350(EditorFormCreate const*) */
 
-void __thiscall EditorForm__EditorForm__004b8350(EditorForm *self,EditorFormCreate *arg1)
+void __thiscall EditorForm__EditorForm__004b8350(EditorForm *self, EditorFormCreate *arg1)
 
 {
   uint64_t uVar1;
@@ -301,9 +301,9 @@ void __thiscall EditorForm__EditorForm__004b8350(EditorForm *self,EditorFormCrea
   uint uVar10;
   EditorForm *pEVar12;
   bool bVar13;
-  char acStack_48 [40];
+  char acStack_48[40];
   ulong uVar11;
-  
+
   uVar11 = 0x50;
   iVar9 = 0x50;
   *(uint8_t ***)self = &PTR__EditorForm_005c4670;
@@ -320,8 +320,7 @@ void __thiscall EditorForm__EditorForm__004b8350(EditorForm *self,EditorFormCrea
   }
   if (((ulong)pEVar12 & 2) == 0) {
     uVar10 = (uint)uVar11;
-  }
-  else {
+  } else {
     *(uint16_t *)pEVar12 = 0;
     pEVar12 = pEVar12 + 2;
     uVar10 = iVar9 - 2;
@@ -347,8 +346,8 @@ void __thiscall EditorForm__EditorForm__004b8350(EditorForm *self,EditorFormCrea
   if (bVar13) {
     *pEVar12 = (EditorForm)0x0;
   }
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    (*(FlashAnimationLibrary **)arg1,*(char **)(arg1 + 8));
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)arg1,
+                                                        *(char **)(arg1 + 8));
   *(uint64_t *)(self + 8) = uVar1;
   puVar2 = operator_new__(0x28);
   *(uint64_t **)(self + 0x80) = puVar2;
@@ -369,153 +368,143 @@ void __thiscall EditorForm__EditorForm__004b8350(EditorForm *self,EditorFormCrea
       sVar4 = (long)(int)sVar3;
     }
     if (self + 0x88 != pEVar12) {
-      memcpy(self + 0x88,pEVar12,sVar4);
+      memcpy(self + 0x88, pEVar12, sVar4);
     }
     self[0xa7] = (EditorForm)0x0;
   }
   if (*(long *)(arg1 + 0x18) != 0) {
-    Sprint("labeltext%i",acStack_48,1);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)arg1,acStack_48,*(uint64_t *)(arg1 + 0x18));
+    Sprint("labeltext%i", acStack_48, 1);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)arg1, acStack_48, *(uint64_t *)(arg1 + 0x18));
     sVar4 = strlen(*(char **)(arg1 + 0x18));
     puVar2 = *(uint64_t **)(self + 0x80);
     uVar11 = (ulong)((int)sVar4 + 1);
     pvVar5 = operator_new__(uVar11);
     *puVar2 = pvVar5;
     if (*(void **)(arg1 + 0x18) != (void *)**(uint64_t **)(self + 0x80)) {
-      memcpy((void *)**(uint64_t **)(self + 0x80),*(void **)(arg1 + 0x18),uVar11);
+      memcpy((void *)**(uint64_t **)(self + 0x80), *(void **)(arg1 + 0x18), uVar11);
     }
   }
   if (*(long *)(arg1 + 0x20) != 0) {
-    Sprint("labeltext%i",acStack_48,2);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)arg1,acStack_48,*(uint64_t *)(arg1 + 0x20));
+    Sprint("labeltext%i", acStack_48, 2);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)arg1, acStack_48, *(uint64_t *)(arg1 + 0x20));
     sVar4 = strlen(*(char **)(arg1 + 0x20));
     lVar7 = *(long *)(self + 0x80);
     uVar11 = (ulong)((int)sVar4 + 1);
     pvVar5 = operator_new__(uVar11);
     *(void **)(lVar7 + 8) = pvVar5;
     if (*(void **)(arg1 + 0x20) != *(void **)(*(long *)(self + 0x80) + 8)) {
-      memcpy(*(void **)(*(long *)(self + 0x80) + 8),*(void **)(arg1 + 0x20),uVar11);
+      memcpy(*(void **)(*(long *)(self + 0x80) + 8), *(void **)(arg1 + 0x20), uVar11);
     }
   }
   if (*(long *)(arg1 + 0x28) != 0) {
-    Sprint("labeltext%i",acStack_48,3);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)arg1,acStack_48,*(uint64_t *)(arg1 + 0x28));
+    Sprint("labeltext%i", acStack_48, 3);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)arg1, acStack_48, *(uint64_t *)(arg1 + 0x28));
     sVar4 = strlen(*(char **)(arg1 + 0x28));
     lVar7 = *(long *)(self + 0x80);
     uVar11 = (ulong)((int)sVar4 + 1);
     pvVar5 = operator_new__(uVar11);
     *(void **)(lVar7 + 0x10) = pvVar5;
     if (*(void **)(arg1 + 0x28) != *(void **)(*(long *)(self + 0x80) + 0x10)) {
-      memcpy(*(void **)(*(long *)(self + 0x80) + 0x10),*(void **)(arg1 + 0x28),uVar11);
+      memcpy(*(void **)(*(long *)(self + 0x80) + 0x10), *(void **)(arg1 + 0x28), uVar11);
     }
   }
   if (*(long *)(arg1 + 0x30) != 0) {
-    Sprint("labeltext%i",acStack_48,4);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)arg1,acStack_48,*(uint64_t *)(arg1 + 0x30));
+    Sprint("labeltext%i", acStack_48, 4);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)arg1, acStack_48, *(uint64_t *)(arg1 + 0x30));
     sVar4 = strlen(*(char **)(arg1 + 0x30));
     lVar7 = *(long *)(self + 0x80);
     uVar11 = (ulong)((int)sVar4 + 1);
     pvVar5 = operator_new__(uVar11);
     *(void **)(lVar7 + 0x18) = pvVar5;
     if (*(void **)(arg1 + 0x30) != *(void **)(*(long *)(self + 0x80) + 0x18)) {
-      memcpy(*(void **)(*(long *)(self + 0x80) + 0x18),*(void **)(arg1 + 0x30),uVar11);
+      memcpy(*(void **)(*(long *)(self + 0x80) + 0x18), *(void **)(arg1 + 0x30), uVar11);
     }
   }
   if (*(long *)(arg1 + 0x38) != 0) {
-    Sprint("labeltext%i",acStack_48,5);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)arg1,acStack_48,*(uint64_t *)(arg1 + 0x38));
+    Sprint("labeltext%i", acStack_48, 5);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)arg1, acStack_48, *(uint64_t *)(arg1 + 0x38));
     sVar4 = strlen(*(char **)(arg1 + 0x38));
     lVar7 = *(long *)(self + 0x80);
     uVar11 = (ulong)((int)sVar4 + 1);
     pvVar5 = operator_new__(uVar11);
     *(void **)(lVar7 + 0x20) = pvVar5;
     if (*(void **)(arg1 + 0x38) != *(void **)(*(long *)(self + 0x80) + 0x20)) {
-      memcpy(*(void **)(*(long *)(self + 0x80) + 0x20),*(void **)(arg1 + 0x38),uVar11);
+      memcpy(*(void **)(*(long *)(self + 0x80) + 0x20), *(void **)(arg1 + 0x38), uVar11);
     }
   }
-  uVar1 = FlashAnimationLibrary__GetLibraryEntry
-                    (*(FlashAnimationLibrary **)arg1,*(int *)(*(long *)(self + 8) + 0x20));
-  uVar6 = AddEditorButton(uVar1,*(uint64_t *)arg1,"apply",0,0);
+  uVar1 = FlashAnimationLibrary__GetLibraryEntry(*(FlashAnimationLibrary **)arg1,
+                                                 *(int *)(*(long *)(self + 8) + 0x20));
+  uVar6 = AddEditorButton(uVar1, *(uint64_t *)arg1, "apply", 0, 0);
   *(uint64_t *)(self + 0x10) = uVar6;
-  uVar6 = AddEditorButton(uVar1,*(uint64_t *)arg1,"cancel",0,0);
+  uVar6 = AddEditorButton(uVar1, *(uint64_t *)arg1, "cancel", 0, 0);
   *(uint64_t *)(self + 0x18) = uVar6;
-  uVar6 = AddEditorButton(uVar1,*(uint64_t *)arg1,"applytoall",0,0);
+  uVar6 = AddEditorButton(uVar1, *(uint64_t *)arg1, "applytoall", 0, 0);
   *(uint64_t *)(self + 0x20) = uVar6;
-  FlashAnimationLibrary__SetTextFieldText(*(char **)arg1,"apply",*(uint64_t *)(arg1 + 0x40))
-  ;
-  FlashAnimationLibrary__SetTextFieldText
-            (*(char **)arg1,"cancel",*(uint64_t *)(arg1 + 0x48));
-  FlashAnimationLibrary__SetTextFieldText
-            (*(char **)arg1,"applytoall",*(uint64_t *)(arg1 + 0x50));
-  FlashAnimationLibrary__SetTextFieldText
-            (*(char **)arg1,"formlabel",*(uint64_t *)(arg1 + 0x10));
-  Sprint("textfield%i",acStack_48,1);
-  lVar7 = AddEditorButton(uVar1,*(uint64_t *)arg1,acStack_48,0,1);
+  FlashAnimationLibrary__SetTextFieldText(*(char **)arg1, "apply", *(uint64_t *)(arg1 + 0x40));
+  FlashAnimationLibrary__SetTextFieldText(*(char **)arg1, "cancel", *(uint64_t *)(arg1 + 0x48));
+  FlashAnimationLibrary__SetTextFieldText(*(char **)arg1, "applytoall", *(uint64_t *)(arg1 + 0x50));
+  FlashAnimationLibrary__SetTextFieldText(*(char **)arg1, "formlabel", *(uint64_t *)(arg1 + 0x10));
+  Sprint("textfield%i", acStack_48, 1);
+  lVar7 = AddEditorButton(uVar1, *(uint64_t *)arg1, acStack_48, 0, 1);
   *(long *)(self + 0x28) = lVar7;
   if (lVar7 != 0) {
-    uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1,1);
+    uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1, 1);
     *(uint64_t *)(*(long *)(self + 0x28) + 0x50) = uVar6;
-    Sprint("textfield%i",acStack_48,2);
-    lVar7 = AddEditorButton(uVar1,*(uint64_t *)arg1,acStack_48,0,1);
+    Sprint("textfield%i", acStack_48, 2);
+    lVar7 = AddEditorButton(uVar1, *(uint64_t *)arg1, acStack_48, 0, 1);
     *(long *)(self + 0x30) = lVar7;
     if (lVar7 != 0) {
-      uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1,2);
+      uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1, 2);
       *(uint64_t *)(*(long *)(self + 0x30) + 0x50) = uVar6;
-      Sprint("textfield%i",acStack_48,3);
-      lVar7 = AddEditorButton(uVar1,*(uint64_t *)arg1,acStack_48,0,1);
+      Sprint("textfield%i", acStack_48, 3);
+      lVar7 = AddEditorButton(uVar1, *(uint64_t *)arg1, acStack_48, 0, 1);
       *(long *)(self + 0x38) = lVar7;
       if (lVar7 != 0) {
-        uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1,3);
+        uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1, 3);
         *(uint64_t *)(*(long *)(self + 0x38) + 0x50) = uVar6;
-        Sprint("textfield%i",acStack_48,4);
-        lVar7 = AddEditorButton(uVar1,*(uint64_t *)arg1,acStack_48,0,1);
+        Sprint("textfield%i", acStack_48, 4);
+        lVar7 = AddEditorButton(uVar1, *(uint64_t *)arg1, acStack_48, 0, 1);
         *(long *)(self + 0x40) = lVar7;
         if (lVar7 != 0) {
-          uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1,4);
+          uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1, 4);
           *(uint64_t *)(*(long *)(self + 0x40) + 0x50) = uVar6;
-          Sprint("textfield%i",acStack_48,5);
-          lVar7 = AddEditorButton(uVar1,*(uint64_t *)arg1,acStack_48,0,1);
+          Sprint("textfield%i", acStack_48, 5);
+          lVar7 = AddEditorButton(uVar1, *(uint64_t *)arg1, acStack_48, 0, 1);
           *(long *)(self + 0x48) = lVar7;
           if (lVar7 != 0) {
-            uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1,5);
+            uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1, 5);
             *(uint64_t *)(*(long *)(self + 0x48) + 0x50) = uVar6;
-            Sprint("textfield%i",acStack_48,6);
-            lVar7 = AddEditorButton(uVar1,*(uint64_t *)arg1,acStack_48,0,1);
+            Sprint("textfield%i", acStack_48, 6);
+            lVar7 = AddEditorButton(uVar1, *(uint64_t *)arg1, acStack_48, 0, 1);
             *(long *)(self + 0x50) = lVar7;
             if (lVar7 != 0) {
-              uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1,6);
+              uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1, 6);
               *(uint64_t *)(*(long *)(self + 0x50) + 0x50) = uVar6;
-              Sprint("textfield%i",acStack_48,7);
-              lVar7 = AddEditorButton(uVar1,*(uint64_t *)arg1,acStack_48,0,1);
+              Sprint("textfield%i", acStack_48, 7);
+              lVar7 = AddEditorButton(uVar1, *(uint64_t *)arg1, acStack_48, 0, 1);
               *(long *)(self + 0x58) = lVar7;
               if (lVar7 != 0) {
-                uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1,7);
+                uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1, 7);
                 *(uint64_t *)(*(long *)(self + 0x58) + 0x50) = uVar6;
-                Sprint("textfield%i",acStack_48,8);
-                lVar7 = AddEditorButton(uVar1,*(uint64_t *)arg1,acStack_48,0,1);
+                Sprint("textfield%i", acStack_48, 8);
+                lVar7 = AddEditorButton(uVar1, *(uint64_t *)arg1, acStack_48, 0, 1);
                 *(long *)(self + 0x60) = lVar7;
                 if (lVar7 != 0) {
-                  uVar6 = FlashAnimationLibrary__GetUITextField
-                                    (*(FlashAnimationLibrary **)arg1,8);
+                  uVar6 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1, 8);
                   *(uint64_t *)(*(long *)(self + 0x60) + 0x50) = uVar6;
-                  Sprint("textfield%i",acStack_48,9);
-                  lVar7 = AddEditorButton(uVar1,*(uint64_t *)arg1,acStack_48,0,1);
+                  Sprint("textfield%i", acStack_48, 9);
+                  lVar7 = AddEditorButton(uVar1, *(uint64_t *)arg1, acStack_48, 0, 1);
                   *(long *)(self + 0x68) = lVar7;
                   if (lVar7 != 0) {
-                    uVar6 = FlashAnimationLibrary__GetUITextField
-                                      (*(FlashAnimationLibrary **)arg1,9);
+                    uVar6 =
+                        FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1, 9);
                     *(uint64_t *)(*(long *)(self + 0x68) + 0x50) = uVar6;
-                    Sprint("textfield%i",acStack_48,10);
-                    lVar7 = AddEditorButton(uVar1,*(uint64_t *)arg1,acStack_48,0,1);
+                    Sprint("textfield%i", acStack_48, 10);
+                    lVar7 = AddEditorButton(uVar1, *(uint64_t *)arg1, acStack_48, 0, 1);
                     *(long *)(self + 0x70) = lVar7;
                     if (lVar7 != 0) {
-                      uVar1 = FlashAnimationLibrary__GetUITextField
-                                        (*(FlashAnimationLibrary **)arg1,10);
+                      uVar1 = FlashAnimationLibrary__GetUITextField(*(FlashAnimationLibrary **)arg1,
+                                                                    10);
                       *(uint64_t *)(*(long *)(self + 0x70) + 0x50) = uVar1;
                     }
                   }
@@ -544,77 +533,78 @@ void __thiscall EditorForm__Activate(EditorForm *self)
 
 {
   long *plVar1;
-  char acStack_28 [32];
-  
+  char acStack_28[32];
+
   *(uint64_t *)(self + 0xb0) = 0;
-  TKeyboard__BackupCallbacks(Keyboard,(InputCallback **)(self + 0xb0));
+  TKeyboard__BackupCallbacks(Keyboard, (InputCallback **)(self + 0xb0));
   if (pCurrentVisibleForm == (EditorForm *)0x0) {
-    if (self == (EditorForm *)0x0) goto LAB_004b8e00;
-  }
-  else {
-    if (self == pCurrentVisibleForm) goto LAB_004b8e00;
+    if (self == (EditorForm *)0x0)
+      goto LAB_004b8e00;
+  } else {
+    if (self == pCurrentVisibleForm)
+      goto LAB_004b8e00;
     *(uint32_t *)(pCurrentVisibleForm + 0xac) = 1;
   }
-  FlashAnimationLibrary__SetTextFieldText(*(char **)(self + 0x78),"formlabel",self + 0x88);
+  FlashAnimationLibrary__SetTextFieldText(*(char **)(self + 0x78), "formlabel", self + 0x88);
   plVar1 = *(long **)(self + 0x80);
   if (*plVar1 != 0) {
-    Sprint("labeltext%i",acStack_28,1);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(self + 0x78),acStack_28,**(uint64_t **)(self + 0x80));
+    Sprint("labeltext%i", acStack_28, 1);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(self + 0x78), acStack_28,
+                                            **(uint64_t **)(self + 0x80));
     plVar1 = *(long **)(self + 0x80);
   }
   if (plVar1[1] != 0) {
-    Sprint("labeltext%i",acStack_28,2);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(self + 0x78),acStack_28,*(uint64_t *)(*(long *)(self + 0x80) + 8));
+    Sprint("labeltext%i", acStack_28, 2);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(self + 0x78), acStack_28,
+                                            *(uint64_t *)(*(long *)(self + 0x80) + 8));
     plVar1 = *(long **)(self + 0x80);
   }
   if (plVar1[2] != 0) {
-    Sprint("labeltext%i",acStack_28,3);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(self + 0x78),acStack_28,*(uint64_t *)(*(long *)(self + 0x80) + 0x10));
+    Sprint("labeltext%i", acStack_28, 3);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(self + 0x78), acStack_28,
+                                            *(uint64_t *)(*(long *)(self + 0x80) + 0x10));
     plVar1 = *(long **)(self + 0x80);
   }
   if (plVar1[3] != 0) {
-    Sprint("labeltext%i",acStack_28,4);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(self + 0x78),acStack_28,*(uint64_t *)(*(long *)(self + 0x80) + 0x18));
+    Sprint("labeltext%i", acStack_28, 4);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(self + 0x78), acStack_28,
+                                            *(uint64_t *)(*(long *)(self + 0x80) + 0x18));
     plVar1 = *(long **)(self + 0x80);
   }
   if (plVar1[4] != 0) {
-    Sprint("labeltext%i",acStack_28,5);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(self + 0x78),acStack_28,*(uint64_t *)(*(long *)(self + 0x80) + 0x20));
+    Sprint("labeltext%i", acStack_28, 5);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(self + 0x78), acStack_28,
+                                            *(uint64_t *)(*(long *)(self + 0x80) + 0x20));
   }
   if (*(long *)(self + 0x28) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x28) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x28) + 0x50), "");
   }
   if (*(long *)(self + 0x30) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x30) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x30) + 0x50), "");
   }
   if (*(long *)(self + 0x38) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x38) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x38) + 0x50), "");
   }
   if (*(long *)(self + 0x40) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x40) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x40) + 0x50), "");
   }
   if (*(long *)(self + 0x48) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x48) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x48) + 0x50), "");
   }
   if (*(long *)(self + 0x50) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x50) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x50) + 0x50), "");
   }
   if (*(long *)(self + 0x58) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x58) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x58) + 0x50), "");
   }
   if (*(long *)(self + 0x60) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x60) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x60) + 0x50), "");
   }
   if (*(long *)(self + 0x68) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x68) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x68) + 0x50), "");
   }
   if (*(long *)(self + 0x70) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x70) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(self + 0x70) + 0x50), "");
   }
   pCurrentVisibleForm = self;
   *(uint32_t *)(self + 0xa8) = 1;

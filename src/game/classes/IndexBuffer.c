@@ -22,7 +22,7 @@ void __thiscall IndexBuffer__IndexBuffer__0058a550(IndexBuffer *self)
 
 {
   *(uint8_t ***)self = &PTR__IndexBuffer_005dcd50;
-                    /* try { // try from 0058a52f to 0058a533 has its CatchHandler @ 0058a53d */
+  /* try { // try from 0058a52f to 0058a533 has its CatchHandler @ 0058a53d */
   gfxDestroyIndexBuffer(self + 0x20);
   *(uint8_t ***)self = &PTR__BaseResource_005dbe30;
   return;
@@ -41,12 +41,12 @@ void __thiscall IndexBuffer__IndexBuffer__0058a550(IndexBuffer *self)
 
 {
   void *in_RSI;
-  
+
   *(uint8_t ***)self = &PTR__IndexBuffer_005dcd50;
-                    /* try { // try from 0058a55f to 0058a563 has its CatchHandler @ 0058a574 */
+  /* try { // try from 0058a55f to 0058a563 has its CatchHandler @ 0058a574 */
   gfxDestroyIndexBuffer(self + 0x20);
   *(uint8_t ***)self = &PTR__BaseResource_005dbe30;
-  BaseResource__operator_delete((BaseResource *)self,in_RSI);
+  BaseResource__operator_delete((BaseResource *)self, in_RSI);
   return;
 }
 
@@ -77,13 +77,13 @@ void __thiscall IndexBuffer__IndexBuffer__0058a590(IndexBuffer *self)
  */
 /* IndexBuffer__Lock(void**, unsigned int, unsigned long) */
 
-void __thiscall IndexBuffer__Lock(IndexBuffer *self,void **arg1,uint arg2,ulong arg3)
+void __thiscall IndexBuffer__Lock(IndexBuffer *self, void **arg1, uint arg2, ulong arg3)
 
 {
   if (arg3 == 0) {
     arg3 = *(ulong *)(self + 0x10);
   }
-  gfxLockIndexBuffer(*(tagGLVertexBuffer **)(self + 0x20),arg1,arg2,arg3);
+  gfxLockIndexBuffer(*(tagGLVertexBuffer **)(self + 0x20), arg1, arg2, arg3);
   return;
 }
 

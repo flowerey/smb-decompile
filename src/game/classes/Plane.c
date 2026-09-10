@@ -18,15 +18,14 @@
  */
 /* Plane__Plane(FPUVector const&, FPUVector const&) */
 
-void __thiscall Plane__Plane(Plane *self,FPUVector *arg1,FPUVector *arg2)
+void __thiscall Plane__Plane(Plane *self, FPUVector *arg1, FPUVector *arg2)
 
 {
   *(uint64_t *)self = *(uint64_t *)arg1;
   *(uint64_t *)(self + 8) = *(uint64_t *)(arg1 + 8);
   *(float *)(self + 0x10) =
-       *(float *)(arg2 + 4) * *(float *)(arg1 + 4) + *(float *)arg2 * *(float *)arg1 +
-       *(float *)(arg2 + 8) * *(float *)(arg1 + 8) +
-       *(float *)(arg2 + 0xc) * *(float *)(arg1 + 0xc);
+      *(float *)(arg2 + 4) * *(float *)(arg1 + 4) + *(float *)arg2 * *(float *)arg1 +
+      *(float *)(arg2 + 8) * *(float *)(arg1 + 8) + *(float *)(arg2 + 0xc) * *(float *)(arg1 + 0xc);
   return;
 }
 
@@ -39,12 +38,13 @@ void __thiscall Plane__Plane(Plane *self,FPUVector *arg1,FPUVector *arg2)
  */
 /* Plane__GetSignedDistanceFromPlane(FPUVector const&) const */
 
-float __thiscall Plane__GetSignedDistanceFromPlane(Plane *self,FPUVector *arg1)
+float __thiscall Plane__GetSignedDistanceFromPlane(Plane *self, FPUVector *arg1)
 
 {
   return (*(float *)(arg1 + 4) * *(float *)(self + 4) + *(float *)arg1 * *(float *)self +
           *(float *)(arg1 + 8) * *(float *)(self + 8) +
-         *(float *)(arg1 + 0xc) * *(float *)(self + 0xc)) - *(float *)(self + 0x10);
+          *(float *)(arg1 + 0xc) * *(float *)(self + 0xc)) -
+         *(float *)(self + 0x10);
 }
 
 /* ======================================================================
@@ -56,7 +56,7 @@ float __thiscall Plane__GetSignedDistanceFromPlane(Plane *self,FPUVector *arg1)
  */
 /* Plane__GetClosestPointToPlane(FPUVector const&, FPUVector&) const */
 
-void __thiscall Plane__GetClosestPointToPlane(Plane *self,FPUVector *arg1,FPUVector *arg2)
+void __thiscall Plane__GetClosestPointToPlane(Plane *self, FPUVector *arg1, FPUVector *arg2)
 
 {
   float fVar1;
@@ -66,7 +66,7 @@ void __thiscall Plane__GetClosestPointToPlane(Plane *self,FPUVector *arg1,FPUVec
   float fVar5;
   float fVar6;
   float fVar7;
-  
+
   fVar1 = *(float *)(self + 4);
   fVar2 = *(float *)(arg1 + 4);
   fVar3 = *(float *)(self + 8);

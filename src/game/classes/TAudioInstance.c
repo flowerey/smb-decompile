@@ -72,7 +72,7 @@ void TAudioInstance__Play(void)
  */
 /* TAudioInstance__SetVolume(unsigned int) */
 
-void __thiscall TAudioInstance__SetVolume(TAudioInstance *self,uint arg1)
+void __thiscall TAudioInstance__SetVolume(TAudioInstance *self, uint arg1)
 
 {
   if ((*(long *)self != 0) && (*(uint *)(self + 8) = arg1, *(int *)(self + 0x20) == 0)) {
@@ -105,12 +105,12 @@ void __thiscall TAudioInstance__Stop(TAudioInstance *self)
   long lVar9;
   uint uVar10;
   bool bVar11;
-  
+
   if ((*(int *)(self + 0x18) != 1) || (*(long *)self == 0)) {
     return;
   }
   if (pMusicInstances._40_2_ == 0) {
-LAB_0057a2a1:
+  LAB_0057a2a1:
     audStopCue();
     return;
   }
@@ -119,18 +119,18 @@ LAB_0057a2a1:
   if (self == *(TAudioInstance **)pMusicInstances._56_8_) {
     uVar10 = 1;
     uVar6 = 0;
-  }
-  else {
+  } else {
     do {
       uVar4 = uVar4 + 1;
-      if (uVar4 == pMusicInstances._40_2_) goto LAB_0057a2a1;
+      if (uVar4 == pMusicInstances._40_2_)
+        goto LAB_0057a2a1;
       plVar8 = plVar8 + 1;
     } while (self != (TAudioInstance *)*plVar8);
     uVar6 = (uint)uVar4;
     uVar10 = uVar6 + 1;
   }
   if ((uVar10 < (ushort)pMusicInstances._40_2_) &&
-     ((int)uVar6 < (int)((ushort)pMusicInstances._40_2_ - 1))) {
+      ((int)uVar6 < (int)((ushort)pMusicInstances._40_2_ - 1))) {
     lVar9 = (long)(int)uVar6 << 3;
     uVar10 = uVar6;
     do {
@@ -149,8 +149,7 @@ LAB_0057a2a1:
       if (uVar3 == uVar6) {
         *puVar2 = 0xffff;
         uVar4 = pMusicInstances._42_2_;
-      }
-      else if ((uVar6 < uVar3) && ((ushort)(uVar3 - 1) < 0xfffe)) {
+      } else if ((uVar6 < uVar3) && ((ushort)(uVar3 - 1) < 0xfffe)) {
         *puVar2 = uVar3 - 1;
         uVar4 = pMusicInstances._42_2_;
       }

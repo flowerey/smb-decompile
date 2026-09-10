@@ -18,8 +18,7 @@
  */
 /* TweenBase<ColorTemplate<float> >::IsTweening() */
 
-uint32_t __thiscall
-TweenBase_ColorTemplate_float__IsTweening(TweenBase<ColorTemplate<float>> *self)
+uint32_t __thiscall TweenBase_ColorTemplate_float__IsTweening(TweenBase<ColorTemplate<float>> *self)
 
 {
   return *(uint32_t *)(self + 0x4c);
@@ -34,11 +33,11 @@ TweenBase_ColorTemplate_float__IsTweening(TweenBase<ColorTemplate<float>> *self)
  */
 /* TweenBase_float__Reset(int) */
 
-void __thiscall TweenBase_float__Reset(TweenBase<float> *self,int arg1)
+void __thiscall TweenBase_float__Reset(TweenBase<float> *self, int arg1)
 
 {
   float fVar1;
-  
+
   *(uint32_t *)(self + 0x1c) = 0;
   fVar1 = 0.0;
   if (arg1 == 1) {
@@ -79,7 +78,7 @@ void __thiscall TweenBase_float__Reverse(TweenBase<float> *self)
  */
 /* TweenBase_float__Pause(int) */
 
-void __thiscall TweenBase_float__Pause(TweenBase<float> *self,int arg1)
+void __thiscall TweenBase_float__Pause(TweenBase<float> *self, int arg1)
 
 {
   *(int *)(self + 0x30) = arg1;
@@ -110,13 +109,13 @@ uint32_t __thiscall TweenBase_float__IsTweening(TweenBase<float> *self)
  */
 /* TweenBase<ColorTemplate<float> >::Reset(int) */
 
-void __thiscall
-TweenBase_ColorTemplate_float__Reset(TweenBase<ColorTemplate<float>> *self,int arg1)
+void __thiscall TweenBase_ColorTemplate_float__Reset(TweenBase<ColorTemplate<float>> *self,
+                                                     int arg1)
 
 {
   uint64_t *puVar1;
   float fVar2;
-  
+
   *(uint32_t *)(self + 0x34) = 0;
   fVar2 = 0.0;
   if (arg1 == 1) {
@@ -159,8 +158,8 @@ void __thiscall TweenBase_ColorTemplate_float__Reverse(TweenBase<ColorTemplate<f
  */
 /* TweenBase<ColorTemplate<float> >::Pause(int) */
 
-void __thiscall
-TweenBase_ColorTemplate_float__Pause(TweenBase<ColorTemplate<float>> *self,int arg1)
+void __thiscall TweenBase_ColorTemplate_float__Pause(TweenBase<ColorTemplate<float>> *self,
+                                                     int arg1)
 
 {
   *(int *)(self + 0x48) = arg1;
@@ -176,26 +175,25 @@ TweenBase_ColorTemplate_float__Pause(TweenBase<ColorTemplate<float>> *self,int a
  */
 /* TweenBase_float__Calculate(float) */
 
-void __thiscall TweenBase_float__Calculate(TweenBase<float> *self,float arg1)
+void __thiscall TweenBase_float__Calculate(TweenBase<float> *self, float arg1)
 
 {
   float fVar1;
   double dVar2;
-  
+
   fVar1 = DAT_005be894 /* R:1.0f */;
   if (*(int *)(self + 0x2c) != 0) {
     dVar2 = (double)__pow_finite((double)(arg1 / *(float *)(self + 0x20)),
                                  (double)*(float *)(self + 0x18));
-    **(float **)(self + 8) =
-         (DAT_005be894 /* R:1.0f */ - (float)dVar2) * *(float *)(self + 0x14) +
-         (float)dVar2 * *(float *)(self + 0x10);
+    **(float **)(self + 8) = (DAT_005be894 /* R:1.0f */ - (float)dVar2) * *(float *)(self + 0x14) +
+                             (float)dVar2 * *(float *)(self + 0x10);
     *(uint32_t *)(self + 0x34) = 1;
     return;
   }
   dVar2 = (double)__pow_finite((double)(arg1 / *(float *)(self + 0x20)),
                                (double)(DAT_005be894 /* R:1.0f */ / *(float *)(self + 0x18)));
   **(float **)(self + 8) =
-       (fVar1 - (float)dVar2) * *(float *)(self + 0x10) + (float)dVar2 * *(float *)(self + 0x14);
+      (fVar1 - (float)dVar2) * *(float *)(self + 0x10) + (float)dVar2 * *(float *)(self + 0x14);
   *(uint32_t *)(self + 0x34) = 1;
   return;
 }
@@ -209,8 +207,8 @@ void __thiscall TweenBase_float__Calculate(TweenBase<float> *self,float arg1)
  */
 /* TweenBase<ColorTemplate<float> >::Calculate(float) */
 
-void __thiscall
-TweenBase_ColorTemplate_float__Calculate(TweenBase<ColorTemplate<float>> *self,float arg1)
+void __thiscall TweenBase_ColorTemplate_float__Calculate(TweenBase<ColorTemplate<float>> *self,
+                                                         float arg1)
 
 {
   float fVar1;
@@ -221,7 +219,7 @@ TweenBase_ColorTemplate_float__Calculate(TweenBase<ColorTemplate<float>> *self,f
   float fVar6;
   double dVar7;
   float fVar8;
-  
+
   fVar8 = DAT_005be894 /* R:1.0f */;
   if (*(int *)(self + 0x44) == 0) {
     dVar7 = (double)__pow_finite((double)(arg1 / *(float *)(self + 0x38)),
@@ -235,7 +233,7 @@ TweenBase_ColorTemplate_float__Calculate(TweenBase<ColorTemplate<float>> *self,f
     fVar6 = *(float *)(self + 0x1c);
     *puVar4 = CONCAT44(*(float *)(self + 0x14) * fVar8 + *(float *)(self + 0x24) * fVar5,
                        *(float *)(self + 0x10) * fVar8 + *(float *)(self + 0x20) * fVar5);
-    puVar4[1] = CONCAT44(fVar8 * fVar6 + fVar5 * fVar2,fVar3 * fVar8 + fVar1 * fVar5);
+    puVar4[1] = CONCAT44(fVar8 * fVar6 + fVar5 * fVar2, fVar3 * fVar8 + fVar1 * fVar5);
     *(uint32_t *)(self + 0x4c) = 1;
     return;
   }
@@ -250,7 +248,7 @@ TweenBase_ColorTemplate_float__Calculate(TweenBase<ColorTemplate<float>> *self,f
   fVar3 = *(float *)(self + 0x2c);
   *puVar4 = CONCAT44(*(float *)(self + 0x24) * fVar5 + *(float *)(self + 0x14) * fVar6,
                      *(float *)(self + 0x20) * fVar5 + *(float *)(self + 0x10) * fVar6);
-  puVar4[1] = CONCAT44(fVar5 * fVar3 + fVar6 * fVar1,fVar2 * fVar5 + fVar8 * fVar6);
+  puVar4[1] = CONCAT44(fVar5 * fVar3 + fVar6 * fVar1, fVar2 * fVar5 + fVar8 * fVar6);
   *(uint32_t *)(self + 0x4c) = 1;
   return;
 }
@@ -264,14 +262,14 @@ TweenBase_ColorTemplate_float__Calculate(TweenBase<ColorTemplate<float>> *self,f
  */
 /* TweenBase<ColorTemplate<float> >::Update(float) */
 
-void __thiscall
-TweenBase_ColorTemplate_float__Update(TweenBase<ColorTemplate<float>> *self,float arg1)
+void __thiscall TweenBase_ColorTemplate_float__Update(TweenBase<ColorTemplate<float>> *self,
+                                                      float arg1)
 
 {
   float fVar1;
   uint64_t *puVar2;
   TweenBase<ColorTemplate<float>> *pTVar3;
-  
+
   if (*(int *)(self + 0x40) == 1) {
     if (*(int *)(self + 0x48) != 0) {
       return;
@@ -283,16 +281,15 @@ TweenBase_ColorTemplate_float__Update(TweenBase<ColorTemplate<float>> *self,floa
     }
     *(uint32_t *)(self + 0x40) = 0;
     *(uint32_t *)(self + 0x34) = 0;
-  }
-  else if (*(int *)(self + 0x40) != 0) {
+  } else if (*(int *)(self + 0x40) != 0) {
     return;
   }
   if (*(int *)(self + 0x48) == 0) {
     fVar1 = *(float *)(self + 0x34);
     *(float *)(self + 0x34) = arg1 + fVar1;
     if (arg1 + fVar1 < *(float *)(self + 0x38)) {
-                    /* WARNING: Could not recover jumptable at 0x004b618e. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+      /* WARNING: Could not recover jumptable at 0x004b618e. Too many branches */
+      /* WARNING: Treating indirect jump as call */
       (*(code *)**(uint64_t **)self)();
       return;
     }
@@ -317,12 +314,12 @@ TweenBase_ColorTemplate_float__Update(TweenBase<ColorTemplate<float>> *self,floa
  */
 /* TweenBase_float__Update(float) */
 
-void __thiscall TweenBase_float__Update(TweenBase<float> *self,float arg1)
+void __thiscall TweenBase_float__Update(TweenBase<float> *self, float arg1)
 
 {
   float fVar1;
   uint32_t uVar2;
-  
+
   if (*(int *)(self + 0x28) == 1) {
     if (*(int *)(self + 0x30) != 0) {
       return;
@@ -334,23 +331,21 @@ void __thiscall TweenBase_float__Update(TweenBase<float> *self,float arg1)
     }
     *(uint32_t *)(self + 0x28) = 0;
     *(uint32_t *)(self + 0x1c) = 0;
-  }
-  else if (*(int *)(self + 0x28) != 0) {
+  } else if (*(int *)(self + 0x28) != 0) {
     return;
   }
   if (*(int *)(self + 0x30) == 0) {
     fVar1 = *(float *)(self + 0x1c);
     *(float *)(self + 0x1c) = arg1 + fVar1;
     if (arg1 + fVar1 < *(float *)(self + 0x20)) {
-                    /* WARNING: Could not recover jumptable at 0x004b620e. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+      /* WARNING: Could not recover jumptable at 0x004b620e. Too many branches */
+      /* WARNING: Treating indirect jump as call */
       (*(code *)**(uint64_t **)self)();
       return;
     }
     if (*(int *)(self + 0x2c) == 0) {
       uVar2 = *(uint32_t *)(self + 0x14);
-    }
-    else {
+    } else {
       uVar2 = *(uint32_t *)(self + 0x10);
     }
     **(uint32_t **)(self + 8) = uVar2;
@@ -368,12 +363,12 @@ void __thiscall TweenBase_float__Update(TweenBase<float> *self,float arg1)
  */
 /* TweenBase_FPUVector__Reset(int) */
 
-void __thiscall TweenBase_FPUVector__Reset(TweenBase<FPUVector> *self,int arg1)
+void __thiscall TweenBase_FPUVector__Reset(TweenBase<FPUVector> *self, int arg1)
 
 {
   uint32_t *puVar1;
   float fVar2;
-  
+
   *(uint32_t *)(self + 0x34) = 0;
   fVar2 = 0.0;
   if (arg1 == 1) {
@@ -433,7 +428,7 @@ void __thiscall TweenBase_FPUVector__Reverse(TweenBase<FPUVector> *self)
  */
 /* TweenBase_FPUVector__Pause(int) */
 
-void __thiscall TweenBase_FPUVector__Pause(TweenBase<FPUVector> *self,int arg1)
+void __thiscall TweenBase_FPUVector__Pause(TweenBase<FPUVector> *self, int arg1)
 
 {
   *(int *)(self + 0x48) = arg1;
@@ -449,7 +444,7 @@ void __thiscall TweenBase_FPUVector__Pause(TweenBase<FPUVector> *self,int arg1)
  */
 /* TweenBase_FPUVector__Calculate(float) */
 
-void __thiscall TweenBase_FPUVector__Calculate(TweenBase<FPUVector> *self,float arg1)
+void __thiscall TweenBase_FPUVector__Calculate(TweenBase<FPUVector> *self, float arg1)
 
 {
   float fVar1;
@@ -460,7 +455,7 @@ void __thiscall TweenBase_FPUVector__Calculate(TweenBase<FPUVector> *self,float 
   float fVar6;
   double dVar7;
   float fVar8;
-  
+
   fVar8 = DAT_005be894 /* R:1.0f */;
   if (*(int *)(self + 0x44) == 0) {
     dVar7 = (double)__pow_finite((double)(arg1 / *(float *)(self + 0x38)),
@@ -474,7 +469,7 @@ void __thiscall TweenBase_FPUVector__Calculate(TweenBase<FPUVector> *self,float 
     fVar6 = *(float *)(self + 0x28);
     *puVar4 = CONCAT44(*(float *)(self + 0x14) * fVar8 + *(float *)(self + 0x24) * fVar5,
                        fVar8 * *(float *)(self + 0x10) + fVar5 * *(float *)(self + 0x20));
-    puVar4[1] = CONCAT44(fVar1 * fVar8 + fVar2 * fVar5,fVar3 * fVar8 + fVar6 * fVar5);
+    puVar4[1] = CONCAT44(fVar1 * fVar8 + fVar2 * fVar5, fVar3 * fVar8 + fVar6 * fVar5);
     *(uint32_t *)(self + 0x4c) = 1;
     return;
   }
@@ -489,7 +484,7 @@ void __thiscall TweenBase_FPUVector__Calculate(TweenBase<FPUVector> *self,float 
   fVar3 = *(float *)(self + 0x18);
   *puVar4 = CONCAT44(*(float *)(self + 0x24) * fVar5 + *(float *)(self + 0x14) * fVar6,
                      fVar5 * *(float *)(self + 0x20) + fVar6 * *(float *)(self + 0x10));
-  puVar4[1] = CONCAT44(fVar8 * fVar5 + fVar1 * fVar6,fVar2 * fVar5 + fVar3 * fVar6);
+  puVar4[1] = CONCAT44(fVar8 * fVar5 + fVar1 * fVar6, fVar2 * fVar5 + fVar3 * fVar6);
   *(uint32_t *)(self + 0x4c) = 1;
   return;
 }
@@ -503,13 +498,13 @@ void __thiscall TweenBase_FPUVector__Calculate(TweenBase<FPUVector> *self,float 
  */
 /* TweenBase_FPUVector__Update(float) */
 
-void __thiscall TweenBase_FPUVector__Update(TweenBase<FPUVector> *self,float arg1)
+void __thiscall TweenBase_FPUVector__Update(TweenBase<FPUVector> *self, float arg1)
 
 {
   float fVar1;
   uint32_t *puVar2;
   TweenBase<FPUVector> *pTVar3;
-  
+
   if (*(int *)(self + 0x40) == 1) {
     if (*(int *)(self + 0x48) != 0) {
       return;
@@ -521,16 +516,15 @@ void __thiscall TweenBase_FPUVector__Update(TweenBase<FPUVector> *self,float arg
     }
     *(uint32_t *)(self + 0x40) = 0;
     *(uint32_t *)(self + 0x34) = 0;
-  }
-  else if (*(int *)(self + 0x40) != 0) {
+  } else if (*(int *)(self + 0x40) != 0) {
     return;
   }
   if (*(int *)(self + 0x48) == 0) {
     fVar1 = *(float *)(self + 0x34);
     *(float *)(self + 0x34) = arg1 + fVar1;
     if (arg1 + fVar1 < *(float *)(self + 0x38)) {
-                    /* WARNING: Could not recover jumptable at 0x004da276. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+      /* WARNING: Could not recover jumptable at 0x004da276. Too many branches */
+      /* WARNING: Treating indirect jump as call */
       (*(code *)**(uint64_t **)self)();
       return;
     }

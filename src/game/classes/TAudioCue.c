@@ -47,10 +47,10 @@ void __thiscall TAudioCue__TAudioCue__0057ab30(TAudioCue *self)
   allocator *paVar1;
   int *piVar2;
   int iVar3;
-  
+
   if (*(uint *)(self + 0xc) != 0xffffffff) {
-                    /* try { // try from 0057ab45 to 0057ab51 has its CatchHandler @ 0057ab8b */
-    Loader__Wait(*(uint *)(self + 0xc),1);
+    /* try { // try from 0057ab45 to 0057ab51 has its CatchHandler @ 0057ab8b */
+    Loader__Wait(*(uint *)(self + 0xc), 1);
   }
   DestroyCachedCue((void **)self);
   paVar1 = (allocator *)(*(long *)(self + 0x10) + -0x18);
@@ -76,8 +76,8 @@ void __thiscall TAudioCue__TAudioCue__0057ab30(TAudioCue *self)
  */
 /* TAudioCue__Play(unsigned int, unsigned int, TAudioInstance*) */
 
-TAudioInstance * __thiscall
-TAudioCue__Play(TAudioCue *self,uint arg1,uint arg2,TAudioInstance *arg3)
+TAudioInstance *__thiscall TAudioCue__Play(TAudioCue *self, uint arg1, uint arg2,
+                                           TAudioInstance *arg3)
 
 {
   ushort uVar1;
@@ -97,13 +97,14 @@ TAudioCue__Play(TAudioCue *self,uint arg1,uint arg2,TAudioInstance *arg3)
   uint64_t *puVar15;
   bool bVar16;
   byte bVar17;
-  AutoLockSection local_48 [24];
-  
+  AutoLockSection local_48[24];
+
   bVar17 = 0;
   if (*(uint *)(self + 0xc) != 0xffffffff) {
-    Loader__Wait(*(uint *)(self + 0xc),1);
+    Loader__Wait(*(uint *)(self + 0xc), 1);
   }
-  if ((arg3 != (TAudioInstance *)0x0) || ((arg2 & 1) == 0)) goto LAB_0057ac09;
+  if ((arg3 != (TAudioInstance *)0x0) || ((arg2 & 1) == 0))
+    goto LAB_0057ac09;
   arg3 = operator_new(0x28);
   *(uint64_t *)arg3 = 0;
   lVar3 = Audio;
@@ -112,20 +113,20 @@ TAudioCue__Play(TAudioCue *self,uint arg1,uint arg2,TAudioInstance *arg3)
   *(uint32_t *)(arg3 + 0x18) = 0;
   *(uint32_t *)(arg3 + 0x1c) = 0;
   *(uint32_t *)(arg3 + 0x20) = 0;
-  AutoLockSection__AutoLockSection(local_48,(CriticalSection *)TAudioSection);
+  AutoLockSection__AutoLockSection(local_48, (CriticalSection *)TAudioSection);
   if (*(int *)(lVar3 + 0x48) == -0x5eef3582) {
     uVar6 = *(ushort *)(lVar3 + 0x28);
     if (*(ushort *)(lVar3 + 0x2a) <= uVar6) {
       uVar6 = *(ushort *)(lVar3 + 0x2a) + *(short *)(lVar3 + 0x34);
-      uVar11 = (ulong)*(byte *)(lVar3 + 0x2c);
+      uVar11 = (ulong) * (byte *)(lVar3 + 0x2c);
       pvVar7 = (void *)0x0;
       pvVar9 = *(void **)(lVar3 + 0x38);
       *(ushort *)(lVar3 + 0x2a) = uVar6;
       uVar12 = (ulong)uVar6 * 0x10;
       pvVar10 = malloc(uVar11 + 0x10 + uVar12);
       if (pvVar10 != (void *)0x0) {
-        pvVar7 = (void *)((long)pvVar10 + 0x10U +
-                         (uVar11 - ((long)pvVar10 + 0x10U) % uVar11) % uVar11);
+        pvVar7 =
+            (void *)((long)pvVar10 + 0x10U + (uVar11 - ((long)pvVar10 + 0x10U) % uVar11) % uVar11);
         *(ulong *)((long)pvVar7 + -0x10) = uVar12;
         *(void **)((long)pvVar7 + -8) = pvVar10;
         if (pvVar9 != (void *)0x0) {
@@ -133,52 +134,53 @@ TAudioCue__Play(TAudioCue *self,uint arg1,uint arg2,TAudioInstance *arg3)
           if (uVar12 <= *(ulong *)((long)pvVar9 + -0x10)) {
             uVar11 = uVar12;
           }
-          memcpy(pvVar7,pvVar9,uVar11);
+          memcpy(pvVar7, pvVar9, uVar11);
           free(*(void **)((long)pvVar9 + -8));
         }
       }
       pvVar9 = *(void **)(lVar3 + 0x40);
       *(void **)(lVar3 + 0x38) = pvVar7;
       if (pvVar9 != (void *)0x0) {
-        uVar11 = (ulong)*(byte *)(lVar3 + 0x2c);
+        uVar11 = (ulong) * (byte *)(lVar3 + 0x2c);
         pvVar7 = (void *)0x0;
-        uVar12 = (ulong)*(ushort *)(lVar3 + 0x2a) * 2;
+        uVar12 = (ulong) * (ushort *)(lVar3 + 0x2a) * 2;
         pvVar10 = malloc(uVar11 + 0x10 + uVar12);
         if (pvVar10 != (void *)0x0) {
           pvVar7 = (void *)((long)pvVar10 + 0x10U +
-                           (uVar11 - ((long)pvVar10 + 0x10U) % uVar11) % uVar11);
+                            (uVar11 - ((long)pvVar10 + 0x10U) % uVar11) % uVar11);
           *(ulong *)((long)pvVar7 + -0x10) = uVar12;
           *(void **)((long)pvVar7 + -8) = pvVar10;
           uVar11 = *(ulong *)((long)pvVar9 + -0x10);
           if (uVar12 <= *(ulong *)((long)pvVar9 + -0x10)) {
             uVar11 = uVar12;
           }
-          memcpy(pvVar7,pvVar9,uVar11);
+          memcpy(pvVar7, pvVar9, uVar11);
           free(*(void **)((long)pvVar9 + -8));
         }
         uVar6 = *(ushort *)(lVar3 + 0x28);
         uVar1 = *(ushort *)(lVar3 + 0x2a);
         *(void **)(lVar3 + 0x40) = pvVar7;
-        if (uVar1 <= uVar6) goto LAB_0057adc9;
-        while( true ) {
+        if (uVar1 <= uVar6)
+          goto LAB_0057adc9;
+        while (true) {
           uVar12 = (ulong)uVar6;
           uVar6 = uVar6 + 1;
           *(uint16_t *)((long)pvVar7 + uVar12 * 2) = 0xffff;
-          if (uVar1 <= uVar6) break;
+          if (uVar1 <= uVar6)
+            break;
           pvVar7 = *(void **)(lVar3 + 0x40);
         }
       }
       uVar6 = *(ushort *)(lVar3 + 0x28);
     }
-  }
-  else {
-    uVar12 = (ulong)*(byte *)(lVar3 + 0x2c);
+  } else {
+    uVar12 = (ulong) * (byte *)(lVar3 + 0x2c);
     *(uint32_t *)(lVar3 + 0x30) = 0;
     pvVar7 = malloc(uVar12 + 0x60);
     puVar15 = (uint64_t *)0x0;
     if (pvVar7 != (void *)0x0) {
-      puVar15 = (uint64_t *)
-                ((long)pvVar7 + 0x10U + (uVar12 - ((long)pvVar7 + 0x10U) % uVar12) % uVar12);
+      puVar15 =
+          (uint64_t *)((long)pvVar7 + 0x10U + (uVar12 - ((long)pvVar7 + 0x10U) % uVar12) % uVar12);
       puVar15[-2] = 0x50;
       puVar15[-1] = pvVar7;
     }
@@ -228,7 +230,8 @@ LAB_0057adc9:
     uVar1 = *puVar14;
     while (uVar1 != 0xffff) {
       puVar14 = puVar14 + 1;
-      if (sVar5 == *(short *)(lVar3 + 0x2a)) goto LAB_0057add4;
+      if (sVar5 == *(short *)(lVar3 + 0x2a))
+        goto LAB_0057add4;
       sVar5 = sVar5 + 1;
       uVar1 = *puVar14;
     }
@@ -242,7 +245,7 @@ LAB_0057add4:
   *(short *)(lVar3 + 0x28) = *(short *)(lVar3 + 0x28) + 1;
   AutoLockSection__AutoLockSection__005b59d0(local_48);
 LAB_0057ac09:
-  audPlayCue(*(uint64_t *)self,arg1,arg3);
+  audPlayCue(*(uint64_t *)self, arg1, arg3);
   uVar2 = pMusicInstances._56_8_;
   if (((byte)self[0x18] & 5) != 0) {
     if (pMusicInstances._72_4_ == -0x5eef3582) {
@@ -253,8 +256,8 @@ LAB_0057ac09:
         uVar12 = (ulong)(ushort)pMusicInstances._42_2_ * 8;
         pvVar9 = malloc(uVar11 + 0x10 + uVar12);
         if (pvVar9 != (void *)0x0) {
-          pvVar7 = (void *)((long)pvVar9 + 0x10U +
-                           (uVar11 - ((long)pvVar9 + 0x10U) % uVar11) % uVar11);
+          pvVar7 =
+              (void *)((long)pvVar9 + 0x10U + (uVar11 - ((long)pvVar9 + 0x10U) % uVar11) % uVar11);
           *(ulong *)((long)pvVar7 + -0x10) = uVar12;
           *(void **)((long)pvVar7 + -8) = pvVar9;
           if (uVar2 != 0) {
@@ -262,7 +265,7 @@ LAB_0057ac09:
             if (uVar12 < uVar11 || uVar12 - uVar11 == 0) {
               uVar11 = uVar12;
             }
-            memcpy(pvVar7,(void *)uVar2,uVar11);
+            memcpy(pvVar7, (void *)uVar2, uVar11);
             free(*(void **)(uVar2 + -8));
           }
         }
@@ -277,14 +280,14 @@ LAB_0057ac09:
           uVar1 = pMusicInstances._40_2_;
           if (pvVar9 != (void *)0x0) {
             pvVar7 = (void *)((long)pvVar9 + 0x10U +
-                             (uVar11 - ((long)pvVar9 + 0x10U) % uVar11) % uVar11);
+                              (uVar11 - ((long)pvVar9 + 0x10U) % uVar11) % uVar11);
             *(void **)((long)pvVar7 + -8) = pvVar9;
             *(ulong *)((long)pvVar7 + -0x10) = uVar12;
             uVar11 = *(ulong *)(uVar2 + -0x10);
             if (uVar12 <= *(ulong *)(uVar2 + -0x10)) {
               uVar11 = uVar12;
             }
-            memcpy(pvVar7,(void *)uVar2,uVar11);
+            memcpy(pvVar7, (void *)uVar2, uVar11);
             free(*(void **)(uVar2 + -8));
             uVar1 = pMusicInstances._40_2_;
             uVar6 = pMusicInstances._42_2_;
@@ -301,21 +304,21 @@ LAB_0057ac09:
         psVar13 = (short *)pMusicInstances._64_8_;
         while (sVar5 != -1) {
           psVar13 = psVar13 + 1;
-          if (sVar4 == pMusicInstances._42_2_) goto LAB_0057acfe;
+          if (sVar4 == pMusicInstances._42_2_)
+            goto LAB_0057acfe;
           sVar4 = sVar4 + 1;
           sVar5 = *psVar13;
         }
         *psVar13 = pMusicInstances._40_2_;
       }
-    }
-    else {
+    } else {
       uVar12 = (ulong)pMusicInstances[0x2c];
       pMusicInstances._48_4_ = 0;
       pvVar7 = malloc(uVar12 + 0x38);
       puVar15 = (uint64_t *)0x0;
       if (pvVar7 != (void *)0x0) {
-        puVar15 = (uint64_t *)
-                  ((long)pvVar7 + 0x10U + (uVar12 - ((long)pvVar7 + 0x10U) % uVar12) % uVar12);
+        puVar15 = (uint64_t *)((long)pvVar7 + 0x10U +
+                               (uVar12 - ((long)pvVar7 + 0x10U) % uVar12) % uVar12);
         puVar15[-2] = 0x28;
         puVar15[-1] = pvVar7;
       }
@@ -330,9 +333,8 @@ LAB_0057ac09:
       pMusicInstances._72_4_ = 0xa110ca7e;
       pMusicInstances._52_2_ = 5;
     }
-LAB_0057acfe:
-    *(TAudioInstance **)(pMusicInstances._56_8_ + (ulong)(ushort)pMusicInstances._40_2_ * 8) =
-         arg3;
+  LAB_0057acfe:
+    *(TAudioInstance **)(pMusicInstances._56_8_ + (ulong)(ushort)pMusicInstances._40_2_ * 8) = arg3;
     pMusicInstances._40_2_ = pMusicInstances._40_2_ + 1;
     if (bOverrideMusicVolume == 1) {
       *(uint32_t *)(arg3 + 0x20) = 1;

@@ -23,24 +23,24 @@ void __thiscall LevelRenderLayer__Render(LevelRenderLayer *self)
 {
   long *plVar1;
   int iVar2;
-  
-  TGraphics__SetMasterPixelStage(Graphics,0x15,0,2,0,4);
-  TGraphics__SetPixelOutputParams(Graphics,*(float *)(self + 0x410),0.0,0.0,0.0);
-  TGraphics__SetPixelColorConstant(Graphics,1,self + 0x400);
+
+  TGraphics__SetMasterPixelStage(Graphics, 0x15, 0, 2, 0, 4);
+  TGraphics__SetPixelOutputParams(Graphics, *(float *)(self + 0x410), 0.0, 0.0, 0.0);
+  TGraphics__SetPixelColorConstant(Graphics, 1, self + 0x400);
   iVar2 = *(int *)(self + 0x420);
   plVar1 = *(long **)(self + 8);
   if (iVar2 == 0) {
     if (plVar1 == (long *)0x0) {
-      (**(code **)(**(long **)(*(long *)(self + 0x418) + 0x40) + 0x30))
-                (*(long **)(*(long *)(self + 0x418) + 0x40),0);
+      (**(code **)(**(long **)(*(long *)(self + 0x418) + 0x40) + 0x30))(
+          *(long **)(*(long *)(self + 0x418) + 0x40), 0);
       goto LAB_0058cf33;
     }
     (**(code **)(*plVar1 + 0x10))(plVar1);
     plVar1 = (long *)plVar1[1];
     iVar2 = *(int *)(self + 0x420);
   }
-  (**(code **)(**(long **)(*(long *)(self + 0x418) + 0x40) + 0x30))
-            (*(long **)(*(long *)(self + 0x418) + 0x40),iVar2);
+  (**(code **)(**(long **)(*(long *)(self + 0x418) + 0x40) + 0x30))(
+      *(long **)(*(long *)(self + 0x418) + 0x40), iVar2);
   for (; plVar1 != (long *)0x0; plVar1 = (long *)plVar1[1]) {
     (**(code **)(*plVar1 + 0x10))(plVar1);
   }

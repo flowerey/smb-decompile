@@ -46,11 +46,11 @@ void __thiscall ModelLoader__ModelLoader(ModelLoader *self)
     *(uint64_t *)(self + 0x70) = 0;
   }
   if (*(BaseResource **)(self + 0x80) != (BaseResource *)0x0) {
-                    /* try { // try from 00594182 to 00594199 has its CatchHandler @ 00594277 */
-    BaseResource__Release(*(BaseResource **)(self + 0x80),0);
+    /* try { // try from 00594182 to 00594199 has its CatchHandler @ 00594277 */
+    BaseResource__Release(*(BaseResource **)(self + 0x80), 0);
   }
   if (*(BaseResource **)(self + 0x88) != (BaseResource *)0x0) {
-    BaseResource__Release(*(BaseResource **)(self + 0x88),0);
+    BaseResource__Release(*(BaseResource **)(self + 0x88), 0);
   }
   if (*(int *)(self + 0x78) != -0x5eef3582) {
     CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x30));
@@ -79,7 +79,7 @@ void __thiscall ModelLoader__ModelLoader(ModelLoader *self)
  */
 /* ModelLoader__ModelLoader__005942a0(tagModelCreation const*) */
 
-void __thiscall ModelLoader__ModelLoader__005942a0(ModelLoader *self,tagModelCreation *arg1)
+void __thiscall ModelLoader__ModelLoader__005942a0(ModelLoader *self, tagModelCreation *arg1)
 
 {
   int *piVar1;
@@ -115,7 +115,7 @@ void __thiscall ModelLoader__ModelLoader__005942a0(ModelLoader *self,tagModelCre
   int iVar30;
   size_t __n;
   ulong uVar31;
-  uint8_t (*pauVar32) [16];
+  uint8_t (*pauVar32)[16];
   ushort *puVar33;
   uint32_t *puVar34;
   uint uVar35;
@@ -148,10 +148,10 @@ void __thiscall ModelLoader__ModelLoader__005942a0(ModelLoader *self,tagModelCre
   uint8_t *local_160;
   long local_158;
   uint32_t local_150;
-  uint8_t local_14c [4];
+  uint8_t local_14c[4];
   long local_148;
   uint32_t local_140;
-  File local_13c [84];
+  File local_13c[84];
   long local_e8;
   uint16_t local_e0;
   uint32_t local_dc;
@@ -186,8 +186,8 @@ void __thiscall ModelLoader__ModelLoader__005942a0(ModelLoader *self,tagModelCre
   undefined7 uStack_57;
   uint32_t local_50;
   uint8_t local_4c;
-  uint64_t local_40 [2];
-  
+  uint64_t local_40[2];
+
   bVar46 = 0;
   *(uint64_t *)self = 0;
   *(uint64_t *)(self + 8) = 0;
@@ -208,7 +208,7 @@ void __thiscall ModelLoader__ModelLoader__005942a0(ModelLoader *self,tagModelCre
   if (lVar39 == 0) {
     local_198 = *(uint64_t *)arg1;
     *(uint32_t *)(self + 0x60) = 0;
-LAB_005945a2:
+  LAB_005945a2:
     local_160 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
     local_164 = 0;
     local_168 = 0;
@@ -223,8 +223,8 @@ LAB_005945a2:
     pvVar18 = malloc(uVar31 + 0x880);
     puVar37 = (uint64_t *)0x0;
     if (pvVar18 != (void *)0x0) {
-      puVar37 = (uint64_t *)
-                ((long)pvVar18 + 0x10U + (uVar31 - ((long)pvVar18 + 0x10U) % uVar31) % uVar31);
+      puVar37 = (uint64_t *)((long)pvVar18 + 0x10U +
+                             (uVar31 - ((long)pvVar18 + 0x10U) % uVar31) % uVar31);
       puVar37[-2] = 0x870;
       puVar37[-1] = pvVar18;
     }
@@ -265,8 +265,7 @@ LAB_005945a2:
     *(uint16_t *)(self + 0x5a) = 0x1e;
     *(uint32_t *)(self + 0x78) = 0xa110ca7e;
     *(uint16_t *)(self + 100) = 0x1e;
-  }
-  else {
+  } else {
     *(uint32_t *)(lVar39 + 0x14) = 0;
     *(uint32_t *)(lVar39 + 0x18) = 0;
     *(uint32_t *)(lVar39 + 0x1c) = 0;
@@ -283,7 +282,8 @@ LAB_005945a2:
     local_160 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
     local_190 = &DAT_005db9f0 /* R:u32=1818165362 */;
     *(uint32_t *)(self + 0x60) = 0;
-    if (*(int *)(self + 0x78) != -0x5eef3582) goto LAB_005945a2;
+    if (*(int *)(self + 0x78) != -0x5eef3582)
+      goto LAB_005945a2;
     if (*(ushort *)(self + 0x5a) < 0x1e) {
       uVar31 = (ulong)(byte)self[0x5c];
       *(uint16_t *)(self + 0x5a) = 0x1e;
@@ -291,10 +291,9 @@ LAB_005945a2:
       pvVar10 = malloc(uVar31 + 0x880);
       if (pvVar10 == (void *)0x0) {
         *(uint64_t *)(self + 0x68) = 0;
-      }
-      else {
-        pvVar11 = (void *)((long)pvVar10 + 0x10U +
-                          (uVar31 - ((long)pvVar10 + 0x10U) % uVar31) % uVar31);
+      } else {
+        pvVar11 =
+            (void *)((long)pvVar10 + 0x10U + (uVar31 - ((long)pvVar10 + 0x10U) % uVar31) % uVar31);
         *(uint64_t *)((long)pvVar11 + -0x10) = 0x870;
         *(void **)((long)pvVar11 + -8) = pvVar10;
         if (pvVar18 != (void *)0x0) {
@@ -302,7 +301,7 @@ LAB_005945a2:
           if (*(ulong *)((long)pvVar18 + -0x10) < 0x871) {
             __n = *(ulong *)((long)pvVar18 + -0x10);
           }
-          memcpy(pvVar11,pvVar18,__n);
+          memcpy(pvVar11, pvVar18, __n);
           free(*(void **)((long)pvVar18 + -8));
         }
         *(void **)(self + 0x68) = pvVar11;
@@ -315,7 +314,7 @@ LAB_005945a2:
           pvVar11 = malloc(uVar14 + 0x10 + uVar31);
           if (pvVar11 != (void *)0x0) {
             pvVar18 = (void *)((long)pvVar11 + 0x10U +
-                              (uVar14 - ((long)pvVar11 + 0x10U) % uVar14) % uVar14);
+                               (uVar14 - ((long)pvVar11 + 0x10U) % uVar14) % uVar14);
             *(ulong *)((long)pvVar18 + -0x10) = uVar31;
             *(void **)((long)pvVar18 + -8) = pvVar11;
             if (pvVar10 != (void *)0x0) {
@@ -323,7 +322,7 @@ LAB_005945a2:
               if (uVar31 <= *(ulong *)((long)pvVar10 + -0x10)) {
                 uVar14 = uVar31;
               }
-              memcpy(pvVar18,pvVar10,uVar14);
+              memcpy(pvVar18, pvVar10, uVar14);
               free(*(void **)((long)pvVar10 + -8));
             }
             uVar7 = *(ushort *)(self + 0x5a);
@@ -331,11 +330,12 @@ LAB_005945a2:
           uVar5 = *(ushort *)(self + 0x58);
           *(void **)(self + 0x70) = pvVar18;
           if (uVar5 < uVar7) {
-            while( true ) {
+            while (true) {
               uVar31 = (ulong)uVar5;
               uVar5 = uVar5 + 1;
               *(uint16_t *)((long)pvVar18 + uVar31 * 2) = 0xffff;
-              if (uVar7 <= uVar5) break;
+              if (uVar7 <= uVar5)
+                break;
               pvVar18 = *(void **)(self + 0x70);
             }
           }
@@ -343,28 +343,25 @@ LAB_005945a2:
       }
     }
   }
-                    /* try { // try from 00594655 to 00594659 has its CatchHandler @ 0059564d */
-  File__File(local_13c + 0x24,(tagFileCreation *)&local_198);
+  /* try { // try from 00594655 to 00594659 has its CatchHandler @ 0059564d */
+  File__File(local_13c + 0x24, (tagFileCreation *)&local_198);
   *(uint16_t *)(self + 0x28) = 0;
   *(uint16_t *)(self + 0x26) = 0;
   *(uint16_t *)(self + 0x24) = 0;
   *(uint16_t *)(self + 0x22) = 0;
   *(uint16_t *)(self + 0x20) = 0;
   do {
-    pcVar12 = (char *)File__ReadLn((char *)(local_13c + 0x24),0x823f40);
+    pcVar12 = (char *)File__ReadLn((char *)(local_13c + 0x24), 0x823f40);
     if (*pcVar12 != '#') {
       if (File__strFileString == 'v') {
         if (DAT_00823f41 /* R:9.40407027357176e-38f */ == ' ') {
           *(short *)(self + 0x20) = *(short *)(self + 0x20) + 1;
-        }
-        else if (DAT_00823f41 /* R:9.40407027357176e-38f */ == 'n') {
+        } else if (DAT_00823f41 /* R:9.40407027357176e-38f */ == 'n') {
           *(short *)(self + 0x24) = *(short *)(self + 0x24) + 1;
-        }
-        else if (DAT_00823f41 /* R:9.40407027357176e-38f */ == 't') {
+        } else if (DAT_00823f41 /* R:9.40407027357176e-38f */ == 't') {
           *(short *)(self + 0x26) = *(short *)(self + 0x26) + 1;
         }
-      }
-      else if (File__strFileString == 'f') {
+      } else if (File__strFileString == 'f') {
         if (*(int *)(self + 0x78) == -0x5eef3582) {
           uVar7 = *(ushort *)(self + 0x58);
           if (*(ushort *)(self + 0x5a) <= uVar7) {
@@ -377,7 +374,7 @@ LAB_005945a2:
             pvVar11 = malloc(uVar31 + 0x10 + uVar14);
             if (pvVar11 != (void *)0x0) {
               pvVar18 = (void *)((long)pvVar11 + 0x10U +
-                                (uVar31 - ((long)pvVar11 + 0x10U) % uVar31) % uVar31);
+                                 (uVar31 - ((long)pvVar11 + 0x10U) % uVar31) % uVar31);
               *(ulong *)((long)pvVar18 + -0x10) = uVar14;
               *(void **)((long)pvVar18 + -8) = pvVar11;
               if (pvVar10 != (void *)0x0) {
@@ -385,7 +382,7 @@ LAB_005945a2:
                 if (uVar14 <= *(ulong *)((long)pvVar10 + -0x10)) {
                   uVar31 = uVar14;
                 }
-                memcpy(pvVar18,pvVar10,uVar31);
+                memcpy(pvVar18, pvVar10, uVar31);
                 free(*(void **)((long)pvVar10 + -8));
               }
             }
@@ -399,42 +396,42 @@ LAB_005945a2:
               pvVar11 = malloc(uVar14 + 0x10 + uVar31);
               if (pvVar11 != (void *)0x0) {
                 pvVar18 = (void *)((long)pvVar11 + 0x10U +
-                                  (uVar14 - ((long)pvVar11 + 0x10U) % uVar14) % uVar14);
+                                   (uVar14 - ((long)pvVar11 + 0x10U) % uVar14) % uVar14);
                 *(void **)((long)pvVar18 + -8) = pvVar11;
                 *(ulong *)((long)pvVar18 + -0x10) = uVar31;
                 uVar14 = *(ulong *)((long)pvVar10 + -0x10);
                 if (uVar31 <= *(ulong *)((long)pvVar10 + -0x10)) {
                   uVar14 = uVar31;
                 }
-                memcpy(pvVar18,pvVar10,uVar14);
+                memcpy(pvVar18, pvVar10, uVar14);
                 free(*(void **)((long)pvVar10 + -8));
                 uVar5 = *(ushort *)(self + 0x5a);
               }
               uVar7 = *(ushort *)(self + 0x58);
               *(void **)(self + 0x70) = pvVar18;
-              if (uVar5 <= uVar7) goto LAB_00594700;
-              while( true ) {
+              if (uVar5 <= uVar7)
+                goto LAB_00594700;
+              while (true) {
                 uVar31 = (ulong)uVar7;
                 uVar7 = uVar7 + 1;
                 *(uint16_t *)((long)pvVar18 + uVar31 * 2) = 0xffff;
-                if (uVar5 <= uVar7) break;
+                if (uVar5 <= uVar7)
+                  break;
                 pvVar18 = *(void **)(self + 0x70);
               }
             }
             uVar7 = *(ushort *)(self + 0x58);
           }
-LAB_00594700:
+        LAB_00594700:
           iVar8 = *(int *)(self + 0x60);
-        }
-        else {
+        } else {
           uVar31 = (ulong)(byte)self[0x5c];
           *(uint32_t *)(self + 0x60) = 0;
           pvVar18 = malloc(uVar31 + 0x178);
           puVar37 = (uint64_t *)0x0;
           if (pvVar18 != (void *)0x0) {
-            puVar37 = (uint64_t *)
-                      ((long)pvVar18 + 0x10U + (uVar31 - ((long)pvVar18 + 0x10U) % uVar31) % uVar31)
-            ;
+            puVar37 = (uint64_t *)((long)pvVar18 + 0x10U +
+                                   (uVar31 - ((long)pvVar18 + 0x10U) % uVar31) % uVar31);
             puVar37[-2] = 0x168;
             puVar37[-1] = pvVar18;
           }
@@ -484,40 +481,41 @@ LAB_00594700:
           uVar5 = *puVar33;
           while (uVar5 != 0xffff) {
             puVar33 = puVar33 + 1;
-            if (sVar6 == *(short *)(self + 0x5a)) goto LAB_0059470a;
+            if (sVar6 == *(short *)(self + 0x5a))
+              goto LAB_0059470a;
             sVar6 = sVar6 + 1;
             uVar5 = *puVar33;
           }
           *puVar33 = uVar7;
           uVar7 = *(ushort *)(self + 0x58);
         }
-LAB_0059470a:
+      LAB_0059470a:
         uVar31 = 0x48;
         bVar45 = false;
         iVar8 = 0x48;
         *(ushort *)(self + 0x58) = uVar7 + 1;
-        puVar37 = (uint64_t *)(*(long *)(self + 0x68) + ((ulong)(ushort)(uVar7 + 1) * 9 + -9) * 8)
-        ;
+        puVar37 = (uint64_t *)(*(long *)(self + 0x68) + ((ulong)(ushort)(uVar7 + 1) * 9 + -9) * 8);
         if (((ulong)puVar37 & 1) == 0) {
           puVar38 = puVar37;
           bVar4 = false;
-          if (((ulong)puVar37 & 2) == 0) goto LAB_0059473b;
-LAB_005955b1:
+          if (((ulong)puVar37 & 2) == 0)
+            goto LAB_0059473b;
+        LAB_005955b1:
           bVar45 = bVar4;
           *(uint16_t *)puVar38 = 0;
           puVar38 = (uint64_t *)((long)puVar38 + 2);
           uVar41 = iVar8 - 2;
           uVar31 = (ulong)uVar41;
-        }
-        else {
+        } else {
           puVar38 = (uint64_t *)((long)puVar37 + 1);
           *(uint8_t *)puVar37 = 0;
           uVar31 = 0x47;
           bVar45 = true;
           iVar8 = 0x47;
           bVar4 = true;
-          if (((ulong)puVar38 & 2) != 0) goto LAB_005955b1;
-LAB_0059473b:
+          if (((ulong)puVar38 & 2) != 0)
+            goto LAB_005955b1;
+        LAB_0059473b:
           uVar41 = (uint)uVar31;
         }
         if (((ulong)puVar38 & 4) != 0) {
@@ -540,7 +538,7 @@ LAB_0059473b:
         if (bVar45) {
           *(uint8_t *)puVar38 = 0;
         }
-        piVar1 = (int *)(*(long *)(self + 0x68) + ((ulong)*(ushort *)(self + 0x58) * 9 + -9) * 8);
+        piVar1 = (int *)(*(long *)(self + 0x68) + ((ulong) * (ushort *)(self + 0x58) * 9 + -9) * 8);
         piVar1[0] = -1;
         piVar1[1] = -1;
         piVar1[2] = -1;
@@ -561,52 +559,51 @@ LAB_0059473b:
         piVar1[0x11] = 0;
         local_b8 = local_b8 & 0xffffffff00000000;
         local_b0 = 0;
-                    /* try { // try from 005947f6 to 005947fa has its CatchHandler @ 00595652 */
-        ExplodeString(0x20,&DAT_00823f42 /* R:1.8367099231598242e-40f */,&local_b8);
+        /* try { // try from 005947f6 to 005947fa has its CatchHandler @ 00595652 */
+        ExplodeString(0x20, &DAT_00823f42 /* R:1.8367099231598242e-40f */, &local_b8);
         uVar31 = 0;
         piVar44 = piVar1;
         do {
           uVar41 = (uint)uVar31;
           local_98 = (long *)((ulong)local_98 & 0xffffffff00000000);
           local_90 = 0;
-                    /* try { // try from 00594823 to 0059487e has its CatchHandler @ 0059566c */
-          uVar19 = ExplodeStringData__operator_index((ExplodeStringData *)&local_b8,uVar41);
-          iVar8 = ExplodeString(0x2f,uVar19,&local_98);
+          /* try { // try from 00594823 to 0059487e has its CatchHandler @ 0059566c */
+          uVar19 = ExplodeStringData__operator_index((ExplodeStringData *)&local_b8, uVar41);
+          iVar8 = ExplodeString(0x2f, uVar19, &local_98);
           if (iVar8 == 1) {
             if ((uint)local_98 != 0) {
               uVar35 = 0;
               piVar42 = piVar1 + uVar31 * 6;
               do {
-                uVar19 = ExplodeStringData__operator_index((ExplodeStringData *)&local_98,uVar35);
+                uVar19 = ExplodeStringData__operator_index((ExplodeStringData *)&local_98, uVar35);
                 iVar8 = StringToInt(uVar19);
                 uVar35 = uVar35 + 1;
                 *piVar42 = iVar8 + -1;
                 piVar42 = piVar42 + 1;
               } while (uVar35 < (uint)local_98);
             }
-          }
-          else {
-                    /* try { // try from 005948d7 to 005948e3 has its CatchHandler @ 0059566c */
-            uVar19 = ExplodeStringData__operator_index((ExplodeStringData *)&local_b8,uVar41);
+          } else {
+            /* try { // try from 005948d7 to 005948e3 has its CatchHandler @ 0059566c */
+            uVar19 = ExplodeStringData__operator_index((ExplodeStringData *)&local_b8, uVar41);
             iVar8 = StringToInt(uVar19);
             *piVar44 = iVar8 + -1;
           }
-                    /* try { // try from 0059489e to 005948a2 has its CatchHandler @ 00595652 */
+          /* try { // try from 0059489e to 005948a2 has its CatchHandler @ 00595652 */
           ExplodeStringData__ExplodeStringData((ExplodeStringData *)&local_98);
           uVar31 = (ulong)(uVar41 + 1);
           piVar44 = piVar44 + 6;
         } while (uVar41 + 1 != 3);
         *(short *)(self + 0x28) = *(short *)(self + 0x28) + 3;
-                    /* try { // try from 005948c2 to 005948c6 has its CatchHandler @ 00595639 */
+        /* try { // try from 005948c2 to 005948c6 has its CatchHandler @ 00595639 */
         ExplodeStringData__ExplodeStringData((ExplodeStringData *)&local_b8);
       }
     }
-                    /* try { // try from 0059468c to 005946af has its CatchHandler @ 00595639 */
+    /* try { // try from 0059468c to 005946af has its CatchHandler @ 00595639 */
     iVar8 = File__EndOfFile();
   } while (iVar8 == 0);
-                    /* try { // try from 005948f4 to 00594a76 has its CatchHandler @ 00595639 */
+  /* try { // try from 005948f4 to 00594a76 has its CatchHandler @ 00595639 */
   File__Reset(local_13c + 0x24);
-  uVar31 = (ulong)*(ushort *)(self + 0x20);
+  uVar31 = (ulong) * (ushort *)(self + 0x20);
   puVar13 = operator_new__(uVar31 * 8 + 8);
   lVar39 = uVar31 - 1;
   *puVar13 = uVar31;
@@ -621,20 +618,22 @@ LAB_0059473b:
       lVar39 = uVar31 - 2;
       puVar13[1] = 0;
       puVar17 = puVar13 + 2;
-      if (uVar31 == uVar14) goto LAB_005949b9;
+      if (uVar31 == uVar14)
+        goto LAB_005949b9;
     }
     uVar36 = uVar31 - uVar14 >> 1;
     if (uVar36 != 0) {
-      pauVar32 = (uint8_t (*) [16])(puVar24 + uVar14);
+      pauVar32 = (uint8_t (*)[16])(puVar24 + uVar14);
       uVar15 = 0;
       do {
         uVar15 = uVar15 + 1;
-        *pauVar32 = (uint8_t  [16])0x0;
+        *pauVar32 = (uint8_t[16])0x0;
         pauVar32 = pauVar32 + 1;
       } while (uVar15 < uVar36);
       lVar39 = lVar39 + uVar36 * -2;
       puVar17 = puVar17 + uVar36 * 2;
-      if (uVar31 - uVar14 == uVar36 * 2) goto LAB_005949b9;
+      if (uVar31 - uVar14 == uVar36 * 2)
+        goto LAB_005949b9;
     }
     lVar16 = 0;
     do {
@@ -658,8 +657,7 @@ LAB_005949b9:
         puVar22[1] = 0;
         puVar22 = puVar22 + 2;
       } while (lVar39 != -1);
-    }
-    else {
+    } else {
       uVar14 = 0;
       do {
         uVar36 = uVar14 + 1;
@@ -670,7 +668,7 @@ LAB_005949b9:
     }
   }
   *(ulong **)(self + 8) = puVar24;
-  pvVar18 = operator_new__((ulong)*(ushort *)(self + 0x28) << 2);
+  pvVar18 = operator_new__((ulong) * (ushort *)(self + 0x28) << 2);
   uVar7 = *(ushort *)(self + 0x26);
   *(void **)self = pvVar18;
   if (uVar7 != 0) {
@@ -679,7 +677,7 @@ LAB_005949b9:
     *(ulong **)(self + 0x10) = puVar24 + 1;
   }
   if (*(ushort *)(self + 0x24) != 0) {
-    uVar31 = (ulong)*(ushort *)(self + 0x24);
+    uVar31 = (ulong) * (ushort *)(self + 0x24);
     puVar24 = operator_new__(uVar31 * 0x10 + 8);
     *puVar24 = uVar31;
     if (uVar31 != 0) {
@@ -697,33 +695,31 @@ LAB_005949b9:
   uVar41 = 0;
   uVar31 = 0;
   do {
-    pcVar12 = (char *)File__ReadLn((char *)(local_13c + 0x24),0x823f40);
+    pcVar12 = (char *)File__ReadLn((char *)(local_13c + 0x24), 0x823f40);
     uVar36 = uVar31;
     if (*pcVar12 == 'v') {
       if (DAT_00823f41 /* R:9.40407027357176e-38f */ == ' ') {
         uVar35 = 3;
         uVar36 = (ulong)((int)uVar31 + 1);
         pfVar25 = (float *)(uVar31 * 0x10 + *(long *)(self + 8));
-      }
-      else if (DAT_00823f41 /* R:9.40407027357176e-38f */ == 'n') {
+      } else if (DAT_00823f41 /* R:9.40407027357176e-38f */ == 'n') {
         uVar35 = 3;
         pfVar25 = (float *)(uVar14 * 0x10 + *(long *)(self + 0x18));
         uVar14 = (ulong)((int)uVar14 + 1);
-      }
-      else {
+      } else {
         pfVar25 = (float *)0x0;
         uVar35 = 0;
         if (DAT_00823f41 /* R:9.40407027357176e-38f */ == 't') {
-          pfVar25 = Vector2__operator_cast_to_float
-                              ((Vector2 *)(*(long *)(self + 0x10) + (ulong)uVar41 * 8));
+          pfVar25 = Vector2__operator_cast_to_float(
+              (Vector2 *)(*(long *)(self + 0x10) + (ulong)uVar41 * 8));
           uVar41 = uVar41 + 1;
           uVar35 = 2;
         }
       }
       local_98 = (long *)((ulong)local_98 & 0xffffffff00000000);
       local_90 = 0;
-                    /* try { // try from 00594acd to 00594b06 has its CatchHandler @ 0059563b */
-      ExplodeString(0x20,&File__strFileString,&local_98);
+      /* try { // try from 00594acd to 00594b06 has its CatchHandler @ 0059563b */
+      ExplodeString(0x20, &File__strFileString, &local_98);
       uVar28 = (uint)local_98;
       if (uVar35 <= (uint)local_98) {
         uVar28 = uVar35;
@@ -731,7 +727,7 @@ LAB_005949b9:
       if (uVar28 != 0) {
         uVar35 = 1;
         do {
-          uVar19 = ExplodeStringData__operator_index((ExplodeStringData *)&local_98,uVar35);
+          uVar19 = ExplodeStringData__operator_index((ExplodeStringData *)&local_98, uVar35);
           fVar47 = (float)StringToFloat(uVar19);
           uVar9 = uVar35 - 1;
           uVar35 = uVar35 + 1;
@@ -740,13 +736,14 @@ LAB_005949b9:
       }
       if (DAT_00823f41 /* R:9.40407027357176e-38f */ == 't') {
         uVar35 = (int)(pfVar25[1] - DAT_005be894 /* R:1.0f */) >> 0x1f;
-        pfVar25[1] = (float)(int)(((int)(pfVar25[1] - DAT_005be894 /* R:1.0f */) ^ uVar35) - uVar35);
-      }
-      else {
+        pfVar25[1] =
+            (float)(int)(((int)(pfVar25[1] - DAT_005be894 /* R:1.0f */) ^ uVar35) - uVar35);
+      } else {
         lVar39 = *(long *)(arg1 + 8);
         if ((lVar39 != 0) && (DAT_00823f41 /* R:9.40407027357176e-38f */ == ' ')) {
           fVar47 = (float)((uint)*pfVar25 & DAT_005be880 /* R:u32=2147483647 */);
-          if ((float)((uint)*pfVar25 & DAT_005be880 /* R:u32=2147483647 */) <= *(float *)(lVar39 + 0x14)) {
+          if ((float)((uint)*pfVar25 & DAT_005be880 /* R:u32=2147483647 */) <=
+              *(float *)(lVar39 + 0x14)) {
             fVar47 = *(float *)(lVar39 + 0x14);
           }
           *(float *)(lVar39 + 0x14) = fVar47;
@@ -764,7 +761,7 @@ LAB_005949b9:
           *(float *)(*(long *)(arg1 + 8) + 0x1c) = fVar3;
         }
       }
-                    /* try { // try from 00594b45 to 00594b56 has its CatchHandler @ 00595639 */
+      /* try { // try from 00594b45 to 00594b56 has its CatchHandler @ 00595639 */
       ExplodeStringData__ExplodeStringData((ExplodeStringData *)&local_98);
     }
     iVar8 = File__EndOfFile();
@@ -790,32 +787,31 @@ LAB_005949b9:
     uVar31 = 0;
     uVar41 = 0;
     if (*(short *)(self + 0x58) != 0) {
-      while( true ) {
+      while (true) {
         uVar14 = uVar31 & 0xffff;
         uVar28 = (int)uVar31 + 1;
         uVar31 = (ulong)uVar28;
         lVar43 = uVar14 * 0x48;
-        *(uint32_t *)(*(long *)self + (ulong)uVar41 * 4) = *(uint32_t *)(lVar39 + uVar14 * 0x48)
-        ;
+        *(uint32_t *)(*(long *)self + (ulong)uVar41 * 4) = *(uint32_t *)(lVar39 + uVar14 * 0x48);
         *(uint32_t *)(*(long *)self + (ulong)(uVar41 + 1) * 4) =
-             *(uint32_t *)(*(long *)(self + 0x68) + 0x18 + lVar43);
+            *(uint32_t *)(*(long *)(self + 0x68) + 0x18 + lVar43);
         uVar35 = uVar41 + 2;
         uVar41 = uVar41 + 3;
         *(uint32_t *)(*(long *)self + (ulong)uVar35 * 4) =
-             *(uint32_t *)(*(long *)(self + 0x68) + 0x30 + lVar43);
-        if (*(ushort *)(self + 0x58) <= uVar28) break;
+            *(uint32_t *)(*(long *)(self + 0x68) + 0x30 + lVar43);
+        if (*(ushort *)(self + 0x58) <= uVar28)
+          break;
         lVar39 = *(long *)(self + 0x68);
       }
     }
-  }
-  else {
+  } else {
     *(uint16_t *)(self + 0x20) = 0;
-    local_1b0 = malloc((ulong)*(ushort *)(self + 0x28) * lVar16);
+    local_1b0 = malloc((ulong) * (ushort *)(self + 0x28) * lVar16);
     if (*(short *)(self + 0x58) != 0) {
       local_1d0 = 0;
       local_1cc = 0;
       uVar31 = 0;
-LAB_00594c40:
+    LAB_00594c40:
       uVar36 = 0;
       uVar14 = uVar31;
       do {
@@ -839,12 +835,11 @@ LAB_00594c40:
         puVar23[3] = puVar34[3];
         if (*(long *)(self + 0x10) == 0) {
           lVar39 = 0xc;
-        }
-        else {
-                    /* try { // try from 005952b3 to 005953ca has its CatchHandler @ 00595639 */
-          Vector2__operator_assign((Vector2 *)(puVar23 + 3),
-                             (Vector2 *)
-                             (*(long *)(self + 0x10) + (long)*(int *)((long)plVar2 + 4) * 8));
+        } else {
+          /* try { // try from 005952b3 to 005953ca has its CatchHandler @ 00595639 */
+          Vector2__operator_assign(
+              (Vector2 *)(puVar23 + 3),
+              (Vector2 *)(*(long *)(self + 0x10) + (long)*(int *)((long)plVar2 + 4) * 8));
           lVar39 = 0x14;
         }
         if (*(long *)(self + 0x18) != 0) {
@@ -856,22 +851,23 @@ LAB_00594c40:
           puVar23[3] = puVar34[3];
         }
         *(uint *)(*(long *)(self + 0x68) + uVar36 * 0x18 + 0xc + (ulong)(ushort)local_1d0 * 0x48) =
-             local_1cc;
+            local_1cc;
         *(short *)(self + 0x20) = *(short *)(self + 0x20) + 1;
         local_1cc = local_1cc + 1;
         if (puVar24[(int)*plVar2] != 0) {
           *(uint64_t *)(puVar24[(int)*plVar2] + 0x10) = 0;
         }
         iVar8 = *(int *)((long)plVar2 + 0xc);
-LAB_00594ca0:
+      LAB_00594ca0:
         uVar41 = (int)uVar36 + 1;
         uVar36 = (ulong)uVar41;
         uVar31 = (ulong)((int)uVar14 + 1);
         *(int *)(*(long *)self + uVar14 * 4) = iVar8;
-        if (uVar41 == 3) goto LAB_00595240;
+        if (uVar41 == 3)
+          goto LAB_00595240;
         lVar39 = *(long *)(self + 0x68);
         uVar14 = uVar31;
-      } while( true );
+      } while (true);
     }
   }
 LAB_00594d3e:
@@ -882,15 +878,15 @@ LAB_00594d3e:
     local_cc = 1;
     local_c8 = 0;
     local_d8 = local_1b0;
-    local_e8 = (ulong)*(ushort *)(self + 0x20) * lVar16;
+    local_e8 = (ulong) * (ushort *)(self + 0x20) * lVar16;
     local_e0 = local_1c0;
-                    /* try { // try from 00594dae to 00594db2 has its CatchHandler @ 00595617 */
+    /* try { // try from 00594dae to 00594db2 has its CatchHandler @ 00595617 */
     local_40[0] = VertexBuffer__Create((tagVertexBufferCreation *)&local_e8);
     local_a8 = *(uint64_t *)self;
-    local_b0 = CONCAT44(5,(uint32_t)local_b0);
-    local_b0 = CONCAT62(local_b0._2_6_,4);
-    local_b8 = (ulong)*(ushort *)(self + 0x28) << 2;
-                    /* try { // try from 00594df4 to 00594df8 has its CatchHandler @ 0059567e */
+    local_b0 = CONCAT44(5, (uint32_t)local_b0);
+    local_b0 = CONCAT62(local_b0._2_6_, 4);
+    local_b8 = (ulong) * (ushort *)(self + 0x28) << 2;
+    /* try { // try from 00594df4 to 00594df8 has its CatchHandler @ 0059567e */
     uVar19 = IndexBuffer__Create((tagIndexBufferCreation *)&local_b8);
     local_88 = 0;
     uStack_86 = 0;
@@ -898,7 +894,7 @@ LAB_00594d3e:
     local_158 = (ulong)bStack_87 << 8;
     *(uint64_t *)(self + 0x88) = uVar19;
     local_98 = &local_158;
-    local_148 = CONCAT71(local_148._1_7_,0xff);
+    local_148 = CONCAT71(local_148._1_7_, 0xff);
     local_13c[4] = (File)0xff;
     local_13c[0x14] = (File)0xff;
     local_80 = 2;
@@ -913,15 +909,14 @@ LAB_00594d3e:
       iVar29 = 1;
       iVar8 = 1;
       uVar40 = 0x10;
-    }
-    else {
+    } else {
       lVar39 = *(long *)(self + 0x18);
       local_78 = 0;
       iVar30 = 3;
       uStack_76 = 0x10;
       uStack_74 = 1;
       uVar27 = 3;
-      local_148 = CONCAT44(1,CONCAT22(0x10,(ushort)bStack_77 << 8));
+      local_148 = CONCAT44(1, CONCAT22(0x10, (ushort)bStack_77 << 8));
       local_70 = 1;
       iVar29 = 2;
       iVar8 = 2;
@@ -939,27 +934,26 @@ LAB_00594d3e:
       local_5c = 0;
       *(uint32_t *)(local_14c + lVar39 + -4) = 2;
       local_14c[lVar39] = 0;
-      local_98[(long)iVar8 * 2] = CONCAT44(2,(uint)CONCAT21(uVar40,uStack_67) << 8);
+      local_98[(long)iVar8 * 2] = CONCAT44(2, (uint)CONCAT21(uVar40, uStack_67) << 8);
       iVar29 = iVar30;
       uVar27 = uVar26;
       uStack_66 = uVar40;
     }
     local_58 = 0xff;
     lVar39 = (long)iVar29 * 0x10;
-    local_90 = CONCAT62((int6)(local_90 >> 0x10),uVar27) & 0xffffffff;
-    local_98[(long)iVar29 * 2] = CONCAT71(uStack_57,0xff);
+    local_90 = CONCAT62((int6)(local_90 >> 0x10), uVar27) & 0xffffffff;
+    local_98[(long)iVar29 * 2] = CONCAT71(uStack_57, 0xff);
     *(uint32_t *)(local_14c + lVar39 + -4) = local_50;
     local_14c[lVar39] = local_4c;
-                    /* try { // try from 00594f93 to 00594fa9 has its CatchHandler @ 00595680 */
+    /* try { // try from 00594f93 to 00594fa9 has its CatchHandler @ 00595680 */
     this_00 = (BaseResource *)VertexDeclaration__Create((tagVertexDeclarationCreation *)&local_98);
-    pVVar21 = BaseResource__operator_new(0xa8,1);
-                    /* try { // try from 00594fd5 to 00594fd9 has its CatchHandler @ 00595682 */
-    VertexStream__VertexStream__005a6980
-              (pVVar21,1,*(ushort *)(self + 0x28) / 3,*(uint16_t *)(self + 0x20),0,local_40,
-               this_00);
+    pVVar21 = BaseResource__operator_new(0xa8, 1);
+    /* try { // try from 00594fd5 to 00594fd9 has its CatchHandler @ 00595682 */
+    VertexStream__VertexStream__005a6980(pVVar21, 1, *(ushort *)(self + 0x28) / 3,
+                                         *(uint16_t *)(self + 0x20), 0, local_40, this_00);
     *(VertexStream **)(self + 0x80) = pVVar21;
-                    /* try { // try from 00594fe6 to 00594fea has its CatchHandler @ 00595680 */
-    BaseResource__Release(this_00,0);
+    /* try { // try from 00594fe6 to 00594fea has its CatchHandler @ 00595680 */
+    BaseResource__Release(this_00, 0);
     if (*(void **)(self + 8) != local_1b0) {
       free(local_1b0);
     }
@@ -967,12 +961,13 @@ LAB_00594d3e:
       operator_delete__(puVar13);
     }
   }
-                    /* try { // try from 00595015 to 00595019 has its CatchHandler @ 0059564d */
+  /* try { // try from 00595015 to 00595019 has its CatchHandler @ 0059564d */
   File__File__005b7a70(local_13c + 0x24);
   return;
 LAB_00595240:
   local_1d0 = local_1d0 + 1;
-  if (*(ushort *)(self + 0x58) <= local_1d0) goto LAB_00594d3e;
+  if (*(ushort *)(self + 0x58) <= local_1d0)
+    goto LAB_00594d3e;
   lVar39 = *(long *)(self + 0x68);
   goto LAB_00594c40;
 }

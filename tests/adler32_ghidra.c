@@ -1,6 +1,6 @@
 #include "ghidra_types.h"
 
-ulong adler32_ghidra(ulong param_1,byte *param_2,uint param_3)
+ulong adler32_ghidra(ulong param_1, byte *param_2, uint param_3)
 
 {
   byte bVar1;
@@ -25,7 +25,7 @@ ulong adler32_ghidra(ulong param_1,byte *param_2,uint param_3)
   byte *pbVar20;
   ulong uVar21;
   ulong uVar22;
-  
+
   uVar4 = param_1 & 0xffff;
   uVar22 = (ulong)((uint)(param_1 >> 0x10) & 0xffff);
   if (param_3 == 1) {
@@ -47,11 +47,12 @@ ulong adler32_ghidra(ulong param_1,byte *param_2,uint param_3)
     if (param_3 != 0) {
       pbVar3 = param_2 + 1;
       pbVar20 = param_2;
-      while( true ) {
+      while (true) {
         pbVar2 = pbVar3;
         uVar4 = uVar4 + *pbVar20;
         uVar22 = uVar22 + uVar4;
-        if (pbVar2 == param_2 + 1 + (param_3 - 1)) break;
+        if (pbVar2 == param_2 + 1 + (param_3 - 1))
+          break;
         pbVar3 = pbVar2 + 1;
         pbVar20 = pbVar2;
       }
@@ -63,7 +64,7 @@ ulong adler32_ghidra(ulong param_1,byte *param_2,uint param_3)
     return uVar21 | (uVar22 % 0xfff1) * 0x10000;
   }
   if (param_3 < 0x15b0) {
-LAB_00562378:
+  LAB_00562378:
     uVar21 = (ulong)(param_3 - 0x10 >> 4);
     pbVar3 = param_2;
     do {
@@ -90,9 +91,9 @@ LAB_00562378:
     } while (pbVar3 != param_2 + uVar21 * 0x10 + 0x10);
     param_2 = param_2 + (uVar21 + 1) * 0x10;
     param_3 = param_3 & 0xf;
-    if (param_3 == 0) goto LAB_00562467;
-  }
-  else {
+    if (param_3 == 0)
+      goto LAB_00562467;
+  } else {
     do {
       pbVar3 = param_2 + 0x15b0;
       param_3 = param_3 - 0x15b0;
@@ -115,8 +116,8 @@ LAB_00562378:
         pbVar20 = param_2 + 0xf;
         param_2 = param_2 + 0x10;
         uVar4 = lVar19 + (ulong)*pbVar20;
-        uVar22 = uVar22 + lVar5 + lVar6 + lVar7 + lVar8 + lVar9 + lVar10 + lVar11 + lVar12 + lVar13
-                 + lVar14 + lVar15 + lVar16 + lVar17 + lVar18 + lVar19 + uVar4;
+        uVar22 = uVar22 + lVar5 + lVar6 + lVar7 + lVar8 + lVar9 + lVar10 + lVar11 + lVar12 +
+                 lVar13 + lVar14 + lVar15 + lVar16 + lVar17 + lVar18 + lVar19 + uVar4;
       } while (param_2 != pbVar3);
       uVar4 = uVar4 % 0xfff1;
       uVar22 = uVar22 % 0xfff1;
@@ -124,7 +125,8 @@ LAB_00562378:
     if (param_3 == 0) {
       return uVar22 * 0x10000 | uVar4;
     }
-    if (0xf < param_3) goto LAB_00562378;
+    if (0xf < param_3)
+      goto LAB_00562378;
   }
   pbVar3 = param_2 + (ulong)(param_3 - 1) + 1;
   do {

@@ -39,15 +39,15 @@ void __thiscall RibbonEmitter__Render(RibbonEmitter *self)
 
 {
   Matrix4x4 *pMVar1;
-  
+
   if ((*(long *)(self + 0x68) != 0) && (1 < *(int *)(self + 0x50))) {
     TGraphics__ResetPixelStages(Graphics);
     TGraphics__ResetTexCoordGen(Graphics);
-    TGraphics__SetRenderState(Graphics,'\a',0);
-    TGraphics__AddPixelStage(Graphics,4,0,1,0,3,3,0xffffffff);
-    pMVar1 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,0);
+    TGraphics__SetRenderState(Graphics, '\a', 0);
+    TGraphics__AddPixelStage(Graphics, 4, 0, 1, 0, 3, 3, 0xffffffff);
+    pMVar1 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 0);
     Matrix4x4__Identity(pMVar1);
-    TGraphics__Draw(Graphics,*(VertexStream **)(self + 0x68),(IndexBuffer *)0x0);
+    TGraphics__Draw(Graphics, *(VertexStream **)(self + 0x68), (IndexBuffer *)0x0);
     return;
   }
   return;
@@ -91,11 +91,11 @@ void __thiscall RibbonEmitter__Update(RibbonEmitter *self)
   float local_58;
   float local_54;
   uint64_t local_48;
-  Vector2 local_38 [8];
-  uint32_t *local_30 [2];
-  
+  Vector2 local_38[8];
+  uint32_t *local_30[2];
+
   if ((*(long *)(self + 0x68) != 0) && (1 < *(int *)(self + 0x50))) {
-    VertexBuffer__Lock(*(VertexBuffer **)(self + 0x58),local_30,1,0);
+    VertexBuffer__Lock(*(VertexBuffer **)(self + 0x58), local_30, 1, 0);
     lVar13 = 0;
     iVar9 = *(int *)(self + 0x48) + -1;
     iVar7 = *(int *)(self + 0x4c) + -1;
@@ -103,12 +103,10 @@ void __thiscall RibbonEmitter__Update(RibbonEmitter *self)
       if (iVar7 < 0) {
         if (iVar9 < 0) {
           lVar13 = (long)(iVar9 * 2) << 3;
-        }
-        else {
+        } else {
           lVar13 = (long)iVar9 << 3;
         }
-      }
-      else {
+      } else {
         lVar13 = (long)iVar7 * 8;
       }
     }
@@ -120,17 +118,17 @@ void __thiscall RibbonEmitter__Update(RibbonEmitter *self)
     local_48._4_4_ = (float)((ulong)uVar5 >> 0x20);
     local_30[0][1] = *(float *)(self + 0x20) + local_48._4_4_;
     local_30[0][2] =
-         (uint)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x30)) & 0xff |
-         (int)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x34)) << 0x18 |
-         ((uint)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x28)) & 0xff) << 0x10 |
-         ((uint)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x2c)) & 0xff) << 8;
+        (uint)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x30)) & 0xff |
+        (int)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x34)) << 0x18 |
+        ((uint)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x28)) & 0xff) << 0x10 |
+        ((uint)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x2c)) & 0xff) << 8;
     local_30[0][3] = (uint32_t)local_48;
     local_30[0][4] = local_48._4_4_ - *(float *)(self + 0x20);
     local_30[0][5] =
-         (uint)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x30)) & 0xff |
-         (int)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x34)) << 0x18 |
-         ((uint)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x28)) & 0xff) << 0x10 |
-         ((uint)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x2c)) & 0xff) << 8;
+        (uint)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x30)) & 0xff |
+        (int)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x34)) << 0x18 |
+        ((uint)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x28)) & 0xff) << 0x10 |
+        ((uint)(long)(DAT_005be898 /* R:255.0f */ * *(float *)(self + 0x2c)) & 0xff) << 8;
     iVar7 = *(int *)(self + 0x50);
     local_48 = uVar5;
     if (1 < iVar7) {
@@ -153,8 +151,7 @@ void __thiscall RibbonEmitter__Update(RibbonEmitter *self)
         fVar21 = fVar20 * *(float *)(self + 0x20) + fVar19 * *(float *)(self + 0x24);
         if (iVar8 < iVar9) {
           iVar9 = 0;
-        }
-        else if (iVar9 < 0) {
+        } else if (iVar9 < 0) {
           iVar9 = iVar8;
         }
         iVar9 = iVar9 - (iVar12 + -1);
@@ -162,13 +159,12 @@ void __thiscall RibbonEmitter__Update(RibbonEmitter *self)
           iVar9 = iVar8 + iVar9;
         }
         Vector2__operator_assign((Vector2 *)&local_48,
-                           (Vector2 *)(*(long *)(self + 0x18) + (long)iVar9 * 8));
+                                 (Vector2 *)(*(long *)(self + 0x18) + (long)iVar9 * 8));
         iVar9 = *(int *)(self + 0x48) + -1;
         iVar7 = *(int *)(self + 0x4c) + -1;
         if (iVar9 < iVar7) {
           iVar7 = 0;
-        }
-        else if (iVar7 < 0) {
+        } else if (iVar7 < 0) {
           iVar7 = iVar9;
         }
         iVar7 = iVar7 - iVar12;
@@ -176,13 +172,13 @@ void __thiscall RibbonEmitter__Update(RibbonEmitter *self)
           iVar7 = iVar9 + iVar7;
         }
         Vector2__operator_assign((Vector2 *)&local_68,
-                           (Vector2 *)(*(long *)(self + 0x18) + (long)iVar7 * 8));
-        Vector2__operator_minus__005be180(local_38,(Vector2 *)&local_48);
-        Vector2__operator_assign((Vector2 *)&local_58,local_38);
-        Vector2__Perpendicular((Vector2 *)&local_58,(Vector2 *)&local_58,1);
+                                 (Vector2 *)(*(long *)(self + 0x18) + (long)iVar7 * 8));
+        Vector2__operator_minus__005be180(local_38, (Vector2 *)&local_48);
+        Vector2__operator_assign((Vector2 *)&local_58, local_38);
+        Vector2__Perpendicular((Vector2 *)&local_58, (Vector2 *)&local_58, 1);
         fVar14 = (float)Vector2__Length((Vector2 *)&local_58);
         if (0.0 < fVar14) {
-          Vector2__operator_div_assign__005be2c0((Vector2 *)&local_58,fVar14);
+          Vector2__operator_div_assign__005be2c0((Vector2 *)&local_58, fVar14);
         }
         fVar15 = DAT_005be898 /* R:255.0f */ * (fVar16 * fVar19 + fVar15 * fVar20);
         iVar12 = iVar12 + 1;
@@ -209,7 +205,7 @@ void __thiscall RibbonEmitter__Update(RibbonEmitter *self)
     pVVar6 = *(VertexBuffer **)(self + 0x58);
     *(uint64_t *)(self + 0x58) = *(uint64_t *)(self + 0x60);
     *(VertexBuffer **)(self + 0x60) = pVVar6;
-    VertexStream__SetVertexBuffer(*(VertexStream **)(self + 0x68),'\0',pVVar6);
+    VertexStream__SetVertexBuffer(*(VertexStream **)(self + 0x68), '\0', pVVar6);
     *(int *)(*(long *)(self + 0x68) + 0x14) = iVar9;
     *(int *)(*(long *)(self + 0x68) + 0x10) = iVar11;
   }
@@ -231,22 +227,22 @@ void __thiscall RibbonEmitter__RibbonEmitter__0059ac00(RibbonEmitter *self)
   *(uint8_t ***)self = &PTR__RibbonEmitter_005dd330;
   free(*(void **)(self + 0x18));
   if (*(BaseResource **)(self + 0x60) != (BaseResource *)0x0) {
-                    /* try { // try from 0059ab7f to 0059abdf has its CatchHandler @ 0059abe9 */
-    BaseResource__Release(*(BaseResource **)(self + 0x60),0);
+    /* try { // try from 0059ab7f to 0059abdf has its CatchHandler @ 0059abe9 */
+    BaseResource__Release(*(BaseResource **)(self + 0x60), 0);
     *(uint64_t *)(self + 0x60) = 0;
   }
   if (*(BaseResource **)(self + 0x58) != (BaseResource *)0x0) {
-    BaseResource__Release(*(BaseResource **)(self + 0x58),0);
+    BaseResource__Release(*(BaseResource **)(self + 0x58), 0);
     *(uint64_t *)(self + 0x58) = 0;
   }
   if (*(BaseResource **)(self + 0x68) != (BaseResource *)0x0) {
-    BaseResource__Release(*(BaseResource **)(self + 0x68),0);
+    BaseResource__Release(*(BaseResource **)(self + 0x68), 0);
     *(uint64_t *)(self + 0x68) = 0;
   }
-  TResourceCreator__RemoveResourceCreationFunction
-            ((TResourceCreator *)ResourceCreator,CreateRibbonEmitterResources,self);
-  TResourceCreator__RemoveResourceDestroyFunction
-            ((TResourceCreator *)ResourceCreator,DestroyRibbonEmitterResources,self);
+  TResourceCreator__RemoveResourceCreationFunction((TResourceCreator *)ResourceCreator,
+                                                   CreateRibbonEmitterResources, self);
+  TResourceCreator__RemoveResourceDestroyFunction((TResourceCreator *)ResourceCreator,
+                                                  DestroyRibbonEmitterResources, self);
   *(uint8_t ***)self = &PTR__ParticleEmitter_005c12b0;
   return;
 }
@@ -277,14 +273,15 @@ void __thiscall RibbonEmitter__RibbonEmitter__0059ac00(RibbonEmitter *self)
  */
 /* RibbonEmitter__RibbonEmitter__0059ac20(RibbonEmitterCreation const*) */
 
-void __thiscall RibbonEmitter__RibbonEmitter__0059ac20(RibbonEmitter *self,RibbonEmitterCreation *arg1)
+void __thiscall RibbonEmitter__RibbonEmitter__0059ac20(RibbonEmitter *self,
+                                                       RibbonEmitterCreation *arg1)
 
 {
   int iVar1;
   uint64_t uVar2;
   void *__s;
   size_t __size;
-  
+
   *(uint64_t *)(self + 8) = 0;
   *(uint8_t ***)self = &PTR__RibbonEmitter_005dd330;
   uVar2 = ::cWhite;
@@ -307,13 +304,13 @@ void __thiscall RibbonEmitter__RibbonEmitter__0059ac20(RibbonEmitter *self,Ribbo
   __size = (long)iVar1 << 3;
   __s = malloc(__size);
   *(void **)(self + 0x18) = __s;
-  memset(__s,0,__size);
-                    /* try { // try from 0059acd5 to 0059acfd has its CatchHandler @ 0059ad05 */
+  memset(__s, 0, __size);
+  /* try { // try from 0059acd5 to 0059acfd has its CatchHandler @ 0059ad05 */
   CreateRibbonEmitterResources(self);
-  TResourceCreator__AddResourceCreationFunction
-            ((TResourceCreator *)ResourceCreator,CreateRibbonEmitterResources,self);
-  TResourceCreator__AddResourceDestroyFunction
-            ((TResourceCreator *)ResourceCreator,DestroyRibbonEmitterResources,self);
+  TResourceCreator__AddResourceCreationFunction((TResourceCreator *)ResourceCreator,
+                                                CreateRibbonEmitterResources, self);
+  TResourceCreator__AddResourceDestroyFunction((TResourceCreator *)ResourceCreator,
+                                               DestroyRibbonEmitterResources, self);
   return;
 }
 
@@ -326,13 +323,14 @@ void __thiscall RibbonEmitter__RibbonEmitter__0059ac20(RibbonEmitter *self,Ribbo
  */
 /* RibbonEmitter__AddRibbonPoint(Vector2 const&) */
 
-void __thiscall RibbonEmitter__AddRibbonPoint(RibbonEmitter *self,Vector2 *arg1)
+void __thiscall RibbonEmitter__AddRibbonPoint(RibbonEmitter *self, Vector2 *arg1)
 
 {
   int iVar1;
   int iVar2;
-  
-  Vector2__operator_assign((Vector2 *)(*(long *)(self + 0x18) + (long)*(int *)(self + 0x4c) * 8),arg1);
+
+  Vector2__operator_assign((Vector2 *)(*(long *)(self + 0x18) + (long)*(int *)(self + 0x4c) * 8),
+                           arg1);
   iVar1 = *(int *)(self + 0x48);
   iVar2 = *(int *)(self + 0x50) + 1;
   if (iVar1 < *(int *)(self + 0x50) + 1) {
@@ -360,18 +358,17 @@ void __thiscall RibbonEmitter__AddRibbonPoint(RibbonEmitter *self,Vector2 *arg1)
  */
 /* RibbonEmitter__GetRibbonPosition(int) */
 
-long __thiscall RibbonEmitter__GetRibbonPosition(RibbonEmitter *self,int arg1)
+long __thiscall RibbonEmitter__GetRibbonPosition(RibbonEmitter *self, int arg1)
 
 {
   int iVar1;
   int iVar2;
-  
+
   iVar2 = *(int *)(self + 0x48) + -1;
   iVar1 = *(int *)(self + 0x4c) + -1;
   if (iVar2 < iVar1) {
     iVar1 = 0;
-  }
-  else if (iVar1 < 0) {
+  } else if (iVar1 < 0) {
     iVar1 = iVar2;
   }
   iVar1 = iVar1 - arg1;

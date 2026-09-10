@@ -25,7 +25,7 @@ void __thiscall SceneObject3D__SceneObject3D__0059b1d0(SceneObject3D *self)
   if (*(long *)(self + 0x48) != 0) {
     free(*(void **)(*(long *)(self + 0x48) + -8));
   }
-                    /* try { // try from 0059ade1 to 0059ade5 has its CatchHandler @ 0059adef */
+  /* try { // try from 0059ade1 to 0059ade5 has its CatchHandler @ 0059adef */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x58));
   *(uint8_t ***)self = &PTR__SceneObject_005bf710;
   return;
@@ -40,7 +40,7 @@ void __thiscall SceneObject3D__SceneObject3D__0059b1d0(SceneObject3D *self)
  */
 /* SceneObject3D__DeSerialize(void const*) */
 
-void __thiscall SceneObject3D__DeSerialize(SceneObject3D *self,void *arg1)
+void __thiscall SceneObject3D__DeSerialize(SceneObject3D *self, void *arg1)
 
 {
   SceneObject3D SVar1;
@@ -51,7 +51,7 @@ void __thiscall SceneObject3D__DeSerialize(SceneObject3D *self,void *arg1)
   long lVar6;
   SceneObject3D *pSVar7;
   bool bVar8;
-  
+
   if (arg1 != (void *)0x0) {
     pSVar7 = self + 0x80;
     if (arg1 != pSVar7) {
@@ -85,8 +85,7 @@ void __thiscall SceneObject3D__DeSerialize(SceneObject3D *self,void *arg1)
       }
       if ((uVar4 & 4) == 0) {
         lVar6 = 0;
-      }
-      else {
+      } else {
         *(uint32_t *)pSVar7 = *(uint32_t *)arg1;
         lVar6 = 4;
       }
@@ -114,7 +113,7 @@ void __thiscall SceneObject3D__DeSerialize(SceneObject3D *self,void *arg1)
  */
 /* SceneObject3D__Serialize(void*) */
 
-uint64_t __thiscall SceneObject3D__Serialize(SceneObject3D *self,void *arg1)
+uint64_t __thiscall SceneObject3D__Serialize(SceneObject3D *self, void *arg1)
 
 {
   uint16_t uVar1;
@@ -124,7 +123,7 @@ uint64_t __thiscall SceneObject3D__Serialize(SceneObject3D *self,void *arg1)
   long lVar5;
   SceneObject3D *pSVar6;
   bool bVar7;
-  
+
   if ((arg1 != (void *)0x0) && (pSVar6 = self + 0x80, arg1 != pSVar6)) {
     uVar3 = 0xa0;
     bVar7 = ((ulong)arg1 & 1) != 0;
@@ -155,8 +154,7 @@ uint64_t __thiscall SceneObject3D__Serialize(SceneObject3D *self,void *arg1)
     }
     if ((uVar3 & 4) == 0) {
       lVar5 = 0;
-    }
-    else {
+    } else {
       *(uint32_t *)arg1 = *(uint32_t *)pSVar6;
       lVar5 = 4;
     }
@@ -188,7 +186,7 @@ void __thiscall SceneObject3D__SceneObject3D__0059b1d0(SceneObject3D *self)
   if (*(long *)(self + 0x48) != 0) {
     free(*(void **)(*(long *)(self + 0x48) + -8));
   }
-                    /* try { // try from 0059b1f1 to 0059b1f5 has its CatchHandler @ 0059b206 */
+  /* try { // try from 0059b1f1 to 0059b1f5 has its CatchHandler @ 0059b206 */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x58));
   *(uint8_t ***)self = &PTR__SceneObject_005bf710;
   operator_delete(self);

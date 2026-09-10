@@ -50,7 +50,7 @@ void __thiscall TSceneObjectManager__TSceneObjectManager__0059b460(TSceneObjectM
   long lVar2;
   ushort uVar3;
   ushort uVar4;
-  
+
   uVar3 = *(ushort *)(self + 0x28);
   if (uVar3 != 0) {
     uVar4 = 0;
@@ -58,7 +58,7 @@ void __thiscall TSceneObjectManager__TSceneObjectManager__0059b460(TSceneObjectM
       plVar1 = *(long **)(*(long *)(self + 0x38) + (ulong)uVar4 * 0x28 + 0x20);
       if (plVar1 != (long *)0x0) {
         lVar2 = ((uint64_t *)*plVar1)[-2];
-                    /* try { // try from 0059b4a3 to 0059b4a4 has its CatchHandler @ 0059b535 */
+        /* try { // try from 0059b4a3 to 0059b4a4 has its CatchHandler @ 0059b535 */
         (**(code **)*plVar1)(plVar1);
         operator_delete((void *)((long)plVar1 + lVar2));
         uVar3 = *(ushort *)(self + 0x28);
@@ -91,8 +91,8 @@ void __thiscall TSceneObjectManager__TSceneObjectManager__0059b460(TSceneObjectM
  */
 /* TSceneObjectManager__AddSceneObject(TSceneObjectManager__tagSceneObjectInfo const*) */
 
-void __thiscall
-TSceneObjectManager__AddSceneObject(TSceneObjectManager *self,tagSceneObjectInfo *arg1)
+void __thiscall TSceneObjectManager__AddSceneObject(TSceneObjectManager *self,
+                                                    tagSceneObjectInfo *arg1)
 
 {
   short sVar1;
@@ -109,10 +109,10 @@ TSceneObjectManager__AddSceneObject(TSceneObjectManager *self,tagSceneObjectInfo
   uint64_t *puVar12;
   bool bVar13;
   byte bVar14;
-  
+
   bVar14 = 0;
   if (*(int *)(self + 0x48) == -0x5eef3582) {
-    uVar10 = (uint)*(ushort *)(self + 0x28);
+    uVar10 = (uint) * (ushort *)(self + 0x28);
     if (*(ushort *)(self + 0x2a) <= *(ushort *)(self + 0x28)) {
       uVar3 = *(ushort *)(self + 0x2a) + *(short *)(self + 0x34);
       uVar11 = (ulong)(byte)self[0x2c];
@@ -122,8 +122,8 @@ TSceneObjectManager__AddSceneObject(TSceneObjectManager *self,tagSceneObjectInfo
       uVar8 = (ulong)uVar3 * 0x28;
       pvVar7 = malloc(uVar11 + 0x10 + uVar8);
       if (pvVar7 != (void *)0x0) {
-        pvVar5 = (void *)((long)pvVar7 + 0x10U + (uVar11 - ((long)pvVar7 + 0x10U) % uVar11) % uVar11
-                         );
+        pvVar5 =
+            (void *)((long)pvVar7 + 0x10U + (uVar11 - ((long)pvVar7 + 0x10U) % uVar11) % uVar11);
         *(ulong *)((long)pvVar5 + -0x10) = uVar8;
         *(void **)((long)pvVar5 + -8) = pvVar7;
         if (pvVar2 != (void *)0x0) {
@@ -131,7 +131,7 @@ TSceneObjectManager__AddSceneObject(TSceneObjectManager *self,tagSceneObjectInfo
           if (uVar8 <= *(ulong *)((long)pvVar2 + -0x10)) {
             uVar11 = uVar8;
           }
-          memcpy(pvVar5,pvVar2,uVar11);
+          memcpy(pvVar5, pvVar2, uVar11);
           free(*(void **)((long)pvVar2 + -8));
         }
       }
@@ -144,40 +144,41 @@ TSceneObjectManager__AddSceneObject(TSceneObjectManager *self,tagSceneObjectInfo
         uVar11 = (ulong)uVar3 * 2;
         pvVar7 = malloc(uVar8 + 0x10 + uVar11);
         if (pvVar7 != (void *)0x0) {
-          pvVar5 = (void *)((long)pvVar7 + 0x10U + (uVar8 - ((long)pvVar7 + 0x10U) % uVar8) % uVar8)
-          ;
+          pvVar5 =
+              (void *)((long)pvVar7 + 0x10U + (uVar8 - ((long)pvVar7 + 0x10U) % uVar8) % uVar8);
           *(void **)((long)pvVar5 + -8) = pvVar7;
           *(ulong *)((long)pvVar5 + -0x10) = uVar11;
           uVar8 = *(ulong *)((long)pvVar2 + -0x10);
           if (uVar11 <= *(ulong *)((long)pvVar2 + -0x10)) {
             uVar8 = uVar11;
           }
-          memcpy(pvVar5,pvVar2,uVar8);
+          memcpy(pvVar5, pvVar2, uVar8);
           free(*(void **)((long)pvVar2 + -8));
           uVar3 = *(ushort *)(self + 0x2a);
         }
-        uVar10 = (uint)*(ushort *)(self + 0x28);
+        uVar10 = (uint) * (ushort *)(self + 0x28);
         *(void **)(self + 0x40) = pvVar5;
-        if (uVar3 <= *(ushort *)(self + 0x28)) goto LAB_0059b698;
-        while( true ) {
+        if (uVar3 <= *(ushort *)(self + 0x28))
+          goto LAB_0059b698;
+        while (true) {
           uVar4 = uVar10 & 0xffff;
           uVar10 = uVar10 + 1;
           *(uint16_t *)((long)pvVar5 + (ulong)uVar4 * 2) = 0xffff;
-          if (uVar3 <= (ushort)uVar10) break;
+          if (uVar3 <= (ushort)uVar10)
+            break;
           pvVar5 = *(void **)(self + 0x40);
         }
       }
-      uVar10 = (uint)*(ushort *)(self + 0x28);
+      uVar10 = (uint) * (ushort *)(self + 0x28);
     }
-  }
-  else {
+  } else {
     uVar11 = (ulong)(byte)self[0x2c];
     *(uint32_t *)(self + 0x30) = 0;
     pvVar5 = malloc(uVar11 + 0xd8);
     puVar12 = (uint64_t *)0x0;
     if (pvVar5 != (void *)0x0) {
-      puVar12 = (uint64_t *)
-                ((long)pvVar5 + 0x10U + (uVar11 - ((long)pvVar5 + 0x10U) % uVar11) % uVar11);
+      puVar12 =
+          (uint64_t *)((long)pvVar5 + 0x10U + (uVar11 - ((long)pvVar5 + 0x10U) % uVar11) % uVar11);
       puVar12[-2] = 200;
       puVar12[-1] = pvVar5;
     }
@@ -228,11 +229,12 @@ LAB_0059b698:
     while (sVar1 != -1) {
       psVar6 = psVar6 + 1;
       sVar9 = sVar9 + 1;
-      if (sVar9 == *(short *)(self + 0x2a)) goto LAB_0059b69e;
+      if (sVar9 == *(short *)(self + 0x2a))
+        goto LAB_0059b69e;
       sVar1 = *psVar6;
     }
     *psVar6 = (short)uVar10;
-    uVar10 = (uint)*(ushort *)(self + 0x28);
+    uVar10 = (uint) * (ushort *)(self + 0x28);
   }
 LAB_0059b69e:
   puVar12 = (uint64_t *)(*(long *)(self + 0x38) + (ulong)uVar10 * 0x28);
@@ -254,8 +256,7 @@ LAB_0059b69e:
  */
 /* TSceneObjectManager__RemoveSceneObject(SceneObject*) */
 
-void __thiscall
-TSceneObjectManager__RemoveSceneObject(TSceneObjectManager *self,SceneObject *arg1)
+void __thiscall TSceneObjectManager__RemoveSceneObject(TSceneObjectManager *self, SceneObject *arg1)
 
 {
   uint64_t *puVar1;
@@ -269,7 +270,7 @@ TSceneObjectManager__RemoveSceneObject(TSceneObjectManager *self,SceneObject *ar
   uint uVar9;
   ushort uVar10;
   ushort uVar11;
-  
+
   uVar10 = *(ushort *)(self + 0x28);
   if (uVar10 == 0) {
     return;
@@ -280,8 +281,7 @@ TSceneObjectManager__RemoveSceneObject(TSceneObjectManager *self,SceneObject *ar
   if (*(SceneObject **)(lVar7 + 0x20) == arg1) {
     uVar9 = 1;
     uVar6 = 0;
-  }
-  else {
+  } else {
     do {
       uVar11 = uVar11 + 1;
       if (uVar11 == uVar10) {
@@ -296,7 +296,7 @@ TSceneObjectManager__RemoveSceneObject(TSceneObjectManager *self,SceneObject *ar
   if ((uVar9 < uVar10) && ((int)uVar6 < (int)(uVar10 - 1))) {
     lVar8 = (long)(int)uVar6 * 0x28;
     uVar9 = uVar6;
-    while( true ) {
+    while (true) {
       puVar1 = (uint64_t *)(lVar7 + lVar8);
       lVar8 = lVar8 + 0x28;
       uVar9 = uVar9 + 1;
@@ -306,21 +306,24 @@ TSceneObjectManager__RemoveSceneObject(TSceneObjectManager *self,SceneObject *ar
       puVar1[3] = *(uint64_t *)(lVar7 + 0x18 + lVar8);
       puVar1[4] = *(uint64_t *)(lVar7 + 0x20 + lVar8);
       uVar10 = *(ushort *)(self + 0x28);
-      if ((int)(uVar10 - 1) <= (int)uVar9) break;
+      if ((int)(uVar10 - 1) <= (int)uVar9)
+        break;
       lVar7 = *(long *)(self + 0x38);
     }
   }
   if ((*(int *)(self + 0x30) == 1) && (uVar11 = *(ushort *)(self + 0x2a), uVar11 != 0)) {
     uVar10 = 0;
     do {
-      while( true ) {
+      while (true) {
         puVar2 = (ushort *)(*(long *)(self + 0x40) + (ulong)uVar10 * 2);
         uVar4 = *puVar2;
-        if (uVar4 != uVar6) break;
+        if (uVar4 != uVar6)
+          break;
         *puVar2 = 0xffff;
         uVar11 = *(ushort *)(self + 0x2a);
         uVar10 = uVar10 + 1;
-        if (uVar11 <= uVar10) goto LAB_0059ba46;
+        if (uVar11 <= uVar10)
+          goto LAB_0059ba46;
       }
       if ((uVar6 < uVar4) && ((ushort)(uVar4 - 1) < 0xfffe)) {
         *puVar2 = uVar4 - 1;
@@ -328,7 +331,7 @@ TSceneObjectManager__RemoveSceneObject(TSceneObjectManager *self,SceneObject *ar
       }
       uVar10 = uVar10 + 1;
     } while (uVar10 < uVar11);
-LAB_0059ba46:
+  LAB_0059ba46:
     uVar10 = *(ushort *)(self + 0x28);
   }
   sVar5 = 0;
@@ -355,7 +358,7 @@ void __thiscall TSceneObjectManager__Update(TSceneObjectManager *self)
   code *pcVar2;
   ushort uVar3;
   ushort uVar4;
-  
+
   uVar3 = *(ushort *)(self + 0x28);
   if (uVar3 != 0) {
     uVar4 = 0;
@@ -391,18 +394,19 @@ void __thiscall TSceneObjectManager__Render(TSceneObjectManager *self)
   code *pcVar2;
   ushort uVar3;
   ushort uVar4;
-  
+
   uVar4 = *(ushort *)(self + 0x28);
   if (uVar4 != 0) {
     uVar3 = 0;
     do {
-      while( true ) {
+      while (true) {
         lVar1 = *(long *)(self + 0x38) + (ulong)uVar3 * 0x28;
         pcVar2 = *(code **)(lVar1 + 0x10);
-        if ((pcVar2 == (code *)0x0) || (*(int *)(*(long *)(lVar1 + 0x20) + 0x50) != 1)) break;
+        if ((pcVar2 == (code *)0x0) || (*(int *)(*(long *)(lVar1 + 0x20) + 0x50) != 1))
+          break;
         if (((ulong)pcVar2 & 1) != 0) {
-          pcVar2 = *(code **)(pcVar2 + *(long *)(*(long *)(lVar1 + 0x18) + *(long *)(lVar1 + 0x20))
-                                       + -1);
+          pcVar2 = *(code **)(pcVar2 +
+                              *(long *)(*(long *)(lVar1 + 0x18) + *(long *)(lVar1 + 0x20)) + -1);
         }
         (*pcVar2)();
         uVar4 = *(ushort *)(self + 0x28);

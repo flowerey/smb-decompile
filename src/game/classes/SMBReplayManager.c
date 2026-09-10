@@ -78,26 +78,26 @@ void __thiscall SMBReplayManager__DeActivate(SMBReplayManager *self)
 
 {
   Joystick *pJVar1;
-  
+
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,0,0,0);
+  Joystick__AddButtonCallback(pJVar1, 0, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,3,0,0);
+  Joystick__AddButtonCallback(pJVar1, 3, 0, 0);
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x76,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x83,0,0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x76, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x83, 0, 0);
   }
   SMBSelectionMenu__DeActivate((SMBSelectionMenu *)self);
-  FlashTextField__SetText(*(wchar_t **)(self + 0x80),&DAT_005c6634 /* R:0.0f */);
-  FlashTextField__SetText(*(wchar_t **)(self + 0x98),&DAT_005c6634 /* R:0.0f */);
-  FlashTextField__SetText(*(wchar_t **)(self + 0x88),&DAT_005c6634 /* R:0.0f */);
-  FlashTextField__SetText(*(wchar_t **)(self + 0xa0),&DAT_005c6634 /* R:0.0f */);
-  FlashTextField__SetText(*(wchar_t **)(self + 0x90),&DAT_005c6634 /* R:0.0f */);
+  FlashTextField__SetText(*(wchar_t **)(self + 0x80), &DAT_005c6634 /* R:0.0f */);
+  FlashTextField__SetText(*(wchar_t **)(self + 0x98), &DAT_005c6634 /* R:0.0f */);
+  FlashTextField__SetText(*(wchar_t **)(self + 0x88), &DAT_005c6634 /* R:0.0f */);
+  FlashTextField__SetText(*(wchar_t **)(self + 0xa0), &DAT_005c6634 /* R:0.0f */);
+  FlashTextField__SetText(*(wchar_t **)(self + 0x90), &DAT_005c6634 /* R:0.0f */);
   FlashTextField__SetText(*(wchar_t **)(self + 0xa8));
   if (*(int *)(self + 0xe4) != 1) {
     return;
   }
-  GSuperMeatBoy__Freeze(SuperMeatBoy,0);
+  GSuperMeatBoy__Freeze(SuperMeatBoy, 0);
   return;
 }
 
@@ -151,9 +151,9 @@ void __thiscall SMBReplayManager__LoadFileList__0050fd40(SMBReplayManager *self)
   byte local_50;
   char local_4f;
   uint32_t local_48;
-  
+
   plVar1 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-  (**(code **)(*plVar1 + 0x80))(plVar1,"*.rpl",self + 0xd0);
+  (**(code **)(*plVar1 + 0x80))(plVar1, "*.rpl", self + 0xd0);
   piVar7 = *(int **)(self + 0xd0);
   if (piVar7 != (int *)0x0) {
     pvVar2 = malloc((long)*piVar7 * 0x24);
@@ -165,13 +165,12 @@ void __thiscall SMBReplayManager__LoadFileList__0050fd40(SMBReplayManager *self)
       do {
         local_48 = 1;
         local_68 = *(uint64_t *)(*(long *)(piVar7 + 2) + lVar5);
-        SMBReplay__GetReplayFileHeader
-                  (GSuperMeatBoy__pReplay,(SMBReplayFileCreate *)&local_68,0,(File *)0x0,(File *)0x0
-                   ,(SystemFileTime *)(lVar4 + *(long *)(self + 0xd8) + 0x14));
+        SMBReplay__GetReplayFileHeader(GSuperMeatBoy__pReplay, (SMBReplayFileCreate *)&local_68, 0,
+                                       (File *)0x0, (File *)0x0,
+                                       (SystemFileTime *)(lVar4 + *(long *)(self + 0xd8) + 0x14));
         if (local_4f == '\0') {
           *(uint32_t *)(*(long *)(self + 0xd8) + 0x20 + lVar4) = 1;
-        }
-        else {
+        } else {
           *(uint32_t *)(*(long *)(self + 0xd8) + 0x20 + lVar4) = 0;
         }
         *(uint *)(*(long *)(self + 0xd8) + 0x10 + lVar4) = (uint)local_50;
@@ -208,71 +207,65 @@ void __thiscall SMBReplayManager__Initialize(SMBReplayManager *self)
   uint64_t uVar3;
   long *plVar4;
   FlashMovieClip *pFVar5;
-  char acStack_38 [16];
+  char acStack_38[16];
   uint8_t *local_28;
-  
-  (**(code **)(*(long *)self + 0x10))(self,0,"replayidle");
+
+  (**(code **)(*(long *)self + 0x10))(self, 0, "replayidle");
   local_28 = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 0050ed17 to 0050efc4 has its CatchHandler @ 0050f004 */
-  SMBSelectionMenu__InitializeMenuRows((SMBSelectionMenu *)self,3);
-  FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8),"selectbar");
-  Sprint("name%i",acStack_38,1);
-  uVar3 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),acStack_38);
+  /* try { // try from 0050ed17 to 0050efc4 has its CatchHandler @ 0050f004 */
+  SMBSelectionMenu__InitializeMenuRows((SMBSelectionMenu *)self, 3);
+  FlashAnimationLibrary__GetClipIndex(*(FlashAnimationLibrary **)(self + 8), "selectbar");
+  Sprint("name%i", acStack_38, 1);
+  uVar3 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), acStack_38);
   *(uint64_t *)(self + 0x80) = uVar3;
-  Sprint("date%i",acStack_38,1);
-  uVar3 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),acStack_38);
+  Sprint("date%i", acStack_38, 1);
+  uVar3 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), acStack_38);
   *(uint64_t *)(self + 0x98) = uVar3;
-  Sprint("icon%i",acStack_38,1);
-  plVar4 = (long *)FlashAnimationLibrary__GetMovieClip__005731d0
-                             (*(FlashAnimationLibrary **)(self + 8),acStack_38);
-  pFVar5 = (FlashMovieClip *)
-           FlashAnimationLibrary__GetLibraryEntry
-                     (*(FlashAnimationLibrary **)(self + 8),*(int *)(*(long *)(self + 0x28) + 0x20))
-  ;
-  uVar3 = FlashMovieClip__FindInstance(pFVar5,(int)plVar4[4],0,(int *)0x0,0);
+  Sprint("icon%i", acStack_38, 1);
+  plVar4 = (long *)FlashAnimationLibrary__GetMovieClip__005731d0(
+      *(FlashAnimationLibrary **)(self + 8), acStack_38);
+  pFVar5 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(
+      *(FlashAnimationLibrary **)(self + 8), *(int *)(*(long *)(self + 0x28) + 0x20));
+  uVar3 = FlashMovieClip__FindInstance(pFVar5, (int)plVar4[4], 0, (int *)0x0, 0);
   *(uint64_t *)(self + 0xb0) = uVar3;
   (**(code **)(*plVar4 + 8))(plVar4);
-  Sprint("name%i",acStack_38,2);
-  uVar3 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),acStack_38);
+  Sprint("name%i", acStack_38, 2);
+  uVar3 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), acStack_38);
   *(uint64_t *)(self + 0x88) = uVar3;
-  Sprint("date%i",acStack_38,2);
-  uVar3 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),acStack_38);
+  Sprint("date%i", acStack_38, 2);
+  uVar3 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), acStack_38);
   *(uint64_t *)(self + 0xa0) = uVar3;
-  Sprint("icon%i",acStack_38,2);
-  plVar4 = (long *)FlashAnimationLibrary__GetMovieClip__005731d0
-                             (*(FlashAnimationLibrary **)(self + 8),acStack_38);
-  pFVar5 = (FlashMovieClip *)
-           FlashAnimationLibrary__GetLibraryEntry
-                     (*(FlashAnimationLibrary **)(self + 8),*(int *)(*(long *)(self + 0x28) + 0x20))
-  ;
-  uVar3 = FlashMovieClip__FindInstance(pFVar5,(int)plVar4[4],0,(int *)0x0,0);
+  Sprint("icon%i", acStack_38, 2);
+  plVar4 = (long *)FlashAnimationLibrary__GetMovieClip__005731d0(
+      *(FlashAnimationLibrary **)(self + 8), acStack_38);
+  pFVar5 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(
+      *(FlashAnimationLibrary **)(self + 8), *(int *)(*(long *)(self + 0x28) + 0x20));
+  uVar3 = FlashMovieClip__FindInstance(pFVar5, (int)plVar4[4], 0, (int *)0x0, 0);
   *(uint64_t *)(self + 0xb8) = uVar3;
   (**(code **)(*plVar4 + 8))(plVar4);
-  Sprint("name%i",acStack_38,3);
-  uVar3 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),acStack_38);
+  Sprint("name%i", acStack_38, 3);
+  uVar3 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), acStack_38);
   *(uint64_t *)(self + 0x90) = uVar3;
-  Sprint("date%i",acStack_38,3);
-  uVar3 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),acStack_38);
+  Sprint("date%i", acStack_38, 3);
+  uVar3 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), acStack_38);
   *(uint64_t *)(self + 0xa8) = uVar3;
-  Sprint("icon%i",acStack_38,3);
-  plVar4 = (long *)FlashAnimationLibrary__GetMovieClip__005731d0
-                             (*(FlashAnimationLibrary **)(self + 8),acStack_38);
-  pFVar5 = (FlashMovieClip *)
-           FlashAnimationLibrary__GetLibraryEntry
-                     (*(FlashAnimationLibrary **)(self + 8),*(int *)(*(long *)(self + 0x28) + 0x20))
-  ;
-  uVar3 = FlashMovieClip__FindInstance(pFVar5,(int)plVar4[4],0,(int *)0x0,0);
+  Sprint("icon%i", acStack_38, 3);
+  plVar4 = (long *)FlashAnimationLibrary__GetMovieClip__005731d0(
+      *(FlashAnimationLibrary **)(self + 8), acStack_38);
+  pFVar5 = (FlashMovieClip *)FlashAnimationLibrary__GetLibraryEntry(
+      *(FlashAnimationLibrary **)(self + 8), *(int *)(*(long *)(self + 0x28) + 0x20));
+  uVar3 = FlashMovieClip__FindInstance(pFVar5, (int)plVar4[4], 0, (int *)0x0, 0);
   *(uint64_t *)(self + 0xc0) = uVar3;
   (**(code **)(*plVar4 + 8))(plVar4);
-  FlashTextField__SetText(*(wchar_t **)(self + 0x80),&DAT_005c6634 /* R:0.0f */);
-  FlashTextField__SetText(*(wchar_t **)(self + 0x98),&DAT_005c6634 /* R:0.0f */);
-  FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb0),0x31);
-  FlashTextField__SetText(*(wchar_t **)(self + 0x88),&DAT_005c6634 /* R:0.0f */);
-  FlashTextField__SetText(*(wchar_t **)(self + 0xa0),&DAT_005c6634 /* R:0.0f */);
-  FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb8),0x31);
-  FlashTextField__SetText(*(wchar_t **)(self + 0x90),&DAT_005c6634 /* R:0.0f */);
-  FlashTextField__SetText(*(wchar_t **)(self + 0xa8),&DAT_005c6634 /* R:0.0f */);
-  FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xc0),0x31);
+  FlashTextField__SetText(*(wchar_t **)(self + 0x80), &DAT_005c6634 /* R:0.0f */);
+  FlashTextField__SetText(*(wchar_t **)(self + 0x98), &DAT_005c6634 /* R:0.0f */);
+  FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb0), 0x31);
+  FlashTextField__SetText(*(wchar_t **)(self + 0x88), &DAT_005c6634 /* R:0.0f */);
+  FlashTextField__SetText(*(wchar_t **)(self + 0xa0), &DAT_005c6634 /* R:0.0f */);
+  FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb8), 0x31);
+  FlashTextField__SetText(*(wchar_t **)(self + 0x90), &DAT_005c6634 /* R:0.0f */);
+  FlashTextField__SetText(*(wchar_t **)(self + 0xa8), &DAT_005c6634 /* R:0.0f */);
+  FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xc0), 0x31);
   uVar3 = GetLocalizedText(0x7e);
   *(uint64_t *)(self + 0x50) = uVar3;
   if ((allocator *)(local_28 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
@@ -352,116 +345,125 @@ void __thiscall SMBReplayManager__LoadText(SMBReplayManager *self)
   uint64_t uVar2;
   long lVar3;
   long lVar4;
-  
+
   if (*(int **)(self + 0xd0) == (int *)0x0) {
     uVar2 = GetLocalizedText(0x45);
-    FlashTextField__SetText(*(wchar_t **)(self + 0x80),uVar2);
+    FlashTextField__SetText(*(wchar_t **)(self + 0x80), uVar2);
     FlashTextField__SetText(*(wchar_t **)(self + 0x98));
-    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,0);
+    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, 0);
     uVar2 = GetLocalizedText(0x45);
-    FlashTextField__SetText(*(wchar_t **)(self + 0x88),uVar2);
-    FlashTextField__SetText(*(wchar_t **)(self + 0xa0),&DAT_005c5d74 /* R:6.305843089461677e-44f */);
-    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,1);
+    FlashTextField__SetText(*(wchar_t **)(self + 0x88), uVar2);
+    FlashTextField__SetText(*(wchar_t **)(self + 0xa0),
+                            &DAT_005c5d74 /* R:6.305843089461677e-44f */);
+    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, 1);
     uVar2 = GetLocalizedText(0x45);
-    FlashTextField__SetText(*(wchar_t **)(self + 0x90),uVar2);
-    FlashTextField__SetText(*(wchar_t **)(self + 0xa8),&DAT_005c5d74 /* R:6.305843089461677e-44f */);
-    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,2);
+    FlashTextField__SetText(*(wchar_t **)(self + 0x90), uVar2);
+    FlashTextField__SetText(*(wchar_t **)(self + 0xa8),
+                            &DAT_005c5d74 /* R:6.305843089461677e-44f */);
+    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, 2);
     return;
   }
   if (*(int *)(self + 200) < **(int **)(self + 0xd0)) {
     lVar4 = (long)*(int *)(self + 200) * 0x24;
     if (*(int *)(lVar4 + *(long *)(self + 0xd8) + 0x20) != 0) {
       uVar2 = GetLocalizedText(0xb1);
-      FlashTextField__SetText(*(wchar_t **)(self + 0x80),uVar2);
-      FlashTextField__SetText(*(wchar_t **)(self + 0x98),&DAT_005c8a00 /* R:6.726232628759122e-44f */);
-      FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb0),1);
+      FlashTextField__SetText(*(wchar_t **)(self + 0x80), uVar2);
+      FlashTextField__SetText(*(wchar_t **)(self + 0x98),
+                              &DAT_005c8a00 /* R:6.726232628759122e-44f */);
+      FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb0), 1);
       goto LAB_0050f168;
     }
     FlashTextField__SetText(*(char **)(self + 0x80));
     lVar3 = lVar4 + *(long *)(self + 0xd8);
-    FlashTextField__SetText
-              (*(wchar_t **)(self + 0x98),&DAT_005c5c10 /* R:5.184804318001823e-44f */,(ulong)*(ushort *)(lVar3 + 0x14),
-               (ulong)*(ushort *)(lVar3 + 0x16),(ulong)*(ushort *)(lVar3 + 0x18));
-    FlashLibraryInstance__GotoAndStop
-              (*(FlashLibraryInstance **)(self + 0xb0),
-               *(int *)(*(long *)(self + 0xd8) + 0x10 + lVar4) + 1);
-    if (*(int *)(self + 0x68) == 0) goto LAB_0050f31c;
-LAB_0050f17a:
-    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,0);
-  }
-  else {
+    FlashTextField__SetText(*(wchar_t **)(self + 0x98),
+                            &DAT_005c5c10 /* R:5.184804318001823e-44f */,
+                            (ulong) * (ushort *)(lVar3 + 0x14), (ulong) * (ushort *)(lVar3 + 0x16),
+                            (ulong) * (ushort *)(lVar3 + 0x18));
+    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb0),
+                                      *(int *)(*(long *)(self + 0xd8) + 0x10 + lVar4) + 1);
+    if (*(int *)(self + 0x68) == 0)
+      goto LAB_0050f31c;
+  LAB_0050f17a:
+    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, 0);
+  } else {
     uVar2 = GetLocalizedText(0x45);
-    FlashTextField__SetText(*(wchar_t **)(self + 0x80),uVar2);
-    FlashTextField__SetText(*(wchar_t **)(self + 0x98),&DAT_005c5d74 /* R:6.305843089461677e-44f */);
-    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb0),0x31);
-LAB_0050f168:
-    if (*(int *)(self + 0x68) != 0) goto LAB_0050f17a;
-LAB_0050f31c:
-    SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self,0);
+    FlashTextField__SetText(*(wchar_t **)(self + 0x80), uVar2);
+    FlashTextField__SetText(*(wchar_t **)(self + 0x98),
+                            &DAT_005c5d74 /* R:6.305843089461677e-44f */);
+    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb0), 0x31);
+  LAB_0050f168:
+    if (*(int *)(self + 0x68) != 0)
+      goto LAB_0050f17a;
+  LAB_0050f31c:
+    SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self, 0);
   }
   if (*(int *)(self + 200) + 1 < **(int **)(self + 0xd0)) {
     lVar4 = (long)(*(int *)(self + 200) + 1) * 0x24;
     if (*(int *)(lVar4 + *(long *)(self + 0xd8) + 0x20) != 0) {
       uVar2 = GetLocalizedText(0xb1);
-      FlashTextField__SetText(*(wchar_t **)(self + 0x88),uVar2);
-      FlashTextField__SetText(*(wchar_t **)(self + 0xa0),&DAT_005c8a00 /* R:6.726232628759122e-44f */);
-      FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb8),1);
+      FlashTextField__SetText(*(wchar_t **)(self + 0x88), uVar2);
+      FlashTextField__SetText(*(wchar_t **)(self + 0xa0),
+                              &DAT_005c8a00 /* R:6.726232628759122e-44f */);
+      FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb8), 1);
       goto LAB_0050f1f5;
     }
     FlashTextField__SetText(*(char **)(self + 0x88));
     lVar3 = lVar4 + *(long *)(self + 0xd8);
-    FlashTextField__SetText
-              (*(wchar_t **)(self + 0xa0),&DAT_005c5c10 /* R:5.184804318001823e-44f */,(ulong)*(ushort *)(lVar3 + 0x14),
-               (ulong)*(ushort *)(lVar3 + 0x16),(ulong)*(ushort *)(lVar3 + 0x18));
-    FlashLibraryInstance__GotoAndStop
-              (*(FlashLibraryInstance **)(self + 0xb8),
-               *(int *)(*(long *)(self + 0xd8) + 0x10 + lVar4) + 1);
-    if (*(int *)(self + 0x68) == 1) goto LAB_0050f3f4;
-LAB_0050f207:
-    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,1);
-  }
-  else {
+    FlashTextField__SetText(*(wchar_t **)(self + 0xa0),
+                            &DAT_005c5c10 /* R:5.184804318001823e-44f */,
+                            (ulong) * (ushort *)(lVar3 + 0x14), (ulong) * (ushort *)(lVar3 + 0x16),
+                            (ulong) * (ushort *)(lVar3 + 0x18));
+    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb8),
+                                      *(int *)(*(long *)(self + 0xd8) + 0x10 + lVar4) + 1);
+    if (*(int *)(self + 0x68) == 1)
+      goto LAB_0050f3f4;
+  LAB_0050f207:
+    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, 1);
+  } else {
     uVar2 = GetLocalizedText(0x45);
-    FlashTextField__SetText(*(wchar_t **)(self + 0x88),uVar2);
-    FlashTextField__SetText(*(wchar_t **)(self + 0xa0),&DAT_005c5d74 /* R:6.305843089461677e-44f */);
-    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb8),0x31);
-LAB_0050f1f5:
-    if (*(int *)(self + 0x68) != 1) goto LAB_0050f207;
-LAB_0050f3f4:
-    SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self,1);
+    FlashTextField__SetText(*(wchar_t **)(self + 0x88), uVar2);
+    FlashTextField__SetText(*(wchar_t **)(self + 0xa0),
+                            &DAT_005c5d74 /* R:6.305843089461677e-44f */);
+    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xb8), 0x31);
+  LAB_0050f1f5:
+    if (*(int *)(self + 0x68) != 1)
+      goto LAB_0050f207;
+  LAB_0050f3f4:
+    SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self, 1);
   }
   if (*(int *)(self + 200) + 2 < **(int **)(self + 0xd0)) {
     lVar4 = (long)(*(int *)(self + 200) + 2) * 0x24;
     if (*(int *)(lVar4 + *(long *)(self + 0xd8) + 0x20) != 0) {
       uVar2 = GetLocalizedText(0xb1);
-      FlashTextField__SetText(*(wchar_t **)(self + 0x90),uVar2);
-      FlashTextField__SetText(*(wchar_t **)(self + 0xa8),&DAT_005c8a00 /* R:6.726232628759122e-44f */);
-      FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xc0),1);
+      FlashTextField__SetText(*(wchar_t **)(self + 0x90), uVar2);
+      FlashTextField__SetText(*(wchar_t **)(self + 0xa8),
+                              &DAT_005c8a00 /* R:6.726232628759122e-44f */);
+      FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xc0), 1);
       iVar1 = *(int *)(self + 0x68);
       goto joined_r0x0050f37b;
     }
     FlashTextField__SetText(*(char **)(self + 0x90));
     lVar3 = lVar4 + *(long *)(self + 0xd8);
-    FlashTextField__SetText
-              (*(wchar_t **)(self + 0xa8),&DAT_005c5c10 /* R:5.184804318001823e-44f */,(ulong)*(ushort *)(lVar3 + 0x14),
-               (ulong)*(ushort *)(lVar3 + 0x16),(ulong)*(ushort *)(lVar3 + 0x18));
-    FlashLibraryInstance__GotoAndStop
-              (*(FlashLibraryInstance **)(self + 0xc0),
-               *(int *)(*(long *)(self + 0xd8) + 0x10 + lVar4) + 1);
-  }
-  else {
+    FlashTextField__SetText(*(wchar_t **)(self + 0xa8),
+                            &DAT_005c5c10 /* R:5.184804318001823e-44f */,
+                            (ulong) * (ushort *)(lVar3 + 0x14), (ulong) * (ushort *)(lVar3 + 0x16),
+                            (ulong) * (ushort *)(lVar3 + 0x18));
+    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xc0),
+                                      *(int *)(*(long *)(self + 0xd8) + 0x10 + lVar4) + 1);
+  } else {
     uVar2 = GetLocalizedText(0x45);
-    FlashTextField__SetText(*(wchar_t **)(self + 0x90),uVar2);
-    FlashTextField__SetText(*(wchar_t **)(self + 0xa8),&DAT_005c5d74 /* R:6.305843089461677e-44f */);
-    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xc0),0x31);
+    FlashTextField__SetText(*(wchar_t **)(self + 0x90), uVar2);
+    FlashTextField__SetText(*(wchar_t **)(self + 0xa8),
+                            &DAT_005c5d74 /* R:6.305843089461677e-44f */);
+    FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 0xc0), 0x31);
   }
   iVar1 = *(int *)(self + 0x68);
 joined_r0x0050f37b:
   if (iVar1 != 2) {
-    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,2);
+    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, 2);
     return;
   }
-  SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self,2);
+  SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self, 2);
   return;
 }
 
@@ -480,11 +482,12 @@ void __thiscall SMBReplayManager__DecrementSelection(SMBReplayManager *self)
   int *piVar1;
   int iVar2;
   uint uVar3;
-  
+
   piVar1 = *(int **)(self + 0xd0);
-  if ((((piVar1 == (int *)0x0) || (*piVar1 != 0)) && ((*(ushort *)(self + 0x36) & 0xfff0) != 0x10))
-     && (piVar1 != (int *)0x0)) {
-    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,*(uint *)(self + 0x68));
+  if ((((piVar1 == (int *)0x0) || (*piVar1 != 0)) &&
+       ((*(ushort *)(self + 0x36) & 0xfff0) != 0x10)) &&
+      (piVar1 != (int *)0x0)) {
+    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, *(uint *)(self + 0x68));
     iVar2 = *(int *)(self + 200) + -1;
     *(int *)(self + 200) = iVar2;
     if (iVar2 < 0) {
@@ -492,8 +495,7 @@ void __thiscall SMBReplayManager__DecrementSelection(SMBReplayManager *self)
       *(uint32_t *)(self + 200) = 0;
       uVar3 = *(int *)(self + 0x68) - 1;
       *(uint *)(self + 0x68) = uVar3;
-    }
-    else {
+    } else {
       uVar3 = *(int *)(self + 0x68) - 1;
       *(uint *)(self + 0x68) = uVar3;
     }
@@ -502,15 +504,14 @@ void __thiscall SMBReplayManager__DecrementSelection(SMBReplayManager *self)
       if (iVar2 == 0) {
         *(uint32_t *)(self + 0x68) = 0;
         uVar3 = 0;
-      }
-      else {
+      } else {
         *(int *)(self + 200) = (iVar2 - *(int *)(self + 0x70)) + 1;
         LoadText(self);
         uVar3 = *(uint *)(self + 0x68);
       }
       *(int *)(self + 200) = iVar2;
     }
-    SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self,uVar3);
+    SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self, uVar3);
     return;
   }
   return;
@@ -534,12 +535,13 @@ void __thiscall SMBReplayManager__IncrementSelection(SMBReplayManager *self)
   uint uVar4;
   int *piVar5;
   uint uVar6;
-  
+
   piVar5 = *(int **)(self + 0xd0);
-  if ((((piVar5 == (int *)0x0) || (*piVar5 != 0)) && ((*(ushort *)(self + 0x36) & 0xfff0) != 0x10))
-     && (piVar5 != (int *)0x0)) {
+  if ((((piVar5 == (int *)0x0) || (*piVar5 != 0)) &&
+       ((*(ushort *)(self + 0x36) & 0xfff0) != 0x10)) &&
+      (piVar5 != (int *)0x0)) {
     iVar2 = *piVar5;
-    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,*(uint *)(self + 0x68));
+    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, *(uint *)(self + 0x68));
     iVar3 = *(int *)(self + 200);
     uVar4 = *(uint *)(self + 0x68);
     iVar1 = iVar3 + 1;
@@ -556,7 +558,7 @@ void __thiscall SMBReplayManager__IncrementSelection(SMBReplayManager *self)
       LoadText(self);
       uVar6 = *(uint *)(self + 0x68);
     }
-    SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self,uVar6);
+    SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self, uVar6);
     return;
   }
   return;
@@ -580,7 +582,7 @@ void __thiscall SMBReplayManager__Activate(SMBReplayManager *self)
   wchar_t *pwVar4;
   uint64_t uVar5;
   long lVar6;
-  
+
   SMBSelectionMenu__Activate((SMBSelectionMenu *)self);
   if (*(void **)(self + 0xd0) != (void *)0x0) {
     free(*(void **)(self + 0xd0));
@@ -593,7 +595,7 @@ void __thiscall SMBReplayManager__Activate(SMBReplayManager *self)
   plVar2 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
   iVar1 = (**(code **)(*plVar2 + 0x20))(plVar2);
   if ((iVar1 == 1) &&
-     (lVar6 = TPlayer__GetProfile((TPlayer *)Players__Player), *(int *)(lVar6 + 0xc) == 1)) {
+      (lVar6 = TPlayer__GetProfile((TPlayer *)Players__Player), *(int *)(lVar6 + 0xc) == 1)) {
     LoadFileList(self);
   }
   *(uint32_t *)(self + 200) = 0;
@@ -602,24 +604,23 @@ void __thiscall SMBReplayManager__Activate(SMBReplayManager *self)
   LoadText(self);
   if (*(int *)(self + 0xe4) == 0) {
     pJVar3 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddButtonCallback(pJVar3,0,SMBReplayLoadPress,self);
-    pwVar4 = (wchar_t *)
-             FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"ok");
+    Joystick__AddButtonCallback(pJVar3, 0, SMBReplayLoadPress, self);
+    pwVar4 =
+        (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "ok");
     uVar5 = GetLocalizedText(4);
-    FlashTextField__SetText(pwVar4,uVar5);
+    FlashTextField__SetText(pwVar4, uVar5);
     if (Keyboard != (TKeyboard *)0x0) {
-      TKeyboard__AddKeyCallback(Keyboard,0x76,SMBReplayLoadPress,self);
+      TKeyboard__AddKeyCallback(Keyboard, 0x76, SMBReplayLoadPress, self);
     }
-  }
-  else {
+  } else {
     pJVar3 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddButtonCallback(pJVar3,0,SMBReplayCloseMenu,self);
-    pwVar4 = (wchar_t *)
-             FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"ok");
+    Joystick__AddButtonCallback(pJVar3, 0, SMBReplayCloseMenu, self);
+    pwVar4 =
+        (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "ok");
     uVar5 = GetLocalizedText(5);
-    FlashTextField__SetText(pwVar4,uVar5);
+    FlashTextField__SetText(pwVar4, uVar5);
     if (Keyboard != (TKeyboard *)0x0) {
-      TKeyboard__AddKeyCallback(Keyboard,0x76,SMBReplayCloseMenu,self);
+      TKeyboard__AddKeyCallback(Keyboard, 0x76, SMBReplayCloseMenu, self);
       iVar1 = System_IsTrialMode();
       goto joined_r0x0050f928;
     }
@@ -628,23 +629,23 @@ void __thiscall SMBReplayManager__Activate(SMBReplayManager *self)
 joined_r0x0050f928:
   if (iVar1 == 0) {
     pJVar3 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddButtonCallback(pJVar3,3,SMBReplayDeletePress,self);
+    Joystick__AddButtonCallback(pJVar3, 3, SMBReplayDeletePress, self);
     if (Keyboard != (TKeyboard *)0x0) {
-      TKeyboard__AddKeyCallback(Keyboard,0x83,SMBReplayDeletePress,self);
+      TKeyboard__AddKeyCallback(Keyboard, 0x83, SMBReplayDeletePress, self);
     }
   }
-  pwVar4 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"date");
+  pwVar4 =
+      (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "date");
   uVar5 = GetLocalizedText(0x46);
-  FlashTextField__SetText(pwVar4,uVar5);
-  pwVar4 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"cancel");
+  FlashTextField__SetText(pwVar4, uVar5);
+  pwVar4 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "cancel");
   uVar5 = GetLocalizedText(5);
-  FlashTextField__SetText(pwVar4,uVar5);
-  pwVar4 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"del");
+  FlashTextField__SetText(pwVar4, uVar5);
+  pwVar4 =
+      (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "del");
   uVar5 = GetLocalizedText(0xb5);
-  FlashTextField__SetText(pwVar4,uVar5);
+  FlashTextField__SetText(pwVar4, uVar5);
   return;
 }
 
@@ -673,7 +674,7 @@ bool __thiscall SMBReplayManager__IsSelectedReplayValid(SMBReplayManager *self)
   uint32_t local_18;
   uint32_t local_14;
   uint8_t *local_10;
-  
+
   local_38 = 2;
   local_30 = 0;
   local_28 = 0;
@@ -683,14 +684,14 @@ bool __thiscall SMBReplayManager__IsSelectedReplayValid(SMBReplayManager *self)
   local_18 = 0;
   local_10 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
   local_40 = &DAT_005c328c /* R:u32=1811964530 */;
-  local_48 = *(uint64_t *)
-              ((long)*(int *)(self + 200) * 0x10 + *(long *)(*(long *)(self + 0xd0) + 8));
+  local_48 =
+      *(uint64_t *)((long)*(int *)(self + 200) * 0x10 + *(long *)(*(long *)(self + 0xd0) + 8));
   local_14 = 1;
   plVar1 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-  lVar2 = (**(code **)(*plVar1 + 0x40))(plVar1,&local_48,0);
+  lVar2 = (**(code **)(*plVar1 + 0x40))(plVar1, &local_48, 0);
   if (lVar2 != 0) {
     plVar1 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-    (**(code **)(*plVar1 + 0x58))(plVar1,lVar2,1);
+    (**(code **)(*plVar1 + 0x58))(plVar1, lVar2, 1);
   }
   return lVar2 != 0;
 }
@@ -708,7 +709,7 @@ void __thiscall SMBReplayManager__LoadSelectedReplay(SMBReplayManager *self)
 
 {
   int iVar1;
-  uint32_t local_78 [2];
+  uint32_t local_78[2];
   uint64_t local_70;
   uint64_t local_68;
   uint64_t local_60;
@@ -722,7 +723,7 @@ void __thiscall SMBReplayManager__LoadSelectedReplay(SMBReplayManager *self)
   uint64_t local_20;
   uint64_t local_18;
   uint64_t local_10;
-  
+
   if ((*(int **)(self + 0xd0) != (int *)0x0) && (**(int **)(self + 0xd0) != 0)) {
     iVar1 = IsSelectedReplayValid(self);
     if (iVar1 != 1) {
@@ -787,18 +788,16 @@ void __thiscall SMBReplayManager__DeleteSelectedReplay(SMBReplayManager *self)
   int iVar1;
   long *plVar2;
   long lVar3;
-  
+
   plVar2 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
   iVar1 = (**(code **)(*plVar2 + 0x20))(plVar2);
   if (iVar1 == 1) {
     lVar3 = TPlayer__GetProfile((TPlayer *)Players__Player);
     if (((*(int *)(lVar3 + 0xc) == 1) && (*(int **)(self + 0xd0) != (int *)0x0)) &&
-       (**(int **)(self + 0xd0) != 0)) {
+        (**(int **)(self + 0xd0) != 0)) {
       plVar2 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-      (**(code **)(*plVar2 + 0x88))
-                (plVar2,*(uint64_t *)
-                         ((long)*(int *)(self + 200) * 0x10 + *(long *)(*(long *)(self + 0xd0) + 8))
-                );
+      (**(code **)(*plVar2 + 0x88))(plVar2, *(uint64_t *)((long)*(int *)(self + 200) * 0x10 +
+                                                          *(long *)(*(long *)(self + 0xd0) + 8)));
       *(uint32_t *)(self + 200) = 0;
       *(uint32_t *)(self + 0x68) = 0;
       DisableMessage(1);
@@ -834,14 +833,14 @@ void __thiscall SMBReplayManager__DeleteSelectedReplay(SMBReplayManager *self)
  */
 /* SMBReplayManager__SetManageOnlyMode(int) */
 
-void __thiscall SMBReplayManager__SetManageOnlyMode(SMBReplayManager *self,int arg1)
+void __thiscall SMBReplayManager__SetManageOnlyMode(SMBReplayManager *self, int arg1)
 
 {
   *(int *)(self + 0xe4) = arg1;
   if (arg1 != 1) {
     return;
   }
-  GSuperMeatBoy__Freeze(SuperMeatBoy,1);
+  GSuperMeatBoy__Freeze(SuperMeatBoy, 1);
   return;
 }
 
@@ -860,7 +859,7 @@ void __thiscall SMBReplayManager__LoadFileList__0050fd40(SMBReplayManager *self)
   long lVar1;
   int iVar2;
   long *plVar3;
-  
+
   if (*(void **)(self + 0xd0) != (void *)0x0) {
     free(*(void **)(self + 0xd0));
     *(uint64_t *)(self + 0xd0) = 0;
@@ -914,8 +913,8 @@ void __thiscall SMBReplayManager__DisconnectedStorage(SMBReplayManager *self)
   if ((*(int *)(self + 0x30) != 1) && (*(int *)(self + 0x30) != 3)) {
     return;
   }
-                    /* WARNING: Could not recover jumptable at 0x0050fe07. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0050fe07. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(*(long *)self + 0x28))();
   return;
 }
@@ -933,7 +932,7 @@ bool __thiscall SMBReplayManager__AllowDelete(SMBReplayManager *self)
 
 {
   bool bVar1;
-  
+
   bVar1 = false;
   if (*(int **)(self + 0xd0) != (int *)0x0) {
     bVar1 = 0 < **(int **)(self + 0xd0);

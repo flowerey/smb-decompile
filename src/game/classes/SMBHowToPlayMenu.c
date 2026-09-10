@@ -54,8 +54,8 @@ void __thiscall SMBHowToPlayMenu__Initialize(SMBHowToPlayMenu *self)
 
 {
   uint64_t uVar1;
-  
-  (**(code **)(*(long *)self + 0x10))(self,0,"howtoidle");
+
+  (**(code **)(*(long *)self + 0x10))(self, 0, "howtoidle");
   uVar1 = GetLocalizedText(0x22);
   *(uint64_t *)(self + 0x50) = uVar1;
   return;
@@ -95,18 +95,19 @@ void __thiscall SMBHowToPlayMenu__Activate(SMBHowToPlayMenu *self)
   Joystick *pJVar1;
   wchar_t *pwVar2;
   uint64_t uVar3;
-  
+
   *(ushort *)(self + 0x34) = *(ushort *)(self + 0x34) & 0xfc00 | 1;
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__BackupCallbacks(pJVar1,(InputCallback **)(self + 0x40),(InputCallback **)(self + 0x38));
+  Joystick__BackupCallbacks(pJVar1, (InputCallback **)(self + 0x40),
+                            (InputCallback **)(self + 0x38));
   if ((*(uint *)(self + 0x34) & 0xffc00) == 0x400) {
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddButtonCallback(pJVar1,1,SMBPopupDeActivateMenu,self);
+    Joystick__AddButtonCallback(pJVar1, 1, SMBPopupDeActivateMenu, self);
   }
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__BackupCallbacks(Keyboard,(InputCallback **)(self + 0x48));
+    TKeyboard__BackupCallbacks(Keyboard, (InputCallback **)(self + 0x48));
     if ((*(uint *)(self + 0x34) & 0xffc00) == 0x400) {
-      TKeyboard__AddKeyCallback(Keyboard,0x23,SMBPopupDeActivateMenu,self);
+      TKeyboard__AddKeyCallback(Keyboard, 0x23, SMBPopupDeActivateMenu, self);
     }
   }
   *(uint32_t *)(self + 0x30) = 1;
@@ -123,28 +124,28 @@ void __thiscall SMBHowToPlayMenu__Activate(SMBHowToPlayMenu *self)
     FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(self + 0x20));
   }
   uVar3 = *(uint64_t *)(self + 0x50);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"title");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "title");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar3);
+    FlashTextField__SetText(pwVar2, uVar3);
   }
   uVar3 = GetLocalizedText(0xb7);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"select");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "select");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar3);
+    FlashTextField__SetText(pwVar2, uVar3);
   }
   uVar3 = GetLocalizedText(4);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"ok");
+  pwVar2 =
+      (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "ok");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar3);
+    FlashTextField__SetText(pwVar2, uVar3);
   }
   uVar3 = GetLocalizedText(10);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"back");
+  pwVar2 =
+      (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "back");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar3);
+    FlashTextField__SetText(pwVar2, uVar3);
     return;
   }
   return;
@@ -198,16 +199,16 @@ void __thiscall SMBHowToPlayMenu__DeActivate(SMBHowToPlayMenu *self)
 
 {
   Joystick *pJVar1;
-  
+
   *(uint32_t *)(self + 0x30) = 2;
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,1,0,0);
+  Joystick__AddButtonCallback(pJVar1, 1, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__RestoreCallbacks(pJVar1,(InputCallback **)(self + 0x40),(InputCallback **)(self + 0x38))
-  ;
+  Joystick__RestoreCallbacks(pJVar1, (InputCallback **)(self + 0x40),
+                             (InputCallback **)(self + 0x38));
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x23,0,0);
-    TKeyboard__RestoreCallbacks(Keyboard,(InputCallback **)(self + 0x48));
+    TKeyboard__AddKeyCallback(Keyboard, 0x23, 0, 0);
+    TKeyboard__RestoreCallbacks(Keyboard, (InputCallback **)(self + 0x48));
     return;
   }
   return;
@@ -226,7 +227,7 @@ void __thiscall SMBHowToPlayMenu__SMBHowToPlayMenu__00504900(SMBHowToPlayMenu *s
 
 {
   uint64_t uVar1;
-  
+
   *(ushort *)(self + 0x34) = *(ushort *)(self + 0x34) & 0xfc00;
   *(uint8_t ***)self = &PTR__SMBPopupMenu_005c76d0;
   *(uint64_t *)(self + 8) = 0;

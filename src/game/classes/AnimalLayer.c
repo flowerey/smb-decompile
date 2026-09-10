@@ -38,16 +38,16 @@ void __thiscall AnimalLayer__AnimalLayer__005182c0(AnimalLayer *self)
 void __thiscall AnimalLayer__Render(AnimalLayer *self)
 
 {
-  TGraphics__SetMasterPixelStage(Graphics,0x15,0,2,0,4);
-  TGraphics__SetPixelOutputParams(Graphics,*(float *)(self + 0x410),0.0,0.0,0.0);
-  TGraphics__SetPixelColorConstant(Graphics,1,self + 0x400);
-  TGraphics__SetRenderState(Graphics,'\b',1);
-  TGraphics__SetRenderState(Graphics,'\x05',4);
-  TGraphics__SetRenderState(Graphics,'\x06',5);
-  TGraphics__SetRenderState(Graphics,'\a',0);
-  TGraphics__SetRenderState(Graphics,'\x03',0);
-  TGraphics__SetRenderState(Graphics,'\x01',7);
-  Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38),1);
+  TGraphics__SetMasterPixelStage(Graphics, 0x15, 0, 2, 0, 4);
+  TGraphics__SetPixelOutputParams(Graphics, *(float *)(self + 0x410), 0.0, 0.0, 0.0);
+  TGraphics__SetPixelColorConstant(Graphics, 1, self + 0x400);
+  TGraphics__SetRenderState(Graphics, '\b', 1);
+  TGraphics__SetRenderState(Graphics, '\x05', 4);
+  TGraphics__SetRenderState(Graphics, '\x06', 5);
+  TGraphics__SetRenderState(Graphics, '\a', 0);
+  TGraphics__SetRenderState(Graphics, '\x03', 0);
+  TGraphics__SetRenderState(Graphics, '\x01', 7);
+  Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38), 1);
   SMBAnimals__RenderAnimals(*(SMBAnimals **)(GSuperMeatBoy__pLevelPalette + 0x41e8));
   TGraphics__DeleteMasterPixelStage(Graphics);
   return;

@@ -50,8 +50,8 @@ void GraphicsSettings__DestroyGraphicsSettings(void)
     pSelectableResolutions._64_8_ = 0;
   }
   if (_GRAPHICSFORM != (long *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x0058a3f7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+    /* WARNING: Could not recover jumptable at 0x0058a3f7. Too many branches */
+    /* WARNING: Treating indirect jump as call */
     (**(code **)(*_GRAPHICSFORM + 8))();
     return;
   }

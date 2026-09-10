@@ -33,12 +33,12 @@ void __thiscall Vector2__Vector2(Vector2 *self)
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE() const */
 
-Vector2 * __thiscall Vector2__operator_minus__005be180(Vector2 *self)
+Vector2 *__thiscall Vector2__operator_minus__005be180(Vector2 *self)
 
 {
   uint *in_RSI;
   uint uVar1;
-  
+
   uVar1 = *in_RSI ^ DAT_005be6f0 /* R:u32=2147483648 */;
   *(uint *)(self + 4) = in_RSI[1] ^ DAT_005be6f0 /* R:u32=2147483648 */;
   *(uint *)self = uVar1;
@@ -54,11 +54,11 @@ Vector2 * __thiscall Vector2__operator_minus__005be180(Vector2 *self)
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE() const */
 
-Vector2 * __thiscall Vector2__operator_plus__005be140(Vector2 *self)
+Vector2 *__thiscall Vector2__operator_plus__005be140(Vector2 *self)
 
 {
   uint64_t *in_RSI;
-  
+
   *(uint64_t *)self = *in_RSI;
   return self;
 }
@@ -72,13 +72,13 @@ Vector2 * __thiscall Vector2__operator_plus__005be140(Vector2 *self)
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(Vector2 const&) const */
 
-Vector2 * __thiscall Vector2__operator_plus__005be140(Vector2 *self,Vector2 *arg1)
+Vector2 *__thiscall Vector2__operator_plus__005be140(Vector2 *self, Vector2 *arg1)
 
 {
   float fVar1;
   float fVar2;
   float *in_RDX;
-  
+
   fVar1 = *in_RDX;
   fVar2 = *(float *)arg1;
   *(float *)(self + 4) = in_RDX[1] + *(float *)(arg1 + 4);
@@ -95,7 +95,7 @@ Vector2 * __thiscall Vector2__operator_plus__005be140(Vector2 *self,Vector2 *arg
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(Vector2 const&) */
 
-void __thiscall Vector2__operator_plus_assign(Vector2 *self,Vector2 *arg1)
+void __thiscall Vector2__operator_plus_assign(Vector2 *self, Vector2 *arg1)
 
 {
   *(float *)self = *(float *)self + *(float *)arg1;
@@ -112,13 +112,13 @@ void __thiscall Vector2__operator_plus_assign(Vector2 *self,Vector2 *arg1)
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(Vector2 const&) const */
 
-Vector2 * __thiscall Vector2__operator_minus__005be180(Vector2 *self,Vector2 *arg1)
+Vector2 *__thiscall Vector2__operator_minus__005be180(Vector2 *self, Vector2 *arg1)
 
 {
   float fVar1;
   float fVar2;
   float *in_RDX;
-  
+
   fVar1 = *(float *)arg1;
   fVar2 = *in_RDX;
   *(float *)(self + 4) = *(float *)(arg1 + 4) - in_RDX[1];
@@ -135,7 +135,7 @@ Vector2 * __thiscall Vector2__operator_minus__005be180(Vector2 *self,Vector2 *ar
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(Vector2 const&) */
 
-void __thiscall Vector2__operator_minus_assign(Vector2 *self,Vector2 *arg1)
+void __thiscall Vector2__operator_minus_assign(Vector2 *self, Vector2 *arg1)
 
 {
   *(float *)self = *(float *)self - *(float *)arg1;
@@ -152,12 +152,12 @@ void __thiscall Vector2__operator_minus_assign(Vector2 *self,Vector2 *arg1)
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(float) const */
 
-Vector2 * __thiscall Vector2__operator_mul__005be200(Vector2 *self,float arg1)
+Vector2 *__thiscall Vector2__operator_mul__005be200(Vector2 *self, float arg1)
 
 {
   float fVar1;
   float *in_RSI;
-  
+
   fVar1 = *in_RSI;
   *(float *)(self + 4) = in_RSI[1] * arg1;
   *(float *)self = arg1 * fVar1;
@@ -173,7 +173,7 @@ Vector2 * __thiscall Vector2__operator_mul__005be200(Vector2 *self,float arg1)
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(float) */
 
-void __thiscall Vector2__operator_mul_assign__005be220(Vector2 *self,float arg1)
+void __thiscall Vector2__operator_mul_assign__005be220(Vector2 *self, float arg1)
 
 {
   *(float *)self = *(float *)self * arg1;
@@ -190,13 +190,13 @@ void __thiscall Vector2__operator_mul_assign__005be220(Vector2 *self,float arg1)
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(Vector2 const&) const */
 
-Vector2 * __thiscall Vector2__operator_mul__005be200(Vector2 *self,Vector2 *arg1)
+Vector2 *__thiscall Vector2__operator_mul__005be200(Vector2 *self, Vector2 *arg1)
 
 {
   float fVar1;
   float fVar2;
   float *in_RDX;
-  
+
   fVar1 = *in_RDX;
   fVar2 = *(float *)arg1;
   *(float *)(self + 4) = in_RDX[1] * *(float *)(arg1 + 4);
@@ -213,7 +213,7 @@ Vector2 * __thiscall Vector2__operator_mul__005be200(Vector2 *self,Vector2 *arg1
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(Vector2 const&) */
 
-void __thiscall Vector2__operator_mul_assign__005be220(Vector2 *self,Vector2 *arg1)
+void __thiscall Vector2__operator_mul_assign__005be220(Vector2 *self, Vector2 *arg1)
 
 {
   *(float *)self = *(float *)self * *(float *)arg1;
@@ -230,13 +230,13 @@ void __thiscall Vector2__operator_mul_assign__005be220(Vector2 *self,Vector2 *ar
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(float) const */
 
-Vector2 * __thiscall Vector2__operator_div__005be2a0(Vector2 *self,float arg1)
+Vector2 *__thiscall Vector2__operator_div__005be2a0(Vector2 *self, float arg1)
 
 {
   float fVar1;
   float *in_RSI;
   float fVar2;
-  
+
   fVar2 = DAT_005be894 /* R:1.0f */ / arg1;
   fVar1 = *in_RSI;
   *(float *)(self + 4) = in_RSI[1] * fVar2;
@@ -253,11 +253,11 @@ Vector2 * __thiscall Vector2__operator_div__005be2a0(Vector2 *self,float arg1)
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(float) */
 
-void __thiscall Vector2__operator_div_assign__005be2c0(Vector2 *self,float arg1)
+void __thiscall Vector2__operator_div_assign__005be2c0(Vector2 *self, float arg1)
 
 {
   float fVar1;
-  
+
   fVar1 = DAT_005be894 /* R:1.0f */ / arg1;
   *(float *)self = *(float *)self * fVar1;
   *(float *)(self + 4) = fVar1 * *(float *)(self + 4);
@@ -273,13 +273,13 @@ void __thiscall Vector2__operator_div_assign__005be2c0(Vector2 *self,float arg1)
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(Vector2 const&) const */
 
-Vector2 * __thiscall Vector2__operator_div__005be2a0(Vector2 *self,Vector2 *arg1)
+Vector2 *__thiscall Vector2__operator_div__005be2a0(Vector2 *self, Vector2 *arg1)
 
 {
   float fVar1;
   float fVar2;
   float *in_RDX;
-  
+
   fVar1 = *(float *)arg1;
   fVar2 = *in_RDX;
   *(float *)(self + 4) = *(float *)(arg1 + 4) / in_RDX[1];
@@ -296,7 +296,7 @@ Vector2 * __thiscall Vector2__operator_div__005be2a0(Vector2 *self,Vector2 *arg1
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(Vector2 const&) */
 
-void __thiscall Vector2__operator_div_assign__005be2c0(Vector2 *self,Vector2 *arg1)
+void __thiscall Vector2__operator_div_assign__005be2c0(Vector2 *self, Vector2 *arg1)
 
 {
   *(float *)self = *(float *)self / *(float *)arg1;
@@ -313,7 +313,7 @@ void __thiscall Vector2__operator_div_assign__005be2c0(Vector2 *self,Vector2 *ar
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(Vector2 const&) */
 
-void __thiscall Vector2__operator_assign(Vector2 *self,Vector2 *arg1)
+void __thiscall Vector2__operator_assign(Vector2 *self, Vector2 *arg1)
 
 {
   *(uint32_t *)self = *(uint32_t *)arg1;
@@ -330,7 +330,7 @@ void __thiscall Vector2__operator_assign(Vector2 *self,Vector2 *arg1)
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(Vector2 const&) const */
 
-bool __thiscall Vector2__operator_eq(Vector2 *self,Vector2 *arg1)
+bool __thiscall Vector2__operator_eq(Vector2 *self, Vector2 *arg1)
 
 {
   if (*(float *)arg1 == *(float *)self) {
@@ -348,11 +348,11 @@ bool __thiscall Vector2__operator_eq(Vector2 *self,Vector2 *arg1)
  */
 /* Vector2__TEMPNAMEPLACEHOLDERVALUE(Vector2 const&) const */
 
-bool __thiscall Vector2__operator_ne(Vector2 *self,Vector2 *arg1)
+bool __thiscall Vector2__operator_ne(Vector2 *self, Vector2 *arg1)
 
 {
   bool bVar1;
-  
+
   bVar1 = true;
   if (*(float *)arg1 == *(float *)self) {
     bVar1 = *(float *)(arg1 + 4) != *(float *)(self + 4);
@@ -369,7 +369,7 @@ bool __thiscall Vector2__operator_ne(Vector2 *self,Vector2 *arg1)
  */
 /* Vector2__operator float*() */
 
-float * __thiscall Vector2__operator_cast_to_float(Vector2 *self)
+float *__thiscall Vector2__operator_cast_to_float(Vector2 *self)
 
 {
   return (float *)self;
@@ -384,7 +384,7 @@ float * __thiscall Vector2__operator_cast_to_float(Vector2 *self)
  */
 /* Vector2__operator float const*() const */
 
-float * __thiscall Vector2__operator_cast_to_float(Vector2 *self)
+float *__thiscall Vector2__operator_cast_to_float(Vector2 *self)
 
 {
   return (float *)self;
@@ -399,7 +399,7 @@ float * __thiscall Vector2__operator_cast_to_float(Vector2 *self)
  */
 /* Vector2__operator_index__005be370(int) */
 
-Vector2 * __thiscall Vector2__operator_index__005be370(Vector2 *self,int arg1)
+Vector2 *__thiscall Vector2__operator_index__005be370(Vector2 *self, int arg1)
 
 {
   return self + (long)arg1 * 4;
@@ -414,7 +414,7 @@ Vector2 * __thiscall Vector2__operator_index__005be370(Vector2 *self,int arg1)
  */
 /* Vector2__operator_index__005be370(int) const */
 
-Vector2 * __thiscall Vector2__operator_index__005be370(Vector2 *self,int arg1)
+Vector2 *__thiscall Vector2__operator_index__005be370(Vector2 *self, int arg1)
 
 {
   return self + (long)arg1 * 4;

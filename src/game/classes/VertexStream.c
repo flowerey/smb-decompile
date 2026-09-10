@@ -38,9 +38,9 @@ void __thiscall VertexStream__VertexStream__005a6810(VertexStream *self)
 
 {
   void *in_RSI;
-  
+
   *(uint8_t ***)self = &PTR__BaseResource_005dbe30;
-  BaseResource__operator_delete((BaseResource *)self,in_RSI);
+  BaseResource__operator_delete((BaseResource *)self, in_RSI);
   return;
 }
 
@@ -58,20 +58,20 @@ void __thiscall VertexStream__RemoveRef(VertexStream *self)
 {
   VertexStream VVar1;
   VertexStream VVar2;
-  
+
   VVar1 = self[0xc];
   if (VVar1 != (VertexStream)0x0) {
     VVar2 = (VertexStream)0x0;
     do {
       if (*(BaseResource **)(self + (ulong)(byte)VVar2 * 8 + 0x20) != (BaseResource *)0x0) {
-        BaseResource__Release(*(BaseResource **)(self + (ulong)(byte)VVar2 * 8 + 0x20),0);
+        BaseResource__Release(*(BaseResource **)(self + (ulong)(byte)VVar2 * 8 + 0x20), 0);
         VVar1 = self[0xc];
       }
       VVar2 = (VertexStream)((char)VVar2 + 1);
     } while ((byte)VVar2 < (byte)VVar1);
   }
   if (*(BaseResource **)(self + 0xa0) != (BaseResource *)0x0) {
-    BaseResource__Release(*(BaseResource **)(self + 0xa0),0);
+    BaseResource__Release(*(BaseResource **)(self + 0xa0), 0);
   }
   BaseResource__RemoveRef((BaseResource *)self);
   return;
@@ -91,7 +91,7 @@ void __thiscall VertexStream__AddRef(VertexStream *self)
 {
   ulong uVar1;
   VertexStream VVar2;
-  
+
   if (self[0xc] != (VertexStream)0x0) {
     VVar2 = (VertexStream)0x0;
     do {
@@ -125,7 +125,7 @@ void __thiscall VertexStream__VertexStream__005a6980(VertexStream *self)
   VertexStream *pVVar5;
   bool bVar6;
   ulong uVar4;
-  
+
   pVVar5 = self + 0x20;
   *(uint32_t *)(self + 8) = 1;
   *(uint8_t ***)self = &PTR__VertexStream_005dded0;
@@ -142,8 +142,7 @@ void __thiscall VertexStream__VertexStream__005a6980(VertexStream *self)
   }
   if (((ulong)pVVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pVVar5 = 0;
     pVVar5 = pVVar5 + 2;
     uVar3 = iVar2 - 2;
@@ -182,10 +181,9 @@ void __thiscall VertexStream__VertexStream__005a6980(VertexStream *self)
 /* VertexStream__VertexStream__005a6980(unsigned char, unsigned int, unsigned int, tagDrawType,
    VertexBuffer**, VertexDeclaration*) */
 
-void __thiscall
-VertexStream__VertexStream__005a6980
-          (VertexStream *self,VertexStream arg1,uint32_t arg2,uint32_t arg3,
-          uint32_t arg5,long arg6,BaseResource *arg7)
+void __thiscall VertexStream__VertexStream__005a6980(VertexStream *self, VertexStream arg1,
+                                                     uint32_t arg2, uint32_t arg3, uint32_t arg5,
+                                                     long arg6, BaseResource *arg7)
 
 {
   BaseResource *pBVar1;
@@ -199,7 +197,7 @@ VertexStream__VertexStream__005a6980
   bool bVar9;
   VertexStream VVar10;
   ulong uVar6;
-  
+
   *(uint32_t *)(self + 0x10) = arg2;
   *(uint32_t *)(self + 8) = 1;
   *(uint8_t ***)self = &PTR__VertexStream_005dded0;
@@ -219,8 +217,7 @@ VertexStream__VertexStream__005a6980
   }
   if (((ulong)pVVar8 & 2) == 0) {
     uVar5 = (uint)uVar6;
-  }
-  else {
+  } else {
     *(uint16_t *)pVVar8 = 0;
     pVVar8 = pVVar8 + 2;
     uVar5 = iVar4 - 2;
@@ -253,8 +250,8 @@ VertexStream__VertexStream__005a6980
       this_00 = *(BaseResource **)(self + lVar7 + 0x20);
       if (pBVar1 != this_00) {
         if (this_00 != (BaseResource *)0x0) {
-                    /* try { // try from 005a6b24 to 005a6b9c has its CatchHandler @ 005a6be8 */
-          BaseResource__Release(this_00,0);
+          /* try { // try from 005a6b24 to 005a6b9c has its CatchHandler @ 005a6be8 */
+          BaseResource__Release(this_00, 0);
         }
         *(BaseResource **)(self + lVar7 + 0x20) = pBVar1;
         if (pBVar1 != (BaseResource *)0x0) {
@@ -333,7 +330,7 @@ VertexStream__VertexStream__005a6980
   pBVar1 = *(BaseResource **)(self + 0xa0);
   if (arg7 != pBVar1) {
     if (pBVar1 != (BaseResource *)0x0) {
-      BaseResource__Release(pBVar1,0);
+      BaseResource__Release(pBVar1, 0);
     }
     *(BaseResource **)(self + 0xa0) = arg7;
     if (arg7 != (BaseResource *)0x0) {
@@ -352,16 +349,15 @@ VertexStream__VertexStream__005a6980
  */
 /* VertexStream__SetVertexBuffer(unsigned char, VertexBuffer*) */
 
-void __thiscall
-VertexStream__SetVertexBuffer(VertexStream *self,uchar arg1,VertexBuffer *arg2)
+void __thiscall VertexStream__SetVertexBuffer(VertexStream *self, uchar arg1, VertexBuffer *arg2)
 
 {
   BaseResource *this_00;
-  
+
   this_00 = *(BaseResource **)(self + (ulong)arg1 * 8 + 0x20);
   if (this_00 != (BaseResource *)arg2) {
     if (this_00 != (BaseResource *)0x0) {
-      BaseResource__Release(this_00,0);
+      BaseResource__Release(this_00, 0);
     }
     *(VertexBuffer **)(self + (ulong)arg1 * 8 + 0x20) = arg2;
     if (arg2 != (VertexBuffer *)0x0) {
@@ -429,20 +425,20 @@ VertexStream__SetVertexBuffer(VertexStream *self,uchar arg1,VertexBuffer *arg2)
  */
 /* VertexStream__SetVertexDeclaration(VertexDeclaration*) */
 
-void __thiscall VertexStream__SetVertexDeclaration(VertexStream *self,VertexDeclaration *arg1)
+void __thiscall VertexStream__SetVertexDeclaration(VertexStream *self, VertexDeclaration *arg1)
 
 {
   BaseResource *this_00;
-  
+
   this_00 = *(BaseResource **)(self + 0xa0);
   if (this_00 != (BaseResource *)arg1) {
     if (this_00 != (BaseResource *)0x0) {
-      BaseResource__Release(this_00,0);
+      BaseResource__Release(this_00, 0);
     }
     *(VertexDeclaration **)(self + 0xa0) = arg1;
     if (arg1 != (VertexDeclaration *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x005a6d50. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+      /* WARNING: Could not recover jumptable at 0x005a6d50. Too many branches */
+      /* WARNING: Treating indirect jump as call */
       (**(code **)(*(long *)arg1 + 0x10))(arg1);
       return;
     }

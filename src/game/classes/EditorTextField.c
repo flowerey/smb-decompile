@@ -95,12 +95,12 @@ void EditorTextField__UnSelectedClick(void)
   long *plVar1;
   uint64_t in_RSI;
   long in_RDI;
-  
-  plVar1 = (long *)FlashEditableTextField__GetUITextField
-                             (*(FlashEditableTextField **)(in_RDI + 0x50));
-                    /* WARNING: Could not recover jumptable at 0x0049e53b. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (**(code **)(*plVar1 + 0x38))(plVar1,in_RSI,*(code **)(*plVar1 + 0x38));
+
+  plVar1 =
+      (long *)FlashEditableTextField__GetUITextField(*(FlashEditableTextField **)(in_RDI + 0x50));
+  /* WARNING: Could not recover jumptable at 0x0049e53b. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (**(code **)(*plVar1 + 0x38))(plVar1, in_RSI, *(code **)(*plVar1 + 0x38));
   return;
 }
 
@@ -119,12 +119,12 @@ void EditorTextField__SetSelectedState(void)
   long *plVar1;
   uint64_t in_RSI;
   long in_RDI;
-  
-  plVar1 = (long *)FlashEditableTextField__GetUITextField
-                             (*(FlashEditableTextField **)(in_RDI + 0x50));
-                    /* WARNING: Could not recover jumptable at 0x0049e55b. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (**(code **)(*plVar1 + 0x30))(plVar1,in_RSI,*(code **)(*plVar1 + 0x30));
+
+  plVar1 =
+      (long *)FlashEditableTextField__GetUITextField(*(FlashEditableTextField **)(in_RDI + 0x50));
+  /* WARNING: Could not recover jumptable at 0x0049e55b. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (**(code **)(*plVar1 + 0x30))(plVar1, in_RSI, *(code **)(*plVar1 + 0x30));
   return;
 }
 
@@ -143,13 +143,13 @@ void EditorTextField__Update(void)
   long *plVar1;
   uint64_t in_RSI;
   EditorButton *in_RDI;
-  
+
   EditorButton__Update(in_RDI);
-  plVar1 = (long *)FlashEditableTextField__GetUITextField
-                             (*(FlashEditableTextField **)(in_RDI + 0x50));
-                    /* WARNING: Could not recover jumptable at 0x004a293d. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (**(code **)(*plVar1 + 0x10))(plVar1,in_RSI,*(code **)(*plVar1 + 0x10));
+  plVar1 =
+      (long *)FlashEditableTextField__GetUITextField(*(FlashEditableTextField **)(in_RDI + 0x50));
+  /* WARNING: Could not recover jumptable at 0x004a293d. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (**(code **)(*plVar1 + 0x10))(plVar1, in_RSI, *(code **)(*plVar1 + 0x10));
   return;
 }
 
@@ -162,13 +162,13 @@ void EditorTextField__Update(void)
  */
 /* EditorTextField__EditorTextField__004a2990(FlashLibraryInstance*, FlashLibraryInstance*) */
 
-void __thiscall
-EditorTextField__EditorTextField__004a2990
-          (EditorTextField *self,FlashLibraryInstance *arg1,FlashLibraryInstance *arg2)
+void __thiscall EditorTextField__EditorTextField__004a2990(EditorTextField *self,
+                                                           FlashLibraryInstance *arg1,
+                                                           FlashLibraryInstance *arg2)
 
 {
   uint32_t uVar1;
-  
+
   *(uint8_t ***)self = &PTR__EditorButton_005c4390;
   *(FlashLibraryInstance **)(self + 8) = arg2;
   *(FlashLibraryInstance **)(self + 0x10) = arg1;
@@ -196,7 +196,7 @@ EditorTextField__EditorTextField__004a2990
  */
 /* EditorTextField__SetTextField(FlashEditableTextField*) */
 
-void __thiscall EditorTextField__SetTextField(EditorTextField *self,FlashEditableTextField *arg1)
+void __thiscall EditorTextField__SetTextField(EditorTextField *self, FlashEditableTextField *arg1)
 
 {
   *(FlashEditableTextField **)(self + 0x50) = arg1;

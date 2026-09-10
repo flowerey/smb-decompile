@@ -18,9 +18,8 @@
  */
 /* TResourceCreator__AddResourceCreationFunction(void (*)(void*), void*) */
 
-void __thiscall
-TResourceCreator__AddResourceCreationFunction
-          (TResourceCreator *self,_func_void_void_ptr *arg1,void *arg2)
+void __thiscall TResourceCreator__AddResourceCreationFunction(TResourceCreator *self,
+                                                              _func_void_void_ptr *arg1, void *arg2)
 
 {
   int iVar1;
@@ -36,7 +35,7 @@ TResourceCreator__AddResourceCreationFunction
   uint64_t *puVar11;
   bool bVar12;
   byte bVar13;
-  
+
   bVar13 = 0;
   if (*(int *)(self + 0x48) == -0x5eef3582) {
     uVar3 = *(ushort *)(self + 0x28);
@@ -57,7 +56,7 @@ TResourceCreator__AddResourceCreationFunction
           if (uVar10 <= *(ulong *)((long)pvVar2 + -0x10)) {
             uVar7 = uVar10;
           }
-          memcpy(pvVar5,pvVar2,uVar7);
+          memcpy(pvVar5, pvVar2, uVar7);
           free(*(void **)((long)pvVar2 + -8));
         }
       }
@@ -70,26 +69,28 @@ TResourceCreator__AddResourceCreationFunction
         uVar10 = (ulong)uVar8 * 2;
         pvVar6 = malloc(uVar7 + 0x10 + uVar10);
         if (pvVar6 != (void *)0x0) {
-          pvVar5 = (void *)((long)pvVar6 + 0x10U + (uVar7 - ((long)pvVar6 + 0x10U) % uVar7) % uVar7)
-          ;
+          pvVar5 =
+              (void *)((long)pvVar6 + 0x10U + (uVar7 - ((long)pvVar6 + 0x10U) % uVar7) % uVar7);
           *(ulong *)((long)pvVar5 + -0x10) = uVar10;
           *(void **)((long)pvVar5 + -8) = pvVar6;
           uVar7 = *(ulong *)((long)pvVar2 + -0x10);
           if (uVar10 <= *(ulong *)((long)pvVar2 + -0x10)) {
             uVar7 = uVar10;
           }
-          memcpy(pvVar5,pvVar2,uVar7);
+          memcpy(pvVar5, pvVar2, uVar7);
           free(*(void **)((long)pvVar2 + -8));
           uVar8 = *(ushort *)(self + 0x2a);
         }
         uVar3 = *(ushort *)(self + 0x28);
         *(void **)(self + 0x40) = pvVar5;
-        if (uVar8 <= uVar3) goto LAB_005991ba;
-        while( true ) {
+        if (uVar8 <= uVar3)
+          goto LAB_005991ba;
+        while (true) {
           uVar10 = (ulong)uVar3;
           uVar3 = uVar3 + 1;
           *(uint16_t *)((long)pvVar5 + uVar10 * 2) = 0xffff;
-          if (uVar8 <= uVar3) break;
+          if (uVar8 <= uVar3)
+            break;
           pvVar5 = *(void **)(self + 0x40);
         }
       }
@@ -97,15 +98,14 @@ TResourceCreator__AddResourceCreationFunction
       uVar3 = *(ushort *)(self + 0x28);
       goto joined_r0x0059935f;
     }
-  }
-  else {
+  } else {
     uVar10 = (ulong)(byte)self[0x2c];
     *(uint32_t *)(self + 0x30) = 0;
     pvVar5 = malloc(uVar10 + 0x88);
     puVar11 = (uint64_t *)0x0;
     if (pvVar5 != (void *)0x0) {
-      puVar11 = (uint64_t *)
-                ((long)pvVar5 + 0x10U + (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
+      puVar11 =
+          (uint64_t *)((long)pvVar5 + 0x10U + (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
       puVar11[-2] = 0x78;
       puVar11[-1] = pvVar5;
     }
@@ -157,7 +157,8 @@ joined_r0x0059935f:
     uVar8 = *puVar9;
     while (uVar8 != 0xffff) {
       puVar9 = puVar9 + 1;
-      if (sVar4 == *(short *)(self + 0x2a)) goto LAB_005991c4;
+      if (sVar4 == *(short *)(self + 0x2a))
+        goto LAB_005991c4;
       sVar4 = sVar4 + 1;
       uVar8 = *puVar9;
     }
@@ -182,9 +183,9 @@ LAB_005991c4:
  */
 /* TResourceCreator__RemoveResourceCreationFunction(void (*)(void*), void*) */
 
-void __thiscall
-TResourceCreator__RemoveResourceCreationFunction
-          (TResourceCreator *self,_func_void_void_ptr *arg1,void *arg2)
+void __thiscall TResourceCreator__RemoveResourceCreationFunction(TResourceCreator *self,
+                                                                 _func_void_void_ptr *arg1,
+                                                                 void *arg2)
 
 {
   uint64_t *puVar1;
@@ -198,7 +199,7 @@ TResourceCreator__RemoveResourceCreationFunction
   uint uVar9;
   ushort uVar10;
   long *plVar11;
-  
+
   uVar8 = *(ushort *)(self + 0x28);
   uVar9 = (uint)uVar8;
   if (_bBulkDeleteResources != 0) {
@@ -208,14 +209,14 @@ TResourceCreator__RemoveResourceCreationFunction
     }
     do {
       while ((plVar11 = (long *)(*(long *)(self + 0x38) + (ulong)(uVar7 & 0xffff) * 0x18),
-             arg1 != (_func_void_void_ptr *)*plVar11 || (arg2 != (void *)plVar11[1]))) {
+              arg1 != (_func_void_void_ptr *)*plVar11 || (arg2 != (void *)plVar11[1]))) {
         uVar7 = uVar7 + 1;
         if ((int)uVar9 <= (int)uVar7) {
           return;
         }
       }
       *(uint32_t *)(plVar11 + 2) = 1;
-      uVar9 = (uint)*(ushort *)(self + 0x28);
+      uVar9 = (uint) * (ushort *)(self + 0x28);
       uVar7 = uVar7 + 1;
     } while ((int)uVar7 < (int)uVar9);
     return;
@@ -230,14 +231,15 @@ TResourceCreator__RemoveResourceCreationFunction
         if ((uVar9 + 1 < (uint)uVar8) && ((int)uVar9 < (int)(uVar8 - 1))) {
           lVar6 = (ulong)uVar10 * 0x18;
           uVar7 = uVar9;
-          while( true ) {
+          while (true) {
             puVar1 = (uint64_t *)((long)plVar11 + lVar6);
             uVar7 = uVar7 + 1;
             *puVar1 = *(uint64_t *)((long)plVar11 + lVar6 + 0x18);
             puVar1[1] = *(uint64_t *)((long)plVar11 + lVar6 + 0x20);
             puVar1[2] = *(uint64_t *)((long)plVar11 + lVar6 + 0x28);
             uVar8 = *(ushort *)(self + 0x28);
-            if ((int)(uVar8 - 1) <= (int)uVar7) break;
+            if ((int)(uVar8 - 1) <= (int)uVar7)
+              break;
             plVar11 = *(long **)(self + 0x38);
             lVar6 = lVar6 + 0x18;
           }
@@ -250,8 +252,7 @@ TResourceCreator__RemoveResourceCreationFunction
             if (uVar9 == uVar3) {
               *puVar2 = 0xffff;
               uVar10 = *(ushort *)(self + 0x2a);
-            }
-            else if ((uVar9 < uVar3) && ((ushort)(uVar3 - 1) < 0xfffe)) {
+            } else if ((uVar9 < uVar3) && ((ushort)(uVar3 - 1) < 0xfffe)) {
               *puVar2 = uVar3 - 1;
               uVar10 = *(ushort *)(self + 0x2a);
             }
@@ -282,9 +283,8 @@ TResourceCreator__RemoveResourceCreationFunction
  */
 /* TResourceCreator__AddResourceDestroyFunction(void (*)(void*), void*) */
 
-void __thiscall
-TResourceCreator__AddResourceDestroyFunction
-          (TResourceCreator *self,_func_void_void_ptr *arg1,void *arg2)
+void __thiscall TResourceCreator__AddResourceDestroyFunction(TResourceCreator *self,
+                                                             _func_void_void_ptr *arg1, void *arg2)
 
 {
   int iVar1;
@@ -300,7 +300,7 @@ TResourceCreator__AddResourceDestroyFunction
   uint64_t *puVar11;
   bool bVar12;
   byte bVar13;
-  
+
   bVar13 = 0;
   if (*(int *)(self + 0x98) == -0x5eef3582) {
     uVar3 = *(ushort *)(self + 0x78);
@@ -321,7 +321,7 @@ TResourceCreator__AddResourceDestroyFunction
           if (uVar10 <= *(ulong *)((long)pvVar2 + -0x10)) {
             uVar7 = uVar10;
           }
-          memcpy(pvVar5,pvVar2,uVar7);
+          memcpy(pvVar5, pvVar2, uVar7);
           free(*(void **)((long)pvVar2 + -8));
         }
       }
@@ -334,26 +334,28 @@ TResourceCreator__AddResourceDestroyFunction
         uVar10 = (ulong)uVar8 * 2;
         pvVar6 = malloc(uVar7 + 0x10 + uVar10);
         if (pvVar6 != (void *)0x0) {
-          pvVar5 = (void *)((long)pvVar6 + 0x10U + (uVar7 - ((long)pvVar6 + 0x10U) % uVar7) % uVar7)
-          ;
+          pvVar5 =
+              (void *)((long)pvVar6 + 0x10U + (uVar7 - ((long)pvVar6 + 0x10U) % uVar7) % uVar7);
           *(ulong *)((long)pvVar5 + -0x10) = uVar10;
           *(void **)((long)pvVar5 + -8) = pvVar6;
           uVar7 = *(ulong *)((long)pvVar2 + -0x10);
           if (uVar10 <= *(ulong *)((long)pvVar2 + -0x10)) {
             uVar7 = uVar10;
           }
-          memcpy(pvVar5,pvVar2,uVar7);
+          memcpy(pvVar5, pvVar2, uVar7);
           free(*(void **)((long)pvVar2 + -8));
           uVar8 = *(ushort *)(self + 0x7a);
         }
         uVar3 = *(ushort *)(self + 0x78);
         *(void **)(self + 0x90) = pvVar5;
-        if (uVar8 <= uVar3) goto LAB_00599699;
-        while( true ) {
+        if (uVar8 <= uVar3)
+          goto LAB_00599699;
+        while (true) {
           uVar10 = (ulong)uVar3;
           uVar3 = uVar3 + 1;
           *(uint16_t *)((long)pvVar5 + uVar10 * 2) = 0xffff;
-          if (uVar8 <= uVar3) break;
+          if (uVar8 <= uVar3)
+            break;
           pvVar5 = *(void **)(self + 0x90);
         }
       }
@@ -361,15 +363,14 @@ TResourceCreator__AddResourceDestroyFunction
       uVar3 = *(ushort *)(self + 0x78);
       goto joined_r0x00599855;
     }
-  }
-  else {
+  } else {
     uVar10 = (ulong)(byte)self[0x7c];
     *(uint32_t *)(self + 0x80) = 0;
     pvVar5 = malloc(uVar10 + 0x88);
     puVar11 = (uint64_t *)0x0;
     if (pvVar5 != (void *)0x0) {
-      puVar11 = (uint64_t *)
-                ((long)pvVar5 + 0x10U + (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
+      puVar11 =
+          (uint64_t *)((long)pvVar5 + 0x10U + (uVar10 - ((long)pvVar5 + 0x10U) % uVar10) % uVar10);
       puVar11[-2] = 0x78;
       puVar11[-1] = pvVar5;
     }
@@ -421,7 +422,8 @@ joined_r0x00599855:
     uVar8 = *puVar9;
     while (uVar8 != 0xffff) {
       puVar9 = puVar9 + 1;
-      if (sVar4 == *(short *)(self + 0x7a)) goto LAB_005996a6;
+      if (sVar4 == *(short *)(self + 0x7a))
+        goto LAB_005996a6;
       sVar4 = sVar4 + 1;
       uVar8 = *puVar9;
     }
@@ -446,9 +448,9 @@ LAB_005996a6:
  */
 /* TResourceCreator__RemoveResourceDestroyFunction(void (*)(void*), void*) */
 
-void __thiscall
-TResourceCreator__RemoveResourceDestroyFunction
-          (TResourceCreator *self,_func_void_void_ptr *arg1,void *arg2)
+void __thiscall TResourceCreator__RemoveResourceDestroyFunction(TResourceCreator *self,
+                                                                _func_void_void_ptr *arg1,
+                                                                void *arg2)
 
 {
   uint64_t *puVar1;
@@ -462,7 +464,7 @@ TResourceCreator__RemoveResourceDestroyFunction
   uint uVar9;
   ushort uVar10;
   long *plVar11;
-  
+
   uVar8 = *(ushort *)(self + 0x78);
   uVar9 = (uint)uVar8;
   if (_bBulkDeleteResources != 0) {
@@ -472,14 +474,14 @@ TResourceCreator__RemoveResourceDestroyFunction
     }
     do {
       while ((plVar11 = (long *)(*(long *)(self + 0x88) + (ulong)(uVar7 & 0xffff) * 0x18),
-             arg1 != (_func_void_void_ptr *)*plVar11 || (arg2 != (void *)plVar11[1]))) {
+              arg1 != (_func_void_void_ptr *)*plVar11 || (arg2 != (void *)plVar11[1]))) {
         uVar7 = uVar7 + 1;
         if ((int)uVar9 <= (int)uVar7) {
           return;
         }
       }
       *(uint32_t *)(plVar11 + 2) = 1;
-      uVar9 = (uint)*(ushort *)(self + 0x78);
+      uVar9 = (uint) * (ushort *)(self + 0x78);
       uVar7 = uVar7 + 1;
     } while ((int)uVar7 < (int)uVar9);
     return;
@@ -494,14 +496,15 @@ TResourceCreator__RemoveResourceDestroyFunction
         if ((uVar9 + 1 < (uint)uVar8) && ((int)uVar9 < (int)(uVar8 - 1))) {
           lVar6 = (ulong)uVar10 * 0x18;
           uVar7 = uVar9;
-          while( true ) {
+          while (true) {
             puVar1 = (uint64_t *)((long)plVar11 + lVar6);
             uVar7 = uVar7 + 1;
             *puVar1 = *(uint64_t *)((long)plVar11 + lVar6 + 0x18);
             puVar1[1] = *(uint64_t *)((long)plVar11 + lVar6 + 0x20);
             puVar1[2] = *(uint64_t *)((long)plVar11 + lVar6 + 0x28);
             uVar8 = *(ushort *)(self + 0x78);
-            if ((int)(uVar8 - 1) <= (int)uVar7) break;
+            if ((int)(uVar8 - 1) <= (int)uVar7)
+              break;
             plVar11 = *(long **)(self + 0x88);
             lVar6 = lVar6 + 0x18;
           }
@@ -514,8 +517,7 @@ TResourceCreator__RemoveResourceDestroyFunction
             if (uVar9 == uVar3) {
               *puVar2 = 0xffff;
               uVar10 = *(ushort *)(self + 0x7a);
-            }
-            else if ((uVar9 < uVar3) && ((ushort)(uVar3 - 1) < 0xfffe)) {
+            } else if ((uVar9 < uVar3) && ((ushort)(uVar3 - 1) < 0xfffe)) {
               *puVar2 = uVar3 - 1;
               uVar10 = *(ushort *)(self + 0x7a);
             }
@@ -552,7 +554,7 @@ void __thiscall TResourceCreator__RecreateResources(TResourceCreator *self)
   uint64_t *puVar1;
   ulong uVar2;
   ushort uVar3;
-  
+
   if (*(short *)(self + 0x28) != 0) {
     uVar3 = 0;
     do {
@@ -591,7 +593,7 @@ void __thiscall TResourceCreator__DestroyResources(TResourceCreator *self)
   uint uVar11;
   ushort uVar12;
   ushort uVar13;
-  
+
   _bBulkDeleteResources = 1;
   Loader__WaitAll();
   uVar11 = 0;
@@ -605,35 +607,36 @@ void __thiscall TResourceCreator__DestroyResources(TResourceCreator *self)
     uVar11 = uVar10;
   } while (uVar10 != 0xffffffff);
   do {
-    uVar11 = (uint)*(ushort *)(self + 0x78);
-LAB_00599b68:
+    uVar11 = (uint) * (ushort *)(self + 0x78);
+  LAB_00599b68:
     if (uVar11 != 0) {
       lVar8 = *(long *)(self + 0x88);
       uVar10 = 0;
       if (*(int *)(lVar8 + 0x10) == 1) {
         uVar6 = 1;
         uVar10 = 0;
-      }
-      else {
+      } else {
         do {
           uVar6 = uVar10;
           uVar10 = uVar6 + 1;
-          if ((int)uVar11 <= (int)uVar10) goto LAB_00599b9f;
+          if ((int)uVar11 <= (int)uVar10)
+            goto LAB_00599b9f;
         } while (*(int *)(lVar8 + 0x10 + (ulong)(ushort)uVar10 * 0x18) != 1);
         uVar6 = uVar6 + 2;
       }
       if ((uVar6 < uVar11) && ((int)uVar10 < (int)(uVar11 - 1))) {
         lVar9 = (long)(int)uVar10 * 0x18;
         uVar6 = uVar10;
-        while( true ) {
+        while (true) {
           puVar1 = (uint64_t *)(lVar8 + lVar9);
           lVar9 = lVar9 + 0x18;
           uVar6 = uVar6 + 1;
           *puVar1 = *(uint64_t *)(lVar8 + lVar9);
           puVar1[1] = *(uint64_t *)(lVar8 + 8 + lVar9);
           puVar1[2] = *(uint64_t *)(lVar8 + 0x10 + lVar9);
-          uVar11 = (uint)*(ushort *)(self + 0x78);
-          if ((int)(*(ushort *)(self + 0x78) - 1) <= (int)uVar6) break;
+          uVar11 = (uint) * (ushort *)(self + 0x78);
+          if ((int)(*(ushort *)(self + 0x78) - 1) <= (int)uVar6)
+            break;
           lVar8 = *(long *)(self + 0x88);
         }
       }
@@ -641,14 +644,16 @@ LAB_00599b68:
       if ((*(int *)(self + 0x80) == 1) && (uVar13 = *(ushort *)(self + 0x7a), uVar13 != 0)) {
         uVar12 = 0;
         do {
-          while( true ) {
+          while (true) {
             puVar2 = (ushort *)(*(long *)(self + 0x90) + (ulong)uVar12 * 2);
             uVar3 = *puVar2;
-            if (uVar3 != uVar10) break;
+            if (uVar3 != uVar10)
+              break;
             *puVar2 = 0xffff;
             uVar13 = *(ushort *)(self + 0x7a);
             uVar12 = uVar12 + 1;
-            if (uVar13 <= uVar12) goto LAB_00599ce6;
+            if (uVar13 <= uVar12)
+              goto LAB_00599ce6;
           }
           if ((uVar10 < uVar3) && ((ushort)(uVar3 - 1) < 0xfffe)) {
             *puVar2 = uVar3 - 1;
@@ -656,7 +661,7 @@ LAB_00599b68:
           }
           uVar12 = uVar12 + 1;
         } while (uVar12 < uVar13);
-LAB_00599ce6:
+      LAB_00599ce6:
         sVar5 = *(short *)(self + 0x78);
       }
       uVar13 = *(ushort *)(self + 0x28);
@@ -664,19 +669,21 @@ LAB_00599ce6:
       uVar12 = sVar5 + -1 + (ushort)(sVar5 == 0);
       uVar11 = (uint)uVar12;
       *(ushort *)(self + 0x78) = uVar12;
-      if (uVar13 != 0) goto LAB_00599c53;
-LAB_00599bae:
+      if (uVar13 != 0)
+        goto LAB_00599c53;
+    LAB_00599bae:
       if (!bVar4) {
         _bBulkDeleteResources = 0;
         return;
       }
       goto LAB_00599b68;
     }
-LAB_00599b9f:
+  LAB_00599b9f:
     bVar4 = false;
     uVar13 = *(ushort *)(self + 0x28);
-    if (uVar13 == 0) goto LAB_00599bae;
-LAB_00599c53:
+    if (uVar13 == 0)
+      goto LAB_00599bae;
+  LAB_00599c53:
     uVar10 = (uint)uVar13;
     lVar8 = *(long *)(self + 0x38);
     if (*(int *)(lVar8 + 0x10) != 1) {
@@ -691,11 +698,11 @@ LAB_00599c53:
     }
     uVar7 = 1;
     uVar6 = 0;
-LAB_00599d07:
+  LAB_00599d07:
     if ((uVar7 < uVar10) && ((int)uVar6 < (int)(uVar10 - 1))) {
       lVar9 = (long)(int)uVar6 * 0x18;
       uVar11 = uVar6;
-      while( true ) {
+      while (true) {
         puVar1 = (uint64_t *)(lVar8 + lVar9);
         lVar9 = lVar9 + 0x18;
         uVar11 = uVar11 + 1;
@@ -703,7 +710,8 @@ LAB_00599d07:
         puVar1[1] = *(uint64_t *)(lVar8 + 8 + lVar9);
         puVar1[2] = *(uint64_t *)(lVar8 + 0x10 + lVar9);
         uVar13 = *(ushort *)(self + 0x28);
-        if ((int)(uVar13 - 1) <= (int)uVar11) break;
+        if ((int)(uVar13 - 1) <= (int)uVar11)
+          break;
         lVar8 = *(long *)(self + 0x38);
       }
     }
@@ -715,8 +723,7 @@ LAB_00599d07:
         if (uVar3 == uVar6) {
           *puVar2 = 0xffff;
           uVar12 = *(ushort *)(self + 0x2a);
-        }
-        else if ((uVar6 < uVar3) && ((ushort)(uVar3 - 1) < 0xfffe)) {
+        } else if ((uVar6 < uVar3) && ((ushort)(uVar3 - 1) < 0xfffe)) {
           *puVar2 = uVar3 - 1;
           uVar12 = *(ushort *)(self + 0x2a);
         }
@@ -729,7 +736,7 @@ LAB_00599d07:
       sVar5 = uVar13 - 1;
     }
     *(short *)(self + 0x28) = sVar5;
-  } while( true );
+  } while (true);
 }
 
 /* ======================================================================
@@ -745,7 +752,7 @@ void __thiscall TResourceCreator__TResourceCreator(TResourceCreator *self)
 
 {
   int iVar1;
-  
+
   if (*(int *)(self + 0x48) == -0x5eef3582) {
     *(uint32_t *)(self + 0x48) = 0;
     free(*(void **)(*(long *)(self + 0x38) + -8));
@@ -758,8 +765,7 @@ void __thiscall TResourceCreator__TResourceCreator(TResourceCreator *self)
     *(uint16_t *)(self + 0x28) = 0;
     *(uint64_t *)(self + 0x38) = 0;
     *(uint64_t *)(self + 0x40) = 0;
-  }
-  else {
+  } else {
     iVar1 = *(int *)(self + 0x98);
   }
   if (iVar1 == -0x5eef3582) {
@@ -774,7 +780,7 @@ void __thiscall TResourceCreator__TResourceCreator(TResourceCreator *self)
     *(uint64_t *)(self + 0x88) = 0;
     *(uint64_t *)(self + 0x90) = 0;
   }
-                    /* try { // try from 00599de1 to 00599de5 has its CatchHandler @ 00599f45 */
+  /* try { // try from 00599de1 to 00599de5 has its CatchHandler @ 00599f45 */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x50));
   if (*(int *)(self + 0x48) == -0x5eef3582) {
     *(uint32_t *)(self + 0x48) = 0;
@@ -817,7 +823,7 @@ ulong __thiscall TResourceCreator__TResourceCreator__00599f60(TResourceCreator *
   ulong uVar9;
   uint64_t *puVar10;
   ushort uVar11;
-  
+
   CriticalSection__CriticalSection((CriticalSection *)self);
   *(uint16_t *)(self + 0x2a) = 0;
   *(uint16_t *)(self + 0x28) = 0;
@@ -827,7 +833,7 @@ ulong __thiscall TResourceCreator__TResourceCreator__00599f60(TResourceCreator *
   *(uint32_t *)(self + 0x48) = 0;
   self[0x2c] = (TResourceCreator)0x4;
   *(uint32_t *)(self + 0x30) = 0;
-                    /* try { // try from 00599fc2 to 00599fc6 has its CatchHandler @ 0059a410 */
+  /* try { // try from 00599fc2 to 00599fc6 has its CatchHandler @ 0059a410 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x50));
   *(uint16_t *)(self + 0x7a) = 0;
   *(uint16_t *)(self + 0x78) = 0;
@@ -849,8 +855,7 @@ ulong __thiscall TResourceCreator__TResourceCreator__00599f60(TResourceCreator *
     pvVar4 = malloc(uVar7 + 0x28);
     if (pvVar4 == (void *)0x0) {
       *(uint64_t *)(self + 0x38) = 0;
-    }
-    else {
+    } else {
       pvVar5 = (void *)((long)pvVar4 + 0x10U + (uVar7 - ((long)pvVar4 + 0x10U) % uVar7) % uVar7);
       *(uint64_t *)((long)pvVar5 + -0x10) = 0x18;
       *(void **)((long)pvVar5 + -8) = pvVar4;
@@ -859,7 +864,7 @@ ulong __thiscall TResourceCreator__TResourceCreator__00599f60(TResourceCreator *
         if (*(ulong *)((long)pvVar3 + -0x10) < 0x19) {
           sVar8 = *(ulong *)((long)pvVar3 + -0x10);
         }
-        memcpy(pvVar5,pvVar3,sVar8);
+        memcpy(pvVar5, pvVar3, sVar8);
         free(*(void **)((long)pvVar3 + -8));
       }
       *(void **)(self + 0x38) = pvVar5;
@@ -871,8 +876,8 @@ ulong __thiscall TResourceCreator__TResourceCreator__00599f60(TResourceCreator *
         uVar7 = (ulong)uVar11 * 2;
         pvVar5 = malloc(uVar9 + 0x10 + uVar7);
         if (pvVar5 != (void *)0x0) {
-          pvVar3 = (void *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9)
-          ;
+          pvVar3 =
+              (void *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
           *(ulong *)((long)pvVar3 + -0x10) = uVar7;
           *(void **)((long)pvVar3 + -8) = pvVar5;
           if (pvVar4 != (void *)0x0) {
@@ -880,7 +885,7 @@ ulong __thiscall TResourceCreator__TResourceCreator__00599f60(TResourceCreator *
             if (uVar7 <= *(ulong *)((long)pvVar4 + -0x10)) {
               uVar9 = uVar7;
             }
-            memcpy(pvVar3,pvVar4,uVar9);
+            memcpy(pvVar3, pvVar4, uVar9);
             free(*(void **)((long)pvVar4 + -8));
           }
           uVar11 = *(ushort *)(self + 0x2a);
@@ -888,24 +893,24 @@ ulong __thiscall TResourceCreator__TResourceCreator__00599f60(TResourceCreator *
         uVar1 = *(ushort *)(self + 0x28);
         *(void **)(self + 0x40) = pvVar3;
         if (uVar1 < uVar11) {
-          while( true ) {
+          while (true) {
             uVar7 = (ulong)uVar1;
             uVar1 = uVar1 + 1;
             *(uint16_t *)((long)pvVar3 + uVar7 * 2) = 0xffff;
-            if (uVar11 <= uVar1) break;
+            if (uVar11 <= uVar1)
+              break;
             pvVar3 = *(void **)(self + 0x40);
           }
         }
       }
     }
-  }
-  else {
+  } else {
     uVar7 = (ulong)(byte)self[0x2c];
     pvVar3 = malloc(uVar7 + 0x28);
     puVar10 = (uint64_t *)0x0;
     if (pvVar3 != (void *)0x0) {
-      puVar10 = (uint64_t *)
-                ((long)pvVar3 + 0x10U + (uVar7 - ((long)pvVar3 + 0x10U) % uVar7) % uVar7);
+      puVar10 =
+          (uint64_t *)((long)pvVar3 + 0x10U + (uVar7 - ((long)pvVar3 + 0x10U) % uVar7) % uVar7);
       puVar10[-2] = 0x18;
       puVar10[-1] = pvVar3;
     }
@@ -939,12 +944,12 @@ ulong __thiscall TResourceCreator__TResourceCreator__00599f60(TResourceCreator *
       if (*(ulong *)((long)pvVar3 + -0x10) < 0x19) {
         sVar8 = *(ulong *)((long)pvVar3 + -0x10);
       }
-      memcpy(pvVar5,pvVar3,sVar8);
+      memcpy(pvVar5, pvVar3, sVar8);
       free(*(void **)((long)pvVar3 + -8));
     }
     *(void **)(self + 0x88) = pvVar5;
     if (*(uint *)(self + 0x80) != 1) {
-      return (ulong)*(uint *)(self + 0x80);
+      return (ulong) * (uint *)(self + 0x80);
     }
     uVar11 = *(ushort *)(self + 0x7a);
     uVar9 = (ulong)(byte)self[0x7c];
@@ -961,22 +966,23 @@ ulong __thiscall TResourceCreator__TResourceCreator__00599f60(TResourceCreator *
         if (uVar7 <= *(ulong *)((long)pvVar4 + -0x10)) {
           uVar9 = uVar7;
         }
-        memcpy(pvVar3,pvVar4,uVar9);
+        memcpy(pvVar3, pvVar4, uVar9);
         free(*(void **)((long)pvVar4 + -8));
       }
       uVar11 = *(ushort *)(self + 0x7a);
     }
-    uVar7 = (ulong)*(ushort *)(self + 0x78);
+    uVar7 = (ulong) * (ushort *)(self + 0x78);
     *(void **)(self + 0x90) = pvVar3;
     if (uVar11 <= *(ushort *)(self + 0x78)) {
       return uVar7;
     }
-    while( true ) {
+    while (true) {
       uVar9 = uVar7 & 0xffff;
       uVar2 = (int)uVar7 + 1;
       uVar7 = (ulong)uVar2;
       *(uint16_t *)((long)pvVar3 + uVar9 * 2) = 0xffff;
-      if (uVar11 <= (ushort)uVar2) break;
+      if (uVar11 <= (ushort)uVar2)
+        break;
       pvVar3 = *(void **)(self + 0x90);
     }
     return uVar7;

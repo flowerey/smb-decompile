@@ -24,7 +24,7 @@ void __thiscall EditorFormCharacter__Update(EditorFormCharacter *self)
   TKeyboard *this_00;
   ulong uVar1;
   ulong uVar2;
-  
+
   uVar2 = 0xffffffff;
   uVar1 = 0;
   do {
@@ -38,12 +38,11 @@ void __thiscall EditorFormCharacter__Update(EditorFormCharacter *self)
   } while (uVar1 != 0x14);
   *(uint8_t *)(*(long *)(self + 0x158) + 0x4a) = 1;
   if ((int)uVar2 == -1) {
-    FlashAnimationLibrary__SetTextFieldText(*(char **)(self + 0x78),"labeltext1",&DAT_005c2b74 /* R:"None" */);
-  }
-  else {
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(self + 0x78),"labeltext1",
-               (&Update()::strCharacterFriendlyNames)[(int)uVar2]);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(self + 0x78), "labeltext1",
+                                            &DAT_005c2b74 /* R:"None" */);
+  } else {
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(self + 0x78), "labeltext1",
+                                            (&Update()::strCharacterFriendlyNames)[(int)uVar2]);
   }
   if (*(long **)(self + 0x10) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0x10) + 0x48))();
@@ -95,7 +94,7 @@ void __thiscall EditorFormCharacter__Update(EditorFormCharacter *self)
     pCurrentVisibleForm = (EditorFormCharacter *)0x0;
   }
   *(uint32_t *)(self + 0xa8) = 0;
-  TKeyboard__RestoreCallbacks(this_00,(InputCallback **)(self + 0xb0));
+  TKeyboard__RestoreCallbacks(this_00, (InputCallback **)(self + 0xb0));
   TKeyboard__UnLock(Keyboard);
   *(uint32_t *)(self + 0xac) = 0;
   return;
@@ -115,12 +114,12 @@ void __thiscall EditorFormCharacter__EditorFormCharacter__004b8120(EditorFormCha
 {
   uint64_t *puVar1;
   long lVar2;
-  
+
   lVar2 = 0;
   *(uint8_t ***)self = &PTR__EditorFormCharacter_005c4630;
   do {
     if (*(long **)(self + lVar2 + 0xb8) != (long *)0x0) {
-                    /* try { // try from 004b7a18 to 004b7a1a has its CatchHandler @ 004b7c07 */
+      /* try { // try from 004b7a18 to 004b7a1a has its CatchHandler @ 004b7c07 */
       (**(code **)(**(long **)(self + lVar2 + 0xb8) + 8))();
     }
     *(uint64_t *)(self + lVar2 + 0xb8) = 0;
@@ -225,12 +224,12 @@ void __thiscall EditorFormCharacter__EditorFormCharacter__004b8120(EditorFormCha
 {
   uint64_t *puVar1;
   long lVar2;
-  
+
   lVar2 = 0;
   *(uint8_t ***)self = &PTR__EditorFormCharacter_005c4630;
   do {
     if (*(long **)(self + lVar2 + 0xb8) != (long *)0x0) {
-                    /* try { // try from 004b8148 to 004b814a has its CatchHandler @ 004b8338 */
+      /* try { // try from 004b8148 to 004b814a has its CatchHandler @ 004b8338 */
       (**(code **)(**(long **)(self + lVar2 + 0xb8) + 8))();
     }
     *(uint64_t *)(self + lVar2 + 0xb8) = 0;

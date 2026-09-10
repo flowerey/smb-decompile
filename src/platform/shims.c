@@ -1279,7 +1279,7 @@ void SDL_GetKeyboardState(void)
  */
 /* SteamLeaderBoards__SteamLeaderBoards(tagSteamLeaderboardFunc) */
 
-void __thiscall SteamLeaderBoards__SteamLeaderBoards(SteamLeaderBoards *this,uint32_t arg2)
+void __thiscall SteamLeaderBoards__SteamLeaderBoards(SteamLeaderBoards *this, uint32_t arg2)
 
 {
   *(uint32_t *)this = arg2;
@@ -1338,19 +1338,19 @@ void __thiscall SteamLeaderBoards__SteamLeaderBoards__005ba650(SteamLeaderBoards
   *(uint64_t *)(this + 0x40) = 0;
   *(uint8_t ***)(this + 0xd8) = &PTR_Run_005deaf0;
   if (*(long *)(this + 0xe8) != 0) {
-                    /* try { // try from 005ba70f to 005ba713 has its CatchHandler @ 005ba744 */
+    /* try { // try from 005ba70f to 005ba713 has its CatchHandler @ 005ba744 */
     SteamAPI_UnregisterCallResult(this + 0xd8);
     *(uint64_t *)(this + 0xe8) = 0;
   }
   *(uint8_t ***)(this + 0xa8) = &PTR_Run_005deb70;
   if (*(long *)(this + 0xb8) != 0) {
-                    /* try { // try from 005ba72f to 005ba733 has its CatchHandler @ 005ba7e2 */
+    /* try { // try from 005ba72f to 005ba733 has its CatchHandler @ 005ba7e2 */
     SteamAPI_UnregisterCallResult(this + 0xa8);
     *(uint64_t *)(this + 0xb8) = 0;
   }
   *(uint8_t ***)(this + 0x78) = &PTR_Run_005deb30;
   if (*(long *)(this + 0x88) != 0) {
-                    /* try { // try from 005ba6ca to 005ba6ce has its CatchHandler @ 005ba7e4 */
+    /* try { // try from 005ba6ca to 005ba6ce has its CatchHandler @ 005ba7e4 */
     SteamAPI_UnregisterCallResult(this + 0x78);
     *(uint64_t *)(this + 0x88) = 0;
   }

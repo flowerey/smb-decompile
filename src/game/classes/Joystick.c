@@ -28,7 +28,7 @@ void __thiscall Joystick__Joystick(Joystick *self)
   uint uVar4;
   bool bVar6;
   ulong uVar5;
-  
+
   pJVar2 = self + 8;
   *(uint32_t *)self = 0;
   bVar6 = ((ulong)pJVar2 & 1) != 0;
@@ -42,20 +42,20 @@ void __thiscall Joystick__Joystick(Joystick *self)
   *(uint32_t *)(self + 0x20) = 0;
   *(uint32_t *)(self + 0x24) = 0;
   *(uint32_t *)(self + 0x28) = 0;
-  *(uint8_t (*) [16])(self + 0x2c) = (uint8_t  [16])0x0;
+  *(uint8_t (*)[16])(self + 0x2c) = (uint8_t[16])0x0;
   *(uint32_t *)(self + 0xf8) = 0;
   *(uint32_t *)(self + 0xfc) = 0;
-  *(uint8_t (*) [16])(self + 0x3c) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0x4c) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0x5c) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0x6c) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0x7c) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0x8c) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0x9c) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0xac) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0xbc) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0xcc) = (uint8_t  [16])0x0;
-  *(uint8_t (*) [16])(self + 0xdc) = (uint8_t  [16])0x0;
+  *(uint8_t (*)[16])(self + 0x3c) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0x4c) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0x5c) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0x6c) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0x7c) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0x8c) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0x9c) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0xac) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0xbc) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0xcc) = (uint8_t[16])0x0;
+  *(uint8_t (*)[16])(self + 0xdc) = (uint8_t[16])0x0;
   *(uint64_t *)(self + 0x300) = 0;
   if (bVar6) {
     pJVar2 = self + 9;
@@ -65,8 +65,7 @@ void __thiscall Joystick__Joystick(Joystick *self)
   }
   if (((ulong)pJVar2 & 2) == 0) {
     uVar4 = (uint)uVar5;
-  }
-  else {
+  } else {
     *(uint16_t *)pJVar2 = 0;
     pJVar2 = (Joystick *)((long)pJVar2 + 2);
     uVar4 = iVar3 - 2;
@@ -104,8 +103,7 @@ void __thiscall Joystick__Joystick(Joystick *self)
   }
   if (((ulong)pJVar2 & 2) == 0) {
     uVar4 = (uint)uVar5;
-  }
-  else {
+  } else {
     *(uint16_t *)pJVar2 = 0;
     pJVar2 = (Joystick *)((long)pJVar2 + 2);
     uVar4 = iVar3 - 2;
@@ -143,8 +141,7 @@ void __thiscall Joystick__Joystick(Joystick *self)
   }
   if (((ulong)pJVar2 & 2) == 0) {
     uVar4 = (uint)uVar5;
-  }
-  else {
+  } else {
     *(uint16_t *)pJVar2 = 0;
     pJVar2 = pJVar2 + 2;
     uVar4 = iVar3 - 2;
@@ -182,8 +179,7 @@ void __thiscall Joystick__Joystick(Joystick *self)
   }
   if (((ulong)pJVar2 & 2) == 0) {
     uVar4 = (uint)uVar5;
-  }
-  else {
+  } else {
     *(uint16_t *)pJVar2 = 0;
     pJVar2 = pJVar2 + 2;
     uVar4 = iVar3 - 2;
@@ -221,8 +217,7 @@ void __thiscall Joystick__Joystick(Joystick *self)
   }
   if (((ulong)pJVar2 & 2) == 0) {
     uVar4 = (uint)uVar5;
-  }
-  else {
+  } else {
     *(uint16_t *)pJVar2 = 0;
     pJVar2 = pJVar2 + 2;
     uVar4 = iVar3 - 2;
@@ -264,7 +259,7 @@ void __thiscall Joystick__Joystick(Joystick *self)
 void __thiscall Joystick__Joystick__0058b340(Joystick *self)
 
 {
-  iptUnRegisterJoystick(self,self + 8);
+  iptUnRegisterJoystick(self, self + 8);
   return;
 }
 
@@ -277,8 +272,7 @@ void __thiscall Joystick__Joystick__0058b340(Joystick *self)
  */
 /* Joystick__AddButtonCallback(tagJoystickButtons, void (*)(tagButtonProps const*, void*), void*) */
 
-void __thiscall
-Joystick__AddButtonCallback(Joystick *self,int arg2,uint64_t arg3,uint64_t arg4)
+void __thiscall Joystick__AddButtonCallback(Joystick *self, int arg2, uint64_t arg3, uint64_t arg4)
 
 {
   *(uint64_t *)(self + ((long)arg2 + 0x10) * 0x10) = arg3;
@@ -295,8 +289,7 @@ Joystick__AddButtonCallback(Joystick *self,int arg2,uint64_t arg3,uint64_t arg4)
  */
 /* Joystick__AddPOVCallback(tagJoystickPOV, void (*)(tagButtonProps const*, void*), void*) */
 
-void __thiscall
-Joystick__AddPOVCallback(Joystick *self,int arg2,uint64_t arg3,uint64_t arg4)
+void __thiscall Joystick__AddPOVCallback(Joystick *self, int arg2, uint64_t arg3, uint64_t arg4)
 
 {
   *(uint64_t *)(self + ((long)arg2 + 0x28) * 0x10) = arg3;
@@ -313,8 +306,8 @@ Joystick__AddPOVCallback(Joystick *self,int arg2,uint64_t arg3,uint64_t arg4)
  */
 /* Joystick__AddAnyButtonCallback(void (*)(tagButtonProps const*, void*)) */
 
-void __thiscall
-Joystick__AddAnyButtonCallback(Joystick *self,_func_void_tagButtonProps_ptr_void_ptr *arg1)
+void __thiscall Joystick__AddAnyButtonCallback(Joystick *self,
+                                               _func_void_tagButtonProps_ptr_void_ptr *arg1)
 
 {
   *(_func_void_tagButtonProps_ptr_void_ptr **)(self + 0x300) = arg1;
@@ -331,8 +324,8 @@ Joystick__AddAnyButtonCallback(Joystick *self,_func_void_tagButtonProps_ptr_void
 /* WARNING: Type propagation algorithm not settling */
 /* Joystick__BackupCallbacks(InputCallback**, InputCallback**) */
 
-void __thiscall
-Joystick__BackupCallbacks(Joystick *self,InputCallback **arg1,InputCallback **arg2)
+void __thiscall Joystick__BackupCallbacks(Joystick *self, InputCallback **arg1,
+                                          InputCallback **arg2)
 
 {
   uint16_t uVar1;
@@ -350,7 +343,7 @@ Joystick__BackupCallbacks(Joystick *self,InputCallback **arg1,InputCallback **ar
   Joystick *pJVar13;
   bool bVar14;
   byte bVar15;
-  
+
   bVar15 = 0;
   if (arg1 == (InputCallback **)0x0) {
     pJVar12 = self + 0x100;
@@ -394,8 +387,7 @@ Joystick__BackupCallbacks(Joystick *self,InputCallback **arg1,InputCallback **ar
     if (bVar14) {
       pJVar13[lVar5] = pJVar12[lVar5];
     }
-  }
-  else {
+  } else {
     pIVar4 = malloc(0xc0);
     if ((InputCallback *)(self + 0x100) != pIVar4) {
       pIVar9 = (InputCallback *)(self + 0x100);
@@ -418,8 +410,7 @@ Joystick__BackupCallbacks(Joystick *self,InputCallback **arg1,InputCallback **ar
     *(uint64_t *)(self + 0x2e8) = *(uint64_t *)(self + 0x2a8);
     *(uint64_t *)(self + 0x2f0) = *(uint64_t *)(self + 0x2b0);
     *(uint64_t *)(self + 0x2f8) = *(uint64_t *)(self + 0x2b8);
-  }
-  else {
+  } else {
     pIVar4 = malloc(0x40);
     if ((InputCallback *)(self + 0x280) != pIVar4) {
       *(uint64_t *)pIVar4 = *(uint64_t *)(self + 0x280);
@@ -439,15 +430,13 @@ Joystick__BackupCallbacks(Joystick *self,InputCallback **arg1,InputCallback **ar
     self[0x100] = (Joystick)0x0;
     uVar10 = 0xbf;
     iVar7 = 0xbf;
-  }
-  else {
+  } else {
     uVar10 = 0xc0;
     iVar7 = 0xc0;
   }
   if (((ulong)pJVar12 & 2) == 0) {
     uVar8 = (uint)uVar10;
-  }
-  else {
+  } else {
     *(uint16_t *)pJVar12 = 0;
     pJVar12 = pJVar12 + 2;
     uVar8 = iVar7 - 2;
@@ -485,8 +474,7 @@ Joystick__BackupCallbacks(Joystick *self,InputCallback **arg1,InputCallback **ar
   }
   if (((ulong)pJVar13 & 2) == 0) {
     uVar8 = (uint)uVar10;
-  }
-  else {
+  } else {
     *(uint16_t *)pJVar13 = 0;
     pJVar13 = pJVar13 + 2;
     uVar8 = iVar7 - 2;
@@ -524,8 +512,8 @@ Joystick__BackupCallbacks(Joystick *self,InputCallback **arg1,InputCallback **ar
  */
 /* Joystick__RestoreCallbacks(InputCallback**, InputCallback**) */
 
-void __thiscall
-Joystick__RestoreCallbacks(Joystick *self,InputCallback **arg1,InputCallback **arg2)
+void __thiscall Joystick__RestoreCallbacks(Joystick *self, InputCallback **arg1,
+                                           InputCallback **arg2)
 
 {
   InputCallback IVar1;
@@ -542,7 +530,7 @@ Joystick__RestoreCallbacks(Joystick *self,InputCallback **arg1,InputCallback **a
   Joystick *pJVar12;
   bool bVar13;
   byte bVar14;
-  
+
   bVar14 = 0;
   if ((arg1 == (InputCallback **)0x0) || (pIVar9 = *arg1, pIVar9 == (InputCallback *)0x0)) {
     pJVar11 = self + 0x100;
@@ -577,8 +565,7 @@ Joystick__RestoreCallbacks(Joystick *self,InputCallback **arg1,InputCallback **a
     }
     if ((uVar4 & 4) == 0) {
       lVar6 = 0;
-    }
-    else {
+    } else {
       *(uint32_t *)pJVar11 = *(uint32_t *)pJVar10;
       lVar6 = 4;
     }
@@ -621,8 +608,7 @@ Joystick__RestoreCallbacks(Joystick *self,InputCallback **arg1,InputCallback **a
     if (bVar13) {
       *pJVar12 = (Joystick)0x0;
     }
-  }
-  else {
+  } else {
     pIVar8 = (InputCallback *)(self + 0x100);
     if (pIVar9 != pIVar8) {
       bVar13 = ((ulong)pIVar8 & 1) != 0;
@@ -655,8 +641,7 @@ Joystick__RestoreCallbacks(Joystick *self,InputCallback **arg1,InputCallback **a
       }
       if ((uVar4 & 4) == 0) {
         lVar6 = 0;
-      }
-      else {
+      } else {
         *(uint32_t *)pIVar8 = *(uint32_t *)pIVar9;
         lVar6 = 4;
       }
@@ -715,8 +700,7 @@ Joystick__RestoreCallbacks(Joystick *self,InputCallback **arg1,InputCallback **a
       *pJVar11 = (Joystick)0x0;
       return;
     }
-  }
-  else {
+  } else {
     if (pIVar9 != (InputCallback *)(self + 0x280)) {
       *(uint64_t *)(self + 0x280) = *(uint64_t *)pIVar9;
       *(uint64_t *)(self + 0x288) = *(uint64_t *)(pIVar9 + 8);
@@ -753,7 +737,7 @@ void __thiscall Joystick__Reset(Joystick *self)
   Joystick *pJVar5;
   bool bVar6;
   ulong uVar4;
-  
+
   pJVar5 = self + 8;
   uVar4 = 0xf0;
   iVar2 = 0xf0;
@@ -766,8 +750,7 @@ void __thiscall Joystick__Reset(Joystick *self)
   }
   if (((ulong)pJVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pJVar5 = 0;
     pJVar5 = (Joystick *)((long)pJVar5 + 2);
     uVar3 = iVar2 - 2;
@@ -805,8 +788,7 @@ void __thiscall Joystick__Reset(Joystick *self)
   }
   if (((ulong)pJVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pJVar5 = 0;
     pJVar5 = (Joystick *)((long)pJVar5 + 2);
     uVar3 = iVar2 - 2;
@@ -844,8 +826,7 @@ void __thiscall Joystick__Reset(Joystick *self)
   }
   if (((ulong)pJVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pJVar5 = 0;
     pJVar5 = pJVar5 + 2;
     uVar3 = iVar2 - 2;
@@ -883,8 +864,7 @@ void __thiscall Joystick__Reset(Joystick *self)
   }
   if (((ulong)pJVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pJVar5 = 0;
     pJVar5 = pJVar5 + 2;
     uVar3 = iVar2 - 2;
@@ -922,8 +902,7 @@ void __thiscall Joystick__Reset(Joystick *self)
   }
   if (((ulong)pJVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pJVar5 = 0;
     pJVar5 = pJVar5 + 2;
     uVar3 = iVar2 - 2;

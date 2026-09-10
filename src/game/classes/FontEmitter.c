@@ -26,7 +26,7 @@ void __thiscall FontEmitter__Render(FontEmitter *self)
   uint32_t uVar3;
   Matrix4x4 *pMVar4;
   float local_ac;
-  uint32_t local_a8 [4];
+  uint32_t local_a8[4];
   uint32_t local_98;
   uint32_t local_94;
   uint32_t local_88;
@@ -37,32 +37,32 @@ void __thiscall FontEmitter__Render(FontEmitter *self)
   float local_64;
   uint32_t local_58;
   float local_54;
-  Vector2 local_48 [16];
-  Vector2 local_38 [16];
-  Vector2 local_28 [16];
-  
+  Vector2 local_48[16];
+  Vector2 local_38[16];
+  Vector2 local_28[16];
+
   if (*(long *)(self + 0x28) == 0) {
     return;
   }
   if (*(int *)(self + 0x5c) == 1) {
     local_98 = 0;
     local_94 = 0;
-    Vector2__operator_assign((Vector2 *)local_a8,(Vector2 *)&local_98);
+    Vector2__operator_assign((Vector2 *)local_a8, (Vector2 *)&local_98);
     local_ac = DAT_005be6e4 /* R:0.5f */;
-  }
-  else {
+  } else {
     if (*(int *)(self + 0x5c) == 2) {
       local_88 = *(uint32_t *)(self + 0x98);
       local_84 = 0;
-      Vector2__operator_assign((Vector2 *)local_a8,(Vector2 *)&local_88);
+      Vector2__operator_assign((Vector2 *)local_a8, (Vector2 *)&local_88);
       iVar1 = *(int *)(self + 100);
       local_ac = DAT_005be6e4 /* R:0.5f */;
       goto joined_r0x005848de;
     }
     local_ac = DAT_005be6e4 /* R:0.5f */;
-    local_74 = (float)(*(uint *)(self + 0x9c) ^ DAT_005be6f0 /* R:u32=2147483648 */) * DAT_005be6e4 /* R:0.5f */;
+    local_74 = (float)(*(uint *)(self + 0x9c) ^ DAT_005be6f0 /* R:u32=2147483648 */) *
+               DAT_005be6e4 /* R:0.5f */;
     local_78 = DAT_005be6e4 /* R:0.5f */ * *(float *)(self + 0x98);
-    Vector2__operator_assign((Vector2 *)local_a8,(Vector2 *)&local_78);
+    Vector2__operator_assign((Vector2 *)local_a8, (Vector2 *)&local_78);
   }
   iVar1 = *(int *)(self + 100);
 joined_r0x005848de:
@@ -70,33 +70,33 @@ joined_r0x005848de:
     local_a8[0] = 0;
   }
   TGraphics__DeleteMasterPixelStage(Graphics);
-  Vector2__operator_mul__005be200((Vector2 *)&local_68,DAT_005dc108 /* R:1.2999999523162842f */);
+  Vector2__operator_mul__005be200((Vector2 *)&local_68, DAT_005dc108 /* R:1.2999999523162842f */);
   if (*(int *)(self + 0x38) == 1) {
     local_68 = DAT_005dc108 /* R:1.2999999523162842f */ * local_68;
   }
-  TGraphics__SetRenderState(Graphics,'\b',1);
-  TGraphics__SetRenderState(Graphics,'\x05',4);
-  TGraphics__SetRenderState(Graphics,'\x06',5);
+  TGraphics__SetRenderState(Graphics, '\b', 1);
+  TGraphics__SetRenderState(Graphics, '\x05', 4);
+  TGraphics__SetRenderState(Graphics, '\x06', 5);
   TGraphics__ResetPixelStages(Graphics);
   TGraphics__ResetTexCoordGen(Graphics);
-  uVar2 = TGraphics__SetTexture
-                    (Graphics,0xff,(Texture *)**(uint64_t **)(*(long *)(self + 0x20) + 0x58));
+  uVar2 = TGraphics__SetTexture(Graphics, 0xff,
+                                (Texture *)**(uint64_t **)(*(long *)(self + 0x20) + 0x58));
   local_58 = 0;
   local_54 = *(float *)(self + 0x60) * local_64 * local_ac;
-  Vector2__operator_mul__005be200(local_28,local_68);
-  Vector2__operator_plus__005be140(local_38,(Vector2 *)(self + 0x4c));
-  Vector2__operator_minus__005be180(local_48,local_38);
-  pMVar4 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,0);
-  Matrix4x4__Transformation2DRot(pMVar4,(Vector2 *)&local_68,(float *)0x0,local_48);
+  Vector2__operator_mul__005be200(local_28, local_68);
+  Vector2__operator_plus__005be140(local_38, (Vector2 *)(self + 0x4c));
+  Vector2__operator_minus__005be180(local_48, local_38);
+  pMVar4 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 0);
+  Matrix4x4__Transformation2DRot(pMVar4, (Vector2 *)&local_68, (float *)0x0, local_48);
   uVar3 = SamplerRegisterToSource(uVar2);
-  TGraphics__AddPixelStage(Graphics,uVar3,1,1,0,3,3,0xffffffff);
-  TGraphics__SetPixelColorConstant(Graphics,0,self + 0x3c);
-  TGraphics__SetSamplerState(Graphics,uVar2,'\x04',1);
-  TGraphics__SetSamplerState(Graphics,uVar2,'\x03',1);
-  TGraphics__SetRenderState(Graphics,'\a',0);
-  TGraphics__Draw(Graphics,(VertexStream *)**(uint64_t **)(self + 0x68),(IndexBuffer *)0x0);
-  TGraphics__SetSamplerState(Graphics,uVar2,'\x04',1);
-  TGraphics__SetSamplerState(Graphics,uVar2,'\x03',1);
+  TGraphics__AddPixelStage(Graphics, uVar3, 1, 1, 0, 3, 3, 0xffffffff);
+  TGraphics__SetPixelColorConstant(Graphics, 0, self + 0x3c);
+  TGraphics__SetSamplerState(Graphics, uVar2, '\x04', 1);
+  TGraphics__SetSamplerState(Graphics, uVar2, '\x03', 1);
+  TGraphics__SetRenderState(Graphics, '\a', 0);
+  TGraphics__Draw(Graphics, (VertexStream *)**(uint64_t **)(self + 0x68), (IndexBuffer *)0x0);
+  TGraphics__SetSamplerState(Graphics, uVar2, '\x04', 1);
+  TGraphics__SetSamplerState(Graphics, uVar2, '\x03', 1);
   return;
 }
 
@@ -113,15 +113,15 @@ void __thiscall FontEmitter__FontEmitter__00584db0(FontEmitter *self)
 
 {
   uint64_t *__ptr;
-  
+
   *(uint8_t ***)self = &PTR__FontEmitter_005dc0f0;
   if (*(void **)(self + 0x28) != (void *)0x0) {
     free(*(void **)(self + 0x28));
   }
   __ptr = *(uint64_t **)(self + 0x68);
   if ((BaseResource *)*__ptr != (BaseResource *)0x0) {
-                    /* try { // try from 00584d4a to 00584d95 has its CatchHandler @ 00584d9f */
-    BaseResource__Release((BaseResource *)*__ptr,0);
+    /* try { // try from 00584d4a to 00584d95 has its CatchHandler @ 00584d9f */
+    BaseResource__Release((BaseResource *)*__ptr, 0);
     **(uint64_t **)(self + 0x68) = 0;
     __ptr = *(uint64_t **)(self + 0x68);
   }
@@ -129,10 +129,10 @@ void __thiscall FontEmitter__FontEmitter__00584db0(FontEmitter *self)
   if (*(long **)(self + 0x20) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0x20) + 0x18))();
   }
-  TResourceCreator__RemoveResourceCreationFunction
-            ((TResourceCreator *)ResourceCreator,CreateFontEmitterResources,self);
-  TResourceCreator__RemoveResourceDestroyFunction
-            ((TResourceCreator *)ResourceCreator,DestroyFontEmitterResources,self);
+  TResourceCreator__RemoveResourceCreationFunction((TResourceCreator *)ResourceCreator,
+                                                   CreateFontEmitterResources, self);
+  TResourceCreator__RemoveResourceDestroyFunction((TResourceCreator *)ResourceCreator,
+                                                  DestroyFontEmitterResources, self);
   *(uint8_t ***)self = &PTR__RenderLayerObject_005be670;
   return;
 }
@@ -150,15 +150,15 @@ void __thiscall FontEmitter__FontEmitter__00584db0(FontEmitter *self)
 
 {
   uint64_t *__ptr;
-  
+
   *(uint8_t ***)self = &PTR__FontEmitter_005dc0f0;
   if (*(void **)(self + 0x28) != (void *)0x0) {
     free(*(void **)(self + 0x28));
   }
   __ptr = *(uint64_t **)(self + 0x68);
   if ((BaseResource *)*__ptr != (BaseResource *)0x0) {
-                    /* try { // try from 00584dda to 00584e25 has its CatchHandler @ 00584e36 */
-    BaseResource__Release((BaseResource *)*__ptr,0);
+    /* try { // try from 00584dda to 00584e25 has its CatchHandler @ 00584e36 */
+    BaseResource__Release((BaseResource *)*__ptr, 0);
     **(uint64_t **)(self + 0x68) = 0;
     __ptr = *(uint64_t **)(self + 0x68);
   }
@@ -166,10 +166,10 @@ void __thiscall FontEmitter__FontEmitter__00584db0(FontEmitter *self)
   if (*(long **)(self + 0x20) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0x20) + 0x18))();
   }
-  TResourceCreator__RemoveResourceCreationFunction
-            ((TResourceCreator *)ResourceCreator,CreateFontEmitterResources,self);
-  TResourceCreator__RemoveResourceDestroyFunction
-            ((TResourceCreator *)ResourceCreator,DestroyFontEmitterResources,self);
+  TResourceCreator__RemoveResourceCreationFunction((TResourceCreator *)ResourceCreator,
+                                                   CreateFontEmitterResources, self);
+  TResourceCreator__RemoveResourceDestroyFunction((TResourceCreator *)ResourceCreator,
+                                                  DestroyFontEmitterResources, self);
   *(uint8_t ***)self = &PTR__RenderLayerObject_005be670;
   operator_delete(self);
   return;
@@ -184,7 +184,7 @@ void __thiscall FontEmitter__FontEmitter__00584db0(FontEmitter *self)
  */
 /* FontEmitter__GetRowWidth(int) */
 
-float __thiscall FontEmitter__GetRowWidth(FontEmitter *self,int arg1)
+float __thiscall FontEmitter__GetRowWidth(FontEmitter *self, int arg1)
 
 {
   short sVar1;
@@ -204,7 +204,7 @@ float __thiscall FontEmitter__GetRowWidth(FontEmitter *self,int arg1)
   int iVar15;
   long lVar16;
   float fVar17;
-  
+
   fVar17 = 0.0;
   if (arg1 < *(int *)(self + 0x30)) {
     lVar5 = *(long *)(self + 0x20);
@@ -215,19 +215,18 @@ float __thiscall FontEmitter__GetRowWidth(FontEmitter *self,int arg1)
     do {
       uVar2 = *(uint *)((long)arg1 * 4 + *(long *)(self + 0x28) + lVar14);
       if (sVar1 == 0) {
-LAB_00585370:
+      LAB_00585370:
         lVar16 = lVar6 + 4;
-      }
-      else {
+      } else {
         puVar11 = (uint *)(lVar6 + 0x18);
         iVar8 = 1;
         if (uVar2 == *(uint *)(lVar6 + 4)) {
           iVar15 = 0;
-        }
-        else {
+        } else {
           do {
             iVar15 = iVar8;
-            if (iVar15 == iVar13) goto LAB_00585370;
+            if (iVar15 == iVar13)
+              goto LAB_00585370;
             uVar3 = *puVar11;
             puVar11 = puVar11 + 5;
             iVar8 = iVar15 + 1;
@@ -235,22 +234,22 @@ LAB_00585370:
         }
         lVar16 = lVar6 + 4 + (long)iVar15 * 0x14;
       }
-      if (uVar2 == 10) break;
+      if (uVar2 == 10)
+        break;
       if (uVar2 == 0x20) {
         if (sVar1 == 0) {
-LAB_005854b5:
+        LAB_005854b5:
           lVar10 = lVar6 + 4;
-        }
-        else {
+        } else {
           piVar12 = (int *)(lVar6 + 0x18);
           iVar8 = 1;
           if (*(int *)(lVar6 + 4) == 0x4d) {
             iVar15 = 0;
-          }
-          else {
+          } else {
             do {
               iVar15 = iVar8;
-              if (iVar15 == iVar13) goto LAB_005854b5;
+              if (iVar15 == iVar13)
+                goto LAB_005854b5;
               iVar4 = *piVar12;
               piVar12 = piVar12 + 5;
               iVar8 = iVar15 + 1;
@@ -278,11 +277,13 @@ LAB_005854b5:
           iVar8 = 0;
         }
       }
-LAB_005853ad:
+    LAB_005853ad:
       lVar14 = lVar14 + 4;
-      fVar17 = fVar17 + (float)(int)((((uint)*(ushort *)(lVar16 + 8) +
-                                      (int)*(short *)(lVar16 + 0x10)) -
-                                     (uint)*(byte *)(*(long *)(lVar5 + 0x10) + 0xc)) + iVar8) * 0.5;
+      fVar17 = fVar17 +
+               (float)(int)((((uint) * (ushort *)(lVar16 + 8) + (int)*(short *)(lVar16 + 0x10)) -
+                             (uint) * (byte *)(*(long *)(lVar5 + 0x10) + 0xc)) +
+                            iVar8) *
+                   0.5;
     } while (lVar14 != (ulong)(uint)((*(int *)(self + 0x30) + -1) - arg1) * 4 + 4);
   }
   iVar13 = *(int *)(self + 0x5c);
@@ -344,8 +345,8 @@ void __thiscall FontEmitter__FillVertexBuffer(FontEmitter *self)
   float local_200;
   float local_1fc;
   float local_1ec;
-  int local_1e8 [2];
-  void *local_1e0 [29];
+  int local_1e8[2];
+  void *local_1e0[29];
   float local_f8;
   float local_f4;
   float local_e8;
@@ -370,7 +371,7 @@ void __thiscall FontEmitter__FillVertexBuffer(FontEmitter *self)
   float local_54;
   uint32_t local_48;
   uint32_t local_44;
-  
+
   lVar13 = *(long *)(self + 0x20);
   uVar2 = *(ushort *)(*(long *)(lVar13 + 0x18) + 0xc);
   uVar22 = (uint)uVar2;
@@ -378,19 +379,21 @@ void __thiscall FontEmitter__FillVertexBuffer(FontEmitter *self)
     iVar20 = *(int *)(self + 0x30);
     lVar21 = 0;
     do {
-      while( true ) {
+      while (true) {
         iVar12 = (int)lVar21;
-        if (iVar20 <= *(int *)(self + lVar21 * 4 + 0x70)) break;
-        VertexBuffer__Realloc
-                  (*(VertexBuffer **)(*(long *)(*(long *)(self + 0x68) + lVar21 * 8) + 0x20),
-                   (long)iVar20 * 0x60);
+        if (iVar20 <= *(int *)(self + lVar21 * 4 + 0x70))
+          break;
+        VertexBuffer__Realloc(
+            *(VertexBuffer **)(*(long *)(*(long *)(self + 0x68) + lVar21 * 8) + 0x20),
+            (long)iVar20 * 0x60);
         iVar20 = *(int *)(self + 0x30);
         *(int *)(self + lVar21 * 4 + 0x70) = iVar20;
         lVar13 = *(long *)(self + 0x20);
         uVar2 = *(ushort *)(*(long *)(lVar13 + 0x18) + 0xc);
         uVar22 = (uint)uVar2;
         lVar21 = lVar21 + 1;
-        if ((int)(uint)uVar2 <= iVar12 + 1) goto LAB_005855a4;
+        if ((int)(uint)uVar2 <= iVar12 + 1)
+          goto LAB_005855a4;
       }
       lVar21 = lVar21 + 1;
     } while (iVar12 + 1 < (int)uVar22);
@@ -409,12 +412,12 @@ LAB_005855a4:
       iVar20 = iVar20 + 1;
       plVar1 = (long *)(*(long *)(self + 0x68) + lVar21);
       lVar21 = lVar21 + 8;
-      VertexBuffer__Lock(*(VertexBuffer **)(*plVar1 + 0x20),local_1e0 + lVar13 * 3,1,0);
+      VertexBuffer__Lock(*(VertexBuffer **)(*plVar1 + 0x20), local_1e0 + lVar13 * 3, 1, 0);
       lVar13 = *(long *)(self + 0x20);
       *piVar16 = 0;
       piVar16[4] = 0;
       piVar16 = piVar16 + 6;
-    } while (iVar20 < (int)(uint)*(ushort *)(*(long *)(lVar13 + 0x18) + 0xc));
+    } while (iVar20 < (int)(uint) * (ushort *)(*(long *)(lVar13 + 0x18) + 0xc));
   }
   *(uint32_t *)(self + 0x60) = 0;
   *(uint32_t *)(self + 100) = 0;
@@ -431,8 +434,8 @@ LAB_005855a4:
       } while (*(int *)((long)piVar16 + lVar21) != 10);
     }
     *(uint32_t *)(self + 100) = 1;
-    local_1ec = (float)GetRowWidth(self,0);
-LAB_005856c1:
+    local_1ec = (float)GetRowWidth(self, 0);
+  LAB_005856c1:
     local_204 = 0.0;
     fVar28 = DAT_005be894 /* R:1.0f */ / (float)uVar2;
     lVar21 = 0;
@@ -447,24 +450,24 @@ LAB_005856c1:
       uVar5 = *(uint *)((long)piVar16 + lVar21);
       lVar23 = *(long *)(lVar13 + 0x28);
       if (sVar4 == 0) {
-LAB_00585761:
+      LAB_00585761:
         lVar24 = lVar23 + 4;
-        if (uVar5 != 10) goto LAB_0058576e;
-LAB_00585ded:
+        if (uVar5 != 10)
+          goto LAB_0058576e;
+      LAB_00585ded:
         if (sVar4 == 0) {
-LAB_00585e31:
+        LAB_00585e31:
           lVar23 = lVar23 + 4;
-        }
-        else {
+        } else {
           if (*(int *)(lVar23 + 4) == 0x4d) {
             iVar12 = 0;
-          }
-          else {
+          } else {
             piVar19 = (int *)(lVar23 + 0x18);
             iVar11 = 1;
             do {
               iVar12 = iVar11;
-              if (iVar12 == (ushort)(sVar4 - 1) + 1) goto LAB_00585e31;
+              if (iVar12 == (ushort)(sVar4 - 1) + 1)
+                goto LAB_00585e31;
               iVar7 = *piVar19;
               piVar19 = piVar19 + 5;
               iVar11 = iVar12 + 1;
@@ -472,48 +475,47 @@ LAB_00585e31:
           }
           lVar23 = lVar23 + 4 + (long)iVar12 * 0x14;
         }
-        local_1fc = local_1fc - (float)*(ushort *)(lVar23 + 10) * _DAT_005dc10c /* R:1.2000000476837158f */;
+        local_1fc =
+            local_1fc - (float)*(ushort *)(lVar23 + 10) * _DAT_005dc10c /* R:1.2000000476837158f */;
         if (*(int *)(self + 100) == 1) {
-          local_1ec = (float)GetRowWidth(self,iVar20);
+          local_1ec = (float)GetRowWidth(self, iVar20);
+          local_200 = 0.0;
+        } else {
           local_200 = 0.0;
         }
-        else {
-          local_200 = 0.0;
-        }
-      }
-      else {
+      } else {
         if (uVar5 == *(uint *)(lVar23 + 4)) {
           iVar12 = 0;
-        }
-        else {
+        } else {
           puVar18 = (uint *)(lVar23 + 0x18);
           iVar11 = 1;
           do {
             iVar12 = iVar11;
-            if (iVar12 == (ushort)(sVar4 - 1) + 1) goto LAB_00585761;
+            if (iVar12 == (ushort)(sVar4 - 1) + 1)
+              goto LAB_00585761;
             uVar6 = *puVar18;
             puVar18 = puVar18 + 5;
             iVar11 = iVar12 + 1;
           } while (uVar5 != uVar6);
         }
         lVar24 = lVar23 + 4 + (long)iVar12 * 0x14;
-        if (uVar5 == 10) goto LAB_00585ded;
-LAB_0058576e:
+        if (uVar5 == 10)
+          goto LAB_00585ded;
+      LAB_0058576e:
         if (uVar5 == 0x20) {
           if (sVar4 == 0) {
-LAB_00585fe5:
+          LAB_00585fe5:
             lVar23 = lVar23 + 4;
-          }
-          else {
+          } else {
             if (*(int *)(lVar23 + 4) == 0x4d) {
               iVar12 = 0;
-            }
-            else {
+            } else {
               piVar16 = (int *)(lVar23 + 0x18);
               iVar11 = 1;
               do {
                 iVar12 = iVar11;
-                if (iVar12 == (ushort)(sVar4 - 1) + 1) goto LAB_00585fe5;
+                if (iVar12 == (ushort)(sVar4 - 1) + 1)
+                  goto LAB_00585fe5;
                 iVar7 = *piVar16;
                 piVar16 = piVar16 + 5;
                 iVar11 = iVar12 + 1;
@@ -541,7 +543,7 @@ LAB_00585fe5:
             fVar25 = 0.0;
           }
         }
-LAB_005857a7:
+      LAB_005857a7:
         fVar26 = (float)(int)*(short *)(lVar24 + 0xe) * DAT_005be6e4 /* R:0.5f */;
         fVar30 = local_1fc - fVar26;
         if ((uVar5 == 0x27) || (uVar5 == 0x22)) {
@@ -549,16 +551,14 @@ LAB_005857a7:
         }
         iVar12 = System_GetRegion();
         if ((((iVar12 == 3) || (iVar12 = System_GetRegion(), iVar12 == 2)) ||
-            (iVar12 = System_GetRegion(), iVar12 == 1)) ||
-           (iVar12 = System_GetRegion(), iVar12 == 4)) {
+             (iVar12 = System_GetRegion(), iVar12 == 1)) ||
+            (iVar12 = System_GetRegion(), iVar12 == 4)) {
           iVar12 = *(int *)(*(long *)(self + 0x28) + lVar21);
           if (iVar12 == 0x2d) {
             fVar30 = fVar30 + _DAT_005c5b58 /* R:7.0f */;
-          }
-          else if (iVar12 == 0x30fc) {
+          } else if (iVar12 == 0x30fc) {
             fVar30 = fVar30 + _DAT_005c5b58 /* R:7.0f */;
-          }
-          else if (iVar12 == 0x4e00) {
+          } else if (iVar12 == 0x4e00) {
             fVar30 = fVar30 + _DAT_005c5b58 /* R:7.0f */;
           }
         }
@@ -572,7 +572,7 @@ LAB_005857a7:
         local_e8 = (float)*(ushort *)(lVar24 + 8) * fVar27;
         *(float *)(self + 0x60) = fVar25;
         fVar29 = (float)*(ushort *)(lVar24 + 4) * fVar28;
-        uVar14 = (ulong)*(byte *)(lVar24 + 0x12);
+        uVar14 = (ulong) * (byte *)(lVar24 + 0x12);
         fVar25 = (float)*(ushort *)(lVar24 + 6) * fVar31;
         if (fVar29 <= 0.0) {
           fVar29 = local_204;
@@ -606,7 +606,7 @@ LAB_005857a7:
         fVar30 = fVar30 + fVar29;
         fVar26 = fVar26 + fVar25;
         *(float *)((long)pvVar8 + (long)iVar12 * 0x10 + 0xc) = fVar26;
-        Vector2__operator_minus__005be180((Vector2 *)&local_d8,(Vector2 *)&local_f8);
+        Vector2__operator_minus__005be180((Vector2 *)&local_d8, (Vector2 *)&local_f8);
         puVar15 = (uint32_t *)((long)local_1e8[uVar14 * 6] * 0x10 + (long)pvVar8);
         local_1e8[uVar14 * 6] = local_1e8[uVar14 * 6] + 1;
         *puVar15 = local_d8;
@@ -616,7 +616,7 @@ LAB_005857a7:
         *(float *)((long)pvVar8 + (long)iVar12 * 0x10 + 8) = fVar30;
         *(float *)((long)pvVar8 + (long)iVar12 * 0x10 + 0xc) = fVar26;
         local_c8 = local_e8;
-        Vector2__operator_plus__005be140((Vector2 *)&local_b8,(Vector2 *)&local_f8);
+        Vector2__operator_plus__005be140((Vector2 *)&local_b8, (Vector2 *)&local_f8);
         puVar15 = (uint32_t *)((long)local_1e8[uVar14 * 6] * 0x10 + (long)pvVar8);
         local_1e8[uVar14 * 6] = local_1e8[uVar14 * 6] + 1;
         *puVar15 = local_b8;
@@ -626,7 +626,7 @@ LAB_005857a7:
         *(float *)((long)pvVar8 + (long)iVar12 * 0x10 + 8) = fVar29;
         *(float *)((long)pvVar8 + (long)iVar12 * 0x10 + 0xc) = fVar25;
         local_a4 = local_e4;
-        Vector2__operator_plus__005be140((Vector2 *)&local_98,(Vector2 *)&local_f8);
+        Vector2__operator_plus__005be140((Vector2 *)&local_98, (Vector2 *)&local_f8);
         puVar15 = (uint32_t *)((long)local_1e8[uVar14 * 6] * 0x10 + (long)pvVar8);
         local_1e8[uVar14 * 6] = local_1e8[uVar14 * 6] + 1;
         *puVar15 = local_98;
@@ -636,7 +636,7 @@ LAB_005857a7:
         *(float *)((long)pvVar8 + (long)iVar12 * 0x10 + 8) = fVar30;
         *(float *)((long)pvVar8 + (long)iVar12 * 0x10 + 0xc) = fVar26;
         local_88 = local_e8;
-        Vector2__operator_plus__005be140((Vector2 *)&local_78,(Vector2 *)&local_f8);
+        Vector2__operator_plus__005be140((Vector2 *)&local_78, (Vector2 *)&local_f8);
         puVar15 = (uint32_t *)((long)local_1e8[uVar14 * 6] * 0x10 + (long)pvVar8);
         local_1e8[uVar14 * 6] = local_1e8[uVar14 * 6] + 1;
         *puVar15 = local_78;
@@ -644,7 +644,7 @@ LAB_005857a7:
         iVar12 = local_1e8[uVar14 * 6];
         *(float *)((long)pvVar8 + (long)iVar12 * 0x10 + 8) = fVar30;
         *(float *)((long)pvVar8 + (long)iVar12 * 0x10 + 0xc) = fVar25;
-        Vector2__operator_plus__005be140((Vector2 *)&local_68,(Vector2 *)&local_f8);
+        Vector2__operator_plus__005be140((Vector2 *)&local_68, (Vector2 *)&local_f8);
         puVar15 = (uint32_t *)((long)local_1e8[uVar14 * 6] * 0x10 + (long)pvVar8);
         local_1e8[uVar14 * 6] = local_1e8[uVar14 * 6] + 1;
         *puVar15 = local_68;
@@ -654,7 +654,7 @@ LAB_005857a7:
         *(float *)((long)pvVar8 + (long)iVar12 * 0x10 + 8) = fVar29;
         *(float *)((long)pvVar8 + (long)iVar12 * 0x10 + 0xc) = fVar25;
         local_54 = local_e4;
-        Vector2__operator_plus__005be140((Vector2 *)&local_48,(Vector2 *)&local_f8);
+        Vector2__operator_plus__005be140((Vector2 *)&local_48, (Vector2 *)&local_f8);
         puVar15 = (uint32_t *)((long)local_1e8[uVar14 * 6] * 0x10 + (long)pvVar8);
         local_1e8[uVar14 * 6] = local_1e8[uVar14 * 6] + 1;
         *puVar15 = local_48;
@@ -668,8 +668,8 @@ LAB_005857a7:
             iVar12 = 0;
             puVar17 = puVar9;
             do {
-              if ((uVar22 == puVar17[2]) && (*(uint *)((long)piVar16 + lVar21) == (uint)puVar17[3]))
-              {
+              if ((uVar22 == puVar17[2]) &&
+                  (*(uint *)((long)piVar16 + lVar21) == (uint)puVar17[3])) {
                 iVar12 = (int)(short)puVar9[(long)iVar12 * 3 + 4];
                 goto LAB_00585cf5;
               }
@@ -679,11 +679,13 @@ LAB_005857a7:
             iVar12 = 0;
           }
         }
-LAB_00585cf5:
-        local_200 = (float)(int)(iVar12 + (((uint)*(ushort *)(lVar24 + 8) +
-                                           (int)*(short *)(lVar24 + 0x10)) -
-                                          (uint)*(byte *)(*(long *)(lVar13 + 0x10) + 0xc))) * fVar27
-                    + local_200;
+      LAB_00585cf5:
+        local_200 =
+            (float)(int)(iVar12 +
+                         (((uint) * (ushort *)(lVar24 + 8) + (int)*(short *)(lVar24 + 0x10)) -
+                          (uint) * (byte *)(*(long *)(lVar13 + 0x10) + 0xc))) *
+                fVar27 +
+            local_200;
         fVar27 = local_200;
         if (local_200 <= *(float *)(self + 0x98)) {
           fVar27 = *(float *)(self + 0x98);
@@ -712,7 +714,7 @@ LAB_00585cf5:
       lVar13 = lVar13 + 8;
       *(int *)(*plVar1 + 0x10) = iVar12 / 3;
       VertexBuffer__Unlock(this_00);
-    } while (iVar20 < (int)(uint)*(ushort *)(*(long *)(*(long *)(self + 0x20) + 0x18) + 0xc));
+    } while (iVar20 < (int)(uint) * (ushort *)(*(long *)(*(long *)(self + 0x20) + 0x18) + 0xc));
   }
   return;
 }
@@ -726,12 +728,12 @@ LAB_00585cf5:
  */
 /* FontEmitter__FontEmitter__005861d0(FontEmitterCreation const*) */
 
-void __thiscall FontEmitter__FontEmitter__005861d0(FontEmitter *self,FontEmitterCreation *arg1)
+void __thiscall FontEmitter__FontEmitter__005861d0(FontEmitter *self, FontEmitterCreation *arg1)
 
 {
   uint64_t uVar1;
   TextEmitterFont *this_00;
-  
+
   *(uint64_t *)(self + 8) = 0;
   *(uint8_t ***)self = &PTR__FontEmitter_005dc0f0;
   uVar1 = ::cBlack;
@@ -751,13 +753,12 @@ void __thiscall FontEmitter__FontEmitter__005861d0(FontEmitter *self,FontEmitter
   *(uint32_t *)(self + 0x5c) = 0;
   if (*(long *)(arg1 + 8) == 0) {
     if (*(long *)arg1 != 0) {
-      this_00 = BaseResource__operator_new(0x60,1);
-                    /* try { // try from 00586313 to 00586317 has its CatchHandler @ 00586321 */
-      TextEmitterFont__TextEmitterFont__00584f80(this_00,*(char **)arg1);
+      this_00 = BaseResource__operator_new(0x60, 1);
+      /* try { // try from 00586313 to 00586317 has its CatchHandler @ 00586321 */
+      TextEmitterFont__TextEmitterFont__00584f80(this_00, *(char **)arg1);
       *(TextEmitterFont **)(self + 0x20) = this_00;
     }
-  }
-  else {
+  } else {
     *(long *)(self + 0x20) = *(long *)(arg1 + 8);
   }
   *(uint32_t *)(self + 0x70) = 4;
@@ -770,12 +771,12 @@ void __thiscall FontEmitter__FontEmitter__005861d0(FontEmitter *self,FontEmitter
   *(uint32_t *)(self + 0x8c) = 4;
   *(uint32_t *)(self + 0x90) = 4;
   *(uint32_t *)(self + 0x94) = 4;
-                    /* try { // try from 005862bb to 00586308 has its CatchHandler @ 00586343 */
+  /* try { // try from 005862bb to 00586308 has its CatchHandler @ 00586343 */
   CreateFontEmitterResources(self);
-  TResourceCreator__AddResourceCreationFunction
-            ((TResourceCreator *)ResourceCreator,CreateFontEmitterResources,self);
-  TResourceCreator__AddResourceDestroyFunction
-            ((TResourceCreator *)ResourceCreator,DestroyFontEmitterResources,self);
+  TResourceCreator__AddResourceCreationFunction((TResourceCreator *)ResourceCreator,
+                                                CreateFontEmitterResources, self);
+  TResourceCreator__AddResourceDestroyFunction((TResourceCreator *)ResourceCreator,
+                                               DestroyFontEmitterResources, self);
   return;
 }
 
@@ -788,20 +789,19 @@ void __thiscall FontEmitter__FontEmitter__005861d0(FontEmitter *self,FontEmitter
  */
 /* FontEmitter__AllocateChars(int) */
 
-void __thiscall FontEmitter__AllocateChars(FontEmitter *self,int arg1)
+void __thiscall FontEmitter__AllocateChars(FontEmitter *self, int arg1)
 
 {
   void *pvVar1;
   int iVar2;
-  
+
   if (*(int *)(self + 0x34) <= arg1) {
     iVar2 = arg1 + 1;
     if (*(void **)(self + 0x28) == (void *)0x0) {
       pvVar1 = malloc((long)iVar2 << 2);
       *(void **)(self + 0x28) = pvVar1;
-    }
-    else {
-      pvVar1 = realloc(*(void **)(self + 0x28),(long)iVar2 << 2);
+    } else {
+      pvVar1 = realloc(*(void **)(self + 0x28), (long)iVar2 << 2);
       *(void **)(self + 0x28) = pvVar1;
     }
     *(int *)(self + 0x34) = iVar2;
@@ -818,13 +818,13 @@ void __thiscall FontEmitter__AllocateChars(FontEmitter *self,int arg1)
  */
 /* FontEmitter__SetStaticText(wchar_t const*) */
 
-void __thiscall FontEmitter__SetStaticText(FontEmitter *self,wchar_t *arg1)
+void __thiscall FontEmitter__SetStaticText(FontEmitter *self, wchar_t *arg1)
 
 {
   int iVar1;
   wchar_t *__ptr;
   int iVar2;
-  
+
   iVar1 = safe_wcslen(arg1);
   __ptr = *(wchar_t **)(self + 0x28);
   if (*(int *)(self + 0x34) <= iVar1 + 1) {
@@ -832,15 +832,14 @@ void __thiscall FontEmitter__SetStaticText(FontEmitter *self,wchar_t *arg1)
     if (__ptr == (wchar_t *)0x0) {
       __ptr = malloc((long)iVar2 << 2);
       *(wchar_t **)(self + 0x28) = __ptr;
-    }
-    else {
-      __ptr = realloc(__ptr,(long)iVar2 << 2);
+    } else {
+      __ptr = realloc(__ptr, (long)iVar2 << 2);
       *(wchar_t **)(self + 0x28) = __ptr;
     }
     *(int *)(self + 0x34) = iVar2;
   }
   if (arg1 != __ptr) {
-    memcpy(__ptr,arg1,(long)(iVar1 + 1) * 4);
+    memcpy(__ptr, arg1, (long)(iVar1 + 1) * 4);
     __ptr = *(wchar_t **)(self + 0x28);
   }
   __ptr[(long)iVar1 + 1] = L'\0';
@@ -859,7 +858,7 @@ void __thiscall FontEmitter__SetStaticText(FontEmitter *self,wchar_t *arg1)
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 /* FontEmitter__SetFontSize(float) */
 
-void __thiscall FontEmitter__SetFontSize(FontEmitter *self,float arg1)
+void __thiscall FontEmitter__SetFontSize(FontEmitter *self, float arg1)
 
 {
   ushort uVar1;
@@ -870,24 +869,23 @@ void __thiscall FontEmitter__SetFontSize(FontEmitter *self,float arg1)
   int iVar6;
   long lVar7;
   float fVar8;
-  
+
   lVar3 = Window;
   uVar1 = *(ushort *)(*(long *)(self + 0x20) + 0x48);
   lVar7 = *(long *)(*(long *)(self + 0x20) + 0x28);
   if (uVar1 == 0) {
-LAB_00586575:
+  LAB_00586575:
     lVar7 = lVar7 + 4;
-  }
-  else {
+  } else {
     if (*(int *)(lVar7 + 4) == 0x4d) {
       iVar6 = 0;
-    }
-    else {
+    } else {
       piVar5 = (int *)(lVar7 + 0x18);
       iVar4 = 1;
       do {
         iVar6 = iVar4;
-        if (iVar6 == (uVar1 - 1 & 0xffff) + 1) goto LAB_00586575;
+        if (iVar6 == (uVar1 - 1 & 0xffff) + 1)
+          goto LAB_00586575;
         iVar2 = *piVar5;
         piVar5 = piVar5 + 5;
         iVar4 = iVar6 + 1;
@@ -917,7 +915,7 @@ LAB_00586575:
  */
 /* FontEmitter__SetFontSizeActualPixels(float) */
 
-void __thiscall FontEmitter__SetFontSizeActualPixels(FontEmitter *self,float arg1)
+void __thiscall FontEmitter__SetFontSizeActualPixels(FontEmitter *self, float arg1)
 
 {
   ushort uVar1;
@@ -927,23 +925,22 @@ void __thiscall FontEmitter__SetFontSizeActualPixels(FontEmitter *self,float arg
   int iVar5;
   long lVar6;
   float fVar7;
-  
+
   uVar1 = *(ushort *)(*(long *)(self + 0x20) + 0x48);
   lVar6 = *(long *)(*(long *)(self + 0x20) + 0x28);
   if (uVar1 == 0) {
-LAB_00586635:
+  LAB_00586635:
     lVar6 = lVar6 + 4;
-  }
-  else {
+  } else {
     if (*(int *)(lVar6 + 4) == 0x4d) {
       iVar5 = 0;
-    }
-    else {
+    } else {
       piVar4 = (int *)(lVar6 + 0x18);
       iVar3 = 1;
       do {
         iVar5 = iVar3;
-        if (iVar5 == (uVar1 - 1 & 0xffff) + 1) goto LAB_00586635;
+        if (iVar5 == (uVar1 - 1 & 0xffff) + 1)
+          goto LAB_00586635;
         iVar2 = *piVar4;
         piVar4 = piVar4 + 5;
         iVar3 = iVar5 + 1;

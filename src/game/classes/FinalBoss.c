@@ -48,7 +48,7 @@ void FinalBoss__OnDeath(void)
  */
 /* FinalBoss__GetPosition() */
 
-FinalBoss * __thiscall FinalBoss__GetPosition(FinalBoss *self)
+FinalBoss *__thiscall FinalBoss__GetPosition(FinalBoss *self)
 
 {
   *(uint32_t *)self = 0;
@@ -65,18 +65,18 @@ FinalBoss * __thiscall FinalBoss__GetPosition(FinalBoss *self)
  */
 /* FinalBoss__GetCameraFocus(FPUVector*) */
 
-void __thiscall FinalBoss__GetCameraFocus(FinalBoss *self,FPUVector *arg1)
+void __thiscall FinalBoss__GetCameraFocus(FinalBoss *self, FPUVector *arg1)
 
 {
   uint32_t uVar1;
   MeatBoyCharactor *pMVar2;
   uint32_t *puVar3;
   long lVar4;
-  
-  pMVar2 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy,1);
+
+  pMVar2 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   puVar3 = (uint32_t *)MeatBoyCharactor__getRenderPos(pMVar2);
   *(uint32_t *)arg1 = *puVar3;
-  pMVar2 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy,1);
+  pMVar2 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   lVar4 = MeatBoyCharactor__getRenderPos(pMVar2);
   uVar1 = *(uint32_t *)(lVar4 + 4);
   *(uint32_t *)(arg1 + 8) = 0;
@@ -101,10 +101,10 @@ void __thiscall FinalBoss__FinalBoss__00469370(FinalBoss *self)
   SMBReplay *this_02;
   TAudioCue *pTVar1;
   int iVar2;
-  
+
   *(uint8_t ***)self = &PTR__FinalBoss_005bf8f0;
   if (*(long **)(self + 400) != (long *)0x0) {
-                    /* try { // try from 0046926f to 00469325 has its CatchHandler @ 0046935c */
+    /* try { // try from 0046926f to 00469325 has its CatchHandler @ 0046935c */
     (**(code **)(**(long **)(self + 400) + 8))();
   }
   this_00 = *(FlashAnimationLibrary **)(self + 0x188);
@@ -121,7 +121,7 @@ void __thiscall FinalBoss__FinalBoss__00469370(FinalBoss *self)
   }
   *(uint64_t *)(self + 0x198) = 0;
   if (((byte)self[0x173] & 0x40) != 0) {
-    GSMBCharactor__DestroyCharactor__0049cbf0(SMBCharactor,*(MeatBoyCharactor **)(self + 0x178));
+    GSMBCharactor__DestroyCharactor__0049cbf0(SMBCharactor, *(MeatBoyCharactor **)(self + 0x178));
     this_02 = *(SMBReplay **)(self + 0x180);
     if (this_02 != (SMBReplay *)0x0) {
       SMBReplay__SMBReplay__0050da30(this_02);
@@ -129,7 +129,7 @@ void __thiscall FinalBoss__FinalBoss__00469370(FinalBoss *self)
     }
     iVar2 = TAudioInstance__IsPlaying((TAudioInstance *)escapeMusic);
     if (iVar2 == 1) {
-                    /* try { // try from 00469355 to 00469359 has its CatchHandler @ 0046935c */
+      /* try { // try from 00469355 to 00469359 has its CatchHandler @ 0046935c */
       TAudioInstance__Stop((TAudioInstance *)escapeMusic);
     }
     pTVar1 = pEscapeMusic;
@@ -169,15 +169,15 @@ void __thiscall FinalBoss__FinalBoss__00469370(FinalBoss *self)
  */
 /* FinalBoss__IsCollidingWithBounds(Bounds const*) */
 
-uint64_t __thiscall FinalBoss__IsCollidingWithBounds(FinalBoss *self,Bounds *arg1)
+uint64_t __thiscall FinalBoss__IsCollidingWithBounds(FinalBoss *self, Bounds *arg1)
 
 {
   uint64_t uVar1;
-  
+
   if (((byte)self[0x173] & 0x40) == 0) {
     return 0;
   }
-  uVar1 = DrFetus__IsBoundsHittingShot(*(DrFetus **)(self + 0x178),arg1);
+  uVar1 = DrFetus__IsBoundsHittingShot(*(DrFetus **)(self + 0x178), arg1);
   return uVar1;
 }
 
@@ -195,19 +195,19 @@ void __thiscall FinalBoss__Reset(FinalBoss *self)
 {
   long lVar1;
   MeatBoyCharactor *this_00;
-  
+
   if (((byte)self[0x173] & 0x40) == 0) {
     return;
   }
   *(uint *)(self + 0x170) = *(uint *)(self + 0x170) & 0xc0000000;
   SMBBoss__Reset((SMBBoss *)self);
-  this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy,1);
+  this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   MeatBoyCharactor__RestoreControls(this_00);
   (**(code **)(**(long **)(self + 0x178) + 0x68))();
   MeatBoyCharactor__SwitchToReplayMode(*(MeatBoyCharactor **)(self + 0x178));
   lVar1 = *(long *)(self + 0x178);
   *(uint32_t *)(lVar1 + 0x9c) = 1;
-  Vector2__operator_assign((Vector2 *)(lVar1 + 0xa0),(Vector2 *)(self + 0x28));
+  Vector2__operator_assign((Vector2 *)(lVar1 + 0xa0), (Vector2 *)(self + 0x28));
   *(byte *)(*(long *)(self + 0x178) + 0x7db) = *(byte *)(*(long *)(self + 0x178) + 0x7db) & 0xdf;
   self[0x173] = (FinalBoss)((byte)self[0x173] & 0x7f);
   return;
@@ -231,12 +231,12 @@ void __thiscall FinalBoss__FinalBoss__00469560(FinalBoss *self)
   GSMBCharactor *pGVar3;
   uint64_t uVar4;
   SMBReplay *this_00;
-  uint32_t local_48 [2];
+  uint32_t local_48[2];
   char *local_40;
   uint32_t local_38;
   uint32_t local_34;
-  uint8_t *local_28 [3];
-  
+  uint8_t *local_28[3];
+
   SMBBoss__SMBBoss__0048d980((SMBBoss *)self);
   *(uint *)(self + 0x170) = *(uint *)(self + 0x170) & 0xc0000000;
   *(uint8_t ***)self = &PTR__FinalBoss_005bf8f0;
@@ -245,15 +245,15 @@ void __thiscall FinalBoss__FinalBoss__00469560(FinalBoss *self)
   *(uint64_t *)(self + 400) = 0;
   *(uint64_t *)(self + 0x198) = 0;
   local_28[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 004695ba to 004695cf has its CatchHandler @ 0046971e */
-  uVar4 = GSMBCharactor__CreateCharactor__0049c600(pGVar3,4,1);
+  /* try { // try from 004695ba to 004695cf has its CatchHandler @ 0046971e */
+  uVar4 = GSMBCharactor__CreateCharactor__0049c600(pGVar3, 4, 1);
   *(uint64_t *)(self + 0x178) = uVar4;
   this_00 = operator_new(0x2e0);
-                    /* try { // try from 004695d6 to 004695da has its CatchHandler @ 00469705 */
+  /* try { // try from 004695d6 to 004695da has its CatchHandler @ 00469705 */
   SMBReplay__SMBReplay(this_00);
   *(SMBReplay **)(self + 0x180) = this_00;
-                    /* try { // try from 004695f7 to 00469695 has its CatchHandler @ 004696d8 */
-  FormatResourcePath("/Bosses/drfetus.rpl",local_28);
+  /* try { // try from 004695f7 to 00469695 has its CatchHandler @ 004696d8 */
+  FormatResourcePath("/Bosses/drfetus.rpl", local_28);
   *(uint64_t *)(*(long *)(self + 0x178) + 0xa38) = *(uint64_t *)(self + 0x180);
   SMBReplay__ResetAll(*(SMBReplay **)(self + 0x180));
   SMBReplay__LoadReplayData(*(SMBReplayFileCreate **)(self + 0x180));
@@ -292,7 +292,7 @@ void __thiscall FinalBoss__PlayCredits(FinalBoss *self)
 
 {
   FlashAnimationLibrary *this_00;
-  
+
   if (*(long **)(self + 400) != (long *)0x0) {
     (**(code **)(**(long **)(self + 400) + 8))();
   }
@@ -303,7 +303,7 @@ void __thiscall FinalBoss__PlayCredits(FinalBoss *self)
     operator_delete(this_00);
   }
   *(uint64_t *)(self + 0x188) = 0;
-  SMBCreditRoll__StartCredits(*(SMBCreditRoll **)(self + 0x198),SMBCreditsFinished);
+  SMBCreditRoll__StartCredits(*(SMBCreditRoll **)(self + 0x198), SMBCreditsFinished);
   return;
 }
 
@@ -336,9 +336,9 @@ void __thiscall FinalBoss__SetToPhaseTwo(FinalBoss *self)
 {
   SMBReplay *this_00;
   MeatBoyCharactor *this_01;
-  
+
   self[0x173] = (FinalBoss)((byte)self[0x173] & 0xbf);
-  GSMBCharactor__DestroyCharactor__0049cbf0(SMBCharactor,*(MeatBoyCharactor **)(self + 0x178));
+  GSMBCharactor__DestroyCharactor__0049cbf0(SMBCharactor, *(MeatBoyCharactor **)(self + 0x178));
   this_00 = *(SMBReplay **)(self + 0x180);
   if (this_00 != (SMBReplay *)0x0) {
     SMBReplay__SMBReplay__0050da30(this_00);
@@ -348,10 +348,10 @@ void __thiscall FinalBoss__SetToPhaseTwo(FinalBoss *self)
   SyncEvent__Reset((SyncEvent *)endLibLoaded);
   ThreadLoadEnding(self + 0x188);
   hEndingLoadThread = 0;
-  this_01 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy,1);
+  this_01 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   MeatBoyCharactor__RestoreControls(this_01);
   self[0x173] = (FinalBoss)((byte)self[0x173] & 0x7f);
-  TAudioCue__Play(pEscapeMusic,GLOBALMUSICVOLUME,0,(TAudioInstance *)escapeMusic);
+  TAudioCue__Play(pEscapeMusic, GLOBALMUSICVOLUME, 0, (TAudioInstance *)escapeMusic);
   return;
 }
 
@@ -387,31 +387,31 @@ void __thiscall FinalBoss__Update(FinalBoss *self)
   uint64_t local_38;
   uint64_t local_30;
   uint32_t local_28;
-  
+
   if (-1 < (char)self[0x173]) {
     if (((byte)self[0x173] & 0x40) == 0) {
       fVar1 = *(float *)(self + 200);
-      lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+      lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
       if (*(float *)(lVar5 + 0xa0) <= fVar1 && fVar1 != *(float *)(lVar5 + 0xa0)) {
         fVar1 = *(float *)(self + 0xac);
-        lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+        lVar5 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
         if (fVar1 < *(float *)(lVar5 + 0xa4)) {
           self[0x173] = (FinalBoss)((byte)self[0x173] | 0x80);
           if (*(short *)(SuperMeatBoy + 0x376) == 0) {
             local_38._4_4_ = 0x12;
-          }
-          else {
+          } else {
             local_38._4_4_ = 0x13;
           }
-          local_38 = (char *)CONCAT44(local_38._4_4_,1);
+          local_38 = (char *)CONCAT44(local_38._4_4_, 1);
           pUVar3 = (UserProfile *)TPlayer__GetProfile((TPlayer *)Players__Player);
-          Achievements__AwardAchievement(pUVar3,(AchievementAward *)&local_38);
+          Achievements__AwardAchievement(pUVar3, (AchievementAward *)&local_38);
           SyncEvent__Wait((SyncEvent *)endLibLoaded);
           if (hEndingLoadThread != (THREADHANDLESTRUCT *)0x0) {
             CloseThread(hEndingLoadThread);
             hEndingLoadThread = (THREADHANDLESTRUCT *)0x0;
           }
-          uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 0x188),0);
+          uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(
+              *(FlashAnimationLibrary **)(self + 0x188), 0);
           *(uint64_t *)(self + 400) = uVar4;
           TAudioInstance__Stop((TAudioInstance *)escapeMusic);
           local_78 = *(uint64_t *)(self + 400);
@@ -425,16 +425,15 @@ void __thiscall FinalBoss__Update(FinalBoss *self)
           local_50 = 1;
           local_4c = 0;
           local_68 = self;
-          GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_88);
+          GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_88);
           if (*(short *)(SuperMeatBoy + 0x376) == 0) {
             this_00 = operator_new(0x10);
-                    /* try { // try from 00469c37 to 00469c3b has its CatchHandler @ 00469d67 */
-            SMBCreditRoll__SMBCreditRoll(this_00,1);
-          }
-          else {
+            /* try { // try from 00469c37 to 00469c3b has its CatchHandler @ 00469d67 */
+            SMBCreditRoll__SMBCreditRoll(this_00, 1);
+          } else {
             this_00 = operator_new(0x10);
-                    /* try { // try from 00469d5d to 00469d61 has its CatchHandler @ 00469d7a */
-            SMBCreditRoll__SMBCreditRoll(this_00,0);
+            /* try { // try from 00469d5d to 00469d61 has its CatchHandler @ 00469d7a */
+            SMBCreditRoll__SMBCreditRoll(this_00, 0);
           }
           *(SMBCreditRoll **)(self + 0x198) = this_00;
           Loader__WaitAll();
@@ -442,8 +441,7 @@ void __thiscall FinalBoss__Update(FinalBoss *self)
           return;
         }
       }
-    }
-    else {
+    } else {
       fVar1 = *(float *)(self + 0x128);
       pfVar2 = (float *)DrFetus__GetClonePosition(*(DrFetus **)(self + 0x178));
       if (fVar1 < *pfVar2) {
@@ -452,19 +450,19 @@ void __thiscall FinalBoss__Update(FinalBoss *self)
         if (*(float *)(lVar5 + 4) <= fVar1 && fVar1 != *(float *)(lVar5 + 4)) {
           self[0x173] = (FinalBoss)((byte)self[0x173] | 0x80);
           if (*(int *)(SuperMeatBoy + 0x3a4) == 0) {
-            SMBChapter__PlayBossOutro
-                      ((SMBChapter *)(SuperMeatBoy + 0x90),SMBFinalBossOutroFinished,0);
+            SMBChapter__PlayBossOutro((SMBChapter *)(SuperMeatBoy + 0x90),
+                                      SMBFinalBossOutroFinished, 0);
             return;
           }
-          SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90),0);
+          SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90), 0);
           local_30 = 0;
           local_28 = 0;
           local_38 = "boss62";
           if (*(short *)(SuperMeatBoy + 0x376) != 0) {
             local_38 = "boss62x";
           }
-          SMBEditor__LoadLevel(SuperMeatBoyEditor,(TileLevelLoad *)&local_38);
-          GSuperMeatBoy__Freeze(SuperMeatBoy,0);
+          SMBEditor__LoadLevel(SuperMeatBoyEditor, (TileLevelLoad *)&local_38);
+          GSuperMeatBoy__Freeze(SuperMeatBoy, 0);
           SetToPhaseTwo(CurrentSMBBoss);
           return;
         }
@@ -473,7 +471,7 @@ void __thiscall FinalBoss__Update(FinalBoss *self)
       pfVar2 = (float *)DrFetus__GetClonePosition(*(DrFetus **)(self + 0x178));
       if (fVar1 < *pfVar2) {
         *(byte *)(*(long *)(self + 0x178) + 0x7db) =
-             *(byte *)(*(long *)(self + 0x178) + 0x7db) | 0x20;
+            *(byte *)(*(long *)(self + 0x178) + 0x7db) | 0x20;
       }
       (**(code **)(**(long **)(self + 0x178) + 0x40))();
     }

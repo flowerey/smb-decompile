@@ -27,8 +27,8 @@ void __thiscall GSMBInstructions__GSMBInstructions(GSMBInstructions *self)
   char *pcVar3;
   FlashAnimationLibrary *this_00;
   GSMBCutSceneManager *this_01;
-  uint8_t *local_38 [3];
-  
+  uint8_t *local_38[3];
+
   *(uint64_t *)self = 0;
   *(uint32_t *)(self + 0x30) = 3;
   *(uint64_t *)(self + 0x18) = 0;
@@ -37,26 +37,25 @@ void __thiscall GSMBInstructions__GSMBInstructions(GSMBInstructions *self)
   *(uint64_t *)(self + 0x10) = 0;
   *(uint64_t *)(self + 0x28) = 0;
   local_38[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 004c293e to 004c2961 has its CatchHandler @ 004c2a09 */
+  /* try { // try from 004c293e to 004c2961 has its CatchHandler @ 004c2a09 */
   piVar2 = (int *)TPlayer__GetJoystick((TPlayer *)Players__Player);
   if (*piVar2 == 1) {
-                    /* try { // try from 004c29c5 to 004c29d6 has its CatchHandler @ 004c2a09 */
-    pcVar3 = (char *)FormatResourcePath("/Inst/instxbox.am",local_38);
+    /* try { // try from 004c29c5 to 004c29d6 has its CatchHandler @ 004c2a09 */
+    pcVar3 = (char *)FormatResourcePath("/Inst/instxbox.am", local_38);
     this_00 = operator_new(0xb0);
-                    /* try { // try from 004c29e0 to 004c29e4 has its CatchHandler @ 004c2a29 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_00,pcVar3);
-  }
-  else {
-    pcVar3 = (char *)FormatResourcePath("/Inst/inst.am",local_38);
+    /* try { // try from 004c29e0 to 004c29e4 has its CatchHandler @ 004c2a29 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_00, pcVar3);
+  } else {
+    pcVar3 = (char *)FormatResourcePath("/Inst/inst.am", local_38);
     this_00 = operator_new(0xb0);
-                    /* try { // try from 004c296b to 004c296f has its CatchHandler @ 004c2a1c */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_00,pcVar3);
+    /* try { // try from 004c296b to 004c296f has its CatchHandler @ 004c2a1c */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(this_00, pcVar3);
   }
   *(FlashAnimationLibrary **)self = this_00;
-                    /* try { // try from 004c2978 to 004c297c has its CatchHandler @ 004c2a09 */
+  /* try { // try from 004c2978 to 004c297c has its CatchHandler @ 004c2a09 */
   this_01 = operator_new(0x498);
-                    /* try { // try from 004c2985 to 004c2989 has its CatchHandler @ 004c2a2b */
-  GSMBCutSceneManager__GSMBCutSceneManager__0049d5e0(this_01,0);
+  /* try { // try from 004c2985 to 004c2989 has its CatchHandler @ 004c2a2b */
+  GSMBCutSceneManager__GSMBCutSceneManager__0049d5e0(this_01, 0);
   *(GSMBCutSceneManager **)(self + 0x38) = this_01;
   SMBInstructions = self;
   if ((allocator *)(local_38[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
@@ -100,8 +99,8 @@ void __thiscall GSMBInstructions__ForceClosePage(GSMBInstructions *self)
 void __thiscall GSMBInstructions__Render(GSMBInstructions *self)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x004c2a5b. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x004c2a5b. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(**(long **)(self + 0x38) + 0x10))();
   return;
 }
@@ -145,7 +144,7 @@ void __thiscall GSMBInstructions__ShowPage(GSMBInstructions *self)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   local_48 = *(uint64_t *)(self + 0x18);
   local_20 = 0;
   local_1c = 1;
@@ -157,8 +156,8 @@ void __thiscall GSMBInstructions__ShowPage(GSMBInstructions *self)
   local_58 = 0x44200000;
   local_50 = 1;
   local_40 = SMBInstPageIntroDone;
-  GSMBCutSceneManager__PlayCutScene
-            (*(GSMBCutSceneManager **)(SMBInstructions + 0x38),(SMBCutScene *)&local_58);
+  GSMBCutSceneManager__PlayCutScene(*(GSMBCutSceneManager **)(SMBInstructions + 0x38),
+                                    (SMBCutScene *)&local_58);
   bPageShowing = 1;
   return;
 }
@@ -207,27 +206,32 @@ void __thiscall GSMBInstructions__DeleteInstructionPage(GSMBInstructions *self)
  */
 /* GSMBInstructions__SetInstructionPage(int) */
 
-void __thiscall GSMBInstructions__SetInstructionPage(GSMBInstructions *self,int arg1)
+void __thiscall GSMBInstructions__SetInstructionPage(GSMBInstructions *self, int arg1)
 
 {
   uint64_t uVar1;
-  char acStack_38 [40];
-  
+  char acStack_38[40];
+
   DeleteInstructionPage(self);
-  Sprint("page%i-1",acStack_38,arg1);
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)self,acStack_38);
+  Sprint("page%i-1", acStack_38, arg1);
+  uVar1 =
+      FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)self, acStack_38);
   *(uint64_t *)(self + 8) = uVar1;
-  Sprint("page%i-2",acStack_38,arg1);
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)self,acStack_38);
+  Sprint("page%i-2", acStack_38, arg1);
+  uVar1 =
+      FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)self, acStack_38);
   *(uint64_t *)(self + 0x10) = uVar1;
-  Sprint("page%iin",acStack_38,arg1);
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)self,acStack_38);
+  Sprint("page%iin", acStack_38, arg1);
+  uVar1 =
+      FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)self, acStack_38);
   *(uint64_t *)(self + 0x18) = uVar1;
-  Sprint("page%iout",acStack_38,arg1);
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)self,acStack_38);
+  Sprint("page%iout", acStack_38, arg1);
+  uVar1 =
+      FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)self, acStack_38);
   *(uint64_t *)(self + 0x20) = uVar1;
-  Sprint("page%itrans",acStack_38,arg1);
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)self,acStack_38);
+  Sprint("page%itrans", acStack_38, arg1);
+  uVar1 =
+      FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)self, acStack_38);
   *(uint64_t *)(self + 0x28) = uVar1;
   return;
 }
@@ -245,7 +249,7 @@ void __thiscall GSMBInstructions__GSMBInstructions__004c2c40(GSMBInstructions *s
 
 {
   FlashAnimationLibrary *this_00;
-  
+
   DeleteInstructionPage(self);
   this_00 = *(FlashAnimationLibrary **)self;
   if (this_00 != (FlashAnimationLibrary *)0x0) {
@@ -253,8 +257,8 @@ void __thiscall GSMBInstructions__GSMBInstructions__004c2c40(GSMBInstructions *s
     operator_delete(this_00);
   }
   if (*(long **)(self + 0x38) != (long *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x004c2c8c. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+    /* WARNING: Could not recover jumptable at 0x004c2c8c. Too many branches */
+    /* WARNING: Treating indirect jump as call */
     (**(code **)(**(long **)(self + 0x38) + 8))();
     return;
   }

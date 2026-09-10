@@ -89,7 +89,7 @@ void __thiscall QuakeEmitter__Update(QuakeEmitter *self)
   long lVar2;
   float fVar3;
   float fVar4;
-  
+
   fVar1 = *(float *)(self + 0x20);
   fVar4 = (float)*(int *)(self + 0x18);
   fVar3 = (float)*(uint *)(Engine + 4) + fVar1;
@@ -98,13 +98,12 @@ void __thiscall QuakeEmitter__Update(QuakeEmitter *self)
   if (fVar4 < fVar3) {
     if ((float)(*(int *)(self + 0x18) + *(int *)(self + 0x1c)) < fVar3) {
       *(uint32_t *)(self + 0x20) = 0;
-      SMBCamera__ScreenShake(*(SMBCamera **)(lVar2 + 0x38),0.0,0.0);
+      SMBCamera__ScreenShake(*(SMBCamera **)(lVar2 + 0x38), 0.0, 0.0);
       return;
     }
     if (fVar1 <= fVar4) {
-      SMBCamera__ScreenShake
-                (*(SMBCamera **)(SuperMeatBoy + 0x38),*(float *)(self + 0x14),
-                 (float)*(int *)(self + 0x1c) * DAT_005c01c4 /* R:1000.0f */);
+      SMBCamera__ScreenShake(*(SMBCamera **)(SuperMeatBoy + 0x38), *(float *)(self + 0x14),
+                             (float)*(int *)(self + 0x1c) * DAT_005c01c4 /* R:1000.0f */);
       return;
     }
   }
@@ -120,7 +119,7 @@ void __thiscall QuakeEmitter__Update(QuakeEmitter *self)
  */
 /* QuakeEmitter__QuakeEmitter__00483a70(QuakeEmitterCreate const*) */
 
-void __thiscall QuakeEmitter__QuakeEmitter__00483a70(QuakeEmitter *self,QuakeEmitterCreate *arg1)
+void __thiscall QuakeEmitter__QuakeEmitter__00483a70(QuakeEmitter *self, QuakeEmitterCreate *arg1)
 
 {
   *(uint64_t *)(self + 8) = 0;

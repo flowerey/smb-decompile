@@ -25,16 +25,16 @@ void __thiscall TextEmitterFont__RemoveRef(TextEmitterFont *self)
   uint uVar2;
   int iVar3;
   long lVar4;
-  
-  uVar2 = (uint)*(ushort *)(*(long *)(self + 0x18) + 0xc);
+
+  uVar2 = (uint) * (ushort *)(*(long *)(self + 0x18) + 0xc);
   if (*(ushort *)(*(long *)(self + 0x18) + 0xc) != 0) {
     lVar4 = 0;
     iVar3 = 0;
     do {
       if ((*(long *)(self + 0x58) != 0) &&
-         (plVar1 = *(long **)(*(long *)(self + 0x58) + lVar4), plVar1 != (long *)0x0)) {
+          (plVar1 = *(long **)(*(long *)(self + 0x58) + lVar4), plVar1 != (long *)0x0)) {
         (**(code **)(*plVar1 + 0x18))();
-        uVar2 = (uint)*(ushort *)(*(long *)(self + 0x18) + 0xc);
+        uVar2 = (uint) * (ushort *)(*(long *)(self + 0x18) + 0xc);
       }
       iVar3 = iVar3 + 1;
       lVar4 = lVar4 + 8;
@@ -59,7 +59,7 @@ void __thiscall TextEmitterFont__AddRef(TextEmitterFont *self)
   uint64_t *puVar1;
   int iVar2;
   long lVar3;
-  
+
   if (*(short *)(*(long *)(self + 0x18) + 0xc) != 0) {
     lVar3 = 0;
     iVar2 = 0;
@@ -68,7 +68,7 @@ void __thiscall TextEmitterFont__AddRef(TextEmitterFont *self)
       puVar1 = (uint64_t *)(*(long *)(self + 0x58) + lVar3);
       lVar3 = lVar3 + 8;
       (**(code **)(*(long *)*puVar1 + 0x10))();
-    } while (iVar2 < (int)(uint)*(ushort *)(*(long *)(self + 0x18) + 0xc));
+    } while (iVar2 < (int)(uint) * (ushort *)(*(long *)(self + 0x18) + 0xc));
   }
   BaseResource__AddRef((BaseResource *)self);
   return;
@@ -92,7 +92,7 @@ void __thiscall TextEmitterFont__TextEmitterFont__00584f60(TextEmitterFont *self
   ushort uVar3;
   long lVar4;
   int iVar5;
-  
+
   *(uint8_t ***)self = &PTR__TextEmitterFont_005dc0b0;
   uVar3 = *(ushort *)(*(long *)(self + 0x18) + 0xc);
   if (uVar3 != 0) {
@@ -100,8 +100,8 @@ void __thiscall TextEmitterFont__TextEmitterFont__00584f60(TextEmitterFont *self
     iVar5 = 0;
     do {
       if (*(BaseResource **)(*(long *)(self + 0x58) + lVar4) != (BaseResource *)0x0) {
-                    /* try { // try from 00584e87 to 00584eef has its CatchHandler @ 00584f11 */
-        BaseResource__Release(*(BaseResource **)(*(long *)(self + 0x58) + lVar4),0);
+        /* try { // try from 00584e87 to 00584eef has its CatchHandler @ 00584f11 */
+        BaseResource__Release(*(BaseResource **)(*(long *)(self + 0x58) + lVar4), 0);
         *(uint64_t *)(*(long *)(self + 0x58) + lVar4) = 0;
         uVar3 = *(ushort *)(*(long *)(self + 0x18) + 0xc);
       }
@@ -115,10 +115,10 @@ void __thiscall TextEmitterFont__TextEmitterFont__00584f60(TextEmitterFont *self
   if (*(void **)(self + 0x58) != (void *)0x0) {
     operator_delete__(*(void **)(self + 0x58));
   }
-  TResourceCreator__RemoveResourceCreationFunction
-            ((TResourceCreator *)ResourceCreator,CreateTextEmitterFontResources,self);
-  TResourceCreator__RemoveResourceCreationFunction
-            ((TResourceCreator *)ResourceCreator,DestroyTextEmitterFontResources,self);
+  TResourceCreator__RemoveResourceCreationFunction((TResourceCreator *)ResourceCreator,
+                                                   CreateTextEmitterFontResources, self);
+  TResourceCreator__RemoveResourceCreationFunction((TResourceCreator *)ResourceCreator,
+                                                   DestroyTextEmitterFontResources, self);
   paVar1 = (allocator *)(*(long *)(self + 0x50) + -0x18);
   if (paVar1 != (allocator *)&std__string_Rep_S_empty_rep_storage) {
     LOCK();
@@ -147,9 +147,9 @@ void __thiscall TextEmitterFont__TextEmitterFont__00584f60(TextEmitterFont *self
 
 {
   void *in_RSI;
-  
+
   TextEmitterFont__dtor(self);
-  BaseResource__operator_delete((BaseResource *)self,in_RSI);
+  BaseResource__operator_delete((BaseResource *)self, in_RSI);
   return;
 }
 
@@ -162,7 +162,7 @@ void __thiscall TextEmitterFont__TextEmitterFont__00584f60(TextEmitterFont *self
  */
 /* TextEmitterFont__TextEmitterFont__00584f80(char const*) */
 
-void __thiscall TextEmitterFont__TextEmitterFont__00584f80(TextEmitterFont *self,char *arg1)
+void __thiscall TextEmitterFont__TextEmitterFont__00584f80(TextEmitterFont *self, char *arg1)
 
 {
   long lVar1;
@@ -181,9 +181,9 @@ void __thiscall TextEmitterFont__TextEmitterFont__00584f80(TextEmitterFont *self
   uint32_t local_58;
   uint32_t local_54;
   uint8_t *local_50;
-  File local_48 [4];
+  File local_48[4];
   uint local_44;
-  
+
   *(uint32_t *)(self + 8) = 1;
   *(uint8_t ***)self = &PTR__TextEmitterFont_005dc0b0;
   *(uint8_t **)(self + 0x50) = &DAT_008184c8 /* R:0.00016803004837129265f */;
@@ -199,12 +199,12 @@ void __thiscall TextEmitterFont__TextEmitterFont__00584f80(TextEmitterFont *self
   local_80 = &DAT_005c328c /* R:u32=1811964530 */;
   local_5c = 1;
   local_88 = arg1;
-                    /* try { // try from 00585010 to 00585014 has its CatchHandler @ 005850fc */
-  File__File(local_48,(tagFileCreation *)&local_88);
-                    /* try { // try from 00585019 to 005850e7 has its CatchHandler @ 0058511d */
+  /* try { // try from 00585010 to 00585014 has its CatchHandler @ 005850fc */
+  File__File(local_48, (tagFileCreation *)&local_88);
+  /* try { // try from 00585019 to 005850e7 has its CatchHandler @ 0058511d */
   pvVar2 = operator_new__((ulong)local_44);
   *(void **)(self + 0x40) = pvVar2;
-  File__Read(local_48,pvVar2,local_44);
+  File__Read(local_48, pvVar2, local_44);
   lVar1 = *(long *)(self + 0x40);
   *(long *)(self + 0x10) = lVar1 + 5;
   iVar4 = *(int *)(lVar1 + 5);
@@ -220,14 +220,14 @@ void __thiscall TextEmitterFont__TextEmitterFont__00584f80(TextEmitterFont *self
   *(ulong *)(self + 0x30) = lVar1 + (ulong)(iVar4 + 5);
   *(uint *)(self + 0x38) = (uint)(iVar4 + 6U < local_44);
   *(short *)(self + 0x48) = (short)((ulong)(long)*piVar5 / 0x14);
-  std__string_assign((char *)(self + 0x50),0x5dc004);
+  std__string_assign((char *)(self + 0x50), 0x5dc004);
   std__string_assign((string *)(self + 0x50));
   CreateTextEmitterFontResources(self);
-  TResourceCreator__AddResourceCreationFunction
-            ((TResourceCreator *)ResourceCreator,CreateTextEmitterFontResources,self);
-  TResourceCreator__AddResourceDestroyFunction
-            ((TResourceCreator *)ResourceCreator,DestroyTextEmitterFontResources,self);
-                    /* try { // try from 005850ed to 005850f1 has its CatchHandler @ 005850fc */
+  TResourceCreator__AddResourceCreationFunction((TResourceCreator *)ResourceCreator,
+                                                CreateTextEmitterFontResources, self);
+  TResourceCreator__AddResourceDestroyFunction((TResourceCreator *)ResourceCreator,
+                                               DestroyTextEmitterFontResources, self);
+  /* try { // try from 005850ed to 005850f1 has its CatchHandler @ 005850fc */
   File__File__005b7a70(local_48);
   return;
 }
@@ -241,13 +241,13 @@ void __thiscall TextEmitterFont__TextEmitterFont__00584f80(TextEmitterFont *self
  */
 /* TextEmitterFont__GetKerning(wchar_t, wchar_t) */
 
-ushort __thiscall TextEmitterFont__GetKerning(TextEmitterFont *self,wchar_t arg1,wchar_t arg2)
+ushort __thiscall TextEmitterFont__GetKerning(TextEmitterFont *self, wchar_t arg1, wchar_t arg2)
 
 {
   ushort *puVar1;
   ushort *puVar2;
   int iVar3;
-  
+
   if (*(int *)(self + 0x38) == 1) {
     puVar1 = *(ushort **)(self + 0x30);
     if (*puVar1 / 6 != 0) {
@@ -275,7 +275,7 @@ ushort __thiscall TextEmitterFont__GetKerning(TextEmitterFont *self,wchar_t arg1
  */
 /* TextEmitterFont__GetCharInfo(wchar_t) */
 
-long __thiscall TextEmitterFont__GetCharInfo(TextEmitterFont *self,wchar_t arg1)
+long __thiscall TextEmitterFont__GetCharInfo(TextEmitterFont *self, wchar_t arg1)
 
 {
   wchar_t wVar1;
@@ -283,18 +283,18 @@ long __thiscall TextEmitterFont__GetCharInfo(TextEmitterFont *self,wchar_t arg1)
   int iVar3;
   wchar_t *pwVar4;
   int iVar5;
-  
+
   lVar2 = *(long *)(self + 0x28);
   if (*(ushort *)(self + 0x48) != 0) {
     if (*(wchar_t *)(lVar2 + 4) == arg1) {
       iVar5 = 0;
-    }
-    else {
+    } else {
       pwVar4 = (wchar_t *)(lVar2 + 0x18);
       iVar3 = 1;
       do {
         iVar5 = iVar3;
-        if (iVar5 == (*(ushort *)(self + 0x48) - 1 & 0xffff) + 1) goto LAB_005851f5;
+        if (iVar5 == (*(ushort *)(self + 0x48) - 1 & 0xffff) + 1)
+          goto LAB_005851f5;
         wVar1 = *pwVar4;
         pwVar4 = pwVar4 + 5;
         iVar3 = iVar5 + 1;

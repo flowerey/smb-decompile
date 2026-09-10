@@ -21,10 +21,10 @@
 void __thiscall TileLevelSetPiece__Render(TileLevelSetPiece *self)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0058c744. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (**(code **)(**(long **)(*(long *)(self + 0x60) + 0x40) + 0x28))
-            (*(long **)(*(long *)(self + 0x60) + 0x40),self,0);
+  /* WARNING: Could not recover jumptable at 0x0058c744. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (**(code **)(**(long **)(*(long *)(self + 0x60) + 0x40) + 0x28))(
+      *(long **)(*(long *)(self + 0x60) + 0x40), self, 0);
   return;
 }
 
@@ -42,8 +42,8 @@ void __thiscall TileLevelSetPiece__TileLevelSetPiece__0058d560(TileLevelSetPiece
 {
   *(uint8_t ***)self = &PTR__TileLevelSetPiece_005dd030;
   if (*(RenderLayer **)(self + 0x18) != (RenderLayer *)0x0) {
-                    /* try { // try from 0058c767 to 0058c76b has its CatchHandler @ 0058c775 */
-    RenderLayer__RemoveObject(*(RenderLayer **)(self + 0x18),(RenderLayerObject *)self);
+    /* try { // try from 0058c767 to 0058c76b has its CatchHandler @ 0058c775 */
+    RenderLayer__RemoveObject(*(RenderLayer **)(self + 0x18), (RenderLayerObject *)self);
   }
   *(uint8_t ***)self = &PTR__RenderLayerObject_005be670;
   return;
@@ -63,8 +63,8 @@ void __thiscall TileLevelSetPiece__TileLevelSetPiece__0058d560(TileLevelSetPiece
 {
   *(uint8_t ***)self = &PTR__TileLevelSetPiece_005dd030;
   if (*(RenderLayer **)(self + 0x18) != (RenderLayer *)0x0) {
-                    /* try { // try from 0058d577 to 0058d57b has its CatchHandler @ 0058d58c */
-    RenderLayer__RemoveObject(*(RenderLayer **)(self + 0x18),(RenderLayerObject *)self);
+    /* try { // try from 0058d577 to 0058d57b has its CatchHandler @ 0058d58c */
+    RenderLayer__RemoveObject(*(RenderLayer **)(self + 0x18), (RenderLayerObject *)self);
   }
   *(uint8_t ***)self = &PTR__RenderLayerObject_005be670;
   operator_delete(self);
@@ -116,12 +116,12 @@ void __thiscall TileLevelSetPiece__TileLevelSetPiece__0058d640(TileLevelSetPiece
  */
 /* TileLevelSetPiece__TileLevelSetPiece__0058d640(TileLevelSetPiece const&) */
 
-void __thiscall
-TileLevelSetPiece__TileLevelSetPiece__0058d640(TileLevelSetPiece *self,TileLevelSetPiece *arg1)
+void __thiscall TileLevelSetPiece__TileLevelSetPiece__0058d640(TileLevelSetPiece *self,
+                                                               TileLevelSetPiece *arg1)
 
 {
   uint32_t uVar1;
-  
+
   *(uint64_t *)(self + 8) = 0;
   *(uint64_t *)(self + 0x10) = 0;
   *(uint64_t *)(self + 0x18) = 0;

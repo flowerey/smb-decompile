@@ -22,12 +22,12 @@ void __thiscall SMBLevelData__Reset(SMBLevelData *self)
 
 {
   long lVar1;
-  
+
   *(uint32_t *)self = 0x4cbebc20;
   *(uint32_t *)(self + 4) = 0;
-  lVar1 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+  lVar1 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   if (lVar1 != 0) {
-    lVar1 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+    lVar1 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
     *(uint32_t *)(self + 8) = *(uint32_t *)(lVar1 + 0xa54);
     return;
   }

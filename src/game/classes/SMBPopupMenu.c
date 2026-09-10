@@ -54,16 +54,16 @@ void __thiscall SMBPopupMenu__DeActivate(SMBPopupMenu *self)
 
 {
   Joystick *pJVar1;
-  
+
   *(uint32_t *)(self + 0x30) = 2;
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,1,0,0);
+  Joystick__AddButtonCallback(pJVar1, 1, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__RestoreCallbacks(pJVar1,(InputCallback **)(self + 0x40),(InputCallback **)(self + 0x38))
-  ;
+  Joystick__RestoreCallbacks(pJVar1, (InputCallback **)(self + 0x40),
+                             (InputCallback **)(self + 0x38));
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x23,0,0);
-    TKeyboard__RestoreCallbacks(Keyboard,(InputCallback **)(self + 0x48));
+    TKeyboard__AddKeyCallback(Keyboard, 0x23, 0, 0);
+    TKeyboard__RestoreCallbacks(Keyboard, (InputCallback **)(self + 0x48));
     return;
   }
   return;
@@ -84,28 +84,29 @@ void __thiscall SMBPopupMenu__Render__00502110(SMBPopupMenu *self)
 {
   FlashLibraryInstance *pFVar1;
   int iVar2;
-  
-  TGraphics__SetRenderState(Graphics,'\x05',4);
-  TGraphics__SetRenderState(Graphics,'\x06',5);
-  Camera__SetOrthoProjection
-            (*(Camera **)(SuperMeatBoy + 0x38),_DAT_005c0c9c /* R:240.0f */,DAT_005c0c98 /* R:-240.0f */,DAT_005c0c94 /* R:-426.5f */,DAT_005c0c90 /* R:426.5f */,
-             DAT_005c07a4 /* R:-1.0f */,DAT_005be894 /* R:1.0f */);
-  Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38),2);
+
+  TGraphics__SetRenderState(Graphics, '\x05', 4);
+  TGraphics__SetRenderState(Graphics, '\x06', 5);
+  Camera__SetOrthoProjection(*(Camera **)(SuperMeatBoy + 0x38), _DAT_005c0c9c /* R:240.0f */,
+                             DAT_005c0c98 /* R:-240.0f */, DAT_005c0c94 /* R:-426.5f */,
+                             DAT_005c0c90 /* R:426.5f */, DAT_005c07a4 /* R:-1.0f */,
+                             DAT_005be894 /* R:1.0f */);
+  Camera__SetCameraMatricies(*(Camera **)(SuperMeatBoy + 0x38), 2);
   pFVar1 = *(FlashLibraryInstance **)(self + 0x28);
   if (pFVar1 != (FlashLibraryInstance *)0x0) {
-    SwitchOutMenuButtons(*(FlashAnimationLibrary **)(pFVar1 + 0x28),pFVar1);
+    SwitchOutMenuButtons(*(FlashAnimationLibrary **)(pFVar1 + 0x28), pFVar1);
   }
   pFVar1 = *(FlashLibraryInstance **)(self + 0x10);
   if (pFVar1 != (FlashLibraryInstance *)0x0) {
-    SwitchOutMenuButtons(*(FlashAnimationLibrary **)(pFVar1 + 0x28),pFVar1);
+    SwitchOutMenuButtons(*(FlashAnimationLibrary **)(pFVar1 + 0x28), pFVar1);
   }
   pFVar1 = *(FlashLibraryInstance **)(self + 0x18);
   if (pFVar1 != (FlashLibraryInstance *)0x0) {
-    SwitchOutMenuButtons(*(FlashAnimationLibrary **)(pFVar1 + 0x28),pFVar1);
+    SwitchOutMenuButtons(*(FlashAnimationLibrary **)(pFVar1 + 0x28), pFVar1);
   }
   pFVar1 = *(FlashLibraryInstance **)(self + 0x20);
   if (pFVar1 != (FlashLibraryInstance *)0x0) {
-    SwitchOutMenuButtons(*(FlashAnimationLibrary **)(pFVar1 + 0x28),pFVar1);
+    SwitchOutMenuButtons(*(FlashAnimationLibrary **)(pFVar1 + 0x28), pFVar1);
   }
   if (*(int *)(self + 0x30) == 1) {
     if (*(long **)(self + 0x10) != (long *)0x0) {
@@ -116,8 +117,7 @@ void __thiscall SMBPopupMenu__Render__00502110(SMBPopupMenu *self)
       }
     }
     *(uint32_t *)(self + 0x30) = 3;
-  }
-  else {
+  } else {
     if (*(int *)(self + 0x30) == 2) {
       if (*(long **)(self + 0x18) != (long *)0x0) {
         (**(code **)(**(long **)(self + 0x18) + 0x10))();
@@ -126,8 +126,8 @@ void __thiscall SMBPopupMenu__Render__00502110(SMBPopupMenu *self)
           return;
         }
       }
-                    /* WARNING: Could not recover jumptable at 0x005020df. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+      /* WARNING: Could not recover jumptable at 0x005020df. Too many branches */
+      /* WARNING: Treating indirect jump as call */
       (**(code **)(*(long *)self + 0x30))(self);
       return;
     }
@@ -140,10 +140,9 @@ void __thiscall SMBPopupMenu__Render__00502110(SMBPopupMenu *self)
           return;
         }
       }
-    }
-    else if (*(long **)(self + 0x28) != (long *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x00502088. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+    } else if (*(long **)(self + 0x28) != (long *)0x0) {
+      /* WARNING: Could not recover jumptable at 0x00502088. Too many branches */
+      /* WARNING: Treating indirect jump as call */
       (**(code **)(**(long **)(self + 0x28) + 0x10))();
       return;
     }
@@ -185,18 +184,19 @@ void __thiscall SMBPopupMenu__Activate(SMBPopupMenu *self)
   Joystick *pJVar1;
   wchar_t *pwVar2;
   uint64_t uVar3;
-  
+
   *(ushort *)(self + 0x34) = *(ushort *)(self + 0x34) & 0xfc00 | 1;
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__BackupCallbacks(pJVar1,(InputCallback **)(self + 0x40),(InputCallback **)(self + 0x38));
+  Joystick__BackupCallbacks(pJVar1, (InputCallback **)(self + 0x40),
+                            (InputCallback **)(self + 0x38));
   if ((*(uint *)(self + 0x34) & 0xffc00) == 0x400) {
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddButtonCallback(pJVar1,1,SMBPopupDeActivateMenu,self);
+    Joystick__AddButtonCallback(pJVar1, 1, SMBPopupDeActivateMenu, self);
   }
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__BackupCallbacks(Keyboard,(InputCallback **)(self + 0x48));
+    TKeyboard__BackupCallbacks(Keyboard, (InputCallback **)(self + 0x48));
     if ((*(uint *)(self + 0x34) & 0xffc00) == 0x400) {
-      TKeyboard__AddKeyCallback(Keyboard,0x23,SMBPopupDeActivateMenu,self);
+      TKeyboard__AddKeyCallback(Keyboard, 0x23, SMBPopupDeActivateMenu, self);
     }
   }
   *(uint32_t *)(self + 0x30) = 1;
@@ -213,28 +213,28 @@ void __thiscall SMBPopupMenu__Activate(SMBPopupMenu *self)
     FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(self + 0x20));
   }
   uVar3 = *(uint64_t *)(self + 0x50);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"title");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "title");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar3);
+    FlashTextField__SetText(pwVar2, uVar3);
   }
   uVar3 = GetLocalizedText(0xb7);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"select");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "select");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar3);
+    FlashTextField__SetText(pwVar2, uVar3);
   }
   uVar3 = GetLocalizedText(4);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"ok");
+  pwVar2 =
+      (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "ok");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar3);
+    FlashTextField__SetText(pwVar2, uVar3);
   }
   uVar3 = GetLocalizedText(10);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"back");
+  pwVar2 =
+      (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "back");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar3);
+    FlashTextField__SetText(pwVar2, uVar3);
     return;
   }
   return;
@@ -253,7 +253,7 @@ void __thiscall SMBPopupMenu__SMBPopupMenu__00503f20(SMBPopupMenu *self)
 
 {
   FlashAnimationLibrary *this_00;
-  
+
   *(uint8_t ***)self = &PTR__SMBPopupMenu_005c76d0;
   this_00 = *(FlashAnimationLibrary **)(self + 8);
   if (this_00 == pSMBPopupLib) {
@@ -265,8 +265,7 @@ void __thiscall SMBPopupMenu__SMBPopupMenu__00503f20(SMBPopupMenu *self)
       }
       pSMBPopupLib = (FlashAnimationLibrary *)0x0;
     }
-  }
-  else {
+  } else {
     if (this_00 != (FlashAnimationLibrary *)0x0) {
       FlashAnimationLibrary__FlashAnimationLibrary(this_00);
       operator_delete(this_00);
@@ -322,19 +321,18 @@ void SMBPopupMenu__InitializeMenuPopupLib(void)
   int iVar2;
   char *pcVar3;
   FlashAnimationLibrary *self;
-  uint8_t *local_28 [3];
-  
+  uint8_t *local_28[3];
+
   if (pSMBPopupLib == (FlashAnimationLibrary *)0x0) {
     local_28[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 00504580 to 00504591 has its CatchHandler @ 005045e4 */
-    pcVar3 = (char *)FormatResourcePath("/Menus/titlepopup.am",local_28);
+    /* try { // try from 00504580 to 00504591 has its CatchHandler @ 005045e4 */
+    pcVar3 = (char *)FormatResourcePath("/Menus/titlepopup.am", local_28);
     self = operator_new(0xb0);
-                    /* try { // try from 0050459b to 0050459f has its CatchHandler @ 005045f7 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(self,pcVar3);
+    /* try { // try from 0050459b to 0050459f has its CatchHandler @ 005045f7 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(self, pcVar3);
     pSMBPopupLib = self;
     self[0x8c] = (FlashAnimationLibrary)0x1;
-    if ((allocator *)(local_28[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_28[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_28[0] + -8);
       iVar2 = *piVar1;
@@ -359,7 +357,7 @@ void SMBPopupMenu__InitializeMenuPopupLib(void)
 /* WARNING: Removing unreachable block (ram,0x00504783) */
 /* SMBPopupMenu__Create(char const*, char const*) */
 
-void __thiscall SMBPopupMenu__Create(SMBPopupMenu *self,char *arg1,char *arg2)
+void __thiscall SMBPopupMenu__Create(SMBPopupMenu *self, char *arg1, char *arg2)
 
 {
   int *piVar1;
@@ -367,40 +365,41 @@ void __thiscall SMBPopupMenu__Create(SMBPopupMenu *self,char *arg1,char *arg2)
   char *pcVar3;
   FlashAnimationLibrary *pFVar4;
   uint64_t uVar5;
-  uint8_t *local_38 [3];
-  
+  uint8_t *local_38[3];
+
   if (arg1 == (char *)0x0) {
     InitializeMenuPopupLib();
-    uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(pSMBPopupLib,arg2);
+    uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(pSMBPopupLib, arg2);
     pFVar4 = pSMBPopupLib;
     *(uint64_t *)(self + 0x28) = uVar5;
-    uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,"in");
+    uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, "in");
     pFVar4 = pSMBPopupLib;
     *(uint64_t *)(self + 0x10) = uVar5;
-    uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4,"out");
+    uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar4, "out");
     *(uint64_t *)(self + 0x18) = uVar5;
     *(FlashAnimationLibrary **)(self + 8) = pSMBPopupLib;
-  }
-  else {
+  } else {
     local_38[0] = &DAT_008184c8 /* R:0.00016803004837129265f */;
-                    /* try { // try from 00504655 to 00504666 has its CatchHandler @ 0050477e */
-    pcVar3 = (char *)FormatResourcePath(arg1,local_38);
+    /* try { // try from 00504655 to 00504666 has its CatchHandler @ 0050477e */
+    pcVar3 = (char *)FormatResourcePath(arg1, local_38);
     pFVar4 = operator_new(0xb0);
-                    /* try { // try from 00504670 to 00504674 has its CatchHandler @ 00504760 */
-    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4,pcVar3);
+    /* try { // try from 00504670 to 00504674 has its CatchHandler @ 00504760 */
+    FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar4, pcVar3);
     *(FlashAnimationLibrary **)(self + 8) = pFVar4;
     pFVar4[0x8c] = (FlashAnimationLibrary)0x1;
     if (*(FlashAnimationLibrary **)(self + 8) != (FlashAnimationLibrary *)0x0) {
-                    /* try { // try from 0050468c to 005046b4 has its CatchHandler @ 0050477e */
-      uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 8),arg2);
+      /* try { // try from 0050468c to 005046b4 has its CatchHandler @ 0050477e */
+      uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 8),
+                                                            arg2);
       *(uint64_t *)(self + 0x28) = uVar5;
-      uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 8),"in");
+      uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 8),
+                                                            "in");
       *(uint64_t *)(self + 0x10) = uVar5;
-      uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 8),"out");
+      uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(self + 8),
+                                                            "out");
       *(uint64_t *)(self + 0x18) = uVar5;
     }
-    if ((allocator *)(local_38[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_38[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_38[0] + -8);
       iVar2 = *piVar1;
@@ -427,7 +426,7 @@ void SMBPopupMenu__DestroyMenuPopupLib(void)
 
 {
   FlashAnimationLibrary *pFVar1;
-  
+
   pFVar1 = pSMBPopupLib;
   iPopupMenuLibReferences = iPopupMenuLibReferences + -1;
   if (0 < iPopupMenuLibReferences) {
@@ -454,7 +453,7 @@ void __thiscall SMBPopupMenu__SMBPopupMenu__005047e0(SMBPopupMenu *self)
 
 {
   uint64_t uVar1;
-  
+
   *(ushort *)(self + 0x34) = *(ushort *)(self + 0x34) & 0xfc00;
   *(uint8_t ***)self = &PTR__SMBPopupMenu_005c76d0;
   *(uint64_t *)(self + 8) = 0;
@@ -479,15 +478,15 @@ void __thiscall SMBPopupMenu__SMBPopupMenu__005047e0(SMBPopupMenu *self)
  */
 /* SMBPopupMenu__SetMenuText(char const*, wchar_t const*) */
 
-void __thiscall SMBPopupMenu__SetMenuText(SMBPopupMenu *self,char *arg1,wchar_t *arg2)
+void __thiscall SMBPopupMenu__SetMenuText(SMBPopupMenu *self, char *arg1, wchar_t *arg2)
 
 {
   wchar_t *pwVar1;
-  
-  pwVar1 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),arg1);
+
+  pwVar1 =
+      (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), arg1);
   if (pwVar1 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar1,arg2);
+    FlashTextField__SetText(pwVar1, arg2);
     return;
   }
   return;

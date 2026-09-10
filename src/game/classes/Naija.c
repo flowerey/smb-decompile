@@ -23,7 +23,7 @@ void __thiscall Naija__Reset(Naija *self)
 {
   uint32_t local_18;
   uint32_t local_14;
-  
+
   MeatBoyCharactor__Reset((MeatBoyCharactor *)self);
   self[0x7d8] = (Naija)((byte)self[0x7d8] & 0xfe);
   *(uint32_t *)(self + 0xa94) = 0;
@@ -35,7 +35,7 @@ void __thiscall Naija__Reset(Naija *self)
   *(uint32_t *)(self + 0xacc) = 0;
   local_18 = 0;
   local_14 = 0;
-  Vector2__operator_assign((Vector2 *)(self + 0xaac),(Vector2 *)&local_18);
+  Vector2__operator_assign((Vector2 *)(self + 0xaac), (Vector2 *)&local_18);
   if (*(long **)(self + 0xad8) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0xad8) + 0x20))();
   }
@@ -56,7 +56,7 @@ void __thiscall Naija__Death(Naija *self)
 {
   uint32_t local_18;
   uint32_t local_14;
-  
+
   self[0x7d8] = (Naija)((byte)self[0x7d8] & 0xfe);
   *(uint32_t *)(self + 0xa94) = 0;
   *(uint32_t *)(self + 0xaa0) = 0;
@@ -67,7 +67,7 @@ void __thiscall Naija__Death(Naija *self)
   *(uint32_t *)(self + 0xacc) = 0;
   local_18 = 0;
   local_14 = 0;
-  Vector2__operator_assign((Vector2 *)(self + 0xaac),(Vector2 *)&local_18);
+  Vector2__operator_assign((Vector2 *)(self + 0xaac), (Vector2 *)&local_18);
   if (*(long **)(self + 0xad8) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0xad8) + 0x20))();
   }
@@ -96,7 +96,7 @@ void __thiscall Naija__Jump(Naija *self)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   iVar4 = (**(code **)(*(long *)self + 0xa8))();
   if (iVar4 == 0) {
     return;
@@ -108,7 +108,7 @@ void __thiscall Naija__Jump(Naija *self)
     uVar5 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x240);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x268) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
@@ -121,7 +121,7 @@ void __thiscall Naija__Jump(Naija *self)
   uStack_28 = 0x3f800000;
   uStack_24 = 0x3f800000;
   if (((byte)NVar3 & 0x40) == 0) {
-    MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,1,&uStack_28,&uStack_38);
+    MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 1, &uStack_28, &uStack_38);
     NVar3 = self[0x7d9];
   }
   *(uint32_t *)(self + 0x800) = 0;
@@ -152,17 +152,16 @@ void __thiscall Naija__GroundHit(Naija *self)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   if (*(int *)(self + 0x7d4) == 0xf) {
     uVar4 = *(uint *)(self + 0xa4c);
-  }
-  else {
+  } else {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (Naija)((byte)self[0x7db] | 8);
     uVar4 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x558);
     if (uVar1 != 0) {
-      uVar4 = GetRandomINT(0,uVar1 - 1);
+      uVar4 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint *)(lVar2 + 0x580) = uVar4;
     *(uint *)(self + 0xa4c) = uVar4;
@@ -171,10 +170,9 @@ void __thiscall Naija__GroundHit(Naija *self)
   *(uint32_t *)(self + 0x7d4) = 0xf;
   lVar2 = *(long *)(self + 0xf8);
   if (uVar4 == 0xffffffff) {
-    this_00 = *(FlashLibraryInstance **)
-               (*(long *)(lVar2 + 0x568) + (ulong)*(ushort *)(lVar2 + 0x580) * 8);
-  }
-  else {
+    this_00 = *(FlashLibraryInstance **)(*(long *)(lVar2 + 0x568) +
+                                         (ulong) * (ushort *)(lVar2 + 0x580) * 8);
+  } else {
     this_00 = *(FlashLibraryInstance **)(*(long *)(lVar2 + 0x568) + (ulong)(uVar4 & 0xffff) * 8);
   }
   FlashLibraryInstance__Reset(this_00);
@@ -184,7 +182,7 @@ void __thiscall Naija__GroundHit(Naija *self)
   uStack_38 = 0x3f800000;
   uStack_34 = 0x3f800000;
   if (((byte)NVar3 & 0x40) == 0) {
-    MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,0,&uStack_38,&uStack_28);
+    MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 0, &uStack_38, &uStack_28);
     NVar3 = self[0x7d9];
   }
   if (((byte)self[0x7d8] & 0x18) == 0) {
@@ -226,14 +224,14 @@ void __thiscall Naija__Update(Naija *self)
   long lVar1;
   float fVar2;
   float fVar3;
-  
+
   MeatBoyCharactor__ProcessReplayFrame((MeatBoyCharactor *)self);
   if ((*(int *)(self + 0xa94) == 1) && (((byte)self[0x7d8] & 2) != 0)) {
     fVar3 = *(float *)(self + 0xaa0);
-    *(float *)(self + 0x8c4) = _DAT_005bfba8 /* R:0.10000000149011612f */ * *(float *)(self + 0xa98);
+    *(float *)(self + 0x8c4) =
+        _DAT_005bfba8 /* R:0.10000000149011612f */ * *(float *)(self + 0xa98);
     *(float *)(self + 0x8ac) = DAT_005be6e4 /* R:0.5f */ * *(float *)(self + 0xa9c);
-  }
-  else {
+  } else {
     fVar3 = *(float *)(self + 0xaa0);
     *(uint32_t *)(self + 0xa94) = 0;
     *(uint32_t *)(self + 0x8c4) = *(uint32_t *)(self + 0xa98);
@@ -241,8 +239,7 @@ void __thiscall Naija__Update(Naija *self)
   }
   if (fVar3 <= 0.0) {
     *(uint32_t *)(self + 0xaa4) = 0;
-  }
-  else {
+  } else {
     fVar2 = DAT_005c10c4 /* R:-25000.0f */;
     if (((byte)self[0x7d8] & 1) == 0) {
       fVar2 = DAT_005c10c0 /* R:25000.0f */;
@@ -255,9 +252,10 @@ void __thiscall Naija__Update(Naija *self)
     *(float *)(self + 0xaa0) = fVar3;
     if (fVar3 < 0.0) {
       if (0.0 < *(float *)(self + 0xbc)) {
-        *(float *)(self + 0xbc) = *(float *)(self + 0xbc) * _DAT_005bfba8 /* R:0.10000000149011612f */;
+        *(float *)(self + 0xbc) =
+            *(float *)(self + 0xbc) * _DAT_005bfba8 /* R:0.10000000149011612f */;
       }
-      Vector2__operator_assign((Vector2 *)(self + 0xaac),(Vector2 *)(self + 0xa0));
+      Vector2__operator_assign((Vector2 *)(self + 0xaac), (Vector2 *)(self + 0xa0));
     }
     *(uint32_t *)(self + 0xad4) = 0;
     *(uint32_t *)(self + 0xaa4) = 1;
@@ -265,7 +263,7 @@ void __thiscall Naija__Update(Naija *self)
   MeatBoyCharactor__Update((MeatBoyCharactor *)self);
   if (*(long *)(self + 0x838) != 0) {
     if (*(int *)(self + 0xad4) == 0) {
-      Vector2__operator_assign((Vector2 *)(self + 0xaac),(Vector2 *)(self + 0xa0));
+      Vector2__operator_assign((Vector2 *)(self + 0xaac), (Vector2 *)(self + 0xa0));
     }
     *(uint32_t *)(self + 0xad4) = 1;
   }
@@ -274,15 +272,14 @@ void __thiscall Naija__Update(Naija *self)
     return;
   }
   if ((*(int *)(self + 0xaa4) == 1) || (*(int *)(self + 0xad4) == 0)) {
-    RibbonEmitter__AddRibbonPoint(this_00,(Vector2 *)(self + 0xa0));
+    RibbonEmitter__AddRibbonPoint(this_00, (Vector2 *)(self + 0xa0));
     *(uint32_t *)(self + 0xaa8) = 1;
-  }
-  else {
+  } else {
     *(uint32_t *)(self + 0xaa8) = 0;
-    RibbonEmitter__AddRibbonPoint(this_00,(Vector2 *)(self + 0xaac));
+    RibbonEmitter__AddRibbonPoint(this_00, (Vector2 *)(self + 0xaac));
   }
-                    /* WARNING: Could not recover jumptable at 0x00482d5b. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x00482d5b. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(**(long **)(self + 0xad8) + 0x18))();
   return;
 }
@@ -316,7 +313,7 @@ void __thiscall Naija__WallJump(Naija *self)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   puVar6 = &uStack_58;
   iVar4 = (**(code **)(*(long *)self + 0xb0))();
   if (iVar4 == 0) {
@@ -324,14 +321,14 @@ void __thiscall Naija__WallJump(Naija *self)
   }
   *(uint32_t *)(self + 0xbc) = *(uint32_t *)(self + 0x8b4);
   *(float *)(self + 0xb8) =
-       *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
+      *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
   if (*(int *)(self + 0x7d4) != 6) {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (Naija)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x240);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x268) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
@@ -347,20 +344,21 @@ void __thiscall Naija__WallJump(Naija *self)
     uStack_34 = 0x3f800000;
     uStack_28 = 0xbf800000;
     uStack_24 = 0x3f800000;
-    if (((byte)NVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)NVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar6 = &uStack_38;
     puVar8 = &uStack_28;
-  }
-  else {
+  } else {
     NVar7 = self[0x7d9];
     uStack_58 = 0x3f800000;
     uStack_54 = 0x3f800000;
     uStack_48 = 0x3f800000;
     uStack_44 = 0x3f800000;
-    if (((byte)NVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)NVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar8 = &uStack_48;
   }
-  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,3,puVar8,puVar6);
+  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 3, puVar8, puVar6);
   NVar3 = self[0x7d8];
   NVar7 = self[0x7d9];
 LAB_00474591:
@@ -378,7 +376,7 @@ LAB_00474591:
  */
 /* Naija__WallHit(tagTileCollisionType) */
 
-void __thiscall Naija__WallHit(Naija *self,int arg2)
+void __thiscall Naija__WallHit(Naija *self, int arg2)
 
 {
   Naija NVar1;
@@ -394,48 +392,48 @@ void __thiscall Naija__WallHit(Naija *self,int arg2)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   NVar1 = self[0x7d8];
   if (((byte)NVar1 & 4) == 0) {
-    if (*(int *)(self + 0x7d4) == 9) goto LAB_0047440b;
+    if (*(int *)(self + 0x7d4) == 9)
+      goto LAB_0047440b;
     if (arg2 == 4) {
       uStack_48 = 0x3f800000;
       uStack_44 = 0x3f800000;
       uStack_58 = 0x3f800000;
       uStack_54 = 0x3f800000;
       if (((byte)self[0x7d9] & 0x40) == 0) {
-        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,2,&uStack_58,&uStack_48);
+        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 2, &uStack_58, &uStack_48);
         iVar4 = *(int *)(self + 0x7d4);
         goto LAB_004743cd;
       }
-    }
-    else {
+    } else {
       uStack_28 = 0xbf800000;
       uStack_24 = 0x3f800000;
       uStack_38 = 0xbf800000;
       uStack_34 = 0x3f800000;
       if (((byte)self[0x7d9] & 0x40) == 0) {
-        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,2,&uStack_38,&uStack_28);
+        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 2, &uStack_38, &uStack_28);
         goto LAB_004743c7;
       }
     }
-LAB_004743d2:
+  LAB_004743d2:
     lVar3 = *(long *)(self + 0xf8);
     self[0x7db] = (Naija)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar2 = *(ushort *)(lVar3 + 0x348);
     if (uVar2 != 0) {
-      uVar5 = GetRandomINT(0,uVar2 - 1);
+      uVar5 = GetRandomINT(0, uVar2 - 1);
     }
     *(uint32_t *)(lVar3 + 0x370) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
     *(uint32_t *)(self + 0xa50) = 0;
-  }
-  else {
-LAB_004743c7:
+  } else {
+  LAB_004743c7:
     iVar4 = *(int *)(self + 0x7d4);
-LAB_004743cd:
-    if (iVar4 != 9) goto LAB_004743d2;
+  LAB_004743cd:
+    if (iVar4 != 9)
+      goto LAB_004743d2;
   }
   NVar1 = self[0x7d8];
 LAB_0047440b:
@@ -457,12 +455,12 @@ void __thiscall Naija__CreateClones(Naija *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),"attack");
+
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(
+      (FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), "attack");
   *(uint64_t *)(self + 0xac0) = uVar1;
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),"charge");
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(
+      (FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), "charge");
   *(uint64_t *)(self + 0xab8) = uVar1;
   MeatBoyCharactor__CreateClones((MeatBoyCharactor *)self);
   return;
@@ -482,7 +480,7 @@ void __thiscall Naija__Naija__00483180(Naija *self)
 {
   *(uint8_t ***)self = &PTR__Naija_005c0fd0;
   if ((*(int *)(self + 0xa40) == 0) && (*(long **)(self + 0xad8) != (long *)0x0)) {
-                    /* try { // try from 00482f08 to 00482f0a has its CatchHandler @ 00482f18 */
+    /* try { // try from 00482f08 to 00482f0a has its CatchHandler @ 00482f18 */
     (**(code **)(**(long **)(self + 0xad8) + 8))();
   }
   MeatBoyCharactor__MeatBoyCharactor__00476510((MeatBoyCharactor *)self);
@@ -502,32 +500,30 @@ void __thiscall Naija__Render(Naija *self)
 
 {
   int iVar1;
-  
+
   if (*(long **)(self + 0xad8) != (long *)0x0) {
     (**(code **)(**(long **)(self + 0xad8) + 0x10))();
   }
   if (*(int *)(self + 0xa94) == 1) {
     *(uint32_t *)(*(long *)(self + 0xab8) + 0x58) = *(uint32_t *)(self + 0xac8);
-    MeatBoyCharFoundation__Render
-              (*(MeatBoyCharFoundation **)(self + 0xf8),(MeatBoyCharactor *)self,
-               *(FlashLibraryInstance **)(self + 0xab8));
-    *(uint32_t *)(self + 0xac8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xab8) + 0x58)
-    ;
+    MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8),
+                                  (MeatBoyCharactor *)self,
+                                  *(FlashLibraryInstance **)(self + 0xab8));
+    *(uint32_t *)(self + 0xac8) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xab8) + 0x58);
     iVar1 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0xab8));
     if (iVar1 == 0) {
       *(uint32_t *)(self + 0xac8) = 0;
       return;
     }
-  }
-  else {
+  } else {
     if (*(int *)(self + 0xaa8) != 1) {
       MeatBoyCharactor__Render((MeatBoyCharactor *)self);
       return;
     }
     *(uint32_t *)(*(long *)(self + 0xac0) + 0x58) = *(uint32_t *)(self + 0xacc);
-    MeatBoyCharFoundation__Render
-              (*(MeatBoyCharFoundation **)(self + 0xf8),(MeatBoyCharactor *)self,
-               *(FlashLibraryInstance **)(self + 0xac0));
+    MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8),
+                                  (MeatBoyCharactor *)self,
+                                  *(FlashLibraryInstance **)(self + 0xac0));
     *(uint32_t *)(self + 0xacc) = *(uint32_t *)(*(long *)(self + 0xac0) + 0x58);
   }
   return;
@@ -548,28 +544,26 @@ void __thiscall Naija__RenderClones(Naija *self)
   long lVar1;
   int iVar2;
   long lVar3;
-  
+
   if (*(int *)(self + 0xa40) == 0) {
-    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), 1);
     lVar1 = *(long *)(self + 0xa38);
     if ((*(int *)(lVar1 + 0x2c8) == 0) && (0 < *(int *)(lVar1 + 0x34))) {
       iVar2 = 0;
       do {
         lVar3 = (long)iVar2;
         if ((*(int *)(lVar1 + 0x3c) == iVar2) &&
-           (iVar2 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + lVar3 * 8) + 0xa90))) {
-          FlashAnimationLibrary__EnableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
-        }
-        else {
-          FlashAnimationLibrary__DisableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+            (iVar2 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + lVar3 * 8) + 0xa90))) {
+          FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                             1);
+        } else {
+          FlashAnimationLibrary__DisableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                              1);
         }
         iVar2 = iVar2 + 1;
-        MeatBoyCharFoundation__Render
-                  (*(MeatBoyCharFoundation **)(self + 0xf8),
-                   *(MeatBoyCharactor **)(*(long *)(self + 0x7f0) + lVar3 * 8),
-                   (FlashLibraryInstance *)0x0);
+        MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8),
+                                      *(MeatBoyCharactor **)(*(long *)(self + 0x7f0) + lVar3 * 8),
+                                      (FlashLibraryInstance *)0x0);
         lVar1 = *(long *)(self + 0xa38);
       } while (iVar2 < *(int *)(lVar1 + 0x34));
     }
@@ -591,7 +585,7 @@ void __thiscall Naija__Naija__00483180(Naija *self)
 {
   *(uint8_t ***)self = &PTR__Naija_005c0fd0;
   if ((*(int *)(self + 0xa40) == 0) && (*(long **)(self + 0xad8) != (long *)0x0)) {
-                    /* try { // try from 004831aa to 004831ac has its CatchHandler @ 004831c2 */
+    /* try { // try from 004831aa to 004831ac has its CatchHandler @ 004831c2 */
     (**(code **)(**(long **)(self + 0xad8) + 8))();
   }
   MeatBoyCharactor__MeatBoyCharactor__00476510((MeatBoyCharactor *)self);
@@ -627,9 +621,9 @@ void __thiscall Naija__Naija__00483350(Naija *self)
   uint32_t local_30;
   uint32_t local_28;
   uint32_t local_24;
-  
-  uVar1 = FormatResourcePath("/Animations/naija.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,10);
+
+  uVar1 = FormatResourcePath("/Animations/naija.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 10);
   self[0x7d8] = (Naija)((byte)self[0x7d8] & 0xfe);
   *(uint8_t ***)self = &PTR__Naija_005c0fd0;
   *(uint32_t *)(self + 0xa54) = 10;
@@ -644,8 +638,8 @@ void __thiscall Naija__Naija__00483350(Naija *self)
   *(uint32_t *)(self + 0xacc) = 0;
   local_28 = 0;
   local_24 = 0;
-                    /* try { // try from 0048329a to 0048329e has its CatchHandler @ 00483319 */
-  Vector2__operator_assign((Vector2 *)(self + 0xaac),(Vector2 *)&local_28);
+  /* try { // try from 0048329a to 0048329e has its CatchHandler @ 00483319 */
+  Vector2__operator_assign((Vector2 *)(self + 0xaac), (Vector2 *)&local_28);
   local_44 = 0x3e800000;
   local_34 = 0;
   local_58 = 0x41000000;
@@ -657,10 +651,10 @@ void __thiscall Naija__Naija__00483350(Naija *self)
   local_38 = _DAT_00819508 /* R:1.1895499349388512e-38f */;
   local_54 = 0x40000000;
   local_30 = 0x14;
-                    /* try { // try from 004832f6 to 004832fa has its CatchHandler @ 00483340 */
+  /* try { // try from 004832f6 to 004832fa has its CatchHandler @ 00483340 */
   this_00 = operator_new(0x70);
-                    /* try { // try from 00483306 to 0048330a has its CatchHandler @ 0048332c */
-  RibbonEmitter__RibbonEmitter__0059ac20(this_00,(RibbonEmitterCreation *)&local_58);
+  /* try { // try from 00483306 to 0048330a has its CatchHandler @ 0048332c */
+  RibbonEmitter__RibbonEmitter__0059ac20(this_00, (RibbonEmitterCreation *)&local_58);
   *(RibbonEmitter **)(self + 0xad8) = this_00;
   return;
 }
@@ -674,16 +668,16 @@ void __thiscall Naija__Naija__00483350(Naija *self)
  */
 /* Naija__Naija__00483350(MeatBoyCharactor*, int) */
 
-void __thiscall Naija__Naija__00483350(Naija *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall Naija__Naija__00483350(Naija *self, MeatBoyCharactor *arg1, int arg2)
 
 {
   uint32_t local_28;
   uint32_t local_24;
-  
+
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__Naija_005c0fd0;
-                    /* try { // try from 00483381 to 00483413 has its CatchHandler @ 00483444 */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 00483381 to 00483413 has its CatchHandler @ 00483444 */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   self[0x7d8] = (Naija)((byte)self[0x7d8] & 0xfe);
   *(uint32_t *)(self + 0xa94) = 0;
   *(uint32_t *)(self + 0xaa0) = 0;
@@ -697,7 +691,7 @@ void __thiscall Naija__Naija__00483350(Naija *self,MeatBoyCharactor *arg1,int ar
   *(uint32_t *)(self + 0xa9c) = *(uint32_t *)(self + 0x8ac);
   local_28 = 0;
   local_24 = 0;
-  Vector2__operator_assign((Vector2 *)(self + 0xaac),(Vector2 *)&local_28);
+  Vector2__operator_assign((Vector2 *)(self + 0xaac), (Vector2 *)&local_28);
   *(uint64_t *)(self + 0xac0) = *(uint64_t *)(arg1 + 0xac0);
   *(uint64_t *)(self + 0xab8) = *(uint64_t *)(arg1 + 0xab8);
   return;

@@ -23,7 +23,7 @@ void __thiscall SMBBoss__Reset(SMBBoss *self)
 {
   long lVar1;
   MeatBoyCharactor *this_00;
-  
+
   *(uint32_t *)(self + 0x38) = 1;
   *(uint32_t *)(self + 0x58) = 1;
   *(uint32_t *)(self + 0x78) = 1;
@@ -34,9 +34,9 @@ void __thiscall SMBBoss__Reset(SMBBoss *self)
   *(uint32_t *)(self + 0x118) = 1;
   *(uint32_t *)(self + 0x138) = 1;
   *(uint32_t *)(self + 0x158) = 1;
-  lVar1 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+  lVar1 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   if (lVar1 != 0) {
-    this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy,1);
+    this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(SuperMeatBoy, 1);
     MeatBoyCharactor__RestoreControls(this_00);
     return;
   }
@@ -52,16 +52,15 @@ void __thiscall SMBBoss__Reset(SMBBoss *self)
  */
 /* SMBBoss__AddWayPoint(Vector2 const&, Vector2 const&, int, TileLevelSetPiece*) */
 
-void __thiscall
-SMBBoss__AddWayPoint
-          (SMBBoss *self,Vector2 *arg1,Vector2 *arg2,int arg3,TileLevelSetPiece *arg4)
+void __thiscall SMBBoss__AddWayPoint(SMBBoss *self, Vector2 *arg1, Vector2 *arg2, int arg3,
+                                     TileLevelSetPiece *arg4)
 
 {
   long lVar1;
-  
+
   lVar1 = (long)arg3;
-  Vector2__operator_assign((Vector2 *)(self + (lVar1 + 1) * 0x20 + 8),arg1);
-  Vector2__operator_assign((Vector2 *)(self + (lVar1 + 1) * 0x20 + 0x10),arg2);
+  Vector2__operator_assign((Vector2 *)(self + (lVar1 + 1) * 0x20 + 8), arg1);
+  Vector2__operator_assign((Vector2 *)(self + (lVar1 + 1) * 0x20 + 0x10), arg2);
   *(uint32_t *)(self + lVar1 * 0x20 + 0x38) = 1;
   *(TileLevelSetPiece **)(self + lVar1 * 0x20 + 0x40) = arg4;
   if (arg3 < *(int *)(self + 0x168)) {
@@ -84,11 +83,11 @@ void __thiscall SMBBoss__SMBBoss__0048d920(SMBBoss *self)
 
 {
   FlashAnimationLibrary *this_00;
-  
+
   this_00 = *(FlashAnimationLibrary **)(self + 0x20);
   *(uint8_t ***)self = &PTR__SMBBoss_005c18b0;
   if (this_00 != (FlashAnimationLibrary *)0x0) {
-                    /* try { // try from 0048d8e4 to 0048d8e8 has its CatchHandler @ 0048d907 */
+    /* try { // try from 0048d8e4 to 0048d8e8 has its CatchHandler @ 0048d907 */
     FlashAnimationLibrary__FlashAnimationLibrary(this_00);
     operator_delete(this_00);
   }
@@ -109,11 +108,11 @@ void __thiscall SMBBoss__SMBBoss__0048d920(SMBBoss *self)
 
 {
   FlashAnimationLibrary *this_00;
-  
+
   this_00 = *(FlashAnimationLibrary **)(self + 0x20);
   *(uint8_t ***)self = &PTR__SMBBoss_005c18b0;
   if (this_00 != (FlashAnimationLibrary *)0x0) {
-                    /* try { // try from 0048d944 to 0048d948 has its CatchHandler @ 0048d96e */
+    /* try { // try from 0048d944 to 0048d948 has its CatchHandler @ 0048d96e */
     FlashAnimationLibrary__FlashAnimationLibrary(this_00);
     operator_delete(this_00);
   }
@@ -140,7 +139,7 @@ void __thiscall SMBBoss__SMBBoss__0048d980(SMBBoss *self)
   SMBBoss *pSVar5;
   bool bVar6;
   ulong uVar4;
-  
+
   pSVar5 = self + 0x28;
   *(uint64_t *)(self + 8) = 0;
   *(uint64_t *)(self + 0x10) = 0;
@@ -160,8 +159,7 @@ void __thiscall SMBBoss__SMBBoss__0048d980(SMBBoss *self)
   }
   if (((ulong)pSVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pSVar5 = 0;
     pSVar5 = pSVar5 + 2;
     uVar3 = iVar2 - 2;
@@ -199,15 +197,14 @@ void __thiscall SMBBoss__SMBBoss__0048d980(SMBBoss *self)
  */
 /* SMBBoss__WayPointCollision__0048da90(int, Bounds*) */
 
-void __thiscall SMBBoss__WayPointCollision__0048da90(SMBBoss *self,int arg1,Bounds *arg2)
+void __thiscall SMBBoss__WayPointCollision__0048da90(SMBBoss *self, int arg1, Bounds *arg2)
 
 {
-  BoundingSquare aBStack_a8 [160];
-  
-  BoundingSquare__BoundingSquare
-            (aBStack_a8,(Vector2 *)(self + ((long)arg1 + 1) * 0x20 + 8),0.0,
-             (Vector2 *)(self + ((long)arg1 + 1) * 0x20 + 0x10));
-  IsBoundsTouchingBounds((Bounds *)aBStack_a8,arg2);
+  BoundingSquare aBStack_a8[160];
+
+  BoundingSquare__BoundingSquare(aBStack_a8, (Vector2 *)(self + ((long)arg1 + 1) * 0x20 + 8), 0.0,
+                                 (Vector2 *)(self + ((long)arg1 + 1) * 0x20 + 0x10));
+  IsBoundsTouchingBounds((Bounds *)aBStack_a8, arg2);
   return;
 }
 
@@ -220,14 +217,13 @@ void __thiscall SMBBoss__WayPointCollision__0048da90(SMBBoss *self,int arg1,Boun
  */
 /* SMBBoss__WayPointCollision__0048da90(int, Vector2 const&) */
 
-void __thiscall SMBBoss__WayPointCollision__0048da90(SMBBoss *self,int arg1,Vector2 *arg2)
+void __thiscall SMBBoss__WayPointCollision__0048da90(SMBBoss *self, int arg1, Vector2 *arg2)
 
 {
-  BoundingSquare aBStack_a8 [160];
-  
-  BoundingSquare__BoundingSquare
-            (aBStack_a8,(Vector2 *)(self + ((long)arg1 + 1) * 0x20 + 8),0.0,
-             (Vector2 *)(self + ((long)arg1 + 1) * 0x20 + 0x10));
-  IsPointWithinBoundingSquare(aBStack_a8,arg2);
+  BoundingSquare aBStack_a8[160];
+
+  BoundingSquare__BoundingSquare(aBStack_a8, (Vector2 *)(self + ((long)arg1 + 1) * 0x20 + 8), 0.0,
+                                 (Vector2 *)(self + ((long)arg1 + 1) * 0x20 + 0x10));
+  IsPointWithinBoundingSquare(aBStack_a8, arg2);
   return;
 }

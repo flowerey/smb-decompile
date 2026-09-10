@@ -17,13 +17,13 @@
  */
 /* SMBFactoryBossOutroFinished(void*, int, int) */
 
-void SMBFactoryBossOutroFinished(void *arg1,int arg2,int arg3)
+void SMBFactoryBossOutroFinished(void *arg1, int arg2, int arg3)
 
 {
-  SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90),1);
-  GSMBChapterData__MarkBossAsDefeated(SMBChapterData,3);
+  SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90), 1);
+  GSMBChapterData__MarkBossAsDefeated(SMBChapterData, 3);
   GSMBChapterData__UnlockChapter(SMBChapterData);
-  GSMBChapterData__SaveData(SMBChapterData,0);
+  GSMBChapterData__SaveData(SMBChapterData, 0);
   if (arg3 != 0) {
     return;
   }
@@ -44,7 +44,7 @@ bool SMBFinalBossIntroSkip(void *arg1)
 {
   long lVar1;
   bool bVar2;
-  
+
   if ((Keyboard == 0) || (bVar2 = true, *(int *)(Keyboard + 8) != 1)) {
     lVar1 = TPlayer__GetJoystick((TPlayer *)Players__Player);
     bVar2 = *(int *)(lVar1 + 8) == 1;
@@ -60,7 +60,7 @@ bool SMBFinalBossIntroSkip(void *arg1)
  */
 /* SMBCreditsFinished(void*, int, int) */
 
-void SMBCreditsFinished(void *arg1,int arg2,int arg3)
+void SMBCreditsFinished(void *arg1, int arg2, int arg3)
 
 {
   if (arg3 == 0) {
@@ -78,20 +78,19 @@ void SMBCreditsFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBFinalBossPhaseTwoFinished(void*, int, int) */
 
-void SMBFinalBossPhaseTwoFinished(void *arg1,int arg2,int arg3)
+void SMBFinalBossPhaseTwoFinished(void *arg1, int arg2, int arg3)
 
 {
   FlashAnimationLibrary *self;
   long lVar1;
-  
+
   if (*(short *)(SuperMeatBoy + 0x376) == 0) {
     GSMBChapterData__MarkBossAsDefeated(SMBChapterData);
     GSMBChapterData__UnlockChapter(SMBChapterData);
-  }
-  else {
+  } else {
     GSMBChapterData__MarkAltBossAsDefeated();
   }
-  GSMBChapterData__SaveData(SMBChapterData,0);
+  GSMBChapterData__SaveData(SMBChapterData, 0);
   lVar1 = CurrentSMBBoss;
   if (*(long **)(CurrentSMBBoss + 400) != (long *)0x0) {
     (**(code **)(**(long **)(CurrentSMBBoss + 400) + 8))();
@@ -103,7 +102,7 @@ void SMBFinalBossPhaseTwoFinished(void *arg1,int arg2,int arg3)
     operator_delete(self);
   }
   *(uint64_t *)(lVar1 + 0x188) = 0;
-  SMBCreditRoll__StartCredits(*(SMBCreditRoll **)(lVar1 + 0x198),SMBCreditsFinished);
+  SMBCreditRoll__StartCredits(*(SMBCreditRoll **)(lVar1 + 0x198), SMBCreditsFinished);
   return;
 }
 
@@ -115,22 +114,22 @@ void SMBFinalBossPhaseTwoFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBFinalBossOutroFinished(void*, int, int) */
 
-void SMBFinalBossOutroFinished(void *arg1,int arg2,int arg3)
+void SMBFinalBossOutroFinished(void *arg1, int arg2, int arg3)
 
 {
   char *local_28;
   uint64_t local_20;
   uint32_t local_18;
-  
-  SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90),0);
+
+  SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90), 0);
   local_28 = "boss62";
   local_20 = 0;
   local_18 = 0;
   if (*(short *)(SuperMeatBoy + 0x376) != 0) {
     local_28 = "boss62x";
   }
-  SMBEditor__LoadLevel(SuperMeatBoyEditor,(TileLevelLoad *)&local_28);
-  GSuperMeatBoy__Freeze(SuperMeatBoy,0);
+  SMBEditor__LoadLevel(SuperMeatBoyEditor, (TileLevelLoad *)&local_28);
+  GSuperMeatBoy__Freeze(SuperMeatBoy, 0);
   FinalBoss__SetToPhaseTwo(CurrentSMBBoss);
   return;
 }
@@ -143,13 +142,13 @@ void SMBFinalBossOutroFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBForestBossOutroFinished(void*, int, int) */
 
-void SMBForestBossOutroFinished(void *arg1,int arg2,int arg3)
+void SMBForestBossOutroFinished(void *arg1, int arg2, int arg3)
 
 {
-  SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90),1);
-  GSMBChapterData__MarkBossAsDefeated(SMBChapterData,1);
+  SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90), 1);
+  GSMBChapterData__MarkBossAsDefeated(SMBChapterData, 1);
   GSMBChapterData__UnlockChapter(SMBChapterData);
-  GSMBChapterData__SaveData(SMBChapterData,0);
+  GSMBChapterData__SaveData(SMBChapterData, 0);
   if (arg3 != 0) {
     return;
   }
@@ -165,13 +164,13 @@ void SMBForestBossOutroFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBHellBossOutroFinished(void*, int, int) */
 
-void SMBHellBossOutroFinished(void *arg1,int arg2,int arg3)
+void SMBHellBossOutroFinished(void *arg1, int arg2, int arg3)
 
 {
-  SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90),1);
-  GSMBChapterData__MarkBossAsDefeated(SMBChapterData,4);
+  SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90), 1);
+  GSMBChapterData__MarkBossAsDefeated(SMBChapterData, 4);
   GSMBChapterData__UnlockChapter(SMBChapterData);
-  GSMBChapterData__SaveData(SMBChapterData,0);
+  GSMBChapterData__SaveData(SMBChapterData, 0);
   if (arg3 != 0) {
     return;
   }
@@ -187,13 +186,13 @@ void SMBHellBossOutroFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBHospitalBossOutroFinished(void*, int, int) */
 
-void SMBHospitalBossOutroFinished(void *arg1,int arg2,int arg3)
+void SMBHospitalBossOutroFinished(void *arg1, int arg2, int arg3)
 
 {
-  SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90),1);
-  GSMBChapterData__MarkBossAsDefeated(SMBChapterData,2);
+  SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90), 1);
+  GSMBChapterData__MarkBossAsDefeated(SMBChapterData, 2);
   GSMBChapterData__UnlockChapter(SMBChapterData);
-  GSMBChapterData__SaveData(SMBChapterData,0);
+  GSMBChapterData__SaveData(SMBChapterData, 0);
   if (arg3 != 0) {
     return;
   }
@@ -213,11 +212,11 @@ bool SkipSMBIntro(void *arg1)
 
 {
   bool bVar1;
-  
+
   if ((Keyboard == 0) || (bVar1 = true, *(int *)(Keyboard + 8) != 1)) {
     bVar1 = true;
     if ((*(int *)(pGameJoysticks + 8) != 1) &&
-       ((*(int *)(pGameJoysticks + 0x310) != 1 && (*(int *)(pGameJoysticks + 0x618) != 1)))) {
+        ((*(int *)(pGameJoysticks + 0x310) != 1 && (*(int *)(pGameJoysticks + 0x618) != 1)))) {
       bVar1 = *(int *)(pGameJoysticks + 0x920) == 1;
     }
   }
@@ -274,7 +273,7 @@ void DestroyHudResources(void *arg1)
  */
 /* SMBUnlockFinished(void*, int, int) */
 
-void SMBUnlockFinished(void *arg1,int arg2,int arg3)
+void SMBUnlockFinished(void *arg1, int arg2, int arg3)
 
 {
   return;
@@ -293,7 +292,7 @@ bool SMBUnlockSkip(void *arg1)
 {
   long lVar1;
   bool bVar2;
-  
+
   if ((Keyboard == 0) || (bVar2 = true, *(int *)(Keyboard + 8) != 1)) {
     lVar1 = TPlayer__GetJoystick((TPlayer *)Players__Player);
     bVar2 = *(int *)(lVar1 + 8) == 1;
@@ -310,66 +309,63 @@ bool SMBUnlockSkip(void *arg1)
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 /* SMBMessageRender(void*, tagUAState) */
 
-void SMBMessageRender(uint64_t arg1,int arg2)
+void SMBMessageRender(uint64_t arg1, int arg2)
 
 {
   uint uVar1;
   int iVar2;
   Matrix4x4 *pMVar3;
   wchar_t *pwVar4;
-  Matrix4x4 aMStack_48 [64];
-  
-  TGraphics__SetRenderState(Graphics,'\x03',0);
-  TGraphics__SetRenderState(Graphics,'\x01',7);
-  TGraphics__SetRenderState(Graphics,'\b',1);
-  TGraphics__SetRenderState(Graphics,'\x05',4);
-  TGraphics__SetRenderState(Graphics,'\x06',5);
-  TGraphics__SetRenderState(Graphics,'\n',7);
-  TGraphics__SetRenderState(Graphics,'\t',0);
-  Matrix4x4__ConvertToOrthoMatrix
-            (aMStack_48,_DAT_005c0c9c /* R:240.0f */,DAT_005c0c98 /* R:-240.0f */,DAT_005c0c94 /* R:-426.5f */,DAT_005c0c90 /* R:426.5f */,DAT_005c07a4 /* R:-1.0f */,
-             DAT_005be894 /* R:1.0f */);
-  TGraphics__SetMatrix(Graphics,3,aMStack_48);
-  TGraphics__SetPerspectiveProjectionMode(Graphics,0);
-  pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,2);
+  Matrix4x4 aMStack_48[64];
+
+  TGraphics__SetRenderState(Graphics, '\x03', 0);
+  TGraphics__SetRenderState(Graphics, '\x01', 7);
+  TGraphics__SetRenderState(Graphics, '\b', 1);
+  TGraphics__SetRenderState(Graphics, '\x05', 4);
+  TGraphics__SetRenderState(Graphics, '\x06', 5);
+  TGraphics__SetRenderState(Graphics, '\n', 7);
+  TGraphics__SetRenderState(Graphics, '\t', 0);
+  Matrix4x4__ConvertToOrthoMatrix(aMStack_48, _DAT_005c0c9c /* R:240.0f */,
+                                  DAT_005c0c98 /* R:-240.0f */, DAT_005c0c94 /* R:-426.5f */,
+                                  DAT_005c0c90 /* R:426.5f */, DAT_005c07a4 /* R:-1.0f */,
+                                  DAT_005be894 /* R:1.0f */);
+  TGraphics__SetMatrix(Graphics, 3, aMStack_48);
+  TGraphics__SetPerspectiveProjectionMode(Graphics, 0);
+  pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 2);
   Matrix4x4__Identity(pMVar3);
-  pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,0);
+  pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 0);
   Matrix4x4__Identity(pMVar3);
-  pwVar4 = (wchar_t *)FlashAnimationLibrary__GetTextField(pMessageBoxLib,"title");
-  FlashTextField__SetText(pwVar4,&DAT_008241a4 /* R:0.0f */);
-  pwVar4 = (wchar_t *)FlashAnimationLibrary__GetTextField(pMessageBoxLib,"info");
-  FlashTextField__SetText(pwVar4,&DAT_008243a4 /* R:0.0f */);
-  pwVar4 = (wchar_t *)FlashAnimationLibrary__GetTextField(pMessageBoxLib,"ok");
-  FlashTextField__SetText(pwVar4,&DAT_008247a4 /* R:0.0f */);
-  pwVar4 = (wchar_t *)FlashAnimationLibrary__GetTextField(pMessageBoxLib,"cancel");
-  FlashTextField__SetText(pwVar4,&DAT_008249a4 /* R:0.0f */);
+  pwVar4 = (wchar_t *)FlashAnimationLibrary__GetTextField(pMessageBoxLib, "title");
+  FlashTextField__SetText(pwVar4, &DAT_008241a4 /* R:0.0f */);
+  pwVar4 = (wchar_t *)FlashAnimationLibrary__GetTextField(pMessageBoxLib, "info");
+  FlashTextField__SetText(pwVar4, &DAT_008243a4 /* R:0.0f */);
+  pwVar4 = (wchar_t *)FlashAnimationLibrary__GetTextField(pMessageBoxLib, "ok");
+  FlashTextField__SetText(pwVar4, &DAT_008247a4 /* R:0.0f */);
+  pwVar4 = (wchar_t *)FlashAnimationLibrary__GetTextField(pMessageBoxLib, "cancel");
+  FlashTextField__SetText(pwVar4, &DAT_008249a4 /* R:0.0f */);
   uVar1 = UserAlert__currInterrupt;
   if ((UserAlert__currInterrupt & 0x10) == 0) {
     *(uint32_t *)(pMessageCancelButton + 0x20) = 0xffffffff;
-  }
-  else {
+  } else {
     *(uint32_t *)(pMessageCancelButton + 0x20) = iMessageCancelButton;
   }
   if ((uVar1 & 8) == 0) {
     *(uint32_t *)(pMessageOkButton + 0x20) = 0xffffffff;
-  }
-  else {
+  } else {
     *(uint32_t *)(pMessageOkButton + 0x20) = iMessageOkButton;
   }
   TAudio__DisableDirectionalAudio(Audio);
   RegisterAudioPosition((FPUVector *)0xffffffff);
-  SwitchOutMenuButtons(pMessageBoxLib,pMessageBoxPage);
+  SwitchOutMenuButtons(pMessageBoxLib, pMessageBoxPage);
   if (arg2 == 2) {
     (**(code **)(*pMessageBoxPopup + 0x10))();
-  }
-  else if (arg2 == 0) {
+  } else if (arg2 == 0) {
     (**(code **)(*(long *)pMessageBoxTransIn + 0x10))();
     iVar2 = FlashLibraryInstance__IsPlaying(pMessageBoxTransIn);
     if (iVar2 == 0) {
       SetCurrState(2);
     }
-  }
-  else if (arg2 == 1) {
+  } else if (arg2 == 1) {
     (**(code **)(*(long *)pMessageBoxTransOut + 0x10))();
     iVar2 = FlashLibraryInstance__IsPlaying(pMessageBoxTransOut);
     if (iVar2 == 0) {
@@ -389,7 +385,7 @@ void SMBMessageRender(uint64_t arg1,int arg2)
  */
 /* GameUserAlert_CancelPress(tagButtonProps const*, void*) */
 
-void GameUserAlert_CancelPress(tagButtonProps *arg1,void *arg2)
+void GameUserAlert_CancelPress(tagButtonProps *arg1, void *arg2)
 
 {
   if (*(int *)arg1 != 1) {
@@ -407,7 +403,7 @@ void GameUserAlert_CancelPress(tagButtonProps *arg1,void *arg2)
  */
 /* GameUserAlert_OkPress(tagButtonProps const*, void*) */
 
-void GameUserAlert_OkPress(tagButtonProps *arg1,void *arg2)
+void GameUserAlert_OkPress(tagButtonProps *arg1, void *arg2)
 
 {
   if (*(int *)arg1 != 1) {
@@ -425,7 +421,7 @@ void GameUserAlert_OkPress(tagButtonProps *arg1,void *arg2)
  */
 /* SMBIntro1Finished(void*, int, int) */
 
-void SMBIntro1Finished(void *arg1,int arg2,int arg3)
+void SMBIntro1Finished(void *arg1, int arg2, int arg3)
 
 {
   uint32_t local_58;
@@ -439,7 +435,7 @@ void SMBIntro1Finished(void *arg1,int arg2,int arg3)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   if (*(int *)(SuperMeatBoy + 0x3a4) == 0) {
     local_38 = 0;
     local_28 = 0;
@@ -452,7 +448,7 @@ void SMBIntro1Finished(void *arg1,int arg2,int arg3)
     local_48 = pIntroInstancePart2;
     local_40 = SMBIntroFinished;
     local_30 = SkipSMBIntro;
-    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_58);
+    GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_58);
   }
   return;
 }
@@ -465,7 +461,7 @@ void SMBIntro1Finished(void *arg1,int arg2,int arg3)
  */
 /* SMBAutoSaveFinished(void*, int, int) */
 
-void SMBAutoSaveFinished(void *arg1,int arg2,int arg3)
+void SMBAutoSaveFinished(void *arg1, int arg2, int arg3)
 
 {
   uint32_t local_58;
@@ -479,7 +475,7 @@ void SMBAutoSaveFinished(void *arg1,int arg2,int arg3)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   local_38 = 0;
   local_28 = 0;
   local_20 = 0;
@@ -491,7 +487,7 @@ void SMBAutoSaveFinished(void *arg1,int arg2,int arg3)
   local_48 = pIntroInstancePart1;
   local_40 = SMBIntro1Finished;
   local_30 = SkipSMBIntro;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&local_58);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&local_58);
   return;
 }
 
@@ -506,46 +502,46 @@ void Game_CreateMessage(long arg1)
 {
   uint64_t uVar1;
   Joystick *pJVar2;
-  
+
   AnimationManager__PauseAnimations(1);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__BackupCallbacks(pJVar2,(InputCallback **)0x0,(InputCallback **)0x0);
+  Joystick__BackupCallbacks(pJVar2, (InputCallback **)0x0, (InputCallback **)0x0);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)(Players__Player + 0x18));
-  Joystick__BackupCallbacks(pJVar2,(InputCallback **)0x0,(InputCallback **)0x0);
+  Joystick__BackupCallbacks(pJVar2, (InputCallback **)0x0, (InputCallback **)0x0);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)(Players__Player + 0x30));
-  Joystick__BackupCallbacks(pJVar2,(InputCallback **)0x0,(InputCallback **)0x0);
+  Joystick__BackupCallbacks(pJVar2, (InputCallback **)0x0, (InputCallback **)0x0);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)(Players__Player + 0x48));
-  Joystick__BackupCallbacks(pJVar2,(InputCallback **)0x0,(InputCallback **)0x0);
+  Joystick__BackupCallbacks(pJVar2, (InputCallback **)0x0, (InputCallback **)0x0);
   uVar1 = *(uint64_t *)(arg1 + 0x28);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar2,0,GameUserAlert_OkPress,uVar1);
+  Joystick__AddButtonCallback(pJVar2, 0, GameUserAlert_OkPress, uVar1);
   uVar1 = *(uint64_t *)(arg1 + 0x30);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar2,1,GameUserAlert_CancelPress,uVar1);
+  Joystick__AddButtonCallback(pJVar2, 1, GameUserAlert_CancelPress, uVar1);
   uVar1 = *(uint64_t *)(arg1 + 0x28);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)(Players__Player + 0x18));
-  Joystick__AddButtonCallback(pJVar2,0,GameUserAlert_OkPress,uVar1);
+  Joystick__AddButtonCallback(pJVar2, 0, GameUserAlert_OkPress, uVar1);
   uVar1 = *(uint64_t *)(arg1 + 0x30);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)(Players__Player + 0x18));
-  Joystick__AddButtonCallback(pJVar2,1,GameUserAlert_CancelPress,uVar1);
+  Joystick__AddButtonCallback(pJVar2, 1, GameUserAlert_CancelPress, uVar1);
   uVar1 = *(uint64_t *)(arg1 + 0x28);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)(Players__Player + 0x30));
-  Joystick__AddButtonCallback(pJVar2,0,GameUserAlert_OkPress,uVar1);
+  Joystick__AddButtonCallback(pJVar2, 0, GameUserAlert_OkPress, uVar1);
   uVar1 = *(uint64_t *)(arg1 + 0x30);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)(Players__Player + 0x30));
-  Joystick__AddButtonCallback(pJVar2,1,GameUserAlert_CancelPress,uVar1);
+  Joystick__AddButtonCallback(pJVar2, 1, GameUserAlert_CancelPress, uVar1);
   uVar1 = *(uint64_t *)(arg1 + 0x28);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)(Players__Player + 0x48));
-  Joystick__AddButtonCallback(pJVar2,0,GameUserAlert_OkPress,uVar1);
+  Joystick__AddButtonCallback(pJVar2, 0, GameUserAlert_OkPress, uVar1);
   uVar1 = *(uint64_t *)(arg1 + 0x30);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)(Players__Player + 0x48));
-  Joystick__AddButtonCallback(pJVar2,1,GameUserAlert_CancelPress,uVar1);
+  Joystick__AddButtonCallback(pJVar2, 1, GameUserAlert_CancelPress, uVar1);
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__BackupCallbacks(Keyboard,(InputCallback **)0x0);
-    TKeyboard__AddKeyCallback(Keyboard,0x76,GameUserAlert_OkPress,*(uint64_t *)(arg1 + 0x28));
-    TKeyboard__AddKeyCallback(Keyboard,0x6c,GameUserAlert_OkPress,*(uint64_t *)(arg1 + 0x28));
-    TKeyboard__AddKeyCallback
-              (Keyboard,0x23,GameUserAlert_CancelPress,*(uint64_t *)(arg1 + 0x30));
+    TKeyboard__BackupCallbacks(Keyboard, (InputCallback **)0x0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x76, GameUserAlert_OkPress, *(uint64_t *)(arg1 + 0x28));
+    TKeyboard__AddKeyCallback(Keyboard, 0x6c, GameUserAlert_OkPress, *(uint64_t *)(arg1 + 0x28));
+    TKeyboard__AddKeyCallback(Keyboard, 0x23, GameUserAlert_CancelPress,
+                              *(uint64_t *)(arg1 + 0x30));
   }
   if (*(code **)(arg1 + 0x50) != (code *)0x0) {
     (**(code **)(arg1 + 0x50))(0);
@@ -566,24 +562,24 @@ void Game_DisableMessage(int arg1)
 
 {
   Joystick *pJVar1;
-  
+
   AnimationManager__PauseAnimations(0);
   if (arg1 != 1) {
-    RegisterMessageBoxRenderUpdate(SMBMessageRender,SMBMessageUpdate);
+    RegisterMessageBoxRenderUpdate(SMBMessageRender, SMBMessageUpdate);
     return;
   }
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__RestoreCallbacks(Keyboard,(InputCallback **)0x0);
+    TKeyboard__RestoreCallbacks(Keyboard, (InputCallback **)0x0);
   }
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__RestoreCallbacks(pJVar1,(InputCallback **)0x0,(InputCallback **)0x0);
+  Joystick__RestoreCallbacks(pJVar1, (InputCallback **)0x0, (InputCallback **)0x0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)(Players__Player + 0x18));
-  Joystick__RestoreCallbacks(pJVar1,(InputCallback **)0x0,(InputCallback **)0x0);
+  Joystick__RestoreCallbacks(pJVar1, (InputCallback **)0x0, (InputCallback **)0x0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)(Players__Player + 0x30));
-  Joystick__RestoreCallbacks(pJVar1,(InputCallback **)0x0,(InputCallback **)0x0);
+  Joystick__RestoreCallbacks(pJVar1, (InputCallback **)0x0, (InputCallback **)0x0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)(Players__Player + 0x48));
-  Joystick__RestoreCallbacks(pJVar1,(InputCallback **)0x0,(InputCallback **)0x0);
-  RegisterMessageBoxRenderUpdate(SMBMessageRender,SMBMessageUpdate);
+  Joystick__RestoreCallbacks(pJVar1, (InputCallback **)0x0, (InputCallback **)0x0);
+  RegisterMessageBoxRenderUpdate(SMBMessageRender, SMBMessageUpdate);
   return;
 }
 
@@ -597,7 +593,7 @@ void Game_ForceCloseMessage(void)
 
 {
   AnimationManager__PauseAnimations(0);
-  RegisterMessageBoxRenderUpdate(SMBMessageRender,SMBMessageUpdate);
+  RegisterMessageBoxRenderUpdate(SMBMessageRender, SMBMessageUpdate);
   return;
 }
 
@@ -609,11 +605,11 @@ void Game_ForceCloseMessage(void)
  */
 /* SMBIntroFinished(void*, int, int) */
 
-void SMBIntroFinished(void *arg1,int arg2,int arg3)
+void SMBIntroFinished(void *arg1, int arg2, int arg3)
 
 {
   GMeatHUD__KillIntro();
-  GSuperMeatBoy__SwitchGameMode(SuperMeatBoy,0xd);
+  GSuperMeatBoy__SwitchGameMode(SuperMeatBoy, 0xd);
   return;
 }
 
@@ -625,13 +621,13 @@ void SMBIntroFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBRaptureBossOutroFinished(void*, int, int) */
 
-void SMBRaptureBossOutroFinished(void *arg1,int arg2,int arg3)
+void SMBRaptureBossOutroFinished(void *arg1, int arg2, int arg3)
 
 {
-  SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90),1);
-  GSMBChapterData__MarkBossAsDefeated(SMBChapterData,5);
+  SMBChapter__DestroyBossOutro((SMBChapter *)(SuperMeatBoy + 0x90), 1);
+  GSMBChapterData__MarkBossAsDefeated(SMBChapterData, 5);
   GSMBChapterData__UnlockChapter(SMBChapterData);
-  GSMBChapterData__SaveData(SMBChapterData,0);
+  GSMBChapterData__SaveData(SMBChapterData, 0);
   if (arg3 != 0) {
     return;
   }
@@ -656,7 +652,7 @@ void SMBAnimalAirEnemyUpdate(SceneObject2D *arg1)
   uint32_t local_38;
   uint32_t local_34;
   uint32_t local_10;
-  
+
   lVar1 = SuperMeatBoy;
   *(uint32_t *)(arg1 + 0x98) = 0x3f800000;
   local_10 = 1;
@@ -666,8 +662,8 @@ void SMBAnimalAirEnemyUpdate(SceneObject2D *arg1)
   local_40 = 0;
   local_38 = 0;
   local_34 = 0;
-  TileLevel__TileCollision(*(TileLevel **)(lVar1 + 0x40),arg1,(TileCollisionInfo *)&local_58);
-  Apply2DPhysics(arg1,fOneFrameTimeStep);
+  TileLevel__TileCollision(*(TileLevel **)(lVar1 + 0x40), arg1, (TileCollisionInfo *)&local_58);
+  Apply2DPhysics(arg1, fOneFrameTimeStep);
   return;
 }
 
@@ -716,15 +712,15 @@ void SMBAnimalGroundEnemyUpdate(SceneObject2D *arg1)
   uint32_t local_44;
   uint32_t local_38;
   uint32_t local_34;
-  
+
   fVar1 = *(float *)(*(long *)(arg1 + 0x48) + 0x84);
   fVar2 = *(float *)(*(long *)(arg1 + 0x48) + 0x88);
   uVar3 = *(uint *)(arg1 + 0x110);
-  Apply2DPhysics(arg1,DAT_005c17d0 /* R:0.01666666753590107f */);
+  Apply2DPhysics(arg1, DAT_005c17d0 /* R:0.01666666753590107f */);
   lVar9 = SuperMeatBoy;
   *(uint32_t *)(arg1 + 0x1b8) = 0;
-  TileLevel__TileCollision
-            (*(TileLevel **)(lVar9 + 0x40),arg1,(TileCollisionInfo *)(arg1 + 0x170));
+  TileLevel__TileCollision(*(TileLevel **)(lVar9 + 0x40), arg1,
+                           (TileCollisionInfo *)(arg1 + 0x170));
   local_f8 = *(uint64_t *)(arg1 + 0xa0);
   if (SMBAnimalGroundEnemyUpdate__vUpGravity == '\0') {
     iVar7 = __cxa_guard_acquire(&SMBAnimalGroundEnemyUpdate__vUpGravity);
@@ -732,7 +728,7 @@ void SMBAnimalGroundEnemyUpdate(SceneObject2D *arg1)
       SMBAnimalGroundEnemyUpdate__vUpGravity._0_4_ = 0;
       SMBAnimalGroundEnemyUpdate__vUpGravity._4_4_ = 0x44098000;
       __cxa_guard_release(&SMBAnimalGroundEnemyUpdate__vUpGravity);
-      __cxa_atexit(Vector2__Vector2,&SMBAnimalGroundEnemyUpdate__vUpGravity,&__dso_handle);
+      __cxa_atexit(Vector2__Vector2, &SMBAnimalGroundEnemyUpdate__vUpGravity, &__dso_handle);
     }
   }
   if (SMBAnimalGroundEnemyUpdate__vDownGravity == '\0') {
@@ -741,7 +737,7 @@ void SMBAnimalGroundEnemyUpdate(SceneObject2D *arg1)
       SMBAnimalGroundEnemyUpdate__vDownGravity._0_4_ = 0;
       SMBAnimalGroundEnemyUpdate__vDownGravity._4_4_ = 0xc4098000;
       __cxa_guard_release(&SMBAnimalGroundEnemyUpdate__vDownGravity);
-      __cxa_atexit(Vector2__Vector2,&SMBAnimalGroundEnemyUpdate__vDownGravity,&__dso_handle);
+      __cxa_atexit(Vector2__Vector2, &SMBAnimalGroundEnemyUpdate__vDownGravity, &__dso_handle);
     }
   }
   if (SMBAnimalGroundEnemyUpdate__vLeftGravity == '\0') {
@@ -750,7 +746,7 @@ void SMBAnimalGroundEnemyUpdate(SceneObject2D *arg1)
       SMBAnimalGroundEnemyUpdate__vLeftGravity._0_4_ = 0xc4098000;
       SMBAnimalGroundEnemyUpdate__vLeftGravity._4_4_ = 0;
       __cxa_guard_release(&SMBAnimalGroundEnemyUpdate__vLeftGravity);
-      __cxa_atexit(Vector2__Vector2,&SMBAnimalGroundEnemyUpdate__vLeftGravity,&__dso_handle);
+      __cxa_atexit(Vector2__Vector2, &SMBAnimalGroundEnemyUpdate__vLeftGravity, &__dso_handle);
     }
   }
   if (SMBAnimalGroundEnemyUpdate__vRightGravity == '\0') {
@@ -759,7 +755,7 @@ void SMBAnimalGroundEnemyUpdate(SceneObject2D *arg1)
       SMBAnimalGroundEnemyUpdate__vRightGravity._0_4_ = 0x44098000;
       SMBAnimalGroundEnemyUpdate__vRightGravity._4_4_ = 0;
       __cxa_guard_release(&SMBAnimalGroundEnemyUpdate__vRightGravity);
-      __cxa_atexit(Vector2__Vector2,&SMBAnimalGroundEnemyUpdate__vRightGravity,&__dso_handle);
+      __cxa_atexit(Vector2__Vector2, &SMBAnimalGroundEnemyUpdate__vRightGravity, &__dso_handle);
     }
   }
   if (*(long *)(arg1 + 400) != 0) {
@@ -768,12 +764,11 @@ void SMBAnimalGroundEnemyUpdate(SceneObject2D *arg1)
       lVar9 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0xa8 + *(long *)(arg1 + 0x230);
       uVar4 = *(ushort *)(lVar9 + 0x28);
       if (uVar4 != 0) {
-        uVar8 = GetRandomINT(0,uVar4 - 1);
+        uVar8 = GetRandomINT(0, uVar4 - 1);
       }
       *(uint32_t *)(lVar9 + 0x50) = uVar8;
       *(uint32_t *)(arg1 + 0x220) = 0;
-      uVar8 = *(uint32_t *)
-               ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xf8);
+      uVar8 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xf8);
       *(uint32_t *)(arg1 + 0x218) = 1;
       *(uint32_t *)(arg1 + 0x228) = 1;
       *(uint32_t *)(arg1 + 0x21c) = uVar8;
@@ -781,36 +776,34 @@ void SMBAnimalGroundEnemyUpdate(SceneObject2D *arg1)
     self = (Vector2 *)(arg1 + 0x14c);
     *(uint32_t *)(arg1 + 0xb8) = 0;
     *(uint32_t *)(arg1 + 0xbc) = 0;
-    iVar7 = Vector2__operator_eq(self,(Vector2 *)&SMBAnimalGroundEnemyUpdate__vUpGravity);
+    iVar7 = Vector2__operator_eq(self, (Vector2 *)&SMBAnimalGroundEnemyUpdate__vUpGravity);
     bVar10 = 1;
     if (iVar7 == 0) {
-      iVar7 = Vector2__operator_eq(self,(Vector2 *)&SMBAnimalGroundEnemyUpdate__vDownGravity);
+      iVar7 = Vector2__operator_eq(self, (Vector2 *)&SMBAnimalGroundEnemyUpdate__vDownGravity);
       bVar10 = 2;
       if (iVar7 == 0) {
-        iVar7 = Vector2__operator_eq(self,(Vector2 *)&SMBAnimalGroundEnemyUpdate__vLeftGravity);
+        iVar7 = Vector2__operator_eq(self, (Vector2 *)&SMBAnimalGroundEnemyUpdate__vLeftGravity);
         bVar10 = 4;
         if (iVar7 == 0) {
-          iVar7 = Vector2__operator_eq(self,(Vector2 *)&SMBAnimalGroundEnemyUpdate__vRightGravity);
+          iVar7 = Vector2__operator_eq(self, (Vector2 *)&SMBAnimalGroundEnemyUpdate__vRightGravity);
           bVar10 = ~-(iVar7 == 0) & 8;
         }
       }
     }
-    iVar7 = IsStickableTile(uVar3,arg1 + 0xa0,bVar10,(TileCollisionInfo *)(arg1 + 0x170));
+    iVar7 = IsStickableTile(uVar3, arg1 + 0xa0, bVar10, (TileCollisionInfo *)(arg1 + 0x170));
     if (iVar7 == 0) {
       *(uint *)(arg1 + 0x110) = *(uint *)(arg1 + 0x110) ^ DAT_005be6f0 /* R:u32=2147483648 */;
-    }
-    else {
+    } else {
       if (*(int *)(arg1 + 400) == 2) {
         local_68 = 0;
         local_64 = 0xc4098000;
-        Vector2__operator_assign(self,(Vector2 *)&local_68);
+        Vector2__operator_assign(self, (Vector2 *)&local_68);
         *(uint32_t *)(arg1 + 0xd8) = 0;
         *(uint *)(arg1 + 0xb8) = uVar3;
-      }
-      else if (*(int *)(arg1 + 400) == 1) {
+      } else if (*(int *)(arg1 + 400) == 1) {
         local_58 = 0;
         local_54 = 0x44098000;
-        Vector2__operator_assign(self,(Vector2 *)&local_58);
+        Vector2__operator_assign(self, (Vector2 *)&local_58);
         uVar5 = DAT_005be6f0 /* R:u32=2147483648 */;
         *(uint32_t *)(arg1 + 0xd8) = 0x40490fdb;
         *(uint *)(arg1 + 0xb8) = uVar5 ^ uVar3;
@@ -818,15 +811,14 @@ void SMBAnimalGroundEnemyUpdate(SceneObject2D *arg1)
       if (*(int *)(arg1 + 0x194) == 4) {
         local_48 = 0xc4098000;
         local_44 = 0;
-        Vector2__operator_assign(self,(Vector2 *)&local_48);
+        Vector2__operator_assign(self, (Vector2 *)&local_48);
         uVar5 = DAT_005be6f0 /* R:u32=2147483648 */;
         *(uint32_t *)(arg1 + 0xd8) = 0xbfc90fdb;
         *(uint *)(arg1 + 0xbc) = uVar5 ^ uVar3;
-      }
-      else if (*(int *)(arg1 + 0x194) == 8) {
+      } else if (*(int *)(arg1 + 0x194) == 8) {
         local_34 = 0;
         local_38 = 0x44098000;
-        Vector2__operator_assign(self,(Vector2 *)&local_38);
+        Vector2__operator_assign(self, (Vector2 *)&local_38);
         *(uint32_t *)(arg1 + 0xd8) = 0x3fc90fdb;
         *(uint *)(arg1 + 0xbc) = uVar3;
       }
@@ -838,120 +830,121 @@ void SMBAnimalGroundEnemyUpdate(SceneObject2D *arg1)
       iVar7 = 0;
       if (*(float *)(arg1 + 0xb8) < 0.0) {
         iVar7 = 8;
-        local_f8 = CONCAT44(DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH + *(float *)(arg1 + 0x1ec) +
-                            DAT_005c17d8 /* R:-0.009999999776482582f */,
-                            (*(float *)(arg1 + 0x1e8) - DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH) -
-                            fVar1);
+        local_f8 = CONCAT44(
+            DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH + *(float *)(arg1 + 0x1ec) +
+                DAT_005c17d8 /* R:-0.009999999776482582f */,
+            (*(float *)(arg1 + 0x1e8) - DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH) -
+                fVar1);
       }
-    }
-    else {
+    } else {
       iVar7 = 4;
-      local_f8 = CONCAT44(DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH + *(float *)(arg1 + 500) +
-                          DAT_005c17d8 /* R:-0.009999999776482582f */,
+      local_f8 = CONCAT44(DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH +
+                              *(float *)(arg1 + 500) + DAT_005c17d8 /* R:-0.009999999776482582f */,
                           fVar1 + *(float *)(arg1 + 0x1f0) +
-                          DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH);
+                              DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH);
     }
     local_e8 = 0;
     local_e4 = 0;
-    Vector2__operator_assign((Vector2 *)(arg1 + 0xb8),(Vector2 *)&local_e8);
-LAB_00487363:
+    Vector2__operator_assign((Vector2 *)(arg1 + 0xb8), (Vector2 *)&local_e8);
+  LAB_00487363:
     iVar6 = *(int *)(arg1 + 0x1e4);
-    if (iVar6 != 4) goto LAB_00487372;
-LAB_00487827:
+    if (iVar6 != 4)
+      goto LAB_00487372;
+  LAB_00487827:
     if (*(float *)(arg1 + 0xbc) <= 0.0) {
       if (*(float *)(arg1 + 0xbc) < 0.0) {
         iVar7 = 1;
-        local_f8 = CONCAT44((*(float *)(arg1 + 0x1fc) - DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH) -
-                            fVar2,DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH +
-                                  *(float *)(arg1 + 0x1f8) + DAT_005c17d8 /* R:-0.009999999776482582f */);
+        local_f8 = CONCAT44(
+            (*(float *)(arg1 + 0x1fc) - DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH) -
+                fVar2,
+            DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH + *(float *)(arg1 + 0x1f8) +
+                DAT_005c17d8 /* R:-0.009999999776482582f */);
       }
-    }
-    else {
+    } else {
       iVar7 = 2;
-      local_f8 = CONCAT44(fVar2 + *(float *)(arg1 + 0x204) +
-                          DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH,
-                          DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH + *(float *)(arg1 + 0x200) +
-                          DAT_005c17d8 /* R:-0.009999999776482582f */);
+      local_f8 = CONCAT44(
+          fVar2 + *(float *)(arg1 + 0x204) + DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH,
+          DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH + *(float *)(arg1 + 0x200) +
+              DAT_005c17d8 /* R:-0.009999999776482582f */);
     }
     local_c8 = 0;
     local_c4 = 0;
-    Vector2__operator_assign((Vector2 *)(arg1 + 0xb8),(Vector2 *)&local_c8);
-  }
-  else {
+    Vector2__operator_assign((Vector2 *)(arg1 + 0xb8), (Vector2 *)&local_c8);
+  } else {
     iVar7 = 0;
-    if (*(int *)(arg1 + 0x1e0) != 1) goto LAB_00487363;
+    if (*(int *)(arg1 + 0x1e0) != 1)
+      goto LAB_00487363;
     if (*(float *)(arg1 + 0xb8) <= 0.0) {
       if (*(float *)(arg1 + 0xb8) < 0.0) {
         iVar7 = 8;
-        local_f8 = CONCAT44((DAT_005c07b0 /* R:0.009999999776482582f */ + *(float *)(arg1 + 0x1ec)) -
-                            DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH,
-                            (*(float *)(arg1 + 0x1e8) - DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH) -
-                            fVar1);
+        local_f8 = CONCAT44(
+            (DAT_005c07b0 /* R:0.009999999776482582f */ + *(float *)(arg1 + 0x1ec)) -
+                DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH,
+            (*(float *)(arg1 + 0x1e8) - DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH) -
+                fVar1);
       }
-    }
-    else {
+    } else {
       iVar7 = 4;
-      local_f8 = CONCAT44((*(float *)(arg1 + 500) - DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH) -
-                          DAT_005c07b0 /* R:0.009999999776482582f */,
-                          fVar1 + *(float *)(arg1 + 0x1f0) +
-                          DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH);
+      local_f8 = CONCAT44(
+          (*(float *)(arg1 + 500) - DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH) -
+              DAT_005c07b0 /* R:0.009999999776482582f */,
+          fVar1 + *(float *)(arg1 + 0x1f0) + DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH);
     }
     local_d8 = 0;
     local_d4 = 0;
-    Vector2__operator_assign((Vector2 *)(arg1 + 0xb8),(Vector2 *)&local_d8);
+    Vector2__operator_assign((Vector2 *)(arg1 + 0xb8), (Vector2 *)&local_d8);
     iVar6 = *(int *)(arg1 + 0x1e4);
-    if (iVar6 == 4) goto LAB_00487827;
-LAB_00487372:
+    if (iVar6 == 4)
+      goto LAB_00487827;
+  LAB_00487372:
     if (iVar6 == 8) {
       if (*(float *)(arg1 + 0xbc) <= 0.0) {
         if (*(float *)(arg1 + 0xbc) < 0.0) {
           iVar7 = 1;
-          local_f8 = CONCAT44((*(float *)(arg1 + 0x1fc) - DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH)
-                              - fVar2,(DAT_005c07b0 /* R:0.009999999776482582f */ + *(float *)(arg1 + 0x1f8)) -
-                                      DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH);
+          local_f8 = CONCAT44(
+              (*(float *)(arg1 + 0x1fc) - DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH) -
+                  fVar2,
+              (DAT_005c07b0 /* R:0.009999999776482582f */ + *(float *)(arg1 + 0x1f8)) -
+                  DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH);
         }
-      }
-      else {
+      } else {
         iVar7 = 2;
-        local_f8 = CONCAT44(fVar2 + *(float *)(arg1 + 0x204) +
-                            DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH,
-                            (DAT_005c07b0 /* R:0.009999999776482582f */ + *(float *)(arg1 + 0x200)) -
-                            DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH);
+        local_f8 = CONCAT44(
+            fVar2 + *(float *)(arg1 + 0x204) + DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH,
+            (DAT_005c07b0 /* R:0.009999999776482582f */ + *(float *)(arg1 + 0x200)) -
+                DAT_005be6e4 /* R:0.5f */ * TileLevel__fLevelGridWH);
       }
       local_b8 = 0;
       local_b4 = 0;
-      Vector2__operator_assign((Vector2 *)(arg1 + 0xb8),(Vector2 *)&local_b8);
+      Vector2__operator_assign((Vector2 *)(arg1 + 0xb8), (Vector2 *)&local_b8);
     }
   }
   if (iVar7 == 2) {
     local_a8 = 0;
     local_a4 = 0xc4098000;
-    Vector2__operator_assign((Vector2 *)(arg1 + 0x14c),(Vector2 *)&local_a8);
-  }
-  else if (iVar7 == 1) {
+    Vector2__operator_assign((Vector2 *)(arg1 + 0x14c), (Vector2 *)&local_a8);
+  } else if (iVar7 == 1) {
     local_98 = 0;
     local_94 = 0x44098000;
-    Vector2__operator_assign((Vector2 *)(arg1 + 0x14c),(Vector2 *)&local_98);
-  }
-  else if (iVar7 == 8) {
+    Vector2__operator_assign((Vector2 *)(arg1 + 0x14c), (Vector2 *)&local_98);
+  } else if (iVar7 == 8) {
     local_88 = 0x44098000;
     local_84 = 0;
-    Vector2__operator_assign((Vector2 *)(arg1 + 0x14c),(Vector2 *)&local_88);
-  }
-  else if (iVar7 == 4) {
+    Vector2__operator_assign((Vector2 *)(arg1 + 0x14c), (Vector2 *)&local_88);
+  } else if (iVar7 == 4) {
     local_78 = 0xc4098000;
     local_74 = 0;
-    Vector2__operator_assign((Vector2 *)(arg1 + 0x14c),(Vector2 *)&local_78);
+    Vector2__operator_assign((Vector2 *)(arg1 + 0x14c), (Vector2 *)&local_78);
   }
 LAB_004873b1:
-  Vector2__operator_plus_assign((Vector2 *)(arg1 + 0xec),(Vector2 *)(arg1 + 0x14c));
-  Vector2__operator_assign((Vector2 *)(arg1 + 0xa0),(Vector2 *)&local_f8);
+  Vector2__operator_plus_assign((Vector2 *)(arg1 + 0xec), (Vector2 *)(arg1 + 0x14c));
+  Vector2__operator_assign((Vector2 *)(arg1 + 0xa0), (Vector2 *)&local_f8);
   if (*(float *)(arg1 + 0x110) <= 0.0) {
     if (*(float *)(arg1 + 0x110) < 0.0) {
-      *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^ DAT_005be6f0 /* R:u32=2147483648 */;
+      *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^
+                               DAT_005be6f0 /* R:u32=2147483648 */;
     }
-  }
-  else {
+  } else {
     *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */;
   }
   *(uint64_t *)(arg1 + 0x1c0) = *(uint64_t *)(arg1 + 0x170);
@@ -960,10 +953,10 @@ LAB_004873b1:
   *(uint64_t *)(arg1 + 0x1d8) = *(uint64_t *)(arg1 + 0x188);
   *(uint32_t *)(arg1 + 0x1e0) = *(uint32_t *)(arg1 + 400);
   *(uint32_t *)(arg1 + 0x1e4) = *(uint32_t *)(arg1 + 0x194);
-  Vector2__operator_assign((Vector2 *)(arg1 + 0x1e8),(Vector2 *)(arg1 + 0x198));
-  Vector2__operator_assign((Vector2 *)(arg1 + 0x1f0),(Vector2 *)(arg1 + 0x1a0));
-  Vector2__operator_assign((Vector2 *)(arg1 + 0x1f8),(Vector2 *)(arg1 + 0x1a8));
-  Vector2__operator_assign((Vector2 *)(arg1 + 0x200),(Vector2 *)(arg1 + 0x1b0));
+  Vector2__operator_assign((Vector2 *)(arg1 + 0x1e8), (Vector2 *)(arg1 + 0x198));
+  Vector2__operator_assign((Vector2 *)(arg1 + 0x1f0), (Vector2 *)(arg1 + 0x1a0));
+  Vector2__operator_assign((Vector2 *)(arg1 + 0x1f8), (Vector2 *)(arg1 + 0x1a8));
+  Vector2__operator_assign((Vector2 *)(arg1 + 0x200), (Vector2 *)(arg1 + 0x1b0));
   *(uint32_t *)(arg1 + 0x208) = *(uint32_t *)(arg1 + 0x1b8);
   return;
 }
@@ -987,26 +980,25 @@ void SMBBooUpdate(SceneObject2D *arg1)
   float fVar5;
   float local_58;
   float local_54;
-  Vector2 local_48 [16];
-  Vector2 local_38 [16];
-  Vector2 local_28 [24];
-  
+  Vector2 local_48[16];
+  Vector2 local_38[16];
+  Vector2 local_28[24];
+
   if (*(int *)(arg1 + 0x218) == 9) {
     return;
   }
-  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette,4);
-  SMBPalette__DisableFlags(GSuperMeatBoy__pLevelPalette,0x1b);
-  Apply2DPhysics(arg1,fOneFrameTimeStep);
+  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette, 4);
+  SMBPalette__DisableFlags(GSuperMeatBoy__pLevelPalette, 0x1b);
+  Apply2DPhysics(arg1, fOneFrameTimeStep);
   self = SuperMeatBoy;
-  *(uint *)(arg1 + 0xd0) =
-       ~-(uint)(*(float *)(arg1 + 0xb8) < 0.0) & DAT_005c07a4 /* R:-1.0f */ |
-       DAT_005be894 /* R:1.0f */ & -(uint)(*(float *)(arg1 + 0xb8) < 0.0);
-  lVar4 = GSuperMeatBoy__getChar(self,0);
-  Vector2__operator_minus__005be180((Vector2 *)&local_58,(Vector2 *)(lVar4 + 0xa0));
+  *(uint *)(arg1 + 0xd0) = ~-(uint)(*(float *)(arg1 + 0xb8) < 0.0) & DAT_005c07a4 /* R:-1.0f */ |
+                           DAT_005be894 /* R:1.0f */ & -(uint)(*(float *)(arg1 + 0xb8) < 0.0);
+  lVar4 = GSuperMeatBoy__getChar(self, 0);
+  Vector2__operator_minus__005be180((Vector2 *)&local_58, (Vector2 *)(lVar4 + 0xa0));
   fVar5 = (float)Vector2__LengthSq((Vector2 *)&local_58);
   if (fVar5 <= DAT_005c17dc /* R:160000.0f */) {
     if (0.0 < fVar5) {
-      Vector2__operator_div_assign__005be2c0((Vector2 *)&local_58,SQRT(fVar5));
+      Vector2__operator_div_assign__005be2c0((Vector2 *)&local_58, SQRT(fVar5));
     }
     if (fVar5 <= DAT_005c17e0 /* R:22500.0f */) {
       if (*(int *)(arg1 + 0x218) != 8) {
@@ -1014,37 +1006,36 @@ void SMBBooUpdate(SceneObject2D *arg1)
         lVar4 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x310 + *(long *)(arg1 + 0x230);
         uVar1 = *(ushort *)(lVar4 + 0x28);
         if (uVar1 != 0) {
-          uVar3 = GetRandomINT(0,uVar1 - 1);
+          uVar3 = GetRandomINT(0, uVar1 - 1);
         }
         *(uint32_t *)(lVar4 + 0x50) = uVar3;
         *(uint32_t *)(arg1 + 0x220) = 0;
-        uVar3 = *(uint32_t *)
-                 ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x360);
+        uVar3 =
+            *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x360);
         *(uint32_t *)(arg1 + 0x218) = 8;
         *(uint32_t *)(arg1 + 0x228) = 1;
         *(uint32_t *)(arg1 + 0x21c) = uVar3;
       }
-      Vector2__operator_mul__005be200(local_48,DAT_005be890 /* R:200.0f */);
-      Vector2__operator_plus_assign((Vector2 *)(arg1 + 0xec),local_48);
-    }
-    else {
+      Vector2__operator_mul__005be200(local_48, DAT_005be890 /* R:200.0f */);
+      Vector2__operator_plus_assign((Vector2 *)(arg1 + 0xec), local_48);
+    } else {
       if (*(int *)(arg1 + 0x218) != 7) {
         uVar3 = 0;
         lVar4 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x2b8 + *(long *)(arg1 + 0x230);
         uVar1 = *(ushort *)(lVar4 + 0x28);
         if (uVar1 != 0) {
-          uVar3 = GetRandomINT(0,uVar1 - 1);
+          uVar3 = GetRandomINT(0, uVar1 - 1);
         }
         *(uint32_t *)(lVar4 + 0x50) = uVar3;
         *(uint32_t *)(arg1 + 0x220) = 0;
-        uVar3 = *(uint32_t *)
-                 ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x308);
+        uVar3 =
+            *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x308);
         *(uint32_t *)(arg1 + 0x218) = 7;
         *(uint32_t *)(arg1 + 0x228) = 1;
         *(uint32_t *)(arg1 + 0x21c) = uVar3;
       }
-      Vector2__operator_mul__005be200(local_38,DAT_005c1400 /* R:100.0f */);
-      Vector2__operator_plus_assign((Vector2 *)(arg1 + 0xec),local_38);
+      Vector2__operator_mul__005be200(local_38, DAT_005c1400 /* R:100.0f */);
+      Vector2__operator_plus_assign((Vector2 *)(arg1 + 0xec), local_38);
     }
     *(uint32_t *)(arg1 + 0x210) = 5;
     goto LAB_00487ebc;
@@ -1052,47 +1043,48 @@ void SMBBooUpdate(SceneObject2D *arg1)
   iVar2 = *(int *)(arg1 + 0x210);
   if (iVar2 == 5) {
     *(uint32_t *)(arg1 + 0x210) = 2;
-LAB_00488132:
-    Vector2__operator_mul_assign__005be220((Vector2 *)(arg1 + 0xb8),DAT_005c17e4 /* R:0.8999999761581421f */);
+  LAB_00488132:
+    Vector2__operator_mul_assign__005be220((Vector2 *)(arg1 + 0xb8),
+                                           DAT_005c17e4 /* R:0.8999999761581421f */);
     if (_DAT_005bff44 /* R:5.0f */ < *(float *)(arg1 + 0x80)) {
       iVar2 = *(int *)(arg1 + 0x210);
       goto LAB_00487e3f;
     }
     *(uint32_t *)(arg1 + 0x210) = 1;
-LAB_0048816b:
-    Vector2__operator_mul__005be200(local_28,_DAT_005bfba8 /* R:0.10000000149011612f */);
-    Vector2__operator_plus_assign((Vector2 *)(arg1 + 0xec),local_28);
+  LAB_0048816b:
+    Vector2__operator_mul__005be200(local_28, _DAT_005bfba8 /* R:0.10000000149011612f */);
+    Vector2__operator_plus_assign((Vector2 *)(arg1 + 0xec), local_28);
     if (_DAT_005bfd00 /* R:10.0f */ < *(float *)(arg1 + 0x80)) {
       *(uint32_t *)(arg1 + 0x210) = 2;
     }
-  }
-  else {
-    if (iVar2 == 2) goto LAB_00488132;
-LAB_00487e3f:
-    if (iVar2 == 1) goto LAB_0048816b;
+  } else {
+    if (iVar2 == 2)
+      goto LAB_00488132;
+  LAB_00487e3f:
+    if (iVar2 == 1)
+      goto LAB_0048816b;
   }
   if (*(int *)(arg1 + 0x218) != 0) {
     uVar3 = 0;
     lVar4 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x50 + *(long *)(arg1 + 0x230);
     uVar1 = *(ushort *)(lVar4 + 0x28);
     if (uVar1 != 0) {
-      uVar3 = GetRandomINT(0,uVar1 - 1);
+      uVar3 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar4 + 0x50) = uVar3;
     *(uint32_t *)(arg1 + 0x220) = 0;
-    uVar3 = *(uint32_t *)
-             ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
+    uVar3 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
     *(uint32_t *)(arg1 + 0x218) = 0;
     *(uint32_t *)(arg1 + 0x228) = 1;
     *(uint32_t *)(arg1 + 0x21c) = uVar3;
   }
 LAB_00487ebc:
-  if (((0.0 < local_58) && (*(float *)(arg1 + 0xb8) <= 0.0 && *(float *)(arg1 + 0xb8) != 0.0))
-     || ((local_58 < 0.0 && (0.0 < *(float *)(arg1 + 0xb8))))) {
+  if (((0.0 < local_58) && (*(float *)(arg1 + 0xb8) <= 0.0 && *(float *)(arg1 + 0xb8) != 0.0)) ||
+      ((local_58 < 0.0 && (0.0 < *(float *)(arg1 + 0xb8))))) {
     *(float *)(arg1 + 0xec) = DAT_005c17e8 /* R:4.0f */ * *(float *)(arg1 + 0xec);
   }
-  if (((local_54 <= 0.0) || (0.0 < *(float *)(arg1 + 0xbc) || *(float *)(arg1 + 0xbc) == 0.0))
-     && ((0.0 <= local_54 || (*(float *)(arg1 + 0xbc) <= 0.0)))) {
+  if (((local_54 <= 0.0) || (0.0 < *(float *)(arg1 + 0xbc) || *(float *)(arg1 + 0xbc) == 0.0)) &&
+      ((0.0 <= local_54 || (*(float *)(arg1 + 0xbc) <= 0.0)))) {
     return;
   }
   *(float *)(arg1 + 0xf0) = DAT_005c17e8 /* R:4.0f */ * *(float *)(arg1 + 0xf0);
@@ -1113,42 +1105,39 @@ void SMBHellBossBoyUpdate(SceneObject2D *arg1)
   int iVar3;
   uint32_t uVar4;
   long lVar5;
-  
-  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette,4);
-  SMBPalette__DisableFlags(GSuperMeatBoy__pLevelPalette,0x1b);
-  Apply2DPhysics(arg1,fOneFrameTimeStep);
+
+  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette, 4);
+  SMBPalette__DisableFlags(GSuperMeatBoy__pLevelPalette, 0x1b);
+  Apply2DPhysics(arg1, fOneFrameTimeStep);
   lVar5 = SuperMeatBoy;
   *(float *)(arg1 + 0xf0) = *(float *)(arg1 + 0xf0) - DAT_005c0060 /* R:350.0f */;
-  TileLevel__TileCollision
-            (*(TileLevel **)(lVar5 + 0x40),arg1,(TileCollisionInfo *)(arg1 + 0x170));
+  TileLevel__TileCollision(*(TileLevel **)(lVar5 + 0x40), arg1,
+                           (TileCollisionInfo *)(arg1 + 0x170));
   if (*(int *)(arg1 + 400) == 2) {
     if (*(int *)(arg1 + 0x218) != 0) {
       uVar4 = 0;
       lVar5 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x50 + *(long *)(arg1 + 0x230);
       uVar1 = *(ushort *)(lVar5 + 0x28);
       if (uVar1 != 0) {
-        uVar4 = GetRandomINT(0,uVar1 - 1);
+        uVar4 = GetRandomINT(0, uVar1 - 1);
       }
       *(uint32_t *)(lVar5 + 0x50) = uVar4;
       *(uint32_t *)(arg1 + 0x220) = 0;
-      uVar4 = *(uint32_t *)
-               ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
+      uVar4 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
       *(uint32_t *)(arg1 + 0x218) = 0;
       *(uint32_t *)(arg1 + 0x228) = 1;
       *(uint32_t *)(arg1 + 0x21c) = uVar4;
     }
-  }
-  else if (*(int *)(arg1 + 0x218) != 4) {
+  } else if (*(int *)(arg1 + 0x218) != 4) {
     uVar4 = 0;
     lVar5 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x1b0 + *(long *)(arg1 + 0x230);
     uVar1 = *(ushort *)(lVar5 + 0x28);
     if (uVar1 != 0) {
-      uVar4 = GetRandomINT(0,uVar1 - 1);
+      uVar4 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar5 + 0x50) = uVar4;
     *(uint32_t *)(arg1 + 0x220) = 0;
-    uVar4 = *(uint32_t *)
-             ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x200);
+    uVar4 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x200);
     *(uint32_t *)(arg1 + 0x218) = 4;
     *(uint32_t *)(arg1 + 0x228) = 1;
     *(uint32_t *)(arg1 + 0x21c) = uVar4;
@@ -1165,12 +1154,11 @@ void SMBHellBossBoyUpdate(SceneObject2D *arg1)
         lVar5 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x208 + *(long *)(arg1 + 0x230);
         uVar1 = *(ushort *)(lVar5 + 0x28);
         if (uVar1 != 0) {
-          uVar4 = GetRandomINT(0,uVar1 - 1);
+          uVar4 = GetRandomINT(0, uVar1 - 1);
         }
         *(uint32_t *)(lVar5 + 0x50) = uVar4;
         *(uint32_t *)(arg1 + 0x220) = 0;
-        uVar4 = *(uint32_t *)
-                 ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 600);
+        uVar4 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 600);
         *(uint32_t *)(arg1 + 0x218) = 5;
         *(uint32_t *)(arg1 + 0x228) = 1;
         *(uint32_t *)(arg1 + 0x21c) = uVar4;
@@ -1207,19 +1195,19 @@ void SMBAnimalAirCritterUpdate(SceneObject2D *arg1)
   uint32_t uVar7;
   long lVar8;
   float fVar9;
-  Vector2 local_28 [24];
-  
-  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette,4);
-  SMBPalette__DisableFlags(GSuperMeatBoy__pLevelPalette,0x1b);
-  Apply2DPhysics(arg1,fOneFrameTimeStep);
+  Vector2 local_28[24];
+
+  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette, 4);
+  SMBPalette__DisableFlags(GSuperMeatBoy__pLevelPalette, 0x1b);
+  Apply2DPhysics(arg1, fOneFrameTimeStep);
   pGVar3 = SuperMeatBoy;
   *(float *)(arg1 + 0xf0) = *(float *)(arg1 + 0xf0) - _DAT_005c17d4 /* R:550.0f */;
-  GSuperMeatBoy__getChar(pGVar3,0);
-  Vector2__operator_minus__005be180(local_28,(Vector2 *)(arg1 + 0xa0));
+  GSuperMeatBoy__getChar(pGVar3, 0);
+  Vector2__operator_minus__005be180(local_28, (Vector2 *)(arg1 + 0xa0));
   fVar9 = (float)Vector2__LengthSq(local_28);
   iVar4 = *(int *)(arg1 + 400);
-  TileLevel__TileCollision
-            (*(TileLevel **)(SuperMeatBoy + 0x40),arg1,(TileCollisionInfo *)(arg1 + 0x170));
+  TileLevel__TileCollision(*(TileLevel **)(SuperMeatBoy + 0x40), arg1,
+                           (TileCollisionInfo *)(arg1 + 0x170));
   if (*(float *)(arg1 + 0x118) <= fVar9) {
     if (iVar4 != 0) {
       *(uint32_t *)(arg1 + 0xb8) = 0;
@@ -1228,44 +1216,41 @@ void SMBAnimalAirCritterUpdate(SceneObject2D *arg1)
       fVar9 = *(float *)(arg1 + 0x110);
       goto LAB_00488a75;
     }
-  }
-  else {
+  } else {
     if (*(float *)(arg1 + 0xb8) == 0.0) {
       if (*(int *)(arg1 + 0x214) == 0x11) {
-        iVar6 = GetRandomINT(0x14,0x19);
+        iVar6 = GetRandomINT(0x14, 0x19);
         *(uint *)(arg1 + 0x110) = (uint)(float)iVar6 ^ DAT_005be6f0 /* R:u32=2147483648 */;
         iVar5 = GetRandomINT(200);
         iVar6 = *(int *)(arg1 + 0x214);
         *(float *)(arg1 + 0x114) = (float)iVar5;
-LAB_00488e14:
+      LAB_00488e14:
         if (iVar6 == 0x11) {
           *(uint32_t *)(arg1 + 0x118) = 0x47742400;
           goto LAB_00488a3a;
         }
-      }
-      else {
+      } else {
         iVar5 = GetRandomINT(0x96);
         iVar6 = *(int *)(arg1 + 0x214);
         *(float *)(arg1 + 0x110) = (float)iVar5;
-        if (1 < iVar6 - 6U) goto LAB_00488e14;
+        if (1 < iVar6 - 6U)
+          goto LAB_00488e14;
         *(float *)(arg1 + 0x110) = (float)iVar5 * DAT_005be6e8 /* R:0.25f */;
       }
       iVar6 = GetRandomINT(100);
       *(float *)(arg1 + 0x118) = (float)iVar6 * (float)iVar6;
     }
-LAB_00488a3a:
+  LAB_00488a3a:
     if (iVar4 == 2) {
       fVar1 = *(float *)(arg1 + 0xa0);
-      lVar8 = GSuperMeatBoy__getChar(SuperMeatBoy,0);
+      lVar8 = GSuperMeatBoy__getChar(SuperMeatBoy, 0);
       fVar9 = *(float *)(arg1 + 0x110);
       if (*(float *)(lVar8 + 0xa0) <= fVar1) {
         *(float *)(arg1 + 0xb8) = fVar9;
-      }
-      else {
+      } else {
         *(uint *)(arg1 + 0xb8) = DAT_005be6f0 /* R:u32=2147483648 */ ^ (uint)fVar9;
       }
-    }
-    else {
+    } else {
       fVar9 = *(float *)(arg1 + 0x110);
     }
     if (*(int *)(arg1 + 0x210) != 0) {
@@ -1273,11 +1258,11 @@ LAB_00488a3a:
       *(uint32_t *)(arg1 + 0x11c) = 0;
       *(uint32_t *)(arg1 + 0x120) = 0;
     }
-LAB_00488a75:
+  LAB_00488a75:
     pGVar3 = SuperMeatBoy;
     *(float *)(arg1 + 0xbc) = fVar9 + _DAT_005bff44 /* R:5.0f */;
     fVar9 = *(float *)(arg1 + 0xa0);
-    lVar8 = GSuperMeatBoy__getChar(pGVar3,0);
+    lVar8 = GSuperMeatBoy__getChar(pGVar3, 0);
     if (*(float *)(lVar8 + 0xa0) <= fVar9) {
       iVar4 = *(int *)(arg1 + 400);
       *(uint32_t *)(arg1 + 0xb8) = *(uint32_t *)(arg1 + 0x110);
@@ -1293,45 +1278,40 @@ joined_r0x00488d43:
       lVar8 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x50 + *(long *)(arg1 + 0x230);
       uVar2 = *(ushort *)(lVar8 + 0x28);
       if (uVar2 != 0) {
-        uVar7 = GetRandomINT(0,uVar2 - 1);
+        uVar7 = GetRandomINT(0, uVar2 - 1);
       }
       *(uint32_t *)(lVar8 + 0x50) = uVar7;
       *(uint32_t *)(arg1 + 0x220) = 0;
-      uVar7 = *(uint32_t *)
-               ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
+      uVar7 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
       *(uint32_t *)(arg1 + 0x218) = 0;
       *(uint32_t *)(arg1 + 0x228) = 1;
       *(uint32_t *)(arg1 + 0x21c) = uVar7;
     }
-  }
-  else if (*(float *)(arg1 + 0xbc) <= 0.0) {
+  } else if (*(float *)(arg1 + 0xbc) <= 0.0) {
     if ((*(float *)(arg1 + 0xbc) < 0.0) && (*(int *)(arg1 + 0x218) != 4)) {
       uVar7 = 0;
       lVar8 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x1b0 + *(long *)(arg1 + 0x230);
       uVar2 = *(ushort *)(lVar8 + 0x28);
       if (uVar2 != 0) {
-        uVar7 = GetRandomINT(0,uVar2 - 1);
+        uVar7 = GetRandomINT(0, uVar2 - 1);
       }
       *(uint32_t *)(lVar8 + 0x50) = uVar7;
       *(uint32_t *)(arg1 + 0x220) = 0;
-      uVar7 = *(uint32_t *)
-               ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x200);
+      uVar7 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x200);
       *(uint32_t *)(arg1 + 0x218) = 4;
       *(uint32_t *)(arg1 + 0x228) = 1;
       *(uint32_t *)(arg1 + 0x21c) = uVar7;
     }
-  }
-  else if (*(int *)(arg1 + 0x218) != 3) {
+  } else if (*(int *)(arg1 + 0x218) != 3) {
     uVar7 = 0;
     lVar8 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x158 + *(long *)(arg1 + 0x230);
     uVar2 = *(ushort *)(lVar8 + 0x28);
     if (uVar2 != 0) {
-      uVar7 = GetRandomINT(0,uVar2 - 1);
+      uVar7 = GetRandomINT(0, uVar2 - 1);
     }
     *(uint32_t *)(lVar8 + 0x50) = uVar7;
     *(uint32_t *)(arg1 + 0x220) = 0;
-    uVar7 = *(uint32_t *)
-             ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x1a8);
+    uVar7 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x1a8);
     *(uint32_t *)(arg1 + 0x218) = 3;
     *(uint32_t *)(arg1 + 0x228) = 1;
     *(uint32_t *)(arg1 + 0x21c) = uVar7;
@@ -1340,19 +1320,18 @@ joined_r0x00488d43:
   lVar8 = *(long *)(arg1 + 0x48);
   *(uint32_t *)(lVar8 + 0x50) = *(uint32_t *)(arg1 + 0xa0);
   *(uint32_t *)(lVar8 + 0x60) = *(uint32_t *)(arg1 + 0xa4);
-  iVar4 = SMBPalette__ObstacleCollision(self,arg1,(Bounds *)0x0);
+  iVar4 = SMBPalette__ObstacleCollision(self, arg1, (Bounds *)0x0);
   if (iVar4 == 1) {
     if (*(int *)(arg1 + 0x218) != 5) {
       uVar7 = 0;
       lVar8 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x208 + *(long *)(arg1 + 0x230);
       uVar2 = *(ushort *)(lVar8 + 0x28);
       if (uVar2 != 0) {
-        uVar7 = GetRandomINT(0,uVar2 - 1);
+        uVar7 = GetRandomINT(0, uVar2 - 1);
       }
       *(uint32_t *)(lVar8 + 0x50) = uVar7;
       *(uint32_t *)(arg1 + 0x220) = 0;
-      uVar7 = *(uint32_t *)
-               ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 600);
+      uVar7 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 600);
       *(uint32_t *)(arg1 + 0x218) = 5;
       *(uint32_t *)(arg1 + 0x228) = 1;
       *(uint32_t *)(arg1 + 0x21c) = uVar7;
@@ -1364,16 +1343,17 @@ joined_r0x00488d43:
     }
   }
   if (*(float *)(arg1 + 0xb8) < 0.0) {
-    *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^ DAT_005be6f0 /* R:u32=2147483648 */;
-  }
-  else if (0.0 < *(float *)(arg1 + 0xb8)) {
+    *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^
+                             DAT_005be6f0 /* R:u32=2147483648 */;
+  } else if (0.0 < *(float *)(arg1 + 0xb8)) {
     *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */;
   }
   if (*(int *)(arg1 + 0x218) == 0) {
     fVar9 = *(float *)(arg1 + 0xa0);
-    lVar8 = GSuperMeatBoy__getChar(SuperMeatBoy,0);
+    lVar8 = GSuperMeatBoy__getChar(SuperMeatBoy, 0);
     if (*(float *)(lVar8 + 0xa0) <= fVar9 && fVar9 != *(float *)(lVar8 + 0xa0)) {
-      *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^ DAT_005be6f0 /* R:u32=2147483648 */;
+      *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^
+                               DAT_005be6f0 /* R:u32=2147483648 */;
       return;
     }
     *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */;
@@ -1399,17 +1379,17 @@ void SMBBossGroundCritterUpdate(SceneObject2D *arg1)
   uint32_t uVar4;
   long lVar5;
   float fVar6;
-  Vector2 aVStack_48 [16];
-  Vector2 local_38 [16];
-  Vector2 local_28 [16];
-  
-  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette,4);
-  SMBPalette__DisableFlags(GSuperMeatBoy__pLevelPalette,0x1b);
-  Apply2DPhysics(arg1,fOneFrameTimeStep);
+  Vector2 aVStack_48[16];
+  Vector2 local_38[16];
+  Vector2 local_28[16];
+
+  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette, 4);
+  SMBPalette__DisableFlags(GSuperMeatBoy__pLevelPalette, 0x1b);
+  Apply2DPhysics(arg1, fOneFrameTimeStep);
   lVar5 = SuperMeatBoy;
   *(float *)(arg1 + 0xf0) = *(float *)(arg1 + 0xf0) - _DAT_005c17d4 /* R:550.0f */;
-  TileLevel__TileCollision
-            (*(TileLevel **)(lVar5 + 0x40),arg1,(TileCollisionInfo *)(arg1 + 0x170));
+  TileLevel__TileCollision(*(TileLevel **)(lVar5 + 0x40), arg1,
+                           (TileCollisionInfo *)(arg1 + 0x170));
   lVar5 = *(long *)(arg1 + 0x48);
   *(uint32_t *)(lVar5 + 0x50) = *(uint32_t *)(arg1 + 0xa0);
   *(uint32_t *)(lVar5 + 0x60) = *(uint32_t *)(arg1 + 0xa4);
@@ -1423,12 +1403,11 @@ void SMBBossGroundCritterUpdate(SceneObject2D *arg1)
       lVar5 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0xa8 + *(long *)(arg1 + 0x230);
       uVar1 = *(ushort *)(lVar5 + 0x28);
       if (uVar1 != 0) {
-        uVar4 = GetRandomINT(0,uVar1 - 1);
+        uVar4 = GetRandomINT(0, uVar1 - 1);
       }
       *(uint32_t *)(lVar5 + 0x50) = uVar4;
       *(uint32_t *)(arg1 + 0x220) = 0;
-      uVar4 = *(uint32_t *)
-               ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xf8);
+      uVar4 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xf8);
       *(uint32_t *)(arg1 + 0x218) = 1;
       *(uint32_t *)(arg1 + 0x228) = 1;
       *(uint32_t *)(arg1 + 0x21c) = uVar4;
@@ -1440,8 +1419,7 @@ void SMBBossGroundCritterUpdate(SceneObject2D *arg1)
       *(uint32_t *)(arg1 + 0x120) = 0;
       return;
     }
-  }
-  else if (*(int *)(arg1 + 0x210) != 5) {
+  } else if (*(int *)(arg1 + 0x210) != 5) {
     return;
   }
   if (*(long *)(arg1 + 400) == 0) {
@@ -1452,13 +1430,12 @@ void SMBBossGroundCritterUpdate(SceneObject2D *arg1)
       *(float *)(arg1 + 0xa0) == *(float *)(arg1 + (long)iVar3 * 8 + 0x124)) {
     *(uint32_t *)(arg1 + 0xb8) = 0x437a0000;
     *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & uVar2;
-  }
-  else {
+  } else {
     *(uint32_t *)(arg1 + 0xb8) = 0xc37a0000;
     *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & uVar2 ^ DAT_005be6f0 /* R:u32=2147483648 */;
   }
   if (iVar3 == 0) {
-    Vector2__operator_minus__005be180(aVStack_48,(Vector2 *)(arg1 + 0xa0));
+    Vector2__operator_minus__005be180(aVStack_48, (Vector2 *)(arg1 + 0xa0));
     fVar6 = (float)Vector2__Length(aVStack_48);
     if (fVar6 <= DAT_005c13fc /* R:20.0f */) {
       *(uint32_t *)(arg1 + 0x224) = 1;
@@ -1471,8 +1448,8 @@ void SMBBossGroundCritterUpdate(SceneObject2D *arg1)
   }
 LAB_0048927c:
   (**(code **)(*CurrentSMBBoss + 0x40))(local_38);
-  Vector2__operator_assign((Vector2 *)(arg1 + 300),local_38);
-  Vector2__operator_minus__005be180(local_28,(Vector2 *)(arg1 + 0xa0));
+  Vector2__operator_assign((Vector2 *)(arg1 + 300), local_38);
+  Vector2__operator_minus__005be180(local_28, (Vector2 *)(arg1 + 0xa0));
   fVar6 = (float)Vector2__Length(local_28);
   if ((fVar6 <= DAT_005be890 /* R:200.0f */) && (*(int *)(arg1 + 400) == 2)) {
     *(uint32_t *)(arg1 + 0xbc) = 0x437a0000;
@@ -1500,20 +1477,20 @@ void SMBAnimalGroundCritterUpdate(SceneObject2D *arg1)
   uint32_t uVar5;
   long lVar6;
   float fVar7;
-  Vector2 local_38 [16];
-  Vector2 local_28 [16];
-  
-  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette,4);
-  SMBPalette__DisableFlags(GSuperMeatBoy__pLevelPalette,0x1b);
-  Apply2DPhysics(arg1,fOneFrameTimeStep);
+  Vector2 local_38[16];
+  Vector2 local_28[16];
+
+  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette, 4);
+  SMBPalette__DisableFlags(GSuperMeatBoy__pLevelPalette, 0x1b);
+  Apply2DPhysics(arg1, fOneFrameTimeStep);
   this_00 = SuperMeatBoy;
   *(float *)(arg1 + 0xf0) = *(float *)(arg1 + 0xf0) - _DAT_005c17d4 /* R:550.0f */;
-  GSuperMeatBoy__getChar(this_00,0);
-  Vector2__operator_minus__005be180(local_38,(Vector2 *)(arg1 + 0xa0));
+  GSuperMeatBoy__getChar(this_00, 0);
+  Vector2__operator_minus__005be180(local_38, (Vector2 *)(arg1 + 0xa0));
   fVar7 = (float)Vector2__LengthSq(local_38);
   iVar2 = *(int *)(arg1 + 400);
-  TileLevel__TileCollision
-            (*(TileLevel **)(SuperMeatBoy + 0x40),arg1,(TileCollisionInfo *)(arg1 + 0x170));
+  TileLevel__TileCollision(*(TileLevel **)(SuperMeatBoy + 0x40), arg1,
+                           (TileCollisionInfo *)(arg1 + 0x170));
   if (*(float *)(arg1 + 0x118) <= fVar7) {
     if (iVar2 != 0) {
       *(uint32_t *)(arg1 + 0xb8) = 0;
@@ -1522,50 +1499,47 @@ void SMBAnimalGroundCritterUpdate(SceneObject2D *arg1)
     if (iVar2 == 0) {
       *(uint32_t *)(arg1 + 0x210) = 2;
       *(uint32_t *)(arg1 + 0x11c) = 0;
-      iVar4 = GetRandomINT(3,5);
+      iVar4 = GetRandomINT(3, 5);
       iVar2 = *(int *)(arg1 + 0x210);
       *(float *)(arg1 + 0x120) = (float)iVar4;
     }
-    if ((iVar2 == 2) &&
-       (*(float *)(arg1 + 0x120) <= *(float *)(arg1 + 0x11c) &&
-        *(float *)(arg1 + 0x11c) != *(float *)(arg1 + 0x120))) {
+    if ((iVar2 == 2) && (*(float *)(arg1 + 0x120) <= *(float *)(arg1 + 0x11c) &&
+                         *(float *)(arg1 + 0x11c) != *(float *)(arg1 + 0x120))) {
       *(uint32_t *)(arg1 + 0x11c) = 0;
       *(uint32_t *)(arg1 + 0x210) = 1;
       SMBAnimal__SetAIState(arg1);
     }
-  }
-  else {
+  } else {
     if (*(float *)(arg1 + 0xb8) == 0.0) {
       if (*(int *)(arg1 + 0x214) == 0x11) {
-        iVar4 = GetRandomINT(0x14,0x19);
+        iVar4 = GetRandomINT(0x14, 0x19);
         *(uint *)(arg1 + 0x110) = (uint)(float)iVar4 ^ DAT_005be6f0 /* R:u32=2147483648 */;
         iVar3 = GetRandomINT(200);
         iVar4 = *(int *)(arg1 + 0x214);
         *(float *)(arg1 + 0x114) = (float)iVar3;
-LAB_00489b14:
+      LAB_00489b14:
         if (iVar4 == 0x11) {
           *(uint32_t *)(arg1 + 0x118) = 0x47742400;
           goto LAB_00489462;
         }
-      }
-      else {
+      } else {
         iVar3 = GetRandomINT(0x96);
         iVar4 = *(int *)(arg1 + 0x214);
         *(float *)(arg1 + 0x110) = (float)iVar3;
-        if (1 < iVar4 - 6U) goto LAB_00489b14;
+        if (1 < iVar4 - 6U)
+          goto LAB_00489b14;
         *(float *)(arg1 + 0x110) = (float)iVar3 * DAT_005be6e8 /* R:0.25f */;
       }
       iVar4 = GetRandomINT(100);
       *(float *)(arg1 + 0x118) = (float)iVar4 * (float)iVar4;
     }
-LAB_00489462:
+  LAB_00489462:
     if (iVar2 == 2) {
       fVar7 = *(float *)(arg1 + 0xa0);
-      lVar6 = GSuperMeatBoy__getChar(SuperMeatBoy,0);
+      lVar6 = GSuperMeatBoy__getChar(SuperMeatBoy, 0);
       if (*(float *)(lVar6 + 0xa0) <= fVar7) {
         *(uint32_t *)(arg1 + 0xb8) = *(uint32_t *)(arg1 + 0x110);
-      }
-      else {
+      } else {
         *(uint *)(arg1 + 0xb8) = *(uint *)(arg1 + 0x110) ^ DAT_005be6f0 /* R:u32=2147483648 */;
       }
     }
@@ -1576,23 +1550,23 @@ LAB_00489462:
     }
   }
   if (((*(int *)(arg1 + 400) == 2) && (*(int *)(arg1 + 0x210) != 0)) &&
-     (*(int *)(arg1 + 0x210) == 1)) {
+      (*(int *)(arg1 + 0x210) == 1)) {
     if (*(float *)(arg1 + 0x128) == *(float *)(arg1 + 0xa4)) {
       if (*(float *)(arg1 + 0x124) < *(float *)(arg1 + 0xa0) ||
           *(float *)(arg1 + 0x124) == *(float *)(arg1 + 0xa0)) {
         *(float *)(arg1 + 0xb8) =
-             (float)(*(uint *)(arg1 + 0x110) ^ DAT_005be6f0 /* R:u32=2147483648 */) * DAT_005be6e4 /* R:0.5f */;
-      }
-      else {
+            (float)(*(uint *)(arg1 + 0x110) ^ DAT_005be6f0 /* R:u32=2147483648 */) *
+            DAT_005be6e4 /* R:0.5f */;
+      } else {
         *(float *)(arg1 + 0xb8) = DAT_005be6e4 /* R:0.5f */ * *(float *)(arg1 + 0x110);
       }
-      Vector2__operator_minus__005be180(local_28,(Vector2 *)(arg1 + 0xa0));
+      Vector2__operator_minus__005be180(local_28, (Vector2 *)(arg1 + 0xa0));
       fVar7 = (float)Vector2__LengthSq(local_28);
       if (fVar7 < DAT_005c1400 /* R:100.0f */) {
         if (*(int *)(arg1 + 0x210) != 2) {
           *(uint32_t *)(arg1 + 0x210) = 2;
           *(uint32_t *)(arg1 + 0x11c) = 0;
-          iVar2 = GetRandomINT(3,5);
+          iVar2 = GetRandomINT(3, 5);
           *(float *)(arg1 + 0x120) = (float)iVar2;
         }
         *(uint32_t *)(arg1 + 0xb8) = 0;
@@ -1601,60 +1575,57 @@ LAB_00489462:
           lVar6 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x50 + *(long *)(arg1 + 0x230);
           uVar1 = *(ushort *)(lVar6 + 0x28);
           if (uVar1 != 0) {
-            uVar5 = GetRandomINT(0,uVar1 - 1);
+            uVar5 = GetRandomINT(0, uVar1 - 1);
           }
           *(uint32_t *)(lVar6 + 0x50) = uVar5;
           *(uint32_t *)(arg1 + 0x220) = 0;
-          uVar5 = *(uint32_t *)
-                   ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
+          uVar5 =
+              *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
           *(uint32_t *)(arg1 + 0x218) = 0;
           *(uint32_t *)(arg1 + 0x228) = 1;
           *(uint32_t *)(arg1 + 0x21c) = uVar5;
         }
       }
-    }
-    else {
+    } else {
       *(uint32_t *)(arg1 + 0x210) = 0;
       *(uint32_t *)(arg1 + 0x11c) = 0;
       *(uint32_t *)(arg1 + 0x120) = 0;
     }
   }
   if ((*(int *)(arg1 + 0x194) == 0) ||
-     ((*(long *)(arg1 + 0x188) == 0 && (*(GRIDBLOCK **)(arg1 + 0x180) == (GRIDBLOCK *)0x0))))
-  {
-LAB_00489658:
+      ((*(long *)(arg1 + 0x188) == 0 && (*(GRIDBLOCK **)(arg1 + 0x180) == (GRIDBLOCK *)0x0)))) {
+  LAB_00489658:
     iVar2 = *(int *)(arg1 + 400);
-LAB_0048965e:
+  LAB_0048965e:
     if (iVar2 == 2) {
-LAB_00489930:
+    LAB_00489930:
       if (*(float *)(arg1 + 0xb8) == 0.0) {
         if (*(int *)(arg1 + 0x218) != 0) {
           uVar5 = 0;
           lVar6 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x50 + *(long *)(arg1 + 0x230);
           uVar1 = *(ushort *)(lVar6 + 0x28);
           if (uVar1 != 0) {
-            uVar5 = GetRandomINT(0,uVar1 - 1);
+            uVar5 = GetRandomINT(0, uVar1 - 1);
           }
           *(uint32_t *)(lVar6 + 0x50) = uVar5;
           *(uint32_t *)(arg1 + 0x220) = 0;
-          uVar5 = *(uint32_t *)
-                   ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
+          uVar5 =
+              *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
           *(uint32_t *)(arg1 + 0x218) = 0;
           *(uint32_t *)(arg1 + 0x228) = 1;
           *(uint32_t *)(arg1 + 0x21c) = uVar5;
         }
-      }
-      else if (*(int *)(arg1 + 0x218) != 1) {
+      } else if (*(int *)(arg1 + 0x218) != 1) {
         uVar5 = 0;
         lVar6 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0xa8 + *(long *)(arg1 + 0x230);
         uVar1 = *(ushort *)(lVar6 + 0x28);
         if (uVar1 != 0) {
-          uVar5 = GetRandomINT(0,uVar1 - 1);
+          uVar5 = GetRandomINT(0, uVar1 - 1);
         }
         *(uint32_t *)(lVar6 + 0x50) = uVar5;
         *(uint32_t *)(arg1 + 0x220) = 0;
-        uVar5 = *(uint32_t *)
-                 ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xf8);
+        uVar5 =
+            *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xf8);
         *(uint32_t *)(arg1 + 0x218) = 1;
         *(uint32_t *)(arg1 + 0x228) = 1;
         *(uint32_t *)(arg1 + 0x21c) = uVar5;
@@ -1668,24 +1639,23 @@ LAB_00489930:
         lVar6 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x100 + *(long *)(arg1 + 0x230);
         uVar1 = *(ushort *)(lVar6 + 0x28);
         if (uVar1 != 0) {
-          uVar5 = GetRandomINT(0,uVar1 - 1);
+          uVar5 = GetRandomINT(0, uVar1 - 1);
         }
         *(uint32_t *)(lVar6 + 0x50) = uVar5;
         *(uint32_t *)(arg1 + 0x220) = 0;
-        uVar5 = *(uint32_t *)
-                 ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x150);
+        uVar5 =
+            *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x150);
         *(uint32_t *)(arg1 + 0x218) = 2;
         *(uint32_t *)(arg1 + 0x228) = 1;
         *(uint32_t *)(arg1 + 0x21c) = uVar5;
       }
       goto LAB_004896ee;
     }
-  }
-  else {
-    iVar2 = SMBAnimal__CanJumpOver((SMBAnimal *)arg1,*(GRIDBLOCK **)(arg1 + 0x180));
+  } else {
+    iVar2 = SMBAnimal__CanJumpOver((SMBAnimal *)arg1, *(GRIDBLOCK **)(arg1 + 0x180));
     if ((iVar2 == 0) &&
-       (iVar2 = SMBAnimal__CanJumpOver((SMBAnimal *)arg1,*(GRIDBLOCK **)(arg1 + 0x188)),
-       iVar2 == 0)) {
+        (iVar2 = SMBAnimal__CanJumpOver((SMBAnimal *)arg1, *(GRIDBLOCK **)(arg1 + 0x188)),
+         iVar2 == 0)) {
       if (((byte)arg1[0x194] & 8) == 0) {
         *(uint32_t *)(arg1 + 0xb8) = *(uint32_t *)(arg1 + 0x110);
         goto LAB_00489658;
@@ -1696,12 +1666,12 @@ LAB_00489930:
     }
     if (((byte)arg1[0x194] & 8) == 0) {
       *(uint *)(arg1 + 0xb8) = *(uint *)(arg1 + 0x110) ^ DAT_005be6f0 /* R:u32=2147483648 */;
-    }
-    else {
+    } else {
       *(uint32_t *)(arg1 + 0xb8) = *(uint32_t *)(arg1 + 0x110);
     }
     fVar7 = *(float *)(arg1 + 0xbc);
-    if (0.0 < fVar7) goto LAB_00489658;
+    if (0.0 < fVar7)
+      goto LAB_00489658;
     if (*(int *)(arg1 + 400) == 2) {
       *(uint32_t *)(arg1 + 0xbc) = 0x43960000;
       goto LAB_00489930;
@@ -1712,12 +1682,11 @@ LAB_00489930:
     lVar6 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x1b0 + *(long *)(arg1 + 0x230);
     uVar1 = *(ushort *)(lVar6 + 0x28);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar6 + 0x50) = uVar5;
     *(uint32_t *)(arg1 + 0x220) = 0;
-    uVar5 = *(uint32_t *)
-             ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x200);
+    uVar5 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x200);
     *(uint32_t *)(arg1 + 0x218) = 4;
     *(uint32_t *)(arg1 + 0x228) = 1;
     *(uint32_t *)(arg1 + 0x21c) = uVar5;
@@ -1727,7 +1696,7 @@ LAB_004896ee:
   lVar6 = *(long *)(arg1 + 0x48);
   *(uint32_t *)(lVar6 + 0x50) = *(uint32_t *)(arg1 + 0xa0);
   *(uint32_t *)(lVar6 + 0x60) = *(uint32_t *)(arg1 + 0xa4);
-  iVar2 = SMBPalette__ObstacleCollision(self,arg1,(Bounds *)0x0);
+  iVar2 = SMBPalette__ObstacleCollision(self, arg1, (Bounds *)0x0);
   if (iVar2 == 1) {
     if (*(int *)(arg1 + 0x218) != 5) {
       uVar5 = 0;
@@ -1737,8 +1706,7 @@ LAB_004896ee:
       }
       *(uint32_t *)(lVar6 + 0x50) = uVar5;
       *(uint32_t *)(arg1 + 0x220) = 0;
-      uVar5 = *(uint32_t *)
-               ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 600);
+      uVar5 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 600);
       *(uint32_t *)(arg1 + 0x218) = 5;
       *(uint32_t *)(arg1 + 0x228) = 1;
       *(uint32_t *)(arg1 + 0x21c) = uVar5;
@@ -1750,16 +1718,17 @@ LAB_004896ee:
     }
   }
   if (*(float *)(arg1 + 0xb8) < 0.0) {
-    *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^ DAT_005be6f0 /* R:u32=2147483648 */;
-  }
-  else if (0.0 < *(float *)(arg1 + 0xb8)) {
+    *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^
+                             DAT_005be6f0 /* R:u32=2147483648 */;
+  } else if (0.0 < *(float *)(arg1 + 0xb8)) {
     *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */;
   }
   if (*(int *)(arg1 + 0x218) == 0) {
     fVar7 = *(float *)(arg1 + 0xa0);
-    lVar6 = GSuperMeatBoy__getChar(SuperMeatBoy,0);
+    lVar6 = GSuperMeatBoy__getChar(SuperMeatBoy, 0);
     if (*(float *)(lVar6 + 0xa0) <= fVar7 && fVar7 != *(float *)(lVar6 + 0xa0)) {
-      *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^ DAT_005be6f0 /* R:u32=2147483648 */;
+      *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^
+                               DAT_005be6f0 /* R:u32=2147483648 */;
       return;
     }
     *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */;
@@ -1790,60 +1759,62 @@ void SMBChargerUpdate(SceneObject2D *arg1)
   long lVar7;
   float fVar8;
   float fVar9;
-  Vector2 local_48 [16];
-  Vector2 local_38 [24];
-  
+  Vector2 local_48[16];
+  Vector2 local_38[24];
+
   if (*(int *)(arg1 + 0x218) == 5) {
     return;
   }
-  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette,4);
-  SMBPalette__DisableFlags(GSuperMeatBoy__pLevelPalette,0x1b);
-  Apply2DPhysics(arg1,fOneFrameTimeStep);
+  SMBPalette__EnableFlags(GSuperMeatBoy__pLevelPalette, 4);
+  SMBPalette__DisableFlags(GSuperMeatBoy__pLevelPalette, 0x1b);
+  Apply2DPhysics(arg1, fOneFrameTimeStep);
   this_00 = SuperMeatBoy;
   *(float *)(arg1 + 0xf0) = *(float *)(arg1 + 0xf0) - _DAT_005c17d4 /* R:550.0f */;
-  GSuperMeatBoy__getChar(this_00,0);
-  Vector2__operator_minus__005be180(local_48,(Vector2 *)(arg1 + 0xa0));
+  GSuperMeatBoy__getChar(this_00, 0);
+  Vector2__operator_minus__005be180(local_48, (Vector2 *)(arg1 + 0xa0));
   fVar8 = (float)Vector2__LengthSq(local_48);
   iVar3 = *(int *)(arg1 + 400);
-  TileLevel__TileCollision
-            (*(TileLevel **)(SuperMeatBoy + 0x40),arg1,(TileCollisionInfo *)(arg1 + 0x170));
+  TileLevel__TileCollision(*(TileLevel **)(SuperMeatBoy + 0x40), arg1,
+                           (TileCollisionInfo *)(arg1 + 0x170));
   if (*(float *)(arg1 + 0x118) <= fVar8) {
     bVar2 = false;
-    if (iVar3 == 0) goto LAB_00489f6d;
+    if (iVar3 == 0)
+      goto LAB_00489f6d;
     iVar3 = *(int *)(arg1 + 400);
     *(uint32_t *)(arg1 + 0xb8) = 0;
-    if (iVar3 != 2) goto LAB_00489f7c;
-LAB_0048a2cc:
+    if (iVar3 != 2)
+      goto LAB_00489f7c;
+  LAB_0048a2cc:
     if (*(int *)(arg1 + 0x210) == 0) {
-      lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy,0);
+      lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy, 0);
       if (((*(float *)(lVar7 + 0xbc) <= _DAT_005c17ec /* R:150.0f */) ||
-          (lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy,0),
-          DAT_005be890 /* R:200.0f */ < *(float *)(lVar7 + 0xbc) || DAT_005be890 /* R:200.0f */ == *(float *)(lVar7 + 0xbc))) ||
-         (iVar3 = GetRandomINT(0), iVar3 < 0x4c)) {
-LAB_0048a010:
+           (lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy, 0),
+            DAT_005be890 /* R:200.0f */ < *(float *)(lVar7 + 0xbc) ||
+                DAT_005be890 /* R:200.0f */ == *(float *)(lVar7 + 0xbc))) ||
+          (iVar3 = GetRandomINT(0), iVar3 < 0x4c)) {
+      LAB_0048a010:
         iVar3 = *(int *)(arg1 + 400);
-      }
-      else {
+      } else {
         iVar4 = GetRandomINT(200);
         iVar3 = *(int *)(arg1 + 400);
         *(float *)(arg1 + 0xbc) = (float)iVar4;
       }
-LAB_0048a016:
-      if (iVar3 == 0) goto LAB_0048a01a;
-    }
-    else if (*(int *)(arg1 + 0x210) == 1) {
+    LAB_0048a016:
+      if (iVar3 == 0)
+        goto LAB_0048a01a;
+    } else if (*(int *)(arg1 + 0x210) == 1) {
       if (*(float *)(arg1 + 0x128) == *(float *)(arg1 + 0xa4)) {
         if (*(float *)(arg1 + 0x124) < *(float *)(arg1 + 0xa0) ||
             *(float *)(arg1 + 0x124) == *(float *)(arg1 + 0xa0)) {
           *(float *)(arg1 + 0xb8) =
-               (float)(*(uint *)(arg1 + 0x110) ^ DAT_005be6f0 /* R:u32=2147483648 */) * DAT_005be6e4 /* R:0.5f */ +
-               *(float *)(arg1 + 0xb8);
-        }
-        else {
+              (float)(*(uint *)(arg1 + 0x110) ^ DAT_005be6f0 /* R:u32=2147483648 */) *
+                  DAT_005be6e4 /* R:0.5f */
+              + *(float *)(arg1 + 0xb8);
+        } else {
           *(float *)(arg1 + 0xb8) =
-               DAT_005be6e4 /* R:0.5f */ * *(float *)(arg1 + 0x110) + *(float *)(arg1 + 0xb8);
+              DAT_005be6e4 /* R:0.5f */ * *(float *)(arg1 + 0x110) + *(float *)(arg1 + 0xb8);
         }
-        Vector2__operator_minus__005be180(local_38,(Vector2 *)(arg1 + 0xa0));
+        Vector2__operator_minus__005be180(local_38, (Vector2 *)(arg1 + 0xa0));
         fVar8 = (float)Vector2__LengthSq(local_38);
         if (fVar8 < DAT_005c1400 /* R:100.0f */) {
           if (*(int *)(arg1 + 0x210) != 2) {
@@ -1861,8 +1832,8 @@ LAB_0048a016:
             }
             *(uint32_t *)(lVar7 + 0x50) = uVar5;
             *(uint32_t *)(arg1 + 0x220) = 0;
-            uVar5 = *(uint32_t *)
-                     ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
+            uVar5 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) +
+                                  0xa0);
             *(uint32_t *)(arg1 + 0x218) = 0;
             *(uint32_t *)(arg1 + 0x228) = 1;
             *(uint32_t *)(arg1 + 0x21c) = uVar5;
@@ -1876,39 +1847,37 @@ LAB_0048a016:
       *(uint32_t *)(arg1 + 0x11c) = 0;
       *(uint32_t *)(arg1 + 0x120) = 0;
     }
-  }
-  else {
+  } else {
     if (*(float *)(arg1 + 0xb8) == 0.0) {
       if (*(int *)(arg1 + 0x214) == 0x11) {
-        iVar4 = GetRandomINT(0x14,0x19);
+        iVar4 = GetRandomINT(0x14, 0x19);
         *(uint *)(arg1 + 0x110) = (uint)(float)iVar4 ^ DAT_005be6f0 /* R:u32=2147483648 */;
         iVar6 = GetRandomINT(200);
         iVar4 = *(int *)(arg1 + 0x214);
         *(float *)(arg1 + 0x114) = (float)iVar6;
-LAB_0048a8f6:
+      LAB_0048a8f6:
         if (iVar4 == 0x11) {
           *(uint32_t *)(arg1 + 0x118) = 0x47742400;
           goto LAB_00489f35;
         }
-      }
-      else {
+      } else {
         iVar6 = GetRandomINT(0x96);
         iVar4 = *(int *)(arg1 + 0x214);
         *(float *)(arg1 + 0x110) = (float)iVar6;
-        if (1 < iVar4 - 6U) goto LAB_0048a8f6;
+        if (1 < iVar4 - 6U)
+          goto LAB_0048a8f6;
         *(float *)(arg1 + 0x110) = (float)iVar6 * DAT_005be6e8 /* R:0.25f */;
       }
       iVar4 = GetRandomINT(100);
       *(float *)(arg1 + 0x118) = (float)iVar4 * (float)iVar4;
     }
-LAB_00489f35:
+  LAB_00489f35:
     if (iVar3 == 2) {
       fVar8 = *(float *)(arg1 + 0xa0);
-      lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy,0);
+      lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy, 0);
       if (*(float *)(lVar7 + 0xa0) <= fVar8) {
         *(float *)(arg1 + 0xb8) = *(float *)(arg1 + 0xb8) + *(float *)(arg1 + 0x110);
-      }
-      else {
+      } else {
         *(float *)(arg1 + 0xb8) = *(float *)(arg1 + 0xb8) - *(float *)(arg1 + 0x110);
       }
     }
@@ -1918,51 +1887,52 @@ LAB_00489f35:
       *(uint32_t *)(arg1 + 0x11c) = 0;
       *(uint32_t *)(arg1 + 0x120) = 0;
     }
-LAB_00489f6d:
+  LAB_00489f6d:
     iVar3 = *(int *)(arg1 + 400);
-    if (iVar3 == 2) goto LAB_0048a2cc;
-LAB_00489f7c:
-    if (iVar3 != 0) goto LAB_0048a067;
+    if (iVar3 == 2)
+      goto LAB_0048a2cc;
+  LAB_00489f7c:
+    if (iVar3 != 0)
+      goto LAB_0048a067;
     if (0.0 < *(float *)(arg1 + 0xbc)) {
       fVar8 = *(float *)(arg1 + 0xa4);
-      lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy,0);
+      lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy, 0);
       if ((DAT_005c13fc /* R:20.0f */ + *(float *)(lVar7 + 0xa4) < fVar8) &&
-         (fVar8 = *(float *)(arg1 + 0xa0), lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy,0),
-         (float)((uint)(fVar8 - *(float *)(lVar7 + 0xa0)) & DAT_005be880 /* R:u32=2147483647 */) < DAT_005c1400 /* R:100.0f */)) {
+          (fVar8 = *(float *)(arg1 + 0xa0), lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy, 0),
+           (float)((uint)(fVar8 - *(float *)(lVar7 + 0xa0)) & DAT_005be880 /* R:u32=2147483647 */) <
+               DAT_005c1400 /* R:100.0f */)) {
         *(float *)(arg1 + 0xbc) = *(float *)(arg1 + 0xbc) - _DAT_005bfd00 /* R:10.0f */;
       }
       goto LAB_0048a010;
     }
-LAB_0048a01a:
+  LAB_0048a01a:
     fVar8 = *(float *)(arg1 + 0xa0);
-    lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy,0);
+    lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy, 0);
     if (fVar8 < *(float *)(lVar7 + 0xa0) || fVar8 == *(float *)(lVar7 + 0xa0)) {
       fVar8 = *(float *)(arg1 + 0xa0);
-      lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy,0);
+      lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy, 0);
       if (fVar8 < *(float *)(lVar7 + 0xa0)) {
         *(float *)(arg1 + 0xb8) =
-             (float)(*(uint *)(arg1 + 0x110) ^ DAT_005be6f0 /* R:u32=2147483648 */) * DAT_005be6e4 /* R:0.5f */ +
-             *(float *)(arg1 + 0xb8);
+            (float)(*(uint *)(arg1 + 0x110) ^ DAT_005be6f0 /* R:u32=2147483648 */) *
+                DAT_005be6e4 /* R:0.5f */
+            + *(float *)(arg1 + 0xb8);
       }
-    }
-    else {
+    } else {
       *(float *)(arg1 + 0xb8) =
-           DAT_005be6e4 /* R:0.5f */ * *(float *)(arg1 + 0x110) + *(float *)(arg1 + 0xb8);
+          DAT_005be6e4 /* R:0.5f */ * *(float *)(arg1 + 0x110) + *(float *)(arg1 + 0xb8);
     }
   }
 LAB_0048a067:
   if (((bVar2) && (*(int *)(arg1 + 0x194) != 0)) &&
-     ((*(long *)(arg1 + 0x188) != 0 || (*(GRIDBLOCK **)(arg1 + 0x180) != (GRIDBLOCK *)0x0))))
-  {
-    iVar3 = SMBAnimal__CanJumpOver((SMBAnimal *)arg1,*(GRIDBLOCK **)(arg1 + 0x180));
+      ((*(long *)(arg1 + 0x188) != 0 || (*(GRIDBLOCK **)(arg1 + 0x180) != (GRIDBLOCK *)0x0)))) {
+    iVar3 = SMBAnimal__CanJumpOver((SMBAnimal *)arg1, *(GRIDBLOCK **)(arg1 + 0x180));
     if ((iVar3 == 0) &&
-       (iVar3 = SMBAnimal__CanJumpOver((SMBAnimal *)arg1,*(GRIDBLOCK **)(arg1 + 0x188)),
-       iVar3 == 0)) {
+        (iVar3 = SMBAnimal__CanJumpOver((SMBAnimal *)arg1, *(GRIDBLOCK **)(arg1 + 0x188)),
+         iVar3 == 0)) {
       if (((byte)arg1[0x194] & 8) == 0) {
         fVar8 = *(float *)(arg1 + 0xb8) - *(float *)(arg1 + 0x110);
         *(float *)(arg1 + 0xb8) = fVar8;
-      }
-      else {
+      } else {
         fVar8 = *(float *)(arg1 + 0x110) + *(float *)(arg1 + 0xb8);
         *(float *)(arg1 + 0xb8) = fVar8;
       }
@@ -1971,24 +1941,24 @@ LAB_0048a067:
     if (((byte)arg1[0x194] & 8) == 0) {
       fVar8 = *(float *)(arg1 + 0x110) + *(float *)(arg1 + 0xb8);
       *(float *)(arg1 + 0xb8) = fVar8;
-    }
-    else {
+    } else {
       fVar8 = *(float *)(arg1 + 0xb8) - *(float *)(arg1 + 0x110);
       *(float *)(arg1 + 0xb8) = fVar8;
     }
-    if ((0.0 < *(float *)(arg1 + 0xbc)) || (*(int *)(arg1 + 400) != 2)) goto LAB_0048a108;
-    iVar3 = GetRandomINT(200,0xfa);
+    if ((0.0 < *(float *)(arg1 + 0xbc)) || (*(int *)(arg1 + 400) != 2))
+      goto LAB_0048a108;
+    iVar3 = GetRandomINT(200, 0xfa);
     *(float *)(arg1 + 0xbc) = (float)iVar3;
   }
   fVar8 = *(float *)(arg1 + 0xb8);
 LAB_0048a108:
   fVar9 = *(float *)(arg1 + 0x114);
-  if ((fVar9 < fVar8) || (fVar9 = (float)((uint)fVar9 ^ DAT_005be6f0 /* R:u32=2147483648 */), fVar8 < fVar9)) {
+  if ((fVar9 < fVar8) ||
+      (fVar9 = (float)((uint)fVar9 ^ DAT_005be6f0 /* R:u32=2147483648 */), fVar8 < fVar9)) {
     iVar3 = *(int *)(arg1 + 400);
     *(float *)(arg1 + 0xb8) = fVar9;
     fVar8 = fVar9;
-  }
-  else {
+  } else {
     iVar3 = *(int *)(arg1 + 400);
   }
   if (iVar3 == 2) {
@@ -1998,61 +1968,55 @@ LAB_0048a108:
         lVar7 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x50 + *(long *)(arg1 + 0x230);
         uVar1 = *(ushort *)(lVar7 + 0x28);
         if (uVar1 != 0) {
-          uVar5 = GetRandomINT(0,uVar1 - 1);
+          uVar5 = GetRandomINT(0, uVar1 - 1);
         }
         *(uint32_t *)(lVar7 + 0x50) = uVar5;
         *(uint32_t *)(arg1 + 0x220) = 0;
-        uVar5 = *(uint32_t *)
-                 ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
+        uVar5 =
+            *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xa0);
         *(uint32_t *)(arg1 + 0x218) = 0;
         *(uint32_t *)(arg1 + 0x228) = 1;
         *(uint32_t *)(arg1 + 0x21c) = uVar5;
       }
-    }
-    else if (*(int *)(arg1 + 0x218) != 1) {
+    } else if (*(int *)(arg1 + 0x218) != 1) {
       uVar5 = 0;
       lVar7 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0xa8 + *(long *)(arg1 + 0x230);
       uVar1 = *(ushort *)(lVar7 + 0x28);
       if (uVar1 != 0) {
-        uVar5 = GetRandomINT(0,uVar1 - 1);
+        uVar5 = GetRandomINT(0, uVar1 - 1);
       }
       *(uint32_t *)(lVar7 + 0x50) = uVar5;
       *(uint32_t *)(arg1 + 0x220) = 0;
-      uVar5 = *(uint32_t *)
-               ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xf8);
+      uVar5 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0xf8);
       *(uint32_t *)(arg1 + 0x218) = 1;
       *(uint32_t *)(arg1 + 0x228) = 1;
       *(uint32_t *)(arg1 + 0x21c) = uVar5;
     }
-  }
-  else if (*(float *)(arg1 + 0xbc) <= 0.0) {
+  } else if (*(float *)(arg1 + 0xbc) <= 0.0) {
     if ((*(float *)(arg1 + 0xbc) < 0.0) && (*(int *)(arg1 + 0x218) != 4)) {
       uVar5 = 0;
       lVar7 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x1b0 + *(long *)(arg1 + 0x230);
       uVar1 = *(ushort *)(lVar7 + 0x28);
       if (uVar1 != 0) {
-        uVar5 = GetRandomINT(0,uVar1 - 1);
+        uVar5 = GetRandomINT(0, uVar1 - 1);
       }
       *(uint32_t *)(lVar7 + 0x50) = uVar5;
       *(uint32_t *)(arg1 + 0x220) = 0;
-      uVar5 = *(uint32_t *)
-               ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x200);
+      uVar5 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x200);
       *(uint32_t *)(arg1 + 0x218) = 4;
       *(uint32_t *)(arg1 + 0x228) = 1;
       *(uint32_t *)(arg1 + 0x21c) = uVar5;
     }
-  }
-  else if (*(int *)(arg1 + 0x218) != 2) {
+  } else if (*(int *)(arg1 + 0x218) != 2) {
     uVar5 = 0;
     lVar7 = (long)*(int *)(arg1 + 0x214) * 0x370 + 0x100 + *(long *)(arg1 + 0x230);
     uVar1 = *(ushort *)(lVar7 + 0x28);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar7 + 0x50) = uVar5;
     *(uint32_t *)(arg1 + 0x220) = 0;
-    uVar5 = *(uint32_t *)
-             ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x150);
+    uVar5 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 0x150);
     *(uint32_t *)(arg1 + 0x218) = 2;
     *(uint32_t *)(arg1 + 0x228) = 1;
     *(uint32_t *)(arg1 + 0x21c) = uVar5;
@@ -2061,7 +2025,7 @@ LAB_0048a108:
   lVar7 = *(long *)(arg1 + 0x48);
   *(uint32_t *)(lVar7 + 0x50) = *(uint32_t *)(arg1 + 0xa0);
   *(uint32_t *)(lVar7 + 0x60) = *(uint32_t *)(arg1 + 0xa4);
-  iVar3 = SMBPalette__ObstacleCollision(self,arg1,(Bounds *)0x0);
+  iVar3 = SMBPalette__ObstacleCollision(self, arg1, (Bounds *)0x0);
   if (iVar3 == 1) {
     if (*(int *)(arg1 + 0x218) != 5) {
       uVar5 = 0;
@@ -2071,8 +2035,7 @@ LAB_0048a108:
       }
       *(uint32_t *)(lVar7 + 0x50) = uVar5;
       *(uint32_t *)(arg1 + 0x220) = 0;
-      uVar5 = *(uint32_t *)
-               ((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 600);
+      uVar5 = *(uint32_t *)((long)*(int *)(arg1 + 0x214) * 0x370 + *(long *)(arg1 + 0x230) + 600);
       *(uint32_t *)(arg1 + 0x218) = 5;
       *(uint32_t *)(arg1 + 0x228) = 1;
       *(uint32_t *)(arg1 + 0x21c) = uVar5;
@@ -2085,17 +2048,17 @@ LAB_0048a108:
   }
   if (*(float *)(arg1 + 0xb8) < 0.0) {
     *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */;
-  }
-  else if (0.0 < *(float *)(arg1 + 0xb8)) {
-    *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^ DAT_005be6f0 /* R:u32=2147483648 */;
+  } else if (0.0 < *(float *)(arg1 + 0xb8)) {
+    *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^
+                             DAT_005be6f0 /* R:u32=2147483648 */;
   }
   if (*(int *)(arg1 + 0x218) == 0) {
     fVar8 = *(float *)(arg1 + 0xa0);
-    lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy,0);
+    lVar7 = GSuperMeatBoy__getChar(SuperMeatBoy, 0);
     if (*(float *)(lVar7 + 0xa0) <= fVar8 && fVar8 != *(float *)(lVar7 + 0xa0)) {
-      *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^ DAT_005be6f0 /* R:u32=2147483648 */;
-    }
-    else {
+      *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */ ^
+                               DAT_005be6f0 /* R:u32=2147483648 */;
+    } else {
       *(uint *)(arg1 + 0xd0) = *(uint *)(arg1 + 0xd0) & DAT_005be880 /* R:u32=2147483647 */;
     }
   }
@@ -2114,13 +2077,13 @@ void SMBBloodExplosionDestroyResources(void *arg1)
 
 {
   if (*(BaseResource **)((long)arg1 + 8) != (BaseResource *)0x0) {
-    BaseResource__Release(*(BaseResource **)((long)arg1 + 8),0);
+    BaseResource__Release(*(BaseResource **)((long)arg1 + 8), 0);
   }
   if (*(BaseResource **)arg1 != (BaseResource *)0x0) {
-    BaseResource__Release(*(BaseResource **)arg1,0);
+    BaseResource__Release(*(BaseResource **)arg1, 0);
   }
   if (*(BaseResource **)((long)arg1 + 0x10) != (BaseResource *)0x0) {
-    BaseResource__Release(*(BaseResource **)((long)arg1 + 0x10),0);
+    BaseResource__Release(*(BaseResource **)((long)arg1 + 0x10), 0);
     return;
   }
   return;
@@ -2146,7 +2109,7 @@ void SMBBloodExplosionCreateResources(void *arg1)
   uint32_t local_30;
   uint32_t local_2c;
   uint32_t local_28;
-  
+
   local_3c = 5;
   local_38 = 0;
   local_30 = 0;
@@ -2158,9 +2121,9 @@ void SMBBloodExplosionCreateResources(void *arg1)
   *(uint64_t *)((long)arg1 + 8) = uVar1;
   uVar1 = VertexBuffer__Create((tagVertexBufferCreation *)&local_48);
   *(uint64_t *)arg1 = uVar1;
-  pVVar2 = BaseResource__operator_new(0xa8,1);
-                    /* try { // try from 0048cbc2 to 0048cbc6 has its CatchHandler @ 0048cbd2 */
-  VertexStream__VertexStream__005a6980(pVVar2,1,200,600,0,arg1,CGR__pPos2Decl);
+  pVVar2 = BaseResource__operator_new(0xa8, 1);
+  /* try { // try from 0048cbc2 to 0048cbc6 has its CatchHandler @ 0048cbd2 */
+  VertexStream__VertexStream__005a6980(pVVar2, 1, 200, 600, 0, arg1, CGR__pPos2Decl);
   *(VertexStream **)((long)arg1 + 0x10) = pVVar2;
   return;
 }
@@ -2175,73 +2138,72 @@ void CreateSMBBoss(int arg1)
 
 {
   FinalBoss *self;
-  
+
   if (CurrentSMBBoss == (RaptureBoss *)0x0) {
     if (arg1 == -1) {
-      switch(*(uint32_t *)(SuperMeatBoy + 0x290)) {
+      switch (*(uint32_t *)(SuperMeatBoy + 0x290)) {
       default:
         goto switchD_0048daf4_default;
       case 1:
         self = operator_new(0x1d8);
-                    /* try { // try from 0048dc6c to 0048dc70 has its CatchHandler @ 0048dc90 */
+        /* try { // try from 0048dc6c to 0048dc70 has its CatchHandler @ 0048dc90 */
         ForestBoss__ForestBoss__0046a890((ForestBoss *)self);
         break;
       case 2:
         self = operator_new(0x208);
-                    /* try { // try from 0048dc38 to 0048dc3c has its CatchHandler @ 0048dcb4 */
+        /* try { // try from 0048dc38 to 0048dc3c has its CatchHandler @ 0048dcb4 */
         HospitalBoss__HospitalBoss__0046d390((HospitalBoss *)self);
         break;
       case 3:
         self = operator_new(0x198);
-                    /* try { // try from 0048dc52 to 0048dc56 has its CatchHandler @ 0048dcc2 */
+        /* try { // try from 0048dc52 to 0048dc56 has its CatchHandler @ 0048dcc2 */
         FactoryBoss__FactoryBoss__00468ff0((FactoryBoss *)self);
         break;
       case 4:
         self = operator_new(0x498);
-                    /* try { // try from 0048dc1e to 0048dc22 has its CatchHandler @ 0048dcb6 */
+        /* try { // try from 0048dc1e to 0048dc22 has its CatchHandler @ 0048dcb6 */
         HellBoss__HellBoss__0046bab0((HellBoss *)self);
         break;
       case 5:
         self = operator_new(0xc18);
-                    /* try { // try from 0048dc04 to 0048dc08 has its CatchHandler @ 0048dcb2 */
+        /* try { // try from 0048dc04 to 0048dc08 has its CatchHandler @ 0048dcb2 */
         RaptureBoss__RaptureBoss__00483ef0((RaptureBoss *)self);
         break;
       case 6:
         self = operator_new(0x1a0);
-                    /* try { // try from 0048dbea to 0048dbee has its CatchHandler @ 0048dc94 */
+        /* try { // try from 0048dbea to 0048dbee has its CatchHandler @ 0048dc94 */
         FinalBoss__FinalBoss__00469560(self);
       }
-    }
-    else {
-      switch(arg1) {
+    } else {
+      switch (arg1) {
       case 0:
         self = operator_new(0x1d8);
-                    /* try { // try from 0048db90 to 0048db94 has its CatchHandler @ 0048dca2 */
+        /* try { // try from 0048db90 to 0048db94 has its CatchHandler @ 0048dca2 */
         ForestBoss__ForestBoss__0046a890((ForestBoss *)self);
         break;
       case 1:
         self = operator_new(0x208);
-                    /* try { // try from 0048dbb0 to 0048dbb4 has its CatchHandler @ 0048dca6 */
+        /* try { // try from 0048dbb0 to 0048dbb4 has its CatchHandler @ 0048dca6 */
         HospitalBoss__HospitalBoss__0046d390((HospitalBoss *)self);
         break;
       case 2:
         self = operator_new(0x198);
-                    /* try { // try from 0048db70 to 0048db74 has its CatchHandler @ 0048dca4 */
+        /* try { // try from 0048db70 to 0048db74 has its CatchHandler @ 0048dca4 */
         FactoryBoss__FactoryBoss__00468ff0((FactoryBoss *)self);
         break;
       case 3:
         self = operator_new(0x498);
-                    /* try { // try from 0048db58 to 0048db5c has its CatchHandler @ 0048dc96 */
+        /* try { // try from 0048db58 to 0048db5c has its CatchHandler @ 0048dc96 */
         HellBoss__HellBoss__0046bab0((HellBoss *)self);
         break;
       case 4:
         self = operator_new(0xc18);
-                    /* try { // try from 0048db30 to 0048db34 has its CatchHandler @ 0048dc76 */
+        /* try { // try from 0048db30 to 0048db34 has its CatchHandler @ 0048dc76 */
         RaptureBoss__RaptureBoss__00483ef0((RaptureBoss *)self);
         break;
       case 5:
         self = operator_new(0x1a0);
-                    /* try { // try from 0048dbd0 to 0048dbd4 has its CatchHandler @ 0048dc92 */
+        /* try { // try from 0048dbd0 to 0048dbd4 has its CatchHandler @ 0048dc92 */
         FinalBoss__FinalBoss__00469560(self);
         break;
       default:
@@ -2281,8 +2243,8 @@ void UpdateSMBBoss(void)
 
 {
   if (CurrentSMBBoss != (long *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x0048dd13. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+    /* WARNING: Could not recover jumptable at 0x0048dd13. Too many branches */
+    /* WARNING: Treating indirect jump as call */
     (**(code **)(*CurrentSMBBoss + 0x18))();
     return;
   }
@@ -2299,8 +2261,8 @@ void RenderSMBBoss(void)
 
 {
   if (CurrentSMBBoss != (long *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x0048dd33. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+    /* WARNING: Could not recover jumptable at 0x0048dd33. Too many branches */
+    /* WARNING: Treating indirect jump as call */
     (**(code **)(*CurrentSMBBoss + 0x10))();
     return;
   }
@@ -2313,13 +2275,13 @@ void RenderSMBBoss(void)
  * Calls: (none)
  * Called by: `SMBPalette__FindAnimatedObstacles`
  */
-void AddSMBBossWayPoint(uint64_t arg1,uint64_t arg2,uint32_t arg3,uint64_t arg4)
+void AddSMBBossWayPoint(uint64_t arg1, uint64_t arg2, uint32_t arg3, uint64_t arg4)
 
 {
   if (CurrentSMBBoss != (long *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x0048dd61. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-    (**(code **)(*CurrentSMBBoss + 0x48))(CurrentSMBBoss,arg1,arg2,arg3,arg4);
+    /* WARNING: Could not recover jumptable at 0x0048dd61. Too many branches */
+    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*CurrentSMBBoss + 0x48))(CurrentSMBBoss, arg1, arg2, arg3, arg4);
     return;
   }
   return;
@@ -2335,11 +2297,11 @@ uint64_t SMBBossCollision(uint64_t arg1)
 
 {
   uint64_t uVar1;
-  
+
   if (CurrentSMBBoss != (long *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x0048dd89. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-    uVar1 = (**(code **)(*CurrentSMBBoss + 0x28))(CurrentSMBBoss,arg1);
+    /* WARNING: Could not recover jumptable at 0x0048dd89. Too many branches */
+    /* WARNING: Treating indirect jump as call */
+    uVar1 = (**(code **)(*CurrentSMBBoss + 0x28))(CurrentSMBBoss, arg1);
     return uVar1;
   }
   return 0;
@@ -2355,8 +2317,8 @@ void ResetSMBBoss(void)
 
 {
   if (CurrentSMBBoss != (long *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x0048ddb3. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+    /* WARNING: Could not recover jumptable at 0x0048ddb3. Too many branches */
+    /* WARNING: Treating indirect jump as call */
     (**(code **)(*CurrentSMBBoss + 0x30))();
     return;
   }
@@ -2371,10 +2333,10 @@ void ResetSMBBoss(void)
  */
 /* SMBLivesScreenFinished(void*, int, int) */
 
-void SMBLivesScreenFinished(void *arg1,int arg2,int arg3)
+void SMBLivesScreenFinished(void *arg1, int arg2, int arg3)
 
 {
-  GSuperMeatBoy__Freeze(SuperMeatBoy,0);
+  GSuperMeatBoy__Freeze(SuperMeatBoy, 0);
   return;
 }
 
@@ -2391,7 +2353,7 @@ bool SMBWarpOutroSkip(void *arg1)
 {
   long lVar1;
   bool bVar2;
-  
+
   if ((Keyboard == 0) || (bVar2 = true, *(int *)(Keyboard + 8) != 1)) {
     lVar1 = TPlayer__GetJoystick((TPlayer *)Players__Player);
     bVar2 = *(int *)(lVar1 + 8) == 1;
@@ -2412,7 +2374,7 @@ bool SMBWarpIntroSkip(void *arg1)
 {
   long lVar1;
   bool bVar2;
-  
+
   if ((Keyboard == 0) || (bVar2 = true, *(int *)(Keyboard + 8) != 1)) {
     lVar1 = TPlayer__GetJoystick((TPlayer *)Players__Player);
     bVar2 = *(int *)(lVar1 + 8) == 1;
@@ -2433,7 +2395,7 @@ bool SMBBossIntroSkip(void *arg1)
 {
   long lVar1;
   bool bVar2;
-  
+
   if ((Keyboard == 0) || (bVar2 = true, *(int *)(Keyboard + 8) != 1)) {
     lVar1 = TPlayer__GetJoystick((TPlayer *)Players__Player);
     bVar2 = *(int *)(lVar1 + 8) == 1;
@@ -2454,7 +2416,7 @@ bool SMBChapterIntroSkip(void *arg1)
 {
   long lVar1;
   bool bVar2;
-  
+
   if ((Keyboard == 0) || (bVar2 = true, *(int *)(Keyboard + 8) != 1)) {
     lVar1 = TPlayer__GetJoystick((TPlayer *)Players__Player);
     bVar2 = *(int *)(lVar1 + 8) == 1;
@@ -2473,7 +2435,7 @@ bool SMBChapterIntroSkip(void *arg1)
 long SMBChapter__GetLevelInfoArray(long arg1)
 
 {
-  switch(*(uint32_t *)(arg1 + 0x204)) {
+  switch (*(uint32_t *)(arg1 + 0x204)) {
   default:
     return arg1 + 0x110;
   case 1:
@@ -2505,12 +2467,12 @@ long SMBChapter__GetLevelInfoArray(long arg1)
  */
 /* SMBChapter__GetLevelInfo(int, tagChapterLevelType, int) [clone .constprop.54] */
 
-long SMBChapter__GetLevelInfo(long arg1,ulong arg2,uint arg3)
+long SMBChapter__GetLevelInfo(long arg1, ulong arg2, uint arg3)
 
 {
   uint uVar1;
   long lVar2;
-  
+
   if ((int)arg2 == -1) {
     uVar1 = iCurrentLevel - 1U;
     if (iCurrentLevel - 1U == 0xffffffff) {
@@ -2529,8 +2491,8 @@ long SMBChapter__GetLevelInfo(long arg1,ulong arg2,uint arg3)
     arg3 = *(uint *)(arg1 + 0x204);
   }
   if (arg3 < 10) {
-                    /* WARNING: Could not recover jumptable at 0x0048f372. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+    /* WARNING: Could not recover jumptable at 0x0048f372. Too many branches */
+    /* WARNING: Treating indirect jump as call */
     lVar2 = (**(code **)(&DAT_005c1990 /* R:6.699453815105875e-39f */ + (ulong)arg3 * 8))();
     return lVar2;
   }
@@ -2545,7 +2507,7 @@ long SMBChapter__GetLevelInfo(long arg1,ulong arg2,uint arg3)
  */
 /* SMBChapter__PlayBossIntro(void (*)(void*, int, int), int) [clone .constprop.52] */
 
-void SMBChapter__PlayBossIntro(_func_void_void_ptr_int_int *arg1,int arg2)
+void SMBChapter__PlayBossIntro(_func_void_void_ptr_int_int *arg1, int arg2)
 
 {
   long *plVar1;
@@ -2553,10 +2515,10 @@ void SMBChapter__PlayBossIntro(_func_void_void_ptr_int_int *arg1,int arg2)
   FlashAnimationLibrary *pFVar3;
   uint64_t uVar4;
   uint32_t in_register_00000034;
-  
+
   plVar1 = *(long **)(arg1 + 0x2c0);
   if (plVar1 != (long *)0x0) {
-    (**(code **)(*plVar1 + 8))(plVar1,CONCAT44(in_register_00000034,arg2));
+    (**(code **)(*plVar1 + 8))(plVar1, CONCAT44(in_register_00000034, arg2));
   }
   pFVar3 = *(FlashAnimationLibrary **)(arg1 + 0x2b8);
   *(uint64_t *)(arg1 + 0x2c0) = 0;
@@ -2567,10 +2529,10 @@ void SMBChapter__PlayBossIntro(_func_void_void_ptr_int_int *arg1,int arg2)
   pcVar2 = *(char **)(arg1 + 0x2b0);
   *(uint64_t *)(arg1 + 0x2b8) = 0;
   pFVar3 = operator_new(0xb0);
-                    /* try { // try from 0048f544 to 0048f548 has its CatchHandler @ 0048f574 */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar3,pcVar2);
+  /* try { // try from 0048f544 to 0048f548 has its CatchHandler @ 0048f574 */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar3, pcVar2);
   *(FlashAnimationLibrary **)(arg1 + 0x2b8) = pFVar3;
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar3,0);
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar3, 0);
   *(uint64_t *)(arg1 + 0x2c0) = uVar4;
   return;
 }
@@ -2583,7 +2545,7 @@ void SMBChapter__PlayBossIntro(_func_void_void_ptr_int_int *arg1,int arg2)
  */
 /* SMBChapter__PlayBossOutro(void (*)(void*, int, int), int) [clone .constprop.53] */
 
-void SMBChapter__PlayBossOutro(_func_void_void_ptr_int_int *arg1,int arg2)
+void SMBChapter__PlayBossOutro(_func_void_void_ptr_int_int *arg1, int arg2)
 
 {
   long *plVar1;
@@ -2591,10 +2553,10 @@ void SMBChapter__PlayBossOutro(_func_void_void_ptr_int_int *arg1,int arg2)
   FlashAnimationLibrary *pFVar3;
   uint64_t uVar4;
   uint32_t in_register_00000034;
-  
+
   plVar1 = *(long **)(arg1 + 0x2d8);
   if (plVar1 != (long *)0x0) {
-    (**(code **)(*plVar1 + 8))(plVar1,CONCAT44(in_register_00000034,arg2));
+    (**(code **)(*plVar1 + 8))(plVar1, CONCAT44(in_register_00000034, arg2));
   }
   pFVar3 = *(FlashAnimationLibrary **)(arg1 + 0x2d0);
   *(uint64_t *)(arg1 + 0x2d8) = 0;
@@ -2605,10 +2567,10 @@ void SMBChapter__PlayBossOutro(_func_void_void_ptr_int_int *arg1,int arg2)
   pcVar2 = *(char **)(arg1 + 0x2c8);
   *(uint64_t *)(arg1 + 0x2d0) = 0;
   pFVar3 = operator_new(0xb0);
-                    /* try { // try from 0048f604 to 0048f608 has its CatchHandler @ 0048f634 */
-  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar3,pcVar2);
+  /* try { // try from 0048f604 to 0048f608 has its CatchHandler @ 0048f634 */
+  FlashAnimationLibrary__FlashAnimationLibrary__00576680(pFVar3, pcVar2);
   *(FlashAnimationLibrary **)(arg1 + 0x2d0) = pFVar3;
-  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar3,0);
+  uVar4 = FlashAnimationLibrary__GetMovieClip__005731d0(pFVar3, 0);
   *(uint64_t *)(arg1 + 0x2d8) = uVar4;
   return;
 }
@@ -2621,24 +2583,24 @@ void SMBChapter__PlayBossOutro(_func_void_void_ptr_int_int *arg1,int arg2)
  */
 /* LoadLevelDataFromBlock(PropertyBlock*, SMBChapter__LevelInfo&, PropertiesFile*) */
 
-uint64_t LoadLevelDataFromBlock(PropertyBlock *arg1,LevelInfo *arg2,PropertiesFile *arg3)
+uint64_t LoadLevelDataFromBlock(PropertyBlock *arg1, LevelInfo *arg2, PropertiesFile *arg3)
 
 {
   uint64_t uVar1;
   uint32_t uVar2;
-  PropertyVariable *local_68 [2];
-  PropertyVariable *local_58 [2];
-  PropertyVariable *local_48 [2];
+  PropertyVariable *local_68[2];
+  PropertyVariable *local_58[2];
+  PropertyVariable *local_48[2];
   PropertyVariable *local_38;
-  PropertyVariable *local_30 [2];
-  
+  PropertyVariable *local_30[2];
+
   uVar1 = 0;
   if (arg1 != (PropertyBlock *)0x0) {
-    PropertiesFile__FindPropertyVariable(arg3,&local_38,arg1,"file");
-    PropertiesFile__FindPropertyVariable(arg3,local_68,arg1,"name");
-    PropertiesFile__FindPropertyVariable(arg3,local_58,arg1,"par");
-    PropertiesFile__FindPropertyVariable(arg3,local_30,arg1,"warpid");
-    PropertiesFile__FindPropertyVariable(arg3,local_48,arg1,"id");
+    PropertiesFile__FindPropertyVariable(arg3, &local_38, arg1, "file");
+    PropertiesFile__FindPropertyVariable(arg3, local_68, arg1, "name");
+    PropertiesFile__FindPropertyVariable(arg3, local_58, arg1, "par");
+    PropertiesFile__FindPropertyVariable(arg3, local_30, arg1, "warpid");
+    PropertiesFile__FindPropertyVariable(arg3, local_48, arg1, "id");
     if (local_38 != (PropertyVariable *)0x0) {
       if ((LevelInfo *)(local_38 + 0x20) != arg2) {
         *(uint64_t *)arg2 = *(uint64_t *)(local_38 + 0x20);
@@ -2660,16 +2622,14 @@ uint64_t LoadLevelDataFromBlock(PropertyBlock *arg1,LevelInfo *arg2,PropertiesFi
           *(uint32_t *)(arg2 + 0x40) = uVar2;
           if (local_30[0] == (PropertyVariable *)0x0) {
             *(uint32_t *)(arg2 + 0x44) = 0xffffffff;
-          }
-          else {
+          } else {
             uVar2 = StringToInt(local_30[0] + 0x20);
             *(uint32_t *)(arg2 + 0x44) = uVar2;
           }
           if (local_48[0] == (PropertyVariable *)0x0) {
             *(uint32_t *)(arg2 + 0x48) = 0xffffffff;
             uVar1 = 1;
-          }
-          else {
+          } else {
             uVar1 = 1;
             uVar2 = StringToInt(local_48[0] + 0x20);
             *(uint32_t *)(arg2 + 0x48) = uVar2;
@@ -2689,23 +2649,22 @@ uint64_t LoadLevelDataFromBlock(PropertyBlock *arg1,LevelInfo *arg2,PropertiesFi
  */
 /* LoadBossDataFromBlock(PropertyBlock*, SMBChapter__BossLevelInfo&, PropertiesFile*) */
 
-uint64_t
-LoadBossDataFromBlock(PropertyBlock *arg1,BossLevelInfo *arg2,PropertiesFile *arg3)
+uint64_t LoadBossDataFromBlock(PropertyBlock *arg1, BossLevelInfo *arg2, PropertiesFile *arg3)
 
 {
   uint64_t uVar1;
   uint32_t uVar2;
-  PropertyVariable *local_48 [2];
-  PropertyVariable *local_38 [2];
+  PropertyVariable *local_48[2];
+  PropertyVariable *local_38[2];
   PropertyVariable *local_28;
   PropertyVariable *local_20;
-  
+
   uVar1 = 0;
   if (arg1 != (PropertyBlock *)0x0) {
-    PropertiesFile__FindPropertyVariable(arg3,&local_20,arg1,"file");
-    PropertiesFile__FindPropertyVariable(arg3,local_48,arg1,"altfile");
-    PropertiesFile__FindPropertyVariable(arg3,local_38,arg1,"name");
-    PropertiesFile__FindPropertyVariable(arg3,&local_28,arg1,"par");
+    PropertiesFile__FindPropertyVariable(arg3, &local_20, arg1, "file");
+    PropertiesFile__FindPropertyVariable(arg3, local_48, arg1, "altfile");
+    PropertiesFile__FindPropertyVariable(arg3, local_38, arg1, "name");
+    PropertiesFile__FindPropertyVariable(arg3, &local_28, arg1, "par");
     if ((local_20 != (PropertyVariable *)0x0) && ((BossLevelInfo *)(local_20 + 0x20) != arg2)) {
       *(uint64_t *)arg2 = *(uint64_t *)(local_20 + 0x20);
       *(uint64_t *)(arg2 + 8) = *(uint64_t *)(local_20 + 0x28);
@@ -2713,14 +2672,14 @@ LoadBossDataFromBlock(PropertyBlock *arg1,BossLevelInfo *arg2,PropertiesFile *ar
       *(uint64_t *)(arg2 + 0x18) = *(uint64_t *)(local_20 + 0x38);
     }
     if ((local_48[0] != (PropertyVariable *)0x0) &&
-       ((BossLevelInfo *)(local_48[0] + 0x20) != arg2 + 0x20)) {
+        ((BossLevelInfo *)(local_48[0] + 0x20) != arg2 + 0x20)) {
       *(uint64_t *)(arg2 + 0x20) = *(uint64_t *)(local_48[0] + 0x20);
       *(uint64_t *)(arg2 + 0x28) = *(uint64_t *)(local_48[0] + 0x28);
       *(uint64_t *)(arg2 + 0x30) = *(uint64_t *)(local_48[0] + 0x30);
       *(uint64_t *)(arg2 + 0x38) = *(uint64_t *)(local_48[0] + 0x38);
     }
     if ((local_38[0] != (PropertyVariable *)0x0) &&
-       ((BossLevelInfo *)(local_38[0] + 0x20) != arg2 + 0x40)) {
+        ((BossLevelInfo *)(local_38[0] + 0x20) != arg2 + 0x40)) {
       *(uint64_t *)(arg2 + 0x40) = *(uint64_t *)(local_38[0] + 0x20);
       *(uint64_t *)(arg2 + 0x48) = *(uint64_t *)(local_38[0] + 0x28);
       *(uint64_t *)(arg2 + 0x50) = *(uint64_t *)(local_38[0] + 0x30);
@@ -2760,22 +2719,20 @@ void ChapterLoadingScreenFunc(void)
  */
 /* SMBGameOverScreenFinished(void*, int, int) */
 
-void SMBGameOverScreenFinished(void *arg1,int arg2,int arg3)
+void SMBGameOverScreenFinished(void *arg1, int arg2, int arg3)
 
 {
   GSMBChapterData *pGVar1;
   long lVar2;
-  
+
   if (*(int *)((long)arg1 + 0x2e0) != 1) {
     if (*(uint *)((long)arg1 + 0x204) < 2) {
       if (*(long *)((long)arg1 + 0x18) != 0) {
         TAudioInstance__Stop((TAudioInstance *)((long)arg1 + 0x48));
       }
-    }
-    else if (*(uint *)((long)arg1 + 0x204) == 10) {
+    } else if (*(uint *)((long)arg1 + 0x204) == 10) {
       TAudioInstance__Stop((TAudioInstance *)((long)arg1 + 0x98));
-    }
-    else if (*(long *)((long)arg1 + 0x28) != 0) {
+    } else if (*(long *)((long)arg1 + 0x28) != 0) {
       TAudioInstance__Stop((TAudioInstance *)((long)arg1 + 0x70));
     }
   }
@@ -2789,10 +2746,10 @@ void SMBGameOverScreenFinished(void *arg1,int arg2,int arg3)
   *(uint32_t *)((long)arg1 + 0x204) = *(uint32_t *)((long)arg1 + 0x270);
   GSMBChapterData__SetLevelType(pGVar1);
   *(int *)arg1 = *(int *)((long)arg1 + 0x274);
-  GSMBMenu__SetSelectedLevel(SMBMenu,*(int *)((long)arg1 + 0x274),1);
+  GSMBMenu__SetSelectedLevel(SMBMenu, *(int *)((long)arg1 + 0x274), 1);
   GSuperMeatBoy__SwitchGameMode(SuperMeatBoy);
   *(uint16_t *)((long)arg1 + 0x16) = 0;
-  GSuperMeatBoy__Freeze(SuperMeatBoy,0);
+  GSuperMeatBoy__Freeze(SuperMeatBoy, 0);
   return;
 }
 
@@ -2804,22 +2761,20 @@ void SMBGameOverScreenFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBWarpOutroFinished(void*, int, int) */
 
-void SMBWarpOutroFinished(void *arg1,int arg2,int arg3)
+void SMBWarpOutroFinished(void *arg1, int arg2, int arg3)
 
 {
   GSMBChapterData *pGVar1;
   long lVar2;
-  
+
   if (*(int *)((long)arg1 + 0x2e0) != 1) {
     if (*(uint *)((long)arg1 + 0x204) < 2) {
       if (*(long *)((long)arg1 + 0x18) != 0) {
         TAudioInstance__Stop((TAudioInstance *)((long)arg1 + 0x48));
       }
-    }
-    else if (*(uint *)((long)arg1 + 0x204) == 10) {
+    } else if (*(uint *)((long)arg1 + 0x204) == 10) {
       TAudioInstance__Stop((TAudioInstance *)((long)arg1 + 0x98));
-    }
-    else if (*(long *)((long)arg1 + 0x28) != 0) {
+    } else if (*(long *)((long)arg1 + 0x28) != 0) {
       TAudioInstance__Stop((TAudioInstance *)((long)arg1 + 0x70));
     }
   }
@@ -2833,10 +2788,10 @@ void SMBWarpOutroFinished(void *arg1,int arg2,int arg3)
   *(uint32_t *)((long)arg1 + 0x204) = *(uint32_t *)((long)arg1 + 0x270);
   GSMBChapterData__SetLevelType(pGVar1);
   *(int *)arg1 = *(int *)((long)arg1 + 0x274);
-  GSMBMenu__SetSelectedLevel(SMBMenu,*(int *)((long)arg1 + 0x274),1);
+  GSMBMenu__SetSelectedLevel(SMBMenu, *(int *)((long)arg1 + 0x274), 1);
   GSuperMeatBoy__SwitchGameMode(SuperMeatBoy);
   *(uint16_t *)((long)arg1 + 0x16) = 0;
-  GSuperMeatBoy__Freeze(SuperMeatBoy,0);
+  GSuperMeatBoy__Freeze(SuperMeatBoy, 0);
   return;
 }
 
@@ -2848,7 +2803,7 @@ void SMBWarpOutroFinished(void *arg1,int arg2,int arg3)
  */
 /* SMBChapterLoadWarpZone(void*, int, int) */
 
-void SMBChapterLoadWarpZone(void *arg1,int arg2,int arg3)
+void SMBChapterLoadWarpZone(void *arg1, int arg2, int arg3)
 
 {
   FlashAnimationLibrary *self;
@@ -2869,8 +2824,8 @@ void SMBChapterLoadWarpZone(void *arg1,int arg2,int arg3)
   uint32_t uStack_50;
   uint32_t uStack_4c;
   uint32_t uStack_48;
-  char acStack_38 [40];
-  
+  char acStack_38[40];
+
   iVar3 = iCurrentLevel;
   if (*(short *)((long)arg1 + 0x16) != 1) {
     iVar3 = iCurrentLevel + -1;
@@ -2882,7 +2837,7 @@ void SMBChapterLoadWarpZone(void *arg1,int arg2,int arg3)
   lVar4 = *(long *)((long)arg1 + 0x2e8);
   if (lVar4 != 0) {
     if (*(int *)(lVar4 + 0x24) != 0) {
-      GSuperMeatBoy__DeferLoadCharactor(SuperMeatBoy,*(int *)(lVar4 + 0x24) + -1);
+      GSuperMeatBoy__DeferLoadCharactor(SuperMeatBoy, *(int *)(lVar4 + 0x24) + -1);
       lVar4 = *(long *)((long)arg1 + 0x2e8);
     }
     if (*(long **)(lVar4 + 0x30) != (long *)0x0) {
@@ -2899,11 +2854,9 @@ void SMBChapterLoadWarpZone(void *arg1,int arg2,int arg3)
         if (*(long *)((long)arg1 + 0x18) != 0) {
           TAudioInstance__Stop((TAudioInstance *)((long)arg1 + 0x48));
         }
-      }
-      else if (*(uint *)((long)arg1 + 0x204) == 10) {
+      } else if (*(uint *)((long)arg1 + 0x204) == 10) {
         TAudioInstance__Stop((TAudioInstance *)((long)arg1 + 0x98));
-      }
-      else if (*(long *)((long)arg1 + 0x28) != 0) {
+      } else if (*(long *)((long)arg1 + 0x28) != 0) {
         TAudioInstance__Stop((TAudioInstance *)((long)arg1 + 0x70));
       }
     }
@@ -2917,11 +2870,11 @@ void SMBChapterLoadWarpZone(void *arg1,int arg2,int arg3)
       }
     }
     iCurrentLevel = 0;
-    GSMBChapterData__SetCurrentLevel(SMBChapterData,0);
+    GSMBChapterData__SetCurrentLevel(SMBChapterData, 0);
     *(int *)arg1 = iCurrentLevel;
-    GSuperMeatBoy__SetCurrentLevel(SuperMeatBoy,(TileLevel *)0x0);
+    GSuperMeatBoy__SetCurrentLevel(SuperMeatBoy, (TileLevel *)0x0);
     GSuperMeatBoy__SwitchGameMode(SuperMeatBoy);
-    GSuperMeatBoy__Freeze(SuperMeatBoy,0);
+    GSuperMeatBoy__Freeze(SuperMeatBoy, 0);
     if (*(int *)((long)arg1 + 0x204) != 3) {
       lVar4 = *(long *)((long)arg1 + 0x2e8);
       if (*(long **)(lVar4 + 0x40) != (long *)0x0) {
@@ -2932,10 +2885,10 @@ void SMBChapterLoadWarpZone(void *arg1,int arg2,int arg3)
       *(uint64_t *)(lVar4 + 0x40) = 0;
       *(uint64_t *)(*(long *)((long)arg1 + 0x2e8) + 0x38) = *(uint64_t *)(lVar2 + 0x108);
       if (*(long *)(*(long *)((long)arg1 + 0x2e8) + 0x38) != 0) {
-        Sprint(&DAT_005c1d0a /* R:"life%i-%i" */,acStack_38,iCurrentLevel,3);
+        Sprint(&DAT_005c1d0a /* R:"life%i-%i" */, acStack_38, iCurrentLevel, 3);
         lVar4 = *(long *)((long)arg1 + 0x2e8);
-        uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0
-                          (*(FlashAnimationLibrary **)(lVar4 + 0x38),acStack_38);
+        uVar5 = FlashAnimationLibrary__GetMovieClip__005731d0(
+            *(FlashAnimationLibrary **)(lVar4 + 0x38), acStack_38);
         *(uint64_t *)(lVar4 + 0x40) = uVar5;
         if (*(long *)(*(long *)((long)arg1 + 0x2e8) + 0x40) != 0) {
           uStack_48 = 1;
@@ -2949,8 +2902,8 @@ void SMBChapterLoadWarpZone(void *arg1,int arg2,int arg3)
           uStack_80 = 1;
           pcStack_70 = SMBLivesScreenFinished;
           pvStack_68 = arg1;
-          GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&uStack_88);
-          GSuperMeatBoy__Freeze(SuperMeatBoy,1);
+          GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&uStack_88);
+          GSuperMeatBoy__Freeze(SuperMeatBoy, 1);
         }
       }
     }
@@ -2969,7 +2922,7 @@ void SMBChapterLoadWarpZone(void *arg1,int arg2,int arg3)
 /* WARNING: Removing unreachable block (ram,0x004935e4) */
 /* SMBChapterPlayWarpIntro(void*, int, int) */
 
-void SMBChapterPlayWarpIntro(void *arg1,int arg2,int arg3)
+void SMBChapterPlayWarpIntro(void *arg1, int arg2, int arg3)
 
 {
   int *piVar1;
@@ -2992,21 +2945,20 @@ void SMBChapterPlayWarpIntro(void *arg1,int arg2,int arg3)
   uint32_t uStack_90;
   uint32_t uStack_8c;
   uint32_t uStack_88;
-  long alStack_78 [2];
+  long alStack_78[2];
   uint32_t uStack_68;
   long lStack_58;
   uchar *puStack_50;
-  uint auStack_48 [4];
-  uint32_t auStack_38 [2];
+  uint auStack_48[4];
+  uint32_t auStack_38[2];
   uint64_t uStack_30;
   uint8_t *puStack_28;
-  allocator aaStack_1c [12];
-  
+  allocator aaStack_1c[12];
+
   plVar3 = *(long **)((long)arg1 + 0x290);
   if (plVar3 != (long *)0x0) {
-    (**(code **)(*plVar3 + 8))
-              (plVar3,CONCAT44(in_register_00000034,arg2),CONCAT44(in_register_00000014,arg3))
-    ;
+    (**(code **)(*plVar3 + 8))(plVar3, CONCAT44(in_register_00000034, arg2),
+                               CONCAT44(in_register_00000014, arg3));
   }
   *(uint64_t *)((long)arg1 + 0x290) = 0;
   auStack_38[0] = 5;
@@ -3020,7 +2972,8 @@ void SMBChapterPlayWarpIntro(void *arg1,int arg2,int arg3)
     SMBChapter__LoadWarpZone(arg1);
     return;
   }
-  uVar6 = FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(puVar4 + 0x28),0);
+  uVar6 =
+      FlashAnimationLibrary__GetMovieClip__005731d0(*(FlashAnimationLibrary **)(puVar4 + 0x28), 0);
   *(uint64_t *)(puVar4 + 0x30) = uVar6;
   uStack_98 = 0;
   uStack_8c = 1;
@@ -3033,17 +2986,15 @@ void SMBChapterPlayWarpIntro(void *arg1,int arg2,int arg3)
   pcStack_a0 = SMBWarpIntroSkip;
   uStack_90 = 1;
   pvStack_a8 = arg1;
-  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager,(SMBCutScene *)&uStack_c8);
+  GSMBCutSceneManager__PlayCutScene(SMBCutSceneManager, (SMBCutScene *)&uStack_c8);
   if (*(int *)((long)arg1 + 0x2e0) != 1) {
     if (*(uint *)((long)arg1 + 0x204) < 2) {
       if (*(long *)((long)arg1 + 0x18) != 0) {
         TAudioInstance__Stop((TAudioInstance *)((long)arg1 + 0x48));
       }
-    }
-    else if (*(uint *)((long)arg1 + 0x204) == 10) {
+    } else if (*(uint *)((long)arg1 + 0x204) == 10) {
       TAudioInstance__Stop((TAudioInstance *)((long)arg1 + 0x98));
-    }
-    else if (*(long *)((long)arg1 + 0x28) != 0) {
+    } else if (*(long *)((long)arg1 + 0x28) != 0) {
       TAudioInstance__Stop((TAudioInstance *)((long)arg1 + 0x70));
     }
   }
@@ -3055,10 +3006,9 @@ void SMBChapterPlayWarpIntro(void *arg1,int arg2,int arg3)
     lStack_58 = 0;
     puStack_50 = (uchar *)0x0;
     auStack_48[0] = 0;
-    GSMBMenu__GetLevelDataByIndex(SMBMenu,0,&puStack_50,auStack_48);
+    GSMBMenu__GetLevelDataByIndex(SMBMenu, 0, &puStack_50, auStack_48);
     if ((auStack_48[0] == 0) || (puStack_50 == (uchar *)0x0)) {
-      if ((allocator *)(puStack_28 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage
-         ) {
+      if ((allocator *)(puStack_28 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
         LOCK();
         piVar1 = (int *)(puStack_28 + -8);
         iVar2 = *piVar1;
@@ -3070,20 +3020,19 @@ void SMBChapterPlayWarpIntro(void *arg1,int arg2,int arg3)
       }
       goto LAB_004933fa;
     }
-    TileLevel__GetPaletteFromLevelFile((TileLevelLoad *)&lStack_58,(string *)&puStack_28);
-    SMBPaletteBackgroundLoader__Load((char *)(SuperMeatBoy + 0x3b0),(int)puStack_28);
-  }
-  else {
-    std__string_string((string *)&lStack_58,"Levels/",aaStack_1c);
-    __s = (char *)SMBChapter__GetLevelInfo(arg1,0,0xb);
+    TileLevel__GetPaletteFromLevelFile((TileLevelLoad *)&lStack_58, (string *)&puStack_28);
+    SMBPaletteBackgroundLoader__Load((char *)(SuperMeatBoy + 0x3b0), (int)puStack_28);
+  } else {
+    std__string_string((string *)&lStack_58, "Levels/", aaStack_1c);
+    __s = (char *)SMBChapter__GetLevelInfo(arg1, 0, 0xb);
     strlen(__s);
-    std__string_append((char *)&lStack_58,(ulong)__s);
-    std__string_append((char *)&lStack_58,0x5c1d1c);
+    std__string_append((char *)&lStack_58, (ulong)__s);
+    std__string_append((char *)&lStack_58, 0x5c1d1c);
     alStack_78[1] = 0;
     uStack_68 = 0;
     alStack_78[0] = lStack_58;
-    TileLevel__GetPaletteFromLevelFile((TileLevelLoad *)alStack_78,(string *)&puStack_28);
-    SMBPaletteBackgroundLoader__Load((char *)(SuperMeatBoy + 0x3b0),(int)puStack_28);
+    TileLevel__GetPaletteFromLevelFile((TileLevelLoad *)alStack_78, (string *)&puStack_28);
+    SMBPaletteBackgroundLoader__Load((char *)(SuperMeatBoy + 0x3b0), (int)puStack_28);
     if ((allocator *)(lStack_58 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(lStack_58 + -8);
@@ -3123,8 +3072,8 @@ uint64_t LoadBossIntro(void *arg1)
 
 {
   int in_ESI;
-  
-  SMBChapter__PlayBossIntro(arg1,in_ESI);
+
+  SMBChapter__PlayBossIntro(arg1, in_ESI);
   SyncEvent__Set((SyncEvent *)bossIntroEvent);
   return 0;
 }
@@ -3141,8 +3090,8 @@ uint64_t LoadBossOutro(void *arg1)
 
 {
   int in_ESI;
-  
-  SMBChapter__PlayBossOutro(arg1,in_ESI);
+
+  SMBChapter__PlayBossOutro(arg1, in_ESI);
   SyncEvent__Set((SyncEvent *)bossOutroEvent);
   return 0;
 }
@@ -3193,17 +3142,17 @@ uint32_t SMBChapterDataSave(void *arg1)
   uint32_t local_98;
   uint32_t local_94;
   uint8_t *local_90;
-  File local_88 [4];
+  File local_88[4];
   uint local_84;
-  char *local_58 [2];
-  char *local_48 [2];
+  char *local_58[2];
+  char *local_48[2];
   char *local_38;
-  allocator local_2c [12];
-  
+  allocator local_2c[12];
+
   plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
   iVar3 = (**(code **)(*plVar4 + 0x20))(plVar4);
   if ((iVar3 == 1) &&
-     (lVar5 = TPlayer__GetProfile((TPlayer *)Players__Player), *(int *)(lVar5 + 0xc) == 1)) {
+      (lVar5 = TPlayer__GetProfile((TPlayer *)Players__Player), *(int *)(lVar5 + 0xc) == 1)) {
     local_b8 = 2;
     local_b0 = 0;
     local_a8 = 0;
@@ -3216,7 +3165,7 @@ uint32_t SMBChapterDataSave(void *arg1)
     local_c8 = "savegame.dat";
     local_98 = 0x1ca8;
     plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-    lVar5 = (**(code **)(*plVar4 + 0x40))(plVar4,&local_c8,0);
+    lVar5 = (**(code **)(*plVar4 + 0x40))(plVar4, &local_c8, 0);
     if (lVar5 == 0) {
       SyncEvent__Set((SyncEvent *)SMBChapterSaveEvent);
       if (arg1 != (void *)0x0) {
@@ -3227,33 +3176,33 @@ uint32_t SMBChapterDataSave(void *arg1)
     }
     iVar3 = 0;
     plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-    (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,arg1,4);
+    (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, arg1, 4);
     plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-    (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,(long)arg1 + 4,4);
+    (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, (long)arg1 + 4, 4);
     plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-    (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,(long)arg1 + 8,4);
+    (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, (long)arg1 + 8, 4);
     plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-    (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,(long)arg1 + 0xc,4);
+    (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, (long)arg1 + 0xc, 4);
     do {
       plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
       lVar6 = (long)iVar3;
       iVar3 = iVar3 + 1;
       lVar6 = (long)arg1 + lVar6 * 0xc + 0x10;
-      (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,lVar6,1);
+      (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, lVar6, 1);
       plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-      (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,lVar6 + 1,1);
+      (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, lVar6 + 1, 1);
       plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-      (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,lVar6 + 2,1);
+      (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, lVar6 + 2, 1);
       plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-      (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,lVar6 + 3,1);
+      (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, lVar6 + 3, 1);
       plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-      (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,lVar6 + 4,2);
+      (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, lVar6 + 4, 2);
       plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-      (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,lVar6 + 6,1);
+      (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, lVar6 + 6, 1);
       plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-      (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,lVar6 + 7,1);
+      (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, lVar6 + 7, 1);
       plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-      (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,lVar6 + 8,4);
+      (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, lVar6 + 8, 4);
     } while (iVar3 != 10);
     iVar3 = 0;
     do {
@@ -3261,26 +3210,26 @@ uint32_t SMBChapterDataSave(void *arg1)
       lVar6 = (long)iVar3;
       iVar3 = iVar3 + 1;
       lVar6 = lVar6 * 0xc;
-      (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,(long)arg1 + lVar6 + 0x88,4);
+      (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, (long)arg1 + lVar6 + 0x88, 4);
       plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-      (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,(long)arg1 + lVar6 + 0x8c,4);
+      (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, (long)arg1 + lVar6 + 0x8c, 4);
       plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-      (**(code **)(*plVar4 + 0x50))(plVar4,lVar5,(long)arg1 + lVar6 + 0x90,4);
+      (**(code **)(*plVar4 + 0x50))(plVar4, lVar5, (long)arg1 + lVar6 + 0x90, 4);
     } while (iVar3 != 600);
     plVar4 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-    (**(code **)(*plVar4 + 0x58))(plVar4,lVar5,0);
+    (**(code **)(*plVar4 + 0x58))(plVar4, lVar5, 0);
   }
   free(arg1);
   FixFileCase((char *)local_58);
-  iVar3 = access(local_58[0],0);
+  iVar3 = access(local_58[0], 0);
   if (iVar3 == 0) {
-                    /* try { // try from 00495c24 to 00495c28 has its CatchHandler @ 004960ec */
-    std__string_string((string *)local_48,GUserDataPath,local_2c);
-                    /* try { // try from 00495c3b to 00495c54 has its CatchHandler @ 0049610f */
-    std__string_append((char *)local_48,0x5c1f11);
-    std__string_string((string *)&local_38,(string *)local_58);
-                    /* try { // try from 00495c67 to 00495c6b has its CatchHandler @ 00496121 */
-    std__string_append((char *)&local_38,0x5c1f11);
+    /* try { // try from 00495c24 to 00495c28 has its CatchHandler @ 004960ec */
+    std__string_string((string *)local_48, GUserDataPath, local_2c);
+    /* try { // try from 00495c3b to 00495c54 has its CatchHandler @ 0049610f */
+    std__string_append((char *)local_48, 0x5c1f11);
+    std__string_string((string *)&local_38, (string *)local_58);
+    /* try { // try from 00495c67 to 00495c6b has its CatchHandler @ 00496121 */
+    std__string_append((char *)&local_38, 0x5c1f11);
     local_b8 = 2;
     local_b0 = 0;
     local_a8 = 0;
@@ -3292,19 +3241,19 @@ uint32_t SMBChapterDataSave(void *arg1)
     local_90 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
     local_c0 = &DAT_005c328c /* R:u32=1811964530 */;
     local_c8 = local_48[0];
-                    /* try { // try from 00495cd6 to 00495cda has its CatchHandler @ 00496133 */
-    File__File(local_88,(tagFileCreation *)&local_c8);
+    /* try { // try from 00495cd6 to 00495cda has its CatchHandler @ 00496133 */
+    File__File(local_88, (tagFileCreation *)&local_c8);
     uVar2 = local_84;
     __ptr = malloc((ulong)local_84);
-                    /* try { // try from 00495cf3 to 00495d2d has its CatchHandler @ 00496135 */
-    File__Read(local_88,__ptr,uVar2);
-    __s = fopen(local_38,"wb");
+    /* try { // try from 00495cf3 to 00495d2d has its CatchHandler @ 00496135 */
+    File__Read(local_88, __ptr, uVar2);
+    __s = fopen(local_38, "wb");
     if (__s != (FILE *)0x0) {
-      fwrite(__ptr,(ulong)local_84,1,__s);
+      fwrite(__ptr, (ulong)local_84, 1, __s);
       fclose(__s);
     }
     free(__ptr);
-                    /* try { // try from 00495d3b to 00495d3f has its CatchHandler @ 00496133 */
+    /* try { // try from 00495d3b to 00495d3f has its CatchHandler @ 00496133 */
     File__File__005b7a70(local_88);
     if ((allocator *)(local_38 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
@@ -3316,8 +3265,7 @@ uint32_t SMBChapterDataSave(void *arg1)
         std__string_Rep_M_destroy((allocator *)(local_38 + -0x18));
       }
     }
-    if ((allocator *)(local_48[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage)
-    {
+    if ((allocator *)(local_48[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
       LOCK();
       piVar1 = (int *)(local_48[0] + -8);
       iVar3 = *piVar1;
@@ -3328,7 +3276,7 @@ uint32_t SMBChapterDataSave(void *arg1)
       }
     }
   }
-                    /* try { // try from 00495d77 to 00495d87 has its CatchHandler @ 004960ec */
+  /* try { // try from 00495d77 to 00495d87 has its CatchHandler @ 004960ec */
   SyncEvent__Set((SyncEvent *)SMBChapterSaveEvent);
   GSMBCutSceneManager__CancelSavingMessage(SMBCutSceneManager);
   if ((allocator *)(local_58[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
@@ -3352,7 +3300,7 @@ uint32_t SMBChapterDataSave(void *arg1)
  */
 /* GSMBChapterData__GetChapterFileName(tagChapterName) */
 
-char * GSMBChapterData__GetChapterFileName(void)
+char *GSMBChapterData__GetChapterFileName(void)
 
 {
   return "savegame.dat";
@@ -3373,18 +3321,18 @@ void WriteToOverallLeaderboard(void)
   long lVar1;
   uint uVar2;
   int iVar3;
-  uint32_t local_68 [2];
+  uint32_t local_68[2];
   uint32_t *local_60;
   uint64_t local_50;
   uint32_t local_48;
-  uint local_38 [4];
-  uint local_28 [4];
-  uint local_18 [6];
-  
+  uint local_38[4];
+  uint local_28[4];
+  uint local_18[6];
+
   local_38[0] = 0;
   local_28[0] = 0;
   local_18[0] = 0;
-  Leaderboards__InitializeLeaderboardEntry((LeaderBoardEntry *)local_68,3);
+  Leaderboards__InitializeLeaderboardEntry((LeaderBoardEntry *)local_68, 3);
   local_50 = TPlayer__GetProfile((TPlayer *)Players__Player);
   if (*(int *)(SuperMeatBoy + 0x290) == 9) {
     local_28[0] = 0;
@@ -3394,7 +3342,8 @@ void WriteToOverallLeaderboard(void)
     do {
       if (((byte)SMBChapterData[lVar1 + 0x1110] & 2) != 0) {
         local_38[0] = local_38[0] + 1;
-        iVar3 = (int)(long)(*(float *)(SMBChapterData + lVar1 + 0x110c) * DAT_005c01c4 /* R:1000.0f */);
+        iVar3 =
+            (int)(long)(*(float *)(SMBChapterData + lVar1 + 0x110c) * DAT_005c01c4 /* R:1000.0f */);
         uVar2 = 1000000 - iVar3;
         local_18[0] = local_18[0] + iVar3;
         if (1000000 < uVar2) {
@@ -3404,10 +3353,9 @@ void WriteToOverallLeaderboard(void)
       }
       lVar1 = lVar1 + 0xc;
     } while (lVar1 != 0xb40);
-  }
-  else {
+  } else {
     local_68[0] = 0;
-    GSMBChapterData__CalculateOverallScore(SMBChapterData,local_38,local_28,local_18);
+    GSMBChapterData__CalculateOverallScore(SMBChapterData, local_38, local_28, local_18);
   }
   local_48 = 1;
   *(uint8_t *)(local_60 + 1) = 1;
@@ -3436,7 +3384,7 @@ void WriteToOverallLeaderboard(void)
 
 {
   int iVar1;
-  
+
   iVar1 = System_IsTrialMode();
   if ((iVar1 != 1) && (*(int *)(SuperMeatBoy + 0x290) != 9)) {
     WriteToOverallLeaderboard();
@@ -3457,7 +3405,7 @@ void EditorButton_ChapterLevelDeletePress(void *arg1)
 
 {
   long lVar1;
-  
+
   lVar1 = pEditorChapterUploadForm + (long)(int)arg1 * 0x2c;
   *(uint32_t *)(lVar1 + 0x2d0) = 0xffffffff;
   *(uint8_t *)(lVar1 + 0x2dc) = 0;
@@ -3472,7 +3420,7 @@ void EditorButton_ChapterLevelDeletePress(void *arg1)
  */
 /* ShowLevelProperties(tagButtonProps const*, void*) */
 
-void ShowLevelProperties(tagButtonProps *arg1,void *arg2)
+void ShowLevelProperties(tagButtonProps *arg1, void *arg2)
 
 {
   UIForm__Activate(SMBEditorForms__SMB_LEVEL_PROPS);
@@ -3491,31 +3439,31 @@ void DestroySMBEditorResources(void *arg1)
 
 {
   if (*(BaseResource **)((long)arg1 + 0xd8) != (BaseResource *)0x0) {
-    BaseResource__Release(*(BaseResource **)((long)arg1 + 0xd8),0);
+    BaseResource__Release(*(BaseResource **)((long)arg1 + 0xd8), 0);
     *(uint64_t *)((long)arg1 + 0xd8) = 0;
   }
   if (*(BaseResource **)((long)arg1 + 0xe8) != (BaseResource *)0x0) {
-    BaseResource__Release(*(BaseResource **)((long)arg1 + 0xe8),0);
+    BaseResource__Release(*(BaseResource **)((long)arg1 + 0xe8), 0);
     *(uint64_t *)((long)arg1 + 0xe8) = 0;
   }
   if (*(BaseResource **)((long)arg1 + 0xe0) != (BaseResource *)0x0) {
-    BaseResource__Release(*(BaseResource **)((long)arg1 + 0xe0),0);
+    BaseResource__Release(*(BaseResource **)((long)arg1 + 0xe0), 0);
     *(uint64_t *)((long)arg1 + 0xe0) = 0;
   }
   if (*(BaseResource **)((long)arg1 + 0xf0) != (BaseResource *)0x0) {
-    BaseResource__Release(*(BaseResource **)((long)arg1 + 0xf0),0);
+    BaseResource__Release(*(BaseResource **)((long)arg1 + 0xf0), 0);
     *(uint64_t *)((long)arg1 + 0xf0) = 0;
   }
   if (pSelectionBox != (BaseResource *)0x0) {
-    BaseResource__Release(pSelectionBox,0);
+    BaseResource__Release(pSelectionBox, 0);
     pSelectionBox = (BaseResource *)0x0;
   }
   if (pWaypointStream != (BaseResource *)0x0) {
-    BaseResource__Release(pWaypointStream,0);
+    BaseResource__Release(pWaypointStream, 0);
     pWaypointStream = (BaseResource *)0x0;
   }
   if (pLightCross != (BaseResource *)0x0) {
-    BaseResource__Release(pLightCross,0);
+    BaseResource__Release(pLightCross, 0);
     pLightCross = (BaseResource *)0x0;
   }
   return;
@@ -3558,7 +3506,7 @@ void CreateSMBEditorResources(void *arg1)
   uint32_t local_b0;
   uint32_t local_ac;
   uint32_t local_a8;
-  uint8_t local_98 [2];
+  uint8_t local_98[2];
   uint16_t local_96;
   uint32_t local_94;
   uint32_t local_90;
@@ -3572,13 +3520,13 @@ void CreateSMBEditorResources(void *arg1)
   uint32_t local_64;
   uint32_t local_60;
   uint32_t local_5c;
-  TexturePackage local_58 [32];
+  TexturePackage local_58[32];
   uint8_t *local_38;
   uint16_t local_30;
   uint32_t local_2c;
   char *local_28;
   BaseResource *local_20;
-  
+
   local_b8 = &local_108;
   local_108 = 0xbf000000;
   local_104 = 0x3f000000;
@@ -3613,11 +3561,11 @@ void CreateSMBEditorResources(void *arg1)
   local_2c = 0;
   local_30 = 2;
   self = (BaseResource *)VertexDeclaration__Create((tagVertexDeclarationCreation *)&local_38);
-  pVVar1 = BaseResource__operator_new(0xa8,1);
-                    /* try { // try from 0049e83d to 0049e841 has its CatchHandler @ 0049ea4a */
-  VertexStream__VertexStream__005a6980(pVVar1,1,4,8,5,&local_20,self);
+  pVVar1 = BaseResource__operator_new(0xa8, 1);
+  /* try { // try from 0049e83d to 0049e841 has its CatchHandler @ 0049ea4a */
+  VertexStream__VertexStream__005a6980(pVVar1, 1, 4, 8, 5, &local_20, self);
   pSelectionBox = pVVar1;
-  BaseResource__Release(local_20,0);
+  BaseResource__Release(local_20, 0);
   local_b8 = &local_78;
   local_78 = 0xbf800000;
   local_74 = 0;
@@ -3629,31 +3577,31 @@ void CreateSMBEditorResources(void *arg1)
   local_5c = 0x3f800000;
   local_c8 = 0x20;
   local_20 = (BaseResource *)VertexBuffer__Create((tagVertexBufferCreation *)&local_c8);
-  pVVar1 = BaseResource__operator_new(0xa8,1);
-                    /* try { // try from 0049e90e to 0049e912 has its CatchHandler @ 0049ea92 */
-  VertexStream__VertexStream__005a6980(pVVar1,1,2,4,5,&local_20,self);
+  pVVar1 = BaseResource__operator_new(0xa8, 1);
+  /* try { // try from 0049e90e to 0049e912 has its CatchHandler @ 0049ea92 */
+  VertexStream__VertexStream__005a6980(pVVar1, 1, 2, 4, 5, &local_20, self);
   pLightCross = pVVar1;
-  BaseResource__Release(local_20,0);
+  BaseResource__Release(local_20, 0);
   local_c8 = 0x640;
   local_c0 = 8;
   local_b8 = (uint32_t *)0x0;
   local_20 = (BaseResource *)VertexBuffer__Create((tagVertexBufferCreation *)&local_c8);
-  pVVar1 = BaseResource__operator_new(0xa8,1);
-                    /* try { // try from 0049e98a to 0049e98e has its CatchHandler @ 0049ea7a */
-  VertexStream__VertexStream__005a6980(pVVar1,1,100,200,5,&local_20,self);
+  pVVar1 = BaseResource__operator_new(0xa8, 1);
+  /* try { // try from 0049e98a to 0049e98e has its CatchHandler @ 0049ea7a */
+  VertexStream__VertexStream__005a6980(pVVar1, 1, 100, 200, 5, &local_20, self);
   pWaypointStream = pVVar1;
-  BaseResource__Release(local_20,0);
-  BaseResource__Release(self,0);
+  BaseResource__Release(local_20, 0);
+  BaseResource__Release(self, 0);
   local_28 = "resources/Textures/editoricons.tp";
-  TexturePackage__TexturePackage(local_58,(TexturePackageCreate *)&local_28);
-                    /* try { // try from 0049e9da to 0049ea29 has its CatchHandler @ 0049ea62 */
-  uVar2 = TexturePackage__CreateTexture(local_58,0);
+  TexturePackage__TexturePackage(local_58, (TexturePackageCreate *)&local_28);
+  /* try { // try from 0049e9da to 0049ea29 has its CatchHandler @ 0049ea62 */
+  uVar2 = TexturePackage__CreateTexture(local_58, 0);
   *(uint64_t *)((long)arg1 + 0xd8) = uVar2;
-  uVar2 = TexturePackage__CreateTexture(local_58,2);
+  uVar2 = TexturePackage__CreateTexture(local_58, 2);
   *(uint64_t *)((long)arg1 + 0xe8) = uVar2;
-  uVar2 = TexturePackage__CreateTexture(local_58,1);
+  uVar2 = TexturePackage__CreateTexture(local_58, 1);
   *(uint64_t *)((long)arg1 + 0xe0) = uVar2;
-  uVar2 = TexturePackage__CreateTexture(local_58,3);
+  uVar2 = TexturePackage__CreateTexture(local_58, 3);
   *(uint64_t *)((long)arg1 + 0xf0) = uVar2;
   TexturePackage__TexturePackage__005a1b10(local_58);
   return;
@@ -3673,10 +3621,10 @@ void EditorButton_ChapterLevelLineButtonClick(void *arg1)
   uint64_t *puVar1;
   uint64_t *puVar2;
   long lVar3;
-  
+
   lVar3 = pEditorChapterUploadForm;
   *(int *)(pEditorChapterUploadForm + 0x2cc) = (int)arg1;
-  FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(lVar3 + 8),1);
+  FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(lVar3 + 8), 1);
   puVar1 = (uint64_t *)(lVar3 + 0x640 + (long)(int)arg1 * 0x2c);
   puVar2 = (uint64_t *)(lVar3 + 0x2d0 + (long)*(int *)(lVar3 + 0x2c8) * 0x2c);
   if (puVar1 != puVar2) {
@@ -3705,7 +3653,7 @@ void EditorForm_ChapterUploadFormCancel(void *arg1)
   TAudioCue *this_00;
   long lVar1;
   int iVar2;
-  
+
   lVar1 = pEditorChapterUploadForm;
   self = (TAudioInstance *)(pEditorChapterUploadForm + 0x808);
   iVar2 = TAudioInstance__IsPlaying(self);
@@ -3737,11 +3685,11 @@ void EditorButton_ChapterLevelMusicPress(void *arg1)
   long lVar2;
   int iVar3;
   TAudioCue *pTVar4;
-  uint32_t local_48 [2];
+  uint32_t local_48[2];
   uint64_t local_40;
   uint32_t local_38;
   uint32_t local_34;
-  
+
   lVar2 = pEditorChapterUploadForm;
   self = (TAudioInstance *)(pEditorChapterUploadForm + 0x808);
   iVar3 = TAudioInstance__IsPlaying(self);
@@ -3762,7 +3710,7 @@ void EditorButton_ChapterLevelMusicPress(void *arg1)
   pTVar4 = (TAudioCue *)TAudioCue__Create((TAudioCueCreation *)local_48);
   uVar1 = GLOBALMUSICVOLUME;
   *(TAudioCue **)(lVar2 + 0x800) = pTVar4;
-  TAudioCue__Play(pTVar4,uVar1,0,self);
+  TAudioCue__Play(pTVar4, uVar1, 0, self);
   *(int *)(lVar2 + 0x7fc) = (int)arg1;
   return;
 }
@@ -3781,7 +3729,7 @@ void EditorForm_ChapterUploadFormOpen(void *arg1)
   int iVar1;
   long lVar2;
   EditorForm *self;
-  uint32_t local_78 [2];
+  uint32_t local_78[2];
   wchar_t *local_70;
   wchar_t *local_68;
   uint64_t local_60;
@@ -3795,7 +3743,7 @@ void EditorForm_ChapterUploadFormOpen(void *arg1)
   uint64_t local_20;
   uint64_t local_18;
   uint64_t local_10;
-  
+
   lVar2 = SteamUser();
   self = pEditorChapterUploadForm;
   if (lVar2 != 0) {
@@ -3844,7 +3792,7 @@ void EditorForm_ChapterUploadFormSearch(void *arg1)
 
 {
   EditorFormChapterUpload *self;
-  
+
   self = pEditorChapterUploadForm;
   *(uint32_t *)(pEditorChapterUploadForm + 0x7f8) = 0;
   EditorFormChapterUpload__LoadLevelLibrary(self);
@@ -3863,10 +3811,10 @@ void EditorButton_ChapterLevelButtonClick(void *arg1)
 
 {
   EditorFormChapterUpload *self;
-  
+
   self = pEditorChapterUploadForm;
   *(int *)(pEditorChapterUploadForm + 0x2c8) = (int)arg1;
-  FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 8),2);
+  FlashLibraryInstance__GotoAndStop(*(FlashLibraryInstance **)(self + 8), 2);
   EditorFormChapterUpload__LoadLevelLibrary(self);
   return;
 }
@@ -3883,7 +3831,7 @@ void EditorButton_ChapterLibraryRightClick(void *arg1)
 
 {
   EditorFormChapterUpload *self;
-  
+
   self = pEditorChapterUploadForm;
   *(int *)(pEditorChapterUploadForm + 0x7f8) = *(int *)(pEditorChapterUploadForm + 0x7f8) + 10;
   EditorFormChapterUpload__LoadLevelLibrary(self);
@@ -3903,7 +3851,7 @@ void EditorButton_ChapterLibraryLeftClick(void *arg1)
 {
   EditorFormChapterUpload *self;
   int iVar1;
-  
+
   self = pEditorChapterUploadForm;
   iVar1 = 0;
   if (9 < *(int *)(pEditorChapterUploadForm + 0x7f8)) {
@@ -3937,15 +3885,15 @@ void EditorForm_ChapterUploadFormOk(void *arg1)
  */
 /* SaveLevelPress(tagButtonProps const*, void*) */
 
-void SaveLevelPress(tagButtonProps *arg1,void *arg2)
+void SaveLevelPress(tagButtonProps *arg1, void *arg2)
 
 {
   InputCallback **ppIVar1;
   long lVar2;
   TKeyboard *self;
   long *plVar3;
-  char acStack_28 [32];
-  
+  char acStack_28[32];
+
   self = Keyboard;
   lVar2 = pEditorSaveForm;
   if (*(int *)arg1 != 1) {
@@ -3956,74 +3904,75 @@ void SaveLevelPress(tagButtonProps *arg1,void *arg2)
   }
   ppIVar1 = (InputCallback **)(pEditorSaveForm + 0xb0);
   *(uint64_t *)(pEditorSaveForm + 0xb0) = 0;
-  TKeyboard__BackupCallbacks(self,ppIVar1);
+  TKeyboard__BackupCallbacks(self, ppIVar1);
   if (pCurrentVisibleForm == 0) {
-    if (lVar2 == 0) goto LAB_004a9fac;
-  }
-  else {
-    if (lVar2 == pCurrentVisibleForm) goto LAB_004a9fac;
+    if (lVar2 == 0)
+      goto LAB_004a9fac;
+  } else {
+    if (lVar2 == pCurrentVisibleForm)
+      goto LAB_004a9fac;
     *(uint32_t *)(pCurrentVisibleForm + 0xac) = 1;
   }
-  FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78),"formlabel",lVar2 + 0x88);
+  FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78), "formlabel", lVar2 + 0x88);
   plVar3 = *(long **)(lVar2 + 0x80);
   if (*plVar3 != 0) {
-    Sprint("labeltext%i",acStack_28,1);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(lVar2 + 0x78),acStack_28,**(uint64_t **)(lVar2 + 0x80));
+    Sprint("labeltext%i", acStack_28, 1);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78), acStack_28,
+                                            **(uint64_t **)(lVar2 + 0x80));
     plVar3 = *(long **)(lVar2 + 0x80);
   }
   if (plVar3[1] != 0) {
-    Sprint("labeltext%i",acStack_28,2);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(lVar2 + 0x78),acStack_28,*(uint64_t *)(*(long *)(lVar2 + 0x80) + 8));
+    Sprint("labeltext%i", acStack_28, 2);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78), acStack_28,
+                                            *(uint64_t *)(*(long *)(lVar2 + 0x80) + 8));
     plVar3 = *(long **)(lVar2 + 0x80);
   }
   if (plVar3[2] != 0) {
-    Sprint("labeltext%i",acStack_28,3);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(lVar2 + 0x78),acStack_28,*(uint64_t *)(*(long *)(lVar2 + 0x80) + 0x10));
+    Sprint("labeltext%i", acStack_28, 3);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78), acStack_28,
+                                            *(uint64_t *)(*(long *)(lVar2 + 0x80) + 0x10));
     plVar3 = *(long **)(lVar2 + 0x80);
   }
   if (plVar3[3] != 0) {
-    Sprint("labeltext%i",acStack_28,4);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(lVar2 + 0x78),acStack_28,*(uint64_t *)(*(long *)(lVar2 + 0x80) + 0x18));
+    Sprint("labeltext%i", acStack_28, 4);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78), acStack_28,
+                                            *(uint64_t *)(*(long *)(lVar2 + 0x80) + 0x18));
     plVar3 = *(long **)(lVar2 + 0x80);
   }
   if (plVar3[4] != 0) {
-    Sprint("labeltext%i",acStack_28,5);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(lVar2 + 0x78),acStack_28,*(uint64_t *)(*(long *)(lVar2 + 0x80) + 0x20));
+    Sprint("labeltext%i", acStack_28, 5);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78), acStack_28,
+                                            *(uint64_t *)(*(long *)(lVar2 + 0x80) + 0x20));
   }
   if (*(long *)(lVar2 + 0x28) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x28) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x28) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x30) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x30) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x30) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x38) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x38) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x38) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x40) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x40) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x40) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x48) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x48) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x48) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x50) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x50) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x50) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x58) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x58) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x58) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x60) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x60) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x60) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x68) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x68) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x68) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x70) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x70) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x70) + 0x50), "");
   }
   pCurrentVisibleForm = lVar2;
   *(uint32_t *)(lVar2 + 0xa8) = 1;
@@ -4073,15 +4022,15 @@ LAB_004a9fac:
  */
 /* LoadLevelPress(tagButtonProps const*, void*) */
 
-void LoadLevelPress(tagButtonProps *arg1,void *arg2)
+void LoadLevelPress(tagButtonProps *arg1, void *arg2)
 
 {
   InputCallback **ppIVar1;
   long lVar2;
   TKeyboard *self;
   long *plVar3;
-  char acStack_28 [32];
-  
+  char acStack_28[32];
+
   self = Keyboard;
   lVar2 = pEditorLoadForm;
   if (*(int *)arg1 != 1) {
@@ -4092,74 +4041,75 @@ void LoadLevelPress(tagButtonProps *arg1,void *arg2)
   }
   ppIVar1 = (InputCallback **)(pEditorLoadForm + 0xb0);
   *(uint64_t *)(pEditorLoadForm + 0xb0) = 0;
-  TKeyboard__BackupCallbacks(self,ppIVar1);
+  TKeyboard__BackupCallbacks(self, ppIVar1);
   if (pCurrentVisibleForm == 0) {
-    if (lVar2 == 0) goto LAB_004aa31c;
-  }
-  else {
-    if (lVar2 == pCurrentVisibleForm) goto LAB_004aa31c;
+    if (lVar2 == 0)
+      goto LAB_004aa31c;
+  } else {
+    if (lVar2 == pCurrentVisibleForm)
+      goto LAB_004aa31c;
     *(uint32_t *)(pCurrentVisibleForm + 0xac) = 1;
   }
-  FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78),"formlabel",lVar2 + 0x88);
+  FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78), "formlabel", lVar2 + 0x88);
   plVar3 = *(long **)(lVar2 + 0x80);
   if (*plVar3 != 0) {
-    Sprint("labeltext%i",acStack_28,1);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(lVar2 + 0x78),acStack_28,**(uint64_t **)(lVar2 + 0x80));
+    Sprint("labeltext%i", acStack_28, 1);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78), acStack_28,
+                                            **(uint64_t **)(lVar2 + 0x80));
     plVar3 = *(long **)(lVar2 + 0x80);
   }
   if (plVar3[1] != 0) {
-    Sprint("labeltext%i",acStack_28,2);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(lVar2 + 0x78),acStack_28,*(uint64_t *)(*(long *)(lVar2 + 0x80) + 8));
+    Sprint("labeltext%i", acStack_28, 2);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78), acStack_28,
+                                            *(uint64_t *)(*(long *)(lVar2 + 0x80) + 8));
     plVar3 = *(long **)(lVar2 + 0x80);
   }
   if (plVar3[2] != 0) {
-    Sprint("labeltext%i",acStack_28,3);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(lVar2 + 0x78),acStack_28,*(uint64_t *)(*(long *)(lVar2 + 0x80) + 0x10));
+    Sprint("labeltext%i", acStack_28, 3);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78), acStack_28,
+                                            *(uint64_t *)(*(long *)(lVar2 + 0x80) + 0x10));
     plVar3 = *(long **)(lVar2 + 0x80);
   }
   if (plVar3[3] != 0) {
-    Sprint("labeltext%i",acStack_28,4);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(lVar2 + 0x78),acStack_28,*(uint64_t *)(*(long *)(lVar2 + 0x80) + 0x18));
+    Sprint("labeltext%i", acStack_28, 4);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78), acStack_28,
+                                            *(uint64_t *)(*(long *)(lVar2 + 0x80) + 0x18));
     plVar3 = *(long **)(lVar2 + 0x80);
   }
   if (plVar3[4] != 0) {
-    Sprint("labeltext%i",acStack_28,5);
-    FlashAnimationLibrary__SetTextFieldText
-              (*(char **)(lVar2 + 0x78),acStack_28,*(uint64_t *)(*(long *)(lVar2 + 0x80) + 0x20));
+    Sprint("labeltext%i", acStack_28, 5);
+    FlashAnimationLibrary__SetTextFieldText(*(char **)(lVar2 + 0x78), acStack_28,
+                                            *(uint64_t *)(*(long *)(lVar2 + 0x80) + 0x20));
   }
   if (*(long *)(lVar2 + 0x28) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x28) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x28) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x30) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x30) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x30) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x38) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x38) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x38) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x40) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x40) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x40) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x48) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x48) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x48) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x50) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x50) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x50) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x58) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x58) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x58) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x60) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x60) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x60) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x68) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x68) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x68) + 0x50), "");
   }
   if (*(long *)(lVar2 + 0x70) != 0) {
-    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x70) + 0x50),"");
+    FlashEditableTextField__SetText(*(char **)(*(long *)(lVar2 + 0x70) + 0x50), "");
   }
   pCurrentVisibleForm = lVar2;
   *(uint32_t *)(lVar2 + 0xa8) = 1;
@@ -4229,12 +4179,12 @@ void SMB_LEVEL_PROPS_Activate(void *arg1)
 
 {
   ushort uVar1;
-  
+
   uVar1 = *(ushort *)(*(long *)(SuperMeatBoy + 0x40) + 0x3a);
-  UITextField__SetDynamicText
-            (pSMBLEVELPROPSWidth,&DAT_005c6660 /* R:5.184804318001823e-44f */,
-             (ulong)*(ushort *)(*(long *)(SuperMeatBoy + 0x40) + 0x38));
-  UITextField__SetDynamicText(pSMBLEVELPROPSHeight,&DAT_005c6660 /* R:5.184804318001823e-44f */,(ulong)uVar1);
+  UITextField__SetDynamicText(pSMBLEVELPROPSWidth, &DAT_005c6660 /* R:5.184804318001823e-44f */,
+                              (ulong) * (ushort *)(*(long *)(SuperMeatBoy + 0x40) + 0x38));
+  UITextField__SetDynamicText(pSMBLEVELPROPSHeight, &DAT_005c6660 /* R:5.184804318001823e-44f */,
+                              (ulong)uVar1);
   return;
 }
 
@@ -4250,29 +4200,34 @@ void ActivatePlayerProps(void *arg1)
 
 {
   long lVar1;
-  
-  lVar1 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
-  UITextField__SetDynamicText(pSMBPLAYERPROPRun,(double)*(float *)(lVar1 + 0x8a8),&DAT_005c48d0 /* R:5.184804318001823e-44f */);
-  UITextField__SetDynamicText(pSMBPLAYERPROPWalk,(double)*(float *)(lVar1 + 0x8ac),&DAT_005c48d0 /* R:5.184804318001823e-44f */);
-  UITextField__SetDynamicText(pSMBPLAYERPROPJump,(double)*(float *)(lVar1 + 0x8b0),&DAT_005c48d0 /* R:5.184804318001823e-44f */);
-  UITextField__SetDynamicText
-            (pSMBPLAYERPROPWallJumpUp,(double)*(float *)(lVar1 + 0x8b4),&DAT_005c48d0 /* R:5.184804318001823e-44f */);
-  UITextField__SetDynamicText
-            (pSMBPLAYERPROPWallJumpOut,(double)*(float *)(lVar1 + 0x8b8),&DAT_005c48d0 /* R:5.184804318001823e-44f */);
-  UITextField__SetDynamicText
-            (pSMBPLAYERPROPWallJumpFriction,(double)*(float *)(lVar1 + 0x8bc),&DAT_005c48d0 /* R:5.184804318001823e-44f */);
-  UITextField__SetDynamicText(pSMBPLAYERPROPDrag,(double)*(float *)(lVar1 + 0x8c0),&DAT_005c48d0 /* R:5.184804318001823e-44f */);
-  UITextField__SetDynamicText(pSMBPLAYERPROPGravity,(double)*(float *)(lVar1 + 0x8c4),&DAT_005c48d0 /* R:5.184804318001823e-44f */)
-  ;
-  UITextField__SetDynamicText(pSMBPLAYERPROPScale,(double)*(float *)(lVar1 + 0x8c8),&DAT_005c48d0 /* R:5.184804318001823e-44f */);
-  UITextField__SetDynamicText
-            (pSMBPLAYERPROPTileBounds,(double)*(float *)(lVar1 + 0x8cc),&DAT_005c48d0 /* R:5.184804318001823e-44f */);
-  UITextField__SetDynamicText
-            (pSMBPLAYERPROPKillBounds,(double)*(float *)(lVar1 + 0x8d0),&DAT_005c48d0 /* R:5.184804318001823e-44f */);
-  UITextField__SetDynamicText
-            (pSMBPLAYERPROPHillDamper,(double)*(float *)(lVar1 + 0xa30),&DAT_005c48d0 /* R:5.184804318001823e-44f */);
-  UITextField__SetDynamicText
-            (pSMBPLAYERPROPTurnFriction,(double)*(float *)(lVar1 + 0xa34),&DAT_005c48d0 /* R:5.184804318001823e-44f */);
+
+  lVar1 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
+  UITextField__SetDynamicText(pSMBPLAYERPROPRun, (double)*(float *)(lVar1 + 0x8a8),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
+  UITextField__SetDynamicText(pSMBPLAYERPROPWalk, (double)*(float *)(lVar1 + 0x8ac),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
+  UITextField__SetDynamicText(pSMBPLAYERPROPJump, (double)*(float *)(lVar1 + 0x8b0),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
+  UITextField__SetDynamicText(pSMBPLAYERPROPWallJumpUp, (double)*(float *)(lVar1 + 0x8b4),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
+  UITextField__SetDynamicText(pSMBPLAYERPROPWallJumpOut, (double)*(float *)(lVar1 + 0x8b8),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
+  UITextField__SetDynamicText(pSMBPLAYERPROPWallJumpFriction, (double)*(float *)(lVar1 + 0x8bc),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
+  UITextField__SetDynamicText(pSMBPLAYERPROPDrag, (double)*(float *)(lVar1 + 0x8c0),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
+  UITextField__SetDynamicText(pSMBPLAYERPROPGravity, (double)*(float *)(lVar1 + 0x8c4),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
+  UITextField__SetDynamicText(pSMBPLAYERPROPScale, (double)*(float *)(lVar1 + 0x8c8),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
+  UITextField__SetDynamicText(pSMBPLAYERPROPTileBounds, (double)*(float *)(lVar1 + 0x8cc),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
+  UITextField__SetDynamicText(pSMBPLAYERPROPKillBounds, (double)*(float *)(lVar1 + 0x8d0),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
+  UITextField__SetDynamicText(pSMBPLAYERPROPHillDamper, (double)*(float *)(lVar1 + 0xa30),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
+  UITextField__SetDynamicText(pSMBPLAYERPROPTurnFriction, (double)*(float *)(lVar1 + 0xa34),
+                              &DAT_005c48d0 /* R:5.184804318001823e-44f */);
   return;
 }
 
@@ -4292,8 +4247,8 @@ void DeactivatePlayerProps(void *arg1)
   long lVar2;
   MeatBoyCharactor *this_00;
   uint32_t uVar3;
-  
-  lVar2 = GSuperMeatBoy__getChar(SuperMeatBoy,1);
+
+  lVar2 = GSuperMeatBoy__getChar(SuperMeatBoy, 1);
   uVar3 = StringToFloatW(*(uint64_t *)(pSMBPLAYERPROPRun + 0x40));
   lVar1 = pSMBPLAYERPROPWalk;
   *(uint32_t *)(lVar2 + 0x8a8) = uVar3;
@@ -4333,7 +4288,7 @@ void DeactivatePlayerProps(void *arg1)
   uVar3 = StringToFloatW(*(uint64_t *)(lVar1 + 0x40));
   self = SuperMeatBoy;
   *(uint32_t *)(lVar2 + 0xa34) = uVar3;
-  this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(self,1);
+  this_00 = (MeatBoyCharactor *)GSuperMeatBoy__getChar(self, 1);
   MeatBoyCharactor__WritePropertiesToFile(this_00);
   return;
 }
@@ -4351,10 +4306,10 @@ void SMB_LEVEL_PROPS_Submit(void *arg1)
 {
   ushort uVar1;
   ushort uVar2;
-  
+
   uVar1 = StringToIntW(*(uint64_t *)(pSMBLEVELPROPSWidth + 0x40));
   uVar2 = StringToIntW(*(uint64_t *)(pSMBLEVELPROPSHeight + 0x40));
-  SMBEditor__ResizeLevel(SuperMeatBoyEditor,uVar1,uVar2);
+  SMBEditor__ResizeLevel(SuperMeatBoyEditor, uVar1, uVar2);
   UIForm__DeActivate(SMBEditorForms__SMB_LEVEL_PROPS);
   return;
 }
@@ -4372,13 +4327,15 @@ void SMB_NEW_LEVEL_Submit(void *arg1)
 {
   ushort uVar1;
   ushort uVar2;
-  
+
   uVar1 = StringToIntW(*(uint64_t *)(pSMBNEWLevelWidth + 0x40));
   uVar2 = StringToIntW(*(uint64_t *)(pSMBNEWLevelHeight + 0x40));
-  ConvertWCHARtoTCHAR(*(uint64_t *)
-                       (*(long *)(*(long *)(**(long **)(pSMBNEWPaletteDropDown + 0x528) + 0x50) +
-                                 0x40) + 0x28),&strLargeString);
-  SMBEditor__NewLevel(SuperMeatBoyEditor,uVar1,uVar2,strLargeString);
+  ConvertWCHARtoTCHAR(
+      *(uint64_t *)(*(long *)(*(long *)(**(long **)(pSMBNEWPaletteDropDown + 0x528) + 0x50) +
+                              0x40) +
+                    0x28),
+      &strLargeString);
+  SMBEditor__NewLevel(SuperMeatBoyEditor, uVar1, uVar2, strLargeString);
   UIForm__DeActivate(SMBEditorForms__SMB_NEW_LEVEL);
   return;
 }
@@ -4395,8 +4352,8 @@ void SMB_SAVE_LEVEL_Activate(void *arg1)
 
 {
   if (*(long *)(*(long *)(SuperMeatBoyEditor + 0x100) + -0x18) != 0) {
-    ConvertCHARtoWCHAR(*(long *)(SuperMeatBoyEditor + 0x100),&strLargeStringW);
-    UITextField__SetStaticText(pSMBSAVEFileName,strLargeStringW);
+    ConvertCHARtoWCHAR(*(long *)(SuperMeatBoyEditor + 0x100), &strLargeStringW);
+    UITextField__SetStaticText(pSMBSAVEFileName, strLargeStringW);
   }
   (**(code **)(*(long *)pSMBSAVEFileName + 0x30))();
   *(UITextField **)(SMBEditorForms__SMB_SAVE_LEVEL + 0x98) = pSMBSAVEFileName;
@@ -4415,11 +4372,11 @@ void SMB_SAVE_LEVEL_Submit(void *arg1)
 
 {
   long lVar1;
-  
+
   lVar1 = pSMBSAVEFileName;
   UIForm__DeActivate(SMBEditorForms__SMB_SAVE_LEVEL);
-  ConvertWCHARtoTCHAR(*(uint64_t *)(lVar1 + 0x40),&strLargeString);
-  SMBEditor__SaveLevel(SuperMeatBoyEditor,strLargeString,0);
+  ConvertWCHARtoTCHAR(*(uint64_t *)(lVar1 + 0x40), &strLargeString);
+  SMBEditor__SaveLevel(SuperMeatBoyEditor, strLargeString, 0);
   return;
 }
 
@@ -4438,14 +4395,14 @@ void SMB_LOAD_LEVEL_Submit(void *arg1)
   uint64_t local_28;
   uint64_t local_20;
   uint32_t local_18;
-  
+
   lVar1 = pSMBLoadFileName;
   UIForm__DeActivate(SMBEditorForms__SMB_LOAD_LEVEL);
-  ConvertWCHARtoTCHAR(*(uint64_t *)(lVar1 + 0x40),&strLargeString);
+  ConvertWCHARtoTCHAR(*(uint64_t *)(lVar1 + 0x40), &strLargeString);
   local_20 = 0;
   local_18 = 0;
   local_28 = strLargeString;
-  SMBEditor__LoadLevel(SuperMeatBoyEditor,(TileLevelLoad *)&local_28);
+  SMBEditor__LoadLevel(SuperMeatBoyEditor, (TileLevelLoad *)&local_28);
   return;
 }
 
@@ -4502,7 +4459,7 @@ void NewLevelMasterPress(void *arg1)
  */
 /* SMBInstPageOutroDone(void*, int, int) */
 
-void SMBInstPageOutroDone(void *arg1,int arg2,int arg3)
+void SMBInstPageOutroDone(void *arg1, int arg2, int arg3)
 
 {
   bPageShowing = 0;
@@ -4522,7 +4479,7 @@ bool SMBInstSkip(void *arg1)
 {
   long lVar1;
   bool bVar2;
-  
+
   if ((Keyboard == 0) || (bVar2 = true, *(int *)(Keyboard + 0x154) != 1)) {
     lVar1 = TPlayer__GetJoystick((TPlayer *)Players__Player);
     bVar2 = *(int *)(lVar1 + 0x38) == 1;
@@ -4538,7 +4495,7 @@ bool SMBInstSkip(void *arg1)
  */
 /* SMBInstPageTransDone(void*, int, int) */
 
-void SMBInstPageTransDone(void *arg1,int arg2,int arg3)
+void SMBInstPageTransDone(void *arg1, int arg2, int arg3)
 
 {
   uint32_t local_58;
@@ -4552,7 +4509,7 @@ void SMBInstPageTransDone(void *arg1,int arg2,int arg3)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   if (arg2 != 1) {
     local_38 = 0;
     local_28 = 0;
@@ -4565,8 +4522,8 @@ void SMBInstPageTransDone(void *arg1,int arg2,int arg3)
     local_30 = SMBInstSkip;
     local_40 = SMBInstPageTransDone;
     local_18 = 0;
-    GSMBCutSceneManager__PlayCutScene
-              (*(GSMBCutSceneManager **)(SMBInstructions + 0x38),(SMBCutScene *)&local_58);
+    GSMBCutSceneManager__PlayCutScene(*(GSMBCutSceneManager **)(SMBInstructions + 0x38),
+                                      (SMBCutScene *)&local_58);
     return;
   }
   local_38 = 0;
@@ -4580,8 +4537,8 @@ void SMBInstPageTransDone(void *arg1,int arg2,int arg3)
   local_50 = 1;
   local_40 = SMBInstPageOutroDone;
   local_18 = 0;
-  GSMBCutSceneManager__PlayCutScene
-            (*(GSMBCutSceneManager **)(SMBInstructions + 0x38),(SMBCutScene *)&local_58);
+  GSMBCutSceneManager__PlayCutScene(*(GSMBCutSceneManager **)(SMBInstructions + 0x38),
+                                    (SMBCutScene *)&local_58);
   return;
 }
 
@@ -4593,7 +4550,7 @@ void SMBInstPageTransDone(void *arg1,int arg2,int arg3)
  */
 /* SMBInstPage1Done(void*, int, int) */
 
-void SMBInstPage1Done(void *arg1,int arg2,int arg3)
+void SMBInstPage1Done(void *arg1, int arg2, int arg3)
 
 {
   uint32_t local_58;
@@ -4607,7 +4564,7 @@ void SMBInstPage1Done(void *arg1,int arg2,int arg3)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   local_38 = 0;
   local_30 = 0;
   local_28 = 0;
@@ -4620,8 +4577,8 @@ void SMBInstPage1Done(void *arg1,int arg2,int arg3)
     local_50 = 1;
     local_40 = SMBInstPageTransDone;
     local_18 = 0;
-    GSMBCutSceneManager__PlayCutScene
-              (*(GSMBCutSceneManager **)(SMBInstructions + 0x38),(SMBCutScene *)&local_58);
+    GSMBCutSceneManager__PlayCutScene(*(GSMBCutSceneManager **)(SMBInstructions + 0x38),
+                                      (SMBCutScene *)&local_58);
     return;
   }
   local_48 = *(uint64_t *)(SMBInstructions + 0x20);
@@ -4630,8 +4587,8 @@ void SMBInstPage1Done(void *arg1,int arg2,int arg3)
   local_50 = 1;
   local_40 = SMBInstPageOutroDone;
   local_18 = 0;
-  GSMBCutSceneManager__PlayCutScene
-            (*(GSMBCutSceneManager **)(SMBInstructions + 0x38),(SMBCutScene *)&local_58);
+  GSMBCutSceneManager__PlayCutScene(*(GSMBCutSceneManager **)(SMBInstructions + 0x38),
+                                    (SMBCutScene *)&local_58);
   return;
 }
 
@@ -4643,7 +4600,7 @@ void SMBInstPage1Done(void *arg1,int arg2,int arg3)
  */
 /* SMBInstPageIntroDone(void*, int, int) */
 
-void SMBInstPageIntroDone(void *arg1,int arg2,int arg3)
+void SMBInstPageIntroDone(void *arg1, int arg2, int arg3)
 
 {
   uint32_t local_58;
@@ -4657,7 +4614,7 @@ void SMBInstPageIntroDone(void *arg1,int arg2,int arg3)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   if (arg2 == 1) {
     local_38 = 0;
     local_30 = (code *)0x0;
@@ -4671,8 +4628,8 @@ void SMBInstPageIntroDone(void *arg1,int arg2,int arg3)
       local_50 = 1;
       local_40 = SMBInstPageTransDone;
       local_18 = 0;
-      GSMBCutSceneManager__PlayCutScene
-                (*(GSMBCutSceneManager **)(SMBInstructions + 0x38),(SMBCutScene *)&local_58);
+      GSMBCutSceneManager__PlayCutScene(*(GSMBCutSceneManager **)(SMBInstructions + 0x38),
+                                        (SMBCutScene *)&local_58);
       return;
     }
     local_48 = *(uint64_t *)(SMBInstructions + 0x20);
@@ -4681,10 +4638,9 @@ void SMBInstPageIntroDone(void *arg1,int arg2,int arg3)
     local_50 = 1;
     local_40 = SMBInstPageOutroDone;
     local_18 = 0;
-    GSMBCutSceneManager__PlayCutScene
-              (*(GSMBCutSceneManager **)(SMBInstructions + 0x38),(SMBCutScene *)&local_58);
-  }
-  else {
+    GSMBCutSceneManager__PlayCutScene(*(GSMBCutSceneManager **)(SMBInstructions + 0x38),
+                                      (SMBCutScene *)&local_58);
+  } else {
     local_38 = 0;
     local_28 = 0;
     local_20 = 0;
@@ -4696,8 +4652,8 @@ void SMBInstPageIntroDone(void *arg1,int arg2,int arg3)
     local_30 = SMBInstSkip;
     local_40 = SMBInstPage1Done;
     local_18 = 0;
-    GSMBCutSceneManager__PlayCutScene
-              (*(GSMBCutSceneManager **)(SMBInstructions + 0x38),(SMBCutScene *)&local_58);
+    GSMBCutSceneManager__PlayCutScene(*(GSMBCutSceneManager **)(SMBInstructions + 0x38),
+                                      (SMBCutScene *)&local_58);
   }
   return;
 }
@@ -4710,7 +4666,7 @@ void SMBInstPageIntroDone(void *arg1,int arg2,int arg3)
  */
 /* SMBInstPage2Done(void*, int, int) */
 
-void SMBInstPage2Done(void *arg1,int arg2,int arg3)
+void SMBInstPage2Done(void *arg1, int arg2, int arg3)
 
 {
   uint32_t local_58;
@@ -4724,7 +4680,7 @@ void SMBInstPage2Done(void *arg1,int arg2,int arg3)
   uint32_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   local_20 = 0;
   local_1c = 1;
   local_38 = 0;
@@ -4736,8 +4692,8 @@ void SMBInstPage2Done(void *arg1,int arg2,int arg3)
   local_58 = 0x44200000;
   local_50 = 1;
   local_40 = SMBInstPageOutroDone;
-  GSMBCutSceneManager__PlayCutScene
-            (*(GSMBCutSceneManager **)(SMBInstructions + 0x38),(SMBCutScene *)&local_58);
+  GSMBCutSceneManager__PlayCutScene(*(GSMBCutSceneManager **)(SMBInstructions + 0x38),
+                                    (SMBCutScene *)&local_58);
   return;
 }
 
@@ -4749,11 +4705,11 @@ void SMBInstPage2Done(void *arg1,int arg2,int arg3)
  */
 /* SMBInternetsSelectChapter(tagButtonProps const*, void*) */
 
-void SMBInternetsSelectChapter(tagButtonProps *arg1,void *arg2)
+void SMBInternetsSelectChapter(tagButtonProps *arg1, void *arg2)
 
 {
   int iVar1;
-  
+
   if ((*(int *)arg1 == 1) && (*(char *)((long)arg2 + 0x1b5) != '\x01')) {
     *(uint8_t *)((long)arg2 + 0x1b6) = 0;
     iVar1 = GSMBMenu__LoadInternetsChapter();
@@ -4763,8 +4719,7 @@ void SMBInternetsSelectChapter(tagButtonProps *arg1,void *arg2)
       GSMBMenu__RemoveControls();
       return;
     }
-    *(FlashLibraryInstance **)((long)arg2 + 0x28) =
-         *(FlashLibraryInstance **)((long)arg2 + 0x80);
+    *(FlashLibraryInstance **)((long)arg2 + 0x28) = *(FlashLibraryInstance **)((long)arg2 + 0x80);
     FlashLibraryInstance__Reset(*(FlashLibraryInstance **)((long)arg2 + 0x80));
     *(uint8_t *)((long)arg2 + 0x1b5) = 1;
   }
@@ -4779,14 +4734,14 @@ void SMBInternetsSelectChapter(tagButtonProps *arg1,void *arg2)
  */
 /* FormatInternetsChapterName(char*, char const*) */
 
-void FormatInternetsChapterName(char *arg1,char *arg2)
+void FormatInternetsChapterName(char *arg1, char *arg2)
 
 {
   char cVar1;
   int iVar2;
   size_t sVar3;
   long lVar4;
-  
+
   sVar3 = strlen(arg2);
   iVar2 = (int)sVar3;
   if (0 < iVar2) {
@@ -4832,7 +4787,7 @@ void FillLeaderboardDatabase(void)
   int iVar7;
   int iVar8;
   int iVar9;
-  
+
   iVar4 = _UNK_005c5d5c;
   iVar3 = _UNK_005c5d58;
   iVar2 = _UNK_005c5d54;

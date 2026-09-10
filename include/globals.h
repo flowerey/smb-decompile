@@ -235,13 +235,15 @@ extern void *_ZGVZL33ConvertSDLJoystickStateToJoyStateP14tagSDLJoystickE15dwLast
 /* @0000000000818760 [b] */
 extern void *_ZGVZN14CommanderVideo6RenderEvE7pColors;
 /* @000000000081c220 [b] */
-extern void *_ZGVZN14SMBLevelPortal25GetEnterTheUnknownChapterEPP16SMBPortalChapterE19iEnterUnknownLength;
+extern void
+    *_ZGVZN14SMBLevelPortal25GetEnterTheUnknownChapterEPP16SMBPortalChapterE19iEnterUnknownLength;
 /* @00000000008190b0 [b] */
 extern void *_ZGVZN16MeatBoyCharactor6UpdateEvE11vDiagonalUp;
 /* @00000000008190a0 [b] */
 extern void *_ZGVZN16MeatBoyCharactor6UpdateEvE6vRight;
 /* @0000000000818f10 [b] */
-extern void *_ZGVZN17TileLevelLightMap17GenerateShadowMapEPK5LightPN3CGR18tagPos2ColorVertexERiE8vTriNorm;
+extern void
+    *_ZGVZN17TileLevelLightMap17GenerateShadowMapEPK5LightPN3CGR18tagPos2ColorVertexERiE8vTriNorm;
 /* @000000000081aa50 [b] */
 extern void *_ZGVZN9SMBEditor6RenderEvE16vLastMouseScreen;
 /* @00000000005d5440 [r] */
@@ -2411,7 +2413,8 @@ extern void *_ZZN14SMBEditorForms10InitializeEvE13strEffectName;
 /* @00000000008170d0 [d] */
 extern void *_ZZN14SMBEditorForms10InitializeEvE15fPlayerFieldPos;
 /* @000000000081c230 [b] */
-extern void *_ZZN14SMBLevelPortal25GetEnterTheUnknownChapterEPP16SMBPortalChapterE19iEnterUnknownLength;
+extern void
+    *_ZZN14SMBLevelPortal25GetEnterTheUnknownChapterEPP16SMBPortalChapterE19iEnterUnknownLength;
 /* @0000000000815e80 [d] */
 extern void *_ZZN15GSMBChapterData28ChapterLowestAchievementTimeE14tagChapterNameE12pLowAchTimes;
 /* @00000000005c8d20 [r] */
@@ -2421,7 +2424,8 @@ extern void *_ZZN16MeatBoyCharactor6UpdateEvE11vDiagonalUp;
 /* @00000000008190a8 [b] */
 extern void *_ZZN16MeatBoyCharactor6UpdateEvE6vRight;
 /* @0000000000818f18 [b] */
-extern void *_ZZN17TileLevelLightMap17GenerateShadowMapEPK5LightPN3CGR18tagPos2ColorVertexERiE8vTriNorm;
+extern void
+    *_ZZN17TileLevelLightMap17GenerateShadowMapEPK5LightPN3CGR18tagPos2ColorVertexERiE8vTriNorm;
 /* @00000000005dbcc0 [r] */
 extern void *_ZZN21FlashAnimationLibrary12GetTextFieldEPKcE12strAlignment;
 /* @00000000005c06e0 [r] */

@@ -38,9 +38,9 @@ void AnimationManager__UpdateCallbacks(void)
   ushort uVar15;
   float fVar16;
   float fVar17;
-  AutoLockSection local_28 [24];
-  
-  AutoLockSection__AutoLockSection(local_28,(CriticalSection *)AnimationCallbackSection);
+  AutoLockSection local_28[24];
+
+  AutoLockSection__AutoLockSection(local_28, (CriticalSection *)AnimationCallbackSection);
   uVar8 = (uint)(ushort)pAnimCallbacks._40_2_;
   if (pAnimCallbacks._40_2_ != 0) {
     uVar12 = 0;
@@ -52,30 +52,29 @@ void AnimationManager__UpdateCallbacks(void)
         if (lVar7 != 0) {
           if (*(int *)(lVar7 + 0x20) != -1) {
             lVar4 = *(long *)(*(long *)(*(long *)(lVar7 + 0x28) + 0x48) +
-                             (ulong)(ushort)*(int *)(lVar7 + 0x20) * 8);
+                              (ulong)(ushort) * (int *)(lVar7 + 0x20) * 8);
             if (*(int *)(lVar4 + 0x10) == 1) {
               iVar13 = *(int *)(lVar4 + 0x18);
               fVar16 = *(float *)(lVar7 + 0x58);
               fVar17 = *(float *)(lVar4 + 0x20);
-            }
-            else {
+            } else {
               fVar16 = *(float *)(lVar7 + 0x58);
               iVar13 = 0;
               fVar17 = 0.0;
             }
-            if ((fVar16 <= fVar17) || (iVar13 != 0)) goto LAB_005727b0;
+            if ((fVar16 <= fVar17) || (iVar13 != 0))
+              goto LAB_005727b0;
           }
           goto LAB_005726a1;
         }
-LAB_005727b0:
+      LAB_005727b0:
         uVar12 = (ulong)(uVar11 + 1);
         uVar6 = uVar8 & 0xffff;
-      }
-      else {
+      } else {
         lVar7 = puVar1[2];
-LAB_005726a1:
-                    /* try { // try from 005726a5 to 005726a6 has its CatchHandler @ 0057283d */
-        (*(code *)*puVar1)(lVar7,puVar1[1]);
+      LAB_005726a1:
+        /* try { // try from 005726a5 to 005726a6 has its CatchHandler @ 0057283d */
+        (*(code *)*puVar1)(lVar7, puVar1[1]);
         uVar10 = (uint)(ushort)pAnimCallbacks._40_2_;
         if ((uVar11 + 1 < uVar10) && ((int)uVar11 < (int)(uVar10 - 1))) {
           lVar7 = (long)(int)uVar11 * 0x28;
@@ -99,14 +98,16 @@ LAB_005726a1:
             uVar9 = 0;
             uVar15 = pAnimCallbacks._42_2_;
             do {
-              while( true ) {
+              while (true) {
                 puVar2 = (ushort *)(pAnimCallbacks._64_8_ + (ulong)uVar9 * 2);
                 uVar3 = *puVar2;
-                if (uVar11 != uVar3) break;
+                if (uVar11 != uVar3)
+                  break;
                 *puVar2 = 0xffff;
                 uVar9 = uVar9 + 1;
                 uVar15 = pAnimCallbacks._42_2_;
-                if ((ushort)pAnimCallbacks._42_2_ <= uVar9) goto LAB_00572831;
+                if ((ushort)pAnimCallbacks._42_2_ <= uVar9)
+                  goto LAB_00572831;
               }
               if ((uVar11 < uVar3) && ((ushort)(uVar3 - 1) < 0xfffe)) {
                 *puVar2 = uVar3 - 1;
@@ -114,7 +115,7 @@ LAB_005726a1:
               }
               uVar9 = uVar9 + 1;
             } while (uVar9 < uVar15);
-LAB_00572831:
+          LAB_00572831:
             uVar10 = (uint)(ushort)pAnimCallbacks._40_2_;
           }
         }
@@ -156,9 +157,9 @@ void AnimationManager__RemoveAllCallbacks(void)
   uint uVar7;
   ushort uVar8;
   int iVar9;
-  AutoLockSection aAStack_18 [24];
-  
-  AutoLockSection__AutoLockSection(aAStack_18,(CriticalSection *)AnimationCallbackSection);
+  AutoLockSection aAStack_18[24];
+
+  AutoLockSection__AutoLockSection(aAStack_18, (CriticalSection *)AnimationCallbackSection);
   uVar7 = (uint)(ushort)pAnimCallbacks._40_2_;
   if (pAnimCallbacks._40_2_ != 0) {
     do {
@@ -182,13 +183,15 @@ void AnimationManager__RemoveAllCallbacks(void)
         uVar6 = 0;
         uVar8 = pAnimCallbacks._42_2_;
         do {
-          while( true ) {
+          while (true) {
             puVar2 = (ushort *)(pAnimCallbacks._64_8_ + (ulong)uVar6 * 2);
-            if (*puVar2 != 0) break;
+            if (*puVar2 != 0)
+              break;
             *puVar2 = 0xffff;
             uVar6 = uVar6 + 1;
             uVar8 = pAnimCallbacks._42_2_;
-            if ((ushort)pAnimCallbacks._42_2_ <= uVar6) goto LAB_00572d35;
+            if ((ushort)pAnimCallbacks._42_2_ <= uVar6)
+              goto LAB_00572d35;
           }
           uVar5 = *puVar2 - 1;
           if (uVar5 < 0xfffe) {
@@ -197,10 +200,9 @@ void AnimationManager__RemoveAllCallbacks(void)
           }
           uVar6 = uVar6 + 1;
         } while (uVar6 < uVar8);
-LAB_00572d35:
+      LAB_00572d35:
         uVar7 = (uint)(ushort)pAnimCallbacks._40_2_;
-      }
-      else {
+      } else {
         pAnimCallbacks._40_2_ = (uint16_t)uVar7;
       }
       if (pAnimCallbacks._40_2_ == 0) {

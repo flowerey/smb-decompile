@@ -24,18 +24,18 @@ void __thiscall UIForm__UIForm__005a3560(UIForm *self)
   long lVar1;
   uint uVar2;
   long *plVar3;
-  
+
   uVar2 = *(uint *)(self + 0x78);
   *(uint8_t ***)self = &PTR__UIForm_005dda70;
   if ((uVar2 & 4) != 0) {
-    RenderLayer__RemoveObject(__UILayer,(RenderLayerObject *)self);
+    RenderLayer__RemoveObject(__UILayer, (RenderLayerObject *)self);
     uVar2 = *(uint *)(self + 0x78);
   }
   if (((uVar2 & 1) != 0) && (plVar3 = *(long **)(self + 0x68), plVar3 != (long *)0x0)) {
     do {
       lVar1 = *plVar3;
       plVar3 = (long *)plVar3[2];
-                    /* try { // try from 005a312a to 005a3156 has its CatchHandler @ 005a315c */
+      /* try { // try from 005a312a to 005a3156 has its CatchHandler @ 005a315c */
       (**(code **)(lVar1 + 8))();
     } while (plVar3 != (long *)0x0);
     *(uint8_t ***)self = &PTR__RenderLayerObject_005be670;
@@ -59,36 +59,36 @@ void __thiscall UIForm__Render(UIForm *self)
 {
   long *plVar1;
   Matrix4x4 *pMVar2;
-  Vector2 local_38 [16];
+  Vector2 local_38[16];
   uint32_t local_28;
   uint32_t local_24;
-  Vector2 local_18 [16];
-  
+  Vector2 local_18[16];
+
   if (*(int *)(self + 0x90) != 0) {
-    UIFormElement__ConvertFromPixelToScreen(local_38,(Vector2 *)(self + 0x38));
-    Vector2__operator_mul_assign__005be220(local_38,DAT_005c0068 /* R:2.0f */);
+    UIFormElement__ConvertFromPixelToScreen(local_38, (Vector2 *)(self + 0x38));
+    Vector2__operator_mul_assign__005be220(local_38, DAT_005c0068 /* R:2.0f */);
     local_28 = *(uint32_t *)(self + 0x40);
     local_24 = *(uint32_t *)(self + 0x44);
-    pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,0);
-    Matrix4x4__Transformation2DRot(pMVar2,(Vector2 *)&local_28,(float *)0x0,local_38);
-    TGraphics__PushMatrix(Graphics,0);
+    pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 0);
+    Matrix4x4__Transformation2DRot(pMVar2, (Vector2 *)&local_28, (float *)0x0, local_38);
+    TGraphics__PushMatrix(Graphics, 0);
     if (((byte)self[0x78] & 2) != 0) {
-      TGraphics__SetRenderState(Graphics,'\a',0);
+      TGraphics__SetRenderState(Graphics, '\a', 0);
       TGraphics__ResetPixelStages(Graphics);
       TGraphics__ResetTexCoordGen(Graphics);
-      TGraphics__SetRenderState(Graphics,'\x05',4);
-      TGraphics__SetRenderState(Graphics,'\x06',5);
-      TGraphics__AddPixelStage(Graphics,1,0,0,0,0,1,0xffffffff);
-      TGraphics__SetPixelColorConstant(Graphics,0,*(uint64_t *)(self + 0x48));
-      TGraphics__SetPerspectiveProjectionMode(Graphics,0);
-      pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,3);
-      Matrix4x4__ConvertToOrthoMatrix
-                (pMVar2,DAT_005be894 /* R:1.0f */,DAT_005c07a4 /* R:-1.0f */,DAT_005c07a4 /* R:-1.0f */,DAT_005be894 /* R:1.0f */,DAT_005c07a4 /* R:-1.0f */,
-                 DAT_005be894 /* R:1.0f */);
-      Vector2__operator_plus__005be140(local_18,(Vector2 *)(self + 0x28));
-      pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,0);
-      Matrix4x4__Transformation2DRot(pMVar2,local_18,(float *)0x0,(Vector2 *)(self + 0x20));
-      TGraphics__Draw(Graphics,CGR__pSingleQuadStream,(IndexBuffer *)0x0);
+      TGraphics__SetRenderState(Graphics, '\x05', 4);
+      TGraphics__SetRenderState(Graphics, '\x06', 5);
+      TGraphics__AddPixelStage(Graphics, 1, 0, 0, 0, 0, 1, 0xffffffff);
+      TGraphics__SetPixelColorConstant(Graphics, 0, *(uint64_t *)(self + 0x48));
+      TGraphics__SetPerspectiveProjectionMode(Graphics, 0);
+      pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 3);
+      Matrix4x4__ConvertToOrthoMatrix(pMVar2, DAT_005be894 /* R:1.0f */, DAT_005c07a4 /* R:-1.0f */,
+                                      DAT_005c07a4 /* R:-1.0f */, DAT_005be894 /* R:1.0f */,
+                                      DAT_005c07a4 /* R:-1.0f */, DAT_005be894 /* R:1.0f */);
+      Vector2__operator_plus__005be140(local_18, (Vector2 *)(self + 0x28));
+      pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 0);
+      Matrix4x4__Transformation2DRot(pMVar2, local_18, (float *)0x0, (Vector2 *)(self + 0x20));
+      TGraphics__Draw(Graphics, CGR__pSingleQuadStream, (IndexBuffer *)0x0);
     }
     for (plVar1 = *(long **)(self + 0x68); plVar1 != (long *)0x0; plVar1 = (long *)plVar1[2]) {
       (**(code **)(*plVar1 + 0x18))(plVar1);
@@ -114,11 +114,11 @@ void __thiscall UIForm__UIForm__005a3560(UIForm *self)
   long *plVar1;
   long lVar2;
   uint uVar3;
-  
+
   uVar3 = *(uint *)(self + 0x78);
   *(uint8_t ***)self = &PTR__UIForm_005dda70;
   if ((uVar3 & 4) != 0) {
-    RenderLayer__RemoveObject(__UILayer,(RenderLayerObject *)self);
+    RenderLayer__RemoveObject(__UILayer, (RenderLayerObject *)self);
     uVar3 = *(uint *)(self + 0x78);
   }
   if ((uVar3 & 1) != 0) {
@@ -126,7 +126,7 @@ void __thiscall UIForm__UIForm__005a3560(UIForm *self)
     while (plVar1 != (long *)0x0) {
       lVar2 = *plVar1;
       plVar1 = (long *)plVar1[2];
-                    /* try { // try from 005a35aa to 005a35c6 has its CatchHandler @ 005a35cc */
+      /* try { // try from 005a35aa to 005a35c6 has its CatchHandler @ 005a35cc */
       (**(code **)(lVar2 + 8))();
     }
   }
@@ -186,7 +186,7 @@ void __thiscall UIForm__Close(UIForm *self)
 
 {
   long *plVar1;
-  
+
   for (plVar1 = *(long **)(self + 0x68); plVar1 != (long *)0x0; plVar1 = (long *)plVar1[2]) {
     (**(code **)(*plVar1 + 0x48))(plVar1);
   }
@@ -227,7 +227,7 @@ void __thiscall UIForm__Update(UIForm *self)
   float local_34;
   float local_30;
   float local_2c;
-  
+
   if (*(int *)(self + 0x90) != 0) {
     if ((Keyboard != 0) && (*(int *)(self + 0xa0) != 0)) {
       if (*(int *)(Keyboard + 0x520) == 1) {
@@ -237,8 +237,7 @@ void __thiscall UIForm__Update(UIForm *self)
         if (*(code **)(self + 0x50) != (code *)0x0) {
           (**(code **)(self + 0x50))(self);
         }
-      }
-      else if (*(int *)(Keyboard + 0x1b4) == 1) {
+      } else if (*(int *)(Keyboard + 0x1b4) == 1) {
         if (*(long **)(self + 0x98) != (long *)0x0) {
           (**(code **)(**(long **)(self + 0x98) + 0x38))();
         }
@@ -258,15 +257,15 @@ void __thiscall UIForm__Update(UIForm *self)
     uVar1 = *(ushort *)(Window + 8);
     uVar3 = *(uint32_t *)(Mouse + 0x14);
     uVar2 = *(ushort *)(Window + 10);
-    fVar8 = DAT_005be6e4 /* R:0.5f */ * (float)(*(uint *)(Mouse + 0x10) ^ DAT_005be6f0 /* R:u32=2147483648 */);
+    fVar8 = DAT_005be6e4 /* R:0.5f */ *
+            (float)(*(uint *)(Mouse + 0x10) ^ DAT_005be6f0 /* R:u32=2147483648 */);
     if (lVar5 == 0) {
       fVar8 = 0.0;
       *(int *)(self + 0xa0) = *(int *)(self + 0xa0) + 1;
       fVar7 = fVar8;
-    }
-    else {
+    } else {
       do {
-        ElementUpdate((float)uVar1 * fVar7,(float)uVar2 * fVar8,lVar5,self + 0x98,uVar3);
+        ElementUpdate((float)uVar1 * fVar7, (float)uVar2 * fVar8, lVar5, self + 0x98, uVar3);
         lVar5 = *(long *)(lVar5 + 0x10);
       } while (lVar5 != 0);
       plVar6 = *(long **)(self + 0x68);
@@ -275,7 +274,7 @@ void __thiscall UIForm__Update(UIForm *self)
       lVar4 = Window;
       fVar7 = 0.0;
       if (plVar6 != (long *)0x0) {
-        (**(code **)(*plVar6 + 0x58))(plVar6,self + 0x7c);
+        (**(code **)(*plVar6 + 0x58))(plVar6, self + 0x7c);
         fVar7 = *(float *)(self + 0x84) + *(float *)(self + 0x7c) +
                 (float)*(ushort *)(Window + 8) * DAT_005be6e4 /* R:0.5f */;
         fVar8 = (*(float *)(self + 0x88) - *(float *)(self + 0x80)) +
@@ -283,7 +282,7 @@ void __thiscall UIForm__Update(UIForm *self)
         lVar4 = Window;
         for (plVar6 = (long *)plVar6[2]; plVar6 != (long *)0x0; plVar6 = (long *)plVar6[2]) {
           while ((int)plVar6[7] == 1) {
-            (**(code **)(*plVar6 + 0x58))(plVar6,&local_38);
+            (**(code **)(*plVar6 + 0x58))(plVar6, &local_38);
             lVar4 = Window;
             fVar9 = (float)*(ushort *)(Window + 8) * DAT_005be6e4 /* R:0.5f */;
             fVar11 = (float)*(ushort *)(Window + 10) * DAT_005be6e4 /* R:0.5f */;
@@ -304,24 +303,27 @@ void __thiscall UIForm__Update(UIForm *self)
             if (fVar8 <= fVar10) {
               fVar8 = fVar10;
             }
-            if (plVar6 == (long *)0x0) goto LAB_005a3a70;
+            if (plVar6 == (long *)0x0)
+              goto LAB_005a3a70;
           }
         }
       }
     }
-LAB_005a3a70:
+  LAB_005a3a70:
     fVar9 = DAT_005be6e4 /* R:0.5f */;
-    fVar8 = fVar8 - ((float)*(ushort *)(lVar4 + 10) * DAT_005be6e4 /* R:0.5f */ - *(float *)(self + 0x80));
-    fVar7 = fVar7 - ((float)*(ushort *)(lVar4 + 8) * DAT_005be6e4 /* R:0.5f */ + *(float *)(self + 0x7c));
+    fVar8 = fVar8 -
+            ((float)*(ushort *)(lVar4 + 10) * DAT_005be6e4 /* R:0.5f */ - *(float *)(self + 0x80));
+    fVar7 = fVar7 -
+            ((float)*(ushort *)(lVar4 + 8) * DAT_005be6e4 /* R:0.5f */ + *(float *)(self + 0x7c));
     *(float *)(self + 0x88) = fVar8;
     *(float *)(self + 0x84) = fVar7;
     fVar11 = DAT_005be6e4 /* R:0.5f */ * fVar8;
     *(float *)(self + 0x20) =
-         (fVar9 * fVar7 + *(float *)(self + 0x7c)) / (float)*(ushort *)(lVar4 + 8);
+        (fVar9 * fVar7 + *(float *)(self + 0x7c)) / (float)*(ushort *)(lVar4 + 8);
     *(float *)(self + 0x24) = (*(float *)(self + 0x80) - fVar11) / (float)*(ushort *)(lVar4 + 10);
     *(float *)(self + 0x28) = fVar7 / (float)*(ushort *)(lVar4 + 8);
     *(float *)(self + 0x2c) = fVar8 / (float)*(ushort *)(lVar4 + 10);
-    Vector2__operator_mul_assign__005be220((Vector2 *)(self + 0x20),DAT_005c0068 /* R:2.0f */);
+    Vector2__operator_mul_assign__005be220((Vector2 *)(self + 0x20), DAT_005c0068 /* R:2.0f */);
   }
   return;
 }
@@ -335,19 +337,18 @@ LAB_005a3a70:
  */
 /* UIForm__AddFormElement(UIFormElement*) */
 
-void __thiscall UIForm__AddFormElement(UIForm *self,UIFormElement *arg1)
+void __thiscall UIForm__AddFormElement(UIForm *self, UIFormElement *arg1)
 
 {
   long lVar1;
   UIFormElement *pUVar2;
-  
+
   lVar1 = *(long *)(arg1 + 0x30);
   if (lVar1 != 0) {
     if (arg1 == *(UIFormElement **)(lVar1 + 0x68)) {
       pUVar2 = *(UIFormElement **)(lVar1 + 0x70);
       *(uint64_t *)(lVar1 + 0x68) = *(uint64_t *)(arg1 + 0x10);
-    }
-    else {
+    } else {
       pUVar2 = *(UIFormElement **)(lVar1 + 0x70);
     }
     if (arg1 == pUVar2) {
@@ -361,20 +362,19 @@ void __thiscall UIForm__AddFormElement(UIForm *self,UIFormElement *arg1)
     }
     *(uint64_t *)(arg1 + 0x18) = 0;
     *(uint64_t *)(arg1 + 0x10) = 0;
-    (**(code **)(*(long *)arg1 + 0x50))(arg1,0);
+    (**(code **)(*(long *)arg1 + 0x50))(arg1, 0);
   }
   if (*(long *)(self + 0x68) == 0) {
     *(UIFormElement **)(self + 0x68) = arg1;
     *(uint64_t *)(arg1 + 0x18) = 0;
-  }
-  else if (*(long *)(self + 0x70) != 0) {
+  } else if (*(long *)(self + 0x70) != 0) {
     *(UIFormElement **)(*(long *)(self + 0x70) + 0x10) = arg1;
     *(uint64_t *)(arg1 + 0x18) = *(uint64_t *)(self + 0x70);
   }
   *(UIFormElement **)(self + 0x70) = arg1;
-                    /* WARNING: Could not recover jumptable at 0x005a3c99. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (**(code **)(*(long *)arg1 + 0x50))(arg1,self);
+  /* WARNING: Could not recover jumptable at 0x005a3c99. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (**(code **)(*(long *)arg1 + 0x50))(arg1, self);
   return;
 }
 
@@ -387,14 +387,14 @@ void __thiscall UIForm__AddFormElement(UIForm *self,UIFormElement *arg1)
  */
 /* UIForm__UIForm__005a3ce0(UIFormCreation const*) */
 
-void __thiscall UIForm__UIForm__005a3ce0(UIForm *self,UIFormCreation *arg1)
+void __thiscall UIForm__UIForm__005a3ce0(UIForm *self, UIFormCreation *arg1)
 
 {
   long lVar1;
   uint uVar2;
   int iVar3;
   long lVar4;
-  
+
   *(uint64_t *)(self + 0x50) = 0;
   *(uint32_t *)(self + 0x78) = 0;
   *(uint64_t *)(self + 8) = 0;
@@ -425,12 +425,13 @@ void __thiscall UIForm__UIForm__005a3ce0(UIForm *self,UIFormCreation *arg1)
   if ((lVar1 != 0) && (0 < *(int *)(arg1 + 8))) {
     lVar4 = 0;
     iVar3 = 0;
-    while( true ) {
-                    /* try { // try from 005a3ddb to 005a3e16 has its CatchHandler @ 005a3e22 */
-      AddFormElement(self,*(UIFormElement **)(lVar1 + lVar4));
+    while (true) {
+      /* try { // try from 005a3ddb to 005a3e16 has its CatchHandler @ 005a3e22 */
+      AddFormElement(self, *(UIFormElement **)(lVar1 + lVar4));
       iVar3 = iVar3 + 1;
       lVar4 = lVar4 + 8;
-      if (*(int *)(arg1 + 8) <= iVar3) break;
+      if (*(int *)(arg1 + 8) <= iVar3)
+        break;
       lVar1 = *(long *)arg1;
     }
     uVar2 = *(uint *)(self + 0x78);
@@ -438,7 +439,7 @@ void __thiscall UIForm__UIForm__005a3ce0(UIForm *self,UIFormCreation *arg1)
   if ((uVar2 & 4) == 0) {
     return;
   }
-  RenderLayer__AddObject(__UILayer,(RenderLayerObject *)self);
+  RenderLayer__AddObject(__UILayer, (RenderLayerObject *)self);
   return;
 }
 
@@ -451,16 +452,15 @@ void __thiscall UIForm__UIForm__005a3ce0(UIForm *self,UIFormCreation *arg1)
  */
 /* UIForm__RemoveFormElement(UIFormElement*) */
 
-void __thiscall UIForm__RemoveFormElement(UIForm *self,UIFormElement *arg1)
+void __thiscall UIForm__RemoveFormElement(UIForm *self, UIFormElement *arg1)
 
 {
   UIFormElement *pUVar1;
-  
+
   if (arg1 == *(UIFormElement **)(self + 0x68)) {
     pUVar1 = *(UIFormElement **)(self + 0x70);
     *(uint64_t *)(self + 0x68) = *(uint64_t *)(arg1 + 0x10);
-  }
-  else {
+  } else {
     pUVar1 = *(UIFormElement **)(self + 0x70);
   }
   if (arg1 == pUVar1) {
@@ -474,9 +474,9 @@ void __thiscall UIForm__RemoveFormElement(UIForm *self,UIFormElement *arg1)
   }
   *(uint64_t *)(arg1 + 0x18) = 0;
   *(uint64_t *)(arg1 + 0x10) = 0;
-                    /* WARNING: Could not recover jumptable at 0x005a3e8d. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (**(code **)(*(long *)arg1 + 0x50))(arg1,0);
+  /* WARNING: Could not recover jumptable at 0x005a3e8d. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (**(code **)(*(long *)arg1 + 0x50))(arg1, 0);
   return;
 }
 
@@ -489,7 +489,7 @@ void __thiscall UIForm__RemoveFormElement(UIForm *self,UIFormElement *arg1)
  */
 /* UIForm__CalculateFormArea(UIRect*) */
 
-void __thiscall UIForm__CalculateFormArea(UIForm *self,UIRect *arg1)
+void __thiscall UIForm__CalculateFormArea(UIForm *self, UIRect *arg1)
 
 {
   long lVar1;
@@ -505,7 +505,7 @@ void __thiscall UIForm__CalculateFormArea(UIForm *self,UIRect *arg1)
   float local_24;
   float local_20;
   float local_1c;
-  
+
   if (arg1 != (UIRect *)0x0) {
     *(uint64_t *)arg1 = *(uint64_t *)(self + 0x7c);
     *(uint64_t *)(arg1 + 8) = *(uint64_t *)(self + 0x84);
@@ -520,9 +520,8 @@ void __thiscall UIForm__CalculateFormArea(UIForm *self,UIRect *arg1)
     lVar1 = Window;
     fVar3 = DAT_005be6e4 /* R:0.5f */;
     fVar9 = fVar4;
-  }
-  else {
-    (**(code **)(*plVar2 + 0x58))(plVar2,self + 0x7c);
+  } else {
+    (**(code **)(*plVar2 + 0x58))(plVar2, self + 0x7c);
     fVar3 = DAT_005be6e4 /* R:0.5f */;
     fVar6 = *(float *)(self + 0x80);
     plVar2 = (long *)plVar2[2];
@@ -536,9 +535,10 @@ void __thiscall UIForm__CalculateFormArea(UIForm *self,UIRect *arg1)
       do {
         while ((int)plVar2[7] != 1) {
           plVar2 = (long *)plVar2[2];
-          if (plVar2 == (long *)0x0) goto LAB_005a4018;
+          if (plVar2 == (long *)0x0)
+            goto LAB_005a4018;
         }
-        (**(code **)(*plVar2 + 0x58))(plVar2,&local_28);
+        (**(code **)(*plVar2 + 0x58))(plVar2, &local_28);
         lVar1 = Window;
         fVar6 = (float)*(ushort *)(Window + 8) * fVar3;
         fVar8 = (float)*(ushort *)(Window + 10) * fVar3;
@@ -560,7 +560,7 @@ void __thiscall UIForm__CalculateFormArea(UIForm *self,UIRect *arg1)
           fVar4 = fVar5;
         }
       } while (plVar2 != (long *)0x0);
-LAB_005a4018:
+    LAB_005a4018:
       fVar6 = *(float *)(self + 0x80);
       fVar8 = *(float *)(self + 0x7c);
       fVar7 = (float)*(ushort *)(lVar1 + 8) * fVar3;
@@ -576,7 +576,7 @@ LAB_005a4018:
   *(float *)(self + 0x28) = fVar9 / (float)*(ushort *)(lVar1 + 8);
   fVar6 = DAT_005c0068 /* R:2.0f */;
   *(float *)(self + 0x2c) = fVar4 / (float)*(ushort *)(lVar1 + 10);
-  Vector2__operator_mul_assign__005be220((Vector2 *)(self + 0x20),fVar6);
+  Vector2__operator_mul_assign__005be220((Vector2 *)(self + 0x20), fVar6);
   return;
 }
 
@@ -595,12 +595,12 @@ void __thiscall UIForm__Activate(UIForm *self)
   long *plVar1;
   UIForm *pUVar2;
   UIForm *pUVar3;
-  
+
   pUVar2 = _CURRENT_EXCLUSIVE_FORM;
   pUVar3 = _CURRENT_EXCLUSIVE_FORM;
   if ((((byte)self[0x78] & 8) != 0) && (pUVar3 = self, _CURRENT_EXCLUSIVE_FORM != (UIForm *)0x0)) {
     for (plVar1 = *(long **)(_CURRENT_EXCLUSIVE_FORM + 0x68); plVar1 != (long *)0x0;
-        plVar1 = (long *)plVar1[2]) {
+         plVar1 = (long *)plVar1[2]) {
       (**(code **)(*plVar1 + 0x48))(plVar1);
     }
     if ((*(int *)(pUVar2 + 0x90) == 1) && (*(code **)(pUVar2 + 0x60) != (code *)0x0)) {
@@ -637,7 +637,7 @@ void __thiscall UIForm__DeActivate(UIForm *self)
 
 {
   long *plVar1;
-  
+
   for (plVar1 = *(long **)(self + 0x68); plVar1 != (long *)0x0; plVar1 = (long *)plVar1[2]) {
     (**(code **)(*plVar1 + 0x48))(plVar1);
   }

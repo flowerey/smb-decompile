@@ -28,13 +28,13 @@ void __thiscall TKeyboard__TKeyboard(TKeyboard *self)
   bool bVar6;
   byte bVar7;
   ulong uVar5;
-  
+
   bVar7 = 0;
   pTVar1 = self + 0x10;
   do {
-    *(uint8_t (*) [16])pTVar1 = (uint8_t  [16])0x0;
-    *(uint8_t (*) [16])(pTVar1 + 0x10) = (uint8_t  [16])0x0;
-    *(uint8_t (*) [16])(pTVar1 + 0x20) = (uint8_t  [16])0x0;
+    *(uint8_t (*)[16])pTVar1 = (uint8_t[16])0x0;
+    *(uint8_t (*)[16])(pTVar1 + 0x10) = (uint8_t[16])0x0;
+    *(uint8_t (*)[16])(pTVar1 + 0x20) = (uint8_t[16])0x0;
     pTVar1 = pTVar1 + 0x30;
   } while (pTVar1 != self + 0xc10);
   bVar6 = Keyboard != (TKeyboard *)0x0;
@@ -55,8 +55,7 @@ void __thiscall TKeyboard__TKeyboard(TKeyboard *self)
   }
   if (((ulong)pTVar1 & 2) == 0) {
     uVar4 = (uint)uVar5;
-  }
-  else {
+  } else {
     *(uint16_t *)pTVar1 = 0;
     pTVar1 = pTVar1 + 2;
     uVar4 = iVar3 - 2;
@@ -113,8 +112,7 @@ void __thiscall TKeyboard__TKeyboard__0058c000(TKeyboard *self)
  */
 /* TKeyboard__AddKeyCallback(tagKeyboardKey, void (*)(tagButtonProps const*, void*), void*) */
 
-void __thiscall
-TKeyboard__AddKeyCallback(TKeyboard *self,int arg2,uint64_t arg3,uint64_t arg4)
+void __thiscall TKeyboard__AddKeyCallback(TKeyboard *self, int arg2, uint64_t arg3, uint64_t arg4)
 
 {
   *(uint64_t *)(self + ((long)arg2 + 0xc1) * 0x10 + 8) = arg3;
@@ -131,8 +129,8 @@ TKeyboard__AddKeyCallback(TKeyboard *self,int arg2,uint64_t arg3,uint64_t arg4)
  */
 /* TKeyboard__AddAnyKeyCallback(void (*)(tagButtonProps const*, void*)) */
 
-void __thiscall
-TKeyboard__AddAnyKeyCallback(TKeyboard *self,_func_void_tagButtonProps_ptr_void_ptr *arg1)
+void __thiscall TKeyboard__AddAnyKeyCallback(TKeyboard *self,
+                                             _func_void_tagButtonProps_ptr_void_ptr *arg1)
 
 {
   *(_func_void_tagButtonProps_ptr_void_ptr **)(self + 0x2c18) = arg1;
@@ -152,7 +150,7 @@ bool __thiscall TKeyboard__Lock(TKeyboard *self)
 
 {
   int iVar1;
-  
+
   iVar1 = *(int *)(self + 0xc10);
   if (iVar1 == 0) {
     *(uint32_t *)(self + 0xc10) = 1;
@@ -185,7 +183,7 @@ void __thiscall TKeyboard__UnLock(TKeyboard *self)
  */
 /* TKeyboard__GetExclusiveState(tagKeyboardKey) const */
 
-uint32_t __thiscall TKeyboard__GetExclusiveState(TKeyboard *self,int arg2)
+uint32_t __thiscall TKeyboard__GetExclusiveState(TKeyboard *self, int arg2)
 
 {
   if (*(int *)(self + 0xc10) != 0) {
@@ -204,7 +202,7 @@ uint32_t __thiscall TKeyboard__GetExclusiveState(TKeyboard *self,int arg2)
 /* WARNING: Type propagation algorithm not settling */
 /* TKeyboard__BackupCallbacks(InputCallback**) */
 
-void __thiscall TKeyboard__BackupCallbacks(TKeyboard *self,InputCallback **arg1)
+void __thiscall TKeyboard__BackupCallbacks(TKeyboard *self, InputCallback **arg1)
 
 {
   uint16_t uVar1;
@@ -221,7 +219,7 @@ void __thiscall TKeyboard__BackupCallbacks(TKeyboard *self,InputCallback **arg1)
   TKeyboard *pTVar12;
   bool bVar13;
   byte bVar14;
-  
+
   bVar14 = 0;
   if (arg1 == (InputCallback **)0x0) {
     pTVar11 = self + 0xc18;
@@ -255,8 +253,7 @@ void __thiscall TKeyboard__BackupCallbacks(TKeyboard *self,InputCallback **arg1)
     }
     if ((uVar4 & 4) == 0) {
       lVar5 = 0;
-    }
-    else {
+    } else {
       *(uint32_t *)pTVar12 = *(uint32_t *)pTVar11;
       lVar5 = 4;
     }
@@ -267,8 +264,7 @@ void __thiscall TKeyboard__BackupCallbacks(TKeyboard *self,InputCallback **arg1)
     if (bVar13) {
       pTVar12[lVar5] = pTVar11[lVar5];
     }
-  }
-  else {
+  } else {
     pIVar3 = malloc(0x1000);
     if ((InputCallback *)(self + 0xc18) != pIVar3) {
       pIVar9 = (InputCallback *)(self + 0xc18);
@@ -286,8 +282,7 @@ void __thiscall TKeyboard__BackupCallbacks(TKeyboard *self,InputCallback **arg1)
     pTVar11 = self + 0xc18;
     uVar4 = 0x1000;
     iVar7 = 0x1000;
-  }
-  else {
+  } else {
     pTVar11 = self + 0xc19;
     self[0xc18] = (TKeyboard)0x0;
     uVar4 = 0xfff;
@@ -295,8 +290,7 @@ void __thiscall TKeyboard__BackupCallbacks(TKeyboard *self,InputCallback **arg1)
   }
   if (((ulong)pTVar11 & 2) == 0) {
     uVar8 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pTVar11 = 0;
     pTVar11 = pTVar11 + 2;
     uVar8 = iVar7 - 2;
@@ -334,7 +328,7 @@ void __thiscall TKeyboard__BackupCallbacks(TKeyboard *self,InputCallback **arg1)
  */
 /* TKeyboard__RestoreCallbacks(InputCallback**) */
 
-void __thiscall TKeyboard__RestoreCallbacks(TKeyboard *self,InputCallback **arg1)
+void __thiscall TKeyboard__RestoreCallbacks(TKeyboard *self, InputCallback **arg1)
 
 {
   InputCallback IVar1;
@@ -350,7 +344,7 @@ void __thiscall TKeyboard__RestoreCallbacks(TKeyboard *self,InputCallback **arg1
   TKeyboard *pTVar10;
   InputCallback *pIVar11;
   bool bVar12;
-  
+
   if ((arg1 == (InputCallback **)0x0) || (__ptr = *arg1, __ptr == (InputCallback *)0x0)) {
     pTVar10 = self + 0xc18;
     pTVar9 = self + 0x1c18;
@@ -427,8 +421,7 @@ void __thiscall TKeyboard__RestoreCallbacks(TKeyboard *self,InputCallback **arg1
       *pTVar9 = (TKeyboard)0x0;
       return;
     }
-  }
-  else {
+  } else {
     pIVar11 = (InputCallback *)(self + 0xc18);
     if (__ptr != pIVar11) {
       bVar12 = ((ulong)pIVar11 & 1) != 0;

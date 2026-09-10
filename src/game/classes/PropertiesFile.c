@@ -53,7 +53,7 @@ void __thiscall PropertiesFile__PropertiesFile(PropertiesFile *self)
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 /* PropertiesFile__ReadBlock(std__string_string__00825640&, int&) */
 
-uint64_t __thiscall PropertiesFile__ReadBlock(PropertiesFile *self,string *arg1,int *arg2)
+uint64_t __thiscall PropertiesFile__ReadBlock(PropertiesFile *self, string *arg1, int *arg2)
 
 {
   int *piVar1;
@@ -87,15 +87,15 @@ uint64_t __thiscall PropertiesFile__ReadBlock(PropertiesFile *self,string *arg1,
   bool bVar29;
   byte bVar30;
   uint local_80;
-  void *local_78 [2];
-  void *local_68 [2];
-  char *local_58 [2];
-  long local_48 [3];
-  
+  void *local_78[2];
+  void *local_68[2];
+  char *local_58[2];
+  long local_48[3];
+
   bVar30 = 0;
   cVar25 = (char)arg1;
-  iVar7 = std__string_find(cVar25,0x7b);
-  if ((iVar7 == -1) || (iVar8 = std__string_find(cVar25,0x7d), iVar8 == -1)) {
+  iVar7 = std__string_find(cVar25, 0x7b);
+  if ((iVar7 == -1) || (iVar8 = std__string_find(cVar25, 0x7d), iVar8 == -1)) {
     return 0;
   }
   if (*(int *)(self + 0x48) == -0x5eef3582) {
@@ -109,8 +109,8 @@ uint64_t __thiscall PropertiesFile__ReadBlock(PropertiesFile *self,string *arg1,
       pvVar11 = malloc(uVar17 + 0x10 + uVar21);
       pvVar18 = (void *)0x0;
       if (pvVar11 != (void *)0x0) {
-        pvVar18 = (void *)((long)pvVar11 + 0x10U +
-                          (uVar17 - ((long)pvVar11 + 0x10U) % uVar17) % uVar17);
+        pvVar18 =
+            (void *)((long)pvVar11 + 0x10U + (uVar17 - ((long)pvVar11 + 0x10U) % uVar17) % uVar17);
         *(ulong *)((long)pvVar18 + -0x10) = uVar21;
         *(void **)((long)pvVar18 + -8) = pvVar11;
         if (pvVar10 != (void *)0x0) {
@@ -118,7 +118,7 @@ uint64_t __thiscall PropertiesFile__ReadBlock(PropertiesFile *self,string *arg1,
           if (uVar21 <= *(ulong *)((long)pvVar10 + -0x10)) {
             uVar17 = uVar21;
           }
-          memcpy(pvVar18,pvVar10,uVar17);
+          memcpy(pvVar18, pvVar10, uVar17);
           free(*(void **)((long)pvVar10 + -8));
         }
       }
@@ -132,39 +132,40 @@ uint64_t __thiscall PropertiesFile__ReadBlock(PropertiesFile *self,string *arg1,
         pvVar18 = malloc(uVar17 + 0x10 + uVar21);
         if (pvVar18 != (void *)0x0) {
           pvVar11 = (void *)((long)pvVar18 + 0x10U +
-                            (uVar17 - ((long)pvVar18 + 0x10U) % uVar17) % uVar17);
+                             (uVar17 - ((long)pvVar18 + 0x10U) % uVar17) % uVar17);
           *(ulong *)((long)pvVar11 + -0x10) = uVar21;
           *(void **)((long)pvVar11 + -8) = pvVar18;
           uVar17 = *(ulong *)((long)pvVar10 + -0x10);
           if (uVar21 <= *(ulong *)((long)pvVar10 + -0x10)) {
             uVar17 = uVar21;
           }
-          memcpy(pvVar11,pvVar10,uVar17);
+          memcpy(pvVar11, pvVar10, uVar17);
           free(*(void **)((long)pvVar10 + -8));
           uVar20 = *(ushort *)(self + 0x2a);
         }
         uVar6 = *(ushort *)(self + 0x28);
         *(void **)(self + 0x40) = pvVar11;
-        if (uVar20 <= uVar6) goto LAB_00596380;
-        while( true ) {
+        if (uVar20 <= uVar6)
+          goto LAB_00596380;
+        while (true) {
           uVar21 = (ulong)uVar6;
           uVar6 = uVar6 + 1;
           *(uint16_t *)((long)pvVar11 + uVar21 * 2) = 0xffff;
-          if (uVar20 <= uVar6) break;
+          if (uVar20 <= uVar6)
+            break;
           pvVar11 = *(void **)(self + 0x40);
         }
       }
       uVar6 = *(ushort *)(self + 0x28);
     }
-  }
-  else {
+  } else {
     uVar21 = (ulong)(byte)self[0x2c];
     *(uint32_t *)(self + 0x30) = 0;
     pvVar10 = malloc(uVar21 + 0x240);
     puVar28 = (uint64_t *)0x0;
     if (pvVar10 != (void *)0x0) {
-      puVar28 = (uint64_t *)
-                ((long)pvVar10 + 0x10U + (uVar21 - ((long)pvVar10 + 0x10U) % uVar21) % uVar21);
+      puVar28 = (uint64_t *)((long)pvVar10 + 0x10U +
+                             (uVar21 - ((long)pvVar10 + 0x10U) % uVar21) % uVar21);
       puVar28[-2] = 0x230;
       puVar28[-1] = pvVar10;
     }
@@ -214,7 +215,8 @@ LAB_00596380:
     uVar20 = *puVar24;
     while (uVar20 != 0xffff) {
       puVar24 = puVar24 + 1;
-      if (sVar5 == *(short *)(self + 0x2a)) goto LAB_0059638b;
+      if (sVar5 == *(short *)(self + 0x2a))
+        goto LAB_0059638b;
       sVar5 = sVar5 + 1;
       uVar20 = *puVar24;
     }
@@ -257,8 +259,8 @@ LAB_0059638b:
     *(uint8_t *)puVar28 = 0;
   }
   pPVar4 = _DAT_00000058 /* R:u32=1919252014 */;
-  pvVar10 = (void *)((ulong)(*(ushort *)(self + 0x28) - 1 & 0xffff) * 0x70 + *(long *)(self + 0x38))
-  ;
+  pvVar10 =
+      (void *)((ulong)(*(ushort *)(self + 0x28) - 1 & 0xffff) * 0x70 + *(long *)(self + 0x38));
   if (pvVar10 == (void *)0x0) {
     _DAT_00000050 /* R:u32=7237481 str="completed.5889" */ = 0;
     if (iRam0000000000000068 == -0x5eef3582) {
@@ -269,10 +271,9 @@ LAB_0059638b:
         self = pPVar4;
         if (pvVar11 == (void *)0x0) {
           _DAT_00000058 /* R:u32=1919252014 */ = (PropertiesFile *)0x0;
-        }
-        else {
-          pPVar19 = (PropertiesFile *)
-                    ((long)pvVar11 + 0x10U + (uVar21 - ((long)pvVar11 + 0x10U) % uVar21) % uVar21);
+        } else {
+          pPVar19 = (PropertiesFile *)((long)pvVar11 + 0x10U +
+                                       (uVar21 - ((long)pvVar11 + 0x10U) % uVar21) % uVar21);
           *(uint64_t *)(pPVar19 + -0x10) = 0x60;
           *(void **)(pPVar19 + -8) = pvVar11;
           if (pPVar4 != (PropertiesFile *)0x0) {
@@ -280,7 +281,7 @@ LAB_0059638b:
             if (*(ulong *)(pPVar4 + -0x10) < 0x61) {
               sVar23 = *(ulong *)(pPVar4 + -0x10);
             }
-            memcpy(pPVar19,pPVar4,sVar23);
+            memcpy(pPVar19, pPVar4, sVar23);
             free(*(void **)(pPVar4 + -8));
           }
           pPVar4 = _DAT_00000060 /* R:2.9205412394039953e-11f */;
@@ -293,18 +294,20 @@ LAB_0059638b:
             pvVar11 = malloc(uVar17 + 0x10 + uVar21);
             pPVar19 = self;
             uVar20 = _DAT_00000048 /* R:5.580460746279492e-11f */;
-            if (pvVar11 == (void *)0x0) goto joined_r0x00597026;
-            self = (PropertiesFile *)
-                   ((long)pvVar11 + 0x10U + (uVar17 - ((long)pvVar11 + 0x10U) % uVar17) % uVar17);
+            if (pvVar11 == (void *)0x0)
+              goto joined_r0x00597026;
+            self = (PropertiesFile *)((long)pvVar11 + 0x10U +
+                                      (uVar17 - ((long)pvVar11 + 0x10U) % uVar17) % uVar17);
             *(ulong *)(self + -0x10) = uVar21;
             *(void **)(self + -8) = pvVar11;
             lVar12 = 0;
-            if (pPVar4 == (PropertiesFile *)0x0) goto LAB_00597249;
+            if (pPVar4 == (PropertiesFile *)0x0)
+              goto LAB_00597249;
             uVar17 = *(ulong *)(pPVar4 + -0x10);
             if (uVar21 <= *(ulong *)(pPVar4 + -0x10)) {
               uVar17 = uVar21;
             }
-            memcpy(self,pPVar4,uVar17);
+            memcpy(self, pPVar4, uVar17);
             free(*(void **)(pPVar4 + -8));
             pPVar19 = self;
             uVar20 = _DAT_00000048 /* R:5.580460746279492e-11f */;
@@ -315,8 +318,7 @@ LAB_0059638b:
       }
       goto LAB_0059650c;
     }
-  }
-  else {
+  } else {
     CriticalSection__CriticalSection((CriticalSection *)((long)pvVar10 + 0x20));
     *(uint16_t *)((long)pvVar10 + 0x4a) = 0;
     *(uint16_t *)((long)pvVar10 + 0x48) = 0;
@@ -327,13 +329,12 @@ LAB_0059638b:
     *(uint8_t *)((long)pvVar10 + 0x4c) = 4;
     *(uint32_t *)((long)pvVar10 + 0x50) = 0;
   }
-  self = (PropertiesFile *)(ulong)*(byte *)((long)pvVar10 + 0x4c);
+  self = (PropertiesFile *)(ulong) * (byte *)((long)pvVar10 + 0x4c);
   pvVar11 = malloc((size_t)(self + 0x70));
   puVar28 = (uint64_t *)0x0;
   if (pvVar11 != (void *)0x0) {
-    puVar28 = (uint64_t *)
-              ((long)pvVar11 + 0x10U +
-              ((long)self - ((long)pvVar11 + 0x10U) % (ulong)self) % (ulong)self);
+    puVar28 = (uint64_t *)((long)pvVar11 + 0x10U +
+                           ((long)self - ((long)pvVar11 + 0x10U) % (ulong)self) % (ulong)self);
     puVar28[-2] = 0x60;
     puVar28[-1] = pvVar11;
   }
@@ -375,25 +376,27 @@ LAB_0059638b:
   *(uint32_t *)((long)pvVar10 + 0x68) = 0xa110ca7e;
   *(uint16_t *)((long)pvVar10 + 0x54) = 5;
 LAB_0059650c:
-  while( true ) {
+  while (true) {
     iVar9 = *arg2;
     lVar12 = *(long *)arg1;
-    if ((ulong)(long)iVar9 <= *(ulong *)(lVar12 + -0x18)) break;
+    if ((ulong)(long)iVar9 <= *(ulong *)(lVar12 + -0x18))
+      break;
     std__throw_out_of_range("basic_string__substr");
-LAB_00597249:
+  LAB_00597249:
     pPVar19 = self;
     uVar20 = _DAT_00000048 /* R:5.580460746279492e-11f */;
     uVar6 = *(ushort *)(lVar12 + 0x4a);
-joined_r0x00597026:
-    for (; pPVar4 = pPVar19, _DAT_00000060 /* R:2.9205412394039953e-11f */ = pPVar4, uVar20 < uVar6; uVar20 = uVar20 + 1) {
+  joined_r0x00597026:
+    for (; pPVar4 = pPVar19, _DAT_00000060 /* R:2.9205412394039953e-11f */ = pPVar4, uVar20 < uVar6;
+         uVar20 = uVar20 + 1) {
       *(uint16_t *)(pPVar4 + (ulong)uVar20 * 2) = 0xffff;
       pPVar19 = _DAT_00000060 /* R:2.9205412394039953e-11f */;
       self = pPVar4;
     }
   }
-  std__string_string((string *)local_78,arg1,(long)iVar9,(long)(iVar7 - iVar9));
-                    /* try { // try from 00596541 to 00596724 has its CatchHandler @ 0059723a */
-  lVar12 = std__string_find((char)local_78,0x20);
+  std__string_string((string *)local_78, arg1, (long)iVar9, (long)(iVar7 - iVar9));
+  /* try { // try from 00596541 to 00596724 has its CatchHandler @ 0059723a */
+  lVar12 = std__string_find((char)local_78, 0x20);
   pvVar11 = local_78[0];
   if (lVar12 != -1) {
     iVar9 = *(int *)((long)local_78[0] + -0x18);
@@ -417,7 +420,7 @@ joined_r0x00597026:
       uVar3 = *puVar22;
       puVar22 = puVar22 + 1;
     } while ((uVar3 + 0xfefefeff & ~uVar3 & 0x80808080) == 0);
-    std__string_assign((char *)local_78,(ulong)puVar13);
+    std__string_assign((char *)local_78, (ulong)puVar13);
     free(puVar13);
   }
   if (pvVar10 != local_78[0]) {
@@ -425,19 +428,19 @@ joined_r0x00597026:
     if (*(ulong *)((long)local_78[0] + -0x18) < 0x21) {
       sVar23 = *(ulong *)((long)local_78[0] + -0x18);
     }
-    memcpy(pvVar10,local_78[0],sVar23);
+    memcpy(pvVar10, local_78[0], sVar23);
   }
   *arg2 = iVar7;
   do {
-    iVar7 = std__string_find(cVar25,0x3d);
-    iVar9 = std__string_find(cVar25,0x3b);
+    iVar7 = std__string_find(cVar25, 0x3d);
+    iVar9 = std__string_find(cVar25, 0x3b);
     bVar29 = false;
     if (iVar7 < iVar9) {
       if (*(int *)((long)pvVar10 + 0x68) == -0x5eef3582) {
         uVar6 = *(ushort *)((long)pvVar10 + 0x48);
         if (*(ushort *)((long)pvVar10 + 0x4a) <= uVar6) {
           uVar6 = *(ushort *)((long)pvVar10 + 0x4a) + *(short *)((long)pvVar10 + 0x54);
-          uVar17 = (ulong)*(byte *)((long)pvVar10 + 0x4c);
+          uVar17 = (ulong) * (byte *)((long)pvVar10 + 0x4c);
           pvVar18 = *(void **)((long)pvVar10 + 0x58);
           *(ushort *)((long)pvVar10 + 0x4a) = uVar6;
           uVar21 = (ulong)uVar6 * 0x60;
@@ -445,7 +448,7 @@ joined_r0x00597026:
           pvVar11 = (void *)0x0;
           if (pvVar15 != (void *)0x0) {
             pvVar11 = (void *)((long)pvVar15 + 0x10U +
-                              (uVar17 - ((long)pvVar15 + 0x10U) % uVar17) % uVar17);
+                               (uVar17 - ((long)pvVar15 + 0x10U) % uVar17) % uVar17);
             *(ulong *)((long)pvVar11 + -0x10) = uVar21;
             *(void **)((long)pvVar11 + -8) = pvVar15;
             if (pvVar18 != (void *)0x0) {
@@ -453,7 +456,7 @@ joined_r0x00597026:
               if (uVar21 <= *(ulong *)((long)pvVar18 + -0x10)) {
                 uVar17 = uVar21;
               }
-              memcpy(pvVar11,pvVar18,uVar17);
+              memcpy(pvVar11, pvVar18, uVar17);
               free(*(void **)((long)pvVar18 + -8));
             }
           }
@@ -461,47 +464,48 @@ joined_r0x00597026:
           pvVar11 = *(void **)((long)pvVar10 + 0x60);
           if (pvVar11 != (void *)0x0) {
             uVar20 = *(ushort *)((long)pvVar10 + 0x4a);
-            uVar17 = (ulong)*(byte *)((long)pvVar10 + 0x4c);
+            uVar17 = (ulong) * (byte *)((long)pvVar10 + 0x4c);
             pvVar18 = (void *)0x0;
             uVar21 = (ulong)uVar20 * 2;
             pvVar15 = malloc(uVar17 + 0x10 + uVar21);
             if (pvVar15 != (void *)0x0) {
               pvVar18 = (void *)((long)pvVar15 + 0x10U +
-                                (uVar17 - ((long)pvVar15 + 0x10U) % uVar17) % uVar17);
+                                 (uVar17 - ((long)pvVar15 + 0x10U) % uVar17) % uVar17);
               *(ulong *)((long)pvVar18 + -0x10) = uVar21;
               *(void **)((long)pvVar18 + -8) = pvVar15;
               uVar17 = *(ulong *)((long)pvVar11 + -0x10);
               if (uVar21 <= *(ulong *)((long)pvVar11 + -0x10)) {
                 uVar17 = uVar21;
               }
-              memcpy(pvVar18,pvVar11,uVar17);
+              memcpy(pvVar18, pvVar11, uVar17);
               free(*(void **)((long)pvVar11 + -8));
               uVar20 = *(ushort *)((long)pvVar10 + 0x4a);
             }
             uVar6 = *(ushort *)((long)pvVar10 + 0x48);
             *(void **)((long)pvVar10 + 0x60) = pvVar18;
-            if (uVar20 <= uVar6) goto LAB_00596670;
-            while( true ) {
+            if (uVar20 <= uVar6)
+              goto LAB_00596670;
+            while (true) {
               uVar21 = (ulong)uVar6;
               uVar6 = uVar6 + 1;
               *(uint16_t *)((long)pvVar18 + uVar21 * 2) = 0xffff;
-              if (uVar20 <= uVar6) break;
+              if (uVar20 <= uVar6)
+                break;
               pvVar18 = *(void **)((long)pvVar10 + 0x60);
             }
           }
           uVar6 = *(ushort *)((long)pvVar10 + 0x48);
         }
-LAB_00596670:
+      LAB_00596670:
         iVar26 = *(int *)((long)pvVar10 + 0x50);
-      }
-      else {
-        uVar21 = (ulong)*(byte *)((long)pvVar10 + 0x4c);
+      } else {
+        uVar21 = (ulong) * (byte *)((long)pvVar10 + 0x4c);
         *(uint32_t *)((long)pvVar10 + 0x50) = 0;
         pvVar11 = malloc(uVar21 + 0x1f0);
         puVar28 = (uint64_t *)0x0;
         if (pvVar11 != (void *)0x0) {
-          puVar28 = (uint64_t *)
-                    ((uVar21 - ((long)pvVar11 + 0x10U) % uVar21) % uVar21 + (long)pvVar11 + 0x10U);
+          puVar28 = (uint64_t *)((uVar21 - ((long)pvVar11 + 0x10U) % uVar21) % uVar21 +
+                                 (long)pvVar11 + 0x10U);
           puVar28[-2] = 0x1e0;
           puVar28[-1] = pvVar11;
         }
@@ -551,18 +555,19 @@ LAB_00596670:
         uVar20 = *puVar24;
         while (uVar20 != 0xffff) {
           puVar24 = puVar24 + 1;
-          if (sVar5 == *(short *)((long)pvVar10 + 0x4a)) goto LAB_0059667a;
+          if (sVar5 == *(short *)((long)pvVar10 + 0x4a))
+            goto LAB_0059667a;
           sVar5 = sVar5 + 1;
           uVar20 = *puVar24;
         }
         *puVar24 = uVar6;
         uVar6 = *(ushort *)((long)pvVar10 + 0x48);
       }
-LAB_0059667a:
+    LAB_0059667a:
       uVar21 = 0x60;
       *(ushort *)((long)pvVar10 + 0x48) = uVar6 + 1;
-      puVar28 = (uint64_t *)
-                (((ulong)(ushort)(uVar6 + 1) * 3 + -3) * 0x20 + *(long *)((long)pvVar10 + 0x58));
+      puVar28 = (uint64_t *)(((ulong)(ushort)(uVar6 + 1) * 3 + -3) * 0x20 +
+                             *(long *)((long)pvVar10 + 0x58));
       bVar29 = ((ulong)puVar28 & 1) != 0;
       if (bVar29) {
         *(uint8_t *)puVar28 = 0;
@@ -598,15 +603,15 @@ LAB_0059667a:
       lVar12 = *(long *)((long)pvVar10 + 0x58);
       uVar21 = (ulong)(*arg2 + 1);
       if (*(ulong *)(*(long *)arg1 + -0x18) < uVar21) {
-                    /* try { // try from 00597235 to 00597239 has its CatchHandler @ 0059723a */
+        /* try { // try from 00597235 to 00597239 has its CatchHandler @ 0059723a */
         uVar16 = std__throw_out_of_range("basic_string__substr");
-                    /* catch() { ... } // from try @ 00596541 with catch @ 0059723a
+        /* catch() { ... } // from try @ 00596541 with catch @ 0059723a
                        catch() { ... } // from try @ 00597235 with catch @ 0059723a */
         goto LAB_005971f7;
       }
-      std__string_string((string *)local_68,arg1,uVar21,(long)((iVar7 - *arg2) + -1));
-                    /* try { // try from 00596731 to 0059684c has its CatchHandler @ 005971ea */
-      lVar14 = std__string_find((char)local_68,0x20);
+      std__string_string((string *)local_68, arg1, uVar21, (long)((iVar7 - *arg2) + -1));
+      /* try { // try from 00596731 to 0059684c has its CatchHandler @ 005971ea */
+      lVar14 = std__string_find((char)local_68, 0x20);
       pvVar11 = local_68[0];
       if (lVar14 != -1) {
         iVar26 = *(int *)((long)local_68[0] + -0x18);
@@ -630,7 +635,7 @@ LAB_0059667a:
           uVar3 = *puVar22;
           puVar22 = puVar22 + 1;
         } while ((uVar3 + 0xfefefeff & ~uVar3 & 0x80808080) == 0);
-        std__string_assign((char *)local_68,(ulong)puVar13);
+        std__string_assign((char *)local_68, (ulong)puVar13);
         free(puVar13);
       }
       pvVar11 = (void *)((ulong)(uVar6 - 1 & 0xffff) * 0x60 + lVar12);
@@ -639,24 +644,22 @@ LAB_0059667a:
         if (*(ulong *)((long)local_68[0] + -0x18) < 0x21) {
           sVar23 = *(ulong *)((long)local_68[0] + -0x18);
         }
-        memcpy(pvVar11,local_68[0],sVar23);
+        memcpy(pvVar11, local_68[0], sVar23);
       }
       if (*(ulong *)(*(long *)arg1 + -0x18) < (ulong)(long)(iVar7 + 1)) {
-                    /* try { // try from 005971e5 to 005971e9 has its CatchHandler @ 005971ea */
+        /* try { // try from 005971e5 to 005971e9 has its CatchHandler @ 005971ea */
         uVar16 = std__throw_out_of_range("basic_string__substr");
-                    /* catch() { ... } // from try @ 00596731 with catch @ 005971ea
+        /* catch() { ... } // from try @ 00596731 with catch @ 005971ea
                        catch() { ... } // from try @ 005971e5 with catch @ 005971ea */
-      }
-      else {
-        std__string_string((string *)local_58,arg1,(long)(iVar7 + 1),
-                            (long)((iVar9 - iVar7) + -1));
+      } else {
+        std__string_string((string *)local_58, arg1, (long)(iVar7 + 1),
+                           (long)((iVar9 - iVar7) + -1));
         uVar21 = *(ulong *)(local_58[0] + -0x18);
         iVar7 = (int)uVar21;
         if (*(int *)(local_58[0] + -8) < 0) {
           cVar2 = *local_58[0];
-        }
-        else {
-                    /* try { // try from 00596869 to 005968de has its CatchHandler @ 0059721a */
+        } else {
+          /* try { // try from 00596869 to 005968de has its CatchHandler @ 0059721a */
           std__string_M_leak_hard();
           cVar2 = *local_58[0];
           if (-1 < *(int *)(local_58[0] + -8)) {
@@ -666,10 +669,10 @@ LAB_0059667a:
         }
         local_80 = (uint)(cVar2 == ' ');
         if ((ulong)(long)(int)local_80 <= uVar21) {
-          std__string_string((string *)local_48,(string *)local_58,(long)(int)local_80,
-                              (long)(int)((iVar7 - (uint)(local_58[0][iVar7 + -1] == ' ')) -
-                                         local_80));
-                    /* try { // try from 005968e9 to 005968ed has its CatchHandler @ 00597260 */
+          std__string_string(
+              (string *)local_48, (string *)local_58, (long)(int)local_80,
+              (long)(int)((iVar7 - (uint)(local_58[0][iVar7 + -1] == ' ')) - local_80));
+          /* try { // try from 005968e9 to 005968ed has its CatchHandler @ 00597260 */
           std__string_assign((string *)local_58);
           if ((allocator *)(local_48[0] + -0x18) !=
               (allocator *)&std__string_Rep_S_empty_rep_storage) {
@@ -687,7 +690,7 @@ LAB_0059667a:
             if (*(ulong *)(local_58[0] + -0x18) < 0x41) {
               sVar23 = *(ulong *)(local_58[0] + -0x18);
             }
-            memcpy((char *)((long)pvVar11 + 0x20),local_58[0],sVar23);
+            memcpy((char *)((long)pvVar11 + 0x20), local_58[0], sVar23);
           }
           *arg2 = iVar9;
           if ((allocator *)(local_58[0] + -0x18) !=
@@ -704,8 +707,7 @@ LAB_0059667a:
           if ((allocator *)((long)local_68[0] + -0x18) ==
               (allocator *)&std__string_Rep_S_empty_rep_storage) {
             bVar29 = true;
-          }
-          else {
+          } else {
             LOCK();
             piVar1 = (int *)((long)local_68[0] + -8);
             iVar7 = *piVar1;
@@ -718,25 +720,25 @@ LAB_0059667a:
           }
           goto LAB_0059695d;
         }
-                    /* try { // try from 00597215 to 00597219 has its CatchHandler @ 0059721a */
+        /* try { // try from 00597215 to 00597219 has its CatchHandler @ 0059721a */
         uVar16 = std__throw_out_of_range("basic_string__substr");
-                    /* catch() { ... } // from try @ 00596869 with catch @ 0059721a
+        /* catch() { ... } // from try @ 00596869 with catch @ 0059721a
                        catch() { ... } // from try @ 00597215 with catch @ 0059721a */
         std__string_string((string *)local_58);
       }
       std__string_string((string *)local_68);
-LAB_005971f7:
+    LAB_005971f7:
       std__string_string((string *)local_78);
-                    /* WARNING: Subroutine does not return */
+      /* WARNING: Subroutine does not return */
       _Unwind_Resume(uVar16);
     }
-LAB_0059695d:
+  LAB_0059695d:
     if (*arg2 + 1 == iVar8) {
       *arg2 = *arg2 + 2;
       goto LAB_00596c77;
     }
     if (!bVar29) {
-LAB_00596c77:
+    LAB_00596c77:
       if ((allocator *)((long)local_78[0] + -0x18) !=
           (allocator *)&std__string_Rep_S_empty_rep_storage) {
         LOCK();
@@ -751,7 +753,7 @@ LAB_00596c77:
       }
       return 1;
     }
-  } while( true );
+  } while (true);
 }
 
 /* ======================================================================
@@ -763,7 +765,7 @@ LAB_00596c77:
  */
 /* PropertiesFile__ParseData(std__string_string__00825640&) */
 
-void __thiscall PropertiesFile__ParseData(PropertiesFile *self,string *arg1)
+void __thiscall PropertiesFile__ParseData(PropertiesFile *self, string *arg1)
 
 {
   char cVar1;
@@ -776,10 +778,10 @@ void __thiscall PropertiesFile__ParseData(PropertiesFile *self,string *arg1)
   ulong uVar8;
   uint *puVar9;
   char cVar10;
-  int local_38 [4];
-  
+  int local_38[4];
+
   cVar10 = (char)arg1;
-  lVar4 = std__string_find(cVar10,10);
+  lVar4 = std__string_find(cVar10, 10);
   if (lVar4 != -1) {
     lVar4 = *(long *)arg1;
     iVar3 = *(int *)(lVar4 + -0x18);
@@ -804,10 +806,10 @@ void __thiscall PropertiesFile__ParseData(PropertiesFile *self,string *arg1)
       uVar2 = *puVar9;
       puVar9 = puVar9 + 1;
     } while ((uVar2 + 0xfefefeff & ~uVar2 & 0x80808080) == 0);
-    std__string_assign((char *)arg1,(ulong)puVar5);
+    std__string_assign((char *)arg1, (ulong)puVar5);
     free(puVar5);
   }
-  lVar4 = std__string_find(cVar10,9);
+  lVar4 = std__string_find(cVar10, 9);
   if (lVar4 != -1) {
     lVar4 = *(long *)arg1;
     iVar3 = *(int *)(lVar4 + -0x18);
@@ -832,10 +834,10 @@ void __thiscall PropertiesFile__ParseData(PropertiesFile *self,string *arg1)
       uVar2 = *puVar9;
       puVar9 = puVar9 + 1;
     } while ((uVar2 + 0xfefefeff & ~uVar2 & 0x80808080) == 0);
-    std__string_assign((char *)arg1,(ulong)puVar5);
+    std__string_assign((char *)arg1, (ulong)puVar5);
     free(puVar5);
   }
-  lVar4 = std__string_find(cVar10,0xd);
+  lVar4 = std__string_find(cVar10, 0xd);
   if (lVar4 != -1) {
     lVar4 = *(long *)arg1;
     iVar3 = *(int *)(lVar4 + -0x18);
@@ -860,10 +862,10 @@ void __thiscall PropertiesFile__ParseData(PropertiesFile *self,string *arg1)
       uVar2 = *puVar9;
       puVar9 = puVar9 + 1;
     } while ((uVar2 + 0xfefefeff & ~uVar2 & 0x80808080) == 0);
-    std__string_assign((char *)arg1,(ulong)puVar5);
+    std__string_assign((char *)arg1, (ulong)puVar5);
     free(puVar5);
   }
-  lVar4 = std__string_find(cVar10,0x22);
+  lVar4 = std__string_find(cVar10, 0x22);
   if (lVar4 != -1) {
     lVar4 = *(long *)arg1;
     iVar3 = *(int *)(lVar4 + -0x18);
@@ -888,12 +890,12 @@ void __thiscall PropertiesFile__ParseData(PropertiesFile *self,string *arg1)
       uVar2 = *puVar9;
       puVar9 = puVar9 + 1;
     } while ((uVar2 + 0xfefefeff & ~uVar2 & 0x80808080) == 0);
-    std__string_assign((char *)arg1,(ulong)puVar5);
+    std__string_assign((char *)arg1, (ulong)puVar5);
     free(puVar5);
   }
   local_38[0] = 0;
   do {
-    iVar3 = ReadBlock(self,arg1,local_38);
+    iVar3 = ReadBlock(self, arg1, local_38);
   } while (iVar3 == 1);
   return;
 }
@@ -908,7 +910,8 @@ void __thiscall PropertiesFile__ParseData(PropertiesFile *self,string *arg1)
 /* WARNING: Removing unreachable block (ram,0x00597763) */
 /* PropertiesFile__PropertiesFile__005975b0(char const*, unsigned int) */
 
-void __thiscall PropertiesFile__PropertiesFile__005975b0(PropertiesFile *self,char *arg1,uint arg2)
+void __thiscall PropertiesFile__PropertiesFile__005975b0(PropertiesFile *self, char *arg1,
+                                                         uint arg2)
 
 {
   int *piVar1;
@@ -925,10 +928,10 @@ void __thiscall PropertiesFile__PropertiesFile__005975b0(PropertiesFile *self,ch
   uint32_t local_68;
   uint32_t local_64;
   uint8_t *local_60;
-  File local_58 [4];
+  File local_58[4];
   uint local_54;
-  uint8_t *local_28 [2];
-  
+  uint8_t *local_28[2];
+
   CriticalSection__CriticalSection((CriticalSection *)self);
   *(uint16_t *)(self + 0x2a) = 0;
   *(uint16_t *)(self + 0x28) = 0;
@@ -951,26 +954,25 @@ void __thiscall PropertiesFile__PropertiesFile__005975b0(PropertiesFile *self,ch
     local_60 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
     local_90 = &DAT_005c328c /* R:u32=1811964530 */;
     local_98 = arg1;
-                    /* try { // try from 0059766e to 00597672 has its CatchHandler @ 005977cc */
-    File__File(local_58,(tagFileCreation *)&local_98);
-                    /* try { // try from 0059767f to 005976c0 has its CatchHandler @ 005977ba */
+    /* try { // try from 0059766e to 00597672 has its CatchHandler @ 005977cc */
+    File__File(local_58, (tagFileCreation *)&local_98);
+    /* try { // try from 0059767f to 005976c0 has its CatchHandler @ 005977ba */
     __s = operator_new__((ulong)(local_54 + 1));
-    File__Read(local_58,__s,local_54);
+    File__Read(local_58, __s, local_54);
     __s[local_54] = '\0';
     strlen(__s);
-    std__string_assign((char *)local_28,(ulong)__s);
+    std__string_assign((char *)local_28, (ulong)__s);
     if (__s != (char *)0x0) {
       operator_delete__(__s);
     }
-                    /* try { // try from 005976d3 to 005976d7 has its CatchHandler @ 005977cc */
+    /* try { // try from 005976d3 to 005976d7 has its CatchHandler @ 005977cc */
     File__File__005b7a70(local_58);
-  }
-  else {
+  } else {
     strlen(arg1);
-    std__string_assign((char *)local_28,(ulong)arg1);
+    std__string_assign((char *)local_28, (ulong)arg1);
   }
-                    /* try { // try from 005976de to 0059771a has its CatchHandler @ 0059773f */
-  ParseData(self,(string *)local_28);
+  /* try { // try from 005976de to 0059771a has its CatchHandler @ 0059773f */
+  ParseData(self, (string *)local_28);
   if ((allocator *)(local_28[0] + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
     LOCK();
     piVar1 = (int *)(local_28[0] + -8);
@@ -993,7 +995,7 @@ void __thiscall PropertiesFile__PropertiesFile__005975b0(PropertiesFile *self,ch
  */
 /* PropertiesFile__operator_index(int) const */
 
-long __thiscall PropertiesFile__operator_index(PropertiesFile *self,int arg1)
+long __thiscall PropertiesFile__operator_index(PropertiesFile *self, int arg1)
 
 {
   return (ulong)(arg1 & 0xffff) * 0x70 + *(long *)(self + 0x38);
@@ -1008,25 +1010,25 @@ long __thiscall PropertiesFile__operator_index(PropertiesFile *self,int arg1)
  */
 /* PropertiesFile__FindPropertyBlock(PropertyBlock**, char const*, int) */
 
-int __thiscall
-PropertiesFile__FindPropertyBlock
-          (PropertiesFile *self,PropertyBlock **arg1,char *arg2,int arg3)
+int __thiscall PropertiesFile__FindPropertyBlock(PropertiesFile *self, PropertyBlock **arg1,
+                                                 char *arg2, int arg3)
 
 {
   ushort uVar1;
   long lVar2;
   int iVar3;
   PropertyBlock *__s1;
-  
+
   iVar3 = -1;
   *arg1 = (PropertyBlock *)0x0;
   uVar1 = *(ushort *)(self + 0x28);
   if (arg3 < (int)(uint)uVar1) {
     lVar2 = *(long *)(self + 0x38);
-    while( true ) {
+    while (true) {
       __s1 = (PropertyBlock *)((ulong)(arg3 & 0xffff) * 0x70 + lVar2);
-      iVar3 = strcmp((char *)__s1,arg2);
-      if (iVar3 == 0) break;
+      iVar3 = strcmp((char *)__s1, arg2);
+      if (iVar3 == 0)
+        break;
       arg3 = arg3 + 1;
       if ((int)(uint)uVar1 <= arg3) {
         return -1;
@@ -1048,9 +1050,9 @@ PropertiesFile__FindPropertyBlock
 /* PropertiesFile__FindPropertyVariable(PropertyBlock__PropertyVariable, PropertyBlock*, char
    const*) */
 
-PropertyVariable * __thiscall
-PropertiesFile__FindPropertyVariable
-          (PropertiesFile *self,PropertyVariable **arg1,PropertyBlock *arg2,char *arg3)
+PropertyVariable *__thiscall PropertiesFile__FindPropertyVariable(PropertiesFile *self,
+                                                                  PropertyVariable **arg1,
+                                                                  PropertyBlock *arg2, char *arg3)
 
 {
   ushort uVar1;
@@ -1058,14 +1060,14 @@ PropertiesFile__FindPropertyVariable
   int iVar3;
   uint uVar4;
   PropertyVariable *__s1;
-  
+
   *arg1 = (PropertyVariable *)0x0;
   if ((arg2 != (PropertyBlock *)0x0) && (uVar1 = *(ushort *)(arg2 + 0x48), uVar1 != 0)) {
     lVar2 = *(long *)(arg2 + 0x58);
     uVar4 = 0;
     do {
       __s1 = (PropertyVariable *)((ulong)(uVar4 & 0xffff) * 0x60 + lVar2);
-      iVar3 = strcmp((char *)__s1,arg3);
+      iVar3 = strcmp((char *)__s1, arg3);
       if (iVar3 == 0) {
         *arg1 = __s1;
         return __s1;
@@ -1085,7 +1087,7 @@ PropertiesFile__FindPropertyVariable
  */
 /* PropertiesFile__GetNumPropertyBlocksByName(char const*) */
 
-int __thiscall PropertiesFile__GetNumPropertyBlocksByName(PropertiesFile *self,char *arg1)
+int __thiscall PropertiesFile__GetNumPropertyBlocksByName(PropertiesFile *self, char *arg1)
 
 {
   ushort uVar1;
@@ -1094,14 +1096,14 @@ int __thiscall PropertiesFile__GetNumPropertyBlocksByName(PropertiesFile *self,c
   uint uVar4;
   ulong uVar5;
   int iVar6;
-  
+
   iVar6 = 0;
   uVar1 = *(ushort *)(self + 0x28);
   if (uVar1 != 0) {
     lVar2 = *(long *)(self + 0x38);
     uVar5 = 0;
     do {
-      iVar3 = strcmp((char *)((uVar5 & 0xffff) * 0x70 + lVar2),arg1);
+      iVar3 = strcmp((char *)((uVar5 & 0xffff) * 0x70 + lVar2), arg1);
       if (iVar3 == 0) {
         iVar6 = iVar6 + 1;
       }

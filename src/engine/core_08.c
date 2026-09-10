@@ -21,7 +21,7 @@ long ftell(FILE *__stream)
 
 {
   long lVar1;
-  
+
   lVar1 = (*(code *)PTR_ftell_00815640)();
   return lVar1;
 }
@@ -34,11 +34,11 @@ long ftell(FILE *__stream)
  */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int fseek(FILE *__stream,long __off,int __whence)
+int fseek(FILE *__stream, long __off, int __whence)
 
 {
   int iVar1;
-  
+
   iVar1 = (*(code *)PTR_fseek_00815a98)();
   return iVar1;
 }
@@ -66,11 +66,11 @@ void free(void *__ptr)
  */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-char * getenv(char *__name)
+char *getenv(char *__name)
 
 {
   char *pcVar1;
-  
+
   pcVar1 = (char *)(*(code *)PTR_getenv_00815b40)();
   return pcVar1;
 }
@@ -83,11 +83,11 @@ char * getenv(char *__name)
  */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int fputc(int __c,FILE *__stream)
+int fputc(int __c, FILE *__stream)
 
 {
   int iVar1;
-  
+
   iVar1 = (*(code *)PTR_fputc_00815b50)();
   return iVar1;
 }
@@ -100,11 +100,11 @@ int fputc(int __c,FILE *__stream)
  */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int fprintf(FILE *__stream,char *__format,...)
+int fprintf(FILE *__stream, char *__format, ...)
 
 {
   int iVar1;
-  
+
   iVar1 = (*(code *)PTR_fprintf_00815be0)();
   return iVar1;
 }
@@ -117,11 +117,11 @@ int fprintf(FILE *__stream,char *__format,...)
  */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-size_t fread(void *__ptr,size_t __size,size_t __n,FILE *__stream)
+size_t fread(void *__ptr, size_t __size, size_t __n, FILE *__stream)
 
 {
   size_t sVar1;
-  
+
   sVar1 = (*(code *)PTR_fread_00815c30)();
   return sVar1;
 }
@@ -134,11 +134,11 @@ size_t fread(void *__ptr,size_t __size,size_t __n,FILE *__stream)
  */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int gettimeofday(timeval *__tv,__timezone_ptr_t __tz)
+int gettimeofday(timeval *__tv, __timezone_ptr_t __tz)
 
 {
   int iVar1;
-  
+
   iVar1 = (*(code *)PTR_gettimeofday_00815cc8)();
   return iVar1;
 }
@@ -151,11 +151,11 @@ int gettimeofday(timeval *__tv,__timezone_ptr_t __tz)
  */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-size_t fwrite(void *__ptr,size_t __size,size_t __n,FILE *__s)
+size_t fwrite(void *__ptr, size_t __size, size_t __n, FILE *__s)
 
 {
   size_t sVar1;
-  
+
   sVar1 = (*(code *)PTR_fwrite_00815dc8)();
   return sVar1;
 }
@@ -166,8 +166,7 @@ size_t fwrite(void *__ptr,size_t __size,size_t __n,FILE *__s)
  * Calls: (none)
  * Called by: `free_symbols`
  */
-void free_sym_typeinfo_isra_13
-               (code *UNRECOVERED_JUMPTABLE,uint64_t arg2,uint *arg3,long *arg4)
+void free_sym_typeinfo_isra_13(code *UNRECOVERED_JUMPTABLE, uint64_t arg2, uint *arg3, long *arg4)
 
 {
   long lVar1;
@@ -197,120 +196,115 @@ void free_sym_typeinfo_isra_13
   uint32_t local_a4;
   uint32_t local_a0;
   uint32_t local_9c;
-  
+
   if (*arg3 != 0) {
     local_108 = 0;
     local_b0 = 0;
     do {
-      (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(*arg4 + local_108),arg2);
+      (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(*arg4 + local_108), arg2);
       lVar1 = local_108 + *arg4;
       if (*(int *)(lVar1 + 0x1c) != 0) {
         local_f8 = 0;
         local_a8 = 0;
         do {
-          (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(*(long *)(lVar1 + 0x20) + local_f8),arg2);
+          (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(*(long *)(lVar1 + 0x20) + local_f8), arg2);
           lVar2 = local_f8 + *(long *)(lVar1 + 0x20);
           if (*(int *)(lVar2 + 0x1c) != 0) {
             local_e8 = 0;
             local_a4 = 0;
             do {
-              (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(*(long *)(lVar2 + 0x20) + local_e8),arg2);
+              (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(*(long *)(lVar2 + 0x20) + local_e8), arg2);
               lVar3 = local_e8 + *(long *)(lVar2 + 0x20);
               if (*(int *)(lVar3 + 0x1c) != 0) {
                 local_d8 = 0;
                 local_ac = 0;
                 do {
-                  (*UNRECOVERED_JUMPTABLE)
-                            (*(uint64_t *)(*(long *)(lVar3 + 0x20) + local_d8),arg2);
+                  (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(*(long *)(lVar3 + 0x20) + local_d8), arg2);
                   lVar4 = local_d8 + *(long *)(lVar3 + 0x20);
                   if (*(int *)(lVar4 + 0x1c) != 0) {
                     local_c8 = 0;
                     local_a0 = 0;
                     do {
-                      (*UNRECOVERED_JUMPTABLE)
-                                (*(uint64_t *)(*(long *)(lVar4 + 0x20) + local_c8),arg2);
+                      (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(*(long *)(lVar4 + 0x20) + local_c8),
+                                               arg2);
                       lVar5 = local_c8 + *(long *)(lVar4 + 0x20);
                       if (*(int *)(lVar5 + 0x1c) != 0) {
                         local_b8 = 0;
                         local_9c = 0;
                         do {
-                          (*UNRECOVERED_JUMPTABLE)
-                                    (*(uint64_t *)(*(long *)(lVar5 + 0x20) + local_b8),arg2);
+                          (*UNRECOVERED_JUMPTABLE)(
+                              *(uint64_t *)(*(long *)(lVar5 + 0x20) + local_b8), arg2);
                           lVar6 = local_b8 + *(long *)(lVar5 + 0x20);
                           if (*(int *)(lVar6 + 0x1c) != 0) {
                             local_130 = 0;
                             local_124 = 0;
                             do {
-                              (*UNRECOVERED_JUMPTABLE)
-                                        (*(uint64_t *)(*(long *)(lVar6 + 0x20) + local_130),
-                                         arg2);
+                              (*UNRECOVERED_JUMPTABLE)(
+                                  *(uint64_t *)(*(long *)(lVar6 + 0x20) + local_130), arg2);
                               lVar7 = local_130 + *(long *)(lVar6 + 0x20);
                               if (*(int *)(lVar7 + 0x1c) != 0) {
                                 local_150 = 0;
                                 local_128 = 0;
                                 do {
-                                  (*UNRECOVERED_JUMPTABLE)
-                                            (*(uint64_t *)(*(long *)(lVar7 + 0x20) + local_150),
-                                             arg2);
+                                  (*UNRECOVERED_JUMPTABLE)(
+                                      *(uint64_t *)(*(long *)(lVar7 + 0x20) + local_150), arg2);
                                   lVar8 = local_150 + *(long *)(lVar7 + 0x20);
                                   if (*(int *)(lVar8 + 0x1c) != 0) {
                                     lVar10 = 0;
                                     uVar11 = 0;
                                     do {
                                       uVar11 = uVar11 + 1;
-                                      (*UNRECOVERED_JUMPTABLE)
-                                                (*(uint64_t *)(*(long *)(lVar8 + 0x20) + lVar10),
-                                                 arg2);
+                                      (*UNRECOVERED_JUMPTABLE)(
+                                          *(uint64_t *)(*(long *)(lVar8 + 0x20) + lVar10), arg2);
                                       lVar9 = lVar10 + *(long *)(lVar8 + 0x20);
                                       lVar10 = lVar10 + 0x28;
-                                      free_sym_typeinfo_isra_13
-                                                (UNRECOVERED_JUMPTABLE,arg2,lVar9 + 0x1c,
-                                                 lVar9 + 0x20);
+                                      free_sym_typeinfo_isra_13(UNRECOVERED_JUMPTABLE, arg2,
+                                                                lVar9 + 0x1c, lVar9 + 0x20);
                                     } while (uVar11 < *(uint *)(lVar8 + 0x1c));
                                   }
-                                  (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar8 + 0x20),arg2);
+                                  (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar8 + 0x20), arg2);
                                   local_128 = local_128 + 1;
                                   local_150 = local_150 + 0x28;
                                 } while (local_128 < *(uint *)(lVar7 + 0x1c));
                               }
-                              (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar7 + 0x20),arg2);
+                              (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar7 + 0x20), arg2);
                               local_124 = local_124 + 1;
                               local_130 = local_130 + 0x28;
                             } while (local_124 < *(uint *)(lVar6 + 0x1c));
                           }
-                          (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar6 + 0x20),arg2);
+                          (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar6 + 0x20), arg2);
                           local_9c = local_9c + 1;
                           local_b8 = local_b8 + 0x28;
                         } while (local_9c < *(uint *)(lVar5 + 0x1c));
                       }
-                      (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar5 + 0x20),arg2);
+                      (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar5 + 0x20), arg2);
                       local_a0 = local_a0 + 1;
                       local_c8 = local_c8 + 0x28;
                     } while (local_a0 < *(uint *)(lVar4 + 0x1c));
                   }
-                  (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar4 + 0x20),arg2);
+                  (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar4 + 0x20), arg2);
                   local_ac = local_ac + 1;
                   local_d8 = local_d8 + 0x28;
                 } while (local_ac < *(uint *)(lVar3 + 0x1c));
               }
-              (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar3 + 0x20),arg2);
+              (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar3 + 0x20), arg2);
               local_a4 = local_a4 + 1;
               local_e8 = local_e8 + 0x28;
             } while (local_a4 < *(uint *)(lVar2 + 0x1c));
           }
-          (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar2 + 0x20),arg2);
+          (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar2 + 0x20), arg2);
           local_a8 = local_a8 + 1;
           local_f8 = local_f8 + 0x28;
         } while (local_a8 < *(uint *)(lVar1 + 0x1c));
       }
-      (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar1 + 0x20),arg2);
+      (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(lVar1 + 0x20), arg2);
       local_b0 = local_b0 + 1;
       local_108 = local_108 + 0x28;
     } while (local_b0 < *arg3);
   }
-                    /* WARNING: Could not recover jumptable at 0x0051b0b8. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (*UNRECOVERED_JUMPTABLE)(*arg4,arg2);
+  /* WARNING: Could not recover jumptable at 0x0051b0b8. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (*UNRECOVERED_JUMPTABLE)(*arg4, arg2);
   return;
 }
 
@@ -320,7 +314,7 @@ void free_sym_typeinfo_isra_13
  * Calls: `free_sym_typeinfo_isra_13`
  * Called by: `MOJOSHADER_freeParseData`, `destroy_context`
  */
-void free_symbols(code *UNRECOVERED_JUMPTABLE,uint64_t arg2,uint64_t *arg3,int arg4)
+void free_symbols(code *UNRECOVERED_JUMPTABLE, uint64_t arg2, uint64_t *arg3, int arg4)
 
 {
   long lVar1;
@@ -328,31 +322,31 @@ void free_symbols(code *UNRECOVERED_JUMPTABLE,uint64_t arg2,uint64_t *arg3,int a
   uint64_t *puVar3;
   uint uVar4;
   int iVar5;
-  
+
   if (0 < arg4) {
     iVar5 = 0;
     puVar3 = arg3;
     do {
-      (*UNRECOVERED_JUMPTABLE)(*puVar3,arg2);
+      (*UNRECOVERED_JUMPTABLE)(*puVar3, arg2);
       if (*(int *)((long)puVar3 + 0x2c) != 0) {
         lVar2 = 0;
         uVar4 = 0;
         do {
           uVar4 = uVar4 + 1;
-          (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(puVar3[6] + lVar2),arg2);
+          (*UNRECOVERED_JUMPTABLE)(*(uint64_t *)(puVar3[6] + lVar2), arg2);
           lVar1 = puVar3[6] + lVar2;
           lVar2 = lVar2 + 0x28;
-          free_sym_typeinfo_isra_13(UNRECOVERED_JUMPTABLE,arg2,lVar1 + 0x1c,lVar1 + 0x20);
+          free_sym_typeinfo_isra_13(UNRECOVERED_JUMPTABLE, arg2, lVar1 + 0x1c, lVar1 + 0x20);
         } while (uVar4 < *(uint *)((long)puVar3 + 0x2c));
       }
       iVar5 = iVar5 + 1;
-      (*UNRECOVERED_JUMPTABLE)(puVar3[6],arg2);
+      (*UNRECOVERED_JUMPTABLE)(puVar3[6], arg2);
       puVar3 = puVar3 + 7;
     } while (iVar5 != arg4);
   }
-                    /* WARNING: Could not recover jumptable at 0x0051b178. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (*UNRECOVERED_JUMPTABLE)(arg3,arg2);
+  /* WARNING: Could not recover jumptable at 0x0051b178. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (*UNRECOVERED_JUMPTABLE)(arg3, arg2);
   return;
 }
 
@@ -362,13 +356,13 @@ void free_symbols(code *UNRECOVERED_JUMPTABLE,uint64_t arg2,uint64_t *arg3,int a
  * Calls: (none)
  * Called by: `handle_pp_identifier`, `handle_pp_undef`, `preprocessor_end`, `preprocessor_nexttoken`
  */
-void free_define(long arg1,uint64_t *arg2)
+void free_define(long arg1, uint64_t *arg2)
 
 {
   uint64_t *puVar1;
   int iVar2;
   long lVar3;
-  
+
   if (arg2 != (uint64_t *)0x0) {
     if (0 < *(int *)(arg2 + 4)) {
       lVar3 = 0;
@@ -377,13 +371,13 @@ void free_define(long arg1,uint64_t *arg2)
         iVar2 = iVar2 + 1;
         puVar1 = (uint64_t *)(arg2[3] + lVar3);
         lVar3 = lVar3 + 8;
-        (**(code **)(arg1 + 0x968))(*puVar1,*(uint64_t *)(arg1 + 0x970));
+        (**(code **)(arg1 + 0x968))(*puVar1, *(uint64_t *)(arg1 + 0x970));
       } while (iVar2 < *(int *)(arg2 + 4));
     }
-    (**(code **)(arg1 + 0x968))(arg2[3],*(uint64_t *)(arg1 + 0x970));
-    (**(code **)(arg1 + 0x968))(*arg2,*(uint64_t *)(arg1 + 0x970));
-    (**(code **)(arg1 + 0x968))(arg2[1],*(uint64_t *)(arg1 + 0x970));
-    (**(code **)(arg1 + 0x968))(arg2[2],*(uint64_t *)(arg1 + 0x970));
+    (**(code **)(arg1 + 0x968))(arg2[3], *(uint64_t *)(arg1 + 0x970));
+    (**(code **)(arg1 + 0x968))(*arg2, *(uint64_t *)(arg1 + 0x970));
+    (**(code **)(arg1 + 0x968))(arg2[1], *(uint64_t *)(arg1 + 0x970));
+    (**(code **)(arg1 + 0x968))(arg2[2], *(uint64_t *)(arg1 + 0x970));
     arg2[5] = *(uint64_t *)(arg1 + 0x930);
     *(uint64_t **)(arg1 + 0x930) = arg2;
   }
@@ -396,26 +390,24 @@ void free_define(long arg1,uint64_t *arg2)
  * Calls: (none)
  * Called by: `IndexBuffer__Lock`
  */
-void gfxLockIndexBuffer(tagGLVertexBuffer *arg1,void **arg2,uint arg3,ulong arg4)
+void gfxLockIndexBuffer(tagGLVertexBuffer *arg1, void **arg2, uint arg3, ulong arg4)
 
 {
   void *pvVar1;
-  
+
   if (*(int *)(arg1 + 4) == 0) {
-    (*pglfn_glBindBufferARB)(*(uint32_t *)arg1,*(uint32_t *)(arg1 + 8));
+    (*pglfn_glBindBufferARB)(*(uint32_t *)arg1, *(uint32_t *)(arg1 + 8));
     if ((arg3 & 1) == 0) {
       if ((arg3 & 2) != 0) {
-        pvVar1 = (void *)(*pglfn_glMapBufferARB)(*(uint32_t *)arg1,0x88ba);
+        pvVar1 = (void *)(*pglfn_glMapBufferARB)(*(uint32_t *)arg1, 0x88ba);
         *arg2 = pvVar1;
       }
-    }
-    else {
-      (*pglfn_glBufferDataARB)(*(uint32_t *)arg1,*(uint32_t *)(arg1 + 0x18),0,0x88e4);
-      pvVar1 = (void *)(*pglfn_glMapBufferARB)(*(uint32_t *)arg1,0x88b9);
+    } else {
+      (*pglfn_glBufferDataARB)(*(uint32_t *)arg1, *(uint32_t *)(arg1 + 0x18), 0, 0x88e4);
+      pvVar1 = (void *)(*pglfn_glMapBufferARB)(*(uint32_t *)arg1, 0x88b9);
       *arg2 = pvVar1;
     }
-  }
-  else {
+  } else {
     *arg2 = *(void **)(arg1 + 0x10);
   }
   return;
@@ -433,8 +425,8 @@ void gfxUnLockIndexBuffer(tagGLVertexBuffer *arg1)
   if (*(int *)(arg1 + 4) != 0) {
     return;
   }
-                    /* WARNING: Could not recover jumptable at 0x0055e489. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055e489. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glUnmapBufferARB)(*(uint32_t *)arg1);
   return;
 }
@@ -445,11 +437,11 @@ void gfxUnLockIndexBuffer(tagGLVertexBuffer *arg1)
  * Calls: `glBindBufferARB`, `glBufferDataARB`, `glGenBuffersARB`, `operator_new`
  * Called by: `Create__0058a5b0`
  */
-uint32_t * gfxCreateIndexBuffer(uint64_t *arg1)
+uint32_t *gfxCreateIndexBuffer(uint64_t *arg1)
 
 {
   uint32_t *puVar1;
-  
+
   if (arg1 == (uint64_t *)0x0) {
     Error__ThrowFatalError("Attempt to Create a GLVertexBuffer with NULL parameters");
   }
@@ -460,9 +452,9 @@ uint32_t * gfxCreateIndexBuffer(uint64_t *arg1)
   *puVar1 = 0x8893;
   puVar1[6] = (int)*arg1;
   puVar1[7] = (uint)(*(short *)(arg1 + 1) == 4) * 2 + 0x1403;
-  glGenBuffersARB(1,puVar1 + 2);
-  glBindBufferARB(*puVar1,puVar1[2]);
-  glBufferDataARB(*puVar1,*arg1,arg1[2],0x88e4);
+  glGenBuffersARB(1, puVar1 + 2);
+  glBindBufferARB(*puVar1, puVar1[2]);
+  glBufferDataARB(*puVar1, *arg1, arg1[2], 0x88e4);
   return puVar1;
 }
 
@@ -486,11 +478,11 @@ void gfxDestroyIndexBuffer(uint64_t *arg1)
  * Calls: `OpenGLDestroyVertexBuffer`, `glBindBufferARB`, `glBufferDataARB`, `glGenBuffersARB`, `operator_new`
  * Called by: (none)
  */
-void gfxReallocIndexBuffer(uint64_t *arg1,uint64_t *arg2)
+void gfxReallocIndexBuffer(uint64_t *arg1, uint64_t *arg2)
 
 {
   uint32_t *puVar1;
-  
+
   OpenGLDestroyVertexBuffer((tagGLVertexBuffer *)*arg1);
   *arg1 = 0;
   if (arg2 == (uint64_t *)0x0) {
@@ -503,9 +495,9 @@ void gfxReallocIndexBuffer(uint64_t *arg1,uint64_t *arg2)
   *puVar1 = 0x8893;
   puVar1[6] = (int)*arg2;
   puVar1[7] = (uint)(*(short *)(arg2 + 1) == 4) * 2 + 0x1403;
-  glGenBuffersARB(1,puVar1 + 2);
-  glBindBufferARB(*puVar1,puVar1[2]);
-  glBufferDataARB(*puVar1,*arg2,arg2[2],0x88e4);
+  glGenBuffersARB(1, puVar1 + 2);
+  glBindBufferARB(*puVar1, puVar1[2]);
+  glBufferDataARB(*puVar1, *arg2, arg2[2], 0x88e4);
   *arg1 = puVar1;
   return;
 }
@@ -550,9 +542,9 @@ void gfxCreateTexture(uint64_t *arg1)
   uint32_t local_f8;
   uint32_t local_f4;
   uint8_t *local_f0;
-  File local_e8 [48];
-  uint8_t local_b8 [16];
-  uint8_t local_a8 [16];
+  File local_e8[48];
+  uint8_t local_b8[16];
+  uint8_t local_a8[16];
   uint64_t local_98;
   uint64_t local_90;
   byte local_88;
@@ -560,11 +552,11 @@ void gfxCreateTexture(uint64_t *arg1)
   byte local_86;
   byte local_85;
   byte local_84;
-  uint32_t local_78 [4];
-  uint32_t local_68 [4];
-  int local_58 [4];
-  uint local_48 [6];
-  
+  uint32_t local_78[4];
+  uint32_t local_68[4];
+  int local_58[4];
+  uint local_48[6];
+
   uVar15 = (uint32_t)((ulong)in_stack_fffffffffffffea8 >> 0x20);
   uVar16 = (uint32_t)((ulong)in_stack_fffffffffffffeb0 >> 0x20);
   local_78[0] = 0;
@@ -572,44 +564,43 @@ void gfxCreateTexture(uint64_t *arg1)
   if ((char *)*arg1 == (char *)0x0) {
     if ((*(uint *)((long)arg1 + 0x24) & 0x20) == 0) {
       if ((*(uint *)((long)arg1 + 0x24) & 0x40) == 0) {
-        glGenTextures(1,local_78);
-        glBindTexture(0xde1,local_78[0]);
+        glGenTextures(1, local_78);
+        glBindTexture(0xde1, local_78[0]);
         lVar6 = (long)*(int *)(arg1 + 4);
-        glTexImage2D(0xde1,0,*(uint32_t *)(GLInternalTextureFormats + lVar6 * 4),
-                     *(uint32_t *)((long)arg1 + 0x14),*(uint32_t *)(arg1 + 3),0,
-                     CONCAT44(uVar15,*(uint32_t *)(GLTextureFormats + lVar6 * 4)),
-                     CONCAT44(uVar16,*(uint32_t *)(GLTextureFormatTypes + lVar6 * 4)),arg1[1]);
-        glTexParameteri(0xde1,0x2802,0x2901);
-        glTexParameteri(0xde1,0x2803,0x2901);
-        glTexParameteri(0xde1,0x2800,0x2601);
-        glTexParameteri(0xde1,0x2801,0x2601);
+        glTexImage2D(0xde1, 0, *(uint32_t *)(GLInternalTextureFormats + lVar6 * 4),
+                     *(uint32_t *)((long)arg1 + 0x14), *(uint32_t *)(arg1 + 3), 0,
+                     CONCAT44(uVar15, *(uint32_t *)(GLTextureFormats + lVar6 * 4)),
+                     CONCAT44(uVar16, *(uint32_t *)(GLTextureFormatTypes + lVar6 * 4)), arg1[1]);
+        glTexParameteri(0xde1, 0x2802, 0x2901);
+        glTexParameteri(0xde1, 0x2803, 0x2901);
+        glTexParameteri(0xde1, 0x2800, 0x2601);
+        glTexParameteri(0xde1, 0x2801, 0x2601);
         if ((*(byte *)((long)arg1 + 0x24) & 0x10) != 0) {
           uVar15 = *(uint32_t *)(GLGraphics + 0x10);
-          glGenFramebuffersEXT(1,local_68);
-          glBindFramebufferEXT(0x8d40,local_68[0]);
-          glFramebufferTexture2DEXT(0x8d40,0x8ce0,0xde1,local_78[0],0);
-          glBindFramebufferEXT(0x8d40,uVar15);
+          glGenFramebuffersEXT(1, local_68);
+          glBindFramebufferEXT(0x8d40, local_68[0]);
+          glFramebufferTexture2DEXT(0x8d40, 0x8ce0, 0xde1, local_78[0], 0);
+          glBindFramebufferEXT(0x8d40, uVar15);
         }
-        glBindTexture(0xde1,0);
-      }
-      else {
+        glBindTexture(0xde1, 0);
+      } else {
         uVar2 = *(uint32_t *)(GLGraphics + 0x10);
-        glGenTextures(1,local_78);
-        glBindTexture(0xde1,local_78[0]);
+        glGenTextures(1, local_78);
+        glBindTexture(0xde1, local_78[0]);
         lVar6 = (long)*(int *)(arg1 + 4);
-        glTexImage2D(0xde1,0,*(uint32_t *)(GLInternalTextureFormats + lVar6 * 4),
-                     *(uint32_t *)((long)arg1 + 0x14),*(uint32_t *)(arg1 + 3),0,
-                     CONCAT44(uVar15,*(uint32_t *)(GLTextureFormats + lVar6 * 4)),
-                     CONCAT44(uVar16,*(uint32_t *)(GLTextureFormatTypes + lVar6 * 4)),0);
-        glTexParameteri(0xde1,0x2802,0x2901);
-        glTexParameteri(0xde1,0x2803,0x2901);
-        glTexParameteri(0xde1,0x2800,0x2601);
-        glTexParameteri(0xde1,0x2801,0x2601);
-        glGenFramebuffersEXT(1,local_68);
-        glBindFramebufferEXT(0x8d40,local_68[0]);
-        glFramebufferTexture2DEXT(0x8d40,0x8ce0,0xde1,local_78[0],0);
-        glBindFramebufferEXT(0x8d40,uVar2);
-        glBindTexture(0xde1,0);
+        glTexImage2D(0xde1, 0, *(uint32_t *)(GLInternalTextureFormats + lVar6 * 4),
+                     *(uint32_t *)((long)arg1 + 0x14), *(uint32_t *)(arg1 + 3), 0,
+                     CONCAT44(uVar15, *(uint32_t *)(GLTextureFormats + lVar6 * 4)),
+                     CONCAT44(uVar16, *(uint32_t *)(GLTextureFormatTypes + lVar6 * 4)), 0);
+        glTexParameteri(0xde1, 0x2802, 0x2901);
+        glTexParameteri(0xde1, 0x2803, 0x2901);
+        glTexParameteri(0xde1, 0x2800, 0x2601);
+        glTexParameteri(0xde1, 0x2801, 0x2601);
+        glGenFramebuffersEXT(1, local_68);
+        glBindFramebufferEXT(0x8d40, local_68[0]);
+        glFramebufferTexture2DEXT(0x8d40, 0x8ce0, 0xde1, local_78[0], 0);
+        glBindFramebufferEXT(0x8d40, uVar2);
+        glBindTexture(0xde1, 0);
       }
       goto LAB_0055d4e4;
     }
@@ -624,8 +615,7 @@ void gfxCreateTexture(uint64_t *arg1)
     local_f8 = 0;
     local_f4 = 0;
     local_f0 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
-  }
-  else {
+  } else {
     local_128 = 0;
     local_120 = (uint8_t *)0x0;
     local_118 = 2;
@@ -637,29 +627,29 @@ void gfxCreateTexture(uint64_t *arg1)
     local_f8 = 0;
     local_f4 = 0;
     local_f0 = &DAT_005c04cf /* R:7.374579797039071e-39f */;
-    File__Exists((char *)*arg1,1);
+    File__Exists((char *)*arg1, 1);
     local_128 = *arg1;
     local_120 = &DAT_005c328c /* R:u32=1811964530 */;
     local_fc = 1;
   }
-  File__File(local_e8,(tagFileCreation *)&local_128);
-                    /* try { // try from 0055d1e6 to 0055d4d1 has its CatchHandler @ 0055d91b */
-  File__Read(local_e8,local_a8,8);
-  iVar3 = png_check_sig(local_a8,8);
+  File__File(local_e8, (tagFileCreation *)&local_128);
+  /* try { // try from 0055d1e6 to 0055d4d1 has its CatchHandler @ 0055d91b */
+  File__Read(local_e8, local_a8, 8);
+  iVar3 = png_check_sig(local_a8, 8);
   if (iVar3 == 0) {
     File__Reset(local_e8);
-    File__Read(local_e8,local_b8,0xc);
+    File__Read(local_e8, local_b8, 0xc);
     __ptr = (void *)0x0;
     iVar13 = 0x1908;
-    iVar3 = memcmp(gfxCreateTexture__byUTGAHeader,local_b8,0xc);
+    iVar3 = memcmp(gfxCreateTexture__byUTGAHeader, local_b8, 0xc);
     if (iVar3 == 0) {
-      File__Read(local_e8,&local_88,6);
+      File__Read(local_e8, &local_88, 6);
       iVar3 = (uint)local_88 + (uint)local_87 * 0x100;
       iVar14 = (uint)local_86 + (uint)local_85 * 0x100;
       iVar13 = (local_84 != 0x18) + 0x1907;
       uVar4 = iVar3 * iVar14 * (uint)(local_84 >> 3);
       __ptr = malloc((ulong)uVar4);
-      File__Read(local_e8,__ptr,uVar4);
+      File__Read(local_e8, __ptr, uVar4);
       if (uVar4 != 0) {
         uVar8 = 0;
         do {
@@ -675,19 +665,18 @@ void gfxCreateTexture(uint64_t *arg1)
       *(int *)(arg1 + 3) = iVar14;
       *(int *)((long)arg1 + 0x14) = iVar3;
     }
-  }
-  else {
-    local_98 = png_create_read_struct("1.2.25",0,0,0);
+  } else {
+    local_98 = png_create_read_struct("1.2.25", 0, 0, 0);
     local_90 = png_create_info_struct(local_98);
     png_create_info_struct(local_98);
-    png_set_read_fn(local_98,local_e8,PngIoRead);
-    png_set_sig_bytes(local_98,8);
-    png_read_info(local_98,local_90);
+    png_set_read_fn(local_98, local_e8, PngIoRead);
+    png_set_sig_bytes(local_98, 8);
+    png_read_info(local_98, local_90);
     local_58[0] = 0;
     local_48[0] = 0;
     uVar16 = 0;
     uVar15 = 0;
-    png_get_IHDR(local_98,local_90,(long)arg1 + 0x14,arg1 + 3,local_58,local_48,0,0,0);
+    png_get_IHDR(local_98, local_90, (long)arg1 + 0x14, arg1 + 3, local_58, local_48, 0, 0, 0);
     iVar13 = 0x1907;
     if ((local_48[0] != 2) && (iVar13 = 0x1908, local_48[0] != 6)) {
       iVar13 = 0x1908 - (uint)((local_48[0] & 4) == 0);
@@ -696,14 +685,14 @@ void gfxCreateTexture(uint64_t *arg1)
       png_set_strip_16(local_98);
     }
     if ((local_48[0] == 4) || (local_48[0] == 0)) {
-                    /* try { // try from 0055d5b0 to 0055d6bc has its CatchHandler @ 0055d91b */
+      /* try { // try from 0055d5b0 to 0055d6bc has its CatchHandler @ 0055d91b */
       png_set_gray_to_rgb(local_98);
     }
     if (local_48[0] == 3) {
       png_set_palette_to_rgb(local_98);
     }
-    png_read_update_info(local_98,local_90);
-    iVar3 = png_get_rowbytes(local_98,local_90);
+    png_read_update_info(local_98, local_90);
+    iVar3 = png_get_rowbytes(local_98, local_90);
     uVar4 = *(uint *)(arg1 + 3);
     __ptr = malloc((ulong)(iVar3 * uVar4));
     __ptr_00 = malloc((ulong)uVar4 << 3);
@@ -718,23 +707,23 @@ void gfxCreateTexture(uint64_t *arg1)
         *(ulong *)((long)__ptr_00 + uVar7 * 8) = uVar12 + (long)__ptr;
       } while (uVar4 < *(uint *)(arg1 + 3));
     }
-    png_read_image(local_98,__ptr_00);
-    png_destroy_read_struct(&local_98,&local_90,0);
+    png_read_image(local_98, __ptr_00);
+    png_destroy_read_struct(&local_98, &local_90, 0);
     free(__ptr_00);
   }
-  glGenTextures(1,local_78);
-  glBindTexture(0xde1,local_78[0]);
-  glTexParameteri(0xde1,0x2802,0x2901);
-  glTexParameteri(0xde1,0x2803,0x2901);
-  glTexParameteri(0xde1,0x2800,0x2601);
-  glTexParameteri(0xde1,0x2801,0x2601);
+  glGenTextures(1, local_78);
+  glBindTexture(0xde1, local_78[0]);
+  glTexParameteri(0xde1, 0x2802, 0x2901);
+  glTexParameteri(0xde1, 0x2803, 0x2901);
+  glTexParameteri(0xde1, 0x2800, 0x2601);
+  glTexParameteri(0xde1, 0x2801, 0x2601);
   uVar10 = 0x8058;
   if (iVar13 != 0x1908) {
     uVar10 = 0x8051;
   }
-  glTexImage2D(0xde1,0,uVar10,*(uint32_t *)((long)arg1 + 0x14),*(uint32_t *)(arg1 + 3),0,
-               CONCAT44(uVar15,iVar13),CONCAT44(uVar16,0x1401),__ptr);
-  glBindTexture(0xde1,0);
+  glTexImage2D(0xde1, 0, uVar10, *(uint32_t *)((long)arg1 + 0x14), *(uint32_t *)(arg1 + 3), 0,
+               CONCAT44(uVar15, iVar13), CONCAT44(uVar16, 0x1401), __ptr);
+  glBindTexture(0xde1, 0);
   free(__ptr);
   File__File__005b7a70(local_e8);
 LAB_0055d4e4:
@@ -757,11 +746,11 @@ void gfxDestroyTexture(uint64_t *arg1)
 
 {
   void *pvVar1;
-  
+
   pvVar1 = (void *)*arg1;
   if (pvVar1 != (void *)0x0) {
-    glDeleteTextures(1,(long)pvVar1 + 8);
-    glDeleteFramebuffersEXT(1,(long)pvVar1 + 0xc);
+    glDeleteTextures(1, (long)pvVar1 + 8);
+    glDeleteFramebuffersEXT(1, (long)pvVar1 + 0xc);
     operator_delete(pvVar1);
   }
   *arg1 = 0;
@@ -798,26 +787,24 @@ void gfxUnlockTexture(void)
  * Calls: (none)
  * Called by: `VertexBuffer__Lock`
  */
-void gfxLockVertexBuffer(tagGLVertexBuffer *arg1,void **arg2,uint arg3,ulong arg4)
+void gfxLockVertexBuffer(tagGLVertexBuffer *arg1, void **arg2, uint arg3, ulong arg4)
 
 {
   void *pvVar1;
-  
+
   if (*(int *)(arg1 + 4) == 0) {
-    (*pglfn_glBindBufferARB)(*(uint32_t *)arg1,*(uint32_t *)(arg1 + 8));
+    (*pglfn_glBindBufferARB)(*(uint32_t *)arg1, *(uint32_t *)(arg1 + 8));
     if ((arg3 & 1) == 0) {
       if ((arg3 & 2) != 0) {
-        pvVar1 = (void *)(*pglfn_glMapBufferARB)(*(uint32_t *)arg1,0x88ba);
+        pvVar1 = (void *)(*pglfn_glMapBufferARB)(*(uint32_t *)arg1, 0x88ba);
         *arg2 = pvVar1;
       }
-    }
-    else {
-      (*pglfn_glBufferDataARB)(*(uint32_t *)arg1,*(uint32_t *)(arg1 + 0x18),0,0x88e4);
-      pvVar1 = (void *)(*pglfn_glMapBufferARB)(*(uint32_t *)arg1,0x88b9);
+    } else {
+      (*pglfn_glBufferDataARB)(*(uint32_t *)arg1, *(uint32_t *)(arg1 + 0x18), 0, 0x88e4);
+      pvVar1 = (void *)(*pglfn_glMapBufferARB)(*(uint32_t *)arg1, 0x88b9);
       *arg2 = pvVar1;
     }
-  }
-  else {
+  } else {
     *arg2 = *(void **)(arg1 + 0x10);
   }
   return;
@@ -835,8 +822,8 @@ void gfxUnLockVertexBuffer(tagGLVertexBuffer *arg1)
   if (*(int *)(arg1 + 4) != 0) {
     return;
   }
-                    /* WARNING: Could not recover jumptable at 0x0055e489. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055e489. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glUnmapBufferARB)(*(uint32_t *)arg1);
   return;
 }
@@ -847,12 +834,12 @@ void gfxUnLockVertexBuffer(tagGLVertexBuffer *arg1)
  * Calls: `glBindBufferARB`, `glBufferDataARB`, `glGenBuffersARB`, `operator_new`
  * Called by: `Create__005a63e0`, `gfxReallocVertexBuffer`
  */
-uint32_t * gfxCreateVertexBuffer(ulong *arg1)
+uint32_t *gfxCreateVertexBuffer(ulong *arg1)
 
 {
   uint32_t *puVar1;
   void *pvVar2;
-  
+
   if (arg1 == (ulong *)0x0) {
     Error__ThrowFatalError("Attempt to Create a GLVertexBuffer with NULL parameters");
   }
@@ -868,9 +855,9 @@ uint32_t * gfxCreateVertexBuffer(ulong *arg1)
     *(void **)(puVar1 + 4) = pvVar2;
     return puVar1;
   }
-  glGenBuffersARB(1,puVar1 + 2);
-  glBindBufferARB(*puVar1,puVar1[2]);
-  glBufferDataARB(*puVar1,*arg1,arg1[2],0x88e4);
+  glGenBuffersARB(1, puVar1 + 2);
+  glBindBufferARB(*puVar1, puVar1[2]);
+  glBufferDataARB(*puVar1, *arg1, arg1[2], 0x88e4);
   return puVar1;
 }
 
@@ -894,11 +881,11 @@ void gfxDestroyVertexBuffer(uint64_t *arg1)
  * Calls: `OpenGLDestroyVertexBuffer`, `gfxCreateVertexBuffer`
  * Called by: `VertexBuffer__Realloc`
  */
-void gfxReallocVertexBuffer(uint64_t *arg1,uint64_t arg2)
+void gfxReallocVertexBuffer(uint64_t *arg1, uint64_t arg2)
 
 {
   uint64_t uVar1;
-  
+
   OpenGLDestroyVertexBuffer((tagGLVertexBuffer *)*arg1);
   *arg1 = 0;
   uVar1 = gfxCreateVertexBuffer(arg2);
@@ -939,8 +926,8 @@ void gfxDestroyVertexDeclaration(void)
 void glActiveTexture(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055de87. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055de87. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glActiveTexture)();
   return;
 }
@@ -954,8 +941,8 @@ void glActiveTexture(void)
 void glAlphaFunc(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055de97. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055de97. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glAlphaFunc)();
   return;
 }
@@ -969,8 +956,8 @@ void glAlphaFunc(void)
 void glBindTexture(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055dea7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055dea7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glBindTexture)();
   return;
 }
@@ -984,8 +971,8 @@ void glBindTexture(void)
 void glBlendEquation(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055deb7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055deb7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glBlendEquation)();
   return;
 }
@@ -999,8 +986,8 @@ void glBlendEquation(void)
 void glBlendFunc(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055dec7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055dec7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glBlendFunc)();
   return;
 }
@@ -1014,8 +1001,8 @@ void glBlendFunc(void)
 void glClear(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055ded7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055ded7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glClear)();
   return;
 }
@@ -1029,8 +1016,8 @@ void glClear(void)
 void glClearColor(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055dee7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055dee7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glClearColor)();
   return;
 }
@@ -1044,8 +1031,8 @@ void glClearColor(void)
 void glClearDepth(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055def7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055def7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glClearDepth)();
   return;
 }
@@ -1059,8 +1046,8 @@ void glClearDepth(void)
 void glClearStencil(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055df07. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055df07. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glClearStencil)();
   return;
 }
@@ -1071,12 +1058,12 @@ void glClearStencil(void)
  * Calls: (none)
  * Called by: (none)
  */
-void glColorMask(uint8_t arg1,uint8_t arg2,uint8_t arg3,uint8_t arg4)
+void glColorMask(uint8_t arg1, uint8_t arg2, uint8_t arg3, uint8_t arg4)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055df25. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (*pglfn_glColorMask)(arg1,arg2,arg3,arg4);
+  /* WARNING: Could not recover jumptable at 0x0055df25. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (*pglfn_glColorMask)(arg1, arg2, arg3, arg4);
   return;
 }
 
@@ -1089,8 +1076,8 @@ void glColorMask(uint8_t arg1,uint8_t arg2,uint8_t arg3,uint8_t arg4)
 void glCullFace(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055df47. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055df47. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glCullFace)();
   return;
 }
@@ -1104,8 +1091,8 @@ void glCullFace(void)
 void glDeleteTextures(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055df57. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055df57. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glDeleteTextures)();
   return;
 }
@@ -1119,8 +1106,8 @@ void glDeleteTextures(void)
 void glDepthFunc(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055df67. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055df67. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glDepthFunc)();
   return;
 }
@@ -1134,8 +1121,8 @@ void glDepthFunc(void)
 void glDepthMask(uint8_t arg1)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055df7b. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055df7b. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glDepthMask)(arg1);
   return;
 }
@@ -1149,8 +1136,8 @@ void glDepthMask(uint8_t arg1)
 void glDepthRange(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055df87. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055df87. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glDepthRange)();
   return;
 }
@@ -1164,8 +1151,8 @@ void glDepthRange(void)
 void glDisable(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055df97. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055df97. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glDisable)();
   return;
 }
@@ -1179,8 +1166,8 @@ void glDisable(void)
 void glDrawArrays(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055dfa7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055dfa7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glDrawArrays)();
   return;
 }
@@ -1194,8 +1181,8 @@ void glDrawArrays(void)
 void glDrawElements(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055dfb7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055dfb7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glDrawElements)();
   return;
 }
@@ -1209,8 +1196,8 @@ void glDrawElements(void)
 void glDrawBuffer(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055dfc7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055dfc7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glDrawBuffer)();
   return;
 }
@@ -1224,8 +1211,8 @@ void glDrawBuffer(void)
 void glEnable(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055dfd7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055dfd7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glEnable)();
   return;
 }
@@ -1239,8 +1226,8 @@ void glEnable(void)
 void glBindRenderbufferEXT(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055e157. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055e157. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glBindRenderbufferEXT)();
   return;
 }
@@ -1254,8 +1241,8 @@ void glBindRenderbufferEXT(void)
 void glDeleteRenderbuffersEXT(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055e167. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055e167. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glDeleteRenderbuffersEXT)();
   return;
 }
@@ -1269,8 +1256,8 @@ void glDeleteRenderbuffersEXT(void)
 void glBindFramebufferEXT(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055e197. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055e197. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glBindFramebufferEXT)();
   return;
 }
@@ -1284,8 +1271,8 @@ void glBindFramebufferEXT(void)
 void glDeleteFramebuffersEXT(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055e1a7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055e1a7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glDeleteFramebuffersEXT)();
   return;
 }
@@ -1299,8 +1286,8 @@ void glDeleteFramebuffersEXT(void)
 void glCheckFramebufferStatusEXT(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055e1c7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055e1c7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glCheckFramebufferStatusEXT)();
   return;
 }
@@ -1314,8 +1301,8 @@ void glCheckFramebufferStatusEXT(void)
 void glFramebufferTexture2DEXT(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055e1d7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055e1d7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glFramebufferTexture2DEXT)();
   return;
 }
@@ -1329,8 +1316,8 @@ void glFramebufferTexture2DEXT(void)
 void glFramebufferRenderbufferEXT(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055e1e7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055e1e7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glFramebufferRenderbufferEXT)();
   return;
 }
@@ -1344,8 +1331,8 @@ void glFramebufferRenderbufferEXT(void)
 void glBlitFramebufferEXT(void)
 
 {
-                    /* WARNING: Could not recover jumptable at 0x0055e1f7. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x0055e1f7. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glBlitFramebufferEXT)();
   return;
 }
@@ -1356,13 +1343,13 @@ void glBlitFramebufferEXT(void)
  * Calls: (none)
  * Called by: `TGraphics__Clear`
  */
-void gfxClear(uint32_t *arg1,uint arg2)
+void gfxClear(uint32_t *arg1, uint arg2)
 
 {
   uint uVar1;
   uint uVar2;
-  
-  (*pglfn_glClearColor)(*arg1,arg1[1],arg1[2],arg1[3]);
+
+  (*pglfn_glClearColor)(*arg1, arg1[1], arg1[2], arg1[3]);
   if ((arg2 & 2) != 0) {
     (*pglfn_glClearDepth)(DAT_005c7318 /* R:0.0f */);
   }
@@ -1375,8 +1362,8 @@ void gfxClear(uint32_t *arg1,uint arg2)
   if ((arg2 & 2) != 0) {
     uVar2 = uVar1;
   }
-                    /* WARNING: Could not recover jumptable at 0x00560bf8. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x00560bf8. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (*pglfn_glClear)(uVar2);
   return;
 }
@@ -1403,13 +1390,13 @@ void gfxPresent(void)
   float fVar11;
   int local_60;
   int local_5c;
-  int local_58 [4];
-  int local_48 [6];
-  
+  int local_58[4];
+  int local_48[6];
+
   iVar3 = *(int *)(GLGraphics + 2);
   uVar4 = *GLGraphics;
   if (iVar3 != 0) {
-    SDL_GL_GetDrawableSize(uVar4,local_58,local_48);
+    SDL_GL_GetDrawableSize(uVar4, local_58, local_48);
     fVar7 = (float)local_48[0];
     fVar9 = (float)local_58[0];
     uVar1 = *(ushort *)(Window + 8);
@@ -1422,25 +1409,24 @@ void gfxPresent(void)
       iVar6 = 0;
       local_60 = local_58[0];
       local_5c = local_48[0];
-    }
-    else if (fVar10 / fVar11 <= fVar9 / fVar7) {
+    } else if (fVar10 / fVar11 <= fVar9 / fVar7) {
       iVar5 = 0;
       local_5c = local_48[0];
       dVar8 = (double)SDL_ceil((double)(((float)local_48[0] / fVar11) * fVar10));
       local_60 = (int)dVar8;
       iVar6 = (local_58[0] - local_60) / 2;
-    }
-    else {
+    } else {
       iVar6 = 0;
       local_60 = local_58[0];
       dVar8 = (double)SDL_ceil((double)(((float)local_58[0] / fVar10) * fVar11));
       local_5c = (int)dVar8;
       iVar5 = (local_48[0] - local_5c) / 2;
     }
-    (*pglfn_glBindFramebufferEXT)(0x8ca8,iVar3);
-    (*pglfn_glBindFramebufferEXT)(0x8ca9,0);
-    (*pglfn_glBlitFramebufferEXT)(0,0,uVar1,uVar2,iVar6,iVar5,local_60,local_5c,0x4000,0x2601);
-    (*pglfn_glBindFramebufferEXT)(0x8d40,0);
+    (*pglfn_glBindFramebufferEXT)(0x8ca8, iVar3);
+    (*pglfn_glBindFramebufferEXT)(0x8ca9, 0);
+    (*pglfn_glBlitFramebufferEXT)(0, 0, uVar1, uVar2, iVar6, iVar5, local_60, local_5c, 0x4000,
+                                  0x2601);
+    (*pglfn_glBindFramebufferEXT)(0x8d40, 0);
   }
   SDL_GL_SwapWindow(uVar4);
   iVar6 = gfxPresent__frametime + 0xb;
@@ -1449,9 +1435,9 @@ void gfxPresent(void)
   } while (0 < iVar6 - iVar5);
   gfxPresent__frametime = iVar6;
   if (iVar3 != 0) {
-    (*pglfn_glClearColor)(0,0,0);
+    (*pglfn_glClearColor)(0, 0, 0);
     (*pglfn_glClear)(0x4000);
-    (*pglfn_glBindFramebufferEXT)(0x8d40,iVar3);
+    (*pglfn_glBindFramebufferEXT)(0x8d40, iVar3);
   }
   return;
 }
@@ -1473,7 +1459,7 @@ void gfxAutoSetViewport(void)
   ulong uVar4;
   uint uVar5;
   uint uVar6;
-  
+
   uVar1 = *(ushort *)(Window + 10);
   uVar4 = (ulong)uVar1;
   uVar2 = *(ushort *)(Window + 8);
@@ -1482,20 +1468,20 @@ void gfxAutoSetViewport(void)
     uVar6 = 0;
     uVar4 = (long)((float)uVar2 * _DAT_005d5478 /* R:0.5625f */) & 0xffffffff;
     uVar5 = (uint)uVar1 - (int)(long)((float)uVar2 * _DAT_005d5478 /* R:0.5625f */) >> 1;
-  }
-  else {
+  } else {
     uVar6 = 0;
     uVar5 = 0;
     if (*(int *)(Graphics + 0x348) == 2) {
       uVar3 = (long)((float)uVar1 * DAT_005d547c /* R:1.3333333730697632f */) & 0xffffffff;
-      uVar6 = (uint)uVar2 - (int)(long)((float)uVar1 * DAT_005d547c /* R:1.3333333730697632f */) >> 1;
+      uVar6 =
+          (uint)uVar2 - (int)(long)((float)uVar1 * DAT_005d547c /* R:1.3333333730697632f */) >> 1;
     }
   }
-  (*pglfn_glViewport)(uVar6,uVar5,uVar3,uVar4);
-                    /* WARNING: Could not recover jumptable at 0x00560f02. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (*pglfn_glScissor)((uint)*(ushort *)(Window + 8) - (int)uVar3 >> 1,
-                     (uint)*(ushort *)(Window + 10) - (int)uVar4 >> 1,uVar3,uVar4);
+  (*pglfn_glViewport)(uVar6, uVar5, uVar3, uVar4);
+  /* WARNING: Could not recover jumptable at 0x00560f02. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (*pglfn_glScissor)((uint) * (ushort *)(Window + 8) - (int)uVar3 >> 1,
+                     (uint) * (ushort *)(Window + 10) - (int)uVar4 >> 1, uVar3, uVar4);
   return;
 }
 
@@ -1508,9 +1494,9 @@ void gfxAutoSetViewport(void)
 void gfxBindRenderTarget(uint32_t *arg1)
 
 {
-  (*pglfn_glViewport)(0,0,*arg1,arg1[1]);
-  (*pglfn_glScissor)(0,0,*arg1,arg1[1]);
-  (*pglfn_glBindFramebufferEXT)(0x8d40,arg1[3]);
+  (*pglfn_glViewport)(0, 0, *arg1, arg1[1]);
+  (*pglfn_glScissor)(0, 0, *arg1, arg1[1]);
+  (*pglfn_glBindFramebufferEXT)(0x8d40, arg1[3]);
   bRenderingToTexture = 1;
   return;
 }
@@ -1532,7 +1518,7 @@ void gfxUnBindRenderTarget(void)
   ulong uVar4;
   uint uVar5;
   uint uVar6;
-  
+
   uVar1 = *(ushort *)(Window + 10);
   uVar4 = (ulong)uVar1;
   uVar2 = *(ushort *)(Window + 8);
@@ -1541,20 +1527,20 @@ void gfxUnBindRenderTarget(void)
     uVar6 = 0;
     uVar4 = (long)((float)uVar2 * _DAT_005d5478 /* R:0.5625f */) & 0xffffffff;
     uVar5 = (uint)uVar1 - (int)(long)((float)uVar2 * _DAT_005d5478 /* R:0.5625f */) >> 1;
-  }
-  else {
+  } else {
     uVar6 = 0;
     uVar5 = 0;
     if (*(int *)(Graphics + 0x348) == 2) {
       uVar3 = (long)((float)uVar1 * DAT_005d547c /* R:1.3333333730697632f */) & 0xffffffff;
-      uVar6 = (uint)uVar2 - (int)(long)((float)uVar1 * DAT_005d547c /* R:1.3333333730697632f */) >> 1;
+      uVar6 =
+          (uint)uVar2 - (int)(long)((float)uVar1 * DAT_005d547c /* R:1.3333333730697632f */) >> 1;
     }
   }
-  (*pglfn_glViewport)(uVar6,uVar5,uVar3,uVar4);
-                    /* WARNING: Could not recover jumptable at 0x00560f02. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (*pglfn_glScissor)((uint)*(ushort *)(Window + 8) - (int)uVar3 >> 1,
-                     (uint)*(ushort *)(Window + 10) - (int)uVar4 >> 1,uVar3,uVar4);
+  (*pglfn_glViewport)(uVar6, uVar5, uVar3, uVar4);
+  /* WARNING: Could not recover jumptable at 0x00560f02. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (*pglfn_glScissor)((uint) * (ushort *)(Window + 8) - (int)uVar3 >> 1,
+                     (uint) * (ushort *)(Window + 10) - (int)uVar4 >> 1, uVar3, uVar4);
   return;
 }
 
@@ -1567,7 +1553,7 @@ void gfxUnBindRenderTarget(void)
 void gfxRenderToBackBuffer(void)
 
 {
-  (*pglfn_glBindFramebufferEXT)(0x8d40,*(uint32_t *)(GLGraphics + 0x10));
+  (*pglfn_glBindFramebufferEXT)(0x8d40, *(uint32_t *)(GLGraphics + 0x10));
   bRenderingToTexture = 0;
   gfxAutoSetViewport();
   return;
@@ -1616,8 +1602,8 @@ void gfxDraw(void)
   bool bVar30;
   byte bVar31;
   int local_7c;
-  Matrix4x4 local_78 [72];
-  
+  Matrix4x4 local_78[72];
+
   lVar17 = pGPUStateSet;
   pTVar18 = pGPUStateDesired;
   bVar31 = 0;
@@ -1629,130 +1615,120 @@ void gfxDraw(void)
     if (*(long *)(pTVar18 + lVar28 + 0x98) == 0) {
       if (*(long *)(lVar17 + 0x98 + lVar28) != 0) {
         (*pglfn_glActiveTexture)(iVar29);
-        (*pglfn_glBindTexture)(0xde1,0);
+        (*pglfn_glBindTexture)(0xde1, 0);
       }
-    }
-    else {
+    } else {
       if (*(long *)(pTVar18 + lVar28 + 0x98) != *(long *)(lVar17 + 0x98 + lVar28)) {
         (*pglfn_glActiveTexture)(iVar29);
-        (*pglfn_glBindTexture)
-                  (0xde1,*(uint32_t *)(*(long *)(*(long *)(pTVar18 + lVar28 + 0x98) + 0x18) + 8));
+        (*pglfn_glBindTexture)(
+            0xde1, *(uint32_t *)(*(long *)(*(long *)(pTVar18 + lVar28 + 0x98) + 0x18) + 8));
       }
       uVar9 = *(uint *)(pTVar23 + 0x124);
       uVar15 = (ulong)uVar9;
       if ((*(uint *)(lVar26 + 0x124) != uVar9) && (uVar9 != 0xffffffff)) {
         if (GLSamplerStateValues == (uint8_t *)0x1) {
-          (*pglfn_glTexParameterf)((float)uVar15,0xde1,0x2802);
-        }
-        else {
+          (*pglfn_glTexParameterf)((float)uVar15, 0xde1, 0x2802);
+        } else {
           if (GLSamplerStateValues != (uint8_t *)0x2) {
-            uVar15 = (ulong)*(uint *)(GLSamplerStateValues + uVar15 * 4);
+            uVar15 = (ulong) * (uint *)(GLSamplerStateValues + uVar15 * 4);
           }
-          (*pglfn_glTexParameteri)(0xde1,0x2802,uVar15);
+          (*pglfn_glTexParameteri)(0xde1, 0x2802, uVar15);
         }
       }
       uVar9 = *(uint *)(pTVar23 + 0x128);
       uVar15 = (ulong)uVar9;
       if ((*(uint *)(lVar26 + 0x128) != uVar9) && (uVar9 != 0xffffffff)) {
         if (PTR_GLTextureAddressing_00817908 == (uint8_t *)0x1) {
-          (*pglfn_glTexParameterf)((float)uVar15,0xde1,0x2803);
-        }
-        else {
+          (*pglfn_glTexParameterf)((float)uVar15, 0xde1, 0x2803);
+        } else {
           if (PTR_GLTextureAddressing_00817908 != (uint8_t *)0x2) {
-            uVar15 = (ulong)*(uint *)(PTR_GLTextureAddressing_00817908 + uVar15 * 4);
+            uVar15 = (ulong) * (uint *)(PTR_GLTextureAddressing_00817908 + uVar15 * 4);
           }
-          (*pglfn_glTexParameteri)(0xde1,0x2803,uVar15);
+          (*pglfn_glTexParameteri)(0xde1, 0x2803, uVar15);
         }
       }
       uVar9 = *(uint *)(pTVar23 + 300);
       uVar15 = (ulong)uVar9;
       if ((*(uint *)(lVar26 + 300) != uVar9) && (uVar9 != 0xffffffff)) {
         if (PTR_GLTextureAddressing_00817910 == (uint8_t *)0x1) {
-          (*pglfn_glTexParameterf)((float)uVar15,0xde1,0x8072);
-        }
-        else {
+          (*pglfn_glTexParameterf)((float)uVar15, 0xde1, 0x8072);
+        } else {
           if (PTR_GLTextureAddressing_00817910 != (uint8_t *)0x2) {
-            uVar15 = (ulong)*(uint *)(PTR_GLTextureAddressing_00817910 + uVar15 * 4);
+            uVar15 = (ulong) * (uint *)(PTR_GLTextureAddressing_00817910 + uVar15 * 4);
           }
-          (*pglfn_glTexParameteri)(0xde1,0x8072,uVar15);
+          (*pglfn_glTexParameteri)(0xde1, 0x8072, uVar15);
         }
       }
       uVar9 = *(uint *)(pTVar23 + 0x130);
       uVar15 = (ulong)uVar9;
       if ((*(uint *)(lVar26 + 0x130) != uVar9) && (uVar9 != 0xffffffff)) {
         if (PTR_GLTextureFilter_00817918 == (uint8_t *)0x1) {
-          (*pglfn_glTexParameterf)((float)uVar15,0xde1,0x2800);
-        }
-        else {
+          (*pglfn_glTexParameterf)((float)uVar15, 0xde1, 0x2800);
+        } else {
           if (PTR_GLTextureFilter_00817918 != (uint8_t *)0x2) {
-            uVar15 = (ulong)*(uint *)(PTR_GLTextureFilter_00817918 + uVar15 * 4);
+            uVar15 = (ulong) * (uint *)(PTR_GLTextureFilter_00817918 + uVar15 * 4);
           }
-          (*pglfn_glTexParameteri)(0xde1,0x2800,uVar15);
+          (*pglfn_glTexParameteri)(0xde1, 0x2800, uVar15);
         }
       }
       uVar9 = *(uint *)(pTVar23 + 0x134);
       uVar15 = (ulong)uVar9;
       if ((*(uint *)(lVar26 + 0x134) != uVar9) && (uVar9 != 0xffffffff)) {
         if (PTR_GLTextureFilter_00817920 == (uint8_t *)0x1) {
-          (*pglfn_glTexParameterf)((float)uVar15,0xde1,0x2801);
-        }
-        else {
+          (*pglfn_glTexParameterf)((float)uVar15, 0xde1, 0x2801);
+        } else {
           if (PTR_GLTextureFilter_00817920 != (uint8_t *)0x2) {
-            uVar15 = (ulong)*(uint *)(PTR_GLTextureFilter_00817920 + uVar15 * 4);
+            uVar15 = (ulong) * (uint *)(PTR_GLTextureFilter_00817920 + uVar15 * 4);
           }
-          (*pglfn_glTexParameteri)(0xde1,0x2801,uVar15);
+          (*pglfn_glTexParameteri)(0xde1, 0x2801, uVar15);
         }
       }
       uVar9 = *(uint *)(pTVar23 + 0x138);
       uVar15 = (ulong)uVar9;
       if ((*(uint *)(lVar26 + 0x138) != uVar9) && (uVar9 != 0xffffffff)) {
         if (PTR_GLMipFilter_00817928 == (uint8_t *)0x1) {
-          (*pglfn_glTexParameterf)((float)uVar15,0xde1,0x9999);
-        }
-        else {
+          (*pglfn_glTexParameterf)((float)uVar15, 0xde1, 0x9999);
+        } else {
           if (PTR_GLMipFilter_00817928 != (uint8_t *)0x2) {
-            uVar15 = (ulong)*(uint *)(PTR_GLMipFilter_00817928 + uVar15 * 4);
+            uVar15 = (ulong) * (uint *)(PTR_GLMipFilter_00817928 + uVar15 * 4);
           }
-          (*pglfn_glTexParameteri)(0xde1,0x9999,uVar15);
+          (*pglfn_glTexParameteri)(0xde1, 0x9999, uVar15);
         }
       }
       uVar9 = *(uint *)(pTVar23 + 0x13c);
       uVar15 = (ulong)uVar9;
       if ((*(uint *)(lVar26 + 0x13c) != uVar9) && (uVar9 != 0xffffffff)) {
         if (DAT_00817930 /* R:0.0f */ == 1) {
-          (*pglfn_glTexParameterf)((float)uVar15,0xde1,0x8501);
-        }
-        else {
+          (*pglfn_glTexParameterf)((float)uVar15, 0xde1, 0x8501);
+        } else {
           if (DAT_00817930 /* R:0.0f */ != 2) {
-            uVar15 = (ulong)*(uint *)(DAT_00817930 /* R:0.0f */ + uVar15 * 4);
+            uVar15 = (ulong) * (uint *)(DAT_00817930 /* R:0.0f */ + uVar15 * 4);
           }
-          (*pglfn_glTexParameteri)(0xde1,0x8501,uVar15);
+          (*pglfn_glTexParameteri)(0xde1, 0x8501, uVar15);
         }
       }
       uVar9 = *(uint *)(pTVar23 + 0x140);
       uVar15 = (ulong)uVar9;
       if ((*(uint *)(lVar26 + 0x140) != uVar9) && (uVar9 != 0xffffffff)) {
         if (DAT_00817938 /* R:0.0f */ == 1) {
-          (*pglfn_glTexParameterf)((float)uVar15,0xde1,0x813d);
-        }
-        else {
+          (*pglfn_glTexParameterf)((float)uVar15, 0xde1, 0x813d);
+        } else {
           if (DAT_00817938 /* R:0.0f */ != 2) {
-            uVar15 = (ulong)*(uint *)(DAT_00817938 /* R:0.0f */ + uVar15 * 4);
+            uVar15 = (ulong) * (uint *)(DAT_00817938 /* R:0.0f */ + uVar15 * 4);
           }
-          (*pglfn_glTexParameteri)(0xde1,0x813d,uVar15);
+          (*pglfn_glTexParameteri)(0xde1, 0x813d, uVar15);
         }
       }
       uVar9 = *(uint *)(pTVar23 + 0x144);
       uVar15 = (ulong)uVar9;
       if ((*(uint *)(lVar26 + 0x144) != uVar9) && (uVar9 != 0xffffffff)) {
         if (DAT_00817940 /* R:0.0f */ == 1) {
-          (*pglfn_glTexParameterf)((float)uVar15,0xde1,0x84fe);
-        }
-        else {
+          (*pglfn_glTexParameterf)((float)uVar15, 0xde1, 0x84fe);
+        } else {
           if (DAT_00817940 /* R:0.0f */ != 2) {
-            uVar15 = (ulong)*(uint *)(DAT_00817940 /* R:0.0f */ + uVar15 * 4);
+            uVar15 = (ulong) * (uint *)(DAT_00817940 /* R:0.0f */ + uVar15 * 4);
           }
-          (*pglfn_glTexParameteri)(0xde1,0x84fe,uVar15);
+          (*pglfn_glTexParameteri)(0xde1, 0x84fe, uVar15);
         }
       }
     }
@@ -1772,88 +1748,85 @@ void gfxDraw(void)
     do {
       iVar29 = *(int *)(pbVar10 + 4);
       if (iVar29 == 0) {
-        FragmentLinker__AddFragment__00586940(pVertexLinker,(ShaderFragment *)PosTrans);
-        FragmentLinker__AddFragment__00586940(pPixelLinker,(ShaderFragment *)PixPos);
-      }
-      else if (iVar29 == 1) {
-        FragmentLinker__AddFragment__00586940
-                  (pVertexLinker,(ShaderFragment *)(VertexTexCoordOut + (long)local_7c * 0x30));
+        FragmentLinker__AddFragment__00586940(pVertexLinker, (ShaderFragment *)PosTrans);
+        FragmentLinker__AddFragment__00586940(pPixelLinker, (ShaderFragment *)PixPos);
+      } else if (iVar29 == 1) {
+        FragmentLinker__AddFragment__00586940(
+            pVertexLinker, (ShaderFragment *)(VertexTexCoordOut + (long)local_7c * 0x30));
         if ((local_7c < *(int *)(pTVar18 + 0x334)) &&
-           (lVar26 = (long)local_7c * 0xc, *(int *)(pTVar18 + lVar26 + 0x33c) != 0)) {
-          FragmentLinker__AddFragment__00586940
-                    (pVertexLinker,
-                     (ShaderFragment *)
-                     (VertexTexCoordMatTrans + (long)*(int *)(pTVar18 + lVar26 + 0x340) * 0x30));
+            (lVar26 = (long)local_7c * 0xc, *(int *)(pTVar18 + lVar26 + 0x33c) != 0)) {
+          FragmentLinker__AddFragment__00586940(
+              pVertexLinker, (ShaderFragment *)(VertexTexCoordMatTrans +
+                                                (long)*(int *)(pTVar18 + lVar26 + 0x340) * 0x30));
+          local_7c = local_7c + 1;
+        } else {
           local_7c = local_7c + 1;
         }
-        else {
-          local_7c = local_7c + 1;
-        }
-      }
-      else if ((iVar29 != 2) && (iVar29 == 3)) {
-        FragmentLinker__AddFragment__00586940(pVertexLinker,(ShaderFragment *)VertexColor);
-        FragmentLinker__AddFragment__00586940(pPixelLinker,(ShaderFragment *)PixColor);
+      } else if ((iVar29 != 2) && (iVar29 == 3)) {
+        FragmentLinker__AddFragment__00586940(pVertexLinker, (ShaderFragment *)VertexColor);
+        FragmentLinker__AddFragment__00586940(pPixelLinker, (ShaderFragment *)PixColor);
       }
     } while ((pbVar24 != pbVar2 + 0x10 + (ulong)(uVar7 - 1 & 0xffff) * 0x10) &&
-            (bVar6 = *pbVar24, pbVar10 = pbVar24, pbVar24 = pbVar24 + 0x10, bVar6 != 0xff));
+             (bVar6 = *pbVar24, pbVar10 = pbVar24, pbVar24 = pbVar24 + 0x10, bVar6 != 0xff));
   }
   iVar29 = 0;
   if (0 < *(int *)(pTVar18 + 0x254)) {
     do {
-      while( true ) {
+      while (true) {
         lVar26 = (long)iVar29 * 0x18;
         iVar8 = *(int *)(pTVar18 + lVar26 + 600);
         if (iVar8 != 0) {
           if (*(int *)(pTVar18 + lVar26 + 0x25c) != 0) {
-            FragmentLinker__AddFragment__00586940
-                      (pPixelLinker,
-                       (ShaderFragment *)
-                       (PixelTexCoordsIn + (long)*(int *)(pTVar18 + lVar26 + 0x25c) * 0x30));
+            FragmentLinker__AddFragment__00586940(
+                pPixelLinker, (ShaderFragment *)(PixelTexCoordsIn +
+                                                 (long)*(int *)(pTVar18 + lVar26 + 0x25c) * 0x30));
             iVar8 = *(int *)(pTVar18 + lVar26 + 600);
           }
-          FragmentLinker__AddFragment__00586940
-                    (pPixelLinker,(ShaderFragment *)(PixelChannel1Sources + (long)iVar8 * 0x30));
+          FragmentLinker__AddFragment__00586940(
+              pPixelLinker, (ShaderFragment *)(PixelChannel1Sources + (long)iVar8 * 0x30));
         }
         iVar8 = *(int *)(pTVar18 + lVar26 + 0x260);
         if (iVar8 != 0) {
           if (*(int *)(pTVar18 + lVar26 + 0x264) != 0) {
-            FragmentLinker__AddFragment__00586940
-                      (pPixelLinker,
-                       (ShaderFragment *)
-                       (PixelTexCoordsIn + (long)*(int *)(pTVar18 + lVar26 + 0x264) * 0x30));
+            FragmentLinker__AddFragment__00586940(
+                pPixelLinker, (ShaderFragment *)(PixelTexCoordsIn +
+                                                 (long)*(int *)(pTVar18 + lVar26 + 0x264) * 0x30));
             iVar8 = *(int *)(pTVar18 + lVar26 + 0x260);
           }
-          FragmentLinker__AddFragment__00586940
-                    (pPixelLinker,(ShaderFragment *)(PixelChannel2Sources + (long)iVar8 * 0x30));
+          FragmentLinker__AddFragment__00586940(
+              pPixelLinker, (ShaderFragment *)(PixelChannel2Sources + (long)iVar8 * 0x30));
         }
-        if (*(int *)(pTVar18 + lVar26 + 0x268) != 0) break;
+        if (*(int *)(pTVar18 + lVar26 + 0x268) != 0)
+          break;
         iVar8 = *(int *)(pTVar18 + lVar26 + 0x26c);
-        if (iVar8 == 0) goto LAB_00561445;
-LAB_00561505:
+        if (iVar8 == 0)
+          goto LAB_00561445;
+      LAB_00561505:
         iVar29 = iVar29 + 1;
-        FragmentLinker__AddFragment__00586940
-                  (pPixelLinker,(ShaderFragment *)(PixelOutputs + (long)iVar8 * 0x30));
-        if (*(int *)(pTVar18 + 0x254) <= iVar29) goto LAB_00561533;
+        FragmentLinker__AddFragment__00586940(
+            pPixelLinker, (ShaderFragment *)(PixelOutputs + (long)iVar8 * 0x30));
+        if (*(int *)(pTVar18 + 0x254) <= iVar29)
+          goto LAB_00561533;
       }
-      FragmentLinker__AddFragment__00586940
-                (pPixelLinker,
-                 (ShaderFragment *)(PixelOps + (long)*(int *)(pTVar18 + lVar26 + 0x268) * 0x30));
+      FragmentLinker__AddFragment__00586940(
+          pPixelLinker,
+          (ShaderFragment *)(PixelOps + (long)*(int *)(pTVar18 + lVar26 + 0x268) * 0x30));
       iVar8 = *(int *)(pTVar18 + lVar26 + 0x26c);
-      if (iVar8 != 0) goto LAB_00561505;
-LAB_00561445:
+      if (iVar8 != 0)
+        goto LAB_00561505;
+    LAB_00561445:
       iVar29 = iVar29 + 1;
     } while (iVar29 < *(int *)(pTVar18 + 0x254));
   }
 LAB_00561533:
   pPVar11 = (PixelShader *)FragmentLinker__GetPixelShader(pPixelLinker);
-  TGraphics__SetPixelShader(Graphics,pPVar11);
+  TGraphics__SetPixelShader(Graphics, pPVar11);
   pVVar12 = (VertexShader *)FragmentLinker__GetVertexShader(pVertexLinker);
-  TGraphics__SetVertexShader(Graphics,pVVar12);
+  TGraphics__SetVertexShader(Graphics, pVVar12);
   if ((*(long *)(lVar17 + 0x90) != *(long *)(pTVar18 + 0x90)) ||
-     (*(long *)(lVar17 + 0x88) != *(long *)(pTVar18 + 0x88))) {
-    MOJOSHADER_glBindShaders
-              (*(uint64_t *)(*(long *)(pTVar18 + 0x88) + 0x10),
-               *(uint64_t *)(*(long *)(pTVar18 + 0x90) + 0x10));
+      (*(long *)(lVar17 + 0x88) != *(long *)(pTVar18 + 0x88))) {
+    MOJOSHADER_glBindShaders(*(uint64_t *)(*(long *)(pTVar18 + 0x88) + 0x10),
+                             *(uint64_t *)(*(long *)(pTVar18 + 0x90) + 0x10));
   }
   if ((uVar7 != 0) && (bVar6 = *pbVar2, bVar6 != 0xff)) {
     iVar29 = 0;
@@ -1869,7 +1842,7 @@ LAB_00561533:
         iVar8 = *(int *)(*(long *)(lVar26 + 0x28) + 8);
       }
       if (iVar8 != iVar29) {
-        (*pglfn_glBindBufferARB)(0x8892,iVar8);
+        (*pglfn_glBindBufferARB)(0x8892, iVar8);
         iVar29 = iVar8;
       }
       uVar15 = (ulong)(*(int *)(pbVar24 + 8) - 1U);
@@ -1877,35 +1850,34 @@ LAB_00561533:
         uVar14 = *(uint32_t *)(CSWTCH_284 + uVar15 * 4);
         uVar21 = *(uint32_t *)(CSWTCH_285 + uVar15 * 4);
         uVar16 = *(uint32_t *)(CSWTCH_286 + uVar15 * 4);
-      }
-      else {
+      } else {
         uVar16 = 1;
         uVar21 = 0;
         uVar14 = 6;
       }
       uVar19 = 0xffffffff;
       if (*(uint *)(pbVar24 + 4) < 4) {
-        uVar19 = *(uint32_t *)(CSWTCH_288 + (ulong)*(uint *)(pbVar24 + 4) * 4);
+        uVar19 = *(uint32_t *)(CSWTCH_288 + (ulong) * (uint *)(pbVar24 + 4) * 4);
       }
-      MOJOSHADER_glSetVertexAttribute
-                (uVar19,pbVar24[0xc],uVar16,uVar14,uVar21,uVar22,*(uint16_t *)(pbVar24 + 2));
-      if (pbVar25 == pbVar2 + 0x10 + (ulong)(uVar7 - 1 & 0xffff) * 0x10) break;
+      MOJOSHADER_glSetVertexAttribute(uVar19, pbVar24[0xc], uVar16, uVar14, uVar21, uVar22,
+                                      *(uint16_t *)(pbVar24 + 2));
+      if (pbVar25 == pbVar2 + 0x10 + (ulong)(uVar7 - 1 & 0xffff) * 0x10)
+        break;
       bVar6 = *pbVar25;
       pbVar10 = pbVar25 + 0x10;
       pbVar24 = pbVar25;
     } while (bVar6 != 0xff);
     if (iVar29 != 0) {
-      (*pglfn_glBindBufferARB)(0x8892,0);
+      (*pglfn_glBindBufferARB)(0x8892, 0);
     }
   }
-  TGraphics__SetPixelShaderConstant(Graphics,3,pTVar18 + 0x244,1,0);
+  TGraphics__SetPixelShaderConstant(Graphics, 3, pTVar18 + 0x244, 1, 0);
   lVar26 = *(long *)(pTVar18 + 0x80);
   if (*(long *)(lVar17 + 0x80) != lVar26) {
     if (lVar26 == 0) {
-      (*pglfn_glBindBufferARB)(0x8893,0);
-    }
-    else {
-      (*pglfn_glBindBufferARB)(0x8893,*(uint32_t *)(*(long *)(lVar26 + 0x20) + 8));
+      (*pglfn_glBindBufferARB)(0x8893, 0);
+    } else {
+      (*pglfn_glBindBufferARB)(0x8893, *(uint32_t *)(*(long *)(lVar26 + 0x20) + 8));
     }
   }
   sVar27 = 1;
@@ -1915,11 +1887,12 @@ LAB_005617d8:
   uVar7 = sVar27 - 1;
   lVar26 = (ulong)uVar7 + 0x3c;
   uVar9 = *(uint *)(pTVar18 + lVar26 * 4);
-  if ((uVar9 == 0xffffffff) || (uVar9 == *(uint *)(lVar17 + lVar26 * 4))) goto LAB_00561820;
+  if ((uVar9 == 0xffffffff) || (uVar9 == *(uint *)(lVar17 + lVar26 * 4)))
+    goto LAB_00561820;
   if ((&GLRenderStateValues)[uVar7] != (uint8_t *)0x0) {
     uVar9 = *(uint *)((&GLRenderStateValues)[uVar7] + (ulong)uVar9 * 4);
   }
-  switch(uVar7) {
+  switch (uVar7) {
   default:
     if (uVar9 != 0) {
       (*pglfn_glEnable)(0xb71);
@@ -1930,7 +1903,7 @@ LAB_005617d8:
     (*pglfn_glDepthFunc)(uVar9);
     break;
   case 2:
-    (*pglfn_glPolygonMode)(0x408,uVar9);
+    (*pglfn_glPolygonMode)(0x408, uVar9);
     break;
   case 3:
     (*pglfn_glDepthMask)(uVar9 != 0);
@@ -1943,23 +1916,27 @@ LAB_005617d8:
     bVar30 = true;
     break;
   case 7:
-    if (uVar9 == 0) goto LAB_00561819;
+    if (uVar9 == 0)
+      goto LAB_00561819;
     (*pglfn_glEnable)(0xb44);
     (*pglfn_glFrontFace)(uVar9);
     break;
   case 8:
     uVar20 = 0xbe2;
-    if (uVar9 == 0) goto LAB_00561819;
-LAB_005619d6:
+    if (uVar9 == 0)
+      goto LAB_00561819;
+  LAB_005619d6:
     (*pglfn_glEnable)(uVar20);
     break;
   case 9:
     uVar20 = 0xbc0;
-    if (uVar9 != 0) goto LAB_005619d6;
-LAB_00561819:
+    if (uVar9 != 0)
+      goto LAB_005619d6;
+  LAB_00561819:
     (*pglfn_glDisable)();
-LAB_00561820:
-    if (sVar27 == 0xd) goto LAB_00561870;
+  LAB_00561820:
+    if (sVar27 == 0xd)
+      goto LAB_00561870;
     break;
   case 10:
   case 0xb:
@@ -1967,52 +1944,53 @@ LAB_00561820:
     break;
   case 0xc:
     uVar9 = uVar9 & 0xff;
-    (*pglfn_glColorMask)(uVar9,uVar9,uVar9,uVar9);
-LAB_00561870:
+    (*pglfn_glColorMask)(uVar9, uVar9, uVar9, uVar9);
+  LAB_00561870:
     if (bVar30) {
-      (*pglfn_glBlendFunc)
-                (*(uint32_t *)(GLBlend + (ulong)*(uint *)(pTVar18 + 0x104) * 4),
-                 *(uint32_t *)(GLBlend + (ulong)*(uint *)(pTVar18 + 0x108) * 4));
-      if (bVar3) goto LAB_00561ad1;
-LAB_00561882:
+      (*pglfn_glBlendFunc)(*(uint32_t *)(GLBlend + (ulong) * (uint *)(pTVar18 + 0x104) * 4),
+                           *(uint32_t *)(GLBlend + (ulong) * (uint *)(pTVar18 + 0x108) * 4));
+      if (bVar3)
+        goto LAB_00561ad1;
+    LAB_00561882:
+      iVar29 = *(int *)(pTVar18 + 0x398);
+    } else {
+      if (!bVar3)
+        goto LAB_00561882;
+    LAB_00561ad1:
+      (*pglfn_glAlphaFunc)((float)(byte)pTVar18[0x11c] * DAT_005c4890 /* R:0.003921568859368563f */,
+                           *(uint32_t *)(GLACompFunc + (ulong) * (uint *)(pTVar18 + 0x118) * 4));
       iVar29 = *(int *)(pTVar18 + 0x398);
     }
-    else {
-      if (!bVar3) goto LAB_00561882;
-LAB_00561ad1:
-      (*pglfn_glAlphaFunc)
-                ((float)(byte)pTVar18[0x11c] * DAT_005c4890 /* R:0.003921568859368563f */,
-                 *(uint32_t *)(GLACompFunc + (ulong)*(uint *)(pTVar18 + 0x118) * 4));
-      iVar29 = *(int *)(pTVar18 + 0x398);
-    }
-    if (iVar29 != 1) goto LAB_0056188f;
+    if (iVar29 != 1)
+      goto LAB_0056188f;
     Matrix4x4__Identity(local_78);
     pMVar5 = (Matrix4x4 *)Graphics;
     iVar29 = *(int *)(pTVar18 + 0x39c);
     if ((iVar29 == 0) || (bVar30 = false, iVar29 == 1)) {
-      Matrix4x4__Multiply(local_78,local_78,(Matrix4x4 *)Graphics);
+      Matrix4x4__Multiply(local_78, local_78, (Matrix4x4 *)Graphics);
       iVar29 = *(int *)(pTVar18 + 0x39c);
       bVar30 = true;
-      if (iVar29 != 0) goto LAB_00561b2f;
-LAB_00561d88:
-      Matrix4x4__Multiply(local_78,local_78,pMVar5 + 0x40);
+      if (iVar29 != 0)
+        goto LAB_00561b2f;
+    LAB_00561d88:
+      Matrix4x4__Multiply(local_78, local_78, pMVar5 + 0x40);
       if (*(int *)(pTVar18 + 0x39c) == 1) {
-        Matrix4x4__Multiply(local_78,local_78,pMVar5 + 0x80);
+        Matrix4x4__Multiply(local_78, local_78, pMVar5 + 0x80);
       }
       bVar30 = true;
       iVar29 = *(int *)(pTVar18 + 0x39c);
-    }
-    else {
-LAB_00561b2f:
-      if (iVar29 == 1) goto LAB_00561d88;
+    } else {
+    LAB_00561b2f:
+      if (iVar29 == 1)
+        goto LAB_00561d88;
     }
     if ((iVar29 == 0) || (iVar29 == 1)) {
-      Matrix4x4__Multiply(local_78,local_78,pMVar5 + 0xc0);
-    }
-    else if (!bVar30) goto LAB_0056188f;
+      Matrix4x4__Multiply(local_78, local_78, pMVar5 + 0xc0);
+    } else if (!bVar30)
+      goto LAB_0056188f;
     pfVar13 = Matrix4x4__operator_cast_to_float(local_78);
-    MOJOSHADER_glSetVertexShaderUniformF(0,pfVar13,4);
-LAB_0056188f:
+    MOJOSHADER_glSetVertexShaderUniformF(0, pfVar13, 4);
+  LAB_0056188f:
     pTVar4 = Graphics;
     *(uint32_t *)(pTVar18 + 0x398) = 0;
     pTVar23 = pTVar4 + 0x350;
@@ -2060,15 +2038,14 @@ LAB_0056188f:
     }
     MOJOSHADER_glProgramReady();
     if (*(long *)(pGPUStateSet + 0x80) != 0) {
-      (*pglfn_glDrawElements)
-                (*(uint32_t *)(GLPrimType + (long)*(int *)(pGPUStateSet + 0xec) * 4),
-                 *(uint32_t *)(pGPUStateSet + 0xe8),
-                 *(uint32_t *)(*(long *)(*(long *)(pGPUStateSet + 0x80) + 0x20) + 0x1c),0);
+      (*pglfn_glDrawElements)(
+          *(uint32_t *)(GLPrimType + (long)*(int *)(pGPUStateSet + 0xec) * 4),
+          *(uint32_t *)(pGPUStateSet + 0xe8),
+          *(uint32_t *)(*(long *)(*(long *)(pGPUStateSet + 0x80) + 0x20) + 0x1c), 0);
       return;
     }
-    (*pglfn_glDrawArrays)
-              (*(uint32_t *)(GLPrimType + (long)*(int *)(pGPUStateSet + 0xec) * 4),0,
-               *(uint32_t *)(pGPUStateSet + 0xe8));
+    (*pglfn_glDrawArrays)(*(uint32_t *)(GLPrimType + (long)*(int *)(pGPUStateSet + 0xec) * 4), 0,
+                          *(uint32_t *)(pGPUStateSet + 0xe8));
     return;
   }
   sVar27 = sVar27 + 1;
@@ -2135,20 +2112,20 @@ uint64_t gfxResetDevice(uint32_t *arg1)
   uint64_t uVar1;
   OpenGLGraphics *this;
   long lVar2;
-  uint local_38 [4];
-  uint local_28 [6];
-  
+  uint local_38[4];
+  uint local_28[6];
+
   lVar2 = Window;
   *(uint32_t *)(Window + 0xc) = arg1[2];
   *(short *)(lVar2 + 8) = (short)*arg1;
   *(short *)(lVar2 + 10) = (short)arg1[1];
   uVar1 = *(uint64_t *)GLGraphics;
-  SDL_SetWindowFullscreen(uVar1,~-(uint)(arg1[2] == 0) & 0x1001);
-  SDL_SetWindowSize(*(uint64_t *)GLGraphics,*arg1,arg1[1]);
-  (*pglfn_glViewport)(0,0,*arg1,arg1[1]);
-  (*pglfn_glScissor)(0,0,*arg1,arg1[1]);
-  (*pglfn_glBindFramebufferEXT)(0x8d40,0);
-  (*pglfn_glClearColor)(0,0,0);
+  SDL_SetWindowFullscreen(uVar1, ~-(uint)(arg1[2] == 0) & 0x1001);
+  SDL_SetWindowSize(*(uint64_t *)GLGraphics, *arg1, arg1[1]);
+  (*pglfn_glViewport)(0, 0, *arg1, arg1[1]);
+  (*pglfn_glScissor)(0, 0, *arg1, arg1[1]);
+  (*pglfn_glBindFramebufferEXT)(0x8d40, 0);
+  (*pglfn_glClearColor)(0, 0, 0);
   (*pglfn_glClear)(0x4100);
   SDL_GL_SwapWindow(uVar1);
   (*pglfn_glClear)(0x4100);
@@ -2157,7 +2134,7 @@ uint64_t gfxResetDevice(uint32_t *arg1)
   SDL_GL_SwapWindow(uVar1);
   this = GLGraphics;
   OpenGLGraphics__DestroyBackbuffer(GLGraphics);
-  SDL_GL_GetDrawableSize(*(uint64_t *)this,local_38,local_28);
+  SDL_GL_GetDrawableSize(*(uint64_t *)this, local_38, local_28);
   lVar2 = Window;
   if (have_GL_EXT_framebuffer_blit == '\0') {
     *(short *)(Window + 8) = (short)local_38[0];
@@ -2176,10 +2153,10 @@ uint64_t gfxResetDevice(uint32_t *arg1)
  * Calls: `MOJOSHADER_glSetPixelShaderUniformF`
  * Called by: `TGraphics__SetPixelColorConstant`
  */
-void gfxSetColorConstant(uint8_t arg1,uint64_t arg2)
+void gfxSetColorConstant(uint8_t arg1, uint64_t arg2)
 
 {
-  MOJOSHADER_glSetPixelShaderUniformF(arg1,arg2,1);
+  MOJOSHADER_glSetPixelShaderUniformF(arg1, arg2, 1);
   return;
 }
 
@@ -2189,7 +2166,7 @@ void gfxSetColorConstant(uint8_t arg1,uint64_t arg2)
  * Calls: `MOJOSHADER_glSetVertexShaderUniformF`
  * Called by: `TGraphics__SetTextCoordMatrix`
  */
-void gfxSetTexCoordMatrix(int arg1,uint64_t arg2)
+void gfxSetTexCoordMatrix(int arg1, uint64_t arg2)
 
 {
   MOJOSHADER_glSetVertexShaderUniformF
@@ -2210,13 +2187,13 @@ void gfxSetFogParams(long arg1)
   uint32_t local_14;
   uint32_t local_10;
   uint32_t local_c;
-  
-  MOJOSHADER_glSetPixelShaderUniformF(4,arg1,1);
+
+  MOJOSHADER_glSetPixelShaderUniformF(4, arg1, 1);
   local_10 = 0;
   local_c = 0;
   local_18 = *(uint32_t *)(arg1 + 0x10);
   local_14 = *(uint32_t *)(arg1 + 0x14);
-  MOJOSHADER_glSetPixelShaderUniformF(5,&local_18,1);
+  MOJOSHADER_glSetPixelShaderUniformF(5, &local_18, 1);
   return;
 }
 
@@ -2230,9 +2207,9 @@ void gfxCreateRenderDevice(void)
 
 {
   OpenGLGraphics *this;
-  
+
   this = operator_new(0x20);
-                    /* try { // try from 00561ff5 to 00561ff9 has its CatchHandler @ 00562000 */
+  /* try { // try from 00561ff5 to 00561ff9 has its CatchHandler @ 00562000 */
   OpenGLGraphics__OpenGLGraphics(this);
   return;
 }
@@ -2247,7 +2224,7 @@ void gfxDestroyRenderDevice(void)
 
 {
   OpenGLGraphics *pOVar1;
-  
+
   pOVar1 = GLGraphics;
   if (GLGraphics != (OpenGLGraphics *)0x0) {
     OpenGLGraphics__OpenGLGraphics__005608f0(GLGraphics);
@@ -2267,25 +2244,25 @@ void gfxUnbindAll(void)
 
 {
   (*pglfn_glActiveTexture)(0x84c7);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c6);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c5);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c4);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c3);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c2);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c1);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   (*pglfn_glActiveTexture)(0x84c0);
-  (*pglfn_glBindTexture)(0xde1,0);
+  (*pglfn_glBindTexture)(0xde1, 0);
   MOJOSHADER_glBindProgram(0);
-                    /* WARNING: Could not recover jumptable at 0x0056212d. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
-  (*pglfn_glBindBufferARB)(0x8893,0);
+  /* WARNING: Could not recover jumptable at 0x0056212d. Too many branches */
+  /* WARNING: Treating indirect jump as call */
+  (*pglfn_glBindBufferARB)(0x8893, 0);
   return;
 }
 
@@ -2303,15 +2280,14 @@ uint get8(stb_vorbis *arg1)
   byte bVar1;
   byte *pbVar2;
   uint uVar3;
-  
+
   pbVar2 = *(byte **)(arg1 + 0x28);
   if (pbVar2 == (byte *)0x0) {
     uVar3 = fgetc(*(FILE **)(arg1 + 0x18));
     if (uVar3 != 0xffffffff) {
       return uVar3;
     }
-  }
-  else if (pbVar2 < *(byte **)(arg1 + 0x38)) {
+  } else if (pbVar2 < *(byte **)(arg1 + 0x38)) {
     bVar1 = *pbVar2;
     *(byte **)(arg1 + 0x28) = pbVar2 + 1;
     return (uint)bVar1;
@@ -2336,7 +2312,7 @@ uint get32(stb_vorbis *arg1)
   byte *pbVar3;
   int iVar4;
   uint uVar5;
-  
+
   pbVar3 = *(byte **)(arg1 + 0x28);
   if (pbVar3 == (byte *)0x0) {
     uVar2 = fgetc(*(FILE **)(arg1 + 0x18));
@@ -2346,9 +2322,10 @@ uint get32(stb_vorbis *arg1)
       uVar5 = 0;
     }
     pbVar3 = *(byte **)(arg1 + 0x28);
-LAB_005a8f2b:
+  LAB_005a8f2b:
     if (pbVar3 != (byte *)0x0) {
-      if (pbVar3 < *(byte **)(arg1 + 0x38)) goto LAB_005a8f92;
+      if (pbVar3 < *(byte **)(arg1 + 0x38))
+        goto LAB_005a8f92;
       goto LAB_005a8f3a;
     }
     uVar2 = fgetc(*(FILE **)(arg1 + 0x18));
@@ -2358,9 +2335,10 @@ LAB_005a8f2b:
       iVar4 = 0;
     }
     pbVar3 = *(byte **)(arg1 + 0x28);
-LAB_005a8fa3:
+  LAB_005a8fa3:
     uVar5 = uVar5 + iVar4;
-    if (pbVar3 != (byte *)0x0) goto LAB_005a8f44;
+    if (pbVar3 != (byte *)0x0)
+      goto LAB_005a8f44;
     uVar2 = fgetc(*(FILE **)(arg1 + 0x18));
     iVar4 = (uVar2 & 0xff) << 0x10;
     if (uVar2 == 0xffffffff) {
@@ -2368,15 +2346,15 @@ LAB_005a8fa3:
       iVar4 = 0;
     }
     pbVar3 = *(byte **)(arg1 + 0x28);
-LAB_005a8fe1:
+  LAB_005a8fe1:
     uVar5 = uVar5 + iVar4;
     if (pbVar3 == (byte *)0x0) {
       uVar2 = fgetc(*(FILE **)(arg1 + 0x18));
-      if (uVar2 == 0xffffffff) goto LAB_005a9008;
+      if (uVar2 == 0xffffffff)
+        goto LAB_005a9008;
       goto LAB_005a8f70;
     }
-  }
-  else {
+  } else {
     if (pbVar3 < *(byte **)(arg1 + 0x38)) {
       bVar1 = *pbVar3;
       pbVar3 = pbVar3 + 1;
@@ -2387,16 +2365,16 @@ LAB_005a8fe1:
     *(uint32_t *)(arg1 + 0x90) = 1;
     uVar5 = 0;
     if (pbVar3 < *(byte **)(arg1 + 0x38)) {
-LAB_005a8f92:
+    LAB_005a8f92:
       bVar1 = *pbVar3;
       pbVar3 = pbVar3 + 1;
       *(byte **)(arg1 + 0x28) = pbVar3;
       iVar4 = (uint)bVar1 << 8;
       goto LAB_005a8fa3;
     }
-LAB_005a8f3a:
+  LAB_005a8f3a:
     *(uint32_t *)(arg1 + 0x90) = 1;
-LAB_005a8f44:
+  LAB_005a8f44:
     if (pbVar3 < *(byte **)(arg1 + 0x38)) {
       bVar1 = *pbVar3;
       pbVar3 = pbVar3 + 1;
@@ -2407,7 +2385,7 @@ LAB_005a8f44:
     *(uint32_t *)(arg1 + 0x90) = 1;
   }
   if (*(byte **)(arg1 + 0x38) <= pbVar3) {
-LAB_005a9008:
+  LAB_005a9008:
     *(uint32_t *)(arg1 + 0x90) = 1;
     return uVar5;
   }
@@ -2434,7 +2412,7 @@ uint get8_packet_raw(stb_vorbis *arg1)
   byte *pbVar3;
   int iVar4;
   uint uVar5;
-  
+
   sVar1 = arg1[0x6dc];
   if (sVar1 == (stb_vorbis)0x0) {
     if (*(int *)(arg1 + 0x6e4) != 0) {
@@ -2454,8 +2432,7 @@ uint get8_packet_raw(stb_vorbis *arg1)
     if (uVar5 != 0xffffffff) {
       return uVar5 & 0xff;
     }
-  }
-  else if (pbVar3 < *(byte **)(arg1 + 0x38)) {
+  } else if (pbVar3 < *(byte **)(arg1 + 0x38)) {
     bVar2 = *pbVar3;
     *(byte **)(arg1 + 0x28) = pbVar3 + 1;
     return (uint)bVar2;
@@ -2472,7 +2449,7 @@ uint get8_packet_raw(stb_vorbis *arg1)
  */
 /* get_bits(stb_vorbis*, int) */
 
-uint get_bits(stb_vorbis *arg1,int arg2)
+uint get_bits(stb_vorbis *arg1, int arg2)
 
 {
   byte bVar1;
@@ -2482,14 +2459,14 @@ uint get_bits(stb_vorbis *arg1,int arg2)
   int iVar5;
   int iVar6;
   uint uVar7;
-  
+
   uVar4 = 0;
   iVar5 = *(int *)(arg1 + 0x6f0);
   if (-1 < iVar5) {
     if (iVar5 < arg2) {
       if (0x18 < arg2) {
-        iVar5 = get_bits(arg1,0x18);
-        iVar6 = get_bits(arg1,arg2 + -0x18);
+        iVar5 = get_bits(arg1, 0x18);
+        iVar6 = get_bits(arg1, arg2 + -0x18);
         return iVar6 * 0x1000000 + iVar5;
       }
       if (iVar5 == 0) {
@@ -2509,18 +2486,17 @@ uint get_bits(stb_vorbis *arg1,int arg2)
         arg1[0x6dc] = (stb_vorbis)((char)sVar2 + -1);
         if (pbVar3 == (byte *)0x0) {
           uVar4 = fgetc(*(FILE **)(arg1 + 0x18));
-          if (uVar4 == 0xffffffff) goto LAB_005aa604;
+          if (uVar4 == 0xffffffff)
+            goto LAB_005aa604;
           iVar5 = *(int *)(arg1 + 0x6f0);
           iVar6 = (uVar4 & 0xff) << ((byte)iVar5 & 0x1f);
-        }
-        else if (pbVar3 < *(byte **)(arg1 + 0x38)) {
+        } else if (pbVar3 < *(byte **)(arg1 + 0x38)) {
           bVar1 = *pbVar3;
           iVar5 = *(int *)(arg1 + 0x6f0);
           *(byte **)(arg1 + 0x28) = pbVar3 + 1;
           iVar6 = (uint)bVar1 << ((byte)iVar5 & 0x1f);
-        }
-        else {
-LAB_005aa604:
+        } else {
+        LAB_005aa604:
           *(uint32_t *)(arg1 + 0x90) = 1;
           iVar5 = *(int *)(arg1 + 0x6f0);
           iVar6 = 0;
@@ -2533,8 +2509,7 @@ LAB_005aa604:
       if (iVar5 < 0) {
         return 0;
       }
-    }
-    else {
+    } else {
       uVar7 = *(uint *)(arg1 + 0x6ec);
     }
     *(int *)(arg1 + 0x6f0) = iVar5 - arg2;

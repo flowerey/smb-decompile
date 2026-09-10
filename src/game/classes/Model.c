@@ -22,9 +22,9 @@ void __thiscall Model__Model__005928a0(Model *self)
 
 {
   *(uint8_t ***)self = &PTR__Model_005dd0b0;
-                    /* try { // try from 00592874 to 00592886 has its CatchHandler @ 00592890 */
-  BaseResource__Release(*(BaseResource **)(self + 0x3c0),0);
-  BaseResource__Release(*(BaseResource **)(self + 0x3c8),0);
+  /* try { // try from 00592874 to 00592886 has its CatchHandler @ 00592890 */
+  BaseResource__Release(*(BaseResource **)(self + 0x3c0), 0);
+  BaseResource__Release(*(BaseResource **)(self + 0x3c8), 0);
   *(uint8_t ***)self = &PTR__BaseResource_005dbe30;
   return;
 }
@@ -42,14 +42,14 @@ void __thiscall Model__Model__005928a0(Model *self)
 
 {
   void *pvVar1;
-  
+
   *(uint8_t ***)self = &PTR__Model_005dd0b0;
-                    /* try { // try from 005928b4 to 005928c6 has its CatchHandler @ 005928d7 */
-  BaseResource__Release(*(BaseResource **)(self + 0x3c0),0);
+  /* try { // try from 005928b4 to 005928c6 has its CatchHandler @ 005928d7 */
+  BaseResource__Release(*(BaseResource **)(self + 0x3c0), 0);
   pvVar1 = (void *)0x0;
-  BaseResource__Release(*(BaseResource **)(self + 0x3c8),0);
+  BaseResource__Release(*(BaseResource **)(self + 0x3c8), 0);
   *(uint8_t ***)self = &PTR__BaseResource_005dbe30;
-  BaseResource__operator_delete((BaseResource *)self,pvVar1);
+  BaseResource__operator_delete((BaseResource *)self, pvVar1);
   return;
 }
 
@@ -66,13 +66,13 @@ void __thiscall Model__Render(Model *self)
 
 {
   TGraphics *this_00;
-  
+
   this_00 = Graphics;
   *(uint64_t *)(self + 0x3b8) = *(uint64_t *)(Graphics + 0xaa0);
-  TGraphics__SetActiveGPUBlock(this_00,(GPUState *)(self + 0x10));
-  TGraphics__Draw(Graphics,*(VertexStream **)(self + 0x3c0),*(IndexBuffer **)(self + 0x3c8));
+  TGraphics__SetActiveGPUBlock(this_00, (GPUState *)(self + 0x10));
+  TGraphics__Draw(Graphics, *(VertexStream **)(self + 0x3c0), *(IndexBuffer **)(self + 0x3c8));
   VertexBuffer__ResetReplication(*(VertexBuffer **)(*(long *)(self + 0x3c0) + 0x20));
-  TGraphics__SetActiveGPUBlock(Graphics,(GPUState *)0x0);
+  TGraphics__SetActiveGPUBlock(Graphics, (GPUState *)0x0);
   return;
 }
 
@@ -102,7 +102,7 @@ void __thiscall Model__Render(Model *self)
 /* WARNING: Removing unreachable block (ram,0x00593030) */
 /* Model__Replicate(unsigned int, unsigned int) */
 
-void __thiscall Model__Replicate(Model *self,uint arg1,uint arg2)
+void __thiscall Model__Replicate(Model *self, uint arg1, uint arg2)
 
 {
   short sVar1;
@@ -125,7 +125,7 @@ void __thiscall Model__Replicate(Model *self,uint arg1,uint arg2)
   ushort uVar16;
   bool bVar17;
   byte bVar18;
-  CriticalSection local_128 [40];
+  CriticalSection local_128[40];
   ushort local_100;
   ushort local_fe;
   byte local_fc;
@@ -178,9 +178,10 @@ void __thiscall Model__Replicate(Model *self,uint arg1,uint arg2)
   size_t *local_48;
   short local_40;
   uint32_t local_3c;
-  
+
   bVar18 = 0;
-  if (*(long *)(self + 0x3d0) != 0) goto LAB_00592a40;
+  if (*(long *)(self + 0x3d0) != 0)
+    goto LAB_00592a40;
   uVar15 = arg2 & 1;
   local_cc = 5;
   local_c8 = 0;
@@ -196,7 +197,7 @@ void __thiscall Model__Replicate(Model *self,uint arg1,uint arg2)
   local_d8 = uVar12 * arg1;
   pVVar4 = (VertexBuffer *)VertexBuffer__Create((tagVertexBufferCreation *)&local_d8);
   *(VertexBuffer **)(self + 0x3d0) = pVVar4;
-  VertexStream__SetVertexBuffer(*(VertexStream **)(self + 0x3c0),'\x01',pVVar4);
+  VertexStream__SetVertexBuffer(*(VertexStream **)(self + 0x3c0), '\x01', pVVar4);
   sVar1 = *(short *)(*(long *)(*(long *)(self + 0x3c0) + 0xa0) + 0x20);
   psVar13 = *(size_t **)(*(long *)(*(long *)(self + 0x3c0) + 0xa0) + 0x18);
   CriticalSection__CriticalSection(local_128);
@@ -222,7 +223,7 @@ void __thiscall Model__Replicate(Model *self,uint arg1,uint arg2)
     }
   }
   if (psVar13 != local_f0) {
-    memcpy(local_f0,psVar13,__n);
+    memcpy(local_f0, psVar13, __n);
   }
   psVar13 = local_f0;
   local_e0 = -0x5eef3582;
@@ -249,8 +250,8 @@ void __thiscall Model__Replicate(Model *self,uint arg1,uint arg2)
       uVar9 = (ulong)local_fe * 0x10;
       pvVar5 = malloc(uVar12 + 0x10 + uVar9);
       if (pvVar5 != (void *)0x0) {
-        psVar6 = (size_t *)
-                 ((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
+        psVar6 =
+            (size_t *)((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
         psVar6[-2] = uVar9;
         psVar6[-1] = (size_t)pvVar5;
         if (psVar13 != (size_t *)0x0) {
@@ -258,7 +259,7 @@ void __thiscall Model__Replicate(Model *self,uint arg1,uint arg2)
           if (uVar9 <= psVar13[-2]) {
             uVar12 = uVar9;
           }
-          memcpy(psVar6,psVar13,uVar12);
+          memcpy(psVar6, psVar13, uVar12);
           free((void *)psVar13[-1]);
         }
       }
@@ -271,15 +272,15 @@ void __thiscall Model__Replicate(Model *self,uint arg1,uint arg2)
         uVar16 = local_100;
         puVar14 = (ushort *)0x0;
         if (pvVar5 != (void *)0x0) {
-          puVar14 = (ushort *)
-                    ((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
+          puVar14 =
+              (ushort *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
           *(void **)(puVar14 + -4) = pvVar5;
           *(ulong *)(puVar14 + -8) = uVar12;
           uVar9 = *(ulong *)(puVar11 + -8);
           if (uVar12 <= *(ulong *)(puVar11 + -8)) {
             uVar9 = uVar12;
           }
-          memcpy(puVar14,puVar11,uVar9);
+          memcpy(puVar14, puVar11, uVar9);
           free(*(void **)(puVar11 + -4));
           uVar16 = local_100;
         }
@@ -296,15 +297,16 @@ void __thiscall Model__Replicate(Model *self,uint arg1,uint arg2)
       puVar11 = local_e8;
       while (uVar16 != 0xffff) {
         puVar11 = puVar11 + 1;
-        if (uVar2 == local_fe) goto LAB_0059304f;
+        if (uVar2 == local_fe)
+          goto LAB_0059304f;
         uVar2 = uVar2 + 1;
         uVar16 = *puVar11;
       }
       *puVar11 = local_100;
     }
-LAB_0059304f:
+  LAB_0059304f:
     psVar6 = local_f0 + (ulong)local_100 * 2;
-    *psVar6 = CONCAT44(uStack_a4,CONCAT22(uStack_a6,CONCAT11(uStack_a7,local_a8)));
+    *psVar6 = CONCAT44(uStack_a4, CONCAT22(uStack_a6, CONCAT11(uStack_a7, local_a8)));
     *(uint32_t *)(psVar6 + 1) = local_a0;
     *(uint8_t *)((long)psVar6 + 0xc) = local_9c;
     local_98 = 1;
@@ -321,8 +323,8 @@ LAB_0059304f:
         uVar9 = (ulong)local_fe * 0x10;
         pvVar5 = malloc(uVar12 + 0x10 + uVar9);
         if (pvVar5 != (void *)0x0) {
-          psVar6 = (size_t *)
-                   ((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
+          psVar6 = (size_t *)((long)pvVar5 + 0x10U +
+                              (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
           psVar6[-2] = uVar9;
           psVar6[-1] = (size_t)pvVar5;
           if (psVar13 != (size_t *)0x0) {
@@ -330,7 +332,7 @@ LAB_0059304f:
             if (uVar9 <= psVar13[-2]) {
               uVar12 = uVar9;
             }
-            memcpy(psVar6,psVar13,uVar12);
+            memcpy(psVar6, psVar13, uVar12);
             free((void *)psVar13[-1]);
           }
         }
@@ -343,15 +345,15 @@ LAB_0059304f:
           uVar16 = local_100;
           puVar14 = (ushort *)0x0;
           if (pvVar5 != (void *)0x0) {
-            puVar14 = (ushort *)
-                      ((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
+            puVar14 =
+                (ushort *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
             *(void **)(puVar14 + -4) = pvVar5;
             *(ulong *)(puVar14 + -8) = uVar12;
             uVar9 = *(ulong *)(puVar11 + -8);
             if (uVar12 <= *(ulong *)(puVar11 + -8)) {
               uVar9 = uVar12;
             }
-            memcpy(puVar14,puVar11,uVar9);
+            memcpy(puVar14, puVar11, uVar9);
             free(*(void **)(puVar11 + -4));
             uVar16 = local_100;
           }
@@ -368,20 +370,20 @@ LAB_0059304f:
         while (uVar16 != 0xffff) {
           puVar11 = puVar11 + 1;
           uVar2 = uVar2 + 1;
-          if (uVar2 == local_fe) goto LAB_0059317a;
+          if (uVar2 == local_fe)
+            goto LAB_0059317a;
           uVar16 = *puVar11;
         }
         *puVar11 = local_100;
       }
-    }
-    else {
+    } else {
       uVar12 = (ulong)local_fc;
       local_f8 = 0;
       pvVar5 = malloc(uVar12 + 0x60);
       local_f0 = (size_t *)0x0;
       if (pvVar5 != (void *)0x0) {
-        local_f0 = (size_t *)
-                   ((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
+        local_f0 =
+            (size_t *)((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
         local_f0[-2] = 0x50;
         local_f0[-1] = (size_t)pvVar5;
       }
@@ -423,10 +425,10 @@ LAB_0059304f:
       local_e0 = -0x5eef3582;
       local_f4 = 5;
     }
-LAB_0059317a:
+  LAB_0059317a:
     psVar13 = local_f0;
     psVar6 = local_f0 + (ulong)local_100 * 2;
-    *psVar6 = CONCAT44(uStack_94,CONCAT22(uStack_96,CONCAT11(uStack_97,local_98)));
+    *psVar6 = CONCAT44(uStack_94, CONCAT22(uStack_96, CONCAT11(uStack_97, local_98)));
     *(uint32_t *)(psVar6 + 1) = local_90;
     *(uint8_t *)((long)psVar6 + 0xc) = local_8c;
     local_88 = 1;
@@ -443,8 +445,8 @@ LAB_0059317a:
         uVar9 = (ulong)local_fe * 0x10;
         pvVar5 = malloc(uVar12 + 0x10 + uVar9);
         if (pvVar5 != (void *)0x0) {
-          psVar6 = (size_t *)
-                   ((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
+          psVar6 = (size_t *)((long)pvVar5 + 0x10U +
+                              (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
           psVar6[-2] = uVar9;
           psVar6[-1] = (size_t)pvVar5;
           if (psVar13 != (size_t *)0x0) {
@@ -452,7 +454,7 @@ LAB_0059317a:
             if (uVar9 <= psVar13[-2]) {
               uVar12 = uVar9;
             }
-            memcpy(psVar6,psVar13,uVar12);
+            memcpy(psVar6, psVar13, uVar12);
             free((void *)psVar13[-1]);
           }
         }
@@ -465,15 +467,15 @@ LAB_0059317a:
           uVar16 = local_100;
           puVar14 = (ushort *)0x0;
           if (pvVar5 != (void *)0x0) {
-            puVar14 = (ushort *)
-                      ((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
+            puVar14 =
+                (ushort *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
             *(void **)(puVar14 + -4) = pvVar5;
             *(ulong *)(puVar14 + -8) = uVar12;
             uVar9 = *(ulong *)(puVar11 + -8);
             if (uVar12 <= *(ulong *)(puVar11 + -8)) {
               uVar9 = uVar12;
             }
-            memcpy(puVar14,puVar11,uVar9);
+            memcpy(puVar14, puVar11, uVar9);
             free(*(void **)(puVar11 + -4));
             uVar16 = local_100;
           }
@@ -489,21 +491,21 @@ LAB_0059317a:
         puVar11 = local_e8;
         while (uVar16 != 0xffff) {
           puVar11 = puVar11 + 1;
-          if (uVar2 == local_fe) goto LAB_005932a5;
+          if (uVar2 == local_fe)
+            goto LAB_005932a5;
           uVar2 = uVar2 + 1;
           uVar16 = *puVar11;
         }
         *puVar11 = local_100;
       }
-    }
-    else {
+    } else {
       uVar12 = (ulong)local_fc;
       local_f8 = 0;
       pvVar5 = malloc(uVar12 + 0x60);
       local_f0 = (size_t *)0x0;
       if (pvVar5 != (void *)0x0) {
-        local_f0 = (size_t *)
-                   ((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
+        local_f0 =
+            (size_t *)((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
         local_f0[-2] = 0x50;
         local_f0[-1] = (size_t)pvVar5;
       }
@@ -545,10 +547,10 @@ LAB_0059317a:
       local_e0 = -0x5eef3582;
       local_f4 = 5;
     }
-LAB_005932a5:
+  LAB_005932a5:
     psVar13 = local_f0;
     psVar6 = local_f0 + (ulong)local_100 * 2;
-    *psVar6 = CONCAT44(uStack_84,CONCAT22(uStack_86,CONCAT11(uStack_87,local_88)));
+    *psVar6 = CONCAT44(uStack_84, CONCAT22(uStack_86, CONCAT11(uStack_87, local_88)));
     *(uint32_t *)(psVar6 + 1) = local_80;
     *(uint8_t *)((long)psVar6 + 0xc) = local_7c;
     local_78 = 1;
@@ -565,8 +567,8 @@ LAB_005932a5:
         uVar9 = (ulong)local_fe * 0x10;
         pvVar5 = malloc(uVar12 + 0x10 + uVar9);
         if (pvVar5 != (void *)0x0) {
-          psVar6 = (size_t *)
-                   ((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
+          psVar6 = (size_t *)((long)pvVar5 + 0x10U +
+                              (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
           psVar6[-2] = uVar9;
           psVar6[-1] = (size_t)pvVar5;
           if (psVar13 != (size_t *)0x0) {
@@ -574,7 +576,7 @@ LAB_005932a5:
             if (uVar9 <= psVar13[-2]) {
               uVar12 = uVar9;
             }
-            memcpy(psVar6,psVar13,uVar12);
+            memcpy(psVar6, psVar13, uVar12);
             free((void *)psVar13[-1]);
           }
         }
@@ -587,15 +589,15 @@ LAB_005932a5:
           uVar16 = local_100;
           puVar14 = (ushort *)0x0;
           if (pvVar5 != (void *)0x0) {
-            puVar14 = (ushort *)
-                      ((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
+            puVar14 =
+                (ushort *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
             *(void **)(puVar14 + -4) = pvVar5;
             *(ulong *)(puVar14 + -8) = uVar12;
             uVar9 = *(ulong *)(puVar11 + -8);
             if (uVar12 <= *(ulong *)(puVar11 + -8)) {
               uVar9 = uVar12;
             }
-            memcpy(puVar14,puVar11,uVar9);
+            memcpy(puVar14, puVar11, uVar9);
             free(*(void **)(puVar11 + -4));
             uVar16 = local_100;
           }
@@ -611,21 +613,21 @@ LAB_005932a5:
         puVar11 = local_e8;
         while (uVar16 != 0xffff) {
           puVar11 = puVar11 + 1;
-          if (uVar2 == local_fe) goto LAB_005933d0;
+          if (uVar2 == local_fe)
+            goto LAB_005933d0;
           uVar2 = uVar2 + 1;
           uVar16 = *puVar11;
         }
         *puVar11 = local_100;
       }
-    }
-    else {
+    } else {
       uVar12 = (ulong)local_fc;
       local_f8 = 0;
       pvVar5 = malloc(uVar12 + 0x60);
       local_f0 = (size_t *)0x0;
       if (pvVar5 != (void *)0x0) {
-        local_f0 = (size_t *)
-                   ((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
+        local_f0 =
+            (size_t *)((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
         local_f0[-2] = 0x50;
         local_f0[-1] = (size_t)pvVar5;
       }
@@ -667,10 +669,10 @@ LAB_005932a5:
       local_e0 = -0x5eef3582;
       local_f4 = 5;
     }
-LAB_005933d0:
+  LAB_005933d0:
     uVar8 = 0x3c;
     psVar13 = local_f0 + (ulong)local_100 * 2;
-    *psVar13 = CONCAT44(uStack_74,CONCAT22(uStack_76,CONCAT11(uStack_77,local_78)));
+    *psVar13 = CONCAT44(uStack_74, CONCAT22(uStack_76, CONCAT11(uStack_77, local_78)));
     *(uint32_t *)(psVar13 + 1) = local_70;
     *(uint8_t *)((long)psVar13 + 0xc) = local_6c;
     uVar10 = 5;
@@ -692,8 +694,8 @@ LAB_005933d0:
         uVar12 = (ulong)local_fe * 0x10;
         pvVar5 = malloc(uVar9 + 0x10 + uVar12);
         if (pvVar5 != (void *)0x0) {
-          psVar6 = (size_t *)
-                   ((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
+          psVar6 =
+              (size_t *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
           psVar6[-2] = uVar12;
           psVar6[-1] = (size_t)pvVar5;
           if (psVar13 != (size_t *)0x0) {
@@ -701,7 +703,7 @@ LAB_005933d0:
             if (uVar12 <= psVar13[-2]) {
               uVar9 = uVar12;
             }
-            memcpy(psVar6,psVar13,uVar9);
+            memcpy(psVar6, psVar13, uVar9);
             free((void *)psVar13[-1]);
           }
         }
@@ -714,21 +716,22 @@ LAB_005933d0:
           uVar12 = (ulong)local_fe * 2;
           pvVar5 = malloc(uVar9 + 0x10 + uVar12);
           if (pvVar5 != (void *)0x0) {
-            puVar14 = (ushort *)
-                      ((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
+            puVar14 =
+                (ushort *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
             *(void **)(puVar14 + -4) = pvVar5;
             *(ulong *)(puVar14 + -8) = uVar12;
             uVar9 = *(ulong *)(puVar11 + -8);
             if (uVar12 <= *(ulong *)(puVar11 + -8)) {
               uVar9 = uVar12;
             }
-            memcpy(puVar14,puVar11,uVar9);
+            memcpy(puVar14, puVar11, uVar9);
             free(*(void **)(puVar11 + -4));
             uVar16 = local_fe;
           }
           uVar15 = (uint)local_100;
           local_e8 = puVar14;
-          if (uVar16 <= local_100) goto LAB_00592ec7;
+          if (uVar16 <= local_100)
+            goto LAB_00592ec7;
           do {
             uVar3 = uVar15 & 0xffff;
             uVar15 = uVar15 + 1;
@@ -737,29 +740,29 @@ LAB_005933d0:
         }
         uVar15 = (uint)local_100;
       }
-LAB_00592ec7:
+    LAB_00592ec7:
       if ((local_f8 == 1) && (local_fe != 0)) {
         uVar2 = 1;
         uVar16 = *local_e8;
         puVar11 = local_e8;
         while (uVar16 != 0xffff) {
           puVar11 = puVar11 + 1;
-          if (uVar2 == local_fe) goto LAB_00592cc1;
+          if (uVar2 == local_fe)
+            goto LAB_00592cc1;
           uVar2 = uVar2 + 1;
           uVar16 = *puVar11;
         }
         *puVar11 = (ushort)uVar15;
         uVar15 = (uint)local_100;
       }
-    }
-    else {
+    } else {
       uVar12 = (ulong)local_fc;
       local_f8 = 0;
       pvVar5 = malloc(uVar12 + 0x60);
       local_f0 = (size_t *)0x0;
       if (pvVar5 != (void *)0x0) {
-        local_f0 = (size_t *)
-                   ((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
+        local_f0 =
+            (size_t *)((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
         local_f0[-2] = 0x50;
         local_f0[-1] = (size_t)pvVar5;
       }
@@ -802,9 +805,9 @@ LAB_00592ec7:
       local_e0 = -0x5eef3582;
       local_f4 = 5;
     }
-LAB_00592cc1:
+  LAB_00592cc1:
     psVar13 = local_f0 + (ulong)uVar15 * 2;
-    *psVar13 = CONCAT44(uStack_64,CONCAT22(uStack_66,CONCAT11(uStack_67,local_68)));
+    *psVar13 = CONCAT44(uStack_64, CONCAT22(uStack_66, CONCAT11(uStack_67, local_68)));
     *(uint32_t *)(psVar13 + 1) = local_60;
     *(uint8_t *)((long)psVar13 + 0xc) = local_5c;
     local_100 = local_100 + 1;
@@ -819,8 +822,8 @@ LAB_00592cc1:
       uVar12 = (ulong)local_fe * 0x10;
       pvVar5 = malloc(uVar9 + 0x10 + uVar12);
       if (pvVar5 != (void *)0x0) {
-        psVar6 = (size_t *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9)
-        ;
+        psVar6 =
+            (size_t *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
         psVar6[-2] = uVar12;
         psVar6[-1] = (size_t)pvVar5;
         if (psVar13 != (size_t *)0x0) {
@@ -828,7 +831,7 @@ LAB_00592cc1:
           if (uVar12 <= psVar13[-2]) {
             uVar9 = uVar12;
           }
-          memcpy(psVar6,psVar13,uVar9);
+          memcpy(psVar6, psVar13, uVar9);
           free((void *)psVar13[-1]);
         }
       }
@@ -842,15 +845,15 @@ LAB_00592cc1:
         uVar2 = local_100;
         puVar14 = (ushort *)0x0;
         if (pvVar5 != (void *)0x0) {
-          puVar14 = (ushort *)
-                    ((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
+          puVar14 =
+              (ushort *)((long)pvVar5 + 0x10U + (uVar9 - ((long)pvVar5 + 0x10U) % uVar9) % uVar9);
           *(void **)(puVar14 + -4) = pvVar5;
           *(ulong *)(puVar14 + -8) = uVar12;
           uVar9 = *(ulong *)(puVar11 + -8);
           if (uVar12 <= *(ulong *)(puVar11 + -8)) {
             uVar9 = uVar12;
           }
-          memcpy(puVar14,puVar11,uVar9);
+          memcpy(puVar14, puVar11, uVar9);
           free(*(void **)(puVar11 + -4));
           uVar2 = local_100;
           uVar16 = local_fe;
@@ -868,20 +871,20 @@ LAB_00592cc1:
       while (uVar16 != 0xffff) {
         puVar11 = puVar11 + 1;
         uVar2 = uVar2 + 1;
-        if (uVar2 == local_fe) goto LAB_00592dc1;
+        if (uVar2 == local_fe)
+          goto LAB_00592dc1;
         uVar16 = *puVar11;
       }
       *puVar11 = local_100;
     }
-  }
-  else {
+  } else {
     uVar12 = (ulong)local_fc;
     local_f8 = 0;
     pvVar5 = malloc(uVar12 + 0x60);
     local_f0 = (size_t *)0x0;
     if (pvVar5 != (void *)0x0) {
-      local_f0 = (size_t *)
-                 ((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
+      local_f0 =
+          (size_t *)((long)pvVar5 + 0x10U + (uVar12 - ((long)pvVar5 + 0x10U) % uVar12) % uVar12);
       local_f0[-2] = 0x50;
       local_f0[-1] = (size_t)pvVar5;
     }
@@ -925,17 +928,18 @@ LAB_00592cc1:
   }
 LAB_00592dc1:
   psVar13 = local_f0 + (ulong)local_100 * 2;
-  *psVar13 = CONCAT71(uStack_57,local_58);
+  *psVar13 = CONCAT71(uStack_57, local_58);
   *(uint32_t *)(psVar13 + 1) = local_50;
   *(uint8_t *)((long)psVar13 + 0xc) = local_4c;
   local_3c = 0;
   local_48 = local_f0;
   local_100 = local_100 + 1;
   local_40 = local_100 + *(short *)(*(long *)(*(long *)(self + 0x3c0) + 0x20) + 0x18);
-                    /* try { // try from 00592e31 to 00592e51 has its CatchHandler @ 005940aa */
+  /* try { // try from 00592e31 to 00592e51 has its CatchHandler @ 005940aa */
   this_00 = (BaseResource *)VertexDeclaration__Create((tagVertexDeclarationCreation *)&local_48);
-  VertexStream__SetVertexDeclaration(*(VertexStream **)(self + 0x3c0),(VertexDeclaration *)this_00);
-  BaseResource__Release(this_00,0);
+  VertexStream__SetVertexDeclaration(*(VertexStream **)(self + 0x3c0),
+                                     (VertexDeclaration *)this_00);
+  BaseResource__Release(this_00, 0);
   if (local_e0 == -0x5eef3582) {
     local_e0 = 0;
     free((void *)local_f0[-1]);
@@ -950,6 +954,6 @@ LAB_00592dc1:
   }
   CriticalSection__CriticalSection__005b71d0(local_128);
 LAB_00592a40:
-  VertexBuffer__Replicate(*(VertexBuffer **)(*(long *)(self + 0x3c0) + 0x20),arg1);
+  VertexBuffer__Replicate(*(VertexBuffer **)(*(long *)(self + 0x3c0) + 0x20), arg1);
   return;
 }

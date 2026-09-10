@@ -54,8 +54,8 @@ void __thiscall SMBStatisticsMenu__Initialize(SMBStatisticsMenu *self)
 
 {
   uint64_t uVar1;
-  
-  (**(code **)(*(long *)self + 0x10))(self,0,"statsidle");
+
+  (**(code **)(*(long *)self + 0x10))(self, 0, "statsidle");
   uVar1 = GetLocalizedText(0x1f);
   *(uint64_t *)(self + 0x50) = uVar1;
   return;
@@ -95,46 +95,50 @@ void __thiscall SMBStatisticsMenu__Activate(SMBStatisticsMenu *self)
   uint uVar1;
   wchar_t *pwVar2;
   uint64_t uVar3;
-  
+
   SMBPopupMenu__Activate((SMBPopupMenu *)self);
-  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib,"deathstat");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib, "deathstat");
   if (pwVar2 != (wchar_t *)0x0) {
     uVar3 = GetLocalizedText(0x2e);
-    FlashTextField__SetText(pwVar2,&DAT_005c6644 /* R:5.184804318001823e-44f */,uVar3);
+    FlashTextField__SetText(pwVar2, &DAT_005c6644 /* R:5.184804318001823e-44f */, uVar3);
   }
-  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib,"totalstat");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib, "totalstat");
   if (pwVar2 != (wchar_t *)0x0) {
     uVar3 = GetLocalizedText(0x2f);
-    FlashTextField__SetText(pwVar2,&DAT_005c6644 /* R:5.184804318001823e-44f */,uVar3);
+    FlashTextField__SetText(pwVar2, &DAT_005c6644 /* R:5.184804318001823e-44f */, uVar3);
   }
-  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib,"lightstat");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib, "lightstat");
   if (pwVar2 != (wchar_t *)0x0) {
     uVar3 = GetLocalizedText(0x2a);
-    FlashTextField__SetText(pwVar2,&DAT_005c6644 /* R:5.184804318001823e-44f */,uVar3);
+    FlashTextField__SetText(pwVar2, &DAT_005c6644 /* R:5.184804318001823e-44f */, uVar3);
   }
-  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib,"darkstat");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib, "darkstat");
   if (pwVar2 != (wchar_t *)0x0) {
     uVar3 = GetLocalizedText(0x2b);
-    FlashTextField__SetText(pwVar2,&DAT_005c6644 /* R:5.184804318001823e-44f */,uVar3);
+    FlashTextField__SetText(pwVar2, &DAT_005c6644 /* R:5.184804318001823e-44f */, uVar3);
   }
-  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib,"deathnum");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib, "deathnum");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,&DAT_005c6660 /* R:5.184804318001823e-44f */,(ulong)*(uint *)(SMBChapterData + 0x1cd0));
+    FlashTextField__SetText(pwVar2, &DAT_005c6660 /* R:5.184804318001823e-44f */,
+                            (ulong) * (uint *)(SMBChapterData + 0x1cd0));
   }
-  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib,"totalnum");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib, "totalnum");
   if (pwVar2 != (wchar_t *)0x0) {
-    uVar1 = GSMBChapterData__GetTotalPercentComplete(SMBChapterData,1);
-    FlashTextField__SetText(pwVar2,&DAT_005c749c /* R:5.184804318001823e-44f */,(ulong)uVar1,&DAT_005c6630 /* R:5.184804318001823e-44f */);
+    uVar1 = GSMBChapterData__GetTotalPercentComplete(SMBChapterData, 1);
+    FlashTextField__SetText(pwVar2, &DAT_005c749c /* R:5.184804318001823e-44f */, (ulong)uVar1,
+                            &DAT_005c6630 /* R:5.184804318001823e-44f */);
   }
-  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib,"lightnum");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib, "lightnum");
   if (pwVar2 != (wchar_t *)0x0) {
     uVar1 = GSMBChapterData__GetLightWorldPercentComplete(SMBChapterData);
-    FlashTextField__SetText(pwVar2,&DAT_005c749c /* R:5.184804318001823e-44f */,(ulong)uVar1,&DAT_005c6630 /* R:5.184804318001823e-44f */);
+    FlashTextField__SetText(pwVar2, &DAT_005c749c /* R:5.184804318001823e-44f */, (ulong)uVar1,
+                            &DAT_005c6630 /* R:5.184804318001823e-44f */);
   }
-  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib,"darknum");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(SMBPopupMenu__pSMBPopupLib, "darknum");
   if (pwVar2 != (wchar_t *)0x0) {
     uVar1 = GSMBChapterData__GetDarkWorldPercentComplete(SMBChapterData);
-    FlashTextField__SetText(pwVar2,&DAT_005c749c /* R:5.184804318001823e-44f */,(ulong)uVar1,&DAT_005c6630 /* R:5.184804318001823e-44f */);
+    FlashTextField__SetText(pwVar2, &DAT_005c749c /* R:5.184804318001823e-44f */, (ulong)uVar1,
+                            &DAT_005c6630 /* R:5.184804318001823e-44f */);
     return;
   }
   return;
@@ -188,16 +192,16 @@ void __thiscall SMBStatisticsMenu__DeActivate(SMBStatisticsMenu *self)
 
 {
   Joystick *pJVar1;
-  
+
   *(uint32_t *)(self + 0x30) = 2;
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,1,0,0);
+  Joystick__AddButtonCallback(pJVar1, 1, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__RestoreCallbacks(pJVar1,(InputCallback **)(self + 0x40),(InputCallback **)(self + 0x38))
-  ;
+  Joystick__RestoreCallbacks(pJVar1, (InputCallback **)(self + 0x40),
+                             (InputCallback **)(self + 0x38));
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x23,0,0);
-    TKeyboard__RestoreCallbacks(Keyboard,(InputCallback **)(self + 0x48));
+    TKeyboard__AddKeyCallback(Keyboard, 0x23, 0, 0);
+    TKeyboard__RestoreCallbacks(Keyboard, (InputCallback **)(self + 0x48));
     return;
   }
   return;
@@ -216,7 +220,7 @@ void __thiscall SMBStatisticsMenu__SMBStatisticsMenu__005049f0(SMBStatisticsMenu
 
 {
   uint64_t uVar1;
-  
+
   *(ushort *)(self + 0x34) = *(ushort *)(self + 0x34) & 0xfc00;
   *(uint8_t ***)self = &PTR__SMBPopupMenu_005c76d0;
   *(uint64_t *)(self + 8) = 0;

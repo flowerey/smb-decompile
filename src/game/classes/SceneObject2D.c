@@ -25,7 +25,7 @@ void __thiscall SceneObject2D__SceneObject2D__0059b220(SceneObject2D *self)
   if (*(long *)(self + 0x48) != 0) {
     free(*(void **)(*(long *)(self + 0x48) + -8));
   }
-                    /* try { // try from 0059ae21 to 0059ae25 has its CatchHandler @ 0059ae2f */
+  /* try { // try from 0059ae21 to 0059ae25 has its CatchHandler @ 0059ae2f */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x58));
   *(uint8_t ***)self = &PTR__SceneObject_005bf710;
   return;
@@ -40,7 +40,7 @@ void __thiscall SceneObject2D__SceneObject2D__0059b220(SceneObject2D *self)
  */
 /* SceneObject2D__DeSerialize(void const*) */
 
-void __thiscall SceneObject2D__DeSerialize(SceneObject2D *self,void *arg1)
+void __thiscall SceneObject2D__DeSerialize(SceneObject2D *self, void *arg1)
 
 {
   if (arg1 != (void *)0x0) {
@@ -75,7 +75,7 @@ void __thiscall SceneObject2D__DeSerialize(SceneObject2D *self,void *arg1)
  */
 /* SceneObject2D__Serialize(void*) */
 
-uint64_t __thiscall SceneObject2D__Serialize(SceneObject2D *self,void *arg1)
+uint64_t __thiscall SceneObject2D__Serialize(SceneObject2D *self, void *arg1)
 
 {
   if ((arg1 != (void *)0x0) && (arg1 != self + 0x80)) {
@@ -114,7 +114,7 @@ void __thiscall SceneObject2D__SceneObject2D__0059b220(SceneObject2D *self)
   if (*(long *)(self + 0x48) != 0) {
     free(*(void **)(*(long *)(self + 0x48) + -8));
   }
-                    /* try { // try from 0059b241 to 0059b245 has its CatchHandler @ 0059b256 */
+  /* try { // try from 0059b241 to 0059b245 has its CatchHandler @ 0059b256 */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x58));
   *(uint8_t ***)self = &PTR__SceneObject_005bf710;
   operator_delete(self);

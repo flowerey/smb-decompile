@@ -23,15 +23,16 @@ void __thiscall SMBSettingsMenu__Render(SMBSettingsMenu *self)
 {
   uint *puVar1;
   uint8_t *puVar2;
-  
+
   puVar1 = (uint *)(pScreenResolutions._56_8_ + (ulong)iSelectedResolutionIndex * 8);
-  FlashTextField__SetText(*(char **)(self + 0xb8),&DAT_005c8bf4 /* R:"%i x %i" */,(ulong)*puVar1,(ulong)puVar1[1]);
+  FlashTextField__SetText(*(char **)(self + 0xb8), &DAT_005c8bf4 /* R:"%i x %i" */, (ulong)*puVar1,
+                          (ulong)puVar1[1]);
   if (*(wchar_t **)(self + 200) != (wchar_t *)0x0) {
     puVar2 = &DAT_005c8bd8 /* R:1.1070257868166055e-43f */;
     if (bSelectedResFullScreen != 1) {
       puVar2 = &DAT_005c8be4 /* R:1.1070257868166055e-43f */;
     }
-    FlashTextField__SetText(*(wchar_t **)(self + 200),puVar2);
+    FlashTextField__SetText(*(wchar_t **)(self + 200), puVar2);
   }
   SMBSelectionMenu__Render((SMBSelectionMenu *)self);
   return;
@@ -50,8 +51,10 @@ void __thiscall SMBSettingsMenu__Update(SMBSettingsMenu *self)
 
 {
   SMBSelectionMenu__Update();
-  FlashTextField__SetText(*(wchar_t **)(self + 0x98),&DAT_005c6660 /* R:5.184804318001823e-44f */,(ulong)GLOBALSFXVOLUME);
-  FlashTextField__SetText(*(wchar_t **)(self + 0x90),&DAT_005c6660 /* R:5.184804318001823e-44f */,(ulong)GLOBALMUSICVOLUME);
+  FlashTextField__SetText(*(wchar_t **)(self + 0x98), &DAT_005c6660 /* R:5.184804318001823e-44f */,
+                          (ulong)GLOBALSFXVOLUME);
+  FlashTextField__SetText(*(wchar_t **)(self + 0x90), &DAT_005c6660 /* R:5.184804318001823e-44f */,
+                          (ulong)GLOBALMUSICVOLUME);
   return;
 }
 
@@ -103,21 +106,21 @@ void __thiscall SMBSettingsMenu__DeActivate(SMBSettingsMenu *self)
 {
   Joystick *pJVar1;
   long *plVar2;
-  uint32_t local_18 [2];
+  uint32_t local_18[2];
   uint32_t *local_10;
-  
+
   if (*(int *)(self + 0xd0) != 1) {
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddButtonCallback(pJVar1,0,0,0);
+    Joystick__AddButtonCallback(pJVar1, 0, 0, 0);
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddPOVCallback(pJVar1,3,0,0);
+    Joystick__AddPOVCallback(pJVar1, 3, 0, 0);
     pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-    Joystick__AddPOVCallback(pJVar1,1,0,0);
+    Joystick__AddPOVCallback(pJVar1, 1, 0, 0);
     if (Keyboard != (TKeyboard *)0x0) {
-      TKeyboard__AddKeyCallback(Keyboard,0x41,0,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x6d,0,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x76,0,0);
-      TKeyboard__AddKeyCallback(Keyboard,0x6c,0,0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x41, 0, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x6d, 0, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x76, 0, 0);
+      TKeyboard__AddKeyCallback(Keyboard, 0x6c, 0, 0);
     }
     SMBSelectionMenu__DeActivate((SMBSelectionMenu *)self);
     local_18[0] = 2;
@@ -127,7 +130,7 @@ void __thiscall SMBSettingsMenu__DeActivate(SMBSettingsMenu *self)
     local_10[3] = GLOBALSFXVOLUME;
     local_10[2] = 1;
     plVar2 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-    (**(code **)(*plVar2 + 0x98))(plVar2,local_18);
+    (**(code **)(*plVar2 + 0x98))(plVar2, local_18);
     if (local_10 != (uint32_t *)0x0) {
       operator_delete__(local_10);
     }
@@ -191,32 +194,32 @@ void __thiscall SMBSettingsMenu__Initialize(SMBSettingsMenu *self)
   long lVar22;
   uint8_t *puVar23;
   ulong uVar24;
-  uint8_t local_78 [4];
+  uint8_t local_78[4];
   uint local_74;
   uint local_70;
-  uint8_t local_58 [4];
+  uint8_t local_58[4];
   uint local_54;
   uint local_50;
-  
-  (**(code **)(*(long *)self + 0x10))(self,0,"settingsidle");
-  uVar9 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"music");
+
+  (**(code **)(*(long *)self + 0x10))(self, 0, "settingsidle");
+  uVar9 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "music");
   *(uint64_t *)(self + 0x80) = uVar9;
-  uVar9 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"musicnumber");
+  uVar9 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "musicnumber");
   *(uint64_t *)(self + 0x90) = uVar9;
-  uVar9 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"sound");
+  uVar9 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "sound");
   *(uint64_t *)(self + 0x88) = uVar9;
-  uVar9 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"soundnumber");
+  uVar9 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "soundnumber");
   *(uint64_t *)(self + 0x98) = uVar9;
   uVar9 = GetLocalizedText(0x4c);
-  FlashTextField__SetText(*(wchar_t **)(self + 0x80),uVar9);
+  FlashTextField__SetText(*(wchar_t **)(self + 0x80), uVar9);
   uVar9 = GetLocalizedText(0x4d);
-  FlashTextField__SetText(*(wchar_t **)(self + 0x88),uVar9);
-  SDL_GetDesktopDisplayMode(0,local_78);
+  FlashTextField__SetText(*(wchar_t **)(self + 0x88), uVar9);
+  SDL_GetDesktopDisplayMode(0, local_78);
   iVar7 = SDL_GetNumDisplayModes(0);
   if (0 < iVar7) {
     iVar21 = 0;
-LAB_00510a84:
-    iVar8 = SDL_GetDisplayMode(0,iVar21,local_58);
+  LAB_00510a84:
+    iVar8 = SDL_GetDisplayMode(0, iVar21, local_58);
     uVar3 = local_50;
     uVar2 = local_54;
     uVar9 = pScreenResolutions._56_8_;
@@ -225,10 +228,11 @@ LAB_00510a84:
         lVar22 = 0;
         do {
           if ((local_50 == *(uint *)(pScreenResolutions._56_8_ + 4 + lVar22 * 8)) &&
-             (local_54 == *(uint *)(pScreenResolutions._56_8_ + lVar22 * 8))) {
+              (local_54 == *(uint *)(pScreenResolutions._56_8_ + lVar22 * 8))) {
             if ((pScreenResolutions._48_4_ != 1) ||
-               (((ushort)pScreenResolutions._42_2_ == 0 ||
-                (*(short *)pScreenResolutions._64_8_ == (short)lVar22)))) goto LAB_00510a78;
+                (((ushort)pScreenResolutions._42_2_ == 0 ||
+                  (*(short *)pScreenResolutions._64_8_ == (short)lVar22))))
+              goto LAB_00510a78;
             lVar10 = 0;
             goto LAB_00510b2e;
           }
@@ -244,7 +248,7 @@ LAB_00510a84:
           pvVar14 = malloc(uVar16 + 0x10 + uVar24);
           if (pvVar14 != (void *)0x0) {
             pvVar13 = (void *)((long)pvVar14 + 0x10U +
-                              (uVar16 - ((long)pvVar14 + 0x10U) % uVar16) % uVar16);
+                               (uVar16 - ((long)pvVar14 + 0x10U) % uVar16) % uVar16);
             *(ulong *)((long)pvVar13 + -0x10) = uVar24;
             *(void **)((long)pvVar13 + -8) = pvVar14;
             if (uVar9 != 0) {
@@ -252,7 +256,7 @@ LAB_00510a84:
               if (uVar24 <= *(ulong *)(uVar9 + -0x10)) {
                 uVar16 = uVar24;
               }
-              memcpy(pvVar13,(void *)uVar9,uVar16);
+              memcpy(pvVar13, (void *)uVar9, uVar16);
               free(*(void **)(uVar9 + -8));
             }
           }
@@ -267,14 +271,14 @@ LAB_00510a84:
             uVar17 = pScreenResolutions._40_2_;
             if (pvVar14 != (void *)0x0) {
               pvVar13 = (void *)((long)pvVar14 + 0x10U +
-                                (uVar16 - ((long)pvVar14 + 0x10U) % uVar16) % uVar16);
+                                 (uVar16 - ((long)pvVar14 + 0x10U) % uVar16) % uVar16);
               *(ulong *)((long)pvVar13 + -0x10) = uVar24;
               *(void **)((long)pvVar13 + -8) = pvVar14;
               uVar16 = *(ulong *)(uVar9 + -0x10);
               if (uVar24 <= *(ulong *)(uVar9 + -0x10)) {
                 uVar16 = uVar24;
               }
-              memcpy(pvVar13,(void *)uVar9,uVar16);
+              memcpy(pvVar13, (void *)uVar9, uVar16);
               free(*(void **)(uVar9 + -8));
               uVar17 = pScreenResolutions._40_2_;
               uVar15 = pScreenResolutions._42_2_;
@@ -291,21 +295,21 @@ LAB_00510a84:
           psVar20 = (short *)pScreenResolutions._64_8_;
           while (sVar5 != -1) {
             psVar20 = psVar20 + 1;
-            if (sVar6 == pScreenResolutions._42_2_) goto LAB_00510ee8;
+            if (sVar6 == pScreenResolutions._42_2_)
+              goto LAB_00510ee8;
             sVar6 = sVar6 + 1;
             sVar5 = *psVar20;
           }
           *psVar20 = pScreenResolutions._40_2_;
         }
-      }
-      else {
+      } else {
         uVar24 = (ulong)pScreenResolutions[0x2c];
         pScreenResolutions._48_4_ = 0;
         pvVar13 = malloc(uVar24 + 0x38);
         puVar18 = (uint64_t *)0x0;
         if (pvVar13 != (void *)0x0) {
-          puVar18 = (uint64_t *)
-                    ((uVar24 - ((long)pvVar13 + 0x10U) % uVar24) % uVar24 + (long)pvVar13 + 0x10U);
+          puVar18 = (uint64_t *)((uVar24 - ((long)pvVar13 + 0x10U) % uVar24) % uVar24 +
+                                 (long)pvVar13 + 0x10U);
           puVar18[-2] = 0x28;
           puVar18[-1] = pvVar13;
         }
@@ -320,7 +324,7 @@ LAB_00510a84:
         pScreenResolutions._72_4_ = 0xa110ca7e;
         pScreenResolutions._52_2_ = 5;
       }
-LAB_00510ee8:
+    LAB_00510ee8:
       puVar1 = (uint *)(pScreenResolutions._56_8_ + (ulong)(ushort)pScreenResolutions._40_2_ * 8);
       *puVar1 = uVar2;
       puVar1[1] = uVar3;
@@ -340,10 +344,11 @@ LAB_00510b5e:
       lVar10 = 0;
       do {
         if ((uVar3 == *(uint *)(pScreenResolutions._56_8_ + 4 + lVar10 * 8)) &&
-           (uVar2 == *(uint *)(pScreenResolutions._56_8_ + lVar10 * 8))) {
+            (uVar2 == *(uint *)(pScreenResolutions._56_8_ + lVar10 * 8))) {
           if ((pScreenResolutions._48_4_ != 1) ||
-             (((ushort)pScreenResolutions._42_2_ == 0 ||
-              (*(short *)pScreenResolutions._64_8_ == (short)lVar10)))) goto LAB_00510b50;
+              (((ushort)pScreenResolutions._42_2_ == 0 ||
+                (*(short *)pScreenResolutions._64_8_ == (short)lVar10))))
+            goto LAB_00510b50;
           lVar11 = 0;
           goto LAB_00510bee;
         }
@@ -359,7 +364,7 @@ LAB_00510b5e:
         pvVar14 = malloc(uVar16 + 0x10 + uVar24);
         if (pvVar14 != (void *)0x0) {
           pvVar13 = (void *)((long)pvVar14 + 0x10U +
-                            (uVar16 - ((long)pvVar14 + 0x10U) % uVar16) % uVar16);
+                             (uVar16 - ((long)pvVar14 + 0x10U) % uVar16) % uVar16);
           *(ulong *)((long)pvVar13 + -0x10) = uVar24;
           *(void **)((long)pvVar13 + -8) = pvVar14;
           if (uVar9 != 0) {
@@ -367,7 +372,7 @@ LAB_00510b5e:
             if (uVar24 <= *(ulong *)(uVar9 + -0x10)) {
               uVar16 = uVar24;
             }
-            memcpy(pvVar13,(void *)uVar9,uVar16);
+            memcpy(pvVar13, (void *)uVar9, uVar16);
             free(*(void **)(uVar9 + -8));
           }
         }
@@ -383,20 +388,21 @@ LAB_00510b5e:
           uVar4 = pScreenResolutions._40_2_;
           if (pvVar14 != (void *)0x0) {
             pvVar13 = (void *)((long)pvVar14 + 0x10U +
-                              (uVar16 - ((long)pvVar14 + 0x10U) % uVar16) % uVar16);
+                               (uVar16 - ((long)pvVar14 + 0x10U) % uVar16) % uVar16);
             *(ulong *)((long)pvVar13 + -0x10) = uVar24;
             *(void **)((long)pvVar13 + -8) = pvVar14;
             uVar16 = *(ulong *)(uVar9 + -0x10);
             if (uVar24 <= *(ulong *)(uVar9 + -0x10)) {
               uVar16 = uVar24;
             }
-            memcpy(pvVar13,(void *)uVar9,uVar16);
+            memcpy(pvVar13, (void *)uVar9, uVar16);
             free(*(void **)(uVar9 + -8));
             uVar4 = pScreenResolutions._40_2_;
             uVar17 = pScreenResolutions._42_2_;
           }
           for (; pScreenResolutions._64_8_ = pvVar13, uVar15 = pScreenResolutions._40_2_,
-              uVar4 < uVar17; uVar4 = uVar4 + 1) {
+                 uVar4 < uVar17;
+               uVar4 = uVar4 + 1) {
             *(uint16_t *)(pScreenResolutions._64_8_ + (ulong)uVar4 * 2) = 0xffff;
             pvVar13 = (void *)pScreenResolutions._64_8_;
           }
@@ -408,22 +414,22 @@ LAB_00510b5e:
         puVar19 = (ushort *)pScreenResolutions._64_8_;
         while (uVar17 != 0xffff) {
           puVar19 = puVar19 + 1;
-          if (sVar5 == pScreenResolutions._42_2_) goto LAB_00510e08;
+          if (sVar5 == pScreenResolutions._42_2_)
+            goto LAB_00510e08;
           sVar5 = sVar5 + 1;
           uVar17 = *puVar19;
         }
         *puVar19 = uVar15;
         uVar15 = pScreenResolutions._40_2_;
       }
-    }
-    else {
+    } else {
       uVar24 = (ulong)pScreenResolutions[0x2c];
       pScreenResolutions._48_4_ = 0;
       pvVar13 = malloc(uVar24 + 0x38);
       puVar18 = (uint64_t *)0x0;
       if (pvVar13 != (void *)0x0) {
-        puVar18 = (uint64_t *)
-                  ((uVar24 - ((long)pvVar13 + 0x10U) % uVar24) % uVar24 + (long)pvVar13 + 0x10U);
+        puVar18 = (uint64_t *)((uVar24 - ((long)pvVar13 + 0x10U) % uVar24) % uVar24 +
+                               (long)pvVar13 + 0x10U);
         puVar18[-2] = 0x28;
         puVar18[-1] = pvVar13;
       }
@@ -439,7 +445,7 @@ LAB_00510b5e:
       pScreenResolutions._52_2_ = 5;
       uVar15 = 0;
     }
-LAB_00510e08:
+  LAB_00510e08:
     puVar1 = (uint *)(pScreenResolutions._56_8_ + (ulong)uVar15 * 8);
     *puVar1 = uVar2;
     puVar1[1] = uVar3;
@@ -448,20 +454,24 @@ LAB_00510e08:
   }
   goto LAB_00510b50;
   while (lVar10 = lVar10 + 2, *(short *)(pScreenResolutions._64_8_ + lVar10) != (short)lVar22) {
-LAB_00510b2e:
-    if (lVar10 == (ulong)((ushort)pScreenResolutions._42_2_ - 1) * 2) break;
+  LAB_00510b2e:
+    if (lVar10 == (ulong)((ushort)pScreenResolutions._42_2_ - 1) * 2)
+      break;
   }
 LAB_00510a78:
   iVar21 = iVar21 + 1;
-  if (iVar21 == iVar7) goto LAB_00510b40;
+  if (iVar21 == iVar7)
+    goto LAB_00510b40;
   goto LAB_00510a84;
   while (lVar11 = lVar11 + 2, *(short *)(pScreenResolutions._64_8_ + lVar11) != (short)lVar10) {
-LAB_00510bee:
-    if (lVar11 == (ulong)((ushort)pScreenResolutions._42_2_ - 1) * 2) break;
+  LAB_00510bee:
+    if (lVar11 == (ulong)((ushort)pScreenResolutions._42_2_ - 1) * 2)
+      break;
   }
 LAB_00510b50:
   lVar22 = lVar22 + 8;
-  if (lVar22 == 0x40) goto LAB_00510c00;
+  if (lVar22 == 0x40)
+    goto LAB_00510c00;
   goto LAB_00510b5e;
 LAB_00510c00:
   _iSelectedResolutionIndex = 0;
@@ -469,31 +479,30 @@ LAB_00510c00:
     lVar22 = 0;
     do {
       puVar1 = (uint *)(pScreenResolutions._56_8_ + lVar22 * 8);
-      if ((puVar1[1] == (uint)*(ushort *)(Window + 10)) &&
-         (*puVar1 == (uint)*(ushort *)(Window + 8))) {
+      if ((puVar1[1] == (uint) * (ushort *)(Window + 10)) &&
+          (*puVar1 == (uint) * (ushort *)(Window + 8))) {
         _iSelectedResolutionIndex = (uint32_t)lVar22;
         break;
       }
       lVar22 = lVar22 + 1;
     } while ((ushort)lVar22 < uVar15);
   }
-  lVar22 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"resolution");
+  lVar22 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "resolution");
   *(long *)(self + 0xb0) = lVar22;
   if (lVar22 != 0) {
     uVar9 = GetLocalizedText(0xf6);
-    FlashTextField__SetText(*(wchar_t **)(self + 0xb0),uVar9);
+    FlashTextField__SetText(*(wchar_t **)(self + 0xb0), uVar9);
   }
-  uVar9 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"resnumber");
+  uVar9 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "resnumber");
   *(uint64_t *)(self + 0xb8) = uVar9;
-  lVar22 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"fullscreen");
+  lVar22 = FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8), "fullscreen");
   *(long *)(self + 0xc0) = lVar22;
   if (lVar22 != 0) {
     uVar9 = GetLocalizedText(0xf7);
-    FlashTextField__SetText(*(wchar_t **)(self + 0xc0),uVar9);
+    FlashTextField__SetText(*(wchar_t **)(self + 0xc0), uVar9);
   }
-  pwVar12 = (wchar_t *)
-            FlashAnimationLibrary__GetTextField
-                      (*(FlashAnimationLibrary **)(self + 8),"fullscreenon");
+  pwVar12 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                           "fullscreenon");
   lVar22 = Window;
   *(wchar_t **)(self + 200) = pwVar12;
   bSelectedResFullScreen = *(int *)(lVar22 + 0xc);
@@ -502,10 +511,10 @@ LAB_00510c00:
     if (bSelectedResFullScreen != 1) {
       puVar23 = &DAT_005c8be4 /* R:1.1070257868166055e-43f */;
     }
-    FlashTextField__SetText(pwVar12,puVar23);
+    FlashTextField__SetText(pwVar12, puVar23);
   }
   *(uint32_t *)(self + 0x70) = 4;
-  SMBSelectionMenu__InitializeMenuRows((SMBSelectionMenu *)self,4);
+  SMBSelectionMenu__InitializeMenuRows((SMBSelectionMenu *)self, 4);
   uVar9 = GetLocalizedText(0x26);
   *(uint64_t *)(self + 0x50) = uVar9;
   return;
@@ -543,18 +552,18 @@ void __thiscall SMBSettingsMenu__SetMusicVolumeSelected(SMBSettingsMenu *self)
 
 {
   Joystick *pJVar1;
-  
+
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,3,SMBSettingsDecrementMusicVolume,self);
+  Joystick__AddPOVCallback(pJVar1, 3, SMBSettingsDecrementMusicVolume, self);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,1,SMBSettingsIncrementMusicVolume,self);
+  Joystick__AddPOVCallback(pJVar1, 1, SMBSettingsIncrementMusicVolume, self);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,0,0,0);
+  Joystick__AddButtonCallback(pJVar1, 0, 0, 0);
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x41,SMBSettingsDecrementMusicVolume,self);
-    TKeyboard__AddKeyCallback(Keyboard,0x6d,SMBSettingsIncrementMusicVolume,self);
-    TKeyboard__AddKeyCallback(Keyboard,0x76,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x6c,0,0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x41, SMBSettingsDecrementMusicVolume, self);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6d, SMBSettingsIncrementMusicVolume, self);
+    TKeyboard__AddKeyCallback(Keyboard, 0x76, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6c, 0, 0);
     return;
   }
   return;
@@ -573,18 +582,18 @@ void __thiscall SMBSettingsMenu__SetSFXVolumeSelected(SMBSettingsMenu *self)
 
 {
   Joystick *pJVar1;
-  
+
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,3,SMBSettingsDecrementSFXVolume,self);
+  Joystick__AddPOVCallback(pJVar1, 3, SMBSettingsDecrementSFXVolume, self);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,1,SMBSettingsIncrementSFXVolume,self);
+  Joystick__AddPOVCallback(pJVar1, 1, SMBSettingsIncrementSFXVolume, self);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,0,0,0);
+  Joystick__AddButtonCallback(pJVar1, 0, 0, 0);
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x41,SMBSettingsDecrementSFXVolume,self);
-    TKeyboard__AddKeyCallback(Keyboard,0x6d,SMBSettingsIncrementSFXVolume,self);
-    TKeyboard__AddKeyCallback(Keyboard,0x76,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x6c,0,0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x41, SMBSettingsDecrementSFXVolume, self);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6d, SMBSettingsIncrementSFXVolume, self);
+    TKeyboard__AddKeyCallback(Keyboard, 0x76, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6c, 0, 0);
     return;
   }
   return;
@@ -603,13 +612,13 @@ void __thiscall SMBSettingsMenu__SetRestoreDefaultControls(SMBSettingsMenu *self
 
 {
   Joystick *pJVar1;
-  
+
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,0,SMBSettingsRestoreDefaults,self);
+  Joystick__AddButtonCallback(pJVar1, 0, SMBSettingsRestoreDefaults, self);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,3,0,0);
+  Joystick__AddPOVCallback(pJVar1, 3, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,1,0,0);
+  Joystick__AddPOVCallback(pJVar1, 1, 0, 0);
   return;
 }
 
@@ -626,13 +635,13 @@ void __thiscall SMBSettingsMenu__SetChangeStorageDeviceControls(SMBSettingsMenu 
 
 {
   Joystick *pJVar1;
-  
+
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,0,SMBSettingsChangeStorage,self);
+  Joystick__AddButtonCallback(pJVar1, 0, SMBSettingsChangeStorage, self);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,3,0,0);
+  Joystick__AddPOVCallback(pJVar1, 3, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,1,0,0);
+  Joystick__AddPOVCallback(pJVar1, 1, 0, 0);
   return;
 }
 
@@ -649,18 +658,18 @@ void SMBSettingsMenu__SetResolutionControls(void)
 
 {
   Joystick *pJVar1;
-  
+
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,0,SMBSettingsApplyWindowChanges,0);
+  Joystick__AddButtonCallback(pJVar1, 0, SMBSettingsApplyWindowChanges, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,3,SMBSettingsDecrementResolution,0);
+  Joystick__AddPOVCallback(pJVar1, 3, SMBSettingsDecrementResolution, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,1,SMBSettingsIncrementResolution,0);
+  Joystick__AddPOVCallback(pJVar1, 1, SMBSettingsIncrementResolution, 0);
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x41,SMBSettingsDecrementResolution,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x6d,SMBSettingsIncrementResolution,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x76,SMBSettingsApplyWindowChanges,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x6c,SMBSettingsApplyWindowChanges,0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x41, SMBSettingsDecrementResolution, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6d, SMBSettingsIncrementResolution, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x76, SMBSettingsApplyWindowChanges, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6c, SMBSettingsApplyWindowChanges, 0);
     return;
   }
   return;
@@ -679,18 +688,18 @@ void SMBSettingsMenu__SetFullScreenControls(void)
 
 {
   Joystick *pJVar1;
-  
+
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,0,SMBSettingsApplyWindowChanges,0);
+  Joystick__AddButtonCallback(pJVar1, 0, SMBSettingsApplyWindowChanges, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,3,SMBSettingsChangeFullScreen,0);
+  Joystick__AddPOVCallback(pJVar1, 3, SMBSettingsChangeFullScreen, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar1,1,SMBSettingsChangeFullScreen,0);
+  Joystick__AddPOVCallback(pJVar1, 1, SMBSettingsChangeFullScreen, 0);
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x41,SMBSettingsChangeFullScreen,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x6d,SMBSettingsChangeFullScreen,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x76,SMBSettingsApplyWindowChanges,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x6c,SMBSettingsApplyWindowChanges,0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x41, SMBSettingsChangeFullScreen, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6d, SMBSettingsChangeFullScreen, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x76, SMBSettingsApplyWindowChanges, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6c, SMBSettingsApplyWindowChanges, 0);
     return;
   }
   return;
@@ -710,18 +719,18 @@ void __thiscall SMBSettingsMenu__SetSelectionControls(SMBSettingsMenu *self)
 {
   int iVar1;
   Joystick *pJVar2;
-  
+
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar2,3,0,0);
+  Joystick__AddPOVCallback(pJVar2, 3, 0, 0);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddPOVCallback(pJVar2,1,0,0);
+  Joystick__AddPOVCallback(pJVar2, 1, 0, 0);
   pJVar2 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar2,0,0,0);
+  Joystick__AddButtonCallback(pJVar2, 0, 0, 0);
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x41,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x6d,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x76,0,0);
-    TKeyboard__AddKeyCallback(Keyboard,0x6c,0,0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x41, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6d, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x76, 0, 0);
+    TKeyboard__AddKeyCallback(Keyboard, 0x6c, 0, 0);
   }
   iVar1 = *(int *)(self + 0x68);
   if (iVar1 == 0) {
@@ -756,16 +765,16 @@ void __thiscall SMBSettingsMenu__DecrementSelection(SMBSettingsMenu *self)
 
 {
   int iVar1;
-  
+
   if (*(int *)(self + 0xd0) != 1) {
-    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,*(uint *)(self + 0x68));
+    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, *(uint *)(self + 0x68));
     iVar1 = *(int *)(self + 0x68);
     *(int *)(self + 0x68) = iVar1 + -1;
     if (iVar1 + -1 < 0) {
       *(int *)(self + 0x68) = *(int *)(self + 0x70) + -1;
     }
     SetSelectionControls(self);
-    SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self,*(uint *)(self + 0x68));
+    SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self, *(uint *)(self + 0x68));
     return;
   }
   return;
@@ -784,16 +793,16 @@ void __thiscall SMBSettingsMenu__IncrementSelection(SMBSettingsMenu *self)
 
 {
   int iVar1;
-  
+
   if (*(int *)(self + 0xd0) != 1) {
-    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,*(uint *)(self + 0x68));
+    SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, *(uint *)(self + 0x68));
     iVar1 = *(int *)(self + 0x68);
     *(int *)(self + 0x68) = iVar1 + 1;
     if (*(int *)(self + 0x70) <= iVar1 + 1) {
       *(uint32_t *)(self + 0x68) = 0;
     }
     SetSelectionControls(self);
-    SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self,*(uint *)(self + 0x68));
+    SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self, *(uint *)(self + 0x68));
     return;
   }
   return;
@@ -813,10 +822,10 @@ void __thiscall SMBSettingsMenu__Activate(SMBSettingsMenu *self)
 {
   SMBSelectionMenu__Activate((SMBSelectionMenu *)self);
   *(uint32_t *)(self + 0x68) = 0;
-  SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self,0);
-  SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,1);
-  SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,2);
-  SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self,3);
+  SMBSelectionMenu__SetRowAsSelected((SMBSelectionMenu *)self, 0);
+  SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, 1);
+  SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, 2);
+  SMBSelectionMenu__SetRowAsUnselected((SMBSelectionMenu *)self, 3);
   SetSelectionControls(self);
   *(uint32_t *)(self + 0xd0) = 0;
   return;
@@ -835,17 +844,16 @@ void __thiscall SMBSettingsMenu__ReselectDrive(SMBSettingsMenu *self)
 
 {
   long *plVar1;
-  
+
   if ((*(int *)(self + 0xd0) != 1) && (*(int *)(self + 0x30) == 3)) {
     plVar1 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
     (**(code **)(*plVar1 + 0x68))(plVar1);
     if (*(int *)(SuperMeatBoy + 0x2c) == 0xc) {
       plVar1 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-      (**(code **)(*plVar1 + 0x10))(plVar1,0,1,SMBReselectedDrive);
-    }
-    else {
+      (**(code **)(*plVar1 + 0x10))(plVar1, 0, 1, SMBReselectedDrive);
+    } else {
       plVar1 = (long *)TPlayer__GetProfile((TPlayer *)Players__Player);
-      (**(code **)(*plVar1 + 0x10))(plVar1,1,1,SMBReselectedDrive);
+      (**(code **)(*plVar1 + 0x10))(plVar1, 1, 1, SMBReselectedDrive);
     }
     *(uint32_t *)(self + 0xd0) = 1;
     return;

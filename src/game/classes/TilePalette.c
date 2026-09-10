@@ -40,7 +40,7 @@ void __thiscall TilePalette__StartPaletteRendering(TilePalette *self)
 {
   TGraphics__ResetTexCoordGen(Graphics);
   TGraphics__ResetPixelStages(Graphics);
-  TGraphics__AddPixelStage(Graphics,5,1,0,0,0,1,0xffffffff);
+  TGraphics__AddPixelStage(Graphics, 5, 1, 0, 0, 0, 1, 0xffffffff);
   *(uint32_t *)(self + 0x10) = 0xffffffff;
   return;
 }
@@ -79,7 +79,7 @@ void __thiscall TilePalette__TilePalette__005a1cd0(TilePalette *self)
   allocator *paVar1;
   int *piVar2;
   int iVar3;
-  
+
   *(uint8_t ***)self = &PTR_StartPaletteRendering_005dd690;
   paVar1 = (allocator *)(*(long *)(self + 8) + -0x18);
   if (paVar1 != (allocator *)&std__string_Rep_S_empty_rep_storage) {

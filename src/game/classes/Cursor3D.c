@@ -23,8 +23,8 @@ void __thiscall Cursor3D__Cursor3D__00581bf0(Cursor3D *self)
 {
   *(uint8_t ***)self = &PTR__Cursor3D_005dbed0;
   if (p3DCursorTexture != (BaseResource *)0x0) {
-                    /* try { // try from 00581bad to 00581bb1 has its CatchHandler @ 00581bca */
-    BaseResource__Release(p3DCursorTexture,0);
+    /* try { // try from 00581bad to 00581bb1 has its CatchHandler @ 00581bca */
+    BaseResource__Release(p3DCursorTexture, 0);
   }
   p3DCursorTexture = (BaseResource *)0x0;
   ReimplmentThisSprite__ReimplmentThisSprite__005979b0((ReimplmentThisSprite *)self);
@@ -45,8 +45,8 @@ void __thiscall Cursor3D__Cursor3D__00581bf0(Cursor3D *self)
 {
   *(uint8_t ***)self = &PTR__Cursor3D_005dbed0;
   if (p3DCursorTexture != (BaseResource *)0x0) {
-                    /* try { // try from 00581c0d to 00581c11 has its CatchHandler @ 00581c32 */
-    BaseResource__Release(p3DCursorTexture,0);
+    /* try { // try from 00581c0d to 00581c11 has its CatchHandler @ 00581c32 */
+    BaseResource__Release(p3DCursorTexture, 0);
   }
   p3DCursorTexture = (BaseResource *)0x0;
   ReimplmentThisSprite__ReimplmentThisSprite__005979b0((ReimplmentThisSprite *)self);
@@ -79,7 +79,7 @@ void __thiscall Cursor3D__Cursor3D__00581c50(Cursor3D *self)
   uint8_t local_20;
   uint32_t local_1c;
   uint32_t local_18;
-  
+
   ReimplmentThisSprite__ReimplmentThisSprite__005979d0((ReimplmentThisSprite *)self);
   *(uint8_t ***)self = &PTR__Cursor3D_005dbed0;
   if (p3DCursorTexture == 0) {
@@ -97,9 +97,9 @@ void __thiscall Cursor3D__Cursor3D__00581c50(Cursor3D *self)
   }
   this_00 = Graphics;
   *(uint64_t *)(self + 0x4c8) = *(uint64_t *)(Graphics + 0xaa0);
-                    /* try { // try from 00581c8a to 00581d17 has its CatchHandler @ 00581d24 */
-  TGraphics__SetActiveGPUBlock(this_00,(GPUState *)(self + 0x120));
-  TGraphics__SetActiveGPUBlock(Graphics,(GPUState *)0x0);
+  /* try { // try from 00581c8a to 00581d17 has its CatchHandler @ 00581d24 */
+  TGraphics__SetActiveGPUBlock(this_00, (GPUState *)(self + 0x120));
+  TGraphics__SetActiveGPUBlock(Graphics, (GPUState *)0x0);
   uVar1 = _UNK_005dbf08;
   *(uint64_t *)(self + 0xd0) = _DAT_005dbf00 /* R:0.02500000037252903f */;
   *(uint64_t *)(self + 0xd8) = uVar1;
@@ -120,7 +120,7 @@ void __thiscall Cursor3D__Render(Cursor3D *self)
 {
   float fVar1;
   TGraphics *this_00;
-  Matrix4x4 aMStack_78 [64];
+  Matrix4x4 aMStack_78[64];
   uint32_t uStack_38;
   uint32_t uStack_34;
   uint32_t uStack_30;
@@ -129,23 +129,23 @@ void __thiscall Cursor3D__Render(Cursor3D *self)
   float fStack_24;
   uint32_t uStack_20;
   uint32_t uStack_1c;
-  
+
   uStack_38 = 0;
   uStack_34 = 0;
   uStack_30 = 0;
   uStack_2c = 0;
-  Matrix4x4__TransformVector3((FPUVector *)&uStack_38,(FPUVector *)(self + 0xa0),aMStack_78,1);
+  Matrix4x4__TransformVector3((FPUVector *)&uStack_38, (FPUVector *)(self + 0xa0), aMStack_78, 1);
   fVar1 = *(float *)(self + 0xd4);
   fStack_24 = (float)TWindow__getAspectRatio(Window);
   fStack_24 = fStack_24 * fVar1;
   uStack_28 = *(uint32_t *)(self + 0xd0);
   uStack_1c = 0;
   uStack_20 = 0x3f800000;
-  Matrix4x4__Transformation3D
-            (aMStack_78,(FPUVector *)&uStack_28,(TQuaternion *)0x0,(FPUVector *)&uStack_38);
+  Matrix4x4__Transformation3D(aMStack_78, (FPUVector *)&uStack_28, (TQuaternion *)0x0,
+                              (FPUVector *)&uStack_38);
   this_00 = Graphics;
   *(uint64_t *)(self + 0x4c8) = *(uint64_t *)(Graphics + 0xaa0);
-  TGraphics__SetActiveGPUBlock(this_00,(GPUState *)(self + 0x120));
-  TGraphics__SetActiveGPUBlock(Graphics,(GPUState *)0x0);
+  TGraphics__SetActiveGPUBlock(this_00, (GPUState *)(self + 0x120));
+  TGraphics__SetActiveGPUBlock(Graphics, (GPUState *)0x0);
   return;
 }

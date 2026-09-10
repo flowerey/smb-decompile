@@ -37,8 +37,8 @@ void __thiscall SMBMoveOn__Initialize(SMBMoveOn *self)
 
 {
   uint64_t uVar1;
-  
-  (**(code **)(*(long *)self + 0x10))(self,0,"infoidle");
+
+  (**(code **)(*(long *)self + 0x10))(self, 0, "infoidle");
   uVar1 = GetLocalizedText(0xdb);
   *(uint64_t *)(self + 0x50) = uVar1;
   return;
@@ -98,7 +98,7 @@ void __thiscall SMBMoveOn__Activate(SMBMoveOn *self)
 {
   uint64_t uVar1;
   wchar_t *pwVar2;
-  uint32_t local_88 [2];
+  uint32_t local_88[2];
   wchar_t *local_80;
   wchar_t *local_78;
   uint64_t local_70;
@@ -112,16 +112,16 @@ void __thiscall SMBMoveOn__Activate(SMBMoveOn *self)
   uint64_t local_30;
   uint64_t local_28;
   uint64_t local_20;
-  
+
   FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(self + 0x28));
   FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(self + 0x18));
   FlashLibraryInstance__Reset(*(FlashLibraryInstance **)(self + 0x10));
-  RegisterMessageBoxRenderUpdate(SMBMoveOnRender,SMBMoveOnUpdate);
+  RegisterMessageBoxRenderUpdate(SMBMoveOnRender, SMBMoveOnUpdate);
   uVar1 = GetLocalizedText(0xdc);
-  pwVar2 = (wchar_t *)
-           FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),"ctext1");
+  pwVar2 = (wchar_t *)FlashAnimationLibrary__GetTextField(*(FlashAnimationLibrary **)(self + 8),
+                                                          "ctext1");
   if (pwVar2 != (wchar_t *)0x0) {
-    FlashTextField__SetText(pwVar2,uVar1);
+    FlashTextField__SetText(pwVar2, uVar1);
   }
   local_70 = 0;
   local_68 = 0;
@@ -193,20 +193,20 @@ void __thiscall SMBMoveOn__DeActivate(SMBMoveOn *self)
 
 {
   Joystick *pJVar1;
-  
+
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,2,0,0);
+  Joystick__AddButtonCallback(pJVar1, 2, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,0,0,0);
+  Joystick__AddButtonCallback(pJVar1, 0, 0, 0);
   *(uint32_t *)(self + 0x30) = 2;
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__AddButtonCallback(pJVar1,1,0,0);
+  Joystick__AddButtonCallback(pJVar1, 1, 0, 0);
   pJVar1 = (Joystick *)TPlayer__GetJoystick((TPlayer *)Players__Player);
-  Joystick__RestoreCallbacks(pJVar1,(InputCallback **)(self + 0x40),(InputCallback **)(self + 0x38))
-  ;
+  Joystick__RestoreCallbacks(pJVar1, (InputCallback **)(self + 0x40),
+                             (InputCallback **)(self + 0x38));
   if (Keyboard != (TKeyboard *)0x0) {
-    TKeyboard__AddKeyCallback(Keyboard,0x23,0,0);
-    TKeyboard__RestoreCallbacks(Keyboard,(InputCallback **)(self + 0x48));
+    TKeyboard__AddKeyCallback(Keyboard, 0x23, 0, 0);
+    TKeyboard__RestoreCallbacks(Keyboard, (InputCallback **)(self + 0x48));
     return;
   }
   return;
@@ -225,7 +225,7 @@ void __thiscall SMBMoveOn__SMBMoveOn__00505470(SMBMoveOn *self)
 
 {
   uint64_t uVar1;
-  
+
   *(ushort *)(self + 0x34) = *(ushort *)(self + 0x34) & 0xfc00;
   *(uint8_t ***)self = &PTR__SMBPopupMenu_005c76d0;
   *(uint64_t *)(self + 8) = 0;
@@ -272,42 +272,41 @@ void __thiscall SMBMoveOn__DisconnectedStorage(SMBMoveOn *self)
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 /* SMBMoveOn__MessageBoxRender(tagUAState) */
 
-void __thiscall SMBMoveOn__MessageBoxRender(SMBMoveOn *self,int arg2)
+void __thiscall SMBMoveOn__MessageBoxRender(SMBMoveOn *self, int arg2)
 
 {
   int iVar1;
   Matrix4x4 *pMVar2;
-  Matrix4x4 aMStack_58 [72];
-  
-  TGraphics__SetRenderState(Graphics,'\x03',0);
-  TGraphics__SetRenderState(Graphics,'\x01',7);
-  TGraphics__SetRenderState(Graphics,'\b',1);
-  TGraphics__SetRenderState(Graphics,'\x05',4);
-  TGraphics__SetRenderState(Graphics,'\x06',5);
-  TGraphics__SetRenderState(Graphics,'\n',7);
-  TGraphics__SetRenderState(Graphics,'\t',0);
-  Matrix4x4__ConvertToOrthoMatrix
-            (aMStack_58,_DAT_005c0c9c /* R:240.0f */,DAT_005c0c98 /* R:-240.0f */,DAT_005c0c94 /* R:-426.5f */,DAT_005c0c90 /* R:426.5f */,DAT_005c07a4 /* R:-1.0f */,
-             DAT_005be894 /* R:1.0f */);
-  TGraphics__SetMatrix(Graphics,3,aMStack_58);
-  TGraphics__SetPerspectiveProjectionMode(Graphics,0);
-  pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,2);
+  Matrix4x4 aMStack_58[72];
+
+  TGraphics__SetRenderState(Graphics, '\x03', 0);
+  TGraphics__SetRenderState(Graphics, '\x01', 7);
+  TGraphics__SetRenderState(Graphics, '\b', 1);
+  TGraphics__SetRenderState(Graphics, '\x05', 4);
+  TGraphics__SetRenderState(Graphics, '\x06', 5);
+  TGraphics__SetRenderState(Graphics, '\n', 7);
+  TGraphics__SetRenderState(Graphics, '\t', 0);
+  Matrix4x4__ConvertToOrthoMatrix(aMStack_58, _DAT_005c0c9c /* R:240.0f */,
+                                  DAT_005c0c98 /* R:-240.0f */, DAT_005c0c94 /* R:-426.5f */,
+                                  DAT_005c0c90 /* R:426.5f */, DAT_005c07a4 /* R:-1.0f */,
+                                  DAT_005be894 /* R:1.0f */);
+  TGraphics__SetMatrix(Graphics, 3, aMStack_58);
+  TGraphics__SetPerspectiveProjectionMode(Graphics, 0);
+  pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 2);
   Matrix4x4__Identity(pMVar2);
-  pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,0);
+  pMVar2 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 0);
   Matrix4x4__Identity(pMVar2);
   TAudio__DisableDirectionalAudio(Audio);
   RegisterAudioPosition((FPUVector *)0xffffffff);
   if (arg2 == 2) {
     (**(code **)(**(long **)(self + 0x28) + 0x10))();
-  }
-  else if (arg2 == 0) {
+  } else if (arg2 == 0) {
     (**(code **)(**(long **)(self + 0x10) + 0x10))();
     iVar1 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0x10));
     if (iVar1 == 0) {
       SetCurrState(2);
     }
-  }
-  else if (arg2 == 1) {
+  } else if (arg2 == 1) {
     (**(code **)(**(long **)(self + 0x18) + 0x10))();
     iVar1 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0x18));
     if (iVar1 == 0) {

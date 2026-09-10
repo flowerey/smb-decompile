@@ -22,7 +22,7 @@ bool __thiscall TPlayer__IsValid(TPlayer *self)
 
 {
   bool bVar1;
-  
+
   bVar1 = false;
   if (*(long *)(self + 8) != 0) {
     bVar1 = *(int *)self != -1;
@@ -69,11 +69,11 @@ uint64_t __thiscall TPlayer__GetJoystick(TPlayer *self)
  */
 /* TPlayer__IsPlayerID(unsigned int) */
 
-bool __thiscall TPlayer__IsPlayerID(TPlayer *self,uint arg1)
+bool __thiscall TPlayer__IsPlayerID(TPlayer *self, uint arg1)
 
 {
   if (((&UserProfiles)[*(int *)self] != 0) &&
-     (*(uint *)((&UserProfiles)[*(int *)self] + 0x14) == arg1)) {
+      (*(uint *)((&UserProfiles)[*(int *)self] + 0x14) == arg1)) {
     return *(int *)(self + 0x10) == 1;
   }
   return false;

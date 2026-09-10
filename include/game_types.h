@@ -14,7 +14,9 @@
 #include <setjmp.h>
 
 typedef unsigned char uchar;
-typedef struct { unsigned char _b[6]; } undefined6;
+typedef struct {
+  unsigned char _b[6];
+} undefined6;
 typedef unsigned int uint6;
 typedef unsigned int unkuint9;
 

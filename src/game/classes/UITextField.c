@@ -68,10 +68,10 @@ void __thiscall UITextField__UITextField__005a5be0(UITextField *self)
   allocator *paVar1;
   int *piVar2;
   int iVar3;
-  
+
   *(uint8_t ***)self = &PTR__UITextField_005ddcf0;
   if (*(long **)(self + 0x48) != (long *)0x0) {
-                    /* try { // try from 005a5b6b to 005a5b6d has its CatchHandler @ 005a5bae */
+    /* try { // try from 005a5b6b to 005a5b6d has its CatchHandler @ 005a5bae */
     (**(code **)(**(long **)(self + 0x48) + 8))();
   }
   paVar1 = (allocator *)(*(long *)(self + 0x40) + -0x18);
@@ -125,15 +125,14 @@ void __thiscall UITextField__Update(UITextField *self)
   long lVar4;
   long lVar5;
   wchar_t *pwVar6;
-  long local_28 [2];
-  
+  long local_28[2];
+
   if ((*(int *)(self + 0x38) != 0) && (self[0x50] != (UITextField)0x0)) {
     if ((self[0x51] == (UITextField)0x0) && ((Keyboard != (int *)0x0 && (Keyboard[3] == 1)))) {
       if ((*Keyboard == 0x13) || (*Keyboard == 0x1d)) {
-        std__wstring_wstring
-                  ((wstring *)local_28,(wstring *)(self + 0x40),0,
-                   *(long *)(*(long *)(self + 0x40) + -0x18) - 1);
-                    /* try { // try from 005a5ce3 to 005a5ce7 has its CatchHandler @ 005a5d45 */
+        std__wstring_wstring((wstring *)local_28, (wstring *)(self + 0x40), 0,
+                             *(long *)(*(long *)(self + 0x40) + -0x18) - 1);
+        /* try { // try from 005a5ce3 to 005a5ce7 has its CatchHandler @ 005a5d45 */
         std__wstring_assign((wstring *)(self + 0x40));
         if ((allocator *)(local_28[0] + -0x18) !=
             (allocator *)std__wstring_Rep_S_empty_rep_storage) {
@@ -146,9 +145,8 @@ void __thiscall UITextField__Update(UITextField *self)
             std__wstring_Rep_M_destroy((allocator *)(local_28[0] + -0x18));
           }
         }
-        FontEmitter__SetStaticText(*(FontEmitter **)(self + 0x48),*(wchar_t **)(self + 0x40));
-      }
-      else {
+        FontEmitter__SetStaticText(*(FontEmitter **)(self + 0x48), *(wchar_t **)(self + 0x40));
+      } else {
         iVar3 = Keyboard[1];
         if ((char)iVar3 != '\0') {
           lVar4 = *(long *)(self + 0x40);
@@ -167,7 +165,7 @@ void __thiscall UITextField__Update(UITextField *self)
             pwVar6[uVar1] = L'\0';
             pwVar6 = *(wchar_t **)(self + 0x40);
           }
-          FontEmitter__SetStaticText(*(FontEmitter **)(self + 0x48),pwVar6);
+          FontEmitter__SetStaticText(*(FontEmitter **)(self + 0x48), pwVar6);
         }
       }
     }
@@ -217,14 +215,14 @@ void __thiscall UITextField__UITextField__005a5de0(UITextField *self)
  */
 /* UITextField__UITextField__005a5de0(UITextFieldCreation const*) */
 
-void __thiscall UITextField__UITextField__005a5de0(UITextField *self,UITextFieldCreation *arg1)
+void __thiscall UITextField__UITextField__005a5de0(UITextField *self, UITextFieldCreation *arg1)
 
 {
   long lVar1;
   FontEmitter *this_00;
   uint64_t local_28;
   uint64_t local_20;
-  
+
   *(uint32_t *)(self + 8) = 0;
   *(uint64_t *)(self + 0x10) = 0;
   *(uint64_t *)(self + 0x18) = 0;
@@ -251,10 +249,10 @@ void __thiscall UITextField__UITextField__005a5de0(UITextField *self,UITextField
   }
   local_20 = *(uint64_t *)(lVar1 + 0x20);
   local_28 = 0;
-                    /* try { // try from 005a5e89 to 005a5e8d has its CatchHandler @ 005a5ec1 */
+  /* try { // try from 005a5e89 to 005a5e8d has its CatchHandler @ 005a5ec1 */
   this_00 = operator_new(0xa0);
-                    /* try { // try from 005a5e99 to 005a5e9d has its CatchHandler @ 005a5edd */
-  FontEmitter__FontEmitter__005861d0(this_00,(FontEmitterCreation *)&local_28);
+  /* try { // try from 005a5e99 to 005a5e9d has its CatchHandler @ 005a5edd */
+  FontEmitter__FontEmitter__005861d0(this_00, (FontEmitterCreation *)&local_28);
   *(FontEmitter **)(self + 0x48) = this_00;
   *(uint32_t *)(this_00 + 0x5c) = 2;
   return;
@@ -269,7 +267,7 @@ void __thiscall UITextField__UITextField__005a5de0(UITextField *self,UITextField
  */
 /* UITextField__CustomRender(unsigned int, unsigned int) */
 
-void __thiscall UITextField__CustomRender(UITextField *self,uint arg1,uint arg2)
+void __thiscall UITextField__CustomRender(UITextField *self, uint arg1, uint arg2)
 
 {
   long lVar1;
@@ -279,11 +277,11 @@ void __thiscall UITextField__CustomRender(UITextField *self,uint arg1,uint arg2)
   float local_44;
   float local_38;
   float local_34;
-  float local_28 [4];
-  
-  TGraphics__Clear(Graphics,(ColorTemplate *)::cNullColor,2);
-  TGraphics__SetRenderState(Graphics,'\x03',1);
-  TGraphics__SetRenderState(Graphics,'\x01',7);
+  float local_28[4];
+
+  TGraphics__Clear(Graphics, (ColorTemplate *)::cNullColor, 2);
+  TGraphics__SetRenderState(Graphics, '\x03', 1);
+  TGraphics__SetRenderState(Graphics, '\x01', 7);
   local_28[1] = 0.0;
   local_44 = *(float *)(self + 0x74) / (float)arg2;
   local_48 = *(float *)(self + 0x70) / (float)arg1;
@@ -292,43 +290,43 @@ void __thiscall UITextField__CustomRender(UITextField *self,uint arg1,uint arg2)
   local_34 = *(float *)(self + 0x24) / (float)arg2;
   local_34 = local_34 + local_34;
   local_28[0] = local_48;
-  pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,0);
-  Matrix4x4__Transformation2DRot(pMVar3,(Vector2 *)(self + 0x28),(float *)0x0,(Vector2 *)&local_38);
-  TGraphics__PushMatrix(Graphics,0);
-  TGraphics__SetRenderState(Graphics,'\a',0);
+  pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 0);
+  Matrix4x4__Transformation2DRot(pMVar3, (Vector2 *)(self + 0x28), (float *)0x0,
+                                 (Vector2 *)&local_38);
+  TGraphics__PushMatrix(Graphics, 0);
+  TGraphics__SetRenderState(Graphics, '\a', 0);
   if (*(short *)(self + 0x52) == 0) {
-    TGraphics__SetPerspectiveProjectionMode(Graphics,0);
-    pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,3);
-    Matrix4x4__ConvertToOrthoMatrix
-              (pMVar3,DAT_005be894 /* R:1.0f */,DAT_005c07a4 /* R:-1.0f */,DAT_005c07a4 /* R:-1.0f */,DAT_005be894 /* R:1.0f */,DAT_005c07a4 /* R:-1.0f */,DAT_005be894 /* R:1.0f */)
-    ;
+    TGraphics__SetPerspectiveProjectionMode(Graphics, 0);
+    pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 3);
+    Matrix4x4__ConvertToOrthoMatrix(pMVar3, DAT_005be894 /* R:1.0f */, DAT_005c07a4 /* R:-1.0f */,
+                                    DAT_005c07a4 /* R:-1.0f */, DAT_005be894 /* R:1.0f */,
+                                    DAT_005c07a4 /* R:-1.0f */, DAT_005be894 /* R:1.0f */);
   }
-  pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics,0);
-  Matrix4x4__ConvertToScalingMatrix(pMVar3,(Vector2 *)&local_48);
+  pMVar3 = (Matrix4x4 *)TGraphics__GetMatrix(Graphics, 0);
+  Matrix4x4__ConvertToScalingMatrix(pMVar3, (Vector2 *)&local_48);
   TGraphics__ResetPixelStages(Graphics);
   TGraphics__ResetTexCoordGen(Graphics);
-  TGraphics__AddPixelStage(Graphics,1,0,0,0,0,1,0xffffffff);
-  TGraphics__SetPixelColorConstant(Graphics,0,*(uint64_t *)(self + 0x68));
-  TGraphics__Draw(Graphics,CGR__pSingleQuadStream,(IndexBuffer *)0x0);
-  Vector2__operator_assign((Vector2 *)(*(long *)(self + 0x48) + 0x4c),(Vector2 *)local_28);
-  TGraphics__SetRenderState(Graphics,'\x03',0);
-  TGraphics__SetRenderState(Graphics,'\x01',7);
-  TGraphics__SetRenderState(Graphics,'\x01',6);
+  TGraphics__AddPixelStage(Graphics, 1, 0, 0, 0, 0, 1, 0xffffffff);
+  TGraphics__SetPixelColorConstant(Graphics, 0, *(uint64_t *)(self + 0x68));
+  TGraphics__Draw(Graphics, CGR__pSingleQuadStream, (IndexBuffer *)0x0);
+  Vector2__operator_assign((Vector2 *)(*(long *)(self + 0x48) + 0x4c), (Vector2 *)local_28);
+  TGraphics__SetRenderState(Graphics, '\x03', 0);
+  TGraphics__SetRenderState(Graphics, '\x01', 7);
+  TGraphics__SetRenderState(Graphics, '\x01', 6);
   if (*(short *)(self + 0x52) == 0) {
     *(uint32_t *)(*(long *)(self + 0x48) + 0x38) = 0;
-  }
-  else {
+  } else {
     *(uint32_t *)(*(long *)(self + 0x48) + 0x38) = 1;
   }
-  FontEmitter__SetFontSize(*(FontEmitter **)(self + 0x48),*(float *)(*(long *)(self + 0x68) + 0x28))
-  ;
+  FontEmitter__SetFontSize(*(FontEmitter **)(self + 0x48),
+                           *(float *)(*(long *)(self + 0x68) + 0x28));
   lVar1 = *(long *)(self + 0x68);
   lVar2 = *(long *)(self + 0x48);
   *(uint64_t *)(lVar2 + 0x3c) = *(uint64_t *)(lVar1 + 0x10);
   *(uint64_t *)(lVar2 + 0x44) = *(uint64_t *)(lVar1 + 0x18);
   (**(code **)(**(long **)(self + 0x48) + 0x10))();
-  TGraphics__SetRenderState(Graphics,'\x03',0);
-  TGraphics__SetRenderState(Graphics,'\x01',7);
+  TGraphics__SetRenderState(Graphics, '\x03', 0);
+  TGraphics__SetRenderState(Graphics, '\x01', 7);
   TGraphics__PopMatrix(Graphics);
   return;
 }
@@ -349,10 +347,10 @@ void __thiscall UITextField__Render(UITextField *self)
     return;
   }
   if (*(short *)(self + 0x52) != 0) {
-    CustomRender(self,0x355,0x1e0);
+    CustomRender(self, 0x355, 0x1e0);
     return;
   }
-  CustomRender(self,(uint)*(ushort *)(Window + 8),(uint)*(ushort *)(Window + 10));
+  CustomRender(self, (uint) * (ushort *)(Window + 8), (uint) * (ushort *)(Window + 10));
   return;
 }
 
@@ -365,11 +363,11 @@ void __thiscall UITextField__Render(UITextField *self)
  */
 /* UITextField__SetStaticText(wchar_t const*) */
 
-void __thiscall UITextField__SetStaticText(UITextField *self,wchar_t *arg1)
+void __thiscall UITextField__SetStaticText(UITextField *self, wchar_t *arg1)
 
 {
   wcslen(arg1);
-  std__wstring_assign((wchar_t *)(self + 0x40),(ulong)arg1);
-  FontEmitter__SetStaticText(*(FontEmitter **)(self + 0x48),arg1);
+  std__wstring_assign((wchar_t *)(self + 0x40), (ulong)arg1);
+  FontEmitter__SetStaticText(*(FontEmitter **)(self + 0x48), arg1);
   return;
 }

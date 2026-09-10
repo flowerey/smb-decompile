@@ -74,9 +74,9 @@ void __thiscall TofuBoy__TofuBoy__00465aa0(TofuBoy *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FormatResourcePath("/Animations/tofuboy.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,0x14);
+
+  uVar1 = FormatResourcePath("/Animations/tofuboy.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 0x14);
   *(uint8_t ***)self = &PTR__TofuBoy_005bf3b0;
   *(uint32_t *)(self + 0xa54) = 0x14;
   return;
@@ -91,12 +91,12 @@ void __thiscall TofuBoy__TofuBoy__00465aa0(TofuBoy *self)
  */
 /* TofuBoy__TofuBoy__00465aa0(MeatBoyCharactor*, int) */
 
-void __thiscall TofuBoy__TofuBoy__00465aa0(TofuBoy *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall TofuBoy__TofuBoy__00465aa0(TofuBoy *self, MeatBoyCharactor *arg1, int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__TofuBoy_005bf3b0;
-                    /* try { // try from 00465ad1 to 00465ad5 has its CatchHandler @ 00465ae9 */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 00465ad1 to 00465ad5 has its CatchHandler @ 00465ae9 */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   return;
 }

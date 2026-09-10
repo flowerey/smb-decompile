@@ -21,8 +21,8 @@
 long ftell(FILE *__stream)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* ftell@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* ftell@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -37,7 +37,7 @@ long ftell(FILE *__stream)
 void SDL_DestroyWindow(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -50,11 +50,11 @@ void SDL_DestroyWindow(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void * operator_new__(ulong arg1)
+void *operator_new__(ulong arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _Znam@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _Znam@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -69,7 +69,7 @@ void * operator_new__(ulong arg1)
 void alDeleteBuffers(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -84,7 +84,7 @@ void alDeleteBuffers(void)
 void alcMakeContextCurrent(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -99,7 +99,7 @@ void alcMakeContextCurrent(void)
 void SDL_GL_LoadLibrary(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -112,11 +112,11 @@ void SDL_GL_LoadLibrary(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int * __errno_location(void)
+int *__errno_location(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __errno_location@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __errno_location@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -129,11 +129,11 @@ int * __errno_location(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int printf(char *__format,...)
+int printf(char *__format, ...)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* printf@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* printf@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -148,7 +148,7 @@ int printf(char *__format,...)
 void SDL_CreateWindow(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -163,7 +163,7 @@ void SDL_CreateWindow(void)
 void alGenSources(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -178,7 +178,7 @@ void alGenSources(void)
 void SDL_Quit(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -193,7 +193,7 @@ void SDL_Quit(void)
 void mysql_server_init(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -208,7 +208,7 @@ void mysql_server_init(void)
 void alGetError(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -223,8 +223,8 @@ void alGetError(void)
 void __pow_finite(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __pow_finite@@GLIBC_2.15 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __pow_finite@@GLIBC_2.15 */
   halt_baddata();
 }
 
@@ -239,7 +239,7 @@ void __pow_finite(void)
 void SDL_GL_DeleteContext(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -254,7 +254,7 @@ void SDL_GL_DeleteContext(void)
 void SteamAPI_Init(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -270,8 +270,8 @@ void SteamAPI_Init(void)
 void clearerr(FILE *__stream)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* clearerr@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* clearerr@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -284,11 +284,11 @@ void clearerr(FILE *__stream)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int sprintf(char *__s,char *__format,...)
+int sprintf(char *__s, char *__format, ...)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* sprintf@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* sprintf@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -303,7 +303,7 @@ int sprintf(char *__s,char *__format,...)
 void SDL_GetWindowDisplayMode(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -316,11 +316,11 @@ void SDL_GetWindowDisplayMode(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void std__string_append(char *arg1,ulong arg2)
+void std__string_append(char *arg1, ulong arg2)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSs6appendEPKcm@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSs6appendEPKcm@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -335,7 +335,7 @@ void std__string_append(char *arg1,ulong arg2)
 void mysql_close(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -351,8 +351,8 @@ void mysql_close(void)
 void globfree(glob_t *__pglob)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* globfree@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* globfree@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -367,7 +367,7 @@ void globfree(glob_t *__pglob)
 void mysql_fetch_lengths(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -383,8 +383,8 @@ void mysql_fetch_lengths(void)
 void std__string_M_leak_hard(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSs12_M_leak_hardEv@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSs12_M_leak_hardEv@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -400,8 +400,8 @@ void std__string_M_leak_hard(void)
 double sin(double __x)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* sin@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* sin@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -414,11 +414,11 @@ double sin(double __x)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void std__string_find(char *arg1,ulong arg2,ulong arg3)
+void std__string_find(char *arg1, ulong arg2, ulong arg3)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNKSs4findEPKcmm@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNKSs4findEPKcmm@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -431,11 +431,11 @@ void std__string_find(char *arg1,ulong arg2,ulong arg3)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-char * strstr(char *__haystack,char *__needle)
+char *strstr(char *__haystack, char *__needle)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strstr@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strstr@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -451,8 +451,8 @@ char * strstr(char *__haystack,char *__needle)
 void std__string_compare(char *arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNKSs7compareEPKc@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNKSs7compareEPKc@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -467,7 +467,7 @@ void std__string_compare(char *arg1)
 void SDL_EnableScreenSaver(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -483,8 +483,8 @@ void SDL_EnableScreenSaver(void)
 void srandom(uint __seed)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* srandom@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* srandom@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -500,8 +500,8 @@ void srandom(uint __seed)
 int pthread_mutex_trylock(pthread_mutex_t *__mutex)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_mutex_trylock@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_mutex_trylock@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -516,8 +516,8 @@ int pthread_mutex_trylock(pthread_mutex_t *__mutex)
 void __logf_finite(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __logf_finite@@GLIBC_2.15 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __logf_finite@@GLIBC_2.15 */
   halt_baddata();
 }
 
@@ -532,7 +532,7 @@ void __logf_finite(void)
 void alSourceQueueBuffers(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -548,8 +548,8 @@ void alSourceQueueBuffers(void)
 void std__wstring_Rep_M_destroy(allocator *arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSbIwSt11char_traitsIwESaIwEE4_Rep10_M_destroyERKS1_@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSbIwSt11char_traitsIwESaIwEE4_Rep10_M_destroyERKS1_@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -564,7 +564,7 @@ void std__wstring_Rep_M_destroy(allocator *arg1)
 void alGetSourcefv(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -580,8 +580,8 @@ void alGetSourcefv(void)
 void std__wstring_assign(wstring *arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSbIwSt11char_traitsIwESaIwEE6assignERKS2_@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSbIwSt11char_traitsIwESaIwEE6assignERKS2_@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -596,7 +596,7 @@ void std__wstring_assign(wstring *arg1)
 void mysql_real_query(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -611,7 +611,7 @@ void mysql_real_query(void)
 void alcProcessContext(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -624,11 +624,11 @@ void alcProcessContext(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-char * strerror(int __errnum)
+char *strerror(int __errnum)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strerror@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strerror@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -643,7 +643,7 @@ char * strerror(int __errnum)
 void alcGetContextsDevice(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -659,8 +659,8 @@ void alcGetContextsDevice(void)
 int pthread_cond_broadcast(pthread_cond_t *__cond)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_cond_broadcast@@GLIBC_2.3.2 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_cond_broadcast@@GLIBC_2.3.2 */
   halt_baddata();
 }
 
@@ -675,7 +675,7 @@ int pthread_cond_broadcast(pthread_cond_t *__cond)
 void SDL_GL_CreateContext(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -688,11 +688,11 @@ void SDL_GL_CreateContext(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-ssize_t write(int __fd,void *__buf,size_t __n)
+ssize_t write(int __fd, void *__buf, size_t __n)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* write@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* write@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -705,11 +705,11 @@ ssize_t write(int __fd,void *__buf,size_t __n)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-char * strchr(char *__s,int __c)
+char *strchr(char *__s, int __c)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strchr@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strchr@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -724,7 +724,7 @@ char * strchr(char *__s,int __c)
 void SDL_GL_SetSwapInterval(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -737,11 +737,11 @@ void SDL_GL_SetSwapInterval(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void longjmp(__jmp_buf_tag *__env,int __val)
+void longjmp(__jmp_buf_tag *__env, int __val)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* longjmp@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* longjmp@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -756,7 +756,7 @@ void longjmp(__jmp_buf_tag *__env,int __val)
 void SDL_CreateSystemCursor(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -771,7 +771,7 @@ void SDL_CreateSystemCursor(void)
 void mysql_free_result(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -786,7 +786,7 @@ void mysql_free_result(void)
 void SDL_GameControllerGetAttached(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -802,8 +802,8 @@ void SDL_GameControllerGetAttached(void)
 void std__wstring_reserve(ulong arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSbIwSt11char_traitsIwESaIwEE7reserveEm@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSbIwSt11char_traitsIwESaIwEE7reserveEm@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -816,11 +816,11 @@ void std__wstring_reserve(ulong arg1)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void sincosf(float __x,float *__sinx,float *__cosx)
+void sincosf(float __x, float *__sinx, float *__cosx)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* sincosf@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* sincosf@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -836,8 +836,8 @@ void sincosf(float __x,float *__sinx,float *__cosx)
 size_t strlen(char *__s)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strlen@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strlen@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -852,7 +852,7 @@ size_t strlen(char *__s)
 void SDL_GameControllerGetAxis(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -868,8 +868,8 @@ void SDL_GameControllerGetAxis(void)
 int pthread_mutexattr_destroy(pthread_mutexattr_t *__attr)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_mutexattr_destroy@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_mutexattr_destroy@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -884,8 +884,8 @@ int pthread_mutexattr_destroy(pthread_mutexattr_t *__attr)
 void __acosf_finite(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __acosf_finite@@GLIBC_2.15 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __acosf_finite@@GLIBC_2.15 */
   halt_baddata();
 }
 
@@ -898,11 +898,11 @@ void __acosf_finite(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int memcmp(void *__s1,void *__s2,size_t __n)
+int memcmp(void *__s1, void *__s2, size_t __n)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* memcmp@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* memcmp@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -915,11 +915,11 @@ int memcmp(void *__s1,void *__s2,size_t __n)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int mkdir(char *__path,__mode_t __mode)
+int mkdir(char *__path, __mode_t __mode)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* mkdir@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* mkdir@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -932,11 +932,11 @@ int mkdir(char *__path,__mode_t __mode)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int vsprintf(char *__s,char *__format,__gnuc_va_list __arg)
+int vsprintf(char *__s, char *__format, __gnuc_va_list __arg)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* vsprintf@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* vsprintf@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -951,7 +951,7 @@ int vsprintf(char *__s,char *__format,__gnuc_va_list __arg)
 void SteamFriends(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -967,8 +967,8 @@ void SteamFriends(void)
 int unlink(char *__name)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* unlink@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* unlink@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -981,11 +981,11 @@ int unlink(char *__name)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int strncmp(char *__s1,char *__s2,size_t __n)
+int strncmp(char *__s1, char *__s2, size_t __n)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strncmp@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strncmp@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -998,11 +998,11 @@ int strncmp(char *__s1,char *__s2,size_t __n)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int pthread_join(pthread_t __th,void **__thread_return)
+int pthread_join(pthread_t __th, void **__thread_return)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_join@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_join@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1015,11 +1015,11 @@ int pthread_join(pthread_t __th,void **__thread_return)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-float wcstof(wchar_t *__nptr,wchar_t **__endptr)
+float wcstof(wchar_t *__nptr, wchar_t **__endptr)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* wcstof@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* wcstof@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1034,7 +1034,7 @@ float wcstof(wchar_t *__nptr,wchar_t **__endptr)
 void SDL_GetCurrentDisplayMode(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1049,7 +1049,7 @@ void SDL_GetCurrentDisplayMode(void)
 void alcOpenDevice(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1065,8 +1065,8 @@ void alcOpenDevice(void)
 long random(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* random@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* random@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1079,11 +1079,11 @@ long random(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-tm * localtime_r(time_t *__timer,tm *__tp)
+tm *localtime_r(time_t *__timer, tm *__tp)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* localtime_r@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* localtime_r@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1096,11 +1096,11 @@ tm * localtime_r(time_t *__timer,tm *__tp)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void * memset(void *__s,int __c,size_t __n)
+void *memset(void *__s, int __c, size_t __n)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* memset@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* memset@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1116,8 +1116,8 @@ void * memset(void *__s,int __c,size_t __n)
 void abort(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* abort@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* abort@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1133,8 +1133,8 @@ void abort(void)
 double tan(double __x)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* tan@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* tan@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1147,11 +1147,11 @@ double tan(double __x)
  */
 /* WARNING: Control flow encountered bad instruction data */
 
-void __thiscall std__string_string(string *this,string *arg1)
+void __thiscall std__string_string(string *this, string *arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSsC1ERKSs@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSsC1ERKSs@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -1164,12 +1164,12 @@ void __thiscall std__string_string(string *this,string *arg1)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int pthread_create(pthread_t *__newthread,pthread_attr_t *__attr,__start_routine *__start_routine,
-                  void *__arg)
+int pthread_create(pthread_t *__newthread, pthread_attr_t *__attr, __start_routine *__start_routine,
+                   void *__arg)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_create@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_create@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1184,7 +1184,7 @@ int pthread_create(pthread_t *__newthread,pthread_attr_t *__attr,__start_routine
 void alSourcei(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1199,7 +1199,7 @@ void alSourcei(void)
 void SDL_WasInit(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1214,7 +1214,7 @@ void SDL_WasInit(void)
 void SDL_PollEvent(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1227,11 +1227,11 @@ void SDL_PollEvent(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void sincos(double __x,double *__sinx,double *__cosx)
+void sincos(double __x, double *__sinx, double *__cosx)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* sincos@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* sincos@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1246,7 +1246,7 @@ void sincos(double __x,double *__sinx,double *__cosx)
 void SDL_GetKeyboardFocus(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1259,11 +1259,11 @@ void SDL_GetKeyboardFocus(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int rename(char *__old,char *__new)
+int rename(char *__old, char *__new)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* rename@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* rename@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1276,11 +1276,11 @@ int rename(char *__old,char *__new)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int vsnprintf(char *__s,size_t __maxlen,char *__format,__gnuc_va_list __arg)
+int vsnprintf(char *__s, size_t __maxlen, char *__format, __gnuc_va_list __arg)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* vsnprintf@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* vsnprintf@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1295,7 +1295,7 @@ int vsnprintf(char *__s,size_t __maxlen,char *__format,__gnuc_va_list __arg)
 void alcGetCurrentContext(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1310,8 +1310,8 @@ void alcGetCurrentContext(void)
 void __cxa_guard_abort(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __cxa_guard_abort@@CXXABI_1.3 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __cxa_guard_abort@@CXXABI_1.3 */
   halt_baddata();
 }
 
@@ -1326,7 +1326,7 @@ void __cxa_guard_abort(void)
 void SDL_NumJoysticks(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1341,8 +1341,8 @@ void SDL_NumJoysticks(void)
 void __cxa_guard_release(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __cxa_guard_release@@CXXABI_1.3 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __cxa_guard_release@@CXXABI_1.3 */
   halt_baddata();
 }
 
@@ -1358,8 +1358,8 @@ void __cxa_guard_release(void)
 long sysconf(int __name)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* sysconf@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* sysconf@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1372,11 +1372,11 @@ long sysconf(int __name)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int pthread_setschedparam(pthread_t __target_thread,int __policy,sched_param *__param)
+int pthread_setschedparam(pthread_t __target_thread, int __policy, sched_param *__param)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_setschedparam@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_setschedparam@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1389,11 +1389,11 @@ int pthread_setschedparam(pthread_t __target_thread,int __policy,sched_param *__
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int open(char *__file,int __oflag,...)
+int open(char *__file, int __oflag, ...)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* open@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* open@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1409,8 +1409,8 @@ int open(char *__file,int __oflag,...)
 float cosf(float __x)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* cosf@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* cosf@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1425,7 +1425,7 @@ float cosf(float __x)
 void SDL_GetError(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1441,8 +1441,8 @@ void SDL_GetError(void)
 int pthread_mutex_unlock(pthread_mutex_t *__mutex)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_mutex_unlock@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_mutex_unlock@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1455,11 +1455,11 @@ int pthread_mutex_unlock(pthread_mutex_t *__mutex)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-double strtod(char *__nptr,char **__endptr)
+double strtod(char *__nptr, char **__endptr)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strtod@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strtod@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1472,11 +1472,11 @@ double strtod(char *__nptr,char **__endptr)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void std__string_find(char arg1,ulong arg2)
+void std__string_find(char arg1, ulong arg2)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNKSs4findEcm@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNKSs4findEcm@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -1491,7 +1491,7 @@ void std__string_find(char arg1,ulong arg2)
 void SDL_ShowSimpleMessageBox(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1507,8 +1507,8 @@ void SDL_ShowSimpleMessageBox(void)
 void std__string_reserve(ulong arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSs7reserveEm@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSs7reserveEm@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -1524,8 +1524,8 @@ void std__string_reserve(ulong arg1)
 void std__string_Rep_M_destroy(allocator *arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSs4_Rep10_M_destroyERKSaIcE@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSs4_Rep10_M_destroyERKSaIcE@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -1540,7 +1540,7 @@ void std__string_Rep_M_destroy(allocator *arg1)
 void SDL_GetDisplayMode(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1555,7 +1555,7 @@ void SDL_GetDisplayMode(void)
 void mysql_real_connect(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1568,11 +1568,11 @@ void mysql_real_connect(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void * memcpy(void *__dest,void *__src,size_t __n)
+void *memcpy(void *__dest, void *__src, size_t __n)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* memcpy@@GLIBC_2.14 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* memcpy@@GLIBC_2.14 */
   halt_baddata();
 }
 
@@ -1587,8 +1587,8 @@ void * memcpy(void *__dest,void *__src,size_t __n)
 void __exp_finite(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __exp_finite@@GLIBC_2.15 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __exp_finite@@GLIBC_2.15 */
   halt_baddata();
 }
 
@@ -1604,8 +1604,8 @@ void __exp_finite(void)
 size_t wcslen(wchar_t *__s)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* wcslen@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* wcslen@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1620,7 +1620,7 @@ size_t wcslen(wchar_t *__s)
 void alDeleteSources(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1635,7 +1635,7 @@ void alDeleteSources(void)
 void SteamAPI_IsSteamRunning(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1648,11 +1648,11 @@ void SteamAPI_IsSteamRunning(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-tm * gmtime(time_t *__timer)
+tm *gmtime(time_t *__timer)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* gmtime@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* gmtime@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1667,7 +1667,7 @@ tm * gmtime(time_t *__timer)
 void mysql_store_result(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1682,8 +1682,8 @@ void mysql_store_result(void)
 void __cxa_atexit(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __cxa_atexit@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __cxa_atexit@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1696,11 +1696,11 @@ void __cxa_atexit(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-char * setlocale(int __category,char *__locale)
+char *setlocale(int __category, char *__locale)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* setlocale@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* setlocale@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1715,7 +1715,7 @@ char * setlocale(int __category,char *__locale)
 void SDL_Init(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1730,7 +1730,7 @@ void SDL_Init(void)
 void SDL_getenv(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1745,7 +1745,7 @@ void SDL_getenv(void)
 void mysql_select_db(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1760,7 +1760,7 @@ void mysql_select_db(void)
 void SteamAPI_RegisterCallback(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1775,7 +1775,7 @@ void SteamAPI_RegisterCallback(void)
 void SDL_GameControllerOpen(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1791,8 +1791,8 @@ void SDL_GameControllerOpen(void)
 time_t time(time_t *__timer)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* time@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* time@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1805,11 +1805,11 @@ time_t time(time_t *__timer)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-char * strcpy(char *__dest,char *__src)
+char *strcpy(char *__dest, char *__src)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strcpy@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strcpy@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1824,7 +1824,7 @@ char * strcpy(char *__dest,char *__src)
 void alSourceUnqueueBuffers(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1837,11 +1837,11 @@ void alSourceUnqueueBuffers(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void std__wstring_assign(wchar_t *arg1,ulong arg2)
+void std__wstring_assign(wchar_t *arg1, ulong arg2)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSbIwSt11char_traitsIwESaIwEE6assignEPKwm@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSbIwSt11char_traitsIwESaIwEE6assignEPKwm@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -1857,8 +1857,8 @@ void std__wstring_assign(wchar_t *arg1,ulong arg2)
 void operator_delete(void *arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZdlPv@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZdlPv@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -1871,11 +1871,11 @@ void operator_delete(void *arg1)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int vswprintf(wchar_t *__s,size_t __n,wchar_t *__format,__gnuc_va_list __arg)
+int vswprintf(wchar_t *__s, size_t __n, wchar_t *__format, __gnuc_va_list __arg)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* vswprintf@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* vswprintf@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1891,8 +1891,8 @@ int vswprintf(wchar_t *__s,size_t __n,wchar_t *__format,__gnuc_va_list __arg)
 void srand(uint __seed)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* srand@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* srand@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1907,7 +1907,7 @@ void srand(uint __seed)
 void alcDestroyContext(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1922,7 +1922,7 @@ void alcDestroyContext(void)
 void SDL_GL_ExtensionSupported(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1938,8 +1938,8 @@ void SDL_GL_ExtensionSupported(void)
 int sched_get_priority_max(int __algorithm)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* sched_get_priority_max@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* sched_get_priority_max@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -1954,8 +1954,8 @@ int sched_get_priority_max(int __algorithm)
 void __isoc99_sscanf(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __isoc99_sscanf@@GLIBC_2.7 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __isoc99_sscanf@@GLIBC_2.7 */
   halt_baddata();
 }
 
@@ -1970,7 +1970,7 @@ void __isoc99_sscanf(void)
 void alSourcePlay(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -1985,7 +1985,7 @@ void alSourcePlay(void)
 void SDL_GameControllerGetButton(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2001,8 +2001,8 @@ void SDL_GameControllerGetButton(void)
 int fclose(FILE *__stream)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* fclose@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* fclose@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2015,11 +2015,11 @@ int fclose(FILE *__stream)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void * operator_new(ulong arg1)
+void *operator_new(ulong arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _Znwm@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _Znwm@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -2032,11 +2032,11 @@ void * operator_new(ulong arg1)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int __xstat(int __ver,char *__filename,stat *__stat_buf)
+int __xstat(int __ver, char *__filename, stat *__stat_buf)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __xstat@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __xstat@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2051,7 +2051,7 @@ int __xstat(int __ver,char *__filename,stat *__stat_buf)
 void SteamAPI_UnregisterCallResult(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2066,7 +2066,7 @@ void SteamAPI_UnregisterCallResult(void)
 void SDL_GetTicks(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2081,7 +2081,7 @@ void SDL_GetTicks(void)
 void SteamAPI_RegisterCallResult(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2097,8 +2097,8 @@ void SteamAPI_RegisterCallResult(void)
 int pthread_detach(pthread_t __th)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_detach@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_detach@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2111,11 +2111,11 @@ int pthread_detach(pthread_t __th)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-FILE * fdopen(int __fd,char *__modes)
+FILE *fdopen(int __fd, char *__modes)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* fdopen@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* fdopen@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2128,11 +2128,11 @@ FILE * fdopen(int __fd,char *__modes)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int __fxstat(int __ver,int __fildes,stat *__stat_buf)
+int __fxstat(int __ver, int __fildes, stat *__stat_buf)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __fxstat@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __fxstat@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2147,7 +2147,7 @@ int __fxstat(int __ver,int __fildes,stat *__stat_buf)
 void SDL_GameControllerClose(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2162,7 +2162,7 @@ void SDL_GameControllerClose(void)
 void SteamApps(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2178,8 +2178,8 @@ void SteamApps(void)
 void std__string_append(string *arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSs6appendERKSs@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSs6appendERKSs@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -2192,11 +2192,11 @@ void std__string_append(string *arg1)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int strcasecmp(char *__s1,char *__s2)
+int strcasecmp(char *__s1, char *__s2)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strcasecmp@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strcasecmp@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2211,8 +2211,8 @@ int strcasecmp(char *__s1,char *__s2)
 void __atan2_finite(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __atan2_finite@@GLIBC_2.15 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __atan2_finite@@GLIBC_2.15 */
   halt_baddata();
 }
 
@@ -2225,11 +2225,11 @@ void __atan2_finite(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-char * strrchr(char *__s,int __c)
+char *strrchr(char *__s, int __c)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strrchr@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strrchr@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2242,11 +2242,11 @@ char * strrchr(char *__s,int __c)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int fseek(FILE *__stream,long __off,int __whence)
+int fseek(FILE *__stream, long __off, int __whence)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* fseek@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* fseek@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2259,11 +2259,11 @@ int fseek(FILE *__stream,long __off,int __whence)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void * memchr(void *__s,int __c,size_t __n)
+void *memchr(void *__s, int __c, size_t __n)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* memchr@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* memchr@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2278,7 +2278,7 @@ void * memchr(void *__s,int __c,size_t __n)
 void alcCreateContext(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2293,7 +2293,7 @@ void alcCreateContext(void)
 void alBufferData(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2308,7 +2308,7 @@ void alBufferData(void)
 void SDL_GetScancodeFromKey(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2323,7 +2323,7 @@ void SDL_GetScancodeFromKey(void)
 void SDL_SetWindowFullscreen(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2336,11 +2336,11 @@ void SDL_SetWindowFullscreen(void)
  */
 /* WARNING: Control flow encountered bad instruction data */
 
-void __thiscall std__string_string(string *this,char *arg1,allocator *arg2)
+void __thiscall std__string_string(string *this, char *arg1, allocator *arg2)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSsC1EPKcRKSaIcE@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSsC1EPKcRKSaIcE@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -2355,7 +2355,7 @@ void __thiscall std__string_string(string *this,char *arg1,allocator *arg2)
 void mysql_fetch_row(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2370,7 +2370,7 @@ void mysql_fetch_row(void)
 void alGenBuffers(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2386,8 +2386,8 @@ void alGenBuffers(void)
 int pthread_mutex_destroy(pthread_mutex_t *__mutex)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_mutex_destroy@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_mutex_destroy@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2403,8 +2403,8 @@ int pthread_mutex_destroy(pthread_mutex_t *__mutex)
 int fflush(FILE *__stream)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* fflush@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* fflush@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2419,7 +2419,7 @@ int fflush(FILE *__stream)
 void SDL_QuitSubSystem(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2434,7 +2434,7 @@ void SDL_QuitSubSystem(void)
 void SDL_HideWindow(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2447,11 +2447,11 @@ void SDL_HideWindow(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-FILE * fopen(char *__filename,char *__modes)
+FILE *fopen(char *__filename, char *__modes)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* fopen@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* fopen@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2466,7 +2466,7 @@ FILE * fopen(char *__filename,char *__modes)
 void SDL_GetNumDisplayModes(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2479,11 +2479,11 @@ void SDL_GetNumDisplayModes(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void std__string_assign(char *arg1,ulong arg2)
+void std__string_assign(char *arg1, ulong arg2)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSs6assignEPKcm@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSs6assignEPKcm@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -2499,8 +2499,8 @@ void std__string_assign(char *arg1,ulong arg2)
 void free(void *__ptr)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* free@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* free@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2515,7 +2515,7 @@ void free(void *__ptr)
 void SDL_GameControllerUpdate(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2530,7 +2530,7 @@ void SDL_GameControllerUpdate(void)
 void SDL_DisableScreenSaver(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2543,11 +2543,11 @@ void SDL_DisableScreenSaver(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int pthread_cond_init(pthread_cond_t *__cond,pthread_condattr_t *__cond_attr)
+int pthread_cond_init(pthread_cond_t *__cond, pthread_condattr_t *__cond_attr)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_cond_init@@GLIBC_2.3.2 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_cond_init@@GLIBC_2.3.2 */
   halt_baddata();
 }
 
@@ -2563,8 +2563,8 @@ int pthread_cond_init(pthread_cond_t *__cond,pthread_condattr_t *__cond_attr)
 void exit(int __status)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* exit@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* exit@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2577,11 +2577,11 @@ void exit(int __status)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-char * getenv(char *__name)
+char *getenv(char *__name)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* getenv@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* getenv@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2596,7 +2596,7 @@ char * getenv(char *__name)
 void SDL_fabs(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2609,11 +2609,11 @@ void SDL_fabs(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int fputc(int __c,FILE *__stream)
+int fputc(int __c, FILE *__stream)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* fputc@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* fputc@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2626,11 +2626,11 @@ int fputc(int __c,FILE *__stream)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int strncasecmp(char *__s1,char *__s2,size_t __n)
+int strncasecmp(char *__s1, char *__s2, size_t __n)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strncasecmp@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strncasecmp@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2646,8 +2646,8 @@ int strncasecmp(char *__s1,char *__s2,size_t __n)
 void operator_delete__(void *arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZdaPv@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZdaPv@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -2663,8 +2663,8 @@ void operator_delete__(void *arg1)
 void std__string_assign(string *arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSs6assignERKSs@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSs6assignERKSs@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -2680,8 +2680,8 @@ void std__string_assign(string *arg1)
 int sched_get_priority_min(int __algorithm)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* sched_get_priority_min@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* sched_get_priority_min@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2696,7 +2696,7 @@ int sched_get_priority_min(int __algorithm)
 void alSourcef(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2709,11 +2709,11 @@ void alSourcef(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int glob(char *__pattern,int __flags,__errfunc *__errfunc,glob_t *__pglob)
+int glob(char *__pattern, int __flags, __errfunc *__errfunc, glob_t *__pglob)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* glob@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* glob@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2726,11 +2726,11 @@ int glob(char *__pattern,int __flags,__errfunc *__errfunc,glob_t *__pglob)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void * malloc(size_t __size)
+void *malloc(size_t __size)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* malloc@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* malloc@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2743,11 +2743,11 @@ void * malloc(size_t __size)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int vfprintf(FILE *__s,char *__format,__gnuc_va_list __arg)
+int vfprintf(FILE *__s, char *__format, __gnuc_va_list __arg)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* vfprintf@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* vfprintf@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2762,7 +2762,7 @@ int vfprintf(FILE *__s,char *__format,__gnuc_va_list __arg)
 void SteamUser(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2777,7 +2777,7 @@ void SteamUser(void)
 void SDL_strcmp(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2793,8 +2793,8 @@ void SDL_strcmp(void)
 int pthread_mutexattr_init(pthread_mutexattr_t *__attr)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_mutexattr_init@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_mutexattr_init@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2807,11 +2807,11 @@ int pthread_mutexattr_init(pthread_mutexattr_t *__attr)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void std__string_rfind(char arg1,ulong arg2)
+void std__string_rfind(char arg1, ulong arg2)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNKSs5rfindEcm@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNKSs5rfindEcm@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -2824,11 +2824,11 @@ void std__string_rfind(char arg1,ulong arg2)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int strcmp(char *__s1,char *__s2)
+int strcmp(char *__s1, char *__s2)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strcmp@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strcmp@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2841,11 +2841,11 @@ int strcmp(char *__s1,char *__s2)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-long strtol(char *__nptr,char **__endptr,int __base)
+long strtol(char *__nptr, char **__endptr, int __base)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strtol@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strtol@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2861,8 +2861,8 @@ long strtol(char *__nptr,char **__endptr,int __base)
 int usleep(__useconds_t __useconds)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* usleep@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* usleep@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2878,8 +2878,8 @@ int usleep(__useconds_t __useconds)
 void std__string_assign(char *arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSs6assignEPKc@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSs6assignEPKc@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -2894,7 +2894,7 @@ void std__string_assign(char *arg1)
 void SDL_GL_SwapWindow(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2907,11 +2907,11 @@ void SDL_GL_SwapWindow(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int fprintf(FILE *__stream,char *__format,...)
+int fprintf(FILE *__stream, char *__format, ...)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* fprintf@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* fprintf@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2924,11 +2924,11 @@ int fprintf(FILE *__stream,char *__format,...)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-ssize_t read(int __fd,void *__buf,size_t __nbytes)
+ssize_t read(int __fd, void *__buf, size_t __nbytes)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* read@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* read@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2944,8 +2944,8 @@ ssize_t read(int __fd,void *__buf,size_t __nbytes)
 int _setjmp(__jmp_buf_tag *__env)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _setjmp@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _setjmp@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -2960,7 +2960,7 @@ int _setjmp(__jmp_buf_tag *__env)
 void SDL_GetWindowPosition(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2975,7 +2975,7 @@ void SDL_GetWindowPosition(void)
 void SDL_SetCursor(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -2991,8 +2991,8 @@ void SDL_SetCursor(void)
 void std__throw_out_of_range(char *arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZSt20__throw_out_of_rangePKc@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZSt20__throw_out_of_rangePKc@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -3007,7 +3007,7 @@ void std__throw_out_of_range(char *arg1)
 void SDL_ceil(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3023,8 +3023,8 @@ void SDL_ceil(void)
 int pthread_mutex_lock(pthread_mutex_t *__mutex)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_mutex_lock@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_mutex_lock@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3040,8 +3040,8 @@ int pthread_mutex_lock(pthread_mutex_t *__mutex)
 int chdir(char *__path)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* chdir@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* chdir@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3054,11 +3054,11 @@ int chdir(char *__path)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int pthread_mutex_init(pthread_mutex_t *__mutex,pthread_mutexattr_t *__mutexattr)
+int pthread_mutex_init(pthread_mutex_t *__mutex, pthread_mutexattr_t *__mutexattr)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_mutex_init@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_mutex_init@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3071,11 +3071,11 @@ int pthread_mutex_init(pthread_mutex_t *__mutex,pthread_mutexattr_t *__mutexattr
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-size_t fread(void *__ptr,size_t __size,size_t __n,FILE *__stream)
+size_t fread(void *__ptr, size_t __size, size_t __n, FILE *__stream)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* fread@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* fread@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3090,7 +3090,7 @@ size_t fread(void *__ptr,size_t __size,size_t __n,FILE *__stream)
 void alcCloseDevice(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3103,11 +3103,11 @@ void alcCloseDevice(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-DIR * opendir(char *__name)
+DIR *opendir(char *__name)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* opendir@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* opendir@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3122,7 +3122,7 @@ DIR * opendir(char *__name)
 void SteamAPI_RunCallbacks(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3135,11 +3135,11 @@ void SteamAPI_RunCallbacks(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-long wcstol(wchar_t *__nptr,wchar_t **__endptr,int __base)
+long wcstol(wchar_t *__nptr, wchar_t **__endptr, int __base)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* wcstol@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* wcstol@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3152,11 +3152,11 @@ long wcstol(wchar_t *__nptr,wchar_t **__endptr,int __base)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-double ldexp(double __x,int __exponent)
+double ldexp(double __x, int __exponent)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* ldexp@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* ldexp@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3169,11 +3169,11 @@ double ldexp(double __x,int __exponent)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int pthread_cond_wait(pthread_cond_t *__cond,pthread_mutex_t *__mutex)
+int pthread_cond_wait(pthread_cond_t *__cond, pthread_mutex_t *__mutex)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_cond_wait@@GLIBC_2.3.2 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_cond_wait@@GLIBC_2.3.2 */
   halt_baddata();
 }
 
@@ -3188,7 +3188,7 @@ int pthread_cond_wait(pthread_cond_t *__cond,pthread_mutex_t *__mutex)
 void mysql_errno(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3201,11 +3201,11 @@ void mysql_errno(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-dirent * readdir(DIR *__dirp)
+dirent *readdir(DIR *__dirp)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* readdir@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* readdir@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3221,8 +3221,8 @@ dirent * readdir(DIR *__dirp)
 void __thiscall std__ios_base_Init_Init(Init *this)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSt8ios_base4InitC1Ev@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSt8ios_base4InitC1Ev@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -3235,11 +3235,11 @@ void __thiscall std__ios_base_Init_Init(Init *this)
  */
 /* WARNING: Control flow encountered bad instruction data */
 
-void __thiscall std__string_string(string *this,string *arg1,ulong arg2,ulong arg3)
+void __thiscall std__string_string(string *this, string *arg1, ulong arg2, ulong arg3)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSsC1ERKSsmm@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSsC1ERKSsmm@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -3254,7 +3254,7 @@ void __thiscall std__string_string(string *this,string *arg1,ulong arg2,ulong ar
 void SDL_GL_GetProcAddress(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3270,8 +3270,8 @@ void SDL_GL_GetProcAddress(void)
 int fgetc(FILE *__stream)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* fgetc@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* fgetc@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3286,7 +3286,7 @@ int fgetc(FILE *__stream)
 void mysql_init(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3299,11 +3299,11 @@ void mysql_init(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int snprintf(char *__s,size_t __maxlen,char *__format,...)
+int snprintf(char *__s, size_t __maxlen, char *__format, ...)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* snprintf@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* snprintf@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3318,7 +3318,7 @@ int snprintf(char *__s,size_t __maxlen,char *__format,...)
 void SDL_GetMouseState(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3334,8 +3334,8 @@ void SDL_GetMouseState(void)
 int closedir(DIR *__dirp)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* closedir@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* closedir@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3350,7 +3350,7 @@ int closedir(DIR *__dirp)
 void SDL_GetDesktopDisplayMode(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3363,11 +3363,11 @@ void SDL_GetDesktopDisplayMode(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int gettimeofday(timeval *__tv,__timezone_ptr_t __tz)
+int gettimeofday(timeval *__tv, __timezone_ptr_t __tz)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* gettimeofday@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* gettimeofday@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3382,7 +3382,7 @@ int gettimeofday(timeval *__tv,__timezone_ptr_t __tz)
 void SteamUtils(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3395,11 +3395,11 @@ void SteamUtils(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void * memmove(void *__dest,void *__src,size_t __n)
+void *memmove(void *__dest, void *__src, size_t __n)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* memmove@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* memmove@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3412,11 +3412,11 @@ void * memmove(void *__dest,void *__src,size_t __n)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void * realloc(void *__ptr,size_t __size)
+void *realloc(void *__ptr, size_t __size)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* realloc@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* realloc@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3431,7 +3431,7 @@ void * realloc(void *__ptr,size_t __size)
 void alGetSourceiv(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3444,11 +3444,11 @@ void alGetSourceiv(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int access(char *__name,int __type)
+int access(char *__name, int __type)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* access@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* access@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3463,7 +3463,7 @@ int access(char *__name,int __type)
 void SDL_SetWindowSize(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3479,8 +3479,8 @@ void SDL_SetWindowSize(void)
 double floor(double __x)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* floor@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* floor@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3495,7 +3495,7 @@ double floor(double __x)
 void SDL_GL_SetAttribute(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3508,11 +3508,11 @@ void SDL_GL_SetAttribute(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void std__string_substr(ulong arg1,ulong arg2)
+void std__string_substr(ulong arg1, ulong arg2)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNKSs6substrEmm@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNKSs6substrEmm@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -3525,11 +3525,11 @@ void std__string_substr(ulong arg1,ulong arg2)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int pthread_getschedparam(pthread_t __target_thread,int *__policy,sched_param *__param)
+int pthread_getschedparam(pthread_t __target_thread, int *__policy, sched_param *__param)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_getschedparam@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_getschedparam@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3544,8 +3544,8 @@ int pthread_getschedparam(pthread_t __target_thread,int *__policy,sched_param *_
 void _Unwind_Resume(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _Unwind_Resume@@GCC_3.0 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _Unwind_Resume@@GCC_3.0 */
   halt_baddata();
 }
 
@@ -3560,7 +3560,7 @@ void _Unwind_Resume(void)
 void SDL_GL_GetDrawableSize(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3575,7 +3575,7 @@ void SDL_GL_GetDrawableSize(void)
 void alcSuspendContext(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3588,11 +3588,11 @@ void alcSuspendContext(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-char * strcat(char *__dest,char *__src)
+char *strcat(char *__dest, char *__src)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* strcat@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* strcat@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3607,7 +3607,7 @@ char * strcat(char *__dest,char *__src)
 void SDL_IsGameController(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3620,11 +3620,11 @@ void SDL_IsGameController(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-int pthread_mutexattr_settype(pthread_mutexattr_t *__attr,int __kind)
+int pthread_mutexattr_settype(pthread_mutexattr_t *__attr, int __kind)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_mutexattr_settype@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_mutexattr_settype@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3639,8 +3639,8 @@ int pthread_mutexattr_settype(pthread_mutexattr_t *__attr,int __kind)
 void __cxa_guard_acquire(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __cxa_guard_acquire@@CXXABI_1.3 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __cxa_guard_acquire@@CXXABI_1.3 */
   halt_baddata();
 }
 
@@ -3656,8 +3656,8 @@ void __cxa_guard_acquire(void)
 void std__string_append(char *arg1)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSs6appendEPKc@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSs6appendEPKc@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -3673,8 +3673,8 @@ void std__string_append(char *arg1)
 void __thiscall std__wstring_wstring(wstring *this)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSbIwSt11char_traitsIwESaIwEED1Ev@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSbIwSt11char_traitsIwESaIwEED1Ev@@GLIBCXX_3.4 */
   halt_baddata();
 }
 
@@ -3687,11 +3687,11 @@ void __thiscall std__wstring_wstring(wstring *this)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-__off_t lseek(int __fd,__off_t __offset,int __whence)
+__off_t lseek(int __fd, __off_t __offset, int __whence)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* lseek@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* lseek@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3707,8 +3707,8 @@ __off_t lseek(int __fd,__off_t __offset,int __whence)
 double cos(double __x)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* cos@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* cos@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3723,8 +3723,8 @@ double cos(double __x)
 void __libc_start_main(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* __libc_start_main@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* __libc_start_main@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3740,8 +3740,8 @@ void __libc_start_main(void)
 int ferror(FILE *__stream)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* ferror@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* ferror@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3756,7 +3756,7 @@ int ferror(FILE *__stream)
 void SteamUserStats(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3771,7 +3771,7 @@ void SteamUserStats(void)
 void __gmon_start__(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3786,7 +3786,7 @@ void __gmon_start__(void)
 void SDL_GetBasePath(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3799,11 +3799,11 @@ void SDL_GetBasePath(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-void qsort(void *__base,size_t __nmemb,size_t __size,__compar_fn_t __compar)
+void qsort(void *__base, size_t __nmemb, size_t __size, __compar_fn_t __compar)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* qsort@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* qsort@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3818,7 +3818,7 @@ void qsort(void *__base,size_t __nmemb,size_t __size,__compar_fn_t __compar)
 void alSourceStop(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3834,8 +3834,8 @@ void alSourceStop(void)
 int pthread_cond_destroy(pthread_cond_t *__cond)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* pthread_cond_destroy@@GLIBC_2.3.2 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* pthread_cond_destroy@@GLIBC_2.3.2 */
   halt_baddata();
 }
 
@@ -3850,7 +3850,7 @@ int pthread_cond_destroy(pthread_cond_t *__cond)
 void mysql_insert_id(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3863,11 +3863,11 @@ void mysql_insert_id(void)
 /* WARNING: Control flow encountered bad instruction data */
 /* WARNING: Unknown calling convention -- yet parameter storage is locked */
 
-size_t fwrite(void *__ptr,size_t __size,size_t __n,FILE *__s)
+size_t fwrite(void *__ptr, size_t __size, size_t __n, FILE *__s)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* fwrite@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* fwrite@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3883,8 +3883,8 @@ size_t fwrite(void *__ptr,size_t __size,size_t __n,FILE *__s)
 int close(int __fd)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* close@@GLIBC_2.2.5 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* close@@GLIBC_2.2.5 */
   halt_baddata();
 }
 
@@ -3899,7 +3899,7 @@ int close(int __fd)
 void SDL_ShowCursor(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3914,7 +3914,7 @@ void SDL_ShowCursor(void)
 void SDL_GameControllerName(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3929,7 +3929,7 @@ void SDL_GameControllerName(void)
 void SDL_GetKeyboardState(void)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
+  /* WARNING: Bad instruction - Truncating control flow here */
   halt_baddata();
 }
 
@@ -3942,14 +3942,12 @@ void SDL_GetKeyboardState(void)
  */
 /* WARNING: Control flow encountered bad instruction data */
 
-void __thiscall std__wstring_wstring(wstring *this,wstring *arg1,ulong arg2,ulong arg3)
+void __thiscall std__wstring_wstring(wstring *this, wstring *arg1, ulong arg2, ulong arg3)
 
 {
-                    /* WARNING: Bad instruction - Truncating control flow here */
-                    /* _ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_mm@@GLIBCXX_3.4 */
+  /* WARNING: Bad instruction - Truncating control flow here */
+  /* _ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_mm@@GLIBCXX_3.4 */
   halt_baddata();
 }
-
-
 
 // ===== SUMMARY: total=4894 ok=4894 fail=0 =====

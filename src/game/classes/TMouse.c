@@ -28,7 +28,7 @@ void __thiscall TMouse__TMouse(TMouse *self)
   bool bVar6;
   byte bVar7;
   ulong uVar4;
-  
+
   bVar7 = 0;
   bVar6 = Mouse != (TMouse *)0x0;
   *(uint32_t *)(self + 0x14) = 0;
@@ -55,8 +55,7 @@ void __thiscall TMouse__TMouse(TMouse *self)
   }
   if (((ulong)pTVar5 & 2) == 0) {
     uVar3 = (uint)uVar4;
-  }
-  else {
+  } else {
     *(uint16_t *)pTVar5 = 0;
     pTVar5 = pTVar5 + 2;
     uVar3 = iVar2 - 2;
@@ -113,8 +112,7 @@ void __thiscall TMouse__TMouse__005959d0(TMouse *self)
  */
 /* TMouse__AddButtonCallback(tagMouseButtons, void (*)(tagButtonProps const*, void*), void*) */
 
-void __thiscall
-TMouse__AddButtonCallback(TMouse *self,int arg2,uint64_t arg3,uint64_t arg4)
+void __thiscall TMouse__AddButtonCallback(TMouse *self, int arg2, uint64_t arg3, uint64_t arg4)
 
 {
   *(uint64_t *)(self + ((long)arg2 + 3) * 0x10 + 8) = arg3;

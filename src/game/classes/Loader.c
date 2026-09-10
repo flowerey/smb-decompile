@@ -62,14 +62,14 @@ void Loader__DestroyLoader(void)
  */
 /* Loader__LoaderThreadFunc(void*) */
 
-uint64_t __thiscall Loader__LoaderThreadFunc(Loader *self,void *arg1)
+uint64_t __thiscall Loader__LoaderThreadFunc(Loader *self, void *arg1)
 
 {
-  AutoLockSection aAStack_18 [16];
-  
+  AutoLockSection aAStack_18[16];
+
   (**(code **)(self + 8))(*(uint64_t *)(self + 0x10));
   SyncEvent__Set((SyncEvent *)(self + 0x18));
-  AutoLockSection__AutoLockSection(aAStack_18,(CriticalSection *)LoaderAllocSection);
+  AutoLockSection__AutoLockSection(aAStack_18, (CriticalSection *)LoaderAllocSection);
   *(uint32_t *)(self + 0x90) = 1;
   AutoLockSection__AutoLockSection__005b59d0(aAStack_18);
   return 0;

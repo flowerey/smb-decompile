@@ -30,7 +30,7 @@ void __thiscall MrMinecraft__Jump(MrMinecraft *self)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   iVar4 = (**(code **)(*(long *)self + 0xa8))();
   if (iVar4 == 0) {
     return;
@@ -42,7 +42,7 @@ void __thiscall MrMinecraft__Jump(MrMinecraft *self)
     uVar5 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x240);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x268) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
@@ -55,7 +55,7 @@ void __thiscall MrMinecraft__Jump(MrMinecraft *self)
   uStack_28 = 0x3f800000;
   uStack_24 = 0x3f800000;
   if (((byte)MVar3 & 0x40) == 0) {
-    MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,1,&uStack_28,&uStack_38);
+    MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 1, &uStack_28, &uStack_38);
     MVar3 = self[0x7d9];
   }
   *(uint32_t *)(self + 0x800) = 0;
@@ -86,17 +86,16 @@ void __thiscall MrMinecraft__GroundHit(MrMinecraft *self)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   if (*(int *)(self + 0x7d4) == 0xf) {
     uVar4 = *(uint *)(self + 0xa4c);
-  }
-  else {
+  } else {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (MrMinecraft)((byte)self[0x7db] | 8);
     uVar4 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x558);
     if (uVar1 != 0) {
-      uVar4 = GetRandomINT(0,uVar1 - 1);
+      uVar4 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint *)(lVar2 + 0x580) = uVar4;
     *(uint *)(self + 0xa4c) = uVar4;
@@ -105,10 +104,9 @@ void __thiscall MrMinecraft__GroundHit(MrMinecraft *self)
   *(uint32_t *)(self + 0x7d4) = 0xf;
   lVar2 = *(long *)(self + 0xf8);
   if (uVar4 == 0xffffffff) {
-    this_00 = *(FlashLibraryInstance **)
-               (*(long *)(lVar2 + 0x568) + (ulong)*(ushort *)(lVar2 + 0x580) * 8);
-  }
-  else {
+    this_00 = *(FlashLibraryInstance **)(*(long *)(lVar2 + 0x568) +
+                                         (ulong) * (ushort *)(lVar2 + 0x580) * 8);
+  } else {
     this_00 = *(FlashLibraryInstance **)(*(long *)(lVar2 + 0x568) + (ulong)(uVar4 & 0xffff) * 8);
   }
   FlashLibraryInstance__Reset(this_00);
@@ -118,7 +116,7 @@ void __thiscall MrMinecraft__GroundHit(MrMinecraft *self)
   uStack_38 = 0x3f800000;
   uStack_34 = 0x3f800000;
   if (((byte)MVar3 & 0x40) == 0) {
-    MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,0,&uStack_38,&uStack_28);
+    MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 0, &uStack_38, &uStack_28);
     MVar3 = self[0x7d9];
   }
   if (((byte)self[0x7d8] & 0x18) == 0) {
@@ -172,7 +170,7 @@ void __thiscall MrMinecraft__WallJump(MrMinecraft *self)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   puVar6 = &uStack_58;
   iVar4 = (**(code **)(*(long *)self + 0xb0))();
   if (iVar4 == 0) {
@@ -180,14 +178,14 @@ void __thiscall MrMinecraft__WallJump(MrMinecraft *self)
   }
   *(uint32_t *)(self + 0xbc) = *(uint32_t *)(self + 0x8b4);
   *(float *)(self + 0xb8) =
-       *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
+      *(float *)(self + 0x808) * *(float *)(self + 0x8b8) + *(float *)(self + 0xb8);
   if (*(int *)(self + 0x7d4) != 6) {
     lVar2 = *(long *)(self + 0xf8);
     self[0x7db] = (MrMinecraft)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar1 = *(ushort *)(lVar2 + 0x240);
     if (uVar1 != 0) {
-      uVar5 = GetRandomINT(0,uVar1 - 1);
+      uVar5 = GetRandomINT(0, uVar1 - 1);
     }
     *(uint32_t *)(lVar2 + 0x268) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
@@ -203,20 +201,21 @@ void __thiscall MrMinecraft__WallJump(MrMinecraft *self)
     uStack_34 = 0x3f800000;
     uStack_28 = 0xbf800000;
     uStack_24 = 0x3f800000;
-    if (((byte)MVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)MVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar6 = &uStack_38;
     puVar8 = &uStack_28;
-  }
-  else {
+  } else {
     MVar7 = self[0x7d9];
     uStack_58 = 0x3f800000;
     uStack_54 = 0x3f800000;
     uStack_48 = 0x3f800000;
     uStack_44 = 0x3f800000;
-    if (((byte)MVar7 & 0x40) != 0) goto LAB_00474591;
+    if (((byte)MVar7 & 0x40) != 0)
+      goto LAB_00474591;
     puVar8 = &uStack_48;
   }
-  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,3,puVar8,puVar6);
+  MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 3, puVar8, puVar6);
   MVar3 = self[0x7d8];
   MVar7 = self[0x7d9];
 LAB_00474591:
@@ -234,7 +233,7 @@ LAB_00474591:
  */
 /* MrMinecraft__WallHit(tagTileCollisionType) */
 
-void __thiscall MrMinecraft__WallHit(MrMinecraft *self,int arg2)
+void __thiscall MrMinecraft__WallHit(MrMinecraft *self, int arg2)
 
 {
   MrMinecraft MVar1;
@@ -250,48 +249,48 @@ void __thiscall MrMinecraft__WallHit(MrMinecraft *self,int arg2)
   uint32_t uStack_34;
   uint32_t uStack_28;
   uint32_t uStack_24;
-  
+
   MVar1 = self[0x7d8];
   if (((byte)MVar1 & 4) == 0) {
-    if (*(int *)(self + 0x7d4) == 9) goto LAB_0047440b;
+    if (*(int *)(self + 0x7d4) == 9)
+      goto LAB_0047440b;
     if (arg2 == 4) {
       uStack_48 = 0x3f800000;
       uStack_44 = 0x3f800000;
       uStack_58 = 0x3f800000;
       uStack_54 = 0x3f800000;
       if (((byte)self[0x7d9] & 0x40) == 0) {
-        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,2,&uStack_58,&uStack_48);
+        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 2, &uStack_58, &uStack_48);
         iVar4 = *(int *)(self + 0x7d4);
         goto LAB_004743cd;
       }
-    }
-    else {
+    } else {
       uStack_28 = 0xbf800000;
       uStack_24 = 0x3f800000;
       uStack_38 = 0xbf800000;
       uStack_34 = 0x3f800000;
       if (((byte)self[0x7d9] & 0x40) == 0) {
-        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self,2,&uStack_38,&uStack_28);
+        MeatBoyCharactor__AddEffect__0047af00((MeatBoyCharactor *)self, 2, &uStack_38, &uStack_28);
         goto LAB_004743c7;
       }
     }
-LAB_004743d2:
+  LAB_004743d2:
     lVar3 = *(long *)(self + 0xf8);
     self[0x7db] = (MrMinecraft)((byte)self[0x7db] | 8);
     uVar5 = 0;
     uVar2 = *(ushort *)(lVar3 + 0x348);
     if (uVar2 != 0) {
-      uVar5 = GetRandomINT(0,uVar2 - 1);
+      uVar5 = GetRandomINT(0, uVar2 - 1);
     }
     *(uint32_t *)(lVar3 + 0x370) = uVar5;
     *(uint32_t *)(self + 0xa4c) = uVar5;
     *(uint32_t *)(self + 0xa50) = 0;
-  }
-  else {
-LAB_004743c7:
+  } else {
+  LAB_004743c7:
     iVar4 = *(int *)(self + 0x7d4);
-LAB_004743cd:
-    if (iVar4 != 9) goto LAB_004743d2;
+  LAB_004743cd:
+    if (iVar4 != 9)
+      goto LAB_004743d2;
   }
   MVar1 = self[0x7d8];
 LAB_0047440b:
@@ -313,9 +312,9 @@ void __thiscall MrMinecraft__CreateClones(MrMinecraft *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),"hack");
+
+  uVar1 = FlashAnimationLibrary__GetMovieClip__005731d0(
+      (FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), "hack");
   *(uint64_t *)(self + 0xaf8) = uVar1;
   MeatBoyCharactor__CreateClones((MeatBoyCharactor *)self);
   return;
@@ -334,15 +333,14 @@ void __thiscall MrMinecraft__Render(MrMinecraft *self)
 
 {
   int iVar1;
-  
+
   if (*(int *)(self + 0xaec) != 1) {
     MeatBoyCharactor__Render((MeatBoyCharactor *)self);
     return;
   }
   *(uint32_t *)(*(long *)(self + 0xaf8) + 0x58) = *(uint32_t *)(self + 0xaf0);
-  MeatBoyCharFoundation__Render
-            (*(MeatBoyCharFoundation **)(self + 0xf8),(MeatBoyCharactor *)self,
-             *(FlashLibraryInstance **)(self + 0xaf8));
+  MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8), (MeatBoyCharactor *)self,
+                                *(FlashLibraryInstance **)(self + 0xaf8));
   *(uint32_t *)(self + 0xaf0) = *(uint32_t *)(*(FlashLibraryInstance **)(self + 0xaf8) + 0x58);
   iVar1 = FlashLibraryInstance__IsPlaying(*(FlashLibraryInstance **)(self + 0xaf8));
   if (iVar1 == 0) {
@@ -367,28 +365,26 @@ void __thiscall MrMinecraft__RenderClones(MrMinecraft *self)
   long lVar1;
   int iVar2;
   long lVar3;
-  
+
   if (*(int *)(self + 0xa40) == 0) {
-    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+    FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8), 1);
     lVar1 = *(long *)(self + 0xa38);
     if ((*(int *)(lVar1 + 0x2c8) == 0) && (0 < *(int *)(lVar1 + 0x34))) {
       iVar2 = 0;
       do {
         lVar3 = (long)iVar2;
         if ((*(int *)(lVar1 + 0x3c) == iVar2) &&
-           (iVar2 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + lVar3 * 8) + 0xa90))) {
-          FlashAnimationLibrary__EnableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
-        }
-        else {
-          FlashAnimationLibrary__DisableFlags
-                    ((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),1);
+            (iVar2 == *(int *)(*(long *)(*(long *)(self + 0x7f0) + lVar3 * 8) + 0xa90))) {
+          FlashAnimationLibrary__EnableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                             1);
+        } else {
+          FlashAnimationLibrary__DisableFlags((FlashAnimationLibrary *)**(uint64_t **)(self + 0xf8),
+                                              1);
         }
         iVar2 = iVar2 + 1;
-        MeatBoyCharFoundation__Render
-                  (*(MeatBoyCharFoundation **)(self + 0xf8),
-                   *(MeatBoyCharactor **)(*(long *)(self + 0x7f0) + lVar3 * 8),
-                   (FlashLibraryInstance *)0x0);
+        MeatBoyCharFoundation__Render(*(MeatBoyCharFoundation **)(self + 0xf8),
+                                      *(MeatBoyCharactor **)(*(long *)(self + 0x7f0) + lVar3 * 8),
+                                      (FlashLibraryInstance *)0x0);
         lVar1 = *(long *)(self + 0xa38);
       } while (iVar2 < *(int *)(lVar1 + 0x34));
     }
@@ -409,11 +405,11 @@ void __thiscall MrMinecraft__MrMinecraft__00482810(MrMinecraft *self)
 
 {
   uint64_t uVar1;
-  
-  uVar1 = FormatResourcePath("/Animations/mrmine.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,0xe);
+
+  uVar1 = FormatResourcePath("/Animations/mrmine.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 0xe);
   *(uint8_t ***)self = &PTR__MrMinecraft_005c0e70;
-                    /* try { // try from 00481c85 to 00481c89 has its CatchHandler @ 00481cfa */
+  /* try { // try from 00481c85 to 00481c89 has its CatchHandler @ 00481cfa */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0xa98));
   *(uint16_t *)(self + 0xac2) = 0;
   *(uint16_t *)(self + 0xac0) = 0;
@@ -449,7 +445,7 @@ void __thiscall MrMinecraft__ResetBlocks(MrMinecraft *self)
   uint uVar5;
   ulong uVar6;
   ushort uVar7;
-  
+
   this_00 = *(TileLevel **)(SuperMeatBoy + 0x40);
   if (this_00 != (TileLevel *)0x0) {
     uVar7 = *(ushort *)(self + 0xac0);
@@ -511,7 +507,7 @@ void __thiscall MrMinecraft__Reset(MrMinecraft *self)
  */
 /* MrMinecraft__ManipulateBlock(Vector2 const&) */
 
-void __thiscall MrMinecraft__ManipulateBlock(MrMinecraft *self,Vector2 *arg1)
+void __thiscall MrMinecraft__ManipulateBlock(MrMinecraft *self, Vector2 *arg1)
 
 {
   uint32_t uVar1;
@@ -532,15 +528,15 @@ void __thiscall MrMinecraft__ManipulateBlock(MrMinecraft *self,Vector2 *arg1)
   uint64_t *puVar15;
   bool bVar16;
   byte bVar17;
-  
+
   bVar17 = 0;
   this_00 = *(TileLevel **)(SuperMeatBoy + 0x40);
-  pcVar8 = (char *)TileLevel__GetGridBlockFromPos(this_00,arg1,0);
+  pcVar8 = (char *)TileLevel__GetGridBlockFromPos(this_00, arg1, 0);
   uVar1 = *(uint32_t *)pcVar8;
   uVar6 = *(ushort *)(self + 0xac0);
   if (*pcVar8 == '\0') {
     if (uVar6 == 0) {
-LAB_00481fc5:
+    LAB_00481fc5:
       if (*(int *)(self + 0xae0) == -0x5eef3582) {
         if (*(ushort *)(self + 0xac2) <= uVar6) {
           uVar6 = *(ushort *)(self + 0xac2) + *(short *)(self + 0xacc);
@@ -552,7 +548,7 @@ LAB_00481fc5:
           pvVar10 = malloc(uVar12 + 0x10 + uVar13);
           if (pvVar10 != (void *)0x0) {
             pvVar9 = (void *)((long)pvVar10 + 0x10U +
-                             (uVar12 - ((long)pvVar10 + 0x10U) % uVar12) % uVar12);
+                              (uVar12 - ((long)pvVar10 + 0x10U) % uVar12) % uVar12);
             *(ulong *)((long)pvVar9 + -0x10) = uVar13;
             *(void **)((long)pvVar9 + -8) = pvVar10;
             if (pvVar3 != (void *)0x0) {
@@ -560,7 +556,7 @@ LAB_00481fc5:
               if (uVar13 <= *(ulong *)((long)pvVar3 + -0x10)) {
                 uVar12 = uVar13;
               }
-              memcpy(pvVar9,pvVar3,uVar12);
+              memcpy(pvVar9, pvVar3, uVar12);
               free(*(void **)((long)pvVar3 + -8));
             }
           }
@@ -574,39 +570,40 @@ LAB_00481fc5:
             pvVar10 = malloc(uVar12 + 0x10 + uVar13);
             if (pvVar10 != (void *)0x0) {
               pvVar9 = (void *)((long)pvVar10 + 0x10U +
-                               (uVar12 - ((long)pvVar10 + 0x10U) % uVar12) % uVar12);
+                                (uVar12 - ((long)pvVar10 + 0x10U) % uVar12) % uVar12);
               *(ulong *)((long)pvVar9 + -0x10) = uVar13;
               *(void **)((long)pvVar9 + -8) = pvVar10;
               uVar12 = *(ulong *)((long)pvVar3 + -0x10);
               if (uVar13 <= *(ulong *)((long)pvVar3 + -0x10)) {
                 uVar12 = uVar13;
               }
-              memcpy(pvVar9,pvVar3,uVar12);
+              memcpy(pvVar9, pvVar3, uVar12);
               free(*(void **)((long)pvVar3 + -8));
               uVar5 = *(ushort *)(self + 0xac2);
             }
             uVar6 = *(ushort *)(self + 0xac0);
             *(void **)(self + 0xad8) = pvVar9;
-            if (uVar5 <= uVar6) goto LAB_00482097;
-            while( true ) {
+            if (uVar5 <= uVar6)
+              goto LAB_00482097;
+            while (true) {
               uVar13 = (ulong)uVar6;
               uVar6 = uVar6 + 1;
               *(uint16_t *)((long)pvVar9 + uVar13 * 2) = 0xffff;
-              if (uVar5 <= uVar6) break;
+              if (uVar5 <= uVar6)
+                break;
               pvVar9 = *(void **)(self + 0xad8);
             }
           }
           uVar6 = *(ushort *)(self + 0xac0);
         }
-      }
-      else {
+      } else {
         uVar13 = (ulong)(byte)self[0xac4];
         *(uint32_t *)(self + 0xac8) = 0;
         pvVar9 = malloc(uVar13 + 0x60);
         puVar15 = (uint64_t *)0x0;
         if (pvVar9 != (void *)0x0) {
-          puVar15 = (uint64_t *)
-                    ((long)pvVar9 + 0x10U + (uVar13 - ((long)pvVar9 + 0x10U) % uVar13) % uVar13);
+          puVar15 = (uint64_t *)((long)pvVar9 + 0x10U +
+                                 (uVar13 - ((long)pvVar9 + 0x10U) % uVar13) % uVar13);
           puVar15[-2] = 0x50;
           puVar15[-1] = pvVar9;
         }
@@ -649,41 +646,43 @@ LAB_00481fc5:
         *(uint32_t *)(self + 0xae0) = 0xa110ca7e;
         *(uint16_t *)(self + 0xacc) = 5;
       }
-LAB_00482097:
+    LAB_00482097:
       if ((*(int *)(self + 0xac8) == 1) && (*(short *)(self + 0xac2) != 0)) {
         puVar11 = *(ushort **)(self + 0xad8);
         sVar7 = 1;
         uVar5 = *puVar11;
         while (uVar5 != 0xffff) {
           puVar11 = puVar11 + 1;
-          if (sVar7 == *(short *)(self + 0xac2)) goto LAB_004820a4;
+          if (sVar7 == *(short *)(self + 0xac2))
+            goto LAB_004820a4;
           sVar7 = sVar7 + 1;
           uVar5 = *puVar11;
         }
         *puVar11 = uVar6;
         uVar6 = *(ushort *)(self + 0xac0);
       }
-LAB_004820a4:
+    LAB_004820a4:
       puVar15 = (uint64_t *)((ulong)uVar6 * 0x10 + *(long *)(self + 0xad0));
       *puVar15 = pcVar8;
       *(uint32_t *)(puVar15 + 1) = uVar1;
       *(short *)(self + 0xac0) = *(short *)(self + 0xac0) + 1;
-    }
-    else {
+    } else {
       puVar15 = *(uint64_t **)(self + 0xad0);
       uVar5 = 0;
       pcVar2 = (char *)*puVar15;
       while (pcVar8 != pcVar2) {
         uVar5 = uVar5 + 1;
-        if (uVar5 == uVar6) goto LAB_00481fc5;
+        if (uVar5 == uVar6)
+          goto LAB_00481fc5;
         puVar15 = puVar15 + 2;
         pcVar2 = (char *)*puVar15;
       }
       if (((*(int *)(self + 0xac8) == 1) && (*(ushort *)(self + 0xac2) != 0)) &&
-         (uVar5 != **(ushort **)(self + 0xad8))) {
+          (uVar5 != **(ushort **)(self + 0xad8))) {
         lVar14 = 0;
         do {
-          if (lVar14 == (ulong)(*(ushort *)(self + 0xac2) - 1) * 2) break;
+          if (lVar14 == (ulong)(*(ushort *)(self + 0xac2) - 1) * 2)
+            break;
           lVar14 = lVar14 + 2;
         } while (uVar5 != *(ushort *)((long)*(ushort **)(self + 0xad8) + lVar14));
       }
@@ -693,7 +692,7 @@ LAB_004820a4:
     goto LAB_004820e8;
   }
   if (uVar6 == 0) {
-LAB_00481e7d:
+  LAB_00481e7d:
     if (*(int *)(self + 0xae0) == -0x5eef3582) {
       if (*(ushort *)(self + 0xac2) <= uVar6) {
         uVar6 = *(ushort *)(self + 0xac2) + *(short *)(self + 0xacc);
@@ -705,7 +704,7 @@ LAB_00481e7d:
         pvVar10 = malloc(uVar12 + 0x10 + uVar13);
         if (pvVar10 != (void *)0x0) {
           pvVar9 = (void *)((long)pvVar10 + 0x10U +
-                           (uVar12 - ((long)pvVar10 + 0x10U) % uVar12) % uVar12);
+                            (uVar12 - ((long)pvVar10 + 0x10U) % uVar12) % uVar12);
           *(ulong *)((long)pvVar9 + -0x10) = uVar13;
           *(void **)((long)pvVar9 + -8) = pvVar10;
           if (pvVar3 != (void *)0x0) {
@@ -713,7 +712,7 @@ LAB_00481e7d:
             if (uVar13 <= *(ulong *)((long)pvVar3 + -0x10)) {
               uVar12 = uVar13;
             }
-            memcpy(pvVar9,pvVar3,uVar12);
+            memcpy(pvVar9, pvVar3, uVar12);
             free(*(void **)((long)pvVar3 + -8));
           }
         }
@@ -727,39 +726,40 @@ LAB_00481e7d:
           pvVar10 = malloc(uVar12 + 0x10 + uVar13);
           if (pvVar10 != (void *)0x0) {
             pvVar9 = (void *)((long)pvVar10 + 0x10U +
-                             (uVar12 - ((long)pvVar10 + 0x10U) % uVar12) % uVar12);
+                              (uVar12 - ((long)pvVar10 + 0x10U) % uVar12) % uVar12);
             *(ulong *)((long)pvVar9 + -0x10) = uVar13;
             *(void **)((long)pvVar9 + -8) = pvVar10;
             uVar12 = *(ulong *)((long)pvVar3 + -0x10);
             if (uVar13 <= *(ulong *)((long)pvVar3 + -0x10)) {
               uVar12 = uVar13;
             }
-            memcpy(pvVar9,pvVar3,uVar12);
+            memcpy(pvVar9, pvVar3, uVar12);
             free(*(void **)((long)pvVar3 + -8));
             uVar5 = *(ushort *)(self + 0xac2);
           }
           uVar6 = *(ushort *)(self + 0xac0);
           *(void **)(self + 0xad8) = pvVar9;
-          if (uVar5 <= uVar6) goto LAB_00481f59;
-          while( true ) {
+          if (uVar5 <= uVar6)
+            goto LAB_00481f59;
+          while (true) {
             uVar13 = (ulong)uVar6;
             uVar6 = uVar6 + 1;
             *(uint16_t *)((long)pvVar9 + uVar13 * 2) = 0xffff;
-            if (uVar5 <= uVar6) break;
+            if (uVar5 <= uVar6)
+              break;
             pvVar9 = *(void **)(self + 0xad8);
           }
         }
         uVar6 = *(ushort *)(self + 0xac0);
       }
-    }
-    else {
+    } else {
       uVar13 = (ulong)(byte)self[0xac4];
       *(uint32_t *)(self + 0xac8) = 0;
       pvVar9 = malloc(uVar13 + 0x60);
       puVar15 = (uint64_t *)0x0;
       if (pvVar9 != (void *)0x0) {
-        puVar15 = (uint64_t *)
-                  ((long)pvVar9 + 0x10U + (uVar13 - ((long)pvVar9 + 0x10U) % uVar13) % uVar13);
+        puVar15 = (uint64_t *)((long)pvVar9 + 0x10U +
+                               (uVar13 - ((long)pvVar9 + 0x10U) % uVar13) % uVar13);
         puVar15[-2] = 0x50;
         puVar15[-1] = pvVar9;
       }
@@ -802,7 +802,7 @@ LAB_00481e7d:
       *(uint32_t *)(self + 0xae0) = 0xa110ca7e;
       *(uint16_t *)(self + 0xacc) = 5;
     }
-LAB_00481f59:
+  LAB_00481f59:
     if ((*(int *)(self + 0xac8) == 1) && (*(short *)(self + 0xac2) != 0)) {
       puVar11 = *(ushort **)(self + 0xad8);
       sVar7 = 0;
@@ -810,40 +810,42 @@ LAB_00481f59:
       while (uVar5 != 0xffff) {
         puVar11 = puVar11 + 1;
         sVar7 = sVar7 + 1;
-        if (sVar7 == *(short *)(self + 0xac2)) goto LAB_00481f66;
+        if (sVar7 == *(short *)(self + 0xac2))
+          goto LAB_00481f66;
         uVar5 = *puVar11;
       }
       *puVar11 = uVar6;
       uVar6 = *(ushort *)(self + 0xac0);
     }
-LAB_00481f66:
+  LAB_00481f66:
     puVar15 = (uint64_t *)((ulong)uVar6 * 0x10 + *(long *)(self + 0xad0));
     *puVar15 = pcVar8;
     *(uint32_t *)(puVar15 + 1) = uVar1;
     *(short *)(self + 0xac0) = *(short *)(self + 0xac0) + 1;
-  }
-  else {
+  } else {
     puVar15 = *(uint64_t **)(self + 0xad0);
     uVar5 = 0;
     pcVar2 = (char *)*puVar15;
     while (pcVar8 != pcVar2) {
       uVar5 = uVar5 + 1;
-      if (uVar5 == uVar6) goto LAB_00481e7d;
+      if (uVar5 == uVar6)
+        goto LAB_00481e7d;
       puVar15 = puVar15 + 2;
       pcVar2 = (char *)*puVar15;
     }
     if (((*(int *)(self + 0xac8) == 1) && (*(ushort *)(self + 0xac2) != 0)) &&
-       (uVar5 != **(ushort **)(self + 0xad8))) {
+        (uVar5 != **(ushort **)(self + 0xad8))) {
       lVar14 = 0;
       do {
-        if (lVar14 == (ulong)(*(ushort *)(self + 0xac2) - 1) * 2) break;
+        if (lVar14 == (ulong)(*(ushort *)(self + 0xac2) - 1) * 2)
+          break;
         lVar14 = lVar14 + 2;
       } while (uVar5 != *(ushort *)((long)*(ushort **)(self + 0xad8) + lVar14));
     }
   }
   *pcVar8 = '\0';
 LAB_004820e8:
-  SMBPalette__MarkCollision(GSuperMeatBoy__pLevelPalette,0);
+  SMBPalette__MarkCollision(GSuperMeatBoy__pLevelPalette, 0);
   TileLevel__BuildTileStreams(this_00);
   TileLevelLightMap__RegenerateLights(*(TileLevelLightMap **)(SuperMeatBoy + 0x390));
   return;
@@ -867,7 +869,7 @@ void __thiscall MrMinecraft__Update(MrMinecraft *self)
   float fVar3;
   long lVar4;
   uint64_t local_18;
-  
+
   MeatBoyCharactor__ProcessReplayFrame((MeatBoyCharactor *)self);
   fVar3 = _DAT_005c0f60 /* R:1.100000023841858f */;
   if (*(int *)(self + 0xae8) != 1) {
@@ -876,35 +878,33 @@ void __thiscall MrMinecraft__Update(MrMinecraft *self)
   }
   uVar1 = *(uint64_t *)(self + 0xa0);
   if (Keyboard == 0) {
-LAB_00482675:
+  LAB_00482675:
     local_18 = uVar1;
     lVar4 = TPlayer__GetJoystick((TPlayer *)Players__Player);
     fVar3 = _DAT_005c0f60 /* R:1.100000023841858f */;
     if (*(int *)(lVar4 + 0xbc) == 2) {
       *(uint32_t *)(self + 0xae8) = 0;
       bVar2 = true;
-      local_18 = CONCAT44(fVar3 * TileLevel__fLevelGridWH + local_18._4_4_,(float)local_18);
-    }
-    else {
+      local_18 = CONCAT44(fVar3 * TileLevel__fLevelGridWH + local_18._4_4_, (float)local_18);
+    } else {
       lVar4 = TPlayer__GetJoystick((TPlayer *)Players__Player);
       fVar3 = _DAT_005c0f60 /* R:1.100000023841858f */;
       bVar2 = false;
       if (*(int *)(lVar4 + 0xd4) == 2) {
         *(uint32_t *)(self + 0xae8) = 0;
         bVar2 = true;
-        local_18 = CONCAT44(local_18._4_4_ - fVar3 * TileLevel__fLevelGridWH,(float)local_18);
+        local_18 = CONCAT44(local_18._4_4_ - fVar3 * TileLevel__fLevelGridWH, (float)local_18);
       }
     }
-  }
-  else {
+  } else {
     local_18._0_4_ = (float)uVar1;
     local_18._4_4_ = (float)((ulong)uVar1 >> 0x20);
     if (*(int *)(Keyboard + 0x604) == 2) {
       *(uint32_t *)(self + 0xae8) = 0;
       local_18._4_4_ = fVar3 * TileLevel__fLevelGridWH + local_18._4_4_;
-    }
-    else {
-      if (*(int *)(Keyboard + 0x184) != 2) goto LAB_00482675;
+    } else {
+      if (*(int *)(Keyboard + 0x184) != 2)
+        goto LAB_00482675;
       *(uint32_t *)(self + 0xae8) = 0;
       local_18._4_4_ = local_18._4_4_ - fVar3 * TileLevel__fLevelGridWH;
     }
@@ -914,14 +914,13 @@ LAB_00482675:
   if ((((byte)self[0x7d8] & 0x1a) != 2) && (!bVar2)) {
     if (((byte)self[0x7d8] & 1) == 0) {
       *(uint32_t *)(self + 0xae8) = 0;
-      local_18 = CONCAT44(local_18._4_4_,fVar3 * TileLevel__fLevelGridWH + (float)local_18);
-    }
-    else {
+      local_18 = CONCAT44(local_18._4_4_, fVar3 * TileLevel__fLevelGridWH + (float)local_18);
+    } else {
       *(uint32_t *)(self + 0xae8) = 0;
-      local_18 = CONCAT44(local_18._4_4_,(float)local_18 - fVar3 * TileLevel__fLevelGridWH);
+      local_18 = CONCAT44(local_18._4_4_, (float)local_18 - fVar3 * TileLevel__fLevelGridWH);
     }
   }
-  ManipulateBlock(self,(Vector2 *)&local_18);
+  ManipulateBlock(self, (Vector2 *)&local_18);
   *(uint32_t *)(self + 0xae8) = 0;
   *(uint32_t *)(self + 0xaec) = 1;
   MeatBoyCharactor__Update((MeatBoyCharactor *)self);
@@ -937,12 +936,13 @@ LAB_00482675:
  */
 /* MrMinecraft__MrMinecraft__00482810(MeatBoyCharactor*, int) */
 
-void __thiscall MrMinecraft__MrMinecraft__00482810(MrMinecraft *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall MrMinecraft__MrMinecraft__00482810(MrMinecraft *self, MeatBoyCharactor *arg1,
+                                                   int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__MrMinecraft_005c0e70;
-                    /* try { // try from 00482848 to 0048284c has its CatchHandler @ 004828e2 */
+  /* try { // try from 00482848 to 0048284c has its CatchHandler @ 004828e2 */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0xa98));
   *(uint16_t *)(self + 0xac2) = 0;
   *(uint16_t *)(self + 0xac0) = 0;
@@ -952,8 +952,8 @@ void __thiscall MrMinecraft__MrMinecraft__00482810(MrMinecraft *self,MeatBoyChar
   *(uint32_t *)(self + 0xae0) = 0;
   self[0xac4] = (MrMinecraft)0x4;
   *(uint32_t *)(self + 0xac8) = 0;
-                    /* try { // try from 004828a2 to 004828a6 has its CatchHandler @ 004828f5 */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 004828a2 to 004828a6 has its CatchHandler @ 004828f5 */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   *(uint32_t *)(self + 0xae8) = 0;
   *(uint32_t *)(self + 0xaec) = 0;
   *(uint64_t *)(self + 0xaf8) = *(uint64_t *)(arg1 + 0xaf8);
@@ -975,7 +975,7 @@ void __thiscall MrMinecraft__MrMinecraft__00482a20(MrMinecraft *self)
   *(uint8_t ***)self = &PTR__MrMinecraft_005c0e70;
   if (*(int *)(self + 0xa40) == 0) {
     if (*(long **)(self + 0xaf8) != (long *)0x0) {
-                    /* try { // try from 00482938 to 00482942 has its CatchHandler @ 004829e2 */
+      /* try { // try from 00482938 to 00482942 has its CatchHandler @ 004829e2 */
       (**(code **)(**(long **)(self + 0xaf8) + 8))();
     }
     ResetBlocks(self);
@@ -992,7 +992,7 @@ void __thiscall MrMinecraft__MrMinecraft__00482a20(MrMinecraft *self)
     *(uint64_t *)(self + 0xad0) = 0;
     *(uint64_t *)(self + 0xad8) = 0;
   }
-                    /* try { // try from 00482956 to 0048295a has its CatchHandler @ 00482a12 */
+  /* try { // try from 00482956 to 0048295a has its CatchHandler @ 00482a12 */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0xa98));
   MeatBoyCharactor__MeatBoyCharactor__00476510((MeatBoyCharactor *)self);
   return;

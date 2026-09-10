@@ -22,14 +22,13 @@ void __thiscall SprintMeatBoy__Update(SprintMeatBoy *self)
 
 {
   SprintMeatBoy SVar1;
-  
+
   MeatBoyCharactor__ProcessReplayFrame((MeatBoyCharactor *)self);
   SVar1 = self[0x7d8];
   self[0x7d8] = (SprintMeatBoy)((byte)SVar1 | 0x40);
   if (((byte)SVar1 & 1) == 0) {
     self[0x7d8] = (SprintMeatBoy)((byte)SVar1 & 0xef | 0x48);
-  }
-  else {
+  } else {
     self[0x7d8] = (SprintMeatBoy)((byte)SVar1 & 0xf7 | 0x50);
   }
   MeatBoyCharactor__Update((MeatBoyCharactor *)self);
@@ -73,11 +72,11 @@ void __thiscall SprintMeatBoy__SprintMeatBoy__004653b0(SprintMeatBoy *self)
 
 {
   SMBBloodExplosion *this_00;
-  
+
   *(uint8_t ***)self = &PTR__SprintMeatBoy_005becb0;
   if ((*(int *)(self + 0xa40) == 0) &&
-     (this_00 = *(SMBBloodExplosion **)(self + 0xa98), this_00 != (SMBBloodExplosion *)0x0)) {
-                    /* try { // try from 00465181 to 00465185 has its CatchHandler @ 004651a4 */
+      (this_00 = *(SMBBloodExplosion **)(self + 0xa98), this_00 != (SMBBloodExplosion *)0x0)) {
+    /* try { // try from 00465181 to 00465185 has its CatchHandler @ 004651a4 */
     SMBBloodExplosion__SMBBloodExplosion__0048cc90(this_00);
     operator_delete(this_00);
   }
@@ -101,7 +100,7 @@ void __thiscall SprintMeatBoy__Death(SprintMeatBoy *self)
   if (*(int *)(self + 0xa40) != 0) {
     return;
   }
-  SMBBloodExplosion__Spawn(*(SMBBloodExplosion **)(self + 0xa98),(Vector2 *)(self + 0xa0));
+  SMBBloodExplosion__Spawn(*(SMBBloodExplosion **)(self + 0xa98), (Vector2 *)(self + 0xa0));
   return;
 }
 
@@ -118,11 +117,11 @@ void __thiscall SprintMeatBoy__SprintMeatBoy__004653b0(SprintMeatBoy *self)
 
 {
   SMBBloodExplosion *this_00;
-  
+
   *(uint8_t ***)self = &PTR__SprintMeatBoy_005becb0;
   if ((*(int *)(self + 0xa40) == 0) &&
-     (this_00 = *(SMBBloodExplosion **)(self + 0xa98), this_00 != (SMBBloodExplosion *)0x0)) {
-                    /* try { // try from 004653e3 to 004653e7 has its CatchHandler @ 0046540e */
+      (this_00 = *(SMBBloodExplosion **)(self + 0xa98), this_00 != (SMBBloodExplosion *)0x0)) {
+    /* try { // try from 004653e3 to 004653e7 has its CatchHandler @ 0046540e */
     SMBBloodExplosion__SMBBloodExplosion__0048cc90(this_00);
     operator_delete(this_00);
   }
@@ -145,14 +144,14 @@ void __thiscall SprintMeatBoy__SprintMeatBoy__00465640(SprintMeatBoy *self)
 {
   uint64_t uVar1;
   SMBBloodExplosion *this_00;
-  
-  uVar1 = FormatResourcePath("/Animations/meatboyanim.am",&strCharPath);
-  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self,uVar1,0x1c);
+
+  uVar1 = FormatResourcePath("/Animations/meatboyanim.am", &strCharPath);
+  MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self, uVar1, 0x1c);
   *(uint8_t ***)self = &PTR__SprintMeatBoy_005becb0;
   *(uint32_t *)(self + 0xa54) = 0x1c;
-                    /* try { // try from 004655e6 to 004655ea has its CatchHandler @ 0046560c */
+  /* try { // try from 004655e6 to 004655ea has its CatchHandler @ 0046560c */
   this_00 = operator_new(0x690);
-                    /* try { // try from 004655f1 to 004655f5 has its CatchHandler @ 0046561f */
+  /* try { // try from 004655f1 to 004655f5 has its CatchHandler @ 0046561f */
   SMBBloodExplosion__SMBBloodExplosion(this_00);
   *(SMBBloodExplosion **)(self + 0xa98) = this_00;
   return;
@@ -167,13 +166,13 @@ void __thiscall SprintMeatBoy__SprintMeatBoy__00465640(SprintMeatBoy *self)
  */
 /* SprintMeatBoy__SprintMeatBoy__00465640(MeatBoyCharactor*, int) */
 
-void __thiscall
-SprintMeatBoy__SprintMeatBoy__00465640(SprintMeatBoy *self,MeatBoyCharactor *arg1,int arg2)
+void __thiscall SprintMeatBoy__SprintMeatBoy__00465640(SprintMeatBoy *self, MeatBoyCharactor *arg1,
+                                                       int arg2)
 
 {
   MeatBoyCharactor__MeatBoyCharactor__0047b350((MeatBoyCharactor *)self);
   *(uint8_t ***)self = &PTR__SprintMeatBoy_005becb0;
-                    /* try { // try from 00465671 to 00465675 has its CatchHandler @ 00465689 */
-  MeatBoyCharactor__Clone((MeatBoyCharactor *)self,arg1,arg2);
+  /* try { // try from 00465671 to 00465675 has its CatchHandler @ 00465689 */
+  MeatBoyCharactor__Clone((MeatBoyCharactor *)self, arg1, arg2);
   return;
 }

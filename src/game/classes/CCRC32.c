@@ -25,11 +25,11 @@ void __thiscall CCRC32__Initialize(CCRC32 *self)
   int iVar2;
   ulong uVar3;
   ulong uVar4;
-  
+
   uVar3 = 0;
   uVar1 = 0;
   uVar4 = 1;
-  while( true ) {
+  while (true) {
     if ((uVar1 & 2) != 0) {
       uVar3 = uVar3 | 0x40;
     }
@@ -69,7 +69,8 @@ void __thiscall CCRC32__Initialize(CCRC32 *self)
       uVar1 = uVar1 >> 1;
     } while (iVar2 != -1);
     *(ulong *)(self + uVar4 * 8 + -8) = uVar3;
-    if (uVar4 == 0x100) break;
+    if (uVar4 == 0x100)
+      break;
     uVar3 = (ulong)(-((uint)uVar4 & 1) & 0x80);
     uVar1 = uVar4;
     uVar4 = uVar4 + 1;
@@ -86,11 +87,11 @@ void __thiscall CCRC32__Initialize(CCRC32 *self)
  */
 /* CCRC32__Reflect(unsigned long, char) */
 
-void __thiscall CCRC32__Reflect(CCRC32 *self,ulong arg1,char arg2)
+void __thiscall CCRC32__Reflect(CCRC32 *self, ulong arg1, char arg2)
 
 {
   int iVar1;
-  
+
   if ('\0' < arg2) {
     iVar1 = arg2 + -1;
     do {

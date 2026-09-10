@@ -22,7 +22,7 @@ void __thiscall MultiPointBoundsCheck__MultiPointBoundsCheck(MultiPointBoundsChe
 
 {
   MultiPointBoundsCheck *pMVar1;
-  
+
   *(uint32_t *)(self + 0x40) = 0;
   pMVar1 = self;
   *(MultiPointBoundsCheck **)(self + 0x48) = pCurrentBoundsCheck;

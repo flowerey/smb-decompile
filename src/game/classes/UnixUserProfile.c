@@ -63,23 +63,24 @@ void UnixUserProfile__Reset(void)
  */
 /* UnixUserProfile__ReadProfileSettings(ProfileSetting*) */
 
-void __thiscall UnixUserProfile__ReadProfileSettings(UnixUserProfile *self,ProfileSetting *arg1)
+void __thiscall UnixUserProfile__ReadProfileSettings(UnixUserProfile *self, ProfileSetting *arg1)
 
 {
   int iVar1;
   long lVar2;
   uint uVar3;
-  char acStack_a8 [136];
+  char acStack_a8[136];
   GameRegistryEntry *local_20;
-  
+
   if (*(int *)arg1 != 0) {
     lVar2 = 0;
     uVar3 = 0;
     do {
-      while( true ) {
-        Sprint("PROFILESETTING%i",acStack_a8,*(uint32_t *)(*(long *)(arg1 + 8) + lVar2));
-        iVar1 = GameRegistry__GetVariable(EngineRegistry,acStack_a8,&local_20);
-        if (iVar1 != 1) break;
+      while (true) {
+        Sprint("PROFILESETTING%i", acStack_a8, *(uint32_t *)(*(long *)(arg1 + 8) + lVar2));
+        iVar1 = GameRegistry__GetVariable(EngineRegistry, acStack_a8, &local_20);
+        if (iVar1 != 1)
+          break;
         uVar3 = uVar3 + 1;
         *(uint32_t *)(*(long *)(arg1 + 8) + 4 + lVar2) = *(uint32_t *)(local_20 + 0x10);
         lVar2 = lVar2 + 8;
@@ -104,22 +105,22 @@ void __thiscall UnixUserProfile__ReadProfileSettings(UnixUserProfile *self,Profi
  */
 /* UnixUserProfile__WriteProfileSettings(ProfileSetting const*) */
 
-void __thiscall UnixUserProfile__WriteProfileSettings(UnixUserProfile *self,ProfileSetting *arg1)
+void __thiscall UnixUserProfile__WriteProfileSettings(UnixUserProfile *self, ProfileSetting *arg1)
 
 {
   uint32_t uVar1;
   long lVar2;
   uint uVar3;
-  char acStack_a8 [136];
+  char acStack_a8[136];
   GameRegistryEntry *local_20;
-  
+
   if (*(int *)arg1 != 0) {
     lVar2 = 0;
     uVar3 = 0;
     do {
       uVar3 = uVar3 + 1;
-      Sprint("PROFILESETTING%i",acStack_a8,*(uint32_t *)(*(long *)(arg1 + 8) + lVar2));
-      GameRegistry__GetVariable(EngineRegistry,acStack_a8,&local_20);
+      Sprint("PROFILESETTING%i", acStack_a8, *(uint32_t *)(*(long *)(arg1 + 8) + lVar2));
+      GameRegistry__GetVariable(EngineRegistry, acStack_a8, &local_20);
       uVar1 = *(uint32_t *)(*(long *)(arg1 + 8) + 4 + lVar2);
       *(uint32_t *)(local_20 + 8) = 1;
       lVar2 = lVar2 + 8;
@@ -139,11 +140,10 @@ void __thiscall UnixUserProfile__WriteProfileSettings(UnixUserProfile *self,Prof
  */
 /* UnixUserProfile__WriteData(File*, void const*, unsigned int) */
 
-void __thiscall
-UnixUserProfile__WriteData(UnixUserProfile *self,File *arg1,void *arg2,uint arg3)
+void __thiscall UnixUserProfile__WriteData(UnixUserProfile *self, File *arg1, void *arg2, uint arg3)
 
 {
-  File__Write(arg1,arg2,arg3);
+  File__Write(arg1, arg2, arg3);
   return;
 }
 
@@ -156,11 +156,10 @@ UnixUserProfile__WriteData(UnixUserProfile *self,File *arg1,void *arg2,uint arg3
  */
 /* UnixUserProfile__ReadData(File*, void*, unsigned int) */
 
-void __thiscall
-UnixUserProfile__ReadData(UnixUserProfile *self,File *arg1,void *arg2,uint arg3)
+void __thiscall UnixUserProfile__ReadData(UnixUserProfile *self, File *arg1, void *arg2, uint arg3)
 
 {
-  File__Read(arg1,arg2,arg3);
+  File__Read(arg1, arg2, arg3);
   return;
 }
 
@@ -173,21 +172,20 @@ UnixUserProfile__ReadData(UnixUserProfile *self,File *arg1,void *arg2,uint arg3)
  */
 /* UnixUserProfile__InitializeProfile(int, int, void (*)()) */
 
-void __thiscall
-UnixUserProfile__InitializeProfile
-          (UnixUserProfile *self,int arg1,int arg2,_func_void *arg3)
+void __thiscall UnixUserProfile__InitializeProfile(UnixUserProfile *self, int arg1, int arg2,
+                                                   _func_void *arg3)
 
 {
   GameRegistry *this_00;
-  
+
   this_00 = operator_new(0x20);
-                    /* try { // try from 005b8c7f to 005b8c83 has its CatchHandler @ 005b8cc3 */
-  GameRegistry__GameRegistry__005b6430(this_00,*(int *)(self + 0x14) + 10);
+  /* try { // try from 005b8c7f to 005b8c83 has its CatchHandler @ 005b8cc3 */
+  GameRegistry__GameRegistry__005b6430(this_00, *(int *)(self + 0x14) + 10);
   *(GameRegistry **)(self + 0x20) = this_00;
   *(uint32_t *)(self + 8) = 1;
   if (arg3 != (_func_void *)0x0) {
-                    /* WARNING: Could not recover jumptable at 0x005b8ca9. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+    /* WARNING: Could not recover jumptable at 0x005b8ca9. Too many branches */
+    /* WARNING: Treating indirect jump as call */
     (*arg3)();
     return;
   }
@@ -207,16 +205,16 @@ void __thiscall UnixUserProfile__UnixUserProfile__005b8f50(UnixUserProfile *self
 
 {
   GameRegistry *this_00;
-  
+
   this_00 = *(GameRegistry **)(self + 0x20);
   *(uint8_t ***)self = &PTR__UnixUserProfile_005de790;
   if (this_00 != (GameRegistry *)0x0) {
-                    /* try { // try from 005b8d04 to 005b8d08 has its CatchHandler @ 005b8d38 */
+    /* try { // try from 005b8d04 to 005b8d08 has its CatchHandler @ 005b8d38 */
     GameRegistry__GameRegistry__005b6a60(this_00);
     operator_delete(this_00);
   }
   *(uint64_t *)(self + 0x20) = 0;
-                    /* try { // try from 005b8d1d to 005b8d21 has its CatchHandler @ 005b8d56 */
+  /* try { // try from 005b8d1d to 005b8d21 has its CatchHandler @ 005b8d56 */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x28));
   *(uint8_t ***)self = &PTR__UserProfile_005de8f0;
   return;
@@ -232,20 +230,20 @@ void __thiscall UnixUserProfile__UnixUserProfile__005b8f50(UnixUserProfile *self
 /* WARNING: Removing unreachable block (ram,0x005b8df9) */
 /* UnixUserProfile__FileExists(char const*) */
 
-ulong __thiscall UnixUserProfile__FileExists(UnixUserProfile *self,char *arg1)
+ulong __thiscall UnixUserProfile__FileExists(UnixUserProfile *self, char *arg1)
 
 {
   int *piVar1;
   int iVar2;
   ulong uVar3;
   char *local_18;
-  allocator local_a [2];
-  
-  std__string_string((string *)&local_18,GUserDataPath,local_a);
+  allocator local_a[2];
+
+  std__string_string((string *)&local_18, GUserDataPath, local_a);
   strlen(arg1);
-                    /* try { // try from 005b8d91 to 005b8da1 has its CatchHandler @ 005b8de4 */
-  std__string_append((char *)&local_18,(ulong)arg1);
-  uVar3 = File__Exists(local_18,0);
+  /* try { // try from 005b8d91 to 005b8da1 has its CatchHandler @ 005b8de4 */
+  std__string_append((char *)&local_18, (ulong)arg1);
+  uVar3 = File__Exists(local_18, 0);
   if ((allocator *)(local_18 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
     LOCK();
     piVar1 = (int *)(local_18 + -8);
@@ -273,16 +271,16 @@ void __thiscall UnixUserProfile__UnixUserProfile__005b8f50(UnixUserProfile *self
 
 {
   GameRegistry *this_00;
-  
+
   this_00 = *(GameRegistry **)(self + 0x20);
   *(uint8_t ***)self = &PTR__UnixUserProfile_005de790;
   if (this_00 != (GameRegistry *)0x0) {
-                    /* try { // try from 005b8f74 to 005b8f78 has its CatchHandler @ 005b8faf */
+    /* try { // try from 005b8f74 to 005b8f78 has its CatchHandler @ 005b8faf */
     GameRegistry__GameRegistry__005b6a60(this_00);
     operator_delete(this_00);
   }
   *(uint64_t *)(self + 0x20) = 0;
-                    /* try { // try from 005b8f8d to 005b8f91 has its CatchHandler @ 005b8fcd */
+  /* try { // try from 005b8f8d to 005b8f91 has its CatchHandler @ 005b8fcd */
   CriticalSection__CriticalSection__005b71d0((CriticalSection *)(self + 0x28));
   *(uint8_t ***)self = &PTR__UserProfile_005de8f0;
   operator_delete(self);
@@ -299,20 +297,19 @@ void __thiscall UnixUserProfile__UnixUserProfile__005b8f50(UnixUserProfile *self
 /* WARNING: Removing unreachable block (ram,0x005b905f) */
 /* UnixUserProfile__ReadDirectory(char const*, FileList**) */
 
-void __thiscall
-UnixUserProfile__ReadDirectory(UnixUserProfile *self,char *arg1,FileList **arg2)
+void __thiscall UnixUserProfile__ReadDirectory(UnixUserProfile *self, char *arg1, FileList **arg2)
 
 {
   int *piVar1;
   int iVar2;
   char *local_28;
-  allocator local_1a [10];
-  
-  std__string_string((string *)&local_28,GUserDataPath,local_1a);
+  allocator local_1a[10];
+
+  std__string_string((string *)&local_28, GUserDataPath, local_1a);
   strlen(arg1);
-                    /* try { // try from 005b9001 to 005b9011 has its CatchHandler @ 005b904c */
-  std__string_append((char *)&local_28,(ulong)arg1);
-  File__ReadDirectory(local_28,arg2);
+  /* try { // try from 005b9001 to 005b9011 has its CatchHandler @ 005b904c */
+  std__string_append((char *)&local_28, (ulong)arg1);
+  File__ReadDirectory(local_28, arg2);
   if ((allocator *)(local_28 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
     LOCK();
     piVar1 = (int *)(local_28 + -8);
@@ -336,18 +333,18 @@ UnixUserProfile__ReadDirectory(UnixUserProfile *self,char *arg1,FileList **arg2)
 /* WARNING: Removing unreachable block (ram,0x005b90f7) */
 /* UnixUserProfile__DeleteUserFile(char const*) */
 
-void __thiscall UnixUserProfile__DeleteUserFile(UnixUserProfile *self,char *arg1)
+void __thiscall UnixUserProfile__DeleteUserFile(UnixUserProfile *self, char *arg1)
 
 {
   int *piVar1;
   int iVar2;
   char *local_18;
-  allocator local_a [2];
-  
-  std__string_string((string *)&local_18,GUserDataPath,local_a);
+  allocator local_a[2];
+
+  std__string_string((string *)&local_18, GUserDataPath, local_a);
   strlen(arg1);
-                    /* try { // try from 005b909d to 005b90a1 has its CatchHandler @ 005b90e4 */
-  std__string_append((char *)&local_18,(ulong)arg1);
+  /* try { // try from 005b909d to 005b90a1 has its CatchHandler @ 005b90e4 */
+  std__string_append((char *)&local_18, (ulong)arg1);
   unlink(local_18);
   if ((allocator *)(local_18 + -0x18) != (allocator *)&std__string_Rep_S_empty_rep_storage) {
     LOCK();
@@ -379,7 +376,7 @@ void __thiscall UnixUserProfile__UnixUserProfile__005b9110(UnixUserProfile *self
   *(uint32_t *)(self + 0x14) = 0xffffffff;
   *(uint64_t *)(self + 0x20) = 0;
   *(uint8_t ***)self = &PTR__UnixUserProfile_005de790;
-                    /* try { // try from 005b913c to 005b9140 has its CatchHandler @ 005b914a */
+  /* try { // try from 005b913c to 005b9140 has its CatchHandler @ 005b914a */
   CriticalSection__CriticalSection((CriticalSection *)(self + 0x28));
   *(uint32_t *)(self + 0xc) = 1;
   return;

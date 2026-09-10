@@ -22,7 +22,7 @@ void __thiscall VertexDeclaration__VertexDeclaration__005a65f0(VertexDeclaration
 
 {
   *(uint8_t ***)self = &PTR__VertexDeclaration_005dde10;
-                    /* try { // try from 005a65bf to 005a65c3 has its CatchHandler @ 005a65d6 */
+  /* try { // try from 005a65bf to 005a65c3 has its CatchHandler @ 005a65d6 */
   gfxDestroyVertexDeclaration(self + 0x10);
   free(*(void **)(self + 0x18));
   *(uint8_t ***)self = &PTR__BaseResource_005dbe30;
@@ -42,13 +42,13 @@ void __thiscall VertexDeclaration__VertexDeclaration__005a65f0(VertexDeclaration
 
 {
   void *in_RSI;
-  
+
   *(uint8_t ***)self = &PTR__VertexDeclaration_005dde10;
-                    /* try { // try from 005a65ff to 005a6603 has its CatchHandler @ 005a661d */
+  /* try { // try from 005a65ff to 005a6603 has its CatchHandler @ 005a661d */
   gfxDestroyVertexDeclaration(self + 0x10);
   free(*(void **)(self + 0x18));
   *(uint8_t ***)self = &PTR__BaseResource_005dbe30;
-  BaseResource__operator_delete((BaseResource *)self,in_RSI);
+  BaseResource__operator_delete((BaseResource *)self, in_RSI);
   return;
 }
 
@@ -61,14 +61,14 @@ void __thiscall VertexDeclaration__VertexDeclaration__005a65f0(VertexDeclaration
  */
 /* VertexDeclaration__VertexDeclaration__005a6630(tagVertexDeclarationCreation const*) */
 
-void __thiscall
-VertexDeclaration__VertexDeclaration__005a6630(VertexDeclaration *self,tagVertexDeclarationCreation *arg1)
+void __thiscall VertexDeclaration__VertexDeclaration__005a6630(VertexDeclaration *self,
+                                                               tagVertexDeclarationCreation *arg1)
 
 {
   ushort uVar1;
   void *__dest;
   size_t __size;
-  
+
   *(uint32_t *)(self + 8) = 1;
   *(uint8_t ***)self = &PTR__VertexDeclaration_005dde10;
   uVar1 = *(ushort *)(arg1 + 8);
@@ -77,7 +77,7 @@ VertexDeclaration__VertexDeclaration__005a6630(VertexDeclaration *self,tagVertex
   __dest = malloc(__size);
   *(void **)(self + 0x18) = __dest;
   if (*(void **)arg1 != __dest) {
-    memcpy(__dest,*(void **)arg1,__size);
+    memcpy(__dest, *(void **)arg1, __size);
     return;
   }
   return;

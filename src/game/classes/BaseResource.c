@@ -39,7 +39,7 @@ int __thiscall BaseResource__RemoveRef(BaseResource *self)
 {
   int iVar1;
   int iVar2;
-  
+
   iVar2 = *(int *)(self + 8) + -1;
   *(int *)(self + 8) = iVar2;
   iVar1 = 0;
@@ -58,7 +58,7 @@ int __thiscall BaseResource__RemoveRef(BaseResource *self)
  */
 /* BaseResource__operator delete(void*) */
 
-void __thiscall BaseResource__operator_delete(BaseResource *self,void *arg1)
+void __thiscall BaseResource__operator_delete(BaseResource *self, void *arg1)
 
 {
   (*(code *)PTR_free_00815b18)();
@@ -74,7 +74,7 @@ void __thiscall BaseResource__operator_delete(BaseResource *self,void *arg1)
  */
 /* BaseResource__Release(int) */
 
-void __thiscall BaseResource__Release(BaseResource *self,int arg1)
+void __thiscall BaseResource__Release(BaseResource *self, int arg1)
 
 {
   long *plVar1;
@@ -92,27 +92,28 @@ void __thiscall BaseResource__Release(BaseResource *self,int arg1)
   ulong uVar13;
   ushort uVar14;
   byte bVar15;
-  AutoLockSection aAStack_28 [16];
-  
+  AutoLockSection aAStack_28[16];
+
   bVar15 = 0;
   if ((arg1 != 1) && (iVar6 = (**(code **)(*(long *)self + 0x18))(), 0 < iVar6)) {
     return;
   }
   pCVar4 = Resources;
-  AutoLockSection__AutoLockSection(aAStack_28,Resources);
+  AutoLockSection__AutoLockSection(aAStack_28, Resources);
   uVar14 = *(ushort *)(pCVar4 + 0x50);
-  if (uVar14 == 0) goto LAB_0057c3a0;
+  if (uVar14 == 0)
+    goto LAB_0057c3a0;
   puVar11 = *(uint64_t **)(pCVar4 + 0x60);
   uVar5 = 0;
   puVar3 = puVar11;
   if (self == (BaseResource *)puVar11[0x10]) {
     uVar5 = 0;
     puVar10 = puVar11;
-  }
-  else {
+  } else {
     do {
       uVar5 = uVar5 + 1;
-      if (uVar5 == uVar14) goto LAB_0057c3a0;
+      if (uVar5 == uVar14)
+        goto LAB_0057c3a0;
       plVar1 = puVar3 + 0x21;
       puVar10 = puVar3 + 0x11;
       puVar3 = puVar3 + 0x11;
@@ -133,7 +134,7 @@ void __thiscall BaseResource__Release(BaseResource *self,int arg1)
         uVar12 = uVar8 & 0xffffffff;
       }
     } while ((uVar8 != (*(ushort *)(pCVar4 + 0x52) - 1 & 0xffff)) &&
-            ((uVar8 = uVar8 + 1, (short)uVar12 == -1 || ((short)uVar13 == -1))));
+             ((uVar8 = uVar8 + 1, (short)uVar12 == -1 || ((short)uVar13 == -1))));
     if ((short)uVar12 == (short)uVar13) {
       lVar7 = (uVar12 & 0xffff) * 2;
       goto LAB_0057c394;
@@ -148,11 +149,10 @@ void __thiscall BaseResource__Release(BaseResource *self,int arg1)
       *(uint16_t *)(*(long *)(pCVar4 + 0x68) + (uVar13 & 0xffff) * 2) = 0xffff;
       *(ushort *)(*(long *)(pCVar4 + 0x68) + (uVar12 & 0xffff) * 2) = uVar5;
     }
-  }
-  else {
+  } else {
     lVar9 = *(long *)(pCVar4 + 0x68);
     lVar7 = 0x1fffe;
-LAB_0057c394:
+  LAB_0057c394:
     *(uint16_t *)(lVar9 + lVar7) = 0xffff;
   }
   *(ushort *)(pCVar4 + 0x50) = uVar14;

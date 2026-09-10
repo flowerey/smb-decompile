@@ -22,22 +22,23 @@ void RenderLayers__Render(void)
 
 {
   long *plVar1;
-  AutoLockSection aAStack_28 [16];
-  AutoLockSection local_18 [16];
-  
-  AutoLockSection__AutoLockSection(aAStack_28,(CriticalSection *)MasterRenderSection);
-                    /* try { // try from 0059870c to 00598710 has its CatchHandler @ 00598768 */
-  AutoLockSection__AutoLockSection(local_18,(CriticalSection *)_RENDERLAYER_SECTION);
+  AutoLockSection aAStack_28[16];
+  AutoLockSection local_18[16];
+
+  AutoLockSection__AutoLockSection(aAStack_28, (CriticalSection *)MasterRenderSection);
+  /* try { // try from 0059870c to 00598710 has its CatchHandler @ 00598768 */
+  AutoLockSection__AutoLockSection(local_18, (CriticalSection *)_RENDERLAYER_SECTION);
   for (plVar1 = pHeadLayer; plVar1 != (long *)0x0; plVar1 = (long *)plVar1[0x79]) {
     while (*(int *)((long)plVar1 + 0x414) != 1) {
       plVar1 = (long *)plVar1[0x79];
-      if (plVar1 == (long *)0x0) goto LAB_00598750;
+      if (plVar1 == (long *)0x0)
+        goto LAB_00598750;
     }
-                    /* try { // try from 0059873b to 0059873d has its CatchHandler @ 0059877b */
+    /* try { // try from 0059873b to 0059873d has its CatchHandler @ 0059877b */
     (**(code **)(*plVar1 + 0x10))(plVar1);
   }
 LAB_00598750:
-                    /* try { // try from 00598755 to 00598759 has its CatchHandler @ 00598768 */
+  /* try { // try from 00598755 to 00598759 has its CatchHandler @ 00598768 */
   AutoLockSection__AutoLockSection__005b59d0(local_18);
   AutoLockSection__AutoLockSection__005b59d0(aAStack_28);
   return;

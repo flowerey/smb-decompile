@@ -16,7 +16,7 @@
  * Calls: (none)
  * Called by: `CreateAnimationLibResources`, `CreateSMBPaletteResources`, `CreateTextEmitterFontResources`, `EditorForm_LoadFormOk`, `FilePackage__GetFileFromPackage`, `FixFileCase`, `FlashAnimationLibrary__FlashAnimationLibrary__00576680`, `FlashSoundLibrary__AddSound`, `FragmentLinker__FragmentLinker__00587530`, `GLOBAL_sub_I_SMBCharactor` (+33 more)
  */
-void __thiscall std__string_string(string *self,string *arg1)
+void __thiscall std__string_string(string *self, string *arg1)
 
 {
   (*(code *)PTR_string_00815878)();
@@ -30,7 +30,7 @@ void __thiscall std__string_string(string *self,string *arg1)
  * Calls: `std__string_string`
  * Called by: (none)
  */
-void __thiscall std__string_string(string *self,char *arg1,allocator *arg2)
+void __thiscall std__string_string(string *self, char *arg1, allocator *arg2)
 
 {
   (*(code *)PTR_string_00815ac8)();
@@ -58,7 +58,7 @@ void __thiscall std__ios_base_Init_Init(Init *self)
  * Calls: `std__string_string`
  * Called by: (none)
  */
-void __thiscall std__string_string(string *self,string *arg1,ulong arg2,ulong arg3)
+void __thiscall std__string_string(string *self, string *arg1, ulong arg2, ulong arg3)
 
 {
   (*(code *)PTR_string_00815c80)();
@@ -79,8 +79,8 @@ void __thiscall std__string_string(string *self)
 
 {
   do {
-                    /* WARNING: Do nothing block with infinite loop */
-  } while( true );
+    /* WARNING: Do nothing block with infinite loop */
+  } while (true);
 }
 
 /* ======================================================================
@@ -104,7 +104,7 @@ void __thiscall std__wstring_wstring(wstring *self)
  * Calls: `std__wstring_wstring`
  * Called by: (none)
  */
-void __thiscall std__wstring_wstring(wstring *self,wstring *arg1,ulong arg2,ulong arg3)
+void __thiscall std__wstring_wstring(wstring *self, wstring *arg1, ulong arg2, ulong arg3)
 
 {
   (*(code *)PTR_wstring_00815df0)();
@@ -125,6 +125,6 @@ void __thiscall std__ios_base_Init_Init(Init *self)
 
 {
   do {
-                    /* WARNING: Do nothing block with infinite loop */
-  } while( true );
+    /* WARNING: Do nothing block with infinite loop */
+  } while (true);
 }

@@ -38,7 +38,7 @@ void __thiscall SmokeEmitter__Reset(SmokeEmitter *self)
 
 {
   long lVar1;
-  
+
   lVar1 = 0;
   do {
     *(uint32_t *)(self + lVar1 + 0x3c) = 0;
@@ -74,14 +74,14 @@ void __thiscall SmokeEmitter__SmokeEmitter__00511b50(SmokeEmitter *self)
  */
 /* SmokeEmitter__SmokeEmitter__00511b60(SmokeEmitterCreate const*) */
 
-void __thiscall SmokeEmitter__SmokeEmitter__00511b60(SmokeEmitter *self,SmokeEmitterCreate *arg1)
+void __thiscall SmokeEmitter__SmokeEmitter__00511b60(SmokeEmitter *self, SmokeEmitterCreate *arg1)
 
 {
   SmokeEmitter *pSVar1;
   uint32_t uVar2;
   uint64_t uVar3;
   SmokeEmitter *pSVar4;
-  
+
   pSVar1 = self + 0x14;
   *(uint64_t *)(self + 8) = 0;
   *(uint32_t *)(self + 0x10) = 1;
@@ -107,8 +107,8 @@ void __thiscall SmokeEmitter__SmokeEmitter__00511b60(SmokeEmitter *self,SmokeEmi
   *(uint32_t *)(self + 0x1154) = 0;
   *(uint64_t *)(self + 0x1148) = *(uint64_t *)arg1;
   *(uint64_t *)(self + 0x1150) = *(uint64_t *)(arg1 + 8);
-                    /* try { // try from 00511c3d to 00511c41 has its CatchHandler @ 00511c80 */
-  Vector2__operator_assign((Vector2 *)(self + 0x1158),(Vector2 *)(arg1 + 0x10));
+  /* try { // try from 00511c3d to 00511c41 has its CatchHandler @ 00511c80 */
+  Vector2__operator_assign((Vector2 *)(self + 0x1158), (Vector2 *)(arg1 + 0x10));
   *(uint32_t *)(self + 0x1160) = *(uint32_t *)(arg1 + 0x18);
   *(uint32_t *)(self + 0x1164) = *(uint32_t *)(arg1 + 0x1c);
   uVar2 = *(uint32_t *)(arg1 + 0x20);
@@ -138,7 +138,7 @@ void __thiscall SmokeEmitter__AddNewParticle(SmokeEmitter *self)
   int iVar3;
   uint32_t uVar4;
   SmokeEmitter *pSVar5;
-  
+
   pSVar5 = self + 0x3c;
   iVar3 = 0;
   do {
@@ -153,17 +153,17 @@ void __thiscall SmokeEmitter__AddNewParticle(SmokeEmitter *self)
       *(uint32_t *)(pSVar5 + 0xc) = *(uint32_t *)(lVar2 + 0x2c);
       *(uint32_t *)(pSVar5 + 0x10) = *(uint32_t *)(lVar2 + 0x30);
       fVar1 = *(float *)(self + 0x1158);
-      iVar3 = GetRandomINT(0x4b,100);
+      iVar3 = GetRandomINT(0x4b, 100);
       *(float *)(pSVar5 + 0x14) = fVar1 * DAT_005c07b0 /* R:0.009999999776482582f */ * (float)iVar3;
       fVar1 = *(float *)(self + 0x115c);
-      iVar3 = GetRandomINT(0x4b,100);
+      iVar3 = GetRandomINT(0x4b, 100);
       *(float *)(pSVar5 + 0x18) = fVar1 * DAT_005c07b0 /* R:0.009999999776482582f */ * (float)iVar3;
-      uVar4 = GetRandomINT(*(uint32_t *)(self + 0x1164),*(uint32_t *)(self + 0x1160));
+      uVar4 = GetRandomINT(*(uint32_t *)(self + 0x1164), *(uint32_t *)(self + 0x1160));
       *(uint32_t *)(pSVar5 + 0x28) = uVar4;
       *(uint32_t *)(pSVar5 + 0x2c) = 0;
-      iVar3 = GetRandomINT(0,100);
+      iVar3 = GetRandomINT(0, 100);
       *(float *)(pSVar5 + 0x1c) = (float)iVar3 * _DAT_005c8de0 /* R:0.06283185631036758f */;
-      iVar3 = GetRandomINT(0x4b,100);
+      iVar3 = GetRandomINT(0x4b, 100);
       *(uint32_t *)(pSVar5 + 0x24) = 0;
       *(float *)(pSVar5 + 0x20) = (float)iVar3 * DAT_005c07b0 /* R:0.009999999776482582f */;
       return;
@@ -193,7 +193,7 @@ void __thiscall SmokeEmitter__Update(SmokeEmitter *self)
   int iVar4;
   float fVar5;
   double dVar6;
-  
+
   fVar5 = *(float *)(self + 0x1180) - fOneFrameTimeStep;
   *(float *)(self + 0x1180) = fVar5;
   if (fVar5 <= 0.0) {
@@ -219,10 +219,10 @@ void __thiscall SmokeEmitter__Update(SmokeEmitter *self)
     *(int *)(self + lVar3 + 0x3c) = *(int *)(self + lVar3 + 0x3c) + *(int *)(Engine + 4);
     *(float *)(self + lVar3 + 0x14) = fVar5 + *(float *)(self + lVar3 + 0x14);
     *(float *)(self + lVar3 + 0x18) =
-         fOneFrameTimeStep * *(float *)(self + lVar3 + 0x28) + *(float *)(self + lVar3 + 0x18);
+        fOneFrameTimeStep * *(float *)(self + lVar3 + 0x28) + *(float *)(self + lVar3 + 0x18);
     dVar6 = (double)*(float *)(self + lVar3 + 0x34) + dVar1;
-    if ((double)*(float *)(self + lVar3 + 0x30) <= (double)*(float *)(self + lVar3 + 0x34) + dVar1)
-    {
+    if ((double)*(float *)(self + lVar3 + 0x30) <=
+        (double)*(float *)(self + lVar3 + 0x34) + dVar1) {
       dVar6 = (double)*(float *)(self + lVar3 + 0x30);
     }
     *(float *)(self + lVar3 + 0x34) = (float)dVar6;
@@ -239,14 +239,14 @@ void __thiscall SmokeEmitter__Update(SmokeEmitter *self)
  */
 /* SmokeEmitter__RenderSmokeParticle(SmokeEmitter__SmokeParticle) */
 
-void __thiscall SmokeEmitter__RenderSmokeParticle(SmokeEmitter *self,SmokeParticle *arg1)
+void __thiscall SmokeEmitter__RenderSmokeParticle(SmokeEmitter *self, SmokeParticle *arg1)
 
 {
   int iVar1;
   int iVar2;
   long lVar3;
   float fVar4;
-  
+
   fVar4 = DAT_005be894 /* R:1.0f */;
   iVar1 = *(int *)(arg1 + 0x24);
   iVar2 = *(int *)(arg1 + 0x28);
@@ -264,13 +264,13 @@ void __thiscall SmokeEmitter__RenderSmokeParticle(SmokeEmitter *self,SmokePartic
   *(uint32_t *)(*(long *)(self + 0x1178) + 0x7c) = *(uint32_t *)(self + 0x1150);
   *(float *)(*(long *)(self + 0x1178) + 0x80) = fVar4;
   *(float *)(*(long *)(self + 0x1178) + 0x40) =
-       *(float *)(arg1 + 0x20) * *(float *)(*(long *)(self + 0x1170) + 0x34);
+      *(float *)(arg1 + 0x20) * *(float *)(*(long *)(self + 0x1170) + 0x34);
   *(float *)(*(long *)(self + 0x1178) + 0x44) =
-       *(float *)(arg1 + 0x20) * *(float *)(*(long *)(self + 0x1170) + 0x38);
+      *(float *)(arg1 + 0x20) * *(float *)(*(long *)(self + 0x1170) + 0x38);
   *(uint32_t *)(*(long *)(self + 0x1178) + 0x48) = *(uint32_t *)(arg1 + 0x18);
   *(uint32_t *)(*(long *)(self + 0x1178) + 0x4c) = *(uint32_t *)(arg1 + 0x18);
-                    /* WARNING: Could not recover jumptable at 0x00511fb1. Too many branches */
-                    /* WARNING: Treating indirect jump as call */
+  /* WARNING: Could not recover jumptable at 0x00511fb1. Too many branches */
+  /* WARNING: Treating indirect jump as call */
   (**(code **)(**(long **)(self + 0x1178) + 0x10))();
   return;
 }
@@ -290,7 +290,7 @@ void __thiscall SmokeEmitter__Render(SmokeEmitter *self)
   long lVar1;
   SmokeEmitter *pSVar2;
   int iVar3;
-  
+
   iVar3 = 0;
   pSVar2 = self + 0x3c;
   do {
@@ -298,7 +298,7 @@ void __thiscall SmokeEmitter__Render(SmokeEmitter *self)
       lVar1 = (long)iVar3;
       iVar3 = iVar3 + 1;
       pSVar2 = pSVar2 + 0x2c;
-      RenderSmokeParticle(self,(SmokeParticle *)(self + lVar1 * 0x2c + 0x14));
+      RenderSmokeParticle(self, (SmokeParticle *)(self + lVar1 * 0x2c + 0x14));
       if (iVar3 == 100) {
         return;
       }
@@ -319,19 +319,19 @@ void __thiscall SmokeEmitter__Render(SmokeEmitter *self)
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 /* SmokeEmitter__UpdateSmokeParticle(SmokeEmitter__SmokeParticle) */
 
-void __thiscall SmokeEmitter__UpdateSmokeParticle(SmokeEmitter *self,SmokeParticle *arg1)
+void __thiscall SmokeEmitter__UpdateSmokeParticle(SmokeEmitter *self, SmokeParticle *arg1)
 
 {
   float fVar1;
   double dVar2;
-  
+
   fVar1 = fOneFrameTimeStep * *(float *)(arg1 + 0x10);
   *(int *)(arg1 + 0x28) = *(int *)(arg1 + 0x28) + *(int *)(Engine + 4);
   *(float *)arg1 = fVar1 + *(float *)arg1;
-  *(float *)(arg1 + 4) = fOneFrameTimeStep * *(float *)(arg1 + 0x14) + *(float *)(arg1 + 4)
-  ;
+  *(float *)(arg1 + 4) = fOneFrameTimeStep * *(float *)(arg1 + 0x14) + *(float *)(arg1 + 4);
   dVar2 = (double)*(float *)(arg1 + 0x20) + _DAT_005c8de8 /* R:89128.9609375f */;
-  if ((double)*(float *)(arg1 + 0x1c) <= (double)*(float *)(arg1 + 0x20) + _DAT_005c8de8 /* R:89128.9609375f */) {
+  if ((double)*(float *)(arg1 + 0x1c) <=
+      (double)*(float *)(arg1 + 0x20) + _DAT_005c8de8 /* R:89128.9609375f */) {
     dVar2 = (double)*(float *)(arg1 + 0x1c);
   }
   *(float *)(arg1 + 0x20) = (float)dVar2;

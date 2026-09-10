@@ -27,7 +27,7 @@ void __thiscall OpenALCueBufferInfo__OpenALCueBufferInfo(OpenALCueBufferInfo *se
   *(uint64_t *)(self + 0x20) = 0;
   *(uint64_t *)(self + 0x40) = 0;
   *(uint64_t *)(self + 0x10) = 0;
-  alGenBuffers(2,self + 0x10);
+  alGenBuffers(2, self + 0x10);
   return;
 }
 
@@ -46,7 +46,7 @@ void __thiscall OpenALCueBufferInfo__OpenALCueBufferInfo__0053e0b0(OpenALCueBuff
   AudioFile *this_00;
   void *pvVar1;
   void *pvVar2;
-  
+
   this_00 = *(AudioFile **)(self + 0x20);
   if (this_00 != (AudioFile *)0x0) {
     AudioFile__AudioFile__005a75c0(this_00);
@@ -61,7 +61,7 @@ void __thiscall OpenALCueBufferInfo__OpenALCueBufferInfo__0053e0b0(OpenALCueBuff
     operator_delete__(pvVar2);
   }
   operator_delete(pvVar1);
-  alDeleteBuffers(2,self + 0x10);
+  alDeleteBuffers(2, self + 0x10);
   return;
 }
 
@@ -113,7 +113,7 @@ void __thiscall OpenALCueBufferInfo__Release(OpenALCueBufferInfo *self)
   AudioFile *this_00;
   void *pvVar2;
   void *pvVar3;
-  
+
   iVar1 = *(int *)self;
   *(int *)self = iVar1 + -1;
   if (iVar1 + -1 == 0) {
@@ -131,7 +131,7 @@ void __thiscall OpenALCueBufferInfo__Release(OpenALCueBufferInfo *self)
       operator_delete__(pvVar3);
     }
     operator_delete(pvVar2);
-    alDeleteBuffers(2,self + 0x10);
+    alDeleteBuffers(2, self + 0x10);
     operator_delete(self);
     return;
   }
