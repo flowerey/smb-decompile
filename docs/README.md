@@ -18,6 +18,9 @@ Deep (human-written) notes first, then generated indexes.
 - `editor_input_data.md` — level editor, cheat-code input, files/registry, UI, SQL portal backend
 - `actors_meta.md` — animals AI, HUD, replay tape+shelf, cutscenes, chapters
 - `core_types.md` — math, scene graph, particles, players/profiles
+- `class_model.md` — RTTI inheritance forest (131 classes) + vtable layouts
+- `misfiled.md` — 114 methods Ghidra filed in the wrong file
+- `../recovered/` — 131 C++ headers: real bases, vtable-ordered virtuals, real signatures
 - `world_tiles.md` — TileLevel grid/swept collision + SMBPalette hazards
 - `audio_online.md` — TAudio cue model + Steam/leaderboard stack
 

@@ -41,6 +41,8 @@ Characters: `alien_hominid` (+ verified rewrite), `meatboy_charactor`
 Game: `gsuper_meatboy`, `gsmb_menu`, `tengine`. Enemies: `bosses`.
 World: `world_tiles`. Media/online: `rendering`, `flash_anim`,
 `audio_online`. Systems: `editor_input_data`, `actors_meta`, `core_types`.
+Class model: `class_model` (forest + vtables) + `recovered/` (131 headers)
++ `misfiled` (114 wrongly-filed methods) — real code recovered from RTTI.
 
 ## Build status (honest)
 - `make check` compiles per-file (`gcc -Iinclude -w -fcommon -std=gnu11`).
